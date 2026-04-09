@@ -11,6 +11,7 @@ import { LastUpdated } from "@/components/LastUpdated";
 import { SourcesList } from "@/components/SourcesList";
 import { cityGuideMap, cityGuides } from "@/lib/content/cities";
 import { citationSources, citySources } from "@/lib/content/facts";
+import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildGeoArticleSchema } from "@/lib/seo/schema";
@@ -205,7 +206,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         </div>
         <div className="space-y-5 p-8">
           <p className="leading-relaxed text-[#cbd5e1]">{guide.recommendation}</p>
-          <AffiliateCTA href="#affiliate-nordvpn" partner="nordvpn" label="Visit NordVPN" />
+          <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
         </div>
       </section>
 

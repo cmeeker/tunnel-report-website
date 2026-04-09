@@ -10,6 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { LastUpdated } from "@/components/LastUpdated";
 import { SourcesList } from "@/components/SourcesList";
 import { citationSources, compareSources } from "@/lib/content/facts";
+import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
@@ -190,7 +191,7 @@ export default function NordVsPurePage() {
           <h3 className="text-xl font-bold text-white">NordVPN</h3>
           <p className="mt-3 text-sm text-[#94a3b8]">Best for most readers</p>
           <div className="mt-5">
-            <AffiliateCTA href="#affiliate-nordvpn" partner="nordvpn" label="Visit NordVPN" />
+            <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
           </div>
         </div>
         <div className="glass-card p-8 text-center">
@@ -198,7 +199,7 @@ export default function NordVsPurePage() {
           <h3 className="text-xl font-bold text-white">PureVPN</h3>
           <p className="mt-3 text-sm text-[#94a3b8]">Best for price-first buyers</p>
           <div className="mt-5">
-            <AffiliateCTA href="#affiliate-purevpn" partner="purevpn" label="Visit PureVPN" />
+            <AffiliateCTA href={AFFILIATE_URLS.purevpn} partner="purevpn" label="Visit PureVPN" />
           </div>
         </div>
       </div>

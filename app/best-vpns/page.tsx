@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { LastUpdated } from "@/components/LastUpdated";
 import { SourcesList } from "@/components/SourcesList";
 import { citationSources } from "@/lib/content/facts";
-import { rankedVpns } from "@/lib/content/vpn-metrics";
+import { AFFILIATE_URLS, rankedVpns } from "@/lib/content/vpn-metrics";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
@@ -232,7 +232,7 @@ export default function BestVpnsPage() {
             current testing cycle.
           </p>
           <div className="mt-4">
-            <AffiliateCTA href="#affiliate-nordvpn" partner="nordvpn" label="Visit NordVPN" />
+            <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
           </div>
         </div>
 

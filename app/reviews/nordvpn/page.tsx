@@ -11,6 +11,7 @@ import { LastUpdated } from "@/components/LastUpdated";
 import { RatingStars } from "@/components/RatingStars";
 import { SourcesList } from "@/components/SourcesList";
 import { citationSources, reviewSources } from "@/lib/content/facts";
+import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildProductSchema, buildReviewSchema } from "@/lib/seo/schema";
@@ -215,7 +216,7 @@ export default function NordVpnReviewPage() {
           <h2 className="text-2xl font-bold text-white">Is NordVPN Worth It in 2026?</h2>
           <p className="text-lg leading-relaxed text-[#cbd5e1]">{reviewSummary}</p>
           <RatingStars rating={4.8} size="lg" />
-          <AffiliateCTA href="#affiliate-nordvpn" partner="nordvpn" label="Visit NordVPN" />
+          <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
         </div>
       </section>
 

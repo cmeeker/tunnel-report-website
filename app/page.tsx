@@ -13,7 +13,6 @@ import { homepageComparison } from "@/lib/content/vpn-metrics";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo/schema";
-import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Find the VPN That Actually Protects You",

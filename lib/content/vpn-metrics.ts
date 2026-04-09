@@ -8,6 +8,14 @@ export type VpnTableEntry = {
   partner: string;
 };
 
+export const AFFILIATE_URLS: Record<string, string> = {
+  nordvpn: "https://nordvpn.com/pricing/",
+  purevpn: "https://www.purevpn.com/pricing",
+  surfshark: "https://surfshark.com/deals",
+  expressvpn: "https://www.expressvpn.com/order",
+  protonvpn: "https://proton.me/vpn/pricing",
+};
+
 export const homepageComparison: VpnTableEntry[] = [
   {
     name: "NordVPN",
@@ -15,7 +23,7 @@ export const homepageComparison: VpnTableEntry[] = [
     privacy: "Panama jurisdiction, independent no-logs audits",
     pricePerMonth: "$3.99",
     score: 4.8,
-    href: "#affiliate-nordvpn",
+    href: AFFILIATE_URLS.nordvpn,
     partner: "nordvpn",
   },
   {
@@ -24,7 +32,7 @@ export const homepageComparison: VpnTableEntry[] = [
     privacy: "Always-on audit claims, split tunneling options",
     pricePerMonth: "$2.14",
     score: 4.2,
-    href: "#affiliate-purevpn",
+    href: AFFILIATE_URLS.purevpn,
     partner: "purevpn",
   },
   {
@@ -33,7 +41,7 @@ export const homepageComparison: VpnTableEntry[] = [
     privacy: "Diskless infrastructure and independent audits",
     pricePerMonth: "$2.49",
     score: 4.6,
-    href: "#affiliate-surfshark",
+    href: AFFILIATE_URLS.surfshark,
     partner: "surfshark",
   },
   {
@@ -42,7 +50,7 @@ export const homepageComparison: VpnTableEntry[] = [
     privacy: "TrustedServer architecture with regular audits",
     pricePerMonth: "$6.67",
     score: 4.5,
-    href: "#affiliate-expressvpn",
+    href: AFFILIATE_URLS.expressvpn,
     partner: "expressvpn",
   },
 ];
@@ -76,7 +84,7 @@ export const rankedVpns: RankedVpn[] = [
     speedSummary: "Strong 4K streaming and gaming latency across US and EU exit nodes.",
     privacySummary: "Audit cadence and public incident handling continue to set a high bar.",
     pricingSummary: "Entry promo pricing is competitive; long-term value depends on renewal terms.",
-    ctaHref: "#affiliate-nordvpn",
+    ctaHref: AFFILIATE_URLS.nordvpn,
     partner: "nordvpn",
   },
   {
@@ -93,7 +101,7 @@ export const rankedVpns: RankedVpn[] = [
     speedSummary: "High throughput in most metro regions with minimal startup delay.",
     privacySummary: "Solid security architecture with ongoing external validation.",
     pricingSummary: "Entry plan is among the most affordable in this group.",
-    ctaHref: "#affiliate-surfshark",
+    ctaHref: AFFILIATE_URLS.surfshark,
     partner: "surfshark",
   },
   {
@@ -110,7 +118,7 @@ export const rankedVpns: RankedVpn[] = [
     speedSummary: "Very stable for streaming and general browsing with predictable routing.",
     privacySummary: "Transparent trust-center messaging and regular security communications.",
     pricingSummary: "Premium positioning can still make sense for users prioritizing simplicity.",
-    ctaHref: "#affiliate-expressvpn",
+    ctaHref: AFFILIATE_URLS.expressvpn,
     partner: "expressvpn",
   },
   {
@@ -127,7 +135,7 @@ export const rankedVpns: RankedVpn[] = [
     speedSummary: "Good peak speeds, with variability under congested routes.",
     privacySummary: "Strong transparency culture and technical documentation quality.",
     pricingSummary: "Value is strongest for users already in the Proton ecosystem.",
-    ctaHref: "#affiliate-protonvpn",
+    ctaHref: AFFILIATE_URLS.protonvpn,
     partner: "protonvpn",
   },
   {
@@ -144,7 +152,7 @@ export const rankedVpns: RankedVpn[] = [
     speedSummary: "Adequate for HD streaming and typical remote-work traffic.",
     privacySummary: "Current trust profile is better than legacy perception, but still monitored closely.",
     pricingSummary: "Budget-friendly entry makes it attractive for price-sensitive users.",
-    ctaHref: "#affiliate-purevpn",
+    ctaHref: AFFILIATE_URLS.purevpn,
     partner: "purevpn",
   },
 ];
