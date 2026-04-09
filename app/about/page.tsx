@@ -84,9 +84,6 @@ export default function AboutPage() {
                 </div>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-[#94a3b8]">{person.shortBio}</p>
-              <p className="mt-3 rounded-lg border border-[#1e293b] bg-[#0d1221] px-3 py-2 text-xs italic text-[#64748b]">
-                Voice: {person.voiceDescription}
-              </p>
             </div>
           ))}
         </div>
