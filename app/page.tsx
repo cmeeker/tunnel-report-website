@@ -341,7 +341,7 @@ export default function Home() {
               title: "VPN Privacy Audits: What Actually Matters in 2026",
               excerpt:
                 "Not all audits test the same controls. I walked through scope documents from four major providers and found the gap between marketing claims and actual test coverage is often wider than vendors let on.",
-              href: "/about",
+              href: "/reviews/nordvpn",
               image: "/images/article-privacy.svg",
               badge: "Analysis",
               persona: personas.marcus,
@@ -350,7 +350,7 @@ export default function Home() {
               title: "Why Median Speed Beats Peak Speed in VPN Testing",
               excerpt:
                 "Screenshot-based speed claims are the most misleading metric in this industry. Here is how we design our test methodology to reflect the connection you will actually get during prime time.",
-              href: "/best-vpns",
+              href: "/compare/nordvpn-vs-purevpn",
               image: "/images/article-speed.svg",
               badge: "Methodology",
               persona: personas.sarah,
