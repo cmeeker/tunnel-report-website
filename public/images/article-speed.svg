@@ -1,0 +1,10 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="360" fill="#0F1729"/>
+  <path d="M120 260L220 190L320 220L420 140L520 165" stroke="#00D4AA" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="120" cy="260" r="10" fill="#00D4AA"/>
+  <circle cx="220" cy="190" r="10" fill="#00D4AA"/>
+  <circle cx="320" cy="220" r="10" fill="#00D4AA"/>
+  <circle cx="420" cy="140" r="10" fill="#00D4AA"/>
+  <circle cx="520" cy="165" r="10" fill="#00D4AA"/>
+  <text x="72" y="72" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">Speed Benchmarks</text>
+</svg>

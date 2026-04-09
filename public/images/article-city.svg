@@ -1,0 +1,10 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="360" fill="#0F1729"/>
+  <rect x="80" y="220" width="70" height="80" fill="#1E293B"/>
+  <rect x="170" y="170" width="85" height="130" fill="#334155"/>
+  <rect x="278" y="140" width="95" height="160" fill="#1E293B"/>
+  <rect x="398" y="185" width="72" height="115" fill="#334155"/>
+  <rect x="490" y="155" width="62" height="145" fill="#1E293B"/>
+  <path d="M100 110C132 88 173 88 205 110C237 132 278 132 310 110C342 88 383 88 415 110C447 132 488 132 520 110" stroke="#00D4AA" stroke-width="8" stroke-linecap="round"/>
+  <text x="72" y="72" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">Local VPN Guides</text>
+</svg>

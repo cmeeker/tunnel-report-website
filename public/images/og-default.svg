@@ -1,0 +1,11 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0F1729"/>
+  <circle cx="1020" cy="110" r="220" fill="#00D4AA" fill-opacity="0.15"/>
+  <circle cx="180" cy="560" r="240" fill="#00D4AA" fill-opacity="0.12"/>
+  <text x="90" y="250" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="56" font-weight="700">
+    Tunnel Report
+  </text>
+  <text x="90" y="320" fill="#7DD3FC" font-family="Arial, sans-serif" font-size="34">
+    Independent VPN Intelligence
+  </text>
+</svg>

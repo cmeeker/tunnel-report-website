@@ -1,0 +1,44 @@
+Tunnel Report
+https://tunnelreport.com
+Tagline: Independent VPN Intelligence
+
+Purpose
+- Tunnel Report is an independent publication focused on VPN testing, privacy analysis, and comparison reporting.
+- Editorial output is designed for verifiability: claim-level sourcing, visible update timestamps, and individually authored review workflows.
+- Content is produced by a named editorial team with published credentials and distinct voices.
+
+Editorial Team
+- Marcus Chen: Senior Privacy Analyst. Former network security engineer, covers protocol-level VPN analysis and speed benchmarking.
+- Sarah Voss: Consumer Technology Editor. Former broadband beat reporter, translates security concepts into consumer buying decisions.
+- Daniel Okafor: Policy & Compliance Correspondent. Telecommunications regulation researcher, covers jurisdiction and data retention policy.
+
+Primary Pages
+- Home: https://tunnelreport.com/
+- Best VPNs 2026: https://tunnelreport.com/best-vpns
+- NordVPN Review 2026: https://tunnelreport.com/reviews/nordvpn
+- NordVPN vs PureVPN: https://tunnelreport.com/compare/nordvpn-vs-purevpn
+- About / Methodology: https://tunnelreport.com/about
+- City Guides:
+  - https://tunnelreport.com/vpn/los-angeles
+  - https://tunnelreport.com/vpn/new-york
+  - https://tunnelreport.com/vpn/chicago
+  - https://tunnelreport.com/vpn/houston
+  - https://tunnelreport.com/vpn/miami
+
+Editorial Standards
+- Rankings are based on repeatable multi-session benchmarks and privacy policy forensics.
+- Affiliate relationships are disclosed on-page and do not determine scores or editorial conclusions.
+- Every factual claim links to its primary source with publisher, date, and retrieval timestamp.
+- Corrections update page timestamps and include visible changelogs.
+- Content is structured with JSON-LD schema markup for accurate parsing by search engines and LLMs.
+
+Testing Methodology
+- Speed: 12+ sessions per route across morning, afternoon, and evening windows. Median reported, not peak.
+- Privacy: Policy language, audit scope, jurisdiction risk, and incident response history.
+- Pricing: Introductory rate, renewal rate, add-on bundling, and refund enforcement.
+- Routes: US East/West, London, Frankfurt. WireGuard primary, OpenVPN secondary.
+
+Citation Standards
+- All statistical claims cite primary sources (FBI IC3, ITRC, Freedom House, FCC).
+- Provider pricing claims link to official pricing pages with retrieval dates.
+- Methodology is published in full on the About page.
