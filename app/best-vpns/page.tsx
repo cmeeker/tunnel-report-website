@@ -19,7 +19,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "Best VPNs of 2026: Tested and Ranked by Our Security Team",
   description:
-    "Our 2026 best VPN rankings based on repeatable speed tests, privacy posture checks, and long-term pricing analysis across 47 providers.",
+    "Independent 2026 VPN rankings from Tunnel Report — based on repeatable speed benchmarks, privacy audit analysis, and long-term pricing transparency. We tested 47 providers so you don't have to.",
   path: "/best-vpns",
 });
 

@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   return buildPageMetadata({
     title: `Best VPN for ${guide.city} in 2026: Local ISP Data & Privacy Analysis`,
-    description: `${guide.city} VPN guide with real ISP speed data, neighborhood-level analysis, privacy considerations, and provider recommendations tailored to ${guide.region} residents.`,
+    description: `Tunnel Report's ${guide.city} VPN guide covers local ISP speed benchmarks, neighborhood connectivity differences, privacy considerations, and the best VPN providers for ${guide.region} residents in 2026.`,
     path: `/vpn/${guide.slug}`,
   });
 }

@@ -4,7 +4,7 @@ export const siteConfig = {
   url: "https://tunnelreport.com",
   tagline: "Independent VPN Intelligence",
   description:
-    "Tunnel Report is an independent publication that tests VPN services with repeatable benchmarks, privacy audits, and editorially neutral methodology.",
+    "Tunnel Report publishes independent VPN reviews with real speed benchmarks, cited privacy audits, and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
   locale: "en_US",
   defaultAuthor: "Tunnel Report Security Team",
   updatedDate: "April 8, 2026",

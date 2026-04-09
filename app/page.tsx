@@ -15,9 +15,9 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Find the VPN That Actually Protects You",
+  title: "Find the VPN That Actually Protects You | Tunnel Report",
   description:
-    "Independent VPN testing with real benchmark data, cited sources, and editorial analysis from security professionals. No sponsored rankings.",
+    "Tunnel Report publishes independent VPN reviews with real speed benchmarks, cited privacy audits, and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
   path: "/",
   type: "website",
 });
@@ -209,7 +209,7 @@ export default function Home() {
       <section className="space-y-6">
         <div className="flex items-end justify-between">
           <div>
-            <h2 className="text-2xl font-bold text-white">Head-to-Head Comparison</h2>
+            <h2 className="text-2xl font-bold text-white">VPN Head-to-Head Comparison</h2>
             <p className="mt-1 text-sm text-[#94a3b8]">
               Entry pricing from provider sites at last verification
               <CitationLink source={citationSources.S5} />
@@ -266,7 +266,7 @@ export default function Home() {
       {/* Why trust us - Sarah's voice */}
       <section className="grid gap-10 lg:grid-cols-[2fr_1fr]">
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-white">Why This Publication Exists</h2>
+          <h2 className="text-2xl font-bold text-white">Why Tunnel Report Exists</h2>
           <div className="prose-dark space-y-4">
             <p>
               I spent four years covering broadband policy at a national outlet, and the thing that
@@ -334,7 +334,7 @@ export default function Home() {
 
       {/* Latest articles */}
       <section className="space-y-6">
-        <h2 className="text-2xl font-bold text-white">Latest Analysis</h2>
+        <h2 className="text-2xl font-bold text-white">Latest VPN Analysis</h2>
         <div className="grid gap-5 md:grid-cols-3">
           {[
             {

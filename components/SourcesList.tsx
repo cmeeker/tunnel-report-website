@@ -21,7 +21,7 @@ export function SourcesList({ sources }: SourcesListProps) {
             >
               {source.title}
             </a>{" "}
-            ({source.year}). Retrieved {source.retrievedAt}.
+            ({source.year}).
           </li>
         ))}
       </ol>

@@ -20,7 +20,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "NordVPN Review 2026: Is It Still the Best?",
   description:
-    "Deep-dive NordVPN review covering speed benchmarks, privacy audit analysis, pricing transparency, and who should actually buy it in 2026.",
+    "Our complete NordVPN review with real speed benchmark data, privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
   path: "/reviews/nordvpn",
 });
 

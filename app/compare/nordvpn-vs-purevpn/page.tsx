@@ -19,7 +19,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "NordVPN vs PureVPN 2026: Head-to-Head Comparison",
   description:
-    "A practical side-by-side comparison of NordVPN and PureVPN covering speed, privacy posture, pricing transparency, and who each service is actually built for.",
+    "NordVPN vs PureVPN: a straight-talking 2026 comparison of speed consistency, privacy posture, pricing transparency, and real-world usability. We tell you which to buy and why.",
   path: "/compare/nordvpn-vs-purevpn",
 });
 

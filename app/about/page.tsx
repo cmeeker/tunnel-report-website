@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "About Tunnel Report: Team, Methodology, and Editorial Standards",
   description:
-    "Meet the editorial team behind Tunnel Report, understand our VPN testing methodology, and learn how we maintain independence from the products we review.",
+    "Meet the editorial team behind Tunnel Report's VPN reviews, understand our speed-testing methodology, and learn how we enforce independence from the products we evaluate.",
   path: "/about",
 });
 

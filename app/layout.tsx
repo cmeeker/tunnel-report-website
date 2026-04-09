@@ -3,6 +3,7 @@ import { DM_Sans, Space_Grotesk } from "next/font/google";
 
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { Analytics } from "@/components/Analytics";
 import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
@@ -10,14 +11,14 @@ import "./globals.css";
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "700"],
   display: "swap",
 });
 
 const dmSans = DM_Sans({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -69,6 +70,7 @@ export default function RootLayout({
             {children}
           </main>
           <SiteFooter />
+          <Analytics />
         </div>
       </body>
     </html>
