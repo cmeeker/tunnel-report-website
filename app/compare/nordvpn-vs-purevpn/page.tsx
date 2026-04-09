@@ -7,7 +7,6 @@ import { CitationLink } from "@/components/CitationLink";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { LastUpdated } from "@/components/LastUpdated";
 import { SourcesList } from "@/components/SourcesList";
 import { citationSources, compareSources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
@@ -77,7 +76,7 @@ const compareRows = [
 
 export default function NordVsPurePage() {
   return (
-    <article className="space-y-14">
+    <article className="space-y-14 fade-in-up">
       <JsonLd
         data={buildArticleSchema({
           headline: "NordVPN vs PureVPN 2026: Head-to-Head Comparison",
@@ -101,10 +100,7 @@ export default function NordVsPurePage() {
           leads on consistency and trust signals. PureVPN undercuts on price. The question is whether
           the savings justify what you give up — and for some readers, the honest answer is yes.
         </p>
-        <div className="flex flex-wrap items-center gap-6">
-          <AuthorByline persona={personas.sarah} />
-          <LastUpdated date={siteConfig.updatedDate} />
-        </div>
+        <AuthorByline persona={personas.sarah} date={siteConfig.updatedDate} />
       </header>
 
       <DisclosureBanner />
@@ -113,8 +109,8 @@ export default function NordVsPurePage() {
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-white">Category-by-Category Breakdown</h2>
         <div className="space-y-3">
-          {compareRows.map((row) => (
-            <div key={row.category} className="glass-card p-7">
+          {compareRows.map((row, i) => (
+            <div key={row.category} className={`glass-card p-7 fade-in-up delay-${Math.min((i + 1) * 100, 600)}`}>
               <div className="mb-3 flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-[#e8ecf4]">{row.category}</h3>
                 {row.winner === "nord" && <span className="badge badge-teal text-[0.6rem]">NordVPN wins</span>}

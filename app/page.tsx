@@ -52,13 +52,13 @@ const homepageFaqs = [
 
 export default function Home() {
   return (
-    <div className="space-y-24">
+    <div className="space-y-28">
       <JsonLd data={[buildWebsiteSchema(), buildOrganizationSchema()]} />
 
       {/* Hero */}
       <section className="hero-gradient -mx-6 -mt-14 px-6 pb-20 pt-20 md:-mx-10 md:px-10 lg:-mx-14 lg:px-14">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="space-y-7">
+          <div className="space-y-7 fade-in-up">
             <div className="badge badge-teal mx-auto">Independent VPN Testing Lab · 47 Providers</div>
 
             {/* Animated graphic */}
@@ -193,7 +193,7 @@ export default function Home() {
             source: citationSources.S3,
           },
         ].map((stat) => (
-          <div key={stat.value} className="glass-card glass-card-hover p-8 text-center">
+          <div key={stat.value} className="glass-card glass-card-hover p-8 text-center fade-in-up delay-100">
             <p className="text-3xl font-extrabold gradient-text">{stat.value}</p>
             <p className="mt-2 text-sm text-[#94a3b8]">
               {stat.label}
@@ -264,7 +264,7 @@ export default function Home() {
       <hr className="divider-glow" />
 
       {/* Why trust us - Sarah's voice */}
-      <section className="grid gap-10 lg:grid-cols-[2fr_1fr]">
+      <section className="grid gap-10 lg:grid-cols-[2fr_1fr] fade-in-up delay-100">
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-white">Why Tunnel Report Exists</h2>
           <div className="prose-dark space-y-4">
@@ -364,8 +364,8 @@ export default function Home() {
               badge: "Field Report",
               persona: personas.daniel,
             },
-          ].map((article) => (
-          <div key={article.title} className="glass-card glass-card-hover overflow-hidden">
+          ].map((article, i) => (
+          <div key={article.title} className={`glass-card glass-card-hover overflow-hidden fade-in-up delay-${(i + 1) * 100 + 100}`}>
               <Image
                 src={article.image}
                 alt={article.title}

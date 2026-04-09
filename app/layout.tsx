@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { DM_Sans, Space_Grotesk } from "next/font/google";
+import { Manrope, Syne } from "next/font/google";
 
+import { Analytics } from "@/components/Analytics";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { Analytics } from "@/components/Analytics";
 import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const syne = Syne({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "700"],
+  weight: ["600", "800"],
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const manrope = Manrope({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500"],
@@ -61,7 +61,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${syne.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="mesh-bg min-h-full">
         <div className="flex min-h-full flex-col">

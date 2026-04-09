@@ -7,7 +7,6 @@ import { CitationLink } from "@/components/CitationLink";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { LastUpdated } from "@/components/LastUpdated";
 import { SourcesList } from "@/components/SourcesList";
 import { citationSources } from "@/lib/content/facts";
 import { AFFILIATE_URLS, rankedVpns } from "@/lib/content/vpn-metrics";
@@ -61,7 +60,7 @@ export default function BestVpnsPage() {
 
   return (
     <div className="grid gap-14 lg:grid-cols-[1fr_300px]">
-      <article className="space-y-14">
+      <article className="space-y-14 fade-in-up">
         <JsonLd data={[articleSchema, itemListSchema]} />
 
         <header className="space-y-5">
@@ -76,10 +75,7 @@ export default function BestVpnsPage() {
             checks — but several providers have shifted position since our last cycle. Here is where
             the market stands.
           </p>
-          <div className="flex flex-wrap items-center gap-6">
-            <AuthorByline persona={personas.marcus} />
-            <LastUpdated date={siteConfig.updatedDate} />
-          </div>
+          <AuthorByline persona={personas.marcus} date={siteConfig.updatedDate} />
         </header>
 
         <DisclosureBanner />
@@ -106,11 +102,11 @@ export default function BestVpnsPage() {
 
         {/* Ranked VPN cards */}
         <section className="space-y-6">
-          {rankedVpns.map((vpn) => (
+          {rankedVpns.map((vpn, i) => (
             <div
               key={vpn.name}
               id={vpn.name.toLowerCase().replace(/\s+/g, "-")}
-              className="glass-card overflow-hidden"
+              className={`glass-card overflow-hidden fade-in-up delay-${Math.min((i + 1) * 100, 500)}`}
             >
               <div className="flex items-center justify-between border-b border-[#1e293b] px-6 py-4">
                 <div className="flex items-center gap-4">

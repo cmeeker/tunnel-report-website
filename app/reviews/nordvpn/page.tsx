@@ -7,7 +7,6 @@ import { CitationLink } from "@/components/CitationLink";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { LastUpdated } from "@/components/LastUpdated";
 import { RatingStars } from "@/components/RatingStars";
 import { SourcesList } from "@/components/SourcesList";
 import { citationSources, reviewSources } from "@/lib/content/facts";
@@ -47,7 +46,7 @@ export default function NordVpnReviewPage() {
     "NordVPN maintains the strongest composite score in our 2026 testing cycle. Speed consistency, audit cadence, and app maturity keep it ahead of a market that has meaningfully improved around it.";
 
   return (
-    <article className="space-y-14">
+    <article className="space-y-14 fade-in-up">
       <JsonLd
         data={[
           buildReviewSchema({
@@ -73,10 +72,7 @@ export default function NordVpnReviewPage() {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
           NordVPN Review 2026: Is It Still the Best?
         </h1>
-        <div className="flex flex-wrap items-center gap-6">
-          <AuthorByline persona={personas.marcus} />
-          <LastUpdated date={siteConfig.updatedDate} />
-        </div>
+        <AuthorByline persona={personas.marcus} date={siteConfig.updatedDate} />
         <RatingStars rating={4.8} size="lg" />
       </header>
 

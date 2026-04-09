@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { FaqSection } from "@/components/FaqSection";
-import { JsonLd } from "@/components/JsonLd";
 import { LastUpdated } from "@/components/LastUpdated";
+import { JsonLd } from "@/components/JsonLd";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
@@ -38,7 +38,7 @@ const teamMembers = Object.values(personas);
 
 export default function AboutPage() {
   return (
-    <article className="space-y-14">
+    <article className="space-y-14 fade-in-up">
       <JsonLd
         data={buildArticleSchema({
           headline: "About Tunnel Report: Team, Methodology, and Editorial Standards",
@@ -60,8 +60,7 @@ export default function AboutPage() {
           smaller than it should be, and readers who care about measurable protection deserve a
           publication that operates at a higher standard.
         </p>
-        <LastUpdated date={siteConfig.updatedDate} />
-      </header>
+        <LastUpdated date={siteConfig.updatedDate} />      </header>
 
       <hr className="divider-glow" />
 
@@ -73,8 +72,8 @@ export default function AboutPage() {
           is assigned to the team member whose background best matches the subject matter.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
-          {teamMembers.map((person) => (
-            <div key={person.id} className="glass-card glass-card-hover p-8">
+          {teamMembers.map((person, i) => (
+            <div key={person.id} className={`glass-card glass-card-hover p-8 fade-in-up delay-${(i + 1) * 150}`}>
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] text-sm font-bold text-[#0a0f1e]">
                   {person.avatar}

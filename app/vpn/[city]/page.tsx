@@ -7,7 +7,6 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { CitationLink } from "@/components/CitationLink";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { LastUpdated } from "@/components/LastUpdated";
 import { SourcesList } from "@/components/SourcesList";
 import { cityGuideMap, cityGuides } from "@/lib/content/cities";
 import { citationSources, citySources } from "@/lib/content/facts";
@@ -68,7 +67,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
   ];
 
   return (
-    <article className="space-y-14">
+    <article className="space-y-14 fade-in-up">
       <JsonLd
         data={buildGeoArticleSchema({
           headline: `Best VPN for ${guide.city} in 2026`,
@@ -93,10 +92,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           connectivity differences, and privacy considerations specific to {guide.city} residents
           against our provider test data.
         </p>
-        <div className="flex flex-wrap items-center gap-6">
-          <AuthorByline persona={personas.daniel} />
-          <LastUpdated date={siteConfig.updatedDate} />
-        </div>
+        <AuthorByline persona={personas.daniel} date={siteConfig.updatedDate} />
       </header>
 
       {/* ISP speed table */}
