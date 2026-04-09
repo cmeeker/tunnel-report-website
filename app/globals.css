@@ -131,6 +131,37 @@ a { color: inherit; }
   transform: translateY(-3px);
 }
 
+/* ── Mega menu glass (desktop nav dropdowns) ───────── */
+.liquid-menu-glass {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.6),
+    0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.liquid-menu-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: #080d1a;
+}
+.liquid-menu-glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    160deg,
+    rgba(0, 212, 170, 0.06) 0%,
+    rgba(6, 182, 212, 0.04) 40%,
+    transparent 70%
+  );
+  opacity: 0.9;
+}
+
 /* ── Surface cards ──────────────────────────────────── */
 .surface-card {
   background: var(--brand-surface);
