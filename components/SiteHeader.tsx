@@ -21,27 +21,49 @@ function ChevronDown({ open }: { open: boolean }) {
   );
 }
 
-function DropdownPanel({ item, onClose }: { item: PrimaryNavItem; onClose: () => void }) {
+function DropdownPanel({
+  item,
+  onClose,
+  align = "center",
+}: {
+  item: PrimaryNavItem;
+  onClose: () => void;
+  align?: "left" | "center" | "right";
+}) {
   const hasFeatured = !!item.featured;
-  const hasColumns = item.columns && item.columns.length > 0;
+  const hasColumns = !!(item.columns && item.columns.length > 0);
   if (!hasFeatured && !hasColumns) return null;
 
+  const positionCls =
+    align === "right"
+      ? "right-0"
+      : align === "left"
+        ? "left-0"
+        : "left-1/2 -translate-x-1/2";
+
   return (
-    <div className="absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 scale-in">
+    <div className={`absolute top-full z-50 mt-2 ${positionCls} scale-in`}>
       <div
-        className="overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0a0f1e]/90 shadow-[0_24px_80px_rgba(0,0,0,0.6)] backdrop-blur-2xl"
-        style={{ minWidth: "520px" }}
+        className="overflow-hidden rounded-2xl border border-white/[0.1] shadow-[0_24px_80px_rgba(0,0,0,0.75),inset_0_1px_0_rgba(255,255,255,0.07)]"
+        style={{
+          minWidth: 500,
+          background: "rgba(6, 9, 18, 0.82)",
+          backdropFilter: "blur(28px) saturate(1.6)",
+          WebkitBackdropFilter: "blur(28px) saturate(1.6)",
+        }}
       >
-        <div className={`grid gap-0 ${hasFeatured && hasColumns ? "grid-cols-[220px_1fr]" : "grid-cols-1"}`}>
+        <div className={`grid gap-0 ${hasFeatured && hasColumns ? "grid-cols-[210px_1fr]" : "grid-cols-1"}`}>
+          {/* Featured tile */}
           {hasFeatured && item.featured && (
             <Link
               href={item.featured.href}
               onClick={onClose}
-              className="group flex flex-col justify-between gap-3 border-r border-white/[0.05] bg-gradient-to-b from-[#00d4aa]/5 to-transparent p-5 transition-colors hover:from-[#00d4aa]/10"
+              className="group flex flex-col justify-between gap-3 border-r border-white/[0.06] p-5 transition-colors"
+              style={{ background: "linear-gradient(160deg, rgba(0,212,170,0.07) 0%, transparent 70%)" }}
             >
               <div>
                 {item.featured.badge && (
-                  <span className="mb-2 inline-block rounded-full bg-[#00d4aa]/10 px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-[#00d4aa]">
+                  <span className="mb-2 inline-block rounded-full bg-[#00d4aa]/10 px-2.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wider text-[#00d4aa]">
                     {item.featured.badge}
                   </span>
                 )}
@@ -58,12 +80,13 @@ function DropdownPanel({ item, onClose }: { item: PrimaryNavItem; onClose: () =>
             </Link>
           )}
 
+          {/* Link columns */}
           {hasColumns && item.columns && (
-            <div className={`p-5 ${!hasFeatured ? "w-full" : ""}`}>
+            <div className="p-4">
               {item.columns.map((col) => (
                 <div key={col.heading}>
                   {col.heading && (
-                    <p className="mb-3 text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-[#475569]">
+                    <p className="mb-2.5 px-2 text-[0.62rem] font-semibold uppercase tracking-[0.1em] text-[#475569]">
                       {col.heading}
                     </p>
                   )}
@@ -73,7 +96,7 @@ function DropdownPanel({ item, onClose }: { item: PrimaryNavItem; onClose: () =>
                         <Link
                           href={link.href}
                           onClick={onClose}
-                          className="group flex items-center justify-between gap-2 rounded-lg px-3 py-2 transition-colors hover:bg-white/[0.04]"
+                          className="group flex items-center justify-between gap-2 rounded-lg px-3 py-2 transition-colors hover:bg-white/[0.05]"
                         >
                           <div className="min-w-0">
                             <p className="truncate text-sm font-medium text-[#cbd5e1] transition group-hover:text-white">
@@ -84,13 +107,11 @@ function DropdownPanel({ item, onClose }: { item: PrimaryNavItem; onClose: () =>
                             )}
                           </div>
                           {link.badge ? (
-                            <span className="shrink-0 rounded-full bg-[#1e293b] px-2 py-0.5 text-[0.6rem] font-medium uppercase tracking-wide text-[#64748b]">
+                            <span className="shrink-0 rounded-full bg-[#1e293b] px-2 py-0.5 text-[0.58rem] font-medium uppercase tracking-wide text-[#64748b]">
                               {link.badge}
                             </span>
                           ) : (
-                            <span className="shrink-0 text-[#00d4aa] opacity-0 transition-opacity group-hover:opacity-100">
-                              →
-                            </span>
+                            <span className="shrink-0 text-[#00d4aa] opacity-0 transition-opacity group-hover:opacity-100">→</span>
                           )}
                         </Link>
                       </li>
@@ -111,15 +132,22 @@ function MobileNav({ onClose }: { onClose: () => void }) {
 
   return (
     <>
-      {/* Backdrop */}
       <div
-        className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
+        className="fixed inset-0 z-40 backdrop-blur-sm"
+        style={{ background: "rgba(0,0,0,0.55)" }}
         onClick={onClose}
         aria-hidden
       />
-
-      {/* Drawer */}
-      <div className="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col bg-[#080d1a] shadow-[−24px_0_80px_rgba(0,0,0,0.6)]">
+      <div
+        className="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col"
+        style={{
+          background: "rgba(6, 9, 18, 0.95)",
+          backdropFilter: "blur(28px) saturate(1.5)",
+          WebkitBackdropFilter: "blur(28px) saturate(1.5)",
+          borderLeft: "1px solid rgba(255,255,255,0.07)",
+          boxShadow: "-24px 0 80px rgba(0,0,0,0.6)",
+        }}
+      >
         {/* Drawer header */}
         <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4">
           <Link href="/" onClick={onClose} className="flex items-center gap-2.5">
@@ -144,7 +172,6 @@ function MobileNav({ onClose }: { onClose: () => void }) {
 
         {/* Nav items */}
         <nav className="flex-1 overflow-y-auto px-3 py-4">
-          {/* Home link */}
           <Link
             href="/"
             onClick={onClose}
@@ -165,8 +192,7 @@ function MobileNav({ onClose }: { onClose: () => void }) {
                 >
                   <span>{item.label}</span>
                   {hasDropdown && (
-                    <svg
-                      width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden
                       className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                     >
                       <path d="M2 4.5L6 8.5L10 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -175,20 +201,20 @@ function MobileNav({ onClose }: { onClose: () => void }) {
                 </button>
 
                 {hasDropdown && isOpen && (
-                  <div className="mb-2 ml-3 mt-1 rounded-xl border border-white/[0.05] bg-white/[0.03]">
-                    {/* Featured */}
+                  <div
+                    className="mb-2 ml-3 mt-1 overflow-hidden rounded-xl border border-white/[0.06]"
+                    style={{ background: "rgba(255,255,255,0.03)" }}
+                  >
                     {item.featured && (
                       <Link
                         href={item.featured.href}
                         onClick={onClose}
-                        className="block border-b border-white/[0.05] px-4 py-3"
+                        className="block border-b border-white/[0.05] px-4 py-3 transition hover:bg-white/[0.04]"
                       >
                         <p className="text-sm font-semibold text-[#00d4aa]">{item.featured.label}</p>
                         <p className="mt-0.5 text-xs text-[#475569]">{item.featured.description}</p>
                       </Link>
                     )}
-
-                    {/* Columns */}
                     {item.columns?.map((col) => (
                       <div key={col.heading} className="px-2 py-2">
                         {col.heading && (
@@ -205,7 +231,7 @@ function MobileNav({ onClose }: { onClose: () => void }) {
                           >
                             <span>{link.label}</span>
                             {link.badge && (
-                              <span className="rounded-full bg-[#1e293b] px-2 py-0.5 text-[0.6rem] font-medium uppercase tracking-wide text-[#64748b]">
+                              <span className="rounded-full bg-[#1e293b] px-2 py-0.5 text-[0.58rem] font-medium uppercase tracking-wide text-[#64748b]">
                                 {link.badge}
                               </span>
                             )}
@@ -220,13 +246,8 @@ function MobileNav({ onClose }: { onClose: () => void }) {
           })}
         </nav>
 
-        {/* CTA footer */}
         <div className="border-t border-white/[0.06] px-5 py-4">
-          <Link
-            href="/best-vpns"
-            onClick={onClose}
-            className="affiliate-cta w-full justify-center"
-          >
+          <Link href="/best-vpns" onClick={onClose} className="affiliate-cta w-full justify-center">
             See 2026 VPN Rankings
           </Link>
         </div>
@@ -286,16 +307,29 @@ export function SiteHeader() {
     <>
       <header
         ref={headerRef}
-        className={`sticky top-0 z-50 transition-all duration-500 ease-out ${
+        className="sticky top-0 z-50 transition-[background,border-color,box-shadow] duration-500 ease-out"
+        style={
           scrolled
-            ? "border-b border-white/[0.06] bg-[#060a13]/75 shadow-[0_8px_40px_rgba(0,0,0,0.4)] backdrop-blur-2xl"
-            : "border-b border-transparent bg-transparent"
-        }`}
+            ? {
+                background: "rgba(6, 10, 19, 0.75)",
+                borderBottom: "1px solid rgba(255,255,255,0.06)",
+                boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
+                backdropFilter: "blur(24px) saturate(1.5)",
+                WebkitBackdropFilter: "blur(24px) saturate(1.5)",
+              }
+            : {
+                background: "transparent",
+                borderBottom: "1px solid transparent",
+                boxShadow: "none",
+                backdropFilter: "none",
+                WebkitBackdropFilter: "none",
+              }
+        }
       >
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 md:px-10 lg:px-14">
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-3 shrink-0" aria-label="Tunnel Report home">
-            <span className={`flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] shadow-lg transition-shadow duration-300 ${scrolled ? "shadow-[#00d4aa]/20" : "shadow-[#00d4aa]/10"}`}>
+          <Link href="/" className="group flex shrink-0 items-center gap-3" aria-label="Tunnel Report home">
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] shadow-lg shadow-[#00d4aa]/10 transition-shadow duration-300 group-hover:shadow-[#00d4aa]/25">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[#0a0f1e]">
                 <path d="M12 2L20 6V12C20 17 16.8 21.4 12 23C7.2 21.4 4 17 4 12V6L12 2Z" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.2" />
                 <path d="M8 12.5L10.5 15L16 9.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -314,9 +348,12 @@ export function SiteHeader() {
           {/* Desktop nav */}
           <nav aria-label="Primary" className="hidden md:block">
             <ul className="flex items-center gap-0.5">
-              {primaryNav.map((item) => {
+              {primaryNav.map((item, idx) => {
                 const hasDropdown = !!(item.featured || (item.columns && item.columns.length > 0));
                 const isOpen = openKey === item.label;
+                // Right-align dropdowns for the last two nav items to prevent overflow
+                const align = idx >= primaryNav.length - 2 ? "right" : "center";
+
                 return (
                   <li
                     key={item.label}
@@ -336,7 +373,7 @@ export function SiteHeader() {
                       {hasDropdown && <ChevronDown open={isOpen} />}
                     </Link>
                     {hasDropdown && isOpen && (
-                      <DropdownPanel item={item} onClose={() => setOpenKey(null)} />
+                      <DropdownPanel item={item} onClose={() => setOpenKey(null)} align={align} />
                     )}
                   </li>
                 );

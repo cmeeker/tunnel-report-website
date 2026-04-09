@@ -68,7 +68,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
-              Stop Trusting VPN Marketing.
+              VPN Reviews You Can Trust.<br />
               <span className="gradient-text"> Start Reading the Audits.</span>
             </h1>
             <p className="mx-auto max-w-xl text-base leading-relaxed text-[#64748b]">
