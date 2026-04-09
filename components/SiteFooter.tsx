@@ -69,7 +69,7 @@ export function SiteFooter() {
           </section>
         ))}
       </div>
-      <div className="glow-line" />
+      <div className="divider-glow" />
       <div className="mx-auto max-w-7xl px-6 py-6 text-center text-xs text-[#475569] md:px-10 lg:px-14">
         &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
       </div>
