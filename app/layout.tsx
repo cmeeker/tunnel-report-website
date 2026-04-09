@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Syne } from "next/font/google";
 
 import { Analytics } from "@/components/Analytics";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { siteConfig } from "@/lib/site";
@@ -66,6 +67,7 @@ export default function RootLayout({
       <body className="mesh-bg min-h-full">
         <div className="flex min-h-full flex-col">
           <SiteHeader />
+          <ScrollToTop />
           <main className="mx-auto w-full max-w-7xl flex-1 px-6 py-14 md:px-10 lg:px-14">
             {children}
           </main>
