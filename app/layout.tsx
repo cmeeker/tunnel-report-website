@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
+import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 
 import { Analytics } from "@/components/Analytics";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -9,14 +9,14 @@ import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
 
-const syne = Syne({
+const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["600", "800"],
+  weight: ["600", "700", "800"],
   display: "swap",
 });
 
-const manrope = Manrope({
+const dmSans = DM_Sans({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500"],
@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${manrope.variable} h-full antialiased`}
+      className={`${plusJakartaSans.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="mesh-bg min-h-full">
         <div className="flex min-h-full flex-col">
