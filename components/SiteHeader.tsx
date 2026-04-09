@@ -1,13 +1,35 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import { primaryNav, siteConfig } from "@/lib/site";
 
 export function SiteHeader() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 48);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-[#1e293b] bg-[#060a13]/80 backdrop-blur-xl">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-500 ease-out ${
+        scrolled
+          ? "border-b border-white/[0.06] bg-[#060a13]/75 shadow-[0_8px_40px_rgba(0,0,0,0.4)] backdrop-blur-2xl"
+          : "border-b border-transparent bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 md:px-10 lg:px-14">
         <Link href="/" className="group flex items-center gap-3" aria-label="Tunnel Report home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] shadow-lg shadow-[#00d4aa]/10">
+          <span
+            className={`flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] shadow-lg transition-shadow duration-300 ${
+              scrolled ? "shadow-[#00d4aa]/20" : "shadow-[#00d4aa]/10"
+            }`}
+          >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[#0a0f1e]">
               <path
                 d="M12 2L20 6V12C20 17 16.8 21.4 12 23C7.2 21.4 4 17 4 12V6L12 2Z"
@@ -34,7 +56,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-[#94a3b8] transition hover:bg-[#111827] hover:text-white"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-[#94a3b8] transition-all duration-200 hover:bg-white/[0.06] hover:text-white"
                 >
                   {item.label}
                 </Link>

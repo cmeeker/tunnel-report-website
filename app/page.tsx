@@ -6,6 +6,7 @@ import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
 import { CitationLink } from "@/components/CitationLink";
 import { FaqSection } from "@/components/FaqSection";
+import { HeroGraphic } from "@/components/HeroGraphic";
 import { JsonLd } from "@/components/JsonLd";
 import { SourcesList } from "@/components/SourcesList";
 import { citationSources, homepageSources } from "@/lib/content/facts";
@@ -56,85 +57,14 @@ export default function Home() {
       <JsonLd data={[buildWebsiteSchema(), buildOrganizationSchema()]} />
 
       {/* Hero */}
-      <section className="hero-gradient -mx-6 -mt-14 px-6 pb-20 pt-20 md:-mx-10 md:px-10 lg:-mx-14 lg:px-14">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="space-y-7 fade-in-up">
+      <section className="hero-gradient -mx-6 -mt-14 flex min-h-screen flex-col items-center justify-center px-6 pb-16 pt-24 md:-mx-10 md:px-10 lg:-mx-14 lg:px-14">
+        <div className="mx-auto w-full max-w-4xl text-center">
+          <div className="space-y-8 fade-in-up">
             <div className="badge badge-teal mx-auto">Independent VPN Testing Lab · 47 Providers</div>
 
-            {/* Animated graphic */}
-            <div className="relative mx-auto flex h-36 w-full max-w-xl items-center justify-center overflow-hidden">
-              <svg
-                viewBox="0 0 480 144"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-full w-full"
-                aria-hidden
-              >
-                {/* Tunnel rings — three concentric ovals, pulsing outward */}
-                <ellipse cx="240" cy="72" rx="200" ry="54" stroke="rgba(0,212,170,0.07)" strokeWidth="1" />
-                <ellipse cx="240" cy="72" rx="200" ry="54" stroke="rgba(0,212,170,0.12)" strokeWidth="1">
-                  <animate attributeName="rx" values="200;220;200" dur="3s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="54;60;54" dur="3s" repeatCount="indefinite" />
-                  <animate attributeName="stroke-opacity" values="0.12;0;0.12" dur="3s" repeatCount="indefinite" />
-                </ellipse>
-                <ellipse cx="240" cy="72" rx="150" ry="40" stroke="rgba(0,212,170,0.1)" strokeWidth="1" />
-                <ellipse cx="240" cy="72" rx="150" ry="40" stroke="rgba(0,212,170,0.18)" strokeWidth="1">
-                  <animate attributeName="rx" values="150;175;150" dur="3s" begin="0.5s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="40;48;40" dur="3s" begin="0.5s" repeatCount="indefinite" />
-                  <animate attributeName="stroke-opacity" values="0.18;0;0.18" dur="3s" begin="0.5s" repeatCount="indefinite" />
-                </ellipse>
-                <ellipse cx="240" cy="72" rx="96" ry="26" stroke="rgba(0,212,170,0.14)" strokeWidth="1.2" />
-                <ellipse cx="240" cy="72" rx="96" ry="26" stroke="rgba(0,212,170,0.3)" strokeWidth="1.2">
-                  <animate attributeName="rx" values="96;116;96" dur="3s" begin="1s" repeatCount="indefinite" />
-                  <animate attributeName="ry" values="26;33;26" dur="3s" begin="1s" repeatCount="indefinite" />
-                  <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" begin="1s" repeatCount="indefinite" />
-                </ellipse>
-
-                {/* Data packets travelling left→right along centre line */}
-                <line x1="40" y1="72" x2="440" y2="72" stroke="rgba(0,212,170,0.08)" strokeWidth="1" strokeDasharray="4 8" />
-                <circle r="3" fill="#00d4aa" opacity="0.8">
-                  <animateMotion dur="2.2s" repeatCount="indefinite" path="M40,72 L440,72" />
-                  <animate attributeName="opacity" values="0;0.9;0.9;0" dur="2.2s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#06b6d4" opacity="0.7">
-                  <animateMotion dur="2.2s" begin="0.7s" repeatCount="indefinite" path="M40,72 L440,72" />
-                  <animate attributeName="opacity" values="0;0.8;0.8;0" dur="2.2s" begin="0.7s" repeatCount="indefinite" />
-                </circle>
-                <circle r="2.5" fill="#8b5cf6" opacity="0.6">
-                  <animateMotion dur="2.2s" begin="1.4s" repeatCount="indefinite" path="M40,72 L440,72" />
-                  <animate attributeName="opacity" values="0;0.7;0.7;0" dur="2.2s" begin="1.4s" repeatCount="indefinite" />
-                </circle>
-
-                {/* Shield at centre */}
-                <path
-                  d="M240 46 L258 53 L258 65 C258 74 250 80 240 84 C230 80 222 74 222 65 L222 53 Z"
-                  fill="rgba(0,212,170,0.08)"
-                  stroke="rgba(0,212,170,0.5)"
-                  strokeWidth="1.5"
-                />
-                <path d="M233 65 L238 70 L248 59" stroke="#00d4aa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-
-                {/* Left node */}
-                <circle cx="60" cy="72" r="10" fill="rgba(0,212,170,0.08)" stroke="rgba(0,212,170,0.3)" strokeWidth="1.2" />
-                <circle cx="60" cy="72" r="4" fill="#00d4aa" opacity="0.6" />
-                <circle cx="60" cy="72" r="10" fill="none" stroke="rgba(0,212,170,0.3)" strokeWidth="1">
-                  <animate attributeName="r" values="10;18;10" dur="2s" repeatCount="indefinite" />
-                  <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite" />
-                </circle>
-
-                {/* Right node */}
-                <circle cx="420" cy="72" r="10" fill="rgba(6,182,212,0.08)" stroke="rgba(6,182,212,0.3)" strokeWidth="1.2" />
-                <circle cx="420" cy="72" r="4" fill="#06b6d4" opacity="0.6" />
-                <circle cx="420" cy="72" r="10" fill="none" stroke="rgba(6,182,212,0.3)" strokeWidth="1">
-                  <animate attributeName="r" values="10;18;10" dur="2s" begin="1.1s" repeatCount="indefinite" />
-                  <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="2s" begin="1.1s" repeatCount="indefinite" />
-                </circle>
-
-                {/* Labels */}
-                <text x="60" y="92" textAnchor="middle" fill="rgba(148,163,184,0.6)" fontSize="9" fontFamily="inherit">Your Device</text>
-                <text x="420" y="92" textAnchor="middle" fill="rgba(148,163,184,0.6)" fontSize="9" fontFamily="inherit">Internet</text>
-                <text x="240" y="96" textAnchor="middle" fill="rgba(0,212,170,0.5)" fontSize="8" fontFamily="inherit">Encrypted Tunnel</text>
-              </svg>
+            {/* Hero graphic */}
+            <div className="relative mx-auto h-44 w-full max-w-2xl sm:h-56">
+              <HeroGraphic />
             </div>
 
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl">
