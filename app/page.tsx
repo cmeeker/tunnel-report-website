@@ -57,7 +57,10 @@ export default function Home() {
       <JsonLd data={[buildWebsiteSchema(), buildOrganizationSchema()]} />
 
       {/* Hero */}
-      <section className="hero-gradient -mx-6 -mt-14 flex min-h-screen flex-col items-center justify-center px-6 pb-16 pt-24 md:-mx-10 md:px-10 lg:-mx-14 lg:px-14">
+      <section
+        className="hero-gradient -mt-14 flex min-h-screen flex-col items-center justify-center px-6 pb-16 pt-24 md:px-10 lg:px-14"
+        style={{ marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw" }}
+      >
         <div className="mx-auto w-full max-w-3xl text-center">
           <div className="space-y-6 fade-in-up">
             <div className="badge badge-teal mx-auto">Independent VPN Testing Lab · 47 Providers</div>
