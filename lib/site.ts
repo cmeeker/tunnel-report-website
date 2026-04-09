@@ -45,7 +45,6 @@ export type PrimaryNavItem = {
 };
 
 export const primaryNav: PrimaryNavItem[] = [
-  { href: "/", label: "Home" },
   {
     href: "/best-vpns",
     label: "Best VPNs",

@@ -58,8 +58,8 @@ export default function Home() {
 
       {/* Hero */}
       <section className="hero-gradient -mx-6 -mt-14 flex min-h-screen flex-col items-center justify-center px-6 pb-16 pt-24 md:-mx-10 md:px-10 lg:-mx-14 lg:px-14">
-        <div className="mx-auto w-full max-w-4xl text-center">
-          <div className="space-y-8 fade-in-up">
+        <div className="mx-auto w-full max-w-3xl text-center">
+          <div className="space-y-6 fade-in-up">
             <div className="badge badge-teal mx-auto">Independent VPN Testing Lab · 47 Providers</div>
 
             {/* Hero graphic */}
@@ -67,36 +67,36 @@ export default function Home() {
               <HeroGraphic />
             </div>
 
-            <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl">
-              VPN Reviews Built on
-              <span className="gradient-text"> Evidence, Not Commission</span>
+            <h1 className="text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
+              Stop Trusting VPN Marketing.
+              <span className="gradient-text"> Start Reading the Audits.</span>
             </h1>
-            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#94a3b8]">
+            <p className="mx-auto max-w-xl text-base leading-relaxed text-[#64748b]">
               Independent speed benchmarks, cited privacy audits, and editorial analysis from
               security professionals. No pay-to-rank. No undisclosed sponsorships.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-3">
               <Link href="/best-vpns" className="affiliate-cta">
                 See 2026 Rankings
               </Link>
               <Link
                 href="/about"
-                className="inline-flex min-h-[52px] items-center rounded-xl border border-[#1e293b] px-6 text-sm font-semibold text-[#94a3b8] transition hover:border-[#00d4aa]/30 hover:text-white"
+                className="inline-flex min-h-[48px] items-center rounded-xl border border-[#1e293b] px-5 text-sm font-semibold text-[#94a3b8] transition hover:border-[#00d4aa]/30 hover:text-white"
               >
                 Our Methodology
               </Link>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 pt-2 text-sm text-[#475569]">
-              <span className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#00d4aa]" />
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-1 text-xs text-[#475569]">
+              <span className="flex items-center gap-1.5">
+                <span className="h-1 w-1 rounded-full bg-[#00d4aa]" />
                 47 providers tested
               </span>
-              <span className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#06b6d4]" />
+              <span className="flex items-center gap-1.5">
+                <span className="h-1 w-1 rounded-full bg-[#06b6d4]" />
                 Claim-level citations
               </span>
-              <span className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#8b5cf6]" />
+              <span className="flex items-center gap-1.5">
+                <span className="h-1 w-1 rounded-full bg-[#8b5cf6]" />
                 Updated April 2026
               </span>
             </div>
