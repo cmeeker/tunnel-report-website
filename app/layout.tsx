@@ -29,6 +29,14 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+    shortcut: "/icon.svg",
+  },
   openGraph: {
     title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
@@ -36,7 +44,7 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    images: [{ url: "/images/og-default.svg", width: 1200, height: 630, alt: "Tunnel Report" }],
+    images: [{ url: "/images/og-default.svg", width: 1200, height: 630, alt: "Tunnel Report — Independent VPN Intelligence" }],
   },
   twitter: {
     card: "summary_large_image",
