@@ -6,6 +6,14 @@ import { useEffect, useRef, useState } from "react";
 import type { PrimaryNavItem } from "@/lib/site";
 import { primaryNav, siteConfig } from "@/lib/site";
 
+/** Matches navbar scrolled state — must not sit on an ancestor with transform or backdrop-filter breaks */
+const NAV_GLASS = {
+  background: "rgba(6, 10, 19, 0.72)",
+  backdropFilter: "blur(24px) saturate(1.5)",
+  WebkitBackdropFilter: "blur(24px) saturate(1.5)",
+  boxShadow: "0 24px 80px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.08)",
+} as const;
+
 function ChevronDown({ open }: { open: boolean }) {
   return (
     <svg
@@ -21,38 +29,25 @@ function ChevronDown({ open }: { open: boolean }) {
   );
 }
 
-function DropdownPanel({
-  item,
-  onClose,
-  align = "center",
-}: {
-  item: PrimaryNavItem;
-  onClose: () => void;
-  align?: "left" | "center" | "right";
-}) {
+function DropdownPanel({ item, onClose }: { item: PrimaryNavItem; onClose: () => void }) {
   const hasFeatured = !!item.featured;
   const hasColumns = !!(item.columns && item.columns.length > 0);
   if (!hasFeatured && !hasColumns) return null;
 
-  const positionCls =
-    align === "right"
-      ? "right-0"
-      : align === "left"
-        ? "left-0"
-        : "left-1/2 -translate-x-1/2";
-
+  /* Trailing-edge anchor — no translate (ancestor transform breaks backdrop-filter) */
   return (
-    <div className={`absolute top-full z-50 mt-2 ${positionCls} scale-in`}>
+    <div className="absolute right-0 top-full z-[60] mt-2 fade-in">
+      {/* Glass layer: no overflow-hidden here — it kills backdrop-filter in WebKit */}
       <div
-        className="overflow-hidden rounded-2xl border border-white/[0.1] shadow-[0_24px_80px_rgba(0,0,0,0.75),inset_0_1px_0_rgba(255,255,255,0.07)]"
+        className="rounded-2xl border border-white/[0.08]"
         style={{
-          minWidth: 500,
-          background: "rgba(6, 9, 18, 0.82)",
-          backdropFilter: "blur(28px) saturate(1.6)",
-          WebkitBackdropFilter: "blur(28px) saturate(1.6)",
+          minWidth: "min(100vw - 2rem, 520px)",
+          maxWidth: "min(100vw - 2rem, 560px)",
+          ...NAV_GLASS,
         }}
       >
-        <div className={`grid gap-0 ${hasFeatured && hasColumns ? "grid-cols-[210px_1fr]" : "grid-cols-1"}`}>
+        <div className="overflow-hidden rounded-2xl">
+          <div className={`grid gap-0 ${hasFeatured && hasColumns ? "grid-cols-[210px_1fr]" : "grid-cols-1"}`}>
           {/* Featured tile */}
           {hasFeatured && item.featured && (
             <Link
@@ -121,6 +116,7 @@ function DropdownPanel({
               ))}
             </div>
           )}
+          </div>
         </div>
       </div>
     </div>
@@ -303,19 +299,22 @@ export function SiteHeader() {
     closeTimer.current = setTimeout(() => setOpenKey(null), 120);
   };
 
+  /* Nested backdrop-filter on header traps child dropdown blur — disable header blur while menu open */
+  const megaOpen = openKey !== null;
+
   return (
     <>
       <header
         ref={headerRef}
-        className="sticky top-0 z-50 transition-[background,border-color,box-shadow] duration-500 ease-out"
+        className="sticky top-0 z-50 transition-[background,border-color,box-shadow,backdrop-filter] duration-500 ease-out"
         style={
           scrolled
             ? {
-                background: "rgba(6, 10, 19, 0.75)",
+                background: megaOpen ? "rgba(6, 10, 19, 0.94)" : "rgba(6, 10, 19, 0.75)",
                 borderBottom: "1px solid rgba(255,255,255,0.06)",
                 boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
-                backdropFilter: "blur(24px) saturate(1.5)",
-                WebkitBackdropFilter: "blur(24px) saturate(1.5)",
+                backdropFilter: megaOpen ? "none" : "blur(24px) saturate(1.5)",
+                WebkitBackdropFilter: megaOpen ? "none" : "blur(24px) saturate(1.5)",
               }
             : {
                 background: "transparent",
@@ -348,11 +347,9 @@ export function SiteHeader() {
           {/* Desktop nav */}
           <nav aria-label="Primary" className="hidden md:block">
             <ul className="flex items-center gap-0.5">
-              {primaryNav.map((item, idx) => {
+              {primaryNav.map((item) => {
                 const hasDropdown = !!(item.featured || (item.columns && item.columns.length > 0));
                 const isOpen = openKey === item.label;
-                // Right-align dropdowns for the last two nav items to prevent overflow
-                const align = idx >= primaryNav.length - 2 ? "right" : "center";
 
                 return (
                   <li
@@ -373,7 +370,7 @@ export function SiteHeader() {
                       {hasDropdown && <ChevronDown open={isOpen} />}
                     </Link>
                     {hasDropdown && isOpen && (
-                      <DropdownPanel item={item} onClose={() => setOpenKey(null)} align={align} />
+                      <DropdownPanel item={item} onClose={() => setOpenKey(null)} />
                     )}
                   </li>
                 );
