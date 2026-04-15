@@ -9,7 +9,10 @@ export type VpnTableEntry = {
 };
 
 export const AFFILIATE_URLS: Record<string, string> = {
-  nordvpn: "https://nordvpn.com/pricing/",
+  nordvpn:
+    "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=145333&url_id=902",
+  nordpass:
+    "https://go.nordpass.io/aff_c?offer_id=488&aff_id=145333&url_id=9356",
   purevpn: "https://www.purevpn.com/pricing",
   surfshark: "https://surfshark.com/deals",
   expressvpn: "https://www.expressvpn.com/order",
