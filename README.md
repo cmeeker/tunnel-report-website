@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tunnel Report
 
-## Getting Started
+Independent VPN review site at [tunnelreport.com](https://tunnelreport.com). Editorial rankings, provider reviews, head-to-head comparisons, and US city guides — monetized via affiliate links with on-page disclosure.
 
-First, run the development server:
+## Mission
+
+Publish verifiable VPN guidance: cited sources, named editors, repeatable benchmarks, and rankings that are not pay-to-rank.
+
+## Local development
 
 ```bash
+npm install
+cp example.env .env.local   # then fill in values
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Required | Purpose |
+|----------|----------|---------|
+| `NORD_AFFILIATE_NETWORK_ID` | For CLI only | TUNE network ID (default: `nordvpn`) |
+| `NORD_AFFILIATE_API_KEY` | For CLI only | Nord affiliate API — **server-side only** |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional | Google Analytics 4 measurement ID |
+| `INDEXNOW_SUBMIT_SECRET` | Optional | Bearer token for `POST /api/indexnow` |
 
-## Learn More
+See [example.env](example.env) and [GROWTH.md](GROWTH.md) for post-deploy indexing steps.
 
-To learn more about Next.js, take a look at the following resources:
+## Affiliate links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tracking URLs live in [`lib/content/providers.ts`](lib/content/providers.ts) (`AFFILIATE_URLS`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **NordVPN / NordPass** — real TUNE tracking links (`aff_id=145333`)
+- **Surfshark, ExpressVPN, Proton, PureVPN** — direct pricing URLs until you add program tracking params
 
-## Deploy on Vercel
+Refresh Nord links via:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run nord-affiliate -- track <offer_id> [url_id]
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content architecture
+
+| Path | Source |
+|------|--------|
+| `/reviews/[provider]` | `lib/content/providers.ts` |
+| `/compare/[matchup]` | `lib/content/comparisons.ts` |
+| `/vpn/[city]` | `lib/content/cities.ts` |
+| `/best-vpns` | Rankings + use-case sections from `vpn-metrics.ts` |
+
+## Scripts
+
+- `npm run dev` — development server
+- `npm run build` — production build (static generation for all content routes)
+- `npm run lint` — ESLint
+- `npm run nord-affiliate -- <command>` — Nord TUNE affiliate API CLI
+
+## SEO
+
+- Dynamic PNG Open Graph images per route (`opengraph-image.tsx`)
+- JSON-LD: WebSite, Organization, Article, Review, FAQ, BreadcrumbList, ItemList
+- `app/sitemap.ts` — all reviews, compares, cities, and core pages
+- `/llms.txt` and `/llms-full.txt` — generated LLM crawler summaries
+- `/feed.xml` — RSS for reviews, comparisons, and guides
+- IndexNow key at `/tunnelreport-indexnow-2026.txt`; `npm run indexnow` after deploy
+
+## Deploy
+
+Optimized for [Vercel](https://vercel.com). Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in the Vercel project env for analytics.

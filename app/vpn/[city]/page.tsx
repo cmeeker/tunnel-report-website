@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
-import { cityGuideMap, cityGuides } from "@/lib/content/cities";
+import { getCityRelatedLinks } from "@/lib/seo/related-links";
+import { cityGuideMap } from "@/lib/content/cities";
 import { citationSources, citySources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
 import { personas } from "@/lib/editorial-personas";
@@ -77,6 +79,14 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           region: guide.region,
           dateModified: "2026-04-08",
         })}
+      />
+
+      <Breadcrumbs
+        items={[
+          { name: "Home", path: "/" },
+          { name: "City Guides", path: "/vpn/los-angeles" },
+          { name: guide.city, path: `/vpn/${guide.slug}` },
+        ]}
       />
 
       <header className="space-y-5">
@@ -208,22 +218,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
 
       <AuthorByline persona={personas.daniel} showBio />
 
-      <section className="surface-card p-8">
-        <h2 className="text-lg font-bold text-white">More City Guides</h2>
-        <div className="mt-3 grid gap-2 sm:grid-cols-2">
-          {cityGuides
-            .filter((g) => g.slug !== guide.slug)
-            .map((g) => (
-              <Link
-                key={g.slug}
-                href={`/vpn/${g.slug}`}
-                className="rounded-lg border border-[#1e293b] p-3 text-sm text-[#94a3b8] transition hover:border-[#00d4aa]/20 hover:text-white"
-              >
-                Best VPN for {g.city} &rarr;
-              </Link>
-            ))}
-        </div>
-      </section>
+      <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
 
       <FaqSection faqs={cityFaqs} />
 

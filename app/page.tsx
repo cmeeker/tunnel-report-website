@@ -58,15 +58,15 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="hero-gradient -mt-14 flex min-h-screen flex-col items-center justify-center px-6 pb-16 pt-24 md:px-10 lg:px-14"
+        className="hero-gradient -mt-20 flex min-h-[calc(100svh-4rem)] flex-col items-center justify-start px-6 pb-14 pt-24 md:px-10 md:pt-[6.5rem] lg:px-14"
         style={{ marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw" }}
       >
         <div className="mx-auto w-full max-w-3xl text-center">
-          <div className="space-y-6 fade-in-up">
+          <div className="space-y-5 fade-in-up">
             <div className="badge badge-teal mx-auto">Independent VPN Testing Lab · 47 Providers</div>
 
             {/* Hero graphic */}
-            <div className="relative mx-auto h-44 w-full max-w-2xl sm:h-56">
+            <div className="relative mx-auto h-36 w-full max-w-2xl sm:h-44 md:h-48">
               <HeroGraphic />
             </div>
 
@@ -280,12 +280,12 @@ export default function Home() {
               persona: personas.marcus,
             },
             {
-              title: "Why Median Speed Beats Peak Speed in VPN Testing",
+              title: "Surfshark Review 2026: Best Budget VPN for Families?",
               excerpt:
-                "Screenshot-based speed claims are the most misleading metric in this industry. Here is how we design our test methodology to reflect the connection you will actually get during prime time.",
-              href: "/compare/nordvpn-vs-purevpn",
+                "Unlimited devices, aggressive pricing, and improving transatlantic speeds — our full Surfshark review breaks down where it beats NordVPN and where it does not.",
+              href: "/reviews/surfshark",
               image: "/images/article-speed.svg",
-              badge: "Methodology",
+              badge: "Review",
               persona: personas.sarah,
             },
             {

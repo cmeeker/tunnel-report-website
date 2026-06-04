@@ -8,7 +8,22 @@ const columns = [
     links: [
       { href: "/best-vpns", label: "Best VPNs 2026" },
       { href: "/reviews/nordvpn", label: "NordVPN Review" },
-      { href: "/compare/nordvpn-vs-purevpn", label: "NordVPN vs PureVPN" },
+      { href: "/reviews/surfshark", label: "Surfshark Review" },
+      { href: "/reviews/expressvpn", label: "ExpressVPN Review" },
+      { href: "/compare/nordvpn-vs-expressvpn", label: "NordVPN vs ExpressVPN" },
+      { href: "/compare/surfshark-vs-nordvpn", label: "Surfshark vs NordVPN" },
+      { href: "/alternatives/nordvpn", label: "NordVPN Alternatives" },
+    ],
+  },
+  {
+    title: "Use Cases",
+    links: [
+      { href: "/best-vpn-for/streaming", label: "Streaming" },
+      { href: "/best-vpn-for/privacy", label: "Privacy" },
+      { href: "/best-vpn-for/torrenting", label: "Torrenting" },
+      { href: "/best-vpn-for/budget", label: "Cheap VPNs" },
+      { href: "/best-vpn-for/gaming", label: "Gaming" },
+      { href: "/best-vpn-for/work", label: "Remote Work" },
     ],
   },
   {
@@ -19,6 +34,18 @@ const columns = [
       { href: "/vpn/chicago", label: "Chicago" },
       { href: "/vpn/houston", label: "Houston" },
       { href: "/vpn/miami", label: "Miami" },
+      { href: "/vpn/austin", label: "Austin" },
+      { href: "/vpn/seattle", label: "Seattle" },
+    ],
+  },
+  {
+    title: "Guides",
+    links: [
+      { href: "/guides", label: "All Guides" },
+      { href: "/guides/wireguard-vs-openvpn", label: "WireGuard vs OpenVPN" },
+      { href: "/guides/what-is-a-no-logs-vpn", label: "No-Logs VPNs" },
+      { href: "/guides/how-we-test-vpn-speed", label: "Speed Testing" },
+      { href: "/guides/vpn-renewal-pricing-traps", label: "Renewal Pricing" },
     ],
   },
   {
@@ -33,7 +60,7 @@ const columns = [
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-[#1e293b] bg-[#060a13]">
-      <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 md:grid-cols-4 md:px-10 lg:px-14">
+      <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 md:grid-cols-3 md:px-10 lg:grid-cols-6 lg:px-14">
         <section>
           <div className="flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#00d4aa] to-[#06b6d4]">

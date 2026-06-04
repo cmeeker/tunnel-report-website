@@ -13,6 +13,14 @@ export function buildWebsiteSchema() {
       name: siteConfig.name,
       url: siteConfig.url,
     },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteConfig.url}/best-vpns?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 
@@ -102,6 +110,7 @@ type ReviewSchemaInput = {
   itemName: string;
   ratingValue: number;
   bestRating?: number;
+  reviewCount?: number;
   summary: string;
   path: string;
   dateModified: string;
@@ -111,6 +120,7 @@ export function buildReviewSchema({
   itemName,
   ratingValue,
   bestRating = 5,
+  reviewCount = 1,
   summary,
   path,
   dateModified,
@@ -121,6 +131,12 @@ export function buildReviewSchema({
     itemReviewed: {
       "@type": "Product",
       name: itemName,
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue,
+        bestRating,
+        reviewCount,
+      },
     },
     reviewRating: {
       "@type": "Rating",
@@ -138,8 +154,14 @@ export function buildReviewSchema({
   };
 }
 
-export function buildProductSchema(name: string, description: string, path: string) {
-  return {
+export function buildProductSchema(
+  name: string,
+  description: string,
+  path: string,
+  ratingValue?: number,
+  reviewCount?: number,
+) {
+  const product: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
     name,
@@ -149,6 +171,33 @@ export function buildProductSchema(name: string, description: string, path: stri
       "@type": "Brand",
       name,
     },
+  };
+  if (ratingValue !== undefined && reviewCount !== undefined) {
+    product.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue,
+      bestRating: 5,
+      reviewCount,
+    };
+  }
+  return product;
+}
+
+export type BreadcrumbItem = {
+  name: string;
+  path: string;
+};
+
+export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${siteConfig.url}${item.path}`,
+    })),
   };
 }
 

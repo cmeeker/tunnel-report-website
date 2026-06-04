@@ -28,20 +28,11 @@ export function buildPageMetadata({
       url: path,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
-      images: [
-        {
-          url: "/images/og-default.svg",
-          width: 1200,
-          height: 630,
-          alt: `${siteConfig.name} - ${siteConfig.tagline}`,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/og-default.svg"],
     },
   };
 }

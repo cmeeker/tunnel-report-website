@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 
 import { Analytics } from "@/components/Analytics";
+import { JsonLd } from "@/components/JsonLd";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
+import { StickySiteChrome } from "@/components/StickySiteChrome";
+import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
@@ -30,7 +32,12 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -46,13 +53,11 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    images: [{ url: "/images/og-default.svg", width: 1200, height: 630, alt: "Tunnel Report — Independent VPN Intelligence" }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
-    images: ["/images/og-default.svg"],
   },
 };
 
@@ -65,10 +70,11 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="mesh-bg min-h-full">
+        <JsonLd data={[buildWebsiteSchema(), buildOrganizationSchema()]} />
         <div className="flex min-h-full flex-col">
-          <SiteHeader />
+          <StickySiteChrome />
           <ScrollToTop />
-          <main className="mx-auto w-full max-w-7xl flex-1 px-6 py-14 md:px-10 lg:px-14">
+          <main className="mx-auto w-full max-w-7xl flex-1 px-6 pb-14 pt-10 has-[.hero-gradient]:pt-0 md:px-10 md:pt-12 lg:px-14">
             {children}
           </main>
           <SiteFooter />

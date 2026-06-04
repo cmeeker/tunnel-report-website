@@ -229,7 +229,7 @@ export function SiteHeader() {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 48);
+    const onScroll = () => setScrolled(window.scrollY > 32);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -262,7 +262,7 @@ export function SiteHeader() {
     <>
       <header
         ref={headerRef}
-        className="sticky top-0 z-50"
+        className="relative z-50"
         style={
           scrolled
             ? {
@@ -271,7 +271,7 @@ export function SiteHeader() {
                 boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
                 backdropFilter: "blur(24px) saturate(1.5)",
                 WebkitBackdropFilter: "blur(24px) saturate(1.5)",
-                transition: "background 0.5s, border-color 0.5s, box-shadow 0.5s",
+                transition: "background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease",
               }
             : {
                 background: "transparent",
@@ -279,11 +279,11 @@ export function SiteHeader() {
                 boxShadow: "none",
                 backdropFilter: "none",
                 WebkitBackdropFilter: "none",
-                transition: "background 0.5s, border-color 0.5s, box-shadow 0.5s",
+                transition: "background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease",
               }
         }
       >
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 md:px-10 lg:px-14">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-14">
           {/* Logo */}
           <Link href="/" className="group flex shrink-0 items-center gap-3" aria-label="Tunnel Report home">
             <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] shadow-lg shadow-[#00d4aa]/10 transition-shadow duration-300 group-hover:shadow-[#00d4aa]/25">

@@ -3,13 +3,17 @@ import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
 import { citationSources } from "@/lib/content/facts";
-import { AFFILIATE_URLS, rankedVpns } from "@/lib/content/vpn-metrics";
+import { getProviderCtaHref, providerMap } from "@/lib/content/providers";
+import { AFFILIATE_URLS, rankedVpns, useCaseSections } from "@/lib/content/vpn-metrics";
+import { getBestVpnsRelatedLinks } from "@/lib/seo/related-links";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
@@ -62,6 +66,13 @@ export default function BestVpnsPage() {
     <div className="grid gap-14 lg:grid-cols-[1fr_300px]">
       <article className="space-y-14 fade-in-up">
         <JsonLd data={[articleSchema, itemListSchema]} />
+
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Best VPNs", path: "/best-vpns" },
+          ]}
+        />
 
         <header className="space-y-5">
           <span className="badge badge-teal">Updated April 2026</span>
@@ -169,10 +180,72 @@ export default function BestVpnsPage() {
                   </div>
                 </div>
 
-                <AffiliateCTA href={vpn.ctaHref} partner={vpn.partner} label={`Visit ${vpn.name}`} />
+                <div className="flex flex-wrap items-center gap-4">
+                  <AffiliateCTA href={vpn.ctaHref} partner={vpn.partner} label={`Visit ${vpn.name}`} />
+                  <Link
+                    href={`/reviews/${vpn.slug}`}
+                    className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]"
+                  >
+                    Full {vpn.name} review &rarr;
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
+        </section>
+
+        <hr className="divider-glow" />
+
+        <section className="space-y-8">
+          <h2 className="text-2xl font-bold text-white">Best VPN by Use Case</h2>
+          <p className="max-w-3xl text-[#94a3b8]">
+            Rankings above reflect overall composite scores. If you have a specific use case, these
+            targeted picks may serve you better than the general list.
+          </p>
+          {useCaseSections.map((section) => {
+            const pick = providerMap[section.pickSlug];
+            const ctaHref = pick ? getProviderCtaHref(pick) : null;
+            return (
+              <div
+                key={section.id}
+                id={section.id}
+                className="glass-card scroll-mt-28 p-8"
+              >
+                <h3 className="text-xl font-bold text-white">{section.title}</h3>
+                <p className="mt-3 leading-relaxed text-[#94a3b8]">{section.description}</p>
+                <p className="mt-4 text-sm text-[#cbd5e1]">
+                  <strong className="text-[#00d4aa]">Our pick:</strong> {pick?.name} — {section.pickReason}
+                </p>
+                {ctaHref && pick?.affiliateKey && (
+                  <div className="mt-5">
+                    <AffiliateCTA
+                      href={ctaHref}
+                      partner={pick.affiliateKey}
+                      label={`Visit ${pick.name}`}
+                    />
+                  </div>
+                )}
+                {!pick?.affiliateKey && pick && (
+                  <div className="mt-5">
+                    <Link
+                      href={`/reviews/${pick.slug}`}
+                      className="text-sm font-medium text-[#00d4aa] hover:underline"
+                    >
+                      Read our {pick.name} review (no affiliate) &rarr;
+                    </Link>
+                  </div>
+                )}
+                <div className="mt-4">
+                  <Link
+                    href={`/best-vpn-for/${section.id}`}
+                    className="text-sm font-medium text-[#94a3b8] transition hover:text-[#00d4aa]"
+                  >
+                    Read the full {section.title.toLowerCase()} guide &rarr;
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </section>
 
         <hr className="divider-glow" />
@@ -203,6 +276,8 @@ export default function BestVpnsPage() {
           </p>
         </section>
 
+        <RelatedLinks links={getBestVpnsRelatedLinks()} />
+
         <FaqSection faqs={bestVpnFaqs} />
 
         <SourcesList
@@ -232,25 +307,7 @@ export default function BestVpnsPage() {
           </div>
         </div>
 
-        <div className="glass-card p-7">
-          <ul className="mt-3 space-y-2.5">
-            <li>
-              <Link href="/reviews/nordvpn" className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]">
-                NordVPN Full Review &rarr;
-              </Link>
-            </li>
-            <li>
-              <Link href="/compare/nordvpn-vs-purevpn" className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]">
-                NordVPN vs PureVPN &rarr;
-              </Link>
-            </li>
-            <li>
-              <Link href="/vpn/new-york" className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]">
-                Best VPN for New York &rarr;
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <RelatedLinks title="More Coverage" links={getBestVpnsRelatedLinks()} />
       </aside>
     </div>
   );

@@ -130,6 +130,121 @@ export const cityGuides: CityGuide[] = [
     localColor:
       "You have not truly understood the value of a VPN until you have watched someone open their banking app on the lobby Wi-Fi of a South Beach hotel while a screen-share was accidentally broadcasting to the conference room next door. Miami teaches you about network security through direct experience, often involuntarily.",
   },
+  {
+    slug: "austin",
+    city: "Austin",
+    region: "Texas",
+    localIsps: ["Spectrum", "AT&T Fiber", "Google Fiber"],
+    ispSpeeds: [
+      { name: "Spectrum", advertised: "300 Mbps", typical: "265 Mbps" },
+      { name: "AT&T Fiber", advertised: "1 Gbps", typical: "940 Mbps" },
+      { name: "Google Fiber", advertised: "1 Gbps", typical: "930 Mbps" },
+    ],
+    privacyConcern:
+      "Austin combines a large remote-work population with a dense coffee-shop and co-working culture. That means a lot of professional traffic moves across semi-public Wi-Fi networks in East Austin, Downtown, and the Domain. For workers handling client files, developer credentials, or financial dashboards, a VPN is less about hiding casual browsing and more about reducing exposure on networks you do not control.",
+    streamingNeeds:
+      "Austin's streaming demand spikes around live music, college sports, F1 weekends, and regional sports blackouts. VPN overhead needs to stay low enough for 4K live streams during evening congestion, especially for Spectrum users on older cable segments.",
+    recommendation:
+      "Austin fiber users can run NordVPN or Surfshark with minimal noticeable overhead. Google Fiber and AT&T Fiber provide enough baseline throughput that WireGuard encryption barely registers. Spectrum users should prioritize NordVPN's speed floor or Surfshark's domestic routing and test during evening windows.",
+    neighborhoodNote:
+      "Fiber availability is strongest in newer apartments around the Domain, Mueller, and parts of South Austin. Older central neighborhoods can still depend on Spectrum cable, where evening congestion makes VPN server selection more important.",
+    populationContext:
+      "The Austin metro has passed 2 million residents and remains one of the fastest-growing tech labor markets in the US.",
+    localColor:
+      "Austin is the kind of city where someone is debugging production from a patio table while the coffee shop router is named after a taco. The casual atmosphere hides very real network risk.",
+  },
+  {
+    slug: "seattle",
+    city: "Seattle",
+    region: "Washington",
+    localIsps: ["Xfinity", "Ziply Fiber", "CenturyLink Fiber"],
+    ispSpeeds: [
+      { name: "Xfinity", advertised: "1.2 Gbps", typical: "870 Mbps" },
+      { name: "Ziply Fiber", advertised: "1 Gbps", typical: "930 Mbps" },
+      { name: "CenturyLink Fiber", advertised: "940 Mbps", typical: "880 Mbps" },
+    ],
+    privacyConcern:
+      "Seattle's tech workforce creates a high concentration of users moving between corporate networks, home fiber, apartment Wi-Fi, and public workspaces. The privacy risk is less about novelty and more about volume: thousands of technically capable workers handling sensitive systems from networks with uneven controls.",
+    streamingNeeds:
+      "Seahawks, Mariners, and Kraken coverage creates regional blackout frustration, while Seattle's international workforce drives demand for streaming libraries in Asia and Europe. Low-latency West Coast and transpacific routing matter more here than in most cities.",
+    recommendation:
+      "Prioritize VPNs with strong West Coast and Asia-Pacific routing. NordVPN is the best default, Surfshark is strong on domestic value, and Proton VPN is attractive for privacy-focused tech workers who do not need the best streaming performance.",
+    neighborhoodNote:
+      "Fiber availability is strong in newer buildings and parts of the Eastside, but Xfinity remains common in older Seattle apartments. If you are in a high-rise with shared building infrastructure, test VPN stability during evening peak rather than relying on daytime speed tests.",
+    populationContext:
+      "The Seattle metro serves roughly 4 million residents and a disproportionate share of cloud, software, and security workers.",
+    localColor:
+      "Seattle has enough security engineers to make every coffee-shop Wi-Fi network feel judged, but that does not mean the network is safe. The person next to you may know better; the router often does not.",
+  },
+  {
+    slug: "dallas",
+    city: "Dallas",
+    region: "Texas",
+    localIsps: ["AT&T Fiber", "Spectrum", "Frontier Fiber"],
+    ispSpeeds: [
+      { name: "AT&T Fiber", advertised: "1 Gbps", typical: "940 Mbps" },
+      { name: "Spectrum", advertised: "300 Mbps", typical: "260 Mbps" },
+      { name: "Frontier Fiber", advertised: "1 Gbps", typical: "910 Mbps" },
+    ],
+    privacyConcern:
+      "Dallas has a large finance, healthcare, logistics, and corporate-travel footprint. Users frequently move between home offices, hotel networks, airport lounges, and client sites. That creates a practical need for VPNs that reconnect cleanly and do not break video calls or cloud dashboards.",
+    streamingNeeds:
+      "Cowboys, Mavericks, Stars, and Rangers coverage makes regional sports access a recurring issue. Dallas users also benefit from central US routing because many VPN providers maintain strong Texas or nearby Midwest exits.",
+    recommendation:
+      "NordVPN is the best default for Dallas because central routing and high speed floors work well across both fiber and cable baselines. Surfshark is the value pick for households, while ExpressVPN is easiest for frequent business travelers.",
+    neighborhoodNote:
+      "Fiber is strong in newer suburban developments and corporate corridors, but older apartments may still depend on Spectrum. If your baseline is under 300 Mbps during peak hours, choose a nearby WireGuard server before testing long-distance exits.",
+    populationContext:
+      "The Dallas-Fort Worth metro serves more than 7 million residents and is one of the country's largest corporate connectivity markets.",
+    localColor:
+      "Dallas users do not need a theoretical privacy pitch. Anyone who has joined a board call from hotel Wi-Fi near DFW already understands why reliable tunneling matters.",
+  },
+  {
+    slug: "atlanta",
+    city: "Atlanta",
+    region: "Georgia",
+    localIsps: ["Xfinity", "AT&T Fiber", "Google Fiber"],
+    ispSpeeds: [
+      { name: "Xfinity", advertised: "1.2 Gbps", typical: "850 Mbps" },
+      { name: "AT&T Fiber", advertised: "1 Gbps", typical: "930 Mbps" },
+      { name: "Google Fiber", advertised: "1 Gbps", typical: "920 Mbps" },
+    ],
+    privacyConcern:
+      "Atlanta's airport, film production economy, universities, and corporate headquarters create constant movement across public and semi-public networks. A VPN is useful for travelers, students, production staff, and remote workers who bounce between campus, studio, hotel, and home connections.",
+    streamingNeeds:
+      "Atlanta sports blackouts and heavy streaming demand make low-overhead VPN routing important. East Coast exits perform well for most US libraries, while transatlantic routing matters for international content.",
+    recommendation:
+      "NordVPN is the best all-around Atlanta pick because it combines East Coast routing strength with reliable streaming access. Surfshark is a strong budget option, and ExpressVPN makes sense for travelers who want the least setup friction.",
+    neighborhoodNote:
+      "Fiber availability is strongest in newer apartment corridors and parts of Midtown, Buckhead, and suburban developments. Older homes and student housing can still depend heavily on Xfinity, where evening congestion changes VPN performance materially.",
+    populationContext:
+      "The Atlanta metro serves more than 6 million residents and functions as the Southeast's busiest travel and corporate connectivity hub.",
+    localColor:
+      "Atlanta is one of the few cities where the airport Wi-Fi can feel like a second home network. That is convenient, but it should not be trusted like one.",
+  },
+  {
+    slug: "denver",
+    city: "Denver",
+    region: "Colorado",
+    localIsps: ["Xfinity", "CenturyLink Fiber", "Ting"],
+    ispSpeeds: [
+      { name: "Xfinity", advertised: "1.2 Gbps", typical: "820 Mbps" },
+      { name: "CenturyLink Fiber", advertised: "940 Mbps", typical: "870 Mbps" },
+      { name: "Ting", advertised: "1 Gbps", typical: "900 Mbps" },
+    ],
+    privacyConcern:
+      "Denver combines remote work, tourism, universities, and a heavy short-term rental market. Users often connect from cafes, ski-town lodges, hotels, airports, and apartment networks with very different security standards. VPN stability across changing networks matters more than peak speed.",
+    streamingNeeds:
+      "Nuggets, Avalanche, Rockies, and regional sports access drive blackout-related VPN demand, while mountain travel creates inconsistent network conditions. A VPN needs to handle lower-quality Wi-Fi without constant reconnect loops.",
+    recommendation:
+      "NordVPN is the safest Denver default thanks to strong domestic speed floors and mature reconnect behavior. Surfshark is a good household value pick, especially for families splitting time between home, travel, and second devices.",
+    neighborhoodNote:
+      "Fiber availability varies sharply between central Denver, newer suburbs, and mountain-adjacent communities. If you regularly work from ski towns or short-term rentals, test VPN stability on weaker Wi-Fi rather than relying on home fiber results.",
+    populationContext:
+      "The Denver metro serves roughly 3 million residents and a large tourism population moving across uneven network environments.",
+    localColor:
+      "Denver is where a VPN has to survive a video call from a condo, a coffee shop, and a mountain lodge in the same week. Peak speed matters less than not falling over.",
+  },
 ];
 
 export const cityGuideMap = Object.fromEntries(
