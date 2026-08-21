@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 
-import { Analytics } from "@/components/Analytics";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+
+import { Analytics as GoogleAnalytics } from "@/components/Analytics";
 import { JsonLd } from "@/components/JsonLd";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -78,7 +80,8 @@ export default function RootLayout({
             {children}
           </main>
           <SiteFooter />
-          <Analytics />
+          <GoogleAnalytics />
+          <VercelAnalytics />
         </div>
       </body>
     </html>
