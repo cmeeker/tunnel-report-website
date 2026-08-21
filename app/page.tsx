@@ -9,8 +9,9 @@ import { FaqSection } from "@/components/FaqSection";
 import { HeroGraphic } from "@/components/HeroGraphic";
 import { JsonLd } from "@/components/JsonLd";
 import { SourcesList } from "@/components/SourcesList";
-import { citationSources, homepageSources } from "@/lib/content/facts";
+import { citationSources } from "@/lib/content/facts";
 import { homepageComparison } from "@/lib/content/vpn-metrics";
+import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo/schema";
@@ -52,6 +53,20 @@ const homepageFaqs = [
 ];
 
 export default function Home() {
+  const nordPricingSource = { ...citationSources.S5, url: AFFILIATE_URLS.nordvpn };
+  const purePricingSource = { ...citationSources.S6, url: AFFILIATE_URLS.purevpn };
+
+  const homepageSourcesNoPricingLeaks = [
+    citationSources.S1,
+    citationSources.S2,
+    citationSources.S3,
+    citationSources.S4,
+    nordPricingSource,
+    purePricingSource,
+    citationSources.S7,
+    citationSources.S8,
+  ];
+
   return (
     <div className="space-y-28">
       <JsonLd data={[buildWebsiteSchema(), buildOrganizationSchema()]} />
@@ -145,8 +160,8 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-white">VPN Head-to-Head Comparison</h2>
             <p className="mt-1 text-sm text-[#94a3b8]">
               Entry pricing from provider sites at last verification
-              <CitationLink source={citationSources.S5} />
-              <CitationLink source={citationSources.S6} />
+              <CitationLink source={nordPricingSource} />
+              <CitationLink source={purePricingSource} />
               <CitationLink source={citationSources.S7} />
               <CitationLink source={citationSources.S8} />
             </p>
@@ -190,7 +205,13 @@ export default function Home() {
                     </div>
                   </td>
                   <td>
-                    <AffiliateCTA href={vpn.href} partner={vpn.partner} label="Visit" />
+                    {vpn.isAffiliate ? (
+                      <AffiliateCTA href={vpn.href} partner={vpn.partner} label={vpn.ctaLabel ?? "Visit"} />
+                    ) : (
+                      <Link href={vpn.href} className="affiliate-cta">
+                        {vpn.ctaLabel ?? "Read review"}
+                      </Link>
+                    )}
                   </td>
                 </tr>
               ))}
@@ -337,7 +358,7 @@ export default function Home() {
 
       <FaqSection faqs={homepageFaqs} />
 
-      <SourcesList sources={homepageSources} />
+      <SourcesList sources={homepageSourcesNoPricingLeaks} />
     </div>
   );
 }
