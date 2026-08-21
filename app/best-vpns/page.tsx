@@ -270,8 +270,8 @@ export default function BestVpnsPage() {
           </p>
           <p>
             Read the full methodology breakdown on our{" "}
-            <Link href="/about" className="text-[#00d4aa] underline decoration-[#1e293b] underline-offset-2 hover:decoration-[#00d4aa]">
-              About page
+            <Link href="/methodology" className="text-[#00d4aa] underline decoration-[#1e293b] underline-offset-2 hover:decoration-[#00d4aa]">
+              Methodology page
             </Link>.
           </p>
         </section>

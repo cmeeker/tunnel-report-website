@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function DisclosureBanner() {
   return (
     <aside
@@ -8,7 +10,11 @@ export function DisclosureBanner() {
         Disclosure
       </span>
       Tunnel Report may earn a commission through links on this page. Rankings are determined by
-      testing methodology, not affiliate payouts.
+      {" "}
+      <Link href="/methodology" className="underline decoration-[#1e293b] underline-offset-2 hover:decoration-[#00d4aa]">
+        testing methodology
+      </Link>
+      , not affiliate payouts.
     </aside>
   );
 }
