@@ -2,6 +2,7 @@ import {
   AFFILIATE_URLS,
   rankedProviders,
   type Provider,
+  providerMap,
 } from "@/lib/content/providers";
 
 export { AFFILIATE_URLS };
@@ -15,6 +16,8 @@ export type VpnTableEntry = {
   score: number;
   href: string;
   partner: string;
+  ctaLabel?: string;
+  isAffiliate?: boolean;
 };
 
 export type RankedVpn = {
@@ -52,18 +55,32 @@ function toRankedVpn(p: Provider): RankedVpn {
 
 export const rankedVpns: RankedVpn[] = rankedProviders.map(toRankedVpn);
 
-export const homepageComparison: VpnTableEntry[] = rankedVpns
-  .filter((v) => ["nordvpn", "purevpn", "surfshark", "expressvpn"].includes(v.slug))
-  .map((v) => ({
-    slug: v.slug,
-    name: v.name,
-    speedMbps: rankedProviders.find((p) => p.slug === v.slug)!.speedMbps,
-    privacy: rankedProviders.find((p) => p.slug === v.slug)!.privacyBlurb,
-    pricePerMonth: rankedProviders.find((p) => p.slug === v.slug)!.pricePerMonth,
-    score: v.score,
-    href: v.ctaHref,
-    partner: v.partner,
-  }));
+const HOMEPAGE_COMPARISON_SLUGS = [
+  "nordvpn",
+  "surfshark",
+  "expressvpn",
+  "protonvpn",
+  "purevpn",
+  "mullvad",
+] as const;
+
+export const homepageComparison: VpnTableEntry[] = HOMEPAGE_COMPARISON_SLUGS.map((slug) => {
+  const provider = providerMap[slug];
+  const isAffiliate = Boolean(provider.affiliateKey);
+
+  return {
+    slug: provider.slug,
+    name: provider.name,
+    speedMbps: provider.speedMbps,
+    privacy: provider.privacyBlurb,
+    pricePerMonth: provider.pricePerMonth,
+    score: provider.score,
+    href: isAffiliate ? AFFILIATE_URLS[provider.affiliateKey as keyof typeof AFFILIATE_URLS] : `/reviews/${provider.slug}`,
+    partner: provider.affiliateKey ?? provider.slug,
+    isAffiliate,
+    ctaLabel: isAffiliate ? "Visit" : "Read review",
+  };
+});
 
 export type UseCaseId =
   | "streaming"
