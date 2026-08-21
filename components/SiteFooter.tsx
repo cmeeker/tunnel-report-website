@@ -10,6 +10,7 @@ const columns = [
       { href: "/reviews/nordvpn", label: "NordVPN Review" },
       { href: "/reviews/surfshark", label: "Surfshark Review" },
       { href: "/reviews/expressvpn", label: "ExpressVPN Review" },
+      { href: "/reviews/purevpn", label: "PureVPN Review" },
       { href: "/compare/nordvpn-vs-expressvpn", label: "NordVPN vs ExpressVPN" },
       { href: "/compare/surfshark-vs-nordvpn", label: "Surfshark vs NordVPN" },
       { href: "/alternatives/nordvpn", label: "NordVPN Alternatives" },

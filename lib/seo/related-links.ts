@@ -11,6 +11,7 @@ export function getReviewRelatedLinks(slug: string): RelatedLink[] {
   if (!provider) return [];
 
   const links: RelatedLink[] = [
+    { href: "/methodology", label: "Methodology: How We Test & Score VPNs" },
     { href: "/best-vpns", label: "Best VPNs of 2026 — Full Rankings" },
     ...provider.relatedCompareSlugs
       .filter((s) => comparisonMap[s])
@@ -21,8 +22,12 @@ export function getReviewRelatedLinks(slug: string): RelatedLink[] {
       })),
   ];
 
-  const otherReviews = providers
-    .filter((p) => p.slug !== slug)
+  const otherReviewCandidates = providers.filter((p) => p.slug !== slug);
+  const prioritizedOtherReviews = [
+    ...otherReviewCandidates.filter((p) => p.slug === "purevpn"),
+    ...otherReviewCandidates.filter((p) => p.slug !== "purevpn"),
+  ];
+  const otherReviews = prioritizedOtherReviews
     .slice(0, 2)
     .map((p) => ({ href: `/reviews/${p.slug}`, label: `${p.name} Review` }));
 

@@ -7,6 +7,7 @@ import {
 export { AFFILIATE_URLS };
 
 export type VpnTableEntry = {
+  slug: string;
   name: string;
   speedMbps: number;
   privacy: string;
@@ -54,6 +55,7 @@ export const rankedVpns: RankedVpn[] = rankedProviders.map(toRankedVpn);
 export const homepageComparison: VpnTableEntry[] = rankedVpns
   .filter((v) => ["nordvpn", "purevpn", "surfshark", "expressvpn"].includes(v.slug))
   .map((v) => ({
+    slug: v.slug,
     name: v.name,
     speedMbps: rankedProviders.find((p) => p.slug === v.slug)!.speedMbps,
     privacy: rankedProviders.find((p) => p.slug === v.slug)!.privacyBlurb,
