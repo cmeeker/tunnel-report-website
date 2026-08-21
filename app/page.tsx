@@ -16,7 +16,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Find the VPN That Actually Protects You | Tunnel Report",
+  title: "Independent VPN Reviews & 2026 Rankings | Tunnel Report",
   description:
     "Tunnel Report publishes independent VPN reviews with real speed benchmarks, cited privacy audits, and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
   path: "/",
@@ -169,7 +169,12 @@ export default function Home() {
                 <tr key={vpn.name}>
                   <td className="font-semibold text-white">
                     {i === 0 && <span className="badge badge-teal mr-2 text-[0.65rem]">Top Pick</span>}
-                    {vpn.name}
+                    <Link
+                      href={`/reviews/${vpn.slug}`}
+                      className="text-white transition hover:text-[#00d4aa]"
+                    >
+                      {vpn.name}
+                    </Link>
                   </td>
                   <td>
                     <span className="font-mono text-[#00d4aa]">{vpn.speedMbps}</span> Mbps
