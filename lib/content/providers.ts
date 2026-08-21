@@ -38,8 +38,6 @@ export type Provider = {
   whoShouldBuy: { buy: string; skip: string; alternatives: string };
   faqs: FaqItem[];
   relatedCompareSlugs: string[];
-  /** For aggregateRating schema */
-  reviewCount: number;
   showNordPassAddon?: boolean;
 };
 
@@ -138,7 +136,6 @@ export const providers: Provider[] = [
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-purevpn", "nordvpn-vs-expressvpn", "surfshark-vs-nordvpn"],
-    reviewCount: 1247,
     showNordPassAddon: true,
   },
   {
@@ -221,7 +218,6 @@ export const providers: Provider[] = [
       },
     ],
     relatedCompareSlugs: ["surfshark-vs-nordvpn", "nordvpn-vs-purevpn"],
-    reviewCount: 892,
   },
   {
     slug: "expressvpn",
@@ -303,7 +299,6 @@ export const providers: Provider[] = [
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-expressvpn"],
-    reviewCount: 756,
   },
   {
     slug: "protonvpn",
@@ -386,7 +381,6 @@ export const providers: Provider[] = [
       },
     ],
     relatedCompareSlugs: ["mullvad-vs-protonvpn"],
-    reviewCount: 634,
   },
   {
     slug: "purevpn",
@@ -468,7 +462,6 @@ export const providers: Provider[] = [
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-purevpn"],
-    reviewCount: 521,
   },
   {
     slug: "mullvad",
@@ -550,7 +543,6 @@ export const providers: Provider[] = [
       },
     ],
     relatedCompareSlugs: ["mullvad-vs-protonvpn"],
-    reviewCount: 412,
   },
 ];
 

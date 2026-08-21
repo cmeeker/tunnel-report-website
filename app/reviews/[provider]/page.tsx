@@ -83,7 +83,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
           buildReviewSchema({
             itemName: provider.name,
             ratingValue: provider.score,
-            reviewCount: provider.reviewCount,
             summary: provider.reviewSummary,
             path,
             dateModified: provider.dateModified,
@@ -92,8 +91,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
             provider.name,
             `Consumer VPN service evaluated by Tunnel Report for speed, privacy, and pricing clarity.`,
             path,
-            provider.score,
-            provider.reviewCount,
           ),
         ]}
       />

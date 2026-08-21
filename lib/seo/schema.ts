@@ -110,7 +110,6 @@ type ReviewSchemaInput = {
   itemName: string;
   ratingValue: number;
   bestRating?: number;
-  reviewCount?: number;
   summary: string;
   path: string;
   dateModified: string;
@@ -120,7 +119,6 @@ export function buildReviewSchema({
   itemName,
   ratingValue,
   bestRating = 5,
-  reviewCount = 1,
   summary,
   path,
   dateModified,
@@ -131,12 +129,6 @@ export function buildReviewSchema({
     itemReviewed: {
       "@type": "Product",
       name: itemName,
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue,
-        bestRating,
-        reviewCount,
-      },
     },
     reviewRating: {
       "@type": "Rating",
@@ -158,8 +150,6 @@ export function buildProductSchema(
   name: string,
   description: string,
   path: string,
-  ratingValue?: number,
-  reviewCount?: number,
 ) {
   const product: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -172,14 +162,6 @@ export function buildProductSchema(
       name,
     },
   };
-  if (ratingValue !== undefined && reviewCount !== undefined) {
-    product.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue,
-      bestRating: 5,
-      reviewCount,
-    };
-  }
   return product;
 }
 
