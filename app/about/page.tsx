@@ -73,7 +73,7 @@ export default function AboutPage() {
       <hr className="divider-glow" />
 
       {/* Team bios */}
-      <section className="space-y-6">
+      <section id="team" className="space-y-6 scroll-mt-28">
         <h2 className="text-2xl font-bold text-white">The Editorial Team</h2>
         <p className="text-[#94a3b8]">
           Three editors with distinct expertise and editorial voices. Every major piece of coverage
@@ -100,7 +100,7 @@ export default function AboutPage() {
       <hr className="divider-glow" />
 
       {/* Methodology deep-dive */}
-      <section className="prose-dark space-y-6">
+      <section id="methodology" className="prose-dark space-y-6 scroll-mt-28">
         <h2 className="text-2xl font-bold text-white">Testing Methodology</h2>
 
         <div className="glass-card p-7">
@@ -155,7 +155,7 @@ export default function AboutPage() {
       <hr className="divider-glow" />
 
       {/* Editorial independence */}
-      <section className="prose-dark space-y-4">
+      <section id="editorial" className="prose-dark space-y-4 scroll-mt-28">
         <h2 className="text-2xl font-bold text-white">How Editorial Independence Works</h2>
         <p>
           Commercial relationships do not influence editorial output. This is not a platitude — it is
@@ -164,7 +164,7 @@ export default function AboutPage() {
           content before it goes live, does not have edit access to published pages, and does not
           participate in scoring discussions.
         </p>
-        <p>
+        <p id="disclosure" className="scroll-mt-28">
           If a page includes an affiliate link, the disclosure is visible on-page. We use a consistent
           banner format so readers always know when commercial links are present. Affiliate potential
           does not guarantee positive coverage — and in several cases, providers with high commission

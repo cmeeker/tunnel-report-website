@@ -51,8 +51,9 @@ const columns = [
   {
     title: "Company",
     links: [
-      { href: "/about", label: "About & Methodology" },
-      { href: "/about", label: "Editorial Standards" },
+      { href: "/about", label: "About" },
+      { href: "/methodology", label: "Methodology" },
+      { href: "/about#editorial", label: "Editorial Standards" },
     ],
   },
 ];

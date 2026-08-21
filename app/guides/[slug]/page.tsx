@@ -94,7 +94,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <Link href="/best-vpns" className="text-sm font-medium text-[#00d4aa] hover:underline">
             Best VPN rankings
           </Link>
-          <Link href="/about#methodology" className="text-sm font-medium text-[#00d4aa] hover:underline">
+          <Link href="/methodology" className="text-sm font-medium text-[#00d4aa] hover:underline">
             Full methodology
           </Link>
         </div>
