@@ -129,6 +129,7 @@ export function buildReviewSchema({
     itemReviewed: {
       "@type": "Product",
       name: itemName,
+      url: `${siteConfig.url}${path}`,
     },
     reviewRating: {
       "@type": "Rating",
@@ -151,7 +152,7 @@ export function buildProductSchema(
   description: string,
   path: string,
 ) {
-  const product: Record<string, unknown> = {
+  return {
     "@context": "https://schema.org",
     "@type": "Product",
     name,
@@ -162,7 +163,6 @@ export function buildProductSchema(
       name,
     },
   };
-  return product;
 }
 
 export type BreadcrumbItem = {
