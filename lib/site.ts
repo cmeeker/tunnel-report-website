@@ -144,7 +144,7 @@ export const primaryNav: PrimaryNavItem[] = [
       {
         heading: "The Publication",
         items: [
-          { label: "Our Methodology", href: "/about#methodology", description: "How we score and test VPNs" },
+          { label: "Our Methodology", href: "/methodology", description: "How we score and test VPNs" },
           { label: "Editorial Standards", href: "/about#editorial", description: "Independence & disclosure policy" },
           { label: "The Team", href: "/about#team", description: "Meet our three editors" },
           { label: "Affiliate Disclosure", href: "/about#disclosure", description: "How commissions work here" },

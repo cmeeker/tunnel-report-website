@@ -37,6 +37,15 @@ const staticRoutes: SiteRoute[] = [
     group: "static",
   },
   {
+    path: "/methodology",
+    title: "Tunnel Report Methodology",
+    description: "How Tunnel Report tests and scores VPNs.",
+    lastModified: CONTENT_UPDATED_AT,
+    priority: 0.72,
+    changeFrequency: "monthly",
+    group: "static",
+  },
+  {
     path: "/about",
     title: "About Tunnel Report",
     description: "Team, methodology, and editorial standards.",

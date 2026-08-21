@@ -32,7 +32,7 @@ const homepageFaqs = [
   {
     question: "Do affiliate commissions affect your rankings?",
     answer:
-      "No. Editorial scoring is walled off from commercial relationships. We disclose affiliate links on every page where they appear, and commission potential has never changed a ranking position. Our methodology is published on the About page.",
+      "No. Editorial scoring is walled off from commercial relationships. We disclose affiliate links on every page where they appear, and commission potential has never changed a ranking position. Our methodology is published in full.",
   },
   {
     question: "How often are reviews updated?",
@@ -83,7 +83,7 @@ export default function Home() {
                 See 2026 Rankings
               </Link>
               <Link
-                href="/about"
+                href="/methodology"
                 className="inline-flex min-h-[48px] items-center rounded-xl border border-[#1e293b] px-5 text-sm font-semibold text-[#94a3b8] transition hover:border-[#00d4aa]/30 hover:text-white"
               >
                 Our Methodology
