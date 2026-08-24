@@ -9,6 +9,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { HeroGraphic } from "@/components/HeroGraphic";
 import { JsonLd } from "@/components/JsonLd";
 import { SourcesList } from "@/components/SourcesList";
+import { comparisonMap } from "@/lib/content/comparisons";
 import { citationSources } from "@/lib/content/facts";
 import { homepageComparison } from "@/lib/content/vpn-metrics";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
@@ -51,6 +52,13 @@ const homepageFaqs = [
       "Independent audit scope and frequency, transparent incident response history, kill switch reliability, and clear data-retention language. A low price means nothing if the provider cannot demonstrate these fundamentals.",
   },
 ];
+
+const FEATURED_COMPARE_SLUGS = [
+  "nordvpn-vs-purevpn",
+  "nordvpn-vs-expressvpn",
+  "surfshark-vs-nordvpn",
+  "nordvpn-vs-protonvpn",
+] as const;
 
 export default function Home() {
   const nordPricingSource = { ...citationSources.S5, url: AFFILIATE_URLS.nordvpn };
@@ -149,6 +157,46 @@ export default function Home() {
             </p>
           </div>
         ))}
+      </section>
+
+      <hr className="divider-glow" />
+
+      {/* Featured comparisons */}
+      <section className="space-y-6">
+        <div>
+          <h2 className="text-2xl font-bold text-white">Popular VPN Comparisons</h2>
+          <p className="mt-1 text-sm text-[#94a3b8]">
+            Head-to-head breakdowns across speed, privacy, pricing, UX, jurisdiction, and support.
+          </p>
+        </div>
+        <div className="grid gap-5 md:grid-cols-2">
+          {FEATURED_COMPARE_SLUGS.map((slug) => {
+            const comparison = comparisonMap[slug];
+            if (!comparison) return null;
+            const label = comparison.title.replace(/ 2026:.*/, "");
+            return (
+              <Link
+                key={slug}
+                href={`/compare/${slug}`}
+                className="glass-card glass-card-hover group p-7 transition"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0">
+                    <p className="text-lg font-bold text-white transition group-hover:text-[#00d4aa]">
+                      {label}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#94a3b8]">
+                      {comparison.description}
+                    </p>
+                  </div>
+                  <span className="shrink-0 text-sm font-semibold text-[#00d4aa] opacity-80 transition group-hover:opacity-100">
+                    Read →
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
       <hr className="divider-glow" />

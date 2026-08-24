@@ -97,12 +97,12 @@ export const primaryNav: PrimaryNavItem[] = [
     ],
   },
   {
-    href: "/compare/nordvpn-vs-purevpn",
+    href: "/compare/nordvpn-vs-protonvpn",
     label: "Compare",
     featured: {
-      label: "NordVPN vs PureVPN",
-      href: "/compare/nordvpn-vs-purevpn",
-      description: "Head-to-head across 6 scored categories — speed, privacy, price, UX, jurisdiction, and support.",
+      label: "NordVPN vs Proton VPN",
+      href: "/compare/nordvpn-vs-protonvpn",
+      description: "Speed leader vs transparency — 6-category head-to-head breakdown.",
     },
     columns: [
       {
