@@ -86,6 +86,7 @@ export function getBestVpnsRelatedLinks(): RelatedLink[] {
     { href: "/reviews/nordvpn", label: "NordVPN Full Review" },
     { href: "/reviews/surfshark", label: "Surfshark Review" },
     { href: "/compare/nordvpn-vs-expressvpn", label: "NordVPN vs ExpressVPN" },
+    { href: "/compare/nordvpn-vs-protonvpn", label: "NordVPN vs Proton VPN" },
     { href: "/compare/surfshark-vs-nordvpn", label: "Surfshark vs NordVPN" },
     { href: "/best-vpn-for/streaming", label: "Best VPN for Streaming" },
     { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },

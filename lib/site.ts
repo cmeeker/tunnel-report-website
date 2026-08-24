@@ -110,6 +110,7 @@ export const primaryNav: PrimaryNavItem[] = [
         items: [
           { label: "NordVPN vs PureVPN", href: "/compare/nordvpn-vs-purevpn", description: "Full 6-category breakdown" },
           { label: "NordVPN vs ExpressVPN", href: "/compare/nordvpn-vs-expressvpn", description: "Premium head-to-head" },
+          { label: "NordVPN vs Proton VPN", href: "/compare/nordvpn-vs-protonvpn", description: "Speed leader vs transparency" },
           { label: "Surfshark vs NordVPN", href: "/compare/surfshark-vs-nordvpn", description: "Value vs performance" },
           { label: "Mullvad vs Proton VPN", href: "/compare/mullvad-vs-protonvpn", description: "Privacy-first showdown" },
         ],

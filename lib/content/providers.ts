@@ -135,7 +135,7 @@ export const providers: Provider[] = [
           "In our testing, NordVPN maintains a higher speed floor on long-distance routes (US to Europe), while Surfshark performs comparably on domestic routes.",
       },
     ],
-    relatedCompareSlugs: ["nordvpn-vs-purevpn", "nordvpn-vs-expressvpn", "surfshark-vs-nordvpn"],
+    relatedCompareSlugs: ["nordvpn-vs-protonvpn", "nordvpn-vs-purevpn", "nordvpn-vs-expressvpn", "surfshark-vs-nordvpn"],
     showNordPassAddon: true,
   },
   {
@@ -380,7 +380,7 @@ export const providers: Provider[] = [
           "Proton maintains specialized servers for censorship circumvention. Effectiveness varies by region and changes with blocking tactics — check current status before relying on it in high-risk environments.",
       },
     ],
-    relatedCompareSlugs: ["mullvad-vs-protonvpn"],
+    relatedCompareSlugs: ["nordvpn-vs-protonvpn", "mullvad-vs-protonvpn"],
   },
   {
     slug: "purevpn",
