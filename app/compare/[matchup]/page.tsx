@@ -183,7 +183,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
               />
             ) : (
               <a
-                href="https://proton.me/vpn"
+                href="https://go.getproton.me/aff_c?offer_id=26&aff_id=19779"
                 className="affiliate-cta inline-flex"
                 rel="noopener noreferrer"
                 data-partner="protonvpn"

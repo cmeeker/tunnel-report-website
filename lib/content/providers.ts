@@ -47,7 +47,7 @@ export const AFFILIATE_URLS: Record<string, string> = {
   purevpn: "https://billing.purevpn.com/aff.php?aff=49388038",
   surfshark: "https://surfshark.com/deals",
   expressvpn: "https://www.expressvpn.com/order",
-  protonvpn: "https://proton.me/vpn/pricing",
+  protonvpn: "https://go.getproton.me/aff_c?offer_id=26&aff_id=19779",
 };
 
 export const providers: Provider[] = [
