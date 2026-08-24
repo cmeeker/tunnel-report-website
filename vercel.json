@@ -2,6 +2,54 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/best-vpn",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.tunnelreport.com"
+        }
+      ],
+      "destination": "https://tunnelreport.com/best-vpns",
+      "statusCode": 301
+    },
+    {
+      "source": "/best-vpn",
+      "destination": "/best-vpns",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/proton",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.tunnelreport.com"
+        }
+      ],
+      "destination": "https://tunnelreport.com/reviews/protonvpn",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/proton",
+      "destination": "/reviews/protonvpn",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/protonvpn-vs-nordvpn",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.tunnelreport.com"
+        }
+      ],
+      "destination": "https://tunnelreport.com/compare/nordvpn-vs-protonvpn",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/protonvpn-vs-nordvpn",
+      "destination": "/compare/nordvpn-vs-protonvpn",
+      "statusCode": 301
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
