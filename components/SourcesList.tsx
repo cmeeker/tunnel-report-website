@@ -11,13 +11,20 @@ export function SourcesList({ sources }: SourcesListProps) {
       <ol className="mt-4 space-y-2 text-sm text-[#94a3b8]">
         {sources.map((source) => (
           <li key={source.id} id={`source-${source.id}`}>
-            <span className="font-semibold text-[#00d4aa]">[{source.id}]</span>{" "}
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]"
+            >
+              [{source.id}]
+            </a>{" "}
             {source.publisher}.{" "}
             <a
               href={source.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline decoration-[#1e293b] underline-offset-2 transition hover:decoration-[#00d4aa]"
+              className="text-[#cbd5e1] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-white hover:decoration-[#00d4aa]"
             >
               {source.title}
             </a>{" "}
