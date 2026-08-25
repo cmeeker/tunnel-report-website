@@ -17,7 +17,7 @@ import {
   providerSlugs,
   type Provider,
 } from "@/lib/content/providers";
-import { reviewSources } from "@/lib/content/facts";
+import { getCitationSourcesById, reviewSources } from "@/lib/content/facts";
 import { personas } from "@/lib/editorial-personas";
 import { getReviewRelatedLinks } from "@/lib/seo/related-links";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -75,6 +75,12 @@ function ReviewContent({ provider }: { provider: Provider }) {
   const persona = personas[provider.authorId];
   const ctaHref = getProviderCtaHref(provider);
   const path = `/reviews/${provider.slug}`;
+  const updatedBadgeLabel = provider.updatedBadgeLabel ?? "Updated April 2026";
+  const updatedDateLabel = provider.updatedDateLabel ?? siteConfig.updatedDate;
+  const sources =
+    provider.sourceIds && provider.sourceIds.length > 0
+      ? getCitationSourcesById(provider.sourceIds)
+      : reviewSources;
 
   return (
     <article className="space-y-14 fade-in-up">
@@ -106,7 +112,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
       <header className="space-y-5">
         <div className="flex flex-wrap gap-2">
           <span className="badge badge-teal">Full Review</span>
-          <span className="badge badge-violet">Updated April 2026</span>
+          <span className="badge badge-violet">{updatedBadgeLabel}</span>
           {!provider.affiliateKey && (
             <span className="badge badge-cyan text-[0.65rem]">No affiliate — editorial pick</span>
           )}
@@ -114,7 +120,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
           {provider.reviewTitle}
         </h1>
-        <AuthorByline persona={persona} date={siteConfig.updatedDate} />
+        <AuthorByline persona={persona} date={updatedDateLabel} />
         <RatingStars rating={provider.score} size="lg" />
       </header>
 
@@ -129,15 +135,17 @@ function ReviewContent({ provider }: { provider: Provider }) {
         </section>
       ))}
 
-      <div className="glass-card grid gap-5 p-8 md:grid-cols-4">
-        {provider.speedMetrics.map((metric) => (
-          <div key={metric.label} className="rounded-xl border border-[#1e293b] bg-[#0d1221] p-6">
-            <p className="text-xs font-semibold uppercase text-[#64748b]">{metric.label}</p>
-            <p className="mt-1 text-xl font-extrabold gradient-text">{metric.value}</p>
-            <p className="mt-0.5 text-xs text-[#475569]">{metric.sub}</p>
-          </div>
-        ))}
-      </div>
+      {provider.speedMetrics.length > 0 && (
+        <div className="glass-card grid gap-5 p-8 md:grid-cols-4">
+          {provider.speedMetrics.map((metric) => (
+            <div key={metric.label} className="rounded-xl border border-[#1e293b] bg-[#0d1221] p-6">
+              <p className="text-xs font-semibold uppercase text-[#64748b]">{metric.label}</p>
+              <p className="mt-1 text-xl font-extrabold gradient-text">{metric.value}</p>
+              <p className="mt-0.5 text-xs text-[#475569]">{metric.sub}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       <hr className="divider-glow" />
 
@@ -191,7 +199,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
 
       <FaqSection faqs={provider.faqs} />
 
-      <SourcesList sources={reviewSources} />
+      <SourcesList sources={sources} />
     </article>
   );
 }

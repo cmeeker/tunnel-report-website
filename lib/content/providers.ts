@@ -28,6 +28,8 @@ export type Provider = {
   affiliateKey: string | null;
   authorId: "marcus" | "sarah" | "daniel";
   dateModified: string;
+  updatedBadgeLabel?: string;
+  updatedDateLabel?: string;
   reviewTitle: string;
   reviewDescription: string;
   reviewSummary: string;
@@ -38,6 +40,7 @@ export type Provider = {
   whoShouldBuy: { buy: string; skip: string; alternatives: string };
   faqs: FaqItem[];
   relatedCompareSlugs: string[];
+  sourceIds?: string[];
   showNordPassAddon?: boolean;
 };
 
@@ -48,6 +51,7 @@ export const AFFILIATE_URLS: Record<string, string> = {
   surfshark: "https://surfshark.com/deals",
   expressvpn: "https://www.expressvpn.com/order",
   protonvpn: "https://go.getproton.me/aff_c?offer_id=26&aff_id=19779",
+  hideme: "https://hide.me/?friend=6a89f8e9ae1ca",
 };
 
 export const providers: Provider[] = [
@@ -543,6 +547,105 @@ export const providers: Provider[] = [
       },
     ],
     relatedCompareSlugs: ["mullvad-vs-protonvpn"],
+  },
+  {
+    slug: "hideme",
+    name: "hide.me",
+    rank: 0,
+    score: 4.1,
+    speedMbps: 0,
+    pricePerMonth: "$2.59",
+    privacyBlurb: "Malaysian operator with a named 2024 no-log container audit (scope-limited)",
+    quickVerdict:
+      "A rare no-signup free VPN from a Malaysian operator — compelling, but with important scope and free-tier caveats.",
+    pros: [
+      "Free tier exists with no signup required (but published limits conflict across pages) [HM1][HM2][HM3][HM8][HM12]",
+      "Wide protocol menu: WireGuard, OpenVPN, SoftEther, IKEv2, SSTP (per hide.me) [HM13]",
+      "Securitum (2024) audit of a declared no-log container image (scope-limited) [HM9]",
+    ],
+    cons: [
+      "Free tier limits conflict (10GB/month vs unlimited) and streaming-optimized servers are Premium-only [HM1][HM2][HM3][HM12]",
+      "Audit scope is not a fleet inspection and not a 2025–2026 re-audit [HM9]",
+      "Terms position the service for consumer/personal use, not commercial or organizational deployment [HM5]",
+    ],
+    speedSummary:
+      "We did not publish speed-benchmark metrics for this review page. This assessment focuses on operator disclosures, pricing, and published privacy/audit documents.",
+    privacySummary:
+      "hide.me’s privacy policy is more specific than its marketing pages: it describes what they say they do not log, plus what metadata they do process for operations and support. [HM4][HM8]",
+    pricingSummary:
+      "Pricing is straightforward and includes a “Pricing Guarantee” (same price and duration on renewal) plus a 30-day money-back guarantee for paid plans, with Terms limiting it to the first 30 days of the first order. [HM2][HM5]",
+    affiliateKey: "hideme",
+    authorId: "daniel",
+    dateModified: "2026-08-25",
+    updatedBadgeLabel: "Updated 25 Aug 2026",
+    updatedDateLabel: "25 Aug 2026",
+    reviewTitle: "hide.me VPN Review 2026: Malaysian No-Logs, Real Free Tier",
+    reviewDescription:
+      "Our cited hide.me VPN review for 2026: Malaysian operator disclosures, pricing (including the pricing guarantee), the no-signup free tier limits (including the published conflict), and what the 2024 Securitum no-log container audit did — and did not — cover.",
+    reviewSummary:
+      "hide.me is one of the few mainstream VPN brands that still offers a no-signup free tier — but its own pages publish two different limit stories. The strongest trust signal here is a named 2024 Securitum audit of a declared no-log container image, paired with a privacy policy that spells out what they say they do and don’t log. If you want a 2025–2026 re-audit, audited clients, or a streaming-first free plan, this is not the best fit. [HM1][HM2][HM3][HM4][HM9][HM11][HM14]",
+    jurisdiction: "Malaysia (Labuan) [HM7][HM5]",
+    protocolNote: "WireGuard, OpenVPN, SoftEther, IKEv2, SSTP (as listed by hide.me) [HM13]",
+    speedMetrics: [],
+    sections: [
+      {
+        heading: "Privacy: What hide.me Claims, What the Policy Actually Says",
+        paragraphs: [
+          "hide.me markets a no-logs stance in its feature pages, but the binding privacy details live in its privacy policy. In that policy, hide.me says it does not keep VPN session logs, browsing activity, incoming/outgoing IP address matching, or session duration. [HM4][HM8]",
+          "The same policy also describes data it does process: email during signup (and it says paid users can later remove it), a troubleshooting log it says is erased every few hours, aggregated monthly traffic counters, website logs, and support-ticket data via Zendesk (name + email). This is stricter — and more specific — than a blanket “zero personal data” marketing claim. [HM4]",
+          "On lawful orders, the privacy policy says hide.me will comply with a valid court order, and states that it has “nothing to hand over” under its stated no-logging design. The policy adds that if law required persistent connection logs, it says it would notify users and attempt to move or close the service. [HM4]",
+          "On operator identity, hide.me describes itself as a product of eVenture Ltd / eVenture Limited in Labuan, Malaysia (company no. LL09685), with registered-office details referenced on its privacy and legal pages. The legal terms state governing-law jurisdiction in Malaysia, and the Terms page shows an update date of 25 Aug 2026. hide.me also presents its founding year as 2012. [HM4][HM5][HM6][HM7]",
+          "hide.me publishes a scope-limited no-logs audit PDF by Securitum titled “no-log policy.” The document states work dates 19 Mar–6 Jun 2024 (document date 7 Jun 2024, v1.0) and lists authors Paweł Różański and Maciej Szymczak, evaluating the product “as of 15 Mar 2024.” The scope describes one example LXC container plus configuration review and interviews, with hide.me stating all nodes share that image. Securitum reports that the declared container no-log policy applied, that the only log observed was a daemon-start log, and that it contained no user activity or traffic; it also notes nDPI/iptables BitTorrent scripts were present but inactive and found no process/alarm to detect unauthorized logging enablement. This is not described as a fleet-wide inspection, a 2025–2026 re-audit, an application/client audit, or a claim of diskless/RAM-only servers. [HM9]",
+          "hide.me also publishes transparency-report PDFs. In its 2025 report, it states it received 13 law-enforcement requests in 2024 and 9 in 2025, and says it replies but has nothing to hand over under its stated logging approach. [HM10][HM11]",
+          "Finally, hide.me’s press materials include additional trust signals (for example, VTI re-accreditation announcements) and older third-party audit references (for example, a 2015 DefenseCode/Leon Juranic reference). We treat those as vendor claims unless the primary audit documents and scope are published. [HM12]",
+        ],
+      },
+      {
+        heading: "Pricing: Published USD Rates, Pricing Guarantee, and Refund Limits",
+        paragraphs: [
+          "As of 25 Aug 2026, hide.me lists paid-plan pricing in USD (VAT may apply): $11.99 for 1 month billed monthly; $4.58/month billed $54.99 for 12 months; and $2.59/month billed $69.99 for 27 months (with “3 extra months”). [HM2]",
+          "hide.me also advertises a “Pricing Guarantee,” stating renewals keep the same price and duration as the original subscription term. [HM2]",
+          "hide.me describes a 30-day money-back guarantee on paid plans, while its Terms limit refunds to the first 30 days of the first order. Read both pages together if you’re buying mainly for the refund backstop. [HM2][HM5]",
+          "hide.me also publishes network-scale claims — for example, “92 locations” and “2600 servers,” and up to 10 simultaneous connections on Premium — but those are vendor claims, not independently verified in this review. [HM1][HM2][HM12]",
+        ],
+      },
+      {
+        heading: "Free Tier: Real, No-Signup — but With Conflicting Published Limits",
+        paragraphs: [
+          "First, the good news: hide.me does publish a free tier and states that it can be used with no signup required. That’s increasingly rare among mainstream VPN brands. [HM3][HM8]",
+          "However, hide.me’s own pages publish two different limit stories. Its homepage FAQ has described the free plan as “1 device” and “10 GB/month.” [HM1]",
+          "Meanwhile, hide.me’s pricing and free-VPN pages (and its press materials) describe the free plan as “unlimited data” with restricted speeds, 8 locations, and 1 connection. We’re quoting both because both are published by hide.me. [HM2][HM3][HM12]",
+          "hide.me also states that “streaming-optimized” servers are Premium-only, which matters if your primary job for a free VPN is streaming access. [HM3]",
+        ],
+      },
+    ],
+    whoShouldBuy: {
+      buy:
+        "Buy hide.me if you want a no-signup free VPN and you accept the published free-tier tradeoffs (including the 8-location / 1-connection limitations and the 10GB vs unlimited conflict), or if you value having a named 2024 audit document to read yourself — with clear scope limits. [HM1][HM2][HM3][HM9][HM12]",
+      alternatives:
+        "Consider alternatives if your priority is transparent client-side assurances (for example, open-source clients and/or independently audited apps), or if you need a provider that has a more current (2025–2026) no-logs verification program. [HM14][HM9]",
+      skip:
+        "Skip or look elsewhere if you need free-tier streaming support, if you’re buying for commercial/organizational use (the Terms describe consumer/personal use constraints), or if your trust requirement is a fleet-wide inspection rather than a scope-limited container review. [HM3][HM5][HM9]",
+    },
+    faqs: [
+      {
+        question: "Is hide.me really based in Malaysia?",
+        answer:
+          "hide.me describes itself as a product of eVenture (eVenture Ltd / eVenture Limited) in Labuan, Malaysia, and lists corporate/legal details and registered-office information on its privacy and legal pages. [HM4][HM5][HM7]",
+      },
+      {
+        question: "Does hide.me have a third-party no-logs audit?",
+        answer:
+          "hide.me publishes a 2024 Securitum audit PDF focused on a declared no-log policy for a container image and its configuration. The scope is not a fleet inspection and does not claim to audit apps, accounts, or payments. [HM9]",
+      },
+      {
+        question: "What’s the deal with the free tier limits?",
+        answer:
+          "hide.me publishes conflicting limits across its own pages. The homepage FAQ has described free as 1 device and 10 GB/month, while the pricing/free-VPN/press pages describe unlimited data with restricted speeds, 8 locations, and 1 connection. We recommend reading the linked pages closely before relying on it. [HM1][HM2][HM3][HM12]",
+      },
+    ],
+    relatedCompareSlugs: [],
+    sourceIds: ["HM1", "HM2", "HM3", "HM4", "HM5", "HM6", "HM7", "HM8", "HM9", "HM10", "HM11", "HM12", "HM13", "HM14"],
   },
 ];
 

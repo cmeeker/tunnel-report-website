@@ -34,6 +34,22 @@
       "statusCode": 301
     },
     {
+      "source": "/reviews/hide-me",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.tunnelreport.com"
+        }
+      ],
+      "destination": "https://tunnelreport.com/reviews/hideme",
+      "statusCode": 301
+    },
+    {
+      "source": "/reviews/hide-me",
+      "destination": "/reviews/hideme",
+      "statusCode": 301
+    },
+    {
       "source": "/compare/protonvpn-vs-nordvpn",
       "has": [
         {
