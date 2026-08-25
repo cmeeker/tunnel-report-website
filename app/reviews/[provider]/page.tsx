@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import type { ReactNode } from "react";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -71,6 +72,46 @@ function NordPassAddon() {
   );
 }
 
+function renderTextWithCitations(text: string, sourceIds: ReadonlySet<string>): ReactNode {
+  const citationRegex = /\[([A-Z]{1,4}\d{1,3})\]/g;
+
+  let lastIndex = 0;
+  const nodes: ReactNode[] = [];
+
+  for (const match of text.matchAll(citationRegex)) {
+    const id = match[1];
+    if (!id || match.index === undefined) continue;
+
+    const matchStart = match.index;
+    const matchEnd = matchStart + match[0].length;
+
+    if (matchStart > lastIndex) {
+      nodes.push(text.slice(lastIndex, matchStart));
+    }
+
+    if (sourceIds.has(id)) {
+      nodes.push(
+        <a
+          key={`citation-${id}-${matchStart}`}
+          href={`#source-${id}`}
+          className="font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]"
+          aria-label={`Jump to source ${id}`}
+        >
+          [{id}]
+        </a>,
+      );
+    } else {
+      nodes.push(match[0]);
+    }
+
+    lastIndex = matchEnd;
+  }
+
+  if (nodes.length === 0) return text;
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
+  return nodes;
+}
+
 function ReviewContent({ provider }: { provider: Provider }) {
   const persona = personas[provider.authorId];
   const ctaHref = getProviderCtaHref(provider);
@@ -81,6 +122,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
     provider.sourceIds && provider.sourceIds.length > 0
       ? getCitationSourcesById(provider.sourceIds)
       : reviewSources;
+  const sourceIdSet = new Set(sources.map((source) => source.id));
 
   return (
     <article className="space-y-14 fade-in-up">
@@ -130,7 +172,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
         <section key={section.heading} className="prose-dark space-y-4">
           <h2 className="text-2xl font-bold text-white">{section.heading}</h2>
           {section.paragraphs.map((para) => (
-            <p key={para.slice(0, 40)}>{para}</p>
+            <p key={para.slice(0, 40)}>{renderTextWithCitations(para, sourceIdSet)}</p>
           ))}
         </section>
       ))}
@@ -152,13 +194,14 @@ function ReviewContent({ provider }: { provider: Provider }) {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Who Should Buy {provider.name} — and Who Should Not?</h2>
         <p>
-          <strong>Buy {provider.name} if</strong> {provider.whoShouldBuy.buy}
+          <strong>Buy {provider.name} if</strong> {renderTextWithCitations(provider.whoShouldBuy.buy, sourceIdSet)}
         </p>
         <p>
-          <strong>Consider alternatives if</strong> {provider.whoShouldBuy.alternatives}
+          <strong>Consider alternatives if</strong>{" "}
+          {renderTextWithCitations(provider.whoShouldBuy.alternatives, sourceIdSet)}
         </p>
         <p>
-          <strong>Skip or look elsewhere if</strong> {provider.whoShouldBuy.skip}
+          <strong>Skip or look elsewhere if</strong> {renderTextWithCitations(provider.whoShouldBuy.skip, sourceIdSet)}
         </p>
       </section>
 
@@ -170,7 +213,9 @@ function ReviewContent({ provider }: { provider: Provider }) {
         </div>
         <div className="space-y-6 p-8">
           <h2 className="text-2xl font-bold text-white">Is {provider.name} Worth It in 2026?</h2>
-          <p className="text-lg leading-relaxed text-[#cbd5e1]">{provider.reviewSummary}</p>
+          <p className="text-lg leading-relaxed text-[#cbd5e1]">
+            {renderTextWithCitations(provider.reviewSummary, sourceIdSet)}
+          </p>
           <RatingStars rating={provider.score} size="lg" />
           {ctaHref ? (
             <AffiliateCTA
