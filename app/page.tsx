@@ -240,7 +240,13 @@ export default function Home() {
                     </Link>
                   </td>
                   <td>
-                    <span className="font-mono text-[#00d4aa]">{vpn.speedMbps}</span> Mbps
+                    {vpn.speedMbps > 0 ? (
+                      <>
+                        <span className="font-mono text-[#00d4aa]">{vpn.speedMbps}</span> Mbps
+                      </>
+                    ) : (
+                      <span className="text-[#94a3b8]">N/A</span>
+                    )}
                   </td>
                   <td className="max-w-[200px]">{vpn.privacy}</td>
                   <td className="font-semibold text-white">{vpn.pricePerMonth}</td>

@@ -61,6 +61,7 @@ const HOMEPAGE_COMPARISON_SLUGS = [
   "expressvpn",
   "protonvpn",
   "purevpn",
+  "hideme",
   "mullvad",
 ] as const;
 
