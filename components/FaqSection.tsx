@@ -1,5 +1,6 @@
 import { JsonLd } from "@/components/JsonLd";
 import { buildFAQSchema } from "@/lib/seo/schema";
+import type { ReactNode } from "react";
 
 export type FaqItem = {
   question: string;
@@ -8,9 +9,10 @@ export type FaqItem = {
 
 type FaqSectionProps = {
   faqs: FaqItem[];
+  renderAnswer?: (answer: string) => ReactNode;
 };
 
-export function FaqSection({ faqs }: FaqSectionProps) {
+export function FaqSection({ faqs, renderAnswer }: FaqSectionProps) {
   return (
     <section className="space-y-4">
       <JsonLd data={buildFAQSchema(faqs)} />
@@ -24,7 +26,9 @@ export function FaqSection({ faqs }: FaqSectionProps) {
             <summary className="cursor-pointer list-none text-base font-semibold text-[#e8ecf4] transition group-open:text-[#00d4aa]">
               {faq.question}
             </summary>
-            <p className="mt-3 leading-relaxed text-[#94a3b8]">{faq.answer}</p>
+            <p className="mt-3 leading-relaxed text-[#94a3b8]">
+              {renderAnswer ? renderAnswer(faq.answer) : faq.answer}
+            </p>
           </details>
         ))}
       </div>
