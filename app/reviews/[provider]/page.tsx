@@ -242,7 +242,10 @@ function ReviewContent({ provider }: { provider: Provider }) {
 
       <RelatedLinks links={getReviewRelatedLinks(provider.slug)} />
 
-      <FaqSection faqs={provider.faqs} />
+      <FaqSection
+        faqs={provider.faqs}
+        renderAnswer={(answer) => renderTextWithCitations(answer, sourceIdSet)}
+      />
 
       <SourcesList sources={sources} />
     </article>
