@@ -26,7 +26,8 @@ export function AffiliateCTA({ href, partner, label, className = "" }: Affiliate
       data-partner={partner}
       onClick={handleClick}
       className={`affiliate-cta ${className}`.trim()}
-      rel="sponsored noopener noreferrer"
+      target="_blank"
+      rel="nofollow sponsored noopener noreferrer"
     >
       {label}
     </a>
