@@ -265,7 +265,7 @@ export const comparisons: Comparison[] = [
     intro:
       "NordVPN is the better all-around consumer VPN. Proton VPN is the stronger transparency story for users who want open-source clients and Swiss jurisdiction. This is a performance-versus-philosophy comparison.",
     authorId: "marcus",
-    dateModified: "2026-04-08",
+    dateModified: "2026-09-01",
     rows: [
       { category: "Domestic Speed", left: { value: "905 Mbps median", pct: 95 }, right: { value: "650 Mbps median", pct: 77 }, winner: "left" },
       { category: "Open Source", left: { value: "Closed-source apps", pct: 62 }, right: { value: "Open-source clients", pct: 95 }, winner: "right" },
