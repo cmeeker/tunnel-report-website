@@ -60,7 +60,7 @@ export const citationSources: Record<string, CitationSource> = {
     id: "S7",
     title: "Surfshark Pricing",
     publisher: "Surfshark",
-    url: "https://surfshark.com/deals",
+    url: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
     year: 2026,
     retrievedAt: "April 8, 2026",
   },

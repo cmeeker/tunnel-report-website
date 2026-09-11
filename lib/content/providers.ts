@@ -48,7 +48,7 @@ export const AFFILIATE_URLS: Record<string, string> = {
   nordvpn: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=145333&url_id=902",
   nordpass: "https://go.nordpass.io/aff_c?offer_id=488&aff_id=145333&url_id=9356",
   purevpn: "https://billing.purevpn.com/aff.php?aff=49388038",
-  surfshark: "https://surfshark.com/deals",
+  surfshark: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
   expressvpn: "https://www.expressvpn.com/order",
   protonvpn: "https://go.getproton.me/aff_c?offer_id=26&aff_id=19779",
   hideme: "https://hide.me/?friend=6a89f8e9ae1ca",
