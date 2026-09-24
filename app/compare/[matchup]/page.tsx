@@ -186,6 +186,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                   <a
                     href="https://mullvad.net"
                     className="affiliate-cta inline-flex"
+                    target="_blank"
                     rel="noopener noreferrer"
                     data-partner="mullvad"
                   >
@@ -208,10 +209,11 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                   <a
                     href="https://go.getproton.me/aff_c?offer_id=26&aff_id=19779"
                     className="affiliate-cta inline-flex"
-                    rel="noopener noreferrer"
+                    target="_blank"
+                    rel="nofollow sponsored noopener noreferrer"
                     data-partner="protonvpn"
                   >
-                    Visit Proton VPN (direct)
+                    Visit Proton VPN
                   </a>
                 )}
               </div>

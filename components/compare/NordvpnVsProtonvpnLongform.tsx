@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 const linkClassName =
@@ -11,9 +13,9 @@ export function NordvpnVsProtonvpnLongform() {
           <strong>Affiliate disclosure.</strong> Tunnel Report earns a commission if you buy through outbound links on
           this page. That does not change scores, category winners, or the use-case recommendation. Editorial scoring
           is walled off from commercial relationships; the method is on our{" "}
-          <a href="/methodology" className={linkClassName}>
+          <Link href="/methodology" className={linkClassName}>
             methodology
-          </a>{" "}
+          </Link>{" "}
           page. Read this page before you click a buy link.
         </p>
 
@@ -22,13 +24,13 @@ export function NordvpnVsProtonvpnLongform() {
           Proton VPN’s public pricing page did not expose dollar amounts in the fetched HTML (JavaScript placeholders
           only), so we do not invent a Proton monthly rate. Speed figures below are Tunnel Report’s own April 2026
           medians from the{" "}
-          <a href="/reviews/nordvpn" className={linkClassName}>
+          <Link href="/reviews/nordvpn" className={linkClassName}>
             NordVPN review
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="/reviews/protonvpn" className={linkClassName}>
+          <Link href="/reviews/protonvpn" className={linkClassName}>
             Proton VPN review
-          </a>
+          </Link>
           , not new lab runs.
         </p>
 
@@ -118,9 +120,9 @@ export function NordvpnVsProtonvpnLongform() {
         <p>
           Speed data from the Tunnel Report April 2026 benchmark suite, reported as medians. Pricing from provider
           websites, re-checked 1 September 2026. See{" "}
-          <a href="/guides/how-we-test-vpn-speed" className={linkClassName}>
+          <Link href="/guides/how-we-test-vpn-speed" className={linkClassName}>
             How we test VPN speed
-          </a>
+          </Link>
           .
         </p>
 
@@ -207,9 +209,9 @@ export function NordvpnVsProtonvpnLongform() {
 
         <p>
           Those scores are from our standalone reviews, not a new head-to-head trophy. NordVPN still leads the{" "}
-          <a href="/best-vpns" className={linkClassName}>
+          <Link href="/best-vpns" className={linkClassName}>
             2026 rankings
-          </a>
+          </Link>
           . Proton VPN is ranked for transparency, not for beating NordVPN on throughput.
         </p>
       </section>
@@ -319,24 +321,24 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Related coverage</h2>
         <p className="flex flex-wrap gap-x-3 gap-y-2">
-          <a href="/reviews/nordvpn" className={linkClassName}>
+          <Link href="/reviews/nordvpn" className={linkClassName}>
             /reviews/nordvpn
-          </a>
-          <a href="/reviews/protonvpn" className={linkClassName}>
+          </Link>
+          <Link href="/reviews/protonvpn" className={linkClassName}>
             /reviews/protonvpn
-          </a>
-          <a href="/methodology" className={linkClassName}>
+          </Link>
+          <Link href="/methodology" className={linkClassName}>
             /methodology
-          </a>
-          <a href="/guides/how-we-test-vpn-speed" className={linkClassName}>
+          </Link>
+          <Link href="/guides/how-we-test-vpn-speed" className={linkClassName}>
             /guides/how-we-test-vpn-speed
-          </a>
-          <a href="/best-vpns" className={linkClassName}>
+          </Link>
+          <Link href="/best-vpns" className={linkClassName}>
             /best-vpns
-          </a>
-          <a href="/compare/mullvad-vs-protonvpn" className={linkClassName}>
+          </Link>
+          <Link href="/compare/mullvad-vs-protonvpn" className={linkClassName}>
             /compare/mullvad-vs-protonvpn
-          </a>
+          </Link>
         </p>
       </section>
 
