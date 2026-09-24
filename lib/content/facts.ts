@@ -44,7 +44,7 @@ export const citationSources: Record<string, CitationSource> = {
     id: "S5",
     title: "NordVPN Pricing",
     publisher: "Nord Security",
-    url: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=145333&url_id=902",
+    url: "https://nordvpn.com/pricing/",
     year: 2026,
     retrievedAt: "April 8, 2026",
   },

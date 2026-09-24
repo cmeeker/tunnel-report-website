@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { AFFILIATE_URLS } from "@/lib/content/providers";
 
 const linkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
@@ -99,7 +100,7 @@ export function NordvpnVsProtonvpnLongform() {
 
         <div className="glass-card flex flex-col gap-3 p-6 md:flex-row md:items-center md:justify-between">
           <AffiliateCTA
-            href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=145333&url_id=902"
+            href={AFFILIATE_URLS.nordvpn}
             partner="nordvpn"
             label="Visit NordVPN"
           />

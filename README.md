@@ -31,7 +31,7 @@ See [example.env](example.env) and [GROWTH.md](GROWTH.md) for post-deploy indexi
 
 Tracking URLs live in [`lib/content/providers.ts`](lib/content/providers.ts) (`AFFILIATE_URLS`).
 
-- **NordVPN / NordPass** — real TUNE tracking links (`aff_id=145333`)
+- **NordVPN / NordPass** — non-affiliate outbound links (no tracking params)
 - **Surfshark, ExpressVPN, Proton, PureVPN** — direct pricing URLs until you add program tracking params
 
 Refresh Nord links via:
