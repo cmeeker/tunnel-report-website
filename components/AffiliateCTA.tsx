@@ -20,6 +20,9 @@ export function AffiliateCTA({ href, partner, label, className = "" }: Affiliate
     }
   };
 
+  const isNordNonAffiliate = partner === "nordvpn" || partner === "nordpass";
+  const rel = isNordNonAffiliate ? "noopener noreferrer" : "nofollow sponsored noopener noreferrer";
+
   return (
     <a
       href={href}
@@ -27,7 +30,7 @@ export function AffiliateCTA({ href, partner, label, className = "" }: Affiliate
       onClick={handleClick}
       className={`affiliate-cta ${className}`.trim()}
       target="_blank"
-      rel="nofollow sponsored noopener noreferrer"
+      rel={rel}
     >
       {label}
     </a>
