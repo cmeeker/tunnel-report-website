@@ -5,7 +5,9 @@ import Link from "next/link";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
 import { CitationLink } from "@/components/CitationLink";
+import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
+import { PaidPick } from "@/components/PaidPick";
 import { HeroGraphic } from "@/components/HeroGraphic";
 import { JsonLd } from "@/components/JsonLd";
 import { SourcesList } from "@/components/SourcesList";
@@ -129,6 +131,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <DisclosureBanner />
 
       {/* Trust stats */}
       <section className="grid gap-6 md:grid-cols-3">
@@ -266,6 +270,7 @@ export default function Home() {
                         {vpn.ctaLabel ?? "Read review"}
                       </Link>
                     )}
+                    {vpn.paidPick ? <PaidPick pick={vpn.paidPick} className="max-w-[14rem]" /> : null}
                   </td>
                 </tr>
               ))}

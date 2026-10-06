@@ -50,6 +50,22 @@
       "statusCode": 301
     },
     {
+      "source": "/compare/protonvpn-vs-mullvad",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.tunnelreport.com"
+        }
+      ],
+      "destination": "https://tunnelreport.com/compare/mullvad-vs-protonvpn",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/protonvpn-vs-mullvad",
+      "destination": "/compare/mullvad-vs-protonvpn",
+      "statusCode": 301
+    },
+    {
       "source": "/compare/protonvpn-vs-nordvpn",
       "has": [
         {

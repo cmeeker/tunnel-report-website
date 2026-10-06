@@ -4,14 +4,16 @@ import { notFound } from "next/navigation";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { CitedText } from "@/components/CitedText";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
+import { PaidPick } from "@/components/PaidPick";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
 import { NordvpnVsProtonvpnLongform } from "@/components/compare/NordvpnVsProtonvpnLongform";
 import { comparisonMap, comparisonSlugs, type Comparison } from "@/lib/content/comparisons";
-import { citationSources, compareSources } from "@/lib/content/facts";
+import { citationSources, compareSources, getCitationSourcesById } from "@/lib/content/facts";
 import {
   getProviderCtaHref,
   providerMap,
@@ -75,7 +77,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
     <article className="space-y-14 fade-in-up">
       <JsonLd
         data={buildArticleSchema({
-          headline: comparison.title,
+          headline: comparison.h1 ?? comparison.title,
           description: comparison.description,
           path,
           dateModified: comparison.dateModified,
@@ -87,17 +89,17 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         items={[
           { name: "Home", path: "/" },
           { name: "Compare", path: "/compare/nordvpn-vs-purevpn" },
-          { name: comparison.title.replace(/ 2026:.*/, ""), path },
+          { name: comparison.breadcrumbLabel ?? comparison.title.replace(/ 2026:.*/, ""), path },
         ]}
       />
 
       <header className="space-y-5">
         <div className="flex flex-wrap gap-2">
           <span className="badge badge-cyan">Comparison</span>
-          <span className="badge badge-violet">April 2026</span>
+          <span className="badge badge-violet">{comparison.updatedBadgeLabel ?? "April 2026"}</span>
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
-          {comparison.title}
+          {comparison.h1 ?? comparison.title}
         </h1>
         {!isLongform && (
           <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{comparison.intro}</p>
@@ -105,7 +107,48 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         <AuthorByline persona={persona} date={updatedDateLabel} />
       </header>
 
+      {comparison.verdictBox ? (
+        <section className="glass-card space-y-6 p-8">
+          <span className="badge badge-teal">Verdict</span>
+          <p className="text-lg leading-relaxed text-[#cbd5e1]">{comparison.verdictBox}</p>
+          <div className="grid gap-4 md:grid-cols-2">
+            {leftCta && left.affiliateKey ? (
+              <AffiliateCTA href={leftCta} partner={left.affiliateKey} label={`Visit ${left.name}`} />
+            ) : null}
+            {rightCta && right.affiliateKey ? (
+              <AffiliateCTA href={rightCta} partner={right.affiliateKey} label={`Visit ${right.name}`} />
+            ) : null}
+          </div>
+        </section>
+      ) : null}
+
       <DisclosureBanner />
+
+      {comparison.specRows ? (
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-white">Spec comparison</h2>
+          <div className="glass-card overflow-x-auto p-2">
+            <table className="table-dark">
+              <thead>
+                <tr>
+                  <th>Spec</th>
+                  <th>{left.name}</th>
+                  <th>{right.name}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparison.specRows.map((row) => (
+                  <tr key={row.spec}>
+                    <td className="font-semibold text-white">{row.spec}</td>
+                    <td><CitedText text={row.left} /></td>
+                    <td><CitedText text={row.right} /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : null}
 
       {isLongform ? (
         <NordvpnVsProtonvpnLongform />
@@ -162,6 +205,17 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
             </p>
           </section>
 
+          {comparison.notes?.map((note) => (
+            <section key={note.heading} className="prose-dark space-y-4">
+              <h3 className="text-xl font-bold text-white">{note.heading}</h3>
+              {note.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>
+                  <CitedText text={paragraph} />
+                </p>
+              ))}
+            </section>
+          ))}
+
           <hr className="divider-glow" />
 
           <section className="prose-dark space-y-4">
@@ -193,6 +247,9 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                     Visit Mullvad (direct)
                   </a>
                 )}
+                {left.affiliateKey === "expressvpn" && comparison.expressPaidPick ? (
+                  <PaidPick pick={comparison.expressPaidPick} />
+                ) : null}
               </div>
             </div>
             <div className="glass-card p-8 text-center">
@@ -216,6 +273,9 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                     Visit Proton VPN
                   </a>
                 )}
+                {right.affiliateKey === "expressvpn" && comparison.expressPaidPick ? (
+                  <PaidPick pick={comparison.expressPaidPick} />
+                ) : null}
               </div>
             </div>
           </div>
@@ -226,12 +286,24 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
 
       <hr className="divider-glow" />
 
-      <RelatedLinks links={getCompareRelatedLinks(comparison.slug)} />
+      <RelatedLinks links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)} />
 
       {!isLongform && (
         <>
-          <FaqSection faqs={comparison.faqs} />
-          <SourcesList sources={[...compareSources, citationSources.S9]} />
+          <FaqSection
+            faqs={comparison.faqs}
+            renderAnswer={
+              comparison.sourceIds ? (answer) => <CitedText text={answer} /> : undefined
+            }
+          />
+          <SourcesList
+            sources={
+              comparison.sourceIds
+                ? getCitationSourcesById(comparison.sourceIds)
+                : [...compareSources, citationSources.S9]
+            }
+            showRetrievedAt={Boolean(comparison.sourceIds)}
+          />
         </>
       )}
     </article>

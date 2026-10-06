@@ -1,4 +1,4 @@
-import type { CitationSource } from "@/lib/content/facts";
+import { citationLinkRel, type CitationSource } from "@/lib/content/facts";
 
 type CitationLinkProps = {
   source: CitationSource;
@@ -11,7 +11,7 @@ export function CitationLink({ source }: CitationLinkProps) {
       <a
         href={source.url}
         target="_blank"
-        rel="noopener noreferrer"
+        rel={citationLinkRel(source.url)}
         className="font-semibold text-[#00d4aa] hover:underline"
       >
         {source.id}

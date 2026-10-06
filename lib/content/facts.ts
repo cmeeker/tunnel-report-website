@@ -7,6 +7,20 @@ export type CitationSource = {
   retrievedAt: string;
 };
 
+const TRACKED_CITATION_URLS = new Set([
+  "https://billing.purevpn.com/aff.php?aff=49388038",
+  "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
+  "https://go.getproton.me/aff_c?offer_id=26&aff_id=19779",
+  "https://hide.me/?friend=6a89f8e9ae1ca",
+]);
+
+export function citationLinkRel(url: string): string {
+  if (TRACKED_CITATION_URLS.has(url)) {
+    return "nofollow sponsored noopener noreferrer";
+  }
+  return "noopener noreferrer";
+}
+
 export const citationSources: Record<string, CitationSource> = {
   S1: {
     id: "S1",
@@ -84,7 +98,7 @@ export const citationSources: Record<string, CitationSource> = {
     id: "HM1",
     title: "hide.me VPN (Homepage)",
     publisher: "hide.me",
-    url: "https://hide.me/",
+    url: "https://hide.me/?friend=6a89f8e9ae1ca",
     year: 2026,
     retrievedAt: "Aug 25, 2026",
   },
@@ -191,6 +205,158 @@ export const citationSources: Record<string, CitationSource> = {
     url: "https://hide.me/en/software",
     year: 2026,
     retrievedAt: "Aug 25, 2026",
+  },
+  V1: {
+    id: "V1",
+    title: "Pricing",
+    publisher: "Surfshark",
+    url: "https://surfshark.com/pricing",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  V2: {
+    id: "V2",
+    title: "No-logs policy",
+    publisher: "Surfshark",
+    url: "https://surfshark.com/features/no-logs",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  V3: {
+    id: "V3",
+    title: "Deloitte no-logs policy verified again (Jun 16, 2025)",
+    publisher: "Surfshark",
+    url: "https://surfshark.com/blog/deloitte-nologs-policy-verified-again",
+    year: 2025,
+    retrievedAt: "Oct 6, 2026",
+  },
+  V5: {
+    id: "V5",
+    title: "VPN protocols",
+    publisher: "Surfshark",
+    url: "https://surfshark.com/features/surfshark-vpn-protocols",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  V6: {
+    id: "V6",
+    title: "Server list",
+    publisher: "Surfshark",
+    url: "https://surfshark.com/servers",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  V7: {
+    id: "V7",
+    title: "Deals",
+    publisher: "Surfshark",
+    url: "https://surfshark.com/deals",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  V8: {
+    id: "V8",
+    title: "Manage your subscription",
+    publisher: "Surfshark Support",
+    url: "https://support.surfshark.com/hc/en-us/articles/17673853278226-Manage-your-subscription",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P1: {
+    id: "P1",
+    title: "Pricing",
+    publisher: "Proton VPN",
+    url: "https://protonvpn.com/pricing",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P2: {
+    id: "P2",
+    title: "For 5th year running, Proton VPN passes external no-logs audit",
+    publisher: "Proton VPN",
+    url: "https://protonvpn.com/blog/no-logs-audit",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P3: {
+    id: "P3",
+    title: "Proton VPN no-log report 2025 (PDF)",
+    publisher: "Securitum",
+    url: "https://www.securitum.com/public-reports/securitum-protonvpn-nologs-2025.pdf",
+    year: 2025,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P3b: {
+    id: "P3b",
+    title: "Proton VPN's no-logs policy holds up under scrutiny of fourth independent audit",
+    publisher: "TechRadar",
+    url: "https://www.techradar.com/vpn/vpn-privacy-security/proton-vpns-no-logs-policy-holds-up-under-scrutiny-of-fourth-independent-audit",
+    year: 2025,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P4: {
+    id: "P4",
+    title: "Free VPN",
+    publisher: "Proton VPN",
+    url: "https://protonvpn.com/free-vpn",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P5: {
+    id: "P5",
+    title: "Port forwarding",
+    publisher: "Proton VPN Support",
+    url: "https://protonvpn.com/support/port-forwarding",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P6: {
+    id: "P6",
+    title: "How to change VPN protocols",
+    publisher: "Proton VPN Support",
+    url: "https://protonvpn.com/support/how-to-change-vpn-protocols",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P7: {
+    id: "P7",
+    title: "VPN deals",
+    publisher: "Proton VPN",
+    url: "https://protonvpn.com/vpn-deals",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  P8: {
+    id: "P8",
+    title: "Upgrade or downgrade your plan",
+    publisher: "Proton VPN Support",
+    url: "https://protonvpn.com/support/upgrade-downgrade",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  H1: {
+    id: "H1",
+    title: "Pricing",
+    publisher: "hide.me",
+    url: "https://hide.me/en/pricing",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  T1: {
+    id: "T1",
+    title: "Surfshark Review 2026",
+    publisher: "Tunnel Report",
+    url: "https://tunnelreport.com/reviews/surfshark",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
+  },
+  T2: {
+    id: "T2",
+    title: "Proton VPN Review 2026",
+    publisher: "Tunnel Report",
+    url: "https://tunnelreport.com/reviews/protonvpn",
+    year: 2026,
+    retrievedAt: "Oct 6, 2026",
   },
 };
 

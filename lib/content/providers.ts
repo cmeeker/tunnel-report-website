@@ -1,4 +1,5 @@
 import type { FaqItem } from "@/components/FaqSection";
+import { expressReviewPaidPick, type PaidPickSpec } from "@/lib/content/paid-picks";
 
 export type ProviderSpeedMetric = {
   label: string;
@@ -42,6 +43,7 @@ export type Provider = {
   relatedCompareSlugs: string[];
   sourceIds?: string[];
   showNordPassAddon?: boolean;
+  verdictPaidPick?: PaidPickSpec;
 };
 
 export const AFFILIATE_URLS: Record<string, string> = {
@@ -303,6 +305,7 @@ export const providers: Provider[] = [
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-expressvpn"],
+    verdictPaidPick: expressReviewPaidPick,
   },
   {
     slug: "protonvpn",

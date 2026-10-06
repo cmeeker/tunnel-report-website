@@ -1,10 +1,18 @@
 import type { FaqItem } from "@/components/FaqSection";
+import type { RelatedLink } from "@/components/RelatedLinks";
+import { compareExpressPaidPicks, type PaidPickSpec } from "@/lib/content/paid-picks";
 
 export type CompareRow = {
   category: string;
   left: { value: string; pct: number };
   right: { value: string; pct: number };
   winner: "left" | "right" | "draw";
+};
+
+export type ComparisonSpecRow = {
+  spec: string;
+  left: string;
+  right: string;
 };
 
 export type Comparison = {
@@ -23,6 +31,15 @@ export type Comparison = {
   leftBadge: string;
   rightBadge: string;
   faqs: FaqItem[];
+  h1?: string;
+  breadcrumbLabel?: string;
+  updatedBadgeLabel?: string;
+  verdictBox?: string;
+  specRows?: ComparisonSpecRow[];
+  notes?: { heading: string; paragraphs: string[] }[];
+  expressPaidPick?: PaidPickSpec;
+  sourceIds?: string[];
+  relatedLinks?: RelatedLink[];
 };
 
 export const comparisons: Comparison[] = [
@@ -71,6 +88,7 @@ export const comparisons: Comparison[] = [
     slug: "nordvpn-vs-expressvpn",
     leftSlug: "nordvpn",
     rightSlug: "expressvpn",
+    expressPaidPick: compareExpressPaidPicks["nordvpn-vs-expressvpn"],
     title: "NordVPN vs ExpressVPN 2026: Which Premium VPN Wins?",
     description:
       "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality — with a clear winner for most buyers in 2026.",
@@ -193,6 +211,7 @@ export const comparisons: Comparison[] = [
     slug: "surfshark-vs-expressvpn",
     leftSlug: "surfshark",
     rightSlug: "expressvpn",
+    expressPaidPick: compareExpressPaidPicks["surfshark-vs-expressvpn"],
     title: "Surfshark vs ExpressVPN 2026: Budget Value or Premium Polish?",
     description:
       "Surfshark vs ExpressVPN compared across speed, price, streaming, privacy, and device limits for 2026 buyers.",
@@ -220,39 +239,6 @@ export const comparisons: Comparison[] = [
     faqs: [
       { question: "Is Surfshark better than ExpressVPN?", answer: "Surfshark is better for price, device coverage, and domestic speed. ExpressVPN is better for app polish and streaming simplicity." },
       { question: "Which is cheaper long-term?", answer: "Surfshark is cheaper for most households, especially when unlimited devices replace multiple subscriptions." },
-    ],
-  },
-  {
-    slug: "protonvpn-vs-mullvad",
-    leftSlug: "protonvpn",
-    rightSlug: "mullvad",
-    title: "Proton VPN vs Mullvad 2026: Privacy Ecosystem or Maximum Anonymity?",
-    description:
-      "Proton VPN vs Mullvad compared for privacy, jurisdiction, payment anonymity, speed, pricing, and transparency.",
-    intro:
-      "Proton VPN and Mullvad are the two providers we recommend when privacy matters more than affiliate economics. Proton wins on ecosystem and Swiss jurisdiction. Mullvad wins on account anonymity and pricing honesty.",
-    authorId: "daniel",
-    dateModified: "2026-04-08",
-    rows: [
-      { category: "Payment Anonymity", left: { value: "Standard + crypto", pct: 82 }, right: { value: "Cash, crypto, no email", pct: 98 }, winner: "right" },
-      { category: "Jurisdiction", left: { value: "Switzerland", pct: 92 }, right: { value: "Sweden", pct: 75 }, winner: "left" },
-      { category: "Open Source", left: { value: "All clients open source", pct: 95 }, right: { value: "All clients open source", pct: 95 }, winner: "draw" },
-      { category: "Pricing", left: { value: "Tiered + free", pct: 80 }, right: { value: "Flat €5/mo", pct: 95 }, winner: "right" },
-      { category: "Ecosystem", left: { value: "Mail, Drive, Pass", pct: 92 }, right: { value: "VPN-first", pct: 70 }, winner: "left" },
-      { category: "Streaming", left: { value: "Moderate success", pct: 70 }, right: { value: "Not a focus", pct: 55 }, winner: "left" },
-    ],
-    verdictParagraphs: [
-      "Choose Proton VPN if you want a broader privacy ecosystem, Swiss jurisdiction, and a usable free tier before paying.",
-      "Choose Mullvad if you want the cleanest account model, anonymous payments, and pricing that does not depend on promotions.",
-      "For maximum anonymity, Mullvad wins. For most privacy-focused mainstream users, Proton VPN is easier to live with.",
-    ],
-    leftPickLabel: "Best Ecosystem",
-    rightPickLabel: "Best Anonymity",
-    leftBadge: "Proton VPN wins",
-    rightBadge: "Mullvad wins",
-    faqs: [
-      { question: "Is Proton VPN more private than Mullvad?", answer: "Not categorically. Proton has stronger jurisdiction and ecosystem advantages; Mullvad collects less account data." },
-      { question: "Which is better for anonymous payment?", answer: "Mullvad is better because it supports cash and account numbers without email signup." },
     ],
   },
   {
@@ -292,6 +278,7 @@ export const comparisons: Comparison[] = [
     slug: "expressvpn-vs-protonvpn",
     leftSlug: "expressvpn",
     rightSlug: "protonvpn",
+    expressPaidPick: compareExpressPaidPicks["expressvpn-vs-protonvpn"],
     title: "ExpressVPN vs Proton VPN 2026: Premium Simplicity or Privacy Transparency?",
     description:
       "ExpressVPN vs Proton VPN compared for app polish, privacy, speed, streaming, jurisdiction, and price.",
@@ -391,6 +378,7 @@ export const comparisons: Comparison[] = [
     slug: "expressvpn-vs-purevpn",
     leftSlug: "expressvpn",
     rightSlug: "purevpn",
+    expressPaidPick: compareExpressPaidPicks["expressvpn-vs-purevpn"],
     title: "ExpressVPN vs PureVPN 2026: Premium Reliability or Budget Savings?",
     description:
       "ExpressVPN vs PureVPN compared across price, speed consistency, streaming, trust posture, app reliability, and support.",
@@ -418,6 +406,144 @@ export const comparisons: Comparison[] = [
     faqs: [
       { question: "Is ExpressVPN worth paying more than PureVPN?", answer: "Yes if streaming reliability and support matter. No if your only goal is cheap domestic browsing." },
       { question: "Which is faster?", answer: "ExpressVPN is faster and more stable in our testing, though neither matches NordVPN's throughput." },
+    ],
+  },
+  {
+    slug: "surfshark-vs-protonvpn",
+    leftSlug: "surfshark",
+    rightSlug: "protonvpn",
+    title: "Surfshark vs Proton VPN (2026): Compared",
+    h1: "Surfshark vs Proton VPN 2026: Household Value or Verifiable Privacy?",
+    breadcrumbLabel: "Surfshark vs Proton VPN",
+    description:
+      "Surfshark vs Proton VPN compared on devices, audits, jurisdiction, servers, streaming, torrenting and refunds, with a source for each spec.",
+    intro:
+      "Surfshark scores higher in our testing (4.6 vs 4.4) and covers unlimited devices. Proton VPN is the pick when you want public audit reports, open-source apps, and a free plan to start on.",
+    authorId: "sarah",
+    dateModified: "2026-10-06",
+    updatedBadgeLabel: "Updated Oct 6, 2026",
+    verdictBox:
+      "Surfshark scores higher in our testing (4.6 vs 4.4) and covers unlimited devices. Proton VPN is the pick if you want to read the audits yourself: Swiss jurisdiction, open-source apps, and published yearly no-logs reports.",
+    specRows: [
+      {
+        spec: "Servers / countries",
+        left: "4,500+ servers in 100 countries [V1]",
+        right: "20,000+ servers in 140+ countries [P1]",
+      },
+      {
+        spec: "Jurisdiction",
+        left: "Netherlands (Surfshark B.V., Amsterdam) [V1]",
+        right: "Switzerland (Proton AG, Geneva) [P1]",
+      },
+      {
+        spec: "No-logs audits",
+        left: "Deloitte assurance in 2023 and 2025 (ISAE 3000). The full report is available only inside a Surfshark account [V2][V3]",
+        right: "Securitum audits every year from 2022 through 2026, with public reports [P2][P3]",
+      },
+      {
+        spec: "Simultaneous devices",
+        left: "Unlimited [V1]",
+        right: "10 on VPN Plus. Free plan: 1 [P1][P4]",
+      },
+      {
+        spec: "Protocols",
+        left: "WireGuard, OpenVPN, IKEv2, Dausos [V5]",
+        right: "WireGuard, OpenVPN, IKEv2, Stealth, Smart Protocol [P6]",
+      },
+      {
+        spec: "Streaming",
+        left: "Reliable on major US libraries in our April 2026 testing [T1]",
+        right: "VPN Plus lists streaming support [P1]. Our April 2026 results are in the Proton VPN review [T2]",
+      },
+      {
+        spec: "Torrenting / P2P",
+        left: "P2P locations are marked on the server list [V6]",
+        right: "P2P servers, plus port forwarding on paid plans for Windows, macOS, and Linux [P5]",
+      },
+      {
+        spec: "Free option",
+        left: "No free plan. The free trial is limited to 3 devices [V1]",
+        right: "Free plan with no data cap, on 1 device [P4]",
+      },
+      {
+        spec: "Money-back window",
+        left: "30 days [V1]",
+        right: "30 days [P1]",
+      },
+      {
+        spec: "Server storage",
+        left: "RAM-only servers [V2]",
+        right: "Not stated on the Proton pages we checked on Oct 6, 2026",
+      },
+    ],
+    rows: [
+      { category: "Devices", left: { value: "Unlimited", pct: 98 }, right: { value: "10 on VPN Plus", pct: 70 }, winner: "left" },
+      { category: "Privacy & audits", left: { value: "Deloitte, customer-only report", pct: 82 }, right: { value: "Public Securitum reports", pct: 94 }, winner: "right" },
+      { category: "Jurisdiction", left: { value: "Netherlands", pct: 80 }, right: { value: "Switzerland", pct: 92 }, winner: "right" },
+      { category: "Speed", left: { value: "820 Mbps US median", pct: 86 }, right: { value: "650 Mbps US median", pct: 72 }, winner: "left" },
+      { category: "Streaming", left: { value: "Strong US libraries in our tests", pct: 84 }, right: { value: "Plus lists streaming support", pct: 70 }, winner: "left" },
+      { category: "Torrenting", left: { value: "Marked P2P locations", pct: 80 }, right: { value: "P2P plus port forwarding", pct: 88 }, winner: "right" },
+      { category: "Free option", left: { value: "Trial, 3 devices", pct: 40 }, right: { value: "Free plan, 1 device", pct: 88 }, winner: "right" },
+      { category: "Price", left: { value: "Intro deal, then applicable renewal price", pct: 70 }, right: { value: "Intro price and renewal price on the plan card", pct: 70 }, winner: "draw" },
+    ],
+    notes: [
+      {
+        heading: "Speed",
+        paragraphs: [
+          "These medians are from our April 2026 review pages, not a new test run. Surfshark's US domestic median was 820 Mbps, with 640 Mbps to London, 610 Mbps to Frankfurt, and a 690 Mbps domestic floor [T1].",
+          "Proton VPN's US domestic median was 650 Mbps, with 520 Mbps to London, 490 Mbps to Frankfurt, and a 480 Mbps domestic floor [T2]. Surfshark is the faster of the two in that cycle. Proton is still fast enough for streaming and remote work.",
+        ],
+      },
+      {
+        heading: "Price",
+        paragraphs: [
+          "Both providers show an introductory price and a later renewal rate. Surfshark's pricing FAQ says a 2-year plan is billed once up front and then renews annually at \"the applicable renewal price\" [V1]. Proton's plan cards use the line \"Billed at … for the first …, then renews at …\" [P1].",
+          "TODO-CWS: capture price + date. Surfshark's pricing payload on Oct 6, 2026 listed conflicting recurring fields for the same plan, and Proton's static page still rendered price placeholders, so this page does not state a dollar amount.",
+        ],
+      },
+    ],
+    verdictParagraphs: [
+      "Pick Surfshark if you're covering a whole household — phones, laptops, and several TVs — on one plan, or you want the higher-scoring all-rounder in our testing (4.6).",
+      "Pick Proton VPN if you want public audit reports and open-source apps, need port forwarding for torrents, or want to start on a free plan.",
+    ],
+    leftPickLabel: "Household value",
+    rightPickLabel: "Verifiable privacy",
+    leftBadge: "Surfshark wins",
+    rightBadge: "Proton VPN wins",
+    faqs: [
+      {
+        question: "Is Surfshark or Proton VPN better for torrenting?",
+        answer:
+          "Both allow P2P. Proton VPN adds port forwarding on paid plans [P5]. Surfshark marks P2P locations on its server list [V6].",
+      },
+      {
+        question: "Does either have a free plan?",
+        answer:
+          "Proton VPN Free has no data cap but covers 1 device [P4]. Surfshark has no free plan; its free trial is limited to 3 devices [V1].",
+      },
+      {
+        question: "Can I read their no-logs audits?",
+        answer:
+          "Proton publishes every Securitum report [P2][P3]. Surfshark's Deloitte report is available only to logged-in customers [V3].",
+      },
+      {
+        question: "Which covers more devices?",
+        answer: "Surfshark covers unlimited devices [V1]. Proton VPN Plus covers 10 [P1].",
+      },
+    ],
+    sourceIds: ["V1", "V2", "V3", "V5", "V6", "P1", "P2", "P3", "P3b", "P4", "P5", "P6", "T1", "T2"],
+    relatedLinks: [
+      { href: "/reviews/surfshark", label: "Surfshark Review" },
+      { href: "/reviews/protonvpn", label: "Proton VPN Review" },
+      { href: "/alternatives/surfshark", label: "Surfshark Alternatives" },
+      { href: "/alternatives/protonvpn", label: "Proton VPN Alternatives" },
+      { href: "/compare/surfshark-vs-purevpn", label: "Surfshark vs PureVPN" },
+      { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
+      { href: "/best-vpn-for/streaming", label: "Best VPN for Streaming" },
+      { href: "/best-vpn-for/torrenting", label: "Best VPN for Torrenting" },
+      { href: "/guides/what-is-a-no-logs-vpn", label: "What Is a No-Logs VPN?" },
+      { href: "/guides/vpn-jurisdictions-explained", label: "VPN Jurisdictions Explained" },
+      { href: "/methodology", label: "Methodology" },
     ],
   },
 ];

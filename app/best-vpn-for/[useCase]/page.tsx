@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
@@ -121,6 +122,7 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
                       Read review
                     </Link>
                   )}
+                  {pick.paidPick ? <PaidPick pick={pick.paidPick} className="basis-full" /> : null}
                   <Link
                     href={`/reviews/${pick.provider.slug}`}
                     className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]"

@@ -2,14 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
+import { CitedText } from "@/components/CitedText";
+import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
-import { citationSources, homepageSources } from "@/lib/content/facts";
+import { citationSources, getCitationSourcesById, homepageSources } from "@/lib/content/facts";
+import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { guideMap, guides, guideSlugs } from "@/lib/content/guides";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -56,7 +60,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
     <article className="space-y-14 fade-in-up">
       <JsonLd
         data={buildArticleSchema({
-          headline: guide.title,
+          headline: guide.h1 ?? guide.title,
           description: guide.description,
           path,
           dateModified: guide.dateModified,
@@ -75,15 +79,27 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <header className="space-y-5">
         <div className="flex flex-wrap gap-2">
           <span className="badge badge-cyan">{guide.category}</span>
-          <span className="badge badge-violet">Updated April 2026</span>
+          <span className="badge badge-violet">{guide.updatedBadgeLabel ?? "Updated April 2026"}</span>
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
-          {guide.title}
+          {guide.h1 ?? guide.title}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{guide.dek}</p>
-        <AuthorByline persona={persona} date="April 8, 2026" />
+        <AuthorByline persona={persona} date={guide.updatedDateLabel ?? "April 8, 2026"} />
       </header>
 
+      {guide.shortAnswer ? (
+        <section className="surface-card p-8">
+          <h2 className="text-lg font-bold text-white">Short answer</h2>
+          <p className="mt-3 leading-relaxed text-[#94a3b8]">
+            <CitedText text={guide.shortAnswer} />
+          </p>
+        </section>
+      ) : null}
+
+      <DisclosureBanner />
+
+      {guide.shortAnswer ? null : (
       <section className="surface-card p-8">
         <h2 className="text-lg font-bold text-white">Quick Take</h2>
         <p className="mt-3 leading-relaxed text-[#94a3b8]">
@@ -99,13 +115,14 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </Link>
         </div>
       </section>
+      )}
 
       {guide.sections.map((section) => (
         <section key={section.heading} className="prose-dark space-y-4">
           <h2 className="text-2xl font-bold text-white">{section.heading}</h2>
           {section.paragraphs.map((paragraph, index) => (
             <p key={paragraph.slice(0, 48)}>
-              {paragraph}
+              {guide.sourceIds ? <CitedText text={paragraph} /> : paragraph}
               {guide.slug === "how-we-test-vpn-speed" && index === 1 && (
                 <>
                   <CitationLink source={citationSources.S4} />
@@ -116,11 +133,55 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </section>
       ))}
 
-      <RelatedLinks links={getGuideRelatedLinks(guide.slug)} />
+      {guide.table ? (
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold text-white">Renewal at a glance</h2>
+          <div className="glass-card overflow-x-auto p-2">
+            <table className="table-dark">
+              <thead>
+                <tr>
+                  {guide.table.headers.map((header) => (
+                    <th key={header}>{header}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {guide.table.rows.map((row) => (
+                  <tr key={row[0]}>
+                    {row.map((cell) => (
+                      <td key={cell}>
+                        <CitedText text={cell} />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : null}
 
-      <FaqSection faqs={guide.faqs} />
+      {guide.cta ? (
+        <div>
+          <AffiliateCTA
+            href={AFFILIATE_URLS[guide.cta.partner]}
+            partner={guide.cta.partner}
+            label={guide.cta.label}
+          />
+        </div>
+      ) : null}
 
-      <SourcesList sources={homepageSources} />
+      <RelatedLinks links={guide.relatedLinks ?? getGuideRelatedLinks(guide.slug)} />
+
+      <FaqSection
+        faqs={guide.faqs}
+        renderAnswer={guide.sourceIds ? (answer) => <CitedText text={answer} /> : undefined}
+      />
+
+      <SourcesList
+        sources={guide.sourceIds ? getCitationSourcesById(guide.sourceIds) : homepageSources}
+        showRetrievedAt={Boolean(guide.sourceIds)}
+      />
     </article>
   );
 }

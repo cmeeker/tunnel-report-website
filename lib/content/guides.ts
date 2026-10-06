@@ -1,4 +1,11 @@
 import type { FaqItem } from "@/components/FaqSection";
+import type { RelatedLink } from "@/components/RelatedLinks";
+import type { PaidPartnerKey } from "@/lib/content/paid-picks";
+
+export type GuideTable = {
+  headers: string[];
+  rows: string[][];
+};
 
 export type Guide = {
   slug: string;
@@ -12,6 +19,14 @@ export type Guide = {
   faqs: FaqItem[];
   relatedReviewSlugs: string[];
   relatedCompareSlugs: string[];
+  h1?: string;
+  updatedBadgeLabel?: string;
+  updatedDateLabel?: string;
+  shortAnswer?: string;
+  table?: GuideTable;
+  cta?: { partner: PaidPartnerKey; label: string };
+  sourceIds?: string[];
+  relatedLinks?: RelatedLink[];
 };
 
 export const guides: Guide[] = [
@@ -225,6 +240,190 @@ export const guides: Guide[] = [
       { question: "Why do VPN prices go up at renewal?", answer: "Introductory discounts are acquisition offers. Renewal pricing usually reflects the standard plan rate after the promotional term ends." },
       { question: "Which VPN has the best long-term value?", answer: "Surfshark is strongest for multi-device households. Mullvad has the cleanest flat-rate pricing but no affiliate program and fewer streaming features." },
       { question: "Can I cancel before VPN renewal?", answer: "Usually yes, but policies vary. Set a reminder before the renewal date and confirm cancellation in your account dashboard." },
+    ],
+  },
+  {
+    slug: "surfshark-renewal-price",
+    title: "Surfshark Renewal Price (2026)",
+    h1: "Surfshark Renewal Price: What Happens When the Intro Deal Ends",
+    description:
+      "How Surfshark renewal works: when the intro deal ends, how it renews, how to turn off auto-renew, and what Surfshark says about renewal pricing.",
+    dek:
+      "The 2-year plan is billed once up front, then renews annually. Surfshark charges \"the applicable renewal price\" at renewal. Check that amount in your account before the date.",
+    authorId: "sarah",
+    dateModified: "2026-10-06",
+    updatedBadgeLabel: "Updated Oct 6, 2026",
+    updatedDateLabel: "October 6, 2026",
+    category: "Pricing",
+    shortAnswer:
+      "The 2-year plan is billed once up front, then renews annually after it expires [V1]. At renewal you're charged \"the applicable renewal price\" [V1]. Check the renewal amount in your account before the date [V8].",
+    relatedReviewSlugs: ["surfshark"],
+    relatedCompareSlugs: ["surfshark-vs-purevpn"],
+    relatedLinks: [
+      { href: "/guides/vpn-renewal-pricing-traps", label: "VPN Renewal Pricing Traps" },
+      { href: "/reviews/surfshark", label: "Surfshark Review" },
+      { href: "/alternatives/surfshark", label: "Surfshark Alternatives" },
+      { href: "/compare/surfshark-vs-purevpn", label: "Surfshark vs PureVPN" },
+      { href: "/best-vpn-for/budget", label: "Best Cheap VPN" },
+      { href: "/methodology", label: "Methodology" },
+    ],
+    cta: { partner: "surfshark", label: "See Surfshark's current deal" },
+    sourceIds: ["V1", "V7", "V8", "H1"],
+    sections: [
+      {
+        heading: "How the billing cycle works",
+        paragraphs: [
+          "Surfshark's pricing FAQ, as published on surfshark.com/pricing on Oct 6, 2026, describes three cycles [V1]. The monthly plan is billed every month. The 1-year plan is billed every 12 months. The 2-year plan is billed once at the start, then annually after it expires.",
+          "A longer intro term is not a promise that the renewal will repeat that same term. The 2-year plan does not renew for another two years. It renews annually [V1].",
+        ],
+      },
+      {
+        heading: "What renewal will cost",
+        paragraphs: [
+          "Surfshark's own FAQ says the cost after two years \"depends on the chosen plan\" and that renewal is charged at \"the applicable renewal price\" [V1]. That page does not publish one fixed dollar amount that applies to every visitor.",
+          "TODO-CWS: capture price + date. On Oct 6, 2026 the pricing payload for the Starter plan listed more than one recurring field for the same term, so this page does not state a dollar renewal price. Third-party sites that quote a single renewal number are not used here.",
+        ],
+      },
+      {
+        heading: "How to turn off auto-renew",
+        paragraphs: [
+          "Surfshark's support article, updated September 11, 2026, says to log in, open your email menu, and choose Subscription [V8]. The Subscription page shows the current plan and either an expiration date or a renewal date.",
+          "To stop future charges, open the Payments tab, then under Subscription details click Cancel renewal and confirm [V8]. The subscription stays active until the expiration date, and Surfshark says no additional charges are made after that.",
+          "Cancelling auto-renew does not trigger a refund [V8]. The money-back window is 30 days from purchase [V1][V8]. If the subscription was bought through Apple, Google Play, or Amazon, Surfshark says you manage renewal in that store, not in the Surfshark account [V8].",
+        ],
+      },
+      {
+        heading: "Ways to pay less at renewal",
+        paragraphs: [
+          "Check Surfshark's official deals page before the term ends [V7]. This page does not publish coupon codes. If a discount exists, it is whatever that page or your account shows on the day you look.",
+          "Turn auto-renew off and compare prices before the expiration date. hide.me says its plans renew at the same price and duration you signed up for [H1]. That is a different promise from Surfshark's \"applicable renewal price,\" and it is a reason to read both pricing pages before you renew.",
+        ],
+      },
+    ],
+    table: {
+      headers: ["Plan length", "How it renews", "Where to check", "Source"],
+      rows: [
+        ["Monthly", "Billed every month", "Surfshark account → Subscription", "[V1][V8]"],
+        ["1-year", "Billed every 12 months", "Surfshark account → Subscription", "[V1][V8]"],
+        [
+          "2-year",
+          "Billed once up front, then annually after it expires, at the applicable renewal price",
+          "Surfshark account → Subscription, before the renewal date",
+          "[V1][V8]",
+        ],
+      ],
+    },
+    faqs: [
+      {
+        question: "Does Surfshark auto-renew?",
+        answer:
+          "Yes, unless you turn it off. The Subscription page shows whether auto-renewal is enabled [V8]. Some subscriptions bought through an app store are managed in that store instead.",
+      },
+      {
+        question: "Does a 2-year Surfshark plan renew for 2 years again?",
+        answer:
+          "No. Surfshark says the 2-year plan is billed once at the start and then renews annually after it expires [V1].",
+      },
+      {
+        question: "Is there a Surfshark renewal discount for existing customers?",
+        answer:
+          "Only what the official deals page or your account shows on the day you check [V7]. This page does not promise a renewal discount.",
+      },
+      {
+        question: "Is there a Surfshark coupon code?",
+        answer:
+          "We don't publish codes. Surfshark's current offers are on its deals page [V7].",
+      },
+      {
+        question: "Can I get a refund after renewal?",
+        answer:
+          "Cancelling auto-renew does not grant a refund [V8]. Surfshark's money-back window is 30 days from purchase [V1][V8]. For a charge that already renewed, use the refund-policy steps linked from that support article rather than assuming the intro-term window still applies.",
+      },
+    ],
+  },
+  {
+    slug: "protonvpn-renewal-price",
+    title: "Proton VPN Renewal Price (2026)",
+    h1: "Proton VPN Renewal Price: What Renews, and How to Pay Less",
+    description:
+      "How Proton VPN renewal works: intro deal vs renewal rate, switching plans with prorated credit, the 30-day refund, and why Proton says no codes needed.",
+    dek:
+      "Proton shows the intro price and the renewal price on its plan cards. Plan changes use prorated credit, and the money-back window is 30 days.",
+    authorId: "sarah",
+    dateModified: "2026-10-06",
+    updatedBadgeLabel: "Updated Oct 6, 2026",
+    updatedDateLabel: "October 6, 2026",
+    category: "Pricing",
+    shortAnswer:
+      "Proton shows the intro price and the renewal price on its plan cards (\"Billed at … for the first …, then renews at …\") [P1]. Plan changes apply prorated credit [P1][P8]. Proton offers a 30-day money-back guarantee [P1][P7].",
+    relatedReviewSlugs: ["protonvpn"],
+    relatedCompareSlugs: ["surfshark-vs-protonvpn"],
+    relatedLinks: [
+      { href: "/guides/vpn-renewal-pricing-traps", label: "VPN Renewal Pricing Traps" },
+      { href: "/reviews/protonvpn", label: "Proton VPN Review" },
+      { href: "/alternatives/protonvpn", label: "Proton VPN Alternatives" },
+      { href: "/compare/surfshark-vs-protonvpn", label: "Surfshark vs Proton VPN" },
+      { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
+      { href: "/guides/what-is-a-no-logs-vpn", label: "What Is a No-Logs VPN?" },
+    ],
+    cta: { partner: "protonvpn", label: "See Proton VPN's current deal" },
+    sourceIds: ["P1", "P4", "P7", "P8"],
+    sections: [
+      {
+        heading: "Where the renewal number is shown",
+        paragraphs: [
+          "Proton's pricing page renders each plan card with a billing line: \"Billed at <price> for the first <cycle> months, then renews at <price> every <cycle> month(s)\" [P1]. The intro amount and the renewal amount are supposed to sit on that same card.",
+          "TODO-CWS: capture price + date. A static fetch of protonvpn.com/pricing on Oct 6, 2026 returned JavaScript placeholders ($0.00 and $XX.XX) instead of live prices, so this page does not state a dollar renewal rate.",
+        ],
+      },
+      {
+        heading: "Switching plans or lengths before renewal",
+        paragraphs: [
+          "Proton's pricing FAQ says you can switch plans at any time, including a change of length such as 1 month to 1 year, or an upgrade from VPN Plus to Proton Unlimited [P1]. Prorated credit is applied toward the new plan [P1][P8].",
+          "A downgrade can require the account to fit the smaller plan. Proton says that may mean deactivating extra email addresses or calendars, or reducing storage, when you leave a bundle such as Proton Unlimited [P1].",
+        ],
+      },
+      {
+        heading: "Coupons",
+        paragraphs: [
+          "Proton's deals page says no codes are necessary [P7]. The pricing FAQ says longer terms are discounted versus monthly, but the static page we checked replaced those percentages with placeholders [P1].",
+          "We don't publish coupon codes. If an offer exists, it is the one on Proton's deals page or in your account, not a code from a third-party list.",
+        ],
+      },
+      {
+        heading: "If you don't renew",
+        paragraphs: [
+          "Proton VPN Free stays available if you don't renew a paid plan. Proton says the free plan has no data cap and no artificial speed cap, and it covers 1 device [P1][P4]. Paid VPN Plus covers 10 devices [P1].",
+          "The free plan is a fallback for low-risk browsing, not a match for VPN Plus server choice. VPN Plus is the plan that lists streaming support and 10 devices [P1].",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Does Proton VPN auto-renew?",
+        answer:
+          "Paid plans renew at the renewal price shown on the plan card unless you cancel before that date [P1]. The card text is \"Billed at … for the first …, then renews at …\"",
+      },
+      {
+        question: "Is there a renewal discount for existing customers?",
+        answer:
+          "Don't count on one we didn't see. Check your account and Proton's official deals page [P7]. This page does not promise an existing-customer discount.",
+      },
+      {
+        question: "Is there a Proton VPN coupon code?",
+        answer:
+          "Proton's deals page says no codes are necessary [P7]. We don't publish codes.",
+      },
+      {
+        question: "What happens if I downgrade?",
+        answer:
+          "Proton applies prorated credit when you change plans [P1][P8]. If you downgrade from Proton Unlimited, the account has to fit the smaller plan, which can mean fewer addresses, calendars, or less storage [P1].",
+      },
+      {
+        question: "Can I get a refund?",
+        answer:
+          "Proton offers a 30-day money-back guarantee on subscriptions if you request it within the first 30 days [P1][P7]. You can cancel at any time; the refund window is that 30-day period.",
+      },
     ],
   },
 ];

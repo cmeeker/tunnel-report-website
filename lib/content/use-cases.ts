@@ -1,4 +1,10 @@
 import type { FaqItem } from "@/components/FaqSection";
+import {
+  gamingExpressPaidPick,
+  streamingExpressPaidPick,
+  workExpressPaidPick,
+  type PaidPickSpec,
+} from "@/lib/content/paid-picks";
 
 export type UseCaseSlug = "streaming" | "privacy" | "torrenting" | "budget" | "gaming" | "work";
 
@@ -6,6 +12,7 @@ export type UseCasePick = {
   providerSlug: string;
   label: string;
   reason: string;
+  paidPick?: PaidPickSpec;
 };
 
 export type UseCaseGuide = {
@@ -36,7 +43,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     primaryPick: "nordvpn",
     picks: [
       { providerSlug: "nordvpn", label: "Best overall streaming VPN", reason: "Most consistent unblocking with the highest domestic and transatlantic speed floor." },
-      { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps and reliable region switching for non-technical users." },
+      { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps and reliable region switching for non-technical users.", paidPick: streamingExpressPaidPick },
       { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices and strong US library performance at lower entry pricing." },
     ],
     sections: [
@@ -217,7 +224,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     picks: [
       { providerSlug: "nordvpn", label: "Best gaming VPN overall", reason: "Lowest observed domestic speed floor and stable WireGuard latency." },
       { providerSlug: "surfshark", label: "Best value gaming VPN", reason: "Strong domestic throughput with unlimited devices for multi-console households." },
-      { providerSlug: "expressvpn", label: "Best console setup", reason: "Clear router and device setup guides for living-room gaming." },
+      { providerSlug: "expressvpn", label: "Best console setup", reason: "Clear router and device setup guides for living-room gaming.", paidPick: gamingExpressPaidPick },
     ],
     sections: [
       {
@@ -261,7 +268,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     primaryPick: "nordvpn",
     picks: [
       { providerSlug: "nordvpn", label: "Best remote-work VPN overall", reason: "Best blend of speed floor, split tunneling, malware blocking, and mature apps." },
-      { providerSlug: "expressvpn", label: "Best for low-maintenance setup", reason: "Polished apps and clear support docs for non-technical workers." },
+      { providerSlug: "expressvpn", label: "Best for low-maintenance setup", reason: "Polished apps and clear support docs for non-technical workers.", paidPick: workExpressPaidPick },
       { providerSlug: "protonvpn", label: "Best for privacy-minded professionals", reason: "Strong transparency and open-source clients for sensitive workflows." },
     ],
     sections: [

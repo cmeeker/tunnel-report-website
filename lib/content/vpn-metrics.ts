@@ -1,3 +1,4 @@
+import { expressBestVpnsPaidPick, expressHomePaidPick, type PaidPickSpec } from "@/lib/content/paid-picks";
 import {
   AFFILIATE_URLS,
   rankedProviders,
@@ -18,6 +19,7 @@ export type VpnTableEntry = {
   partner: string;
   ctaLabel?: string;
   isAffiliate?: boolean;
+  paidPick?: PaidPickSpec;
 };
 
 export type RankedVpn = {
@@ -33,6 +35,7 @@ export type RankedVpn = {
   ctaHref: string;
   partner: string;
   slug: string;
+  paidPick?: PaidPickSpec;
 };
 
 function toRankedVpn(p: Provider): RankedVpn {
@@ -50,6 +53,7 @@ function toRankedVpn(p: Provider): RankedVpn {
     ctaHref: href,
     partner: p.affiliateKey ?? p.slug,
     slug: p.slug,
+    paidPick: p.slug === "expressvpn" ? expressBestVpnsPaidPick : undefined,
   };
 }
 
@@ -80,6 +84,7 @@ export const homepageComparison: VpnTableEntry[] = HOMEPAGE_COMPARISON_SLUGS.map
     partner: provider.affiliateKey ?? provider.slug,
     isAffiliate,
     ctaLabel: isAffiliate ? "Visit" : "Read review",
+    paidPick: slug === "expressvpn" ? expressHomePaidPick : undefined,
   };
 });
 

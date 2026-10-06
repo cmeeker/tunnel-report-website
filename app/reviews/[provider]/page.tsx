@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
@@ -233,6 +234,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
               Visit Mullvad (direct — no affiliate)
             </a>
           )}
+          {provider.verdictPaidPick ? <PaidPick pick={provider.verdictPaidPick} /> : null}
         </div>
       </section>
 

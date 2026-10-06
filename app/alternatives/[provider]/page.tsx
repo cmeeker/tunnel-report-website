@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
@@ -10,6 +11,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RatingStars } from "@/components/RatingStars";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { alternativeExpressPaidPicks } from "@/lib/content/paid-picks";
 import { getProviderCtaHref, providerMap, providers, providerSlugs, type Provider } from "@/lib/content/providers";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -134,6 +136,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         <h2 className="text-2xl font-bold text-white">Top Alternatives to {target.name}</h2>
         {alternatives.map((alt, index) => {
           const href = getProviderCtaHref(alt);
+          const paidPick = alt.slug === "expressvpn" ? alternativeExpressPaidPicks[target.slug] : undefined;
           return (
             <div key={alt.slug} className="glass-card overflow-hidden">
               <div className="flex items-center justify-between border-b border-[#1e293b] px-6 py-4">
@@ -171,6 +174,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
                       Read review
                     </Link>
                   )}
+                  {paidPick ? <PaidPick pick={paidPick} className="basis-full" /> : null}
                   <Link href={`/reviews/${alt.slug}`} className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]">
                     Full {alt.name} review &rarr;
                   </Link>

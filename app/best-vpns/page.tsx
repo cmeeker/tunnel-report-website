@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
@@ -182,6 +183,7 @@ export default function BestVpnsPage() {
 
                 <div className="flex flex-wrap items-center gap-4">
                   <AffiliateCTA href={vpn.ctaHref} partner={vpn.partner} label={`Visit ${vpn.name}`} />
+                  {vpn.paidPick ? <PaidPick pick={vpn.paidPick} className="basis-full" /> : null}
                   <Link
                     href={`/reviews/${vpn.slug}`}
                     className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]"
