@@ -498,7 +498,7 @@ export const comparisons: Comparison[] = [
         heading: "Price",
         paragraphs: [
           "Both providers show an introductory price and a later renewal rate. Surfshark's pricing FAQ says a 2-year plan is billed once up front and then renews annually at \"the applicable renewal price\" [V1]. Proton's plan cards use the line \"Billed at … for the first …, then renews at …\" [P1].",
-          "TODO-CWS: capture price + date. Surfshark's pricing payload on Oct 6, 2026 listed conflicting recurring fields for the same plan, and Proton's static page still rendered price placeholders, so this page does not state a dollar amount.",
+          "Surfshark's pricing payload on Oct 6, 2026 listed conflicting recurring fields for the same plan, and Proton's static page still rendered price placeholders, so this page does not state a dollar amount.",
         ],
       },
     ],

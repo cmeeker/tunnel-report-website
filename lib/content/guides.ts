@@ -281,7 +281,7 @@ export const guides: Guide[] = [
         heading: "What renewal will cost",
         paragraphs: [
           "Surfshark's own FAQ says the cost after two years \"depends on the chosen plan\" and that renewal is charged at \"the applicable renewal price\" [V1]. That page does not publish one fixed dollar amount that applies to every visitor.",
-          "TODO-CWS: capture price + date. On Oct 6, 2026 the pricing payload for the Starter plan listed more than one recurring field for the same term, so this page does not state a dollar renewal price. Third-party sites that quote a single renewal number are not used here.",
+          "On Oct 6, 2026 the pricing payload for the Starter plan listed more than one recurring field for the same term, so this page does not state a dollar renewal price. Third-party sites that quote a single renewal number are not used here.",
         ],
       },
       {
@@ -373,7 +373,7 @@ export const guides: Guide[] = [
         heading: "Where the renewal number is shown",
         paragraphs: [
           "Proton's pricing page renders each plan card with a billing line: \"Billed at <price> for the first <cycle> months, then renews at <price> every <cycle> month(s)\" [P1]. The intro amount and the renewal amount are supposed to sit on that same card.",
-          "TODO-CWS: capture price + date. A static fetch of protonvpn.com/pricing on Oct 6, 2026 returned JavaScript placeholders ($0.00 and $XX.XX) instead of live prices, so this page does not state a dollar renewal rate.",
+          "A static fetch of protonvpn.com/pricing on Oct 6, 2026 returned JavaScript placeholders ($0.00 and $XX.XX) instead of live prices, so this page does not state a dollar renewal rate.",
         ],
       },
       {
