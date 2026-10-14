@@ -20,8 +20,7 @@ export function AffiliateCTA({ href, partner, label, className = "" }: Affiliate
     }
   };
 
-  const rel =
-    partner === "nordpass" ? "noopener noreferrer" : "nofollow sponsored noopener noreferrer";
+  const rel = "nofollow sponsored noopener noreferrer";
 
   return (
     <a
