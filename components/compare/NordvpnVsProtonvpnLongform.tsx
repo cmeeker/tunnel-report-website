@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
@@ -5,6 +6,19 @@ import { AFFILIATE_URLS } from "@/lib/content/providers";
 
 const linkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
+
+function NordVpnOutboundLink({ children }: { children: ReactNode }) {
+  return (
+    <a
+      href={AFFILIATE_URLS.nordvpn}
+      target="_blank"
+      rel="nofollow sponsored noopener noreferrer"
+      className={linkClassName}
+    >
+      {children}
+    </a>
+  );
+}
 
 export function NordvpnVsProtonvpnLongform() {
   return (
@@ -358,49 +372,33 @@ export function NordvpnVsProtonvpnLongform() {
           <li>tunnelreport.com/guides/how-we-test-vpn-speed</li>
           <li>tunnelreport.com/best-vpns</li>
           <li>
-            <a href="https://nordvpn.com/pricing/" className={linkClassName}>
-              https://nordvpn.com/pricing/
-            </a>{" "}
-            live intro/renewal
+            <NordVpnOutboundLink>https://nordvpn.com/pricing/</NordVpnOutboundLink> live intro/renewal
           </li>
           <li>
-            <a href="https://nordvpn.com/blog/how-much-does-nordvpn-cost/" className={linkClassName}>
-              https://nordvpn.com/blog/how-much-does-nordvpn-cost/
-            </a>{" "}
+            <NordVpnOutboundLink>https://nordvpn.com/blog/how-much-does-nordvpn-cost/</NordVpnOutboundLink>{" "}
             24 Oct 2025 stale $2.99
           </li>
           <li>
-            <a href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/" className={linkClassName}>
+            <NordVpnOutboundLink>
               https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/
-            </a>{" "}
+            </NordVpnOutboundLink>{" "}
             3 Feb 2026 Deloitte PDF not public
           </li>
           <li>
-            <a href="https://nordvpn.com/features/no-log-vpn/" className={linkClassName}>
-              https://nordvpn.com/features/no-log-vpn/
-            </a>
+            <NordVpnOutboundLink>https://nordvpn.com/features/no-log-vpn/</NordVpnOutboundLink>
           </li>
           <li>
-            <a href="https://nordvpn.com/blog/ram-based-servers/" className={linkClassName}>
-              https://nordvpn.com/blog/ram-based-servers/
-            </a>{" "}
-            28 Aug 2024
+            <NordVpnOutboundLink>https://nordvpn.com/blog/ram-based-servers/</NordVpnOutboundLink> 28 Aug 2024
           </li>
           <li>
-            <a
-              href="https://support.nordvpn.com/hc/en-us/articles/19441152966161-Where-is-NordVPN-based"
-              className={linkClassName}
-            >
+            <NordVpnOutboundLink>
               https://support.nordvpn.com/hc/en-us/articles/19441152966161-Where-is-NordVPN-based
-            </a>
+            </NordVpnOutboundLink>
           </li>
           <li>
-            <a
-              href="https://support.nordvpn.com/hc/en-us/articles/19476991311121-What-is-your-refund-policy"
-              className={linkClassName}
-            >
+            <NordVpnOutboundLink>
               https://support.nordvpn.com/hc/en-us/articles/19476991311121-What-is-your-refund-policy
-            </a>
+            </NordVpnOutboundLink>
           </li>
           <li>
             <a href="https://protonvpn.com/" className={linkClassName}>
