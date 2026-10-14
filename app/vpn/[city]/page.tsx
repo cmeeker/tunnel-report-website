@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
+import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
 import { FaqSection } from "@/components/FaqSection";
@@ -104,6 +105,8 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         </p>
         <AuthorByline persona={personas.daniel} date={siteConfig.updatedDate} />
       </header>
+
+      <DisclosureBanner />
 
       {/* ISP speed table */}
       <section className="space-y-4">

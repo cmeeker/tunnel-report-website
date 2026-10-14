@@ -47,7 +47,7 @@ export type Provider = {
 };
 
 export const AFFILIATE_URLS: Record<string, string> = {
-  nordvpn: "https://nordvpn.com/pricing/",
+  nordvpn: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902",
   nordpass: "https://nordpass.com/",
   purevpn: "https://billing.purevpn.com/aff.php?aff=49388038",
   surfshark: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",

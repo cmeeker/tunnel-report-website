@@ -1,3 +1,5 @@
+import { AFFILIATE_URLS } from "@/lib/content/providers";
+
 export type CitationSource = {
   id: string;
   title: string;
@@ -8,6 +10,7 @@ export type CitationSource = {
 };
 
 const TRACKED_CITATION_URLS = new Set([
+  AFFILIATE_URLS.nordvpn,
   "https://billing.purevpn.com/aff.php?aff=49388038",
   "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
   "https://go.getproton.me/aff_c?offer_id=26&aff_id=19779",
@@ -58,7 +61,7 @@ export const citationSources: Record<string, CitationSource> = {
     id: "S5",
     title: "NordVPN Pricing",
     publisher: "Nord Security",
-    url: "https://nordvpn.com/pricing/",
+    url: AFFILIATE_URLS.nordvpn,
     year: 2026,
     retrievedAt: "April 8, 2026",
   },
