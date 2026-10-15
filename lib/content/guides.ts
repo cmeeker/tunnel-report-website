@@ -252,7 +252,7 @@ export const guides: Guide[] = [
               "ExpressVPN Basic, 12 mo + 3 mo",
               "$4.99/mo ($74.85 for 15 months)",
               "$99.95/year",
-              "[expressvpn.com/order](https://www.expressvpn.com/order)",
+              "[expressvpn.com/pricing](https://www.expressvpn.com/pricing)",
             ],
             [
               "Surfshark Starter, 24 mo + 3 mo",

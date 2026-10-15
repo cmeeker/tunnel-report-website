@@ -22,6 +22,21 @@ import { getGuideRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
+const MARKDOWN_LINK = /^\[([^\]]+)\]\((https:\/\/[^)\s]+)\)$/;
+
+const officialLinkClassName =
+  "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
+
+function OfficialSourceLink({ cell }: { cell: string }) {
+  const link = cell.match(MARKDOWN_LINK);
+  if (!link) return cell;
+  return (
+    <a href={link[2]} target="_blank" rel="noopener" className={officialLinkClassName}>
+      {link[1]}
+    </a>
+  );
+}
+
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -148,7 +163,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                     <tr key={row[0]}>
                       {row.map((cell) => (
                         <td key={cell}>
-                          <CitedText text={cell} />
+                          <OfficialSourceLink cell={cell} />
                         </td>
                       ))}
                     </tr>
