@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { EditorialChart, nordvpnVsProtonvpnChart } from "@/components/EditorialChart";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
 
 const linkClassName =
@@ -238,6 +239,7 @@ export function NordvpnVsProtonvpnLongform() {
           Frankfurt, 780 floor. Proton VPN review: 650 / 520 / 490 / 480. NordVPN wins this category. Proton adequate,
           not close. 4K ~25 Mbps. Do not paper over Proton’s evening transatlantic variability.
         </p>
+        <EditorialChart {...nordvpnVsProtonvpnChart} />
       </section>
 
       <section className="prose-dark space-y-4">

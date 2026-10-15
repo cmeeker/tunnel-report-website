@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
+import { bestVpnsChart, EditorialChart } from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -114,6 +115,7 @@ export default function BestVpnsPage() {
 
         {/* Ranked VPN cards */}
         <section className="space-y-6">
+          <EditorialChart {...bestVpnsChart} />
           {rankedVpns.map((vpn, i) => (
             <div
               key={vpn.name}
@@ -296,6 +298,7 @@ export default function BestVpnsPage() {
 
       {/* Sticky sidebar */}
         <aside className="hidden h-fit space-y-6 lg:sticky lg:top-24 lg:block">
+        <DisclosureBanner />
         <div className="glass-card p-7">
           <span className="badge badge-teal mb-3 text-[0.65rem]">Editor&apos;s Choice</span>
           <h2 className="text-lg font-bold text-white">Quick Pick: NordVPN</h2>
