@@ -7,6 +7,7 @@ import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
+import { EditorialChart, nordvpnReviewChart } from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RatingStars } from "@/components/RatingStars";
@@ -19,7 +20,7 @@ import {
   providerSlugs,
   type Provider,
 } from "@/lib/content/providers";
-import { getCitationSourcesById, reviewSources } from "@/lib/content/facts";
+import { citationLinkRel, getCitationSourcesById, reviewSources } from "@/lib/content/facts";
 import { personas } from "@/lib/editorial-personas";
 import { getReviewRelatedLinks } from "@/lib/seo/related-links";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -73,44 +74,47 @@ function NordPassAddon() {
   );
 }
 
+const INLINE_TOKEN = /(\[[^\]]+\]\(https?:\/\/[^)\s]+\)|\[[A-Z]{1,4}\d{1,3}\])/g;
+
+const inlineLinkClassName =
+  "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
+
 function renderTextWithCitations(text: string, sourceIds: ReadonlySet<string>): ReactNode {
-  const citationRegex = /\[([A-Z]{1,4}\d{1,3})\]/g;
+  const parts = text.split(INLINE_TOKEN);
+  if (parts.length === 1) return text;
 
-  let lastIndex = 0;
-  const nodes: ReactNode[] = [];
-
-  for (const match of text.matchAll(citationRegex)) {
-    const id = match[1];
-    if (!id || match.index === undefined) continue;
-
-    const matchStart = match.index;
-    const matchEnd = matchStart + match[0].length;
-
-    if (matchStart > lastIndex) {
-      nodes.push(text.slice(lastIndex, matchStart));
-    }
-
-    if (sourceIds.has(id)) {
-      nodes.push(
+  return parts.map((part, index) => {
+    const link = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+    if (link) {
+      return (
         <a
-          key={`citation-${id}-${matchStart}`}
-          href={`#source-${id}`}
-          className="font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]"
-          aria-label={`Jump to source ${id}`}
+          key={`link-${index}`}
+          href={link[2]}
+          target="_blank"
+          rel={citationLinkRel(link[2])}
+          className={inlineLinkClassName}
         >
-          [{id}]
-        </a>,
+          {link[1]}
+        </a>
       );
-    } else {
-      nodes.push(match[0]);
     }
 
-    lastIndex = matchEnd;
-  }
+    const citation = part.match(/^\[([A-Z]{1,4}\d{1,3})\]$/);
+    if (citation && sourceIds.has(citation[1])) {
+      return (
+        <a
+          key={`citation-${citation[1]}-${index}`}
+          href={`#source-${citation[1]}`}
+          className={inlineLinkClassName}
+          aria-label={`Jump to source ${citation[1]}`}
+        >
+          [{citation[1]}]
+        </a>
+      );
+    }
 
-  if (nodes.length === 0) return text;
-  if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
-  return nodes;
+    return part;
+  });
 }
 
 function ReviewContent({ provider }: { provider: Provider }) {
@@ -175,6 +179,9 @@ function ReviewContent({ provider }: { provider: Provider }) {
           {section.paragraphs.map((para) => (
             <p key={para.slice(0, 40)}>{renderTextWithCitations(para, sourceIdSet)}</p>
           ))}
+          {provider.slug === "nordvpn" && section.heading === "How Fast Is NordVPN Under Real Load?" ? (
+            <EditorialChart {...nordvpnReviewChart} />
+          ) : null}
         </section>
       ))}
 

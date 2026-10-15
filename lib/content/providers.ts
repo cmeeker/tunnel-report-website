@@ -63,7 +63,7 @@ export const providers: Provider[] = [
     rank: 1,
     score: 4.8,
     speedMbps: 905,
-    pricePerMonth: "$3.99",
+    pricePerMonth: "$3.49",
     privacyBlurb: "Panama jurisdiction, independent no-logs audits",
     quickVerdict: "Best balance of speed, privacy posture, and app consistency in 2026.",
     pros: [
@@ -77,7 +77,7 @@ export const providers: Provider[] = [
     pricingSummary: "Entry promo pricing is competitive; long-term value depends on renewal terms.",
     affiliateKey: "nordvpn",
     authorId: "marcus",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     reviewTitle: "NordVPN Review 2026: Speed, Privacy, and Pricing Breakdown",
     reviewDescription:
       "Our complete NordVPN review with real speed benchmark data, privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
@@ -112,8 +112,8 @@ export const providers: Provider[] = [
       {
         heading: "What Does NordVPN Actually Cost After the Promo Ends?",
         paragraphs: [
-          "The introductory pricing on NordVPN's website is competitive — typically in the $3-4/month range on a two-year commitment. That is genuinely good value for the service quality.",
-          "The part most reviews bury: renewal pricing is materially higher. After your initial term expires, the monthly equivalent can roughly double. Readers should factor the full lifecycle cost into their decision.",
+          "The introductory pricing on NordVPN's website is competitive — $3.49/mo on the 2-year Basic plan, billed $94.23 for the first 27 months [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026. That is genuinely good value for the service quality.",
+          "The part most reviews bury: renewal pricing is materially higher. After that, it renews at $139.08/year, about $11.59/mo [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026. Readers should factor the full lifecycle cost into their decision.",
           "If you are price-sensitive, set a calendar reminder before your term expires and evaluate whether to renew, switch, or negotiate.",
         ],
       },
@@ -164,7 +164,7 @@ export const providers: Provider[] = [
     pricingSummary: "Entry plan is among the most affordable in this group.",
     affiliateKey: "surfshark",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     reviewTitle: "Surfshark Review 2026: Best Budget VPN for Families?",
     reviewDescription:
       "Surfshark review with speed benchmarks, privacy audit analysis, and honest pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
@@ -197,7 +197,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing and Value",
         paragraphs: [
-          "Surfshark's introductory pricing is among the lowest in our top five, often under $2.50/month on multi-year plans. Renewal increases apply, as with most VPN providers — read the checkout terms carefully.",
+          "Surfshark Starter $2.49/mo ($67.23 for the first 27 months, VAT may apply) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026. Read the checkout terms carefully.",
           "For price-sensitive households that need coverage on many devices, Surfshark frequently offers better economics than premium-tier competitors.",
         ],
       },
@@ -231,7 +231,7 @@ export const providers: Provider[] = [
     rank: 3,
     score: 4.5,
     speedMbps: 700,
-    pricePerMonth: "$6.67",
+    pricePerMonth: "$4.99",
     privacyBlurb: "TrustedServer architecture with regular audits",
     quickVerdict: "Strong reliability and polished apps, but often priced above peers.",
     pros: [
@@ -245,7 +245,7 @@ export const providers: Provider[] = [
     pricingSummary: "Premium positioning can still make sense for users prioritizing simplicity.",
     affiliateKey: "expressvpn",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     reviewTitle: "ExpressVPN Review 2026: Worth the Premium Price?",
     reviewDescription:
       "ExpressVPN review covering TrustedServer architecture, real speed benchmarks, streaming reliability, and whether the premium price tag is justified in 2026.",
@@ -277,7 +277,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing Reality Check",
         paragraphs: [
-          "ExpressVPN is the most expensive provider in our top five. Monthly equivalents often exceed $6 even on promotional terms. You are paying for polish and support quality, not raw throughput.",
+          "ExpressVPN is the most expensive provider in our top five. ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026. You are paying for polish and support quality, not raw throughput.",
           "If budget is your primary constraint, Surfshark or PureVPN deliver more Mbps per dollar. If you value a frictionless setup experience, ExpressVPN's premium may be justified.",
         ],
       },
@@ -313,7 +313,7 @@ export const providers: Provider[] = [
     rank: 4,
     score: 4.4,
     speedMbps: 650,
-    pricePerMonth: "$4.99",
+    pricePerMonth: "$3.49",
     privacyBlurb: "Swiss jurisdiction, open-source clients, transparent security",
     quickVerdict: "Best for privacy-focused users who want transparency over aggressive promos.",
     pros: [
@@ -327,7 +327,7 @@ export const providers: Provider[] = [
     pricingSummary: "Value is strongest for users already in the Proton ecosystem.",
     affiliateKey: "protonvpn",
     authorId: "daniel",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     reviewTitle: "Proton VPN Review 2026: Privacy-First, Open Source",
     reviewDescription:
       "Proton VPN review from a policy and security perspective — Swiss jurisdiction, open-source clients, free tier limits, and who should choose Proton over mainstream alternatives.",
@@ -395,7 +395,7 @@ export const providers: Provider[] = [
     rank: 5,
     score: 4.2,
     speedMbps: 610,
-    pricePerMonth: "$2.14",
+    pricePerMonth: "$2.15",
     privacyBlurb: "Always-on audit claims, split tunneling options",
     quickVerdict: "Feature-rich budget option with improving consistency.",
     pros: [
@@ -409,7 +409,7 @@ export const providers: Provider[] = [
     pricingSummary: "Budget-friendly entry makes it attractive for price-sensitive users.",
     affiliateKey: "purevpn",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     reviewTitle: "PureVPN Review 2026: Budget Pick, Honest Assessment",
     reviewDescription:
       "PureVPN review with honest speed data, privacy trust recovery analysis, and whether the aggressive introductory pricing is worth the tradeoffs in 2026.",
@@ -441,7 +441,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing Advantage",
         paragraphs: [
-          "PureVPN's introductory pricing is the most aggressive in our top five, often under $2.15/month on multi-year plans. If first-year cost is your dominant criterion, the math is compelling.",
+          "PureVPN Standard is $2.15/mo on its 2-year plan [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026. If first-year cost is your dominant criterion, the math is compelling.",
           "Factor renewal pricing and the speed gap on international routes before committing long-term.",
         ],
       },
@@ -490,7 +490,7 @@ export const providers: Provider[] = [
     pricingSummary: "Flat rate with no renewal surprises — refreshingly honest.",
     affiliateKey: null,
     authorId: "daniel",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     reviewTitle: "Mullvad VPN Review 2026: The Privacy Purist's Choice",
     reviewDescription:
       "Mullvad VPN review — anonymous payments, flat pricing, open-source clients, and why we recommend it despite earning zero affiliate commission.",
@@ -557,7 +557,7 @@ export const providers: Provider[] = [
     rank: 0,
     score: 4.1,
     speedMbps: 0,
-    pricePerMonth: "$2.59",
+    pricePerMonth: "$2.69",
     privacyBlurb: "Malaysian operator with a named 2024 no-log container audit (scope-limited)",
     quickVerdict:
       "A rare no-signup free VPN from a Malaysian operator — compelling, but with important scope and free-tier caveats.",
@@ -579,9 +579,9 @@ export const providers: Provider[] = [
       "Pricing is straightforward and includes a “Pricing Guarantee” (same price and duration on renewal) plus a 30-day money-back guarantee for paid plans, with Terms limiting it to the first 30 days of the first order. [HM2][HM5]",
     affiliateKey: "hideme",
     authorId: "daniel",
-    dateModified: "2026-08-25",
-    updatedBadgeLabel: "Updated 25 Aug 2026",
-    updatedDateLabel: "25 Aug 2026",
+    dateModified: "2026-10-15",
+    updatedBadgeLabel: "Updated Oct 15, 2026",
+    updatedDateLabel: "October 15, 2026",
     reviewTitle: "hide.me VPN Review 2026: Malaysian No-Logs, Real Free Tier",
     reviewDescription:
       "Our cited hide.me VPN review for 2026: Malaysian operator disclosures, pricing (including the pricing guarantee), the no-signup free tier limits (including the published conflict), and what the 2024 Securitum no-log container audit did — and did not — cover.",
@@ -606,7 +606,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing: Published USD Rates, Pricing Guarantee, and Refund Limits",
         paragraphs: [
-          "As of 25 Aug 2026, hide.me lists paid-plan pricing in USD (VAT may apply): $11.99 for 1 month billed monthly; $4.58/month billed $54.99 for 12 months; and $2.59/month billed $69.99 for 27 months (with “3 extra months”). [HM2]",
+          "As of Oct 15, 2026, hide.me Premium lists $11.99/mo; $4.23/mo, billed $54.99 every 13 months (12 mo + 1 mo); and $2.69/mo, billed $69.99 every 26 months (24 mo + 2 mo). [HM2]",
           "hide.me also advertises a “Pricing Guarantee,” stating renewals keep the same price and duration as the original subscription term. [HM2]",
           "hide.me describes a 30-day money-back guarantee on paid plans, while its Terms limit refunds to the first 30 days of the first order. Read both pages together if you’re buying mainly for the refund backstop. [HM2][HM5]",
           "hide.me also publishes network-scale claims — for example, “92 locations” and “2600 servers,” and up to 10 simultaneous connections on Premium — but those are vendor claims, not independently verified in this review. [HM1][HM2][HM12]",

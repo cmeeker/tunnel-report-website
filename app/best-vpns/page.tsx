@@ -6,7 +6,9 @@ import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
+import { CitedText } from "@/components/CitedText";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
+import { bestVpnsChart, EditorialChart } from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -114,6 +116,7 @@ export default function BestVpnsPage() {
 
         {/* Ranked VPN cards */}
         <section className="space-y-6">
+          <EditorialChart {...bestVpnsChart} />
           {rankedVpns.map((vpn, i) => (
             <div
               key={vpn.name}
@@ -214,9 +217,12 @@ export default function BestVpnsPage() {
                 className="glass-card scroll-mt-28 p-8"
               >
                 <h3 className="text-xl font-bold text-white">{section.title}</h3>
-                <p className="mt-3 leading-relaxed text-[#94a3b8]">{section.description}</p>
+                <p className="mt-3 leading-relaxed text-[#94a3b8]">
+                  <CitedText text={section.description} />
+                </p>
                 <p className="mt-4 text-sm text-[#cbd5e1]">
-                  <strong className="text-[#00d4aa]">Our pick:</strong> {pick?.name} — {section.pickReason}
+                  <strong className="text-[#00d4aa]">Our pick:</strong> {pick?.name} —{" "}
+                  <CitedText text={section.pickReason} />
                 </p>
                 {ctaHref && pick?.affiliateKey && (
                   <div className="mt-5">
@@ -296,6 +302,7 @@ export default function BestVpnsPage() {
 
       {/* Sticky sidebar */}
         <aside className="hidden h-fit space-y-6 lg:sticky lg:top-24 lg:block">
+        <DisclosureBanner />
         <div className="glass-card p-7">
           <span className="badge badge-teal mb-3 text-[0.65rem]">Editor&apos;s Choice</span>
           <h2 className="text-lg font-bold text-white">Quick Pick: NordVPN</h2>

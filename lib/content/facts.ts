@@ -7,6 +7,7 @@ export type CitationSource = {
   url: string;
   year: number;
   retrievedAt: string;
+  retrievedVerb?: "accessed" | "checked";
 };
 
 const TRACKED_CITATION_URLS = new Set([
@@ -61,25 +62,28 @@ export const citationSources: Record<string, CitationSource> = {
     id: "S5",
     title: "NordVPN Pricing",
     publisher: "Nord Security",
-    url: AFFILIATE_URLS.nordvpn,
+    url: "https://nordvpn.com/pricing/",
     year: 2026,
-    retrievedAt: "April 8, 2026",
+    retrievedAt: "Oct 15, 2026",
+    retrievedVerb: "checked",
   },
   S6: {
     id: "S6",
     title: "PureVPN Pricing",
     publisher: "PureVPN",
-    url: "https://billing.purevpn.com/aff.php?aff=49388038",
+    url: "https://www.purevpn.com/order",
     year: 2026,
-    retrievedAt: "April 8, 2026",
+    retrievedAt: "Oct 15, 2026",
+    retrievedVerb: "checked",
   },
   S7: {
     id: "S7",
     title: "Surfshark Pricing",
     publisher: "Surfshark",
-    url: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
+    url: "https://surfshark.com/pricing",
     year: 2026,
-    retrievedAt: "April 8, 2026",
+    retrievedAt: "Oct 15, 2026",
+    retrievedVerb: "checked",
   },
   S8: {
     id: "S8",
@@ -87,7 +91,8 @@ export const citationSources: Record<string, CitationSource> = {
     publisher: "ExpressVPN",
     url: "https://www.expressvpn.com/order",
     year: 2026,
-    retrievedAt: "April 8, 2026",
+    retrievedAt: "Oct 15, 2026",
+    retrievedVerb: "checked",
   },
   S9: {
     id: "S9",
@@ -344,6 +349,15 @@ export const citationSources: Record<string, CitationSource> = {
     url: "https://hide.me/en/pricing",
     year: 2026,
     retrievedAt: "Oct 6, 2026",
+  },
+  MV1: {
+    id: "MV1",
+    title: "Pricing",
+    publisher: "Mullvad",
+    url: "https://mullvad.net/en/pricing",
+    year: 2026,
+    retrievedAt: "Oct 15, 2026",
+    retrievedVerb: "checked",
   },
   T1: {
     id: "T1",

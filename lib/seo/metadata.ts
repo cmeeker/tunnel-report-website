@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { getShareImage } from "@/lib/seo/share-images";
 import { siteConfig } from "@/lib/site";
 
 type BuildMetadataInput = {
@@ -15,6 +16,8 @@ export function buildPageMetadata({
   path,
   type = "article",
 }: BuildMetadataInput): Metadata {
+  const shareImage = getShareImage(path);
+
   return {
     title,
     description,
@@ -28,11 +31,13 @@ export function buildPageMetadata({
       url: path,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
+      ...(shareImage ? { images: [shareImage] } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      ...(shareImage ? { images: [shareImage] } : {}),
     },
   };
 }

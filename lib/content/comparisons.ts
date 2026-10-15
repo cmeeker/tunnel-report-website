@@ -6,7 +6,8 @@ export type CompareRow = {
   category: string;
   left: { value: string; pct: number };
   right: { value: string; pct: number };
-  winner: "left" | "right" | "draw";
+  winner: "left" | "right" | "draw" | "uncompared";
+  note?: string;
 };
 
 export type ComparisonSpecRow = {
@@ -53,14 +54,14 @@ export const comparisons: Comparison[] = [
     intro:
       "These two providers sit at opposite ends of the value spectrum in our rankings. NordVPN leads on consistency and trust signals. PureVPN undercuts on price. The question is whether the savings justify what you give up — and for some readers, the honest answer is yes.",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
       { category: "Speed (US Domestic)", left: { value: "905 Mbps median", pct: 95 }, right: { value: "610 Mbps median", pct: 64 }, winner: "left" },
       { category: "Speed (Transatlantic)", left: { value: "720 Mbps median", pct: 88 }, right: { value: "430 Mbps median", pct: 53 }, winner: "left" },
       { category: "Privacy Audit Depth", left: { value: "Multiple infrastructure audits", pct: 92 }, right: { value: "Improving, legacy concerns remain", pct: 58 }, winner: "left" },
-      { category: "Entry Pricing", left: { value: "$3.99/mo (2yr plan)", pct: 72 }, right: { value: "$2.14/mo (2yr plan)", pct: 90 }, winner: "right" },
+      { category: "Entry Pricing", left: { value: "NordVPN $3.49/mo on the 2-year Basic plan ($94.23 for the first 27 months, then $139.08/year) [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, right: { value: "PureVPN $2.15/mo on the 2-year Standard plan ($58.20 for 27 months, then $47.95/year) [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 90 }, winner: "right" },
       { category: "App Reliability", left: { value: "Polished, mature across platforms", pct: 90 }, right: { value: "Functional, occasional reconnect issues", pct: 65 }, winner: "left" },
-      { category: "Server Network", left: { value: "6,400+ servers, 111 countries", pct: 88 }, right: { value: "6,500+ servers, 78 countries", pct: 78 }, winner: "draw" },
+      { category: "Server Network", left: { value: "NordVPN: thousands of servers in 225+ locations [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 0 }, right: { value: "PureVPN: 80+ locations [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
       "Choose NordVPN if you want predictable performance across streaming, remote work, and general browsing without thinking about it. You are willing to pay a modest premium for a provider with a stronger audit narrative.",
@@ -95,12 +96,12 @@ export const comparisons: Comparison[] = [
     intro:
       "Both NordVPN and ExpressVPN target the premium consumer segment. NordVPN wins our rankings on speed and value; ExpressVPN wins on app polish and support. This comparison breaks down where each actually delivers.",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
       { category: "Speed (US Domestic)", left: { value: "905 Mbps median", pct: 95 }, right: { value: "700 Mbps median", pct: 74 }, winner: "left" },
       { category: "Speed (Transatlantic)", left: { value: "720 Mbps median", pct: 88 }, right: { value: "580 Mbps median", pct: 71 }, winner: "left" },
       { category: "Privacy Audits", left: { value: "Frequent infrastructure audits", pct: 92 }, right: { value: "TrustedServer RAM-only audits", pct: 88 }, winner: "left" },
-      { category: "Entry Pricing", left: { value: "$3.99/mo (2yr plan)", pct: 78 }, right: { value: "$6.67/mo (1yr plan)", pct: 55 }, winner: "left" },
+      { category: "Entry Pricing", left: { value: "NordVPN $3.49/mo on the 2-year Basic plan ($94.23 for the first 27 months, then $139.08/year) [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 78 }, right: { value: "ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left", note: "Different plan lengths; compare the totals." },
       { category: "App Experience", left: { value: "Feature-rich, some complexity", pct: 85 }, right: { value: "Polished, minimal friction", pct: 92 }, winner: "right" },
       { category: "Streaming Reliability", left: { value: "Consistent major platforms", pct: 90 }, right: { value: "Very reliable geo-unblocking", pct: 91 }, winner: "draw" },
     ],
@@ -113,6 +114,7 @@ export const comparisons: Comparison[] = [
     rightPickLabel: "Best UX",
     leftBadge: "NordVPN wins",
     rightBadge: "ExpressVPN wins",
+    sourceIds: ["S5", "S8"],
     faqs: [
       {
         question: "Is ExpressVPN faster than NordVPN?",
@@ -135,12 +137,12 @@ export const comparisons: Comparison[] = [
     intro:
       "Surfshark and NordVPN are the two most common comparison queries we receive. Surfshark offers unlimited devices and aggressive pricing; NordVPN offers the highest speed floors and audit cadence. Here is how they actually compare.",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
       { category: "Speed (US Domestic)", left: { value: "820 Mbps median", pct: 86 }, right: { value: "905 Mbps median", pct: 95 }, winner: "right" },
       { category: "Speed (Transatlantic)", left: { value: "640 Mbps median", pct: 78 }, right: { value: "720 Mbps median", pct: 88 }, winner: "right" },
       { category: "Device Limit", left: { value: "Unlimited connections", pct: 98 }, right: { value: "10 simultaneous devices", pct: 70 }, winner: "left" },
-      { category: "Entry Pricing", left: { value: "$2.49/mo (2yr plan)", pct: 88 }, right: { value: "$3.99/mo (2yr plan)", pct: 72 }, winner: "left" },
+      { category: "Entry Pricing", left: { value: "Surfshark Starter $2.49/mo ($67.23 for the first 27 months, VAT may apply) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "NordVPN $3.49/mo on the 2-year Basic plan ($94.23 for the first 27 months, then $139.08/year) [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, winner: "left" },
       { category: "Privacy Audits", left: { value: "Regular independent audits", pct: 82 }, right: { value: "Frequent infrastructure audits", pct: 92 }, winner: "right" },
       { category: "App Maturity", left: { value: "Modern, improving rapidly", pct: 85 }, right: { value: "Mature across all platforms", pct: 90 }, winner: "right" },
     ],
@@ -176,7 +178,7 @@ export const comparisons: Comparison[] = [
     intro:
       "Mullvad and Proton VPN represent the privacy-first tier of the VPN market. Neither runs aggressive affiliate programs — Tunnel Report earns zero commission from either. That independence makes this comparison particularly important.",
     authorId: "daniel",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
       { category: "Payment Anonymity", left: { value: "Cash, crypto, no email", pct: 98 }, right: { value: "Standard + crypto options", pct: 82 }, winner: "left" },
       { category: "Open Source", left: { value: "All clients open source", pct: 95 }, right: { value: "All clients open source", pct: 95 }, winner: "draw" },
@@ -218,9 +220,9 @@ export const comparisons: Comparison[] = [
     intro:
       "Surfshark and ExpressVPN serve different buyers. Surfshark wins on value and device coverage. ExpressVPN wins on app polish and support quality. The right choice depends on whether you are optimizing for household economics or premium convenience.",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
-      { category: "Entry Pricing", left: { value: "$2.49/mo (2yr plan)", pct: 88 }, right: { value: "$6.67/mo (1yr plan)", pct: 55 }, winner: "left" },
+      { category: "Entry Pricing", left: { value: "Surfshark Starter $2.49/mo ($67.23 for the first 27 months, VAT may apply) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left" },
       { category: "Device Limit", left: { value: "Unlimited devices", pct: 98 }, right: { value: "8 simultaneous devices", pct: 72 }, winner: "left" },
       { category: "Domestic Speed", left: { value: "820 Mbps median", pct: 86 }, right: { value: "700 Mbps median", pct: 74 }, winner: "left" },
       { category: "App Polish", left: { value: "Modern, improving", pct: 85 }, right: { value: "Best-in-class simplicity", pct: 92 }, winner: "right" },
@@ -251,7 +253,7 @@ export const comparisons: Comparison[] = [
     intro:
       "NordVPN is the better all-around consumer VPN. Proton VPN is the stronger transparency story for users who want open-source clients and Swiss jurisdiction. This is a performance-versus-philosophy comparison.",
     authorId: "marcus",
-    dateModified: "2026-09-01",
+    dateModified: "2026-10-15",
     rows: [
       { category: "Domestic Speed", left: { value: "905 Mbps median", pct: 95 }, right: { value: "650 Mbps median", pct: 77 }, winner: "left" },
       { category: "Open Source", left: { value: "Closed-source apps", pct: 62 }, right: { value: "Open-source clients", pct: 95 }, winner: "right" },
@@ -285,7 +287,7 @@ export const comparisons: Comparison[] = [
     intro:
       "ExpressVPN is built for people who want the VPN to disappear into the background. Proton VPN is built for people who want to understand and verify the privacy model. Both are good; they optimize for different readers.",
     authorId: "daniel",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
       { category: "App Simplicity", left: { value: "Best-in-class polish", pct: 92 }, right: { value: "Powerful but denser", pct: 78 }, winner: "left" },
       { category: "Open Source", left: { value: "Limited", pct: 60 }, right: { value: "Open-source clients", pct: 95 }, winner: "right" },
@@ -318,9 +320,9 @@ export const comparisons: Comparison[] = [
     intro:
       "Surfshark and PureVPN both compete on price, but they are not interchangeable. Surfshark is the stronger value pick for most households. PureVPN is the aggressive entry-price option with more trust and consistency tradeoffs.",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
-      { category: "Entry Pricing", left: { value: "$2.49/mo", pct: 88 }, right: { value: "$2.14/mo", pct: 92 }, winner: "right" },
+      { category: "Entry Pricing", left: { value: "Surfshark Starter $2.49/mo ($67.23 for the first 27 months, VAT may apply) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "PureVPN $2.15/mo on the 2-year Standard plan ($58.20 for 27 months, then $47.95/year) [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
       { category: "Device Limit", left: { value: "Unlimited devices", pct: 98 }, right: { value: "10 devices", pct: 75 }, winner: "left" },
       { category: "Domestic Speed", left: { value: "820 Mbps median", pct: 86 }, right: { value: "610 Mbps median", pct: 64 }, winner: "left" },
       { category: "Trust Profile", left: { value: "Improving audit cadence", pct: 82 }, right: { value: "Legacy concerns remain", pct: 58 }, winner: "left" },
@@ -351,7 +353,7 @@ export const comparisons: Comparison[] = [
     intro:
       "NordVPN is the best mainstream VPN in our rankings. Mullvad is the privacy purist's choice and pays us nothing. This comparison is useful because both can be the right answer for different readers.",
     authorId: "marcus",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
       { category: "Domestic Speed", left: { value: "905 Mbps median", pct: 95 }, right: { value: "720 Mbps EU median", pct: 85 }, winner: "left" },
       { category: "Account Anonymity", left: { value: "Email/account required", pct: 65 }, right: { value: "No email, account number", pct: 98 }, winner: "right" },
@@ -385,9 +387,9 @@ export const comparisons: Comparison[] = [
     intro:
       "ExpressVPN and PureVPN are almost opposite buying decisions. ExpressVPN is expensive but polished. PureVPN is cheap but more variable. This is the clearest premium-versus-budget comparison in our matrix.",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     rows: [
-      { category: "Entry Pricing", left: { value: "$6.67/mo", pct: 55 }, right: { value: "$2.14/mo", pct: 92 }, winner: "right" },
+      { category: "Entry Pricing", left: { value: "ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, right: { value: "PureVPN $2.15/mo on the 2-year Standard plan ($58.20 for 27 months, then $47.95/year) [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
       { category: "App Reliability", left: { value: "Polished, stable", pct: 92 }, right: { value: "Functional, variable", pct: 65 }, winner: "left" },
       { category: "Domestic Speed", left: { value: "700 Mbps median", pct: 74 }, right: { value: "610 Mbps median", pct: 64 }, winner: "left" },
       { category: "Streaming", left: { value: "Very reliable", pct: 91 }, right: { value: "Variable", pct: 68 }, winner: "left" },
