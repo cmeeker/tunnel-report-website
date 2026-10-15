@@ -8,6 +8,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
 import { CitedText } from "@/components/CitedText";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
+import { EditorialChart, renewalPricesChart } from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -19,6 +20,7 @@ import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getGuideRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema } from "@/lib/seo/schema";
+import { siteConfig } from "@/lib/site";
 
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
@@ -85,7 +87,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           {guide.h1 ?? guide.title}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{guide.dek}</p>
-        <AuthorByline persona={persona} date={guide.updatedDateLabel ?? "April 8, 2026"} />
+        <AuthorByline persona={persona} date={guide.updatedDateLabel ?? siteConfig.updatedDate} />
       </header>
 
       {guide.shortAnswer ? (
@@ -130,6 +132,36 @@ export default async function GuidePage({ params }: GuidePageProps) {
               )}
             </p>
           ))}
+          {section.chart === "renewal-prices" ? <EditorialChart {...renewalPricesChart} /> : null}
+          {section.table ? (
+            <div className="glass-card overflow-x-auto p-2">
+              <table className="table-dark">
+                <thead>
+                  <tr>
+                    {section.table.headers.map((header) => (
+                      <th key={header}>{header}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {section.table.rows.map((row) => (
+                    <tr key={row[0]}>
+                      {row.map((cell) => (
+                        <td key={cell}>
+                          <CitedText text={cell} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : null}
+          {section.closing ? (
+            <p>
+              <CitedText text={section.closing} />
+            </p>
+          ) : null}
         </section>
       ))}
 

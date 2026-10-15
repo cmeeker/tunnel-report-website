@@ -133,9 +133,10 @@ export const useCaseSections: UseCaseSection[] = [
     id: "budget",
     title: "Best Cheap VPN in 2026",
     description:
-      "Budget buyers face a real tradeoff: introductory pricing versus renewal surprises and speed consistency. Surfshark offers the best value with unlimited devices; PureVPN has the lowest entry price but more variable performance.",
+      "Budget buyers face a real tradeoff: introductory pricing versus renewal surprises and speed consistency. Surfshark offers the best value with unlimited devices. PureVPN Standard is $2.15/mo on its 2-year plan [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026.",
     pickSlug: "surfshark",
-    pickReason: "Under $2.50/month entry pricing with unlimited devices and credible audit program.",
+    pickReason:
+      "$2.49/mo on the 2-year Starter plan ($67.23 for the first 27 months) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026",
   },
   {
     id: "gaming",

@@ -51,10 +51,6 @@ const shareImages: Record<string, ShareImage> = {
     file: "best-vpn-for-torrenting-og.webp",
     alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "Best VPN for Torrenting in 2026", and tunnelreport.com in teal.',
   },
-  "/guides/vpn-renewal-pricing-traps": {
-    file: "guides-vpn-renewal-pricing-traps-og.webp",
-    alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "VPN Renewal Pricing Traps: How to Avoid Overpaying", and tunnelreport.com in teal.',
-  },
 };
 
 export type ShareImageMeta = {

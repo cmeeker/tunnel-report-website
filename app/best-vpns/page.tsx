@@ -6,6 +6,7 @@ import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
+import { CitedText } from "@/components/CitedText";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { bestVpnsChart, EditorialChart } from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
@@ -216,9 +217,12 @@ export default function BestVpnsPage() {
                 className="glass-card scroll-mt-28 p-8"
               >
                 <h3 className="text-xl font-bold text-white">{section.title}</h3>
-                <p className="mt-3 leading-relaxed text-[#94a3b8]">{section.description}</p>
+                <p className="mt-3 leading-relaxed text-[#94a3b8]">
+                  <CitedText text={section.description} />
+                </p>
                 <p className="mt-4 text-sm text-[#cbd5e1]">
-                  <strong className="text-[#00d4aa]">Our pick:</strong> {pick?.name} — {section.pickReason}
+                  <strong className="text-[#00d4aa]">Our pick:</strong> {pick?.name} —{" "}
+                  <CitedText text={section.pickReason} />
                 </p>
                 {ctaHref && pick?.affiliateKey && (
                   <div className="mt-5">

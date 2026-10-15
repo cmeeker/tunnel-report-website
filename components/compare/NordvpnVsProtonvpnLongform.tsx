@@ -21,6 +21,14 @@ function NordVpnOutboundLink({ children }: { children: ReactNode }) {
   );
 }
 
+function PricingLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={linkClassName}>
+      {children}
+    </a>
+  );
+}
+
 export function NordvpnVsProtonvpnLongform() {
   return (
     <div className="space-y-10">
@@ -36,10 +44,10 @@ export function NordvpnVsProtonvpnLongform() {
         </p>
 
         <p>
-          <strong>Verification.</strong> NordVPN prices were re-checked on the public pricing page on 1 September 2026.
-          Proton VPN’s public pricing page did not expose dollar amounts in the fetched HTML (JavaScript placeholders
-          only), so we do not invent a Proton monthly rate. Speed figures below are Tunnel Report’s own April 2026
-          medians from the{" "}
+          <strong>Verification.</strong> NordVPN prices were re-checked on the public pricing page on Oct 15, 2026.
+          Proton VPN Plus: $3.49/mo on the 2-year plan ($83.76 for the first 24 months, then $83.88 every 12 months){" "}
+          <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026. Speed
+          figures below are Tunnel Report’s own April 2026 medians from the{" "}
           <Link href="/reviews/nordvpn" className={linkClassName}>
             NordVPN review
           </Link>{" "}
@@ -134,8 +142,9 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Category-by-category</h2>
         <p>
-          Speed data from the Tunnel Report April 2026 benchmark suite, reported as medians. Pricing from provider
-          websites, re-checked 1 September 2026. See{" "}
+          Speed data from the Tunnel Report April 2026 benchmark suite, reported as medians. Prices checked on each
+          provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check the provider&apos;s site
+          before you buy. See{" "}
           <Link href="/guides/how-we-test-vpn-speed" className={linkClassName}>
             How we test VPN speed
           </Link>
@@ -303,18 +312,23 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Apps, devices, and network claims</h2>
         <p>
-          Both 10 simultaneous connections. NordVPN thousands of servers 224+ locations, NordLynx. Proton Plus 20,000+
-          servers 140+ countries. Price Basic not Complete/Prime extras.
+          Both 10 simultaneous connections. NordVPN thousands of servers in 225+ locations{" "}
+          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>, as of Oct 2026, NordLynx.
+          Proton Plus 20,000+ servers 140+ countries{" "}
+          <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026. Price
+          Basic not Complete/Prime extras.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Pricing: what we could verify on 1 September 2026</h2>
+        <h2 className="text-2xl font-bold text-white">Pricing: what we could verify on Oct 15, 2026</h2>
         <p>
-          NordVPN live nordvpn.com/pricing: 2-year+3mo Basic $3.49 intro, $94.23 / 27 months, renews $139.08/year;
-          Complete $4.49 / $121.23 / $219.48; Prime $7.49 / $202.23 / $296.28; 1-year Basic $5.49 / $65.88; 1-month
-          $14.99. Year-two $11.59/mo. Older blog $2.99 is stale. Proton HTML $XX.XX placeholders — do not invent Plus
-          USD. Free $0; Plus standalone; Unlimited ecosystem.
+          NordVPN live{" "}
+          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>: 2-year+3mo Basic $3.49
+          intro, $94.23 / 27 months, renews $139.08/year; 1-year Basic $5.49 / $65.88, as of Oct 2026. Older blog $2.99
+          is stale. Proton VPN Plus: $3.49/mo on the 2-year plan ($83.76 for the first 24 months, then $83.88 every 12
+          months) <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.
+          Free $0; Plus standalone; Unlimited ecosystem.
         </p>
       </section>
 
@@ -330,8 +344,8 @@ export function NordvpnVsProtonvpnLongform() {
         <h2 className="text-2xl font-bold text-white">FAQ</h2>
         <p>
           Safer for whom / streaming NordVPN no fake % / NordVPN Deloitte not independently read / Proton 2025 Securitum
-          yes, 2026 not downloaded / try Proton free vs Nord 30-day / cheaper NordVPN Basic verified $3.49 intro
-          $139.08 renewal, Proton dollars not verified.
+          yes, 2026 not downloaded / try Proton free vs Nord 30-day / Same intro rate ($3.49/mo on 2-year plans). At
+          renewal, Proton VPN Plus is $83.88/year and NordVPN Basic is $139.08/year, as of Oct 2026.
         </p>
       </section>
 
@@ -412,7 +426,7 @@ export function NordvpnVsProtonvpnLongform() {
             <a href="https://protonvpn.com/pricing" className={linkClassName}>
               https://protonvpn.com/pricing
             </a>{" "}
-            placeholders
+            Proton VPN Plus 2-year price, as of Oct 2026
           </li>
           <li>
             <a href="https://protonvpn.com/support/proton-vpn-plans" className={linkClassName}>
@@ -496,7 +510,7 @@ export function NordvpnVsProtonvpnLongform() {
           </li>
         </ol>
 
-        <p>End: Prices and audit-access notes verified 1 September 2026. Confirm at checkout.</p>
+        <p>End: Prices and audit-access notes re-checked Oct 15, 2026. Confirm at checkout.</p>
       </section>
     </div>
   );

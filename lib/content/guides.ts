@@ -7,6 +7,14 @@ export type GuideTable = {
   rows: string[][];
 };
 
+export type GuideSection = {
+  heading: string;
+  paragraphs: string[];
+  table?: GuideTable;
+  chart?: "renewal-prices";
+  closing?: string;
+};
+
 export type Guide = {
   slug: string;
   title: string;
@@ -15,7 +23,7 @@ export type Guide = {
   authorId: "marcus" | "sarah" | "daniel";
   dateModified: string;
   category: "Methodology" | "Privacy" | "Pricing" | "Protocol";
-  sections: { heading: string; paragraphs: string[] }[];
+  sections: GuideSection[];
   faqs: FaqItem[];
   relatedReviewSlugs: string[];
   relatedCompareSlugs: string[];
@@ -38,7 +46,7 @@ export const guides: Guide[] = [
     dek:
       "WireGuard is usually faster and easier on battery. OpenVPN is older, battle-tested, and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
     authorId: "marcus",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     category: "Protocol",
     relatedReviewSlugs: ["nordvpn", "surfshark", "protonvpn"],
     relatedCompareSlugs: ["surfshark-vs-nordvpn", "nordvpn-vs-expressvpn"],
@@ -86,7 +94,7 @@ export const guides: Guide[] = [
     dek:
       "A no-logs claim is only useful when you understand what data is excluded, what metadata remains, and whether an independent audit tested real infrastructure.",
     authorId: "daniel",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     category: "Privacy",
     relatedReviewSlugs: ["mullvad", "protonvpn", "nordvpn"],
     relatedCompareSlugs: ["mullvad-vs-protonvpn", "nordvpn-vs-protonvpn"],
@@ -127,7 +135,7 @@ export const guides: Guide[] = [
     dek:
       "Jurisdiction does not replace technical controls, but it shapes the legal pressure a VPN company can face. Here is how we weigh it in reviews.",
     authorId: "daniel",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     category: "Privacy",
     relatedReviewSlugs: ["nordvpn", "protonvpn", "expressvpn"],
     relatedCompareSlugs: ["mullvad-vs-protonvpn", "nordvpn-vs-expressvpn"],
@@ -168,7 +176,7 @@ export const guides: Guide[] = [
     dek:
       "Peak speed screenshots are easy to game. We report medians and floors because those numbers better match what readers experience during real use.",
     authorId: "marcus",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
     category: "Methodology",
     relatedReviewSlugs: ["nordvpn", "surfshark", "expressvpn"],
     relatedCompareSlugs: ["surfshark-vs-nordvpn", "surfshark-vs-expressvpn"],
@@ -203,14 +211,18 @@ export const guides: Guide[] = [
   },
   {
     slug: "vpn-renewal-pricing-traps",
-    title: "VPN Renewal Pricing Traps: How to Avoid Overpaying",
+    title: "VPN Renewal Prices 2026: Intro vs Renewal Costs Compared",
+    h1: "VPN renewal increases: what you pay after the intro deal",
     description:
-      "VPN renewal pricing explained: why introductory VPN deals jump in year two, how to compare lifecycle cost, and when to switch providers.",
+      "We checked intro and renewal prices for NordVPN, Surfshark, ExpressVPN, Proton and more on Oct 15, 2026. Here's what they cost after the first term, where providers publish it.",
     dek:
       "The cheapest VPN at checkout is not always the cheapest VPN over two years. Renewal pricing is where many buyers lose the savings they thought they were getting.",
     authorId: "sarah",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-15",
+    updatedBadgeLabel: "Updated Oct 15, 2026",
+    updatedDateLabel: "October 15, 2026",
     category: "Pricing",
+    sourceIds: ["S5", "S8", "S7", "S6", "P1", "MV1", "H1"],
     relatedReviewSlugs: ["surfshark", "purevpn", "nordvpn"],
     relatedCompareSlugs: ["nordvpn-vs-purevpn", "surfshark-vs-purevpn"],
     sections: [
@@ -220,6 +232,61 @@ export const guides: Guide[] = [
           "Most VPN providers sell multi-year introductory offers and raise the rate at renewal. That is not automatically predatory, but it is often under-explained.",
           "A fair comparison looks at the full lifecycle cost: first term, renewal term, add-ons, taxes, refund policy, and device limits.",
         ],
+      },
+      {
+        heading: "What VPNs cost after the intro term (Oct 2026)",
+        paragraphs: [
+          "Most VPNs charge a low rate for your first term and then renew at a higher one. On the 2-year deals we checked in October 2026, NordVPN renews at $139.08 a year and ExpressVPN at $99.95, while Mullvad and hide.me charge the same price every time. Here's each provider's intro rate next to its renewal rate.",
+        ],
+        chart: "renewal-prices",
+        table: {
+          headers: ["Provider (base plan)", "Intro price", "Renews at", "Source (as of Oct 2026)"],
+          rows: [
+            [
+              "NordVPN Basic, 2 yr + 3 mo",
+              "$3.49/mo ($94.23 for 27 months)",
+              "$139.08/year",
+              "[nordvpn.com/pricing](https://nordvpn.com/pricing/)",
+            ],
+            [
+              "ExpressVPN Basic, 12 mo + 3 mo",
+              "$4.99/mo ($74.85 for 15 months)",
+              "$99.95/year",
+              "[expressvpn.com/order](https://www.expressvpn.com/order)",
+            ],
+            [
+              "Surfshark Starter, 24 mo + 3 mo",
+              "$2.49/mo ($67.23 for 27 months)",
+              "Not listed on the pricing page",
+              "[surfshark.com/pricing](https://surfshark.com/pricing)",
+            ],
+            [
+              "PureVPN Standard, 2 yr + 3 mo",
+              "$2.15/mo ($58.20 for 27 months)",
+              "$47.95/year",
+              "[purevpn.com/order](https://www.purevpn.com/order)",
+            ],
+            [
+              "Proton VPN Plus, 2 yr",
+              "$3.49/mo ($83.76 for 24 months)",
+              "$83.88 every 12 months",
+              "[protonvpn.com/pricing](https://protonvpn.com/pricing)",
+            ],
+            [
+              "Mullvad (one plan)",
+              "€5/mo",
+              "€5/mo, no intro rate",
+              "[mullvad.net/pricing](https://mullvad.net/en/pricing)",
+            ],
+            [
+              "hide.me Premium, 24 mo + 2 mo",
+              "$2.69/mo ($69.99 for 26 months)",
+              "$69.99 every 26 months",
+              "[hide.me/pricing](https://hide.me/en/pricing)",
+            ],
+          ],
+        },
+        closing: "Prices change often, so check the provider's site before you buy.",
       },
       {
         heading: "Set a renewal reminder",
@@ -238,7 +305,7 @@ export const guides: Guide[] = [
     ],
     faqs: [
       { question: "Why do VPN prices go up at renewal?", answer: "Introductory discounts are acquisition offers. Renewal pricing usually reflects the standard plan rate after the promotional term ends." },
-      { question: "Which VPN has the best long-term value?", answer: "Surfshark is strongest for multi-device households. Mullvad has the cleanest flat-rate pricing but no affiliate program and fewer streaming features." },
+      { question: "Which VPN has the best long-term value?", answer: "Surfshark is strongest for multi-device households. Mullvad has the cleanest flat-rate pricing (€5/month on every plan length [mullvad.net/pricing](https://mullvad.net/en/pricing), as of Oct 2026) but no affiliate program and fewer streaming features." },
       { question: "Can I cancel before VPN renewal?", answer: "Usually yes, but policies vary. Set a reminder before the renewal date and confirm cancellation in your account dashboard." },
     ],
   },

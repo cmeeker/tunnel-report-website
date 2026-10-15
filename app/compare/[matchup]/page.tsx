@@ -6,6 +6,12 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitedText } from "@/components/CitedText";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
+import {
+  EditorialChart,
+  nordvpnVsExpressvpnChart,
+  nordvpnVsPurevpnChart,
+  surfsharkVsNordvpnChart,
+} from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { PaidPick } from "@/components/PaidPick";
@@ -26,6 +32,12 @@ import { buildArticleSchema } from "@/lib/seo/schema";
 type ComparePageProps = {
   params: Promise<{ matchup: string }>;
 };
+
+const compareCharts = {
+  "nordvpn-vs-purevpn": nordvpnVsPurevpnChart,
+  "nordvpn-vs-expressvpn": nordvpnVsExpressvpnChart,
+  "surfshark-vs-nordvpn": surfsharkVsNordvpnChart,
+} as const;
 
 export const dynamicParams = false;
 
@@ -156,6 +168,9 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         <>
           <section className="space-y-4">
             <h2 className="text-xl font-bold text-white">Category-by-Category Breakdown</h2>
+            {compareCharts[comparison.slug as keyof typeof compareCharts] ? (
+              <EditorialChart {...compareCharts[comparison.slug as keyof typeof compareCharts]} />
+            ) : null}
             <div className="space-y-3">
               {comparison.rows.map((row, i) => (
                 <div
@@ -173,35 +188,51 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                     {row.winner === "draw" && (
                       <span className="badge badge-violet text-[0.6rem]">Draw</span>
                     )}
+                    {row.winner === "uncompared" && (
+                      <span className="badge badge-violet text-[0.6rem]">Not compared</span>
+                    )}
                   </div>
                   <div className="grid gap-4 md:grid-cols-2">
                     <div>
-                      <div className="flex items-center justify-between text-sm">
+                      <div className="flex items-start justify-between gap-3 text-sm">
                         <span className="font-semibold text-white">{left.name}</span>
-                        <span className="text-[#94a3b8]">{row.left.value}</span>
+                        <span className="text-right text-[#94a3b8]">
+                          <CitedText text={row.left.value} />
+                        </span>
                       </div>
-                      <div className="score-bar mt-1.5">
-                        <div className="score-bar-fill" style={{ width: `${row.left.pct}%` }} />
-                      </div>
+                      {row.winner !== "uncompared" ? (
+                        <div className="score-bar mt-1.5">
+                          <div className="score-bar-fill" style={{ width: `${row.left.pct}%` }} />
+                        </div>
+                      ) : null}
                     </div>
                     <div>
-                      <div className="flex items-center justify-between text-sm">
+                      <div className="flex items-start justify-between gap-3 text-sm">
                         <span className="font-semibold text-white">{right.name}</span>
-                        <span className="text-[#94a3b8]">{row.right.value}</span>
+                        <span className="text-right text-[#94a3b8]">
+                          <CitedText text={row.right.value} />
+                        </span>
                       </div>
-                      <div className="mt-1.5 h-[6px] overflow-hidden rounded-[3px] bg-[#1e293b]">
-                        <div
-                          className="h-full rounded-[3px] bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]"
-                          style={{ width: `${row.right.pct}%` }}
-                        />
-                      </div>
+                      {row.winner !== "uncompared" ? (
+                        <div className="mt-1.5 h-[6px] overflow-hidden rounded-[3px] bg-[#1e293b]">
+                          <div
+                            className="h-full rounded-[3px] bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]"
+                            style={{ width: `${row.right.pct}%` }}
+                          />
+                        </div>
+                      ) : null}
                     </div>
                   </div>
+                  {row.note ? (
+                    <p className="mt-3 text-sm text-[#94a3b8]">
+                      <CitedText text={row.note} />
+                    </p>
+                  ) : null}
                 </div>
               ))}
             </div>
             <p className="text-xs text-[#475569]">
-              Speed data from Tunnel Report benchmark suite. Pricing from provider websites.
+              Speed data from Tunnel Report benchmark suite. Prices checked on each provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check the provider&apos;s site before you buy.
             </p>
           </section>
 
