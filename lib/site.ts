@@ -4,7 +4,7 @@ export const siteConfig = {
   url: "https://tunnelreport.com",
   tagline: "Independent VPN Intelligence",
   description:
-    "Tunnel Report publishes independent VPN reviews with real speed benchmarks, cited privacy audits, and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
+    "Tunnel Report publishes independent VPN reviews with cited privacy audits and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
   locale: "en_US",
   defaultAuthor: "Tunnel Report Staff",
   updatedDate: "October 15, 2026",
@@ -79,7 +79,7 @@ export const primaryNav: PrimaryNavItem[] = [
     featured: {
       label: "NordVPN Review",
       href: "/reviews/nordvpn",
-      description: "In-depth audit of speed benchmarks, privacy policy language, and security architecture.",
+      description: "In-depth audit of privacy policy language and security architecture.",
       badge: "Verified 2026",
     },
     columns: [
@@ -120,7 +120,7 @@ export const primaryNav: PrimaryNavItem[] = [
     ],
   },
   {
-    href: "/vpn/los-angeles",
+    href: "/vpn",
     label: "City Guides",
     columns: [
       {

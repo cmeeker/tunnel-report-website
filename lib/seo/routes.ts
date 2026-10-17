@@ -77,6 +77,16 @@ const staticRoutes: SiteRoute[] = [
     changeFrequency: "weekly",
     group: "guide",
   },
+  {
+    path: "/vpn",
+    title: "VPN City Guides: 10 US Cities",
+    description:
+      "Tunnel Report's VPN city guides for 10 US cities: local ISPs, privacy points and which VPN fits, based on published specs, pricing and third-party reports.",
+    lastModified: "2026-10-17",
+    priority: 0.8,
+    changeFrequency: "weekly",
+    group: "city",
+  },
 ];
 
 const sitemapLastModified: Record<string, string> = {
@@ -156,7 +166,7 @@ export function getSiteRoutes(): SiteRoute[] {
         path: `/vpn/${slug}`,
         title: `Best VPN for ${city.city} in 2026`,
         description: `Localized VPN recommendations for ${city.city}, ${city.region}.`,
-        lastModified: CONTENT_UPDATED_AT,
+        lastModified: "2026-10-17",
         priority: 0.8,
         changeFrequency: "weekly" as const,
         group: "city" as const,

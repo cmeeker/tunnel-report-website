@@ -7,15 +7,10 @@ import { AFFILIATE_URLS } from "@/lib/content/providers";
 const linkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
 
-function NordVpnOutboundLink({ children }: { children: ReactNode }) {
+function PlainSourceLink({ href }: { href: string }) {
   return (
-    <a
-      href={AFFILIATE_URLS.nordvpn}
-      target="_blank"
-      rel="nofollow sponsored noopener noreferrer"
-      className={linkClassName}
-    >
-      {children}
+    <a href={href} target="_blank" rel="noopener noreferrer" className={linkClassName}>
+      {href}
     </a>
   );
 }
@@ -204,15 +199,11 @@ export function NordvpnVsProtonvpnLongform() {
         <p>
           2025 Securitum PDF opened: 18 August 2025 – 19 September 2025; on-site 18–20 August 2025 Zürich; Martin
           Matyja, Maciej Szymczak; bare-metal Proton AG owns. Conclusion: no user activity logging / connection
-          metadata / traffic inspection contradicting no-logs. 2026 Securitum quoted on Proton blog; Drive{" "}
-          <a href="https://drive.proton.me/urls/DZVEJZFYHM#FPSKdUEykprb" className={linkClassName}>
-            https://drive.proton.me/urls/DZVEJZFYHM#FPSKdUEykprb
-          </a>
+          metadata / traffic inspection contradicting no-logs.           2026 Securitum quoted on Proton blog; Drive{" "}
+          <PlainSourceLink href="https://drive.proton.me/urls/DZVEJZFYHM#FPSKdUEykprb" />
           ; guessed Securitum 2026 PDF 404. Treat 2026 as published by Proton, not independently downloaded. Apps open
           source{" "}
-          <a href="https://github.com/ProtonVPN" className={linkClassName}>
-            github.com/ProtonVPN
-          </a>
+          <PricingLink href="https://github.com/ProtonVPN">github.com/ProtonVPN</PricingLink>
           . Transparency report through June 2026: 458 Swiss orders, every request denied (47 of 47 through June 2026;
           59 of 59 in 2025).
         </p>
@@ -320,55 +311,41 @@ export function NordvpnVsProtonvpnLongform() {
           <li>tunnelreport.com/methodology</li>
           <li>tunnelreport.com/best-vpns</li>
           <li>
-            <NordVpnOutboundLink>https://nordvpn.com/pricing/</NordVpnOutboundLink> live intro/renewal
+            <PlainSourceLink href="https://nordvpn.com/pricing/" /> live intro/renewal
           </li>
           <li>
-            <NordVpnOutboundLink>https://nordvpn.com/blog/how-much-does-nordvpn-cost/</NordVpnOutboundLink>{" "}
+            <PlainSourceLink href="https://nordvpn.com/blog/how-much-does-nordvpn-cost/" />{" "}
             24 Oct 2025 stale $2.99
           </li>
           <li>
-            <NordVpnOutboundLink>
-              https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/
-            </NordVpnOutboundLink>{" "}
+            <PlainSourceLink href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/" />{" "}
             3 Feb 2026 Deloitte PDF not public
           </li>
           <li>
-            <NordVpnOutboundLink>https://nordvpn.com/features/no-log-vpn/</NordVpnOutboundLink>
+            <PlainSourceLink href="https://nordvpn.com/features/no-log-vpn/" />
           </li>
           <li>
-            <NordVpnOutboundLink>https://nordvpn.com/blog/ram-based-servers/</NordVpnOutboundLink> 28 Aug 2024
+            <PlainSourceLink href="https://nordvpn.com/blog/ram-based-servers/" /> 28 Aug 2024
           </li>
           <li>
-            <NordVpnOutboundLink>
-              https://support.nordvpn.com/hc/en-us/articles/19441152966161-Where-is-NordVPN-based
-            </NordVpnOutboundLink>
+            <PlainSourceLink href="https://support.nordvpn.com/hc/en-us/articles/19441152966161-Where-is-NordVPN-based" />
           </li>
           <li>
-            <NordVpnOutboundLink>
-              https://support.nordvpn.com/hc/en-us/articles/19476991311121-What-is-your-refund-policy
-            </NordVpnOutboundLink>
+            <PlainSourceLink href="https://support.nordvpn.com/hc/en-us/articles/19476991311121-What-is-your-refund-policy" />
           </li>
           <li>
-            <a href="https://protonvpn.com/" className={linkClassName}>
-              https://protonvpn.com/
-            </a>{" "}
+            <PlainSourceLink href="https://protonvpn.com/" />{" "}
             USD not in fetched HTML
           </li>
           <li>
-            <a href="https://protonvpn.com/pricing" className={linkClassName}>
-              https://protonvpn.com/pricing
-            </a>{" "}
+            <PlainSourceLink href="https://protonvpn.com/pricing" />{" "}
             Proton VPN Plus 2-year price, as of Oct 2026
           </li>
           <li>
-            <a href="https://protonvpn.com/support/proton-vpn-plans" className={linkClassName}>
-              https://protonvpn.com/support/proton-vpn-plans
-            </a>
+            <PlainSourceLink href="https://protonvpn.com/support/proton-vpn-plans" />
           </li>
           <li>
-            <a href="https://protonvpn.com/blog/no-logs-audit" className={linkClassName}>
-              https://protonvpn.com/blog/no-logs-audit
-            </a>
+            <PlainSourceLink href="https://protonvpn.com/blog/no-logs-audit" />
           </li>
           <li>
             <a
@@ -386,42 +363,28 @@ export function NordvpnVsProtonvpnLongform() {
             </a>
           </li>
           <li>
-            <a href="https://drive.proton.me/urls/DZVEJZFYHM#FPSKdUEykprb" className={linkClassName}>
-              https://drive.proton.me/urls/DZVEJZFYHM#FPSKdUEykprb
-            </a>{" "}
+            <PlainSourceLink href="https://drive.proton.me/urls/DZVEJZFYHM#FPSKdUEykprb" />{" "}
             2026 Drive, 2026 public PDF 404
           </li>
           <li>
-            <a href="https://protonvpn.com/features/no-logs-policy" className={linkClassName}>
-              https://protonvpn.com/features/no-logs-policy
-            </a>
+            <PlainSourceLink href="https://protonvpn.com/features/no-logs-policy" />
           </li>
           <li>
-            <a href="https://protonvpn.com/support/no-logs-vpn/" className={linkClassName}>
-              https://protonvpn.com/support/no-logs-vpn/
-            </a>
+            <PlainSourceLink href="https://protonvpn.com/support/no-logs-vpn/" />
           </li>
           <li>
-            <a href="https://protonvpn.com/blog/open-source" className={linkClassName}>
-              https://protonvpn.com/blog/open-source
-            </a>{" "}
+            <PlainSourceLink href="https://protonvpn.com/blog/open-source" />{" "}
             updated 1 Dec 2025
           </li>
           <li>
-            <a href="https://github.com/ProtonVPN" className={linkClassName}>
-              https://github.com/ProtonVPN
-            </a>
+            <PlainSourceLink href="https://github.com/ProtonVPN" />
           </li>
           <li>
-            <a href="https://protonvpn.com/blog/transparency-report" className={linkClassName}>
-              https://protonvpn.com/blog/transparency-report
-            </a>{" "}
+            <PlainSourceLink href="https://protonvpn.com/blog/transparency-report" />{" "}
             458/458 denied
           </li>
           <li>
-            <a href="https://protonvpn.com/terms-and-conditions" className={linkClassName}>
-              https://protonvpn.com/terms-and-conditions
-            </a>{" "}
+            <PlainSourceLink href="https://protonvpn.com/terms-and-conditions" />{" "}
             last modified 23 June 2026
           </li>
           <li>

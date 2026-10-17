@@ -106,6 +106,8 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         <AuthorByline date={updatedDateLabel} />
       </header>
 
+      {comparison.slug === "surfshark-vs-protonvpn" ? <DisclosureBanner /> : null}
+
       {comparison.verdictBox ? (
         <section className="glass-card space-y-6 p-8">
           <span className="badge badge-teal">Verdict</span>
@@ -121,7 +123,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         </section>
       ) : null}
 
-      <DisclosureBanner />
+      {comparison.slug === "surfshark-vs-protonvpn" ? null : <DisclosureBanner />}
 
       {comparison.specRows ? (
         <section className="space-y-4">

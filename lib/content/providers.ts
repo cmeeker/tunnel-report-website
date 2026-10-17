@@ -152,7 +152,7 @@ export const providers: Provider[] = [
     dateModified: "2026-10-15",
     reviewTitle: "Surfshark Review 2026: Best Budget VPN for Families?",
     reviewDescription:
-      "Surfshark review with speed benchmarks, privacy audit analysis, and honest pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
+      "Surfshark review with privacy audit analysis and honest pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
     reviewSummary:
       "Surfshark is the strongest value play in our 2026 rankings. Unlimited connections and competitive transatlantic speeds make it ideal for households, though power users may want more tuning options.",
     jurisdiction: "Netherlands",
@@ -218,7 +218,7 @@ export const providers: Provider[] = [
     dateModified: "2026-10-15",
     reviewTitle: "ExpressVPN Review 2026: Worth the Premium Price?",
     reviewDescription:
-      "ExpressVPN review covering TrustedServer architecture, real speed benchmarks, streaming reliability, and whether the premium price tag is justified in 2026.",
+      "ExpressVPN review covering TrustedServer architecture, streaming reliability, and whether the premium price tag is justified in 2026.",
     reviewSummary:
       "ExpressVPN trades on simplicity and reliability. It is not the fastest or cheapest option, but its polished apps and predictable streaming performance keep it in our top five.",
     jurisdiction: "British Virgin Islands",
