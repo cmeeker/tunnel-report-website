@@ -24,7 +24,7 @@ export function NordPassPricingLink({ presentation = "inline" }: { presentation?
 
 export function PricingLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <a href={href} target="_blank" rel="nofollow noopener noreferrer" className={textLinkClassName}>
+    <a href={href} target="_blank" rel="noopener noreferrer" className={textLinkClassName}>
       {children}
     </a>
   );
@@ -91,7 +91,7 @@ export function PasswordManagerSources({ sources }: { sources: PasswordSource[] 
                 <a
                   href={source.url}
                   target="_blank"
-                  rel="nofollow noopener noreferrer"
+                  rel="noopener noreferrer"
                   className="text-[#cbd5e1] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-white hover:decoration-[#00d4aa]"
                 >
                   {source.title}
