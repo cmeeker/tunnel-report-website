@@ -325,7 +325,7 @@ export const providers: Provider[] = [
       {
         question: "Is Proton VPN's free tier actually usable?",
         answer:
-          "Yes, for low-risk browsing and testing. It limits server countries and speed versus paid tiers, but it is not a data-harvesting trap like many free VPNs.",
+          "Yes, for low-risk browsing and testing. It limits server countries and speed versus paid tiers, but it doesn't harvest your data the way many free VPNs do.",
       },
       {
         question: "Is Proton VPN better than NordVPN for privacy?",

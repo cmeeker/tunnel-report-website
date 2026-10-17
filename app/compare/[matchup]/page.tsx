@@ -18,10 +18,10 @@ import {
   getProviderCtaHref,
   providerMap,
 } from "@/lib/content/providers";
-import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getCompareRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema } from "@/lib/seo/schema";
+import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
 type ComparePageProps = {
   params: Promise<{ matchup: string }>;
@@ -80,7 +80,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
           description: comparison.description,
           path,
           dateModified: comparison.dateModified,
-          authorName: staffAuthorName,
+          image: getPageOgImageUrl(path),
         })}
       />
 

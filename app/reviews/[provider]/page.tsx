@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
@@ -22,7 +23,7 @@ import {
 import { citationLinkRel, getCitationSourcesById, reviewSources } from "@/lib/content/facts";
 import { getReviewRelatedLinks } from "@/lib/seo/related-links";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { buildProductSchema, buildReviewSchema } from "@/lib/seo/schema";
+import { buildReviewSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
 type ReviewPageProps = {
@@ -61,6 +62,15 @@ function NordPassAddon() {
         A VPN encrypts your connection, but weak or reused passwords remain the most common breach
         vector. NordPass offers zero-knowledge encrypted password management from the same team behind
         NordVPN — useful if you want one vendor for connection privacy and credential hygiene.
+      </p>
+      <p className="mt-4 text-sm">
+        <Link href="/reviews/nordpass" className="font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 hover:text-[#5eead4]">
+          NordPass review
+        </Link>
+        <span className="mx-2 text-[#475569]">·</span>
+        <Link href="/compare/nordpass-vs-bitwarden" className="font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 hover:text-[#5eead4]">
+          NordPass vs Bitwarden
+        </Link>
       </p>
       <div className="mt-5">
         <AffiliateCTA href={AFFILIATE_URLS.nordpass} partner="nordpass" label="Visit NordPass" />
@@ -129,20 +139,15 @@ function ReviewContent({ provider }: { provider: Provider }) {
   return (
     <article className="space-y-14 fade-in-up">
       <JsonLd
-        data={[
-          buildReviewSchema({
-            itemName: provider.name,
-            ratingValue: provider.score,
-            summary: provider.reviewSummary,
-            path,
-            dateModified: provider.dateModified,
-          }),
-          buildProductSchema(
-            provider.name,
-            `Consumer VPN service evaluated by Tunnel Report for speed, privacy, and pricing clarity.`,
-            path,
-          ),
-        ]}
+        data={buildReviewSchema({
+          itemName: provider.name,
+          description:
+            "Consumer VPN service evaluated by Tunnel Report for speed, privacy, and pricing clarity.",
+          ratingValue: provider.score,
+          summary: provider.reviewSummary,
+          path,
+          dateModified: provider.dateModified,
+        })}
       />
 
       <Breadcrumbs

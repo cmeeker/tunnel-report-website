@@ -1,7 +1,7 @@
 import { getAbsoluteUrls } from "@/lib/seo/routes";
 import { siteConfig } from "@/lib/site";
 
-export const INDEXNOW_KEY = "tunnelreport-indexnow-2026";
+export const INDEXNOW_KEY = "762d214b3bde92d04de73a8c7efba27c";
 export const INDEXNOW_KEY_LOCATION = `${siteConfig.url}/${INDEXNOW_KEY}.txt`;
 export const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
 
