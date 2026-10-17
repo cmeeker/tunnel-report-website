@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
@@ -63,6 +64,11 @@ function NordPassAddon() {
         A VPN encrypts your connection, but weak or reused passwords remain the most common breach
         vector. NordPass offers zero-knowledge encrypted password management from the same team behind
         NordVPN — useful if you want one vendor for connection privacy and credential hygiene.
+      </p>
+      <p className="mt-4 text-sm">
+        <Link href="/reviews/nordpass" className="font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 hover:text-[#5eead4]">
+          NordPass review
+        </Link>
       </p>
       <div className="mt-5">
         <AffiliateCTA href={AFFILIATE_URLS.nordpass} partner="nordpass" label="Visit NordPass" />

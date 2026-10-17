@@ -1,0 +1,23 @@
+provider,plan,billing_period,price_as_shown,billed_total_as_shown,currency,rate_type,status,source_url,as_of,notes
+NordPass,Premium,2-year plan (27 months incl. 3 extra),$1.39/month,$37.53 for the first 27 months (strikethrough $80.73),USD,intro,VERIFIED,https://nordpass.com/pricing/,Oct 2026,"Page shows ""Save 53%"" and ""+ 3 EXTRA months"""
+NordPass,Premium,1-year plan,$1.99/month,$23.88 for the first 12 months (strikethrough $35.88),USD,intro,VERIFIED,https://nordpass.com/pricing/,Oct 2026,"Page shows ""Save 33%"""
+NordPass,Family (6 users),2-year plan (27 months incl. 3 extra),$2.49/month,$67.23 for the first 27 months (strikethrough $161.73),USD,intro,VERIFIED,https://nordpass.com/pricing/,Oct 2026,"Page shows ""Save 58%"""
+NordPass,Family (6 users),1-year plan,$3.69/month,$44.28 for the first 12 months (strikethrough $71.88),USD,intro,VERIFIED,https://nordpass.com/pricing/,Oct 2026,"Page shows ""Save 38%"""
+NordPass,Free,n/a,Free,n/a,USD,n/a,VERIFIED,https://nordpass.com/pricing/,Oct 2026,Free plan listed; page says it includes a 30-day Premium trial
+NordPass,Premium / Family,renewal,UNVERIFIED,UNVERIFIED,USD,renewal,UNVERIFIED,https://nordpass.com/pricing/,Oct 2026,Renewal rate not shown on pricing page; strikethrough is not stated as renewal. Keep off page.
+Bitwarden,Free,n/a,Free,n/a,USD,n/a,VERIFIED,https://bitwarden.com/pricing/,Oct 2026,
+Bitwarden,Premium (1 account),annual,$1.65/Month,Billed annually at $19.80,USD,standard (no intro shown),VERIFIED,https://bitwarden.com/pricing/,Oct 2026,"""Pricing shown in USD and based on an annual subscription. Taxes not included."""
+Bitwarden,Families (6 accounts),annual,$3.99/Month,"Up to 6 users, billed annually at $47.88",USD,standard (no intro shown),VERIFIED,https://bitwarden.com/pricing/,Oct 2026,
+1Password,Individual,annual,$2.99 per month,UNVERIFIED (annual total not shown),USD,intro (current promotion),VERIFIED,https://1password.com/pricing/password-manager,Oct 2026,"""$2.99 per month with annual billing during the current promotion"""
+1Password,Individual,annual,$3.99 per month,n/a,USD,regular,VERIFIED,https://1password.com/pricing/password-manager,Oct 2026,"""Regular prices are $3.99 per month for Individual"""
+1Password,Families (5 members),annual,$4.49 per month,UNVERIFIED,USD,intro (current promotion),VERIFIED,https://1password.com/pricing/password-manager,Oct 2026,
+1Password,Families (5 members),annual,$5.99 per month,n/a,USD,regular,VERIFIED,https://1password.com/pricing/password-manager,Oct 2026,
+1Password,Individual / Families,monthly billing,UNVERIFIED,UNVERIFIED,USD,unknown,UNVERIFIED,https://1password.com/pricing/password-manager,Oct 2026,Page data shows $4.99/$5.99/$7.99/$8.99 monthly figures without clear currency/plan mapping. Keep off page.
+Proton Pass,Proton Free,n/a,$0.00/month,n/a,USD,n/a,VERIFIED,https://proton.me/pass/pricing,Oct 2026,
+Proton Pass,Pass Plus,12 months,$2.99/month (strikethrough $4.99),Billed at $35.88 every 12 months,USD,intro (discount vs $4.99 shown),VERIFIED,https://proton.me/pass/pricing,Oct 2026,Renewal terms not stated on page
+Proton Pass,Pass Family (6 users),12 months,$4.99/month (strikethrough $6.99),Billed at $59.88 every 12 months,USD,intro (discount vs $6.99 shown),VERIFIED,https://proton.me/pass/pricing,Oct 2026,Renewal terms not stated on page
+Proton Pass,Pass Plus / Family,renewal,UNVERIFIED,UNVERIFIED,USD,renewal,UNVERIFIED,https://proton.me/pass/pricing,Oct 2026,Keep off page
+Dashlane,Premium,annual,$5.42 Per month,Billed annually (total not shown),USD,standard (no intro shown),VERIFIED,https://www.dashlane.com/personal-pricing,Oct 2026,Includes VPN per page
+Dashlane,Friends & Family (10 members),annual,$8.13 Per month for 10 members,Billed annually (total not shown),USD,standard (no intro shown),VERIFIED,https://www.dashlane.com/personal-pricing,Oct 2026,
+Keeper,Keeper Unlimited,annual,$3.58 /month,$42.99 billed annually,USD,standard (no intro shown),VERIFIED,https://www.keepersecurity.com/pricing/personal-and-family.html,Oct 2026,
+Keeper,Keeper Family (5 vaults),annual,$7.67 /month,$91.99 billed annually,USD,standard (page shows Save 57% near bundles; unclear),VERIFIED,https://www.keepersecurity.com/pricing/personal-and-family.html,Oct 2026,
