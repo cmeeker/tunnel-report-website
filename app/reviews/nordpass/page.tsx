@@ -286,7 +286,6 @@ export default function NordPassReviewPage() {
           <span className="badge badge-teal">Verdict</span>
         </div>
         <div className="space-y-6 p-8">
-          <h2 className="text-2xl font-bold text-white">Verdict</h2>
           <p className="text-lg leading-relaxed text-[#cbd5e1]">
             NordPass is an easy recommendation for people who want something simple and secure, based on published specs and pricing. The XChaCha20 encryption, zero-knowledge design and published certifications check the important boxes. Just budget for the renewal, which you&apos;ll see at checkout, not on the pricing page. Prices change often, so check the provider&apos;s site.
           </p>
