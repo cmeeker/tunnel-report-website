@@ -16,7 +16,7 @@ import { citationSources, citySources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildGeoArticleSchema } from "@/lib/seo/schema";
-import { citySlugs, siteConfig } from "@/lib/site";
+import { citySlugs } from "@/lib/site";
 
 type CityPageProps = {
   params: Promise<{ city: string }>;
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   return buildPageMetadata({
     title: `Best VPN for ${guide.city} in 2026: Local ISP Data & Privacy Analysis`,
-    description: `Tunnel Report's ${guide.city} VPN guide covers local ISP speed benchmarks, neighborhood connectivity differences, privacy considerations, and the best VPN providers for ${guide.region} residents in 2026.`,
+    description: `Tunnel Report's ${guide.city} VPN guide covers local ISPs, privacy considerations and the best VPN providers for ${guide.region} residents in 2026.`,
     path: `/vpn/${guide.slug}`,
   });
 }
@@ -84,7 +84,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "City Guides", path: "/vpn/los-angeles" },
+          { name: "City Guides", path: "/vpn" },
           { name: guide.city, path: `/vpn/${guide.slug}` },
         ]}
       />
@@ -102,7 +102,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           connectivity differences, and privacy considerations specific to {guide.city} residents
           against our provider test data.
         </p>
-        <AuthorByline date={siteConfig.updatedDate} />
+        <AuthorByline date="October 17, 2026" />
       </header>
 
       <DisclosureBanner />

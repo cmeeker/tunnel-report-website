@@ -89,13 +89,15 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
       <header className="space-y-5">
         <div className="flex flex-wrap gap-2">
           <span className="badge badge-teal">Use Case Guide</span>
-          <span className="badge badge-violet">Updated April 2026</span>
+          <span className="badge badge-violet">
+            {guide.updatedDateLabel ? `Updated ${guide.updatedDateLabel}` : "Updated April 2026"}
+          </span>
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
           {guide.title}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{guide.intro}</p>
-        <AuthorByline date={siteConfig.updatedDate} />
+        <AuthorByline date={guide.updatedDateLabel ?? siteConfig.updatedDate} />
       </header>
 
       <DisclosureBanner />

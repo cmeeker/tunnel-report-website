@@ -82,7 +82,7 @@ export function SiteFooter() {
         {columns.map((col) => (
           <section key={col.title}>
             <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-[#64748b]">
-              {col.title}
+              {col.title === "City Guides" ? <a href="/vpn">City Guides</a> : col.title}
             </h3>
             <ul className="mt-4 space-y-2.5">
               {col.links.map((link) => (

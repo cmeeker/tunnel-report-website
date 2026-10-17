@@ -22,6 +22,7 @@ export type UseCaseGuide = {
   description: string;
   intro: string;
   dateModified: string;
+  updatedDateLabel?: string;
   primaryPick: string;
   picks: UseCasePick[];
   sections: { heading: string; paragraphs: string[] }[];
@@ -169,11 +170,12 @@ export const useCaseGuides: UseCaseGuide[] = [
       "The best cheap VPNs based on full lifecycle cost, renewal pricing, device limits, privacy tradeoffs, and speed-per-dollar.",
     intro:
       "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device coverage, speed consistency, and whether privacy controls survive the discount.",
-    dateModified: "2026-04-08",
+    dateModified: "2026-10-17",
+    updatedDateLabel: "October 17, 2026",
     primaryPick: "surfshark",
     picks: [
-      { providerSlug: "surfshark", label: "Best cheap VPN overall", reason: "Unlimited devices and strong speeds under $3/month introductory pricing." },
-      { providerSlug: "purevpn", label: "Lowest entry price", reason: "Aggressive promotional pricing, with more tradeoffs in trust and consistency." },
+      { providerSlug: "surfshark", label: "Best cheap VPN overall", reason: "Unlimited devices on every plan. Intro price: $2.49/mo (USD) on the 24-month + 3-month Starter plan, $67.23 for the first 27 months (VAT may apply). Surfshark's pricing page doesn't list the renewal price, so check it at checkout." },
+      { providerSlug: "purevpn", label: "Lowest entry price", reason: "Intro price: $2.15/mo (USD) on the 2-year + 3-month Standard plan, $58.20 for 27 months, renewing at $47.95/year. More tradeoffs on trust track record." },
       { providerSlug: "protonvpn", label: "Best free tier", reason: "A usable free plan from a credible privacy company, with paid upgrades available." },
     ],
     sections: [
@@ -182,6 +184,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         paragraphs: [
           "Most VPN providers discount heavily for the first term and raise prices at renewal. The real question is whether the first-term savings justify the year-two increase and any feature gaps.",
           "Surfshark wins this category because unlimited devices improve household value. A cheaper plan with a tight device cap often costs more once you cover every phone, tablet, and laptop.",
+          "Prices checked October 15, 2026. Prices change often, so check the provider's site.",
         ],
       },
       {
@@ -195,13 +198,13 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Free is not always cheaper",
         paragraphs: [
           "Free VPNs often monetize through ads, data collection, or bandwidth restrictions. Proton VPN is the exception we trust for low-risk testing, but its free tier is not a full replacement for a paid VPN.",
-          "If your threat model includes credential protection or regular public Wi-Fi, do not choose a random free VPN just to save two dollars per month.",
+          "If your threat model includes credential protection or regular public Wi-Fi, do not choose a random free VPN just to save a few dollars a month.",
         ],
       },
     ],
     faqs: [
-      { question: "What is the best cheap VPN?", answer: "Surfshark is our best cheap VPN because unlimited devices and strong domestic speeds make its low introductory price more useful than competitors' discounts." },
-      { question: "Is PureVPN worth it for the price?", answer: "PureVPN can be worth it for price-first buyers, but it trails Surfshark and NordVPN on speed consistency and trust track record." },
+      { question: "What is the best cheap VPN?", answer: "Surfshark is our best cheap VPN because unlimited devices make its intro price ($2.49/mo USD on the 24-month + 3-month Starter plan) go further than rivals' discounts. Check the renewal price at checkout." },
+      { question: "Is PureVPN worth it for the price?", answer: "PureVPN can be worth it for price-first buyers, but it trails Surfshark and NordVPN on trust track record." },
       { question: "Should I use a free VPN?", answer: "Use Proton VPN's free tier if you need a credible free option. Avoid random free VPNs with unclear ownership or data monetization." },
     ],
   },
