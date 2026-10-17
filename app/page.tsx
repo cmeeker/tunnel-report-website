@@ -20,7 +20,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "Independent VPN Reviews & 2026 Rankings | Tunnel Report",
   description:
-    "Tunnel Report publishes independent VPN reviews with cited privacy audits and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
+    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   path: "/",
   type: "website",
 });

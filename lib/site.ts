@@ -4,7 +4,7 @@ export const siteConfig = {
   url: "https://tunnelreport.com",
   tagline: "Independent VPN Intelligence",
   description:
-    "Tunnel Report publishes independent VPN reviews with cited privacy audits and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
+    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   locale: "en_US",
   defaultAuthor: "Tunnel Report Staff",
   updatedDate: "October 15, 2026",

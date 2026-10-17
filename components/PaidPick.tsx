@@ -13,7 +13,11 @@ export function PaidPick({ pick, className = "" }: PaidPickProps) {
       <a
         href={AFFILIATE_URLS[pick.partner]}
         target="_blank"
-        rel="nofollow sponsored noopener noreferrer"
+        rel={
+          pick.partner === "hideme"
+            ? "sponsored nofollow noopener noreferrer"
+            : "nofollow sponsored noopener noreferrer"
+        }
         data-partner={pick.partner}
       >
         {PAID_PARTNER_LABEL[pick.partner]}

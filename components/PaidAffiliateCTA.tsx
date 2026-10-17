@@ -27,7 +27,11 @@ export function PaidAffiliateCTA({ href, partner, label, className = "" }: PaidA
       onClick={handleClick}
       className={`affiliate-cta ${className}`.trim()}
       target="_blank"
-      rel="nofollow sponsored noopener noreferrer"
+      rel={
+        partner === "hideme"
+          ? "sponsored nofollow noopener noreferrer"
+          : "nofollow sponsored noopener noreferrer"
+      }
     >
       {label}
     </a>

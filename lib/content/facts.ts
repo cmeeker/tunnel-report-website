@@ -19,6 +19,9 @@ const TRACKED_CITATION_URLS = new Set([
 ]);
 
 export function citationLinkRel(url: string): string {
+  if (url.includes("friend=6a89f8e9ae1ca")) {
+    return "sponsored nofollow noopener noreferrer";
+  }
   if (TRACKED_CITATION_URLS.has(url)) {
     return "nofollow sponsored noopener noreferrer";
   }

@@ -228,7 +228,7 @@ export const guides: Guide[] = [
             ],
             [
               "Mullvad (one plan)",
-              "€5/mo",
+              "€5/mo (EUR, incl. VAT) on any term",
               "€5/mo, no intro rate",
               "[mullvad.net/pricing](https://mullvad.net/en/pricing)",
             ],
