@@ -77,3 +77,7 @@ export function getShareImage(path: string): ShareImageMeta | undefined {
     type: "image/webp",
   };
 }
+
+export function getPageOgImageUrl(path: string) {
+  return getShareImage(path)?.url ?? `${siteConfig.url}${path}/opengraph-image`;
+}

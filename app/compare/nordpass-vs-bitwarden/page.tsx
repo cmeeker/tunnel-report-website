@@ -20,6 +20,7 @@ import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, prici
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
+import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
 const title = "NordPass vs Bitwarden 2026: Price, Security, Fit";
 const description =
@@ -75,6 +76,7 @@ export default function NordPassVsBitwardenPage() {
           path,
           dateModified: PASSWORD_MANAGER_UPDATED,
           datePublished: PASSWORD_MANAGER_UPDATED,
+          image: getPageOgImageUrl(path),
           authorName: personas.sarah.name,
         })}
       />

@@ -25,7 +25,7 @@ import { citationLinkRel, getCitationSourcesById, reviewSources } from "@/lib/co
 import { personas } from "@/lib/editorial-personas";
 import { getReviewRelatedLinks } from "@/lib/seo/related-links";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { buildProductSchema, buildReviewSchema } from "@/lib/seo/schema";
+import { buildReviewSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
 type ReviewPageProps = {
@@ -138,20 +138,15 @@ function ReviewContent({ provider }: { provider: Provider }) {
   return (
     <article className="space-y-14 fade-in-up">
       <JsonLd
-        data={[
-          buildReviewSchema({
-            itemName: provider.name,
-            ratingValue: provider.score,
-            summary: provider.reviewSummary,
-            path,
-            dateModified: provider.dateModified,
-          }),
-          buildProductSchema(
-            provider.name,
-            `Consumer VPN service evaluated by Tunnel Report for speed, privacy, and pricing clarity.`,
-            path,
-          ),
-        ]}
+        data={buildReviewSchema({
+          itemName: provider.name,
+          description:
+            "Consumer VPN service evaluated by Tunnel Report for speed, privacy, and pricing clarity.",
+          ratingValue: provider.score,
+          summary: provider.reviewSummary,
+          path,
+          dateModified: provider.dateModified,
+        })}
       />
 
       <Breadcrumbs

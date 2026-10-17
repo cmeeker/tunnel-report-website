@@ -9,7 +9,6 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { PaidPick } from "@/components/PaidPick";
 import { HeroGraphic } from "@/components/HeroGraphic";
-import { JsonLd } from "@/components/JsonLd";
 import { PlainInternalLinkList } from "@/components/PlainInternalLinkList";
 import { SourcesList } from "@/components/SourcesList";
 import { comparisonMap } from "@/lib/content/comparisons";
@@ -19,7 +18,6 @@ import { homepageComparison } from "@/lib/content/vpn-metrics";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Independent VPN Reviews & 2026 Rankings | Tunnel Report",
@@ -81,8 +79,6 @@ export default function Home() {
 
   return (
     <div className="space-y-28">
-      <JsonLd data={[buildWebsiteSchema(), buildOrganizationSchema()]} />
-
       {/* Hero */}
       <section
         className="hero-gradient -mt-20 flex min-h-[calc(100svh-4rem)] flex-col items-center justify-start px-6 pb-14 pt-24 md:px-10 md:pt-[6.5rem] lg:px-14"
