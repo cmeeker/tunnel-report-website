@@ -7,7 +7,9 @@ const columns = [
     title: "Reviews",
     links: [
       { href: "/best-vpns", label: "Best VPNs 2026" },
+      { href: "/best-password-managers", label: "Best Password Managers" },
       { href: "/reviews/nordvpn", label: "NordVPN Review" },
+      { href: "/reviews/nordpass", label: "NordPass Review" },
       { href: "/reviews/surfshark", label: "Surfshark Review" },
       { href: "/reviews/expressvpn", label: "ExpressVPN Review" },
       { href: "/reviews/purevpn", label: "PureVPN Review" },

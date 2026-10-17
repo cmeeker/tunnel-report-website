@@ -37,6 +37,16 @@ const staticRoutes: SiteRoute[] = [
     group: "static",
   },
   {
+    path: "/best-password-managers",
+    title: "Best Password Managers 2026: Prices & Specs Compared",
+    description:
+      "NordPass, Bitwarden, 1Password, Proton Pass, Dashlane and Keeper compared on published pricing, encryption and audits. Plain answers, no hype.",
+    lastModified: "2026-10-17",
+    priority: 0.92,
+    changeFrequency: "weekly",
+    group: "static",
+  },
+  {
     path: "/methodology",
     title: "Tunnel Report Methodology",
     description: "How Tunnel Report tests and scores VPNs.",
@@ -80,6 +90,16 @@ export function getSiteRoutes(): SiteRoute[] {
         group: "review" as const,
       };
     }),
+    {
+      path: "/reviews/nordpass",
+      title: "NordPass Review 2026: Pricing, Security and Specs",
+      description:
+        "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, plans from $1.39/month intro, and who should skip it.",
+      lastModified: "2026-10-17",
+      priority: 0.9,
+      changeFrequency: "weekly" as const,
+      group: "review" as const,
+    },
     ...providerSlugs.map((slug) => {
       const provider = providers.find((item) => item.slug === slug)!;
       return {
@@ -104,6 +124,16 @@ export function getSiteRoutes(): SiteRoute[] {
         group: "compare" as const,
       };
     }),
+    {
+      path: "/compare/nordpass-vs-bitwarden",
+      title: "NordPass vs Bitwarden 2026: Price, Security, Fit",
+      description:
+        "NordPass vs Bitwarden on published pricing, encryption, audits and free plans. Bitwarden wins on cost and open code; NordPass on polish.",
+      lastModified: "2026-10-17",
+      priority: 0.85,
+      changeFrequency: "weekly" as const,
+      group: "compare" as const,
+    },
     ...citySlugs.map((slug) => {
       const city = cityGuideMap[slug];
       return {
