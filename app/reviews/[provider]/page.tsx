@@ -69,6 +69,10 @@ function NordPassAddon() {
         <Link href="/reviews/nordpass" className="font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 hover:text-[#5eead4]">
           NordPass review
         </Link>
+        <span className="mx-2 text-[#475569]">·</span>
+        <Link href="/compare/nordpass-vs-bitwarden" className="font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 hover:text-[#5eead4]">
+          NordPass vs Bitwarden
+        </Link>
       </p>
       <div className="mt-5">
         <AffiliateCTA href={AFFILIATE_URLS.nordpass} partner="nordpass" label="Visit NordPass" />

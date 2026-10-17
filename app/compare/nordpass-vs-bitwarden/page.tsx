@@ -12,7 +12,6 @@ import {
   PasswordManagerSources,
   PriceBarChart,
   PricingLink,
-  VpnRenewalLink,
   type PasswordSource,
 } from "@/components/password-managers";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -140,7 +139,7 @@ export default function NordPassVsBitwardenPage() {
           <li>Bitwarden notes: &quot;Pricing shown in USD and based on an annual subscription. Taxes not included.&quot;</li>
         </ul>
         <p>
-          <strong>What this means:</strong> over the first two years, NordPass Premium ({prices.nordpassPremiumTwoYearTotal} for 27 months) costs about the same as Bitwarden Premium ({prices.bitwardenPremiumAnnual} × 2 = {prices.bitwardenPremiumTwoYearTotal} for 24 months), based on these published prices. After that, Bitwarden&apos;s price is known. NordPass&apos;s renewal rate isn&apos;t published on its pricing page, so check it at checkout. For the VPN version of that gap, see <VpnRenewalLink />.
+          <strong>What this means:</strong> over the first two years, NordPass Premium ({prices.nordpassPremiumTwoYearTotal} for 27 months) costs about the same as Bitwarden Premium ({prices.bitwardenPremiumAnnual} × 2 = {prices.bitwardenPremiumTwoYearTotal} for 24 months), based on these published prices. After that, Bitwarden&apos;s price is known. NordPass&apos;s renewal rate isn&apos;t published on its pricing page, so check it at checkout.
         </p>
       </section>
 

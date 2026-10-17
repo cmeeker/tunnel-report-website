@@ -55,6 +55,9 @@ export function getCompareRelatedLinks(slug: string): RelatedLink[] {
       .filter((c) => c.slug !== slug)
       .slice(0, 2)
       .map((c) => ({ href: `/compare/${c.slug}`, label: c.title.replace(/ 2026:.*/, "") })),
+    ...(slug === "nordvpn-vs-protonvpn"
+      ? [{ href: "/compare/nordpass-vs-bitwarden", label: "NordPass vs Bitwarden" }]
+      : []),
   ];
 }
 
