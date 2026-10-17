@@ -68,12 +68,24 @@ const staticRoutes: SiteRoute[] = [
     path: "/guides",
     title: "VPN Guides",
     description: "VPN protocols, privacy, pricing, and testing explained.",
-    lastModified: "2026-10-15",
+    lastModified: "2026-10-17",
     priority: 0.8,
     changeFrequency: "weekly",
     group: "guide",
   },
 ];
+
+const sitemapLastModified: Record<string, string> = {
+  "/reviews/nordvpn": "2026-10-17",
+  "/reviews/protonvpn": "2026-10-17",
+  "/compare/nordvpn-vs-protonvpn": "2026-10-17",
+  "/guides/surfshark-renewal-price": "2026-10-17",
+  "/guides/protonvpn-renewal-price": "2026-10-17",
+};
+
+function sitemapDate(path: string, contentDate: string) {
+  return sitemapLastModified[path] ?? contentDate;
+}
 
 export function getSiteRoutes(): SiteRoute[] {
   return [
@@ -84,7 +96,7 @@ export function getSiteRoutes(): SiteRoute[] {
         path: `/reviews/${slug}`,
         title: provider.reviewTitle,
         description: provider.reviewDescription,
-        lastModified: provider.dateModified,
+        lastModified: sitemapDate(`/reviews/${slug}`, provider.dateModified),
         priority: 0.9,
         changeFrequency: "weekly" as const,
         group: "review" as const,
@@ -118,7 +130,7 @@ export function getSiteRoutes(): SiteRoute[] {
         path: `/compare/${slug}`,
         title: comparison.title,
         description: comparison.description,
-        lastModified: comparison.dateModified,
+        lastModified: sitemapDate(`/compare/${slug}`, comparison.dateModified),
         priority: 0.85,
         changeFrequency: "weekly" as const,
         group: "compare" as const,
@@ -164,7 +176,7 @@ export function getSiteRoutes(): SiteRoute[] {
         path: `/guides/${slug}`,
         title: guide.title,
         description: guide.description,
-        lastModified: guide.dateModified,
+        lastModified: sitemapDate(`/guides/${slug}`, guide.dateModified),
         priority: 0.75,
         changeFrequency: "weekly" as const,
         group: "guide" as const,
