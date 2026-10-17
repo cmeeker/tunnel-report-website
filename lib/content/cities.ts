@@ -81,8 +81,7 @@ export const cityGuides: CityGuide[] = [
       "Fiber availability is strong in the Loop, River North, and Lincoln Park, but deteriorates in some South Side and West Side neighborhoods where cable remains the primary infrastructure. If you are in an AT&T Fiber or Xfinity gigabit area, expect a smooth VPN experience. Legacy cable areas may see more noticeable speed reduction.",
     populationContext:
       "The Chicago metro area serves approximately 9.5 million residents and functions as the primary Midwest hub for internet backbone routing.",
-    localColor:
-      "I wrote most of this guide from a coffee shop in Wicker Park while alternating between NordVPN and Surfshark test sessions. The barista asked why I kept running speed tests on my laptop. I told her I was doing important journalism. She was not impressed.",
+    localColor: "",
   },
   {
     slug: "houston",

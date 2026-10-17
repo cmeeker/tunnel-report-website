@@ -64,7 +64,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
     },
     {
       question: `Which ${guide.city} ISP works best with a VPN?`,
-      answer: `Fiber-based ISPs in ${guide.city} provide the best VPN experience because the higher baseline speeds absorb VPN overhead more gracefully. ${guide.ispSpeeds[0].name} users can expect typical speeds around ${guide.ispSpeeds[0].typical} before VPN encryption.`,
+      answer: `Fiber-based ISPs in ${guide.city} provide the best VPN experience because the higher baseline speeds absorb VPN overhead more gracefully.`,
     },
   ];
 
@@ -121,37 +121,18 @@ export default async function CityVpnPage({ params }: CityPageProps) {
               <tr>
                 <th>Provider</th>
                 <th>Advertised Speed</th>
-                <th>Typical Speed</th>
-                <th>VPN Impact</th>
               </tr>
             </thead>
             <tbody>
-              {guide.ispSpeeds.map((isp) => {
-                const typ = parseInt(isp.typical);
-                const vpnEstimate = Math.round(typ * 0.88);
-                return (
-                  <tr key={isp.name}>
-                    <td className="font-semibold text-white">{isp.name}</td>
-                    <td>{isp.advertised}</td>
-                    <td>
-                      <span className="font-mono text-[#00d4aa]">{isp.typical}</span>
-                    </td>
-                    <td>
-                      ~{vpnEstimate} Mbps
-                      <span className="ml-2 text-xs text-[#64748b]">
-                        ({Math.round((1 - vpnEstimate / typ) * 100)}% overhead)
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
+              {guide.ispSpeeds.map((isp) => (
+                <tr key={isp.name}>
+                  <td className="font-semibold text-white">{isp.name}</td>
+                  <td>{isp.advertised}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-[#475569]">
-          VPN impact estimated from NordVPN/WireGuard testing on similar baselines. Actual results
-          vary by time of day, route, and server load.
-        </p>
       </section>
 
       <hr className="divider-glow" />
@@ -192,18 +173,20 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         <p>{guide.neighborhoodNote}</p>
       </section>
 
-      <hr className="divider-glow" />
-
-      {/* Local color - editorial personality */}
-      <section className="glass-card p-8">
-        <h2 className="text-lg font-bold text-white">Field Notes</h2>
-        <p className="mt-2 italic leading-relaxed text-[#94a3b8]">
-          &ldquo;{guide.localColor}&rdquo;
-        </p>
-        <div className="mt-4">
-          <AuthorByline />
-        </div>
-      </section>
+      {guide.localColor ? (
+        <>
+          <hr className="divider-glow" />
+          <section className="glass-card p-8">
+            <h2 className="text-lg font-bold text-white">Field Notes</h2>
+            <p className="mt-2 italic leading-relaxed text-[#94a3b8]">
+              &ldquo;{guide.localColor}&rdquo;
+            </p>
+            <div className="mt-4">
+              <AuthorByline />
+            </div>
+          </section>
+        </>
+      ) : null}
 
       <hr className="divider-glow" />
 

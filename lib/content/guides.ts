@@ -60,7 +60,7 @@ export const guides: Guide[] = [
         heading: "Why WireGuard feels faster",
         paragraphs: [
           "WireGuard's codebase is dramatically smaller than OpenVPN's, which reduces overhead and simplifies implementation. In consumer VPN apps, that usually translates into faster connection setup and higher median throughput.",
-          "NordVPN's NordLynx, Surfshark's WireGuard mode, and Proton VPN's WireGuard support all performed better than OpenVPN in our current benchmark cycle, especially on domestic routes.",
+          "NordVPN's NordLynx, Surfshark's WireGuard mode, and Proton VPN all offer WireGuard-based connections.",
         ],
       },
       {
@@ -162,46 +162,6 @@ export const guides: Guide[] = [
       { question: "What is the best VPN jurisdiction?", answer: "There is no single best jurisdiction. Switzerland and Panama are strong on paper; implementation and audits matter just as much." },
       { question: "Should I avoid US-based VPNs?", answer: "Not automatically, but US jurisdiction increases legal exposure. We prefer providers that combine strong jurisdiction with audited no-logs infrastructure." },
       { question: "Is British Virgin Islands jurisdiction good for VPNs?", answer: "It is generally favorable for consumer VPN privacy, which is one reason ExpressVPN uses it prominently in trust messaging." },
-    ],
-  },
-  {
-    slug: "how-we-test-vpn-speed",
-    title: "How We Test VPN Speed: Median Beats Peak",
-    description:
-      "Tunnel Report's VPN speed-testing methodology: routes, time windows, median throughput, speed floors, and why screenshot benchmarks mislead buyers.",
-    dek:
-      "Peak speed screenshots are easy to game. We report medians and floors because those numbers better match what readers experience during real use.",
-    dateModified: "2026-10-15",
-    category: "Methodology",
-    relatedReviewSlugs: ["nordvpn", "surfshark", "expressvpn"],
-    relatedCompareSlugs: ["surfshark-vs-nordvpn", "surfshark-vs-expressvpn"],
-    sections: [
-      {
-        heading: "Why we avoid single-run screenshots",
-        paragraphs: [
-          "A single speed-test screenshot tells you almost nothing about a VPN. Server load, time of day, route selection, protocol, and local ISP conditions can all swing results dramatically.",
-          "We run repeated sessions and publish median numbers because a stable middle result is harder to manipulate than a best-case peak.",
-        ],
-      },
-      {
-        heading: "Routes and time windows",
-        paragraphs: [
-          "Our standard cycle tests US East, US West, London, and Frankfurt routes across morning, afternoon, and evening windows. Evening results matter because that is when most readers actually stream, game, and work.",
-          "We track domestic median, transatlantic median, and the lowest observed domestic speed floor. The floor often separates good providers from providers with flashy peaks.",
-        ],
-      },
-      {
-        heading: "Interpreting the numbers",
-        paragraphs: [
-          "A VPN that averages 700 Mbps with a 620 Mbps floor can feel better than a VPN that peaks at 900 Mbps and drops to 250 Mbps at night.",
-          "For most readers, latency stability and reconnection behavior matter as much as raw throughput once speeds exceed 200 Mbps.",
-        ],
-      },
-    ],
-    faqs: [
-      { question: "What VPN speed is good enough?", answer: "For 4K streaming, 25 Mbps per stream is enough. For households and gaming, consistency and latency matter more than raw peak speed." },
-      { question: "Why do your VPN speeds differ from provider claims?", answer: "Provider claims often reflect idealized peak runs. We test repeated sessions across routes and time windows." },
-      { question: "Which VPN is fastest?", answer: "NordVPN currently leads our median domestic and transatlantic benchmarks, with Surfshark close behind on domestic routes." },
     ],
   },
   {

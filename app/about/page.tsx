@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqSection } from "@/components/FaqSection";
 import { LastUpdated } from "@/components/LastUpdated";
@@ -11,9 +10,9 @@ import { buildArticleSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "About Tunnel Report: Team, Methodology, and Editorial Standards",
+  title: "About Tunnel Report: Methodology and Editorial Standards",
   description:
-    "Meet the editorial team behind Tunnel Report's VPN reviews, understand our speed-testing methodology, and learn how we enforce independence from the products we evaluate.",
+    "Methodology, editorial standards, and corrections policy for Tunnel Report VPN coverage.",
   path: "/about",
 });
 
@@ -40,7 +39,7 @@ export default function AboutPage() {
     <article className="space-y-14 fade-in-up">
       <JsonLd
         data={buildArticleSchema({
-          headline: "About Tunnel Report: Team, Methodology, and Editorial Standards",
+          headline: "About Tunnel Report: Methodology and Editorial Standards",
           description:
             "Methodology, editorial standards, and corrections policy for Tunnel Report VPN coverage.",
           path: "/about",
@@ -70,33 +69,9 @@ export default function AboutPage() {
 
       <hr className="divider-glow" />
 
-      {/* Team bios */}
-      <section id="team" className="space-y-6 scroll-mt-28">
-        <h2 className="text-2xl font-bold text-white">The Editorial Team</h2>
-        <AuthorByline />
-      </section>
-
-      <hr className="divider-glow" />
-
       {/* Methodology deep-dive */}
       <section id="methodology" className="prose-dark space-y-6 scroll-mt-28">
-        <h2 className="text-2xl font-bold text-white">Testing Methodology</h2>
-
-        <div className="glass-card p-7">
-          <h3 className="text-lg font-bold text-white">Speed Benchmarking</h3>
-          <p>
-            We do not run a single speed test and screenshot the result. Every provider is tested across
-            a minimum of 12 sessions per route spanning three daily time windows: morning (6-9am EST),
-            afternoon (12-3pm EST), and evening peak (7-10pm EST). We report the median, not the peak,
-            because the connection you get during prime time is the one that actually matters.
-          </p>
-          <p>
-            Test routes include US East to US West, US East to London, US West to Frankfurt, and the
-            same routes in reverse. Baseline ISP conditions are recorded before each session so we can
-            isolate VPN overhead from ISP variability. We use WireGuard-based protocols where available,
-            with OpenVPN as a secondary benchmark.
-          </p>
-        </div>
+        <h2 className="text-2xl font-bold text-white">Methodology</h2>
 
         <div className="glass-card p-7">
           <h3 className="text-lg font-bold text-white">Privacy & Security Analysis</h3>
@@ -195,7 +170,8 @@ export default function AboutPage() {
             },
             {
               title: "Author Attribution",
-              description: "Every article is attributed to Tunnel Report Staff.",
+              description:
+                "Articles are published under the Tunnel Report Staff byline and are based on published specs, pricing and third-party reports.",
             },
             {
               title: "Open Methodology",

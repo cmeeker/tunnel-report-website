@@ -6,12 +6,6 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitedText } from "@/components/CitedText";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
-import {
-  EditorialChart,
-  nordvpnVsExpressvpnChart,
-  nordvpnVsPurevpnChart,
-  surfsharkVsNordvpnChart,
-} from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { PaidPick } from "@/components/PaidPick";
@@ -32,12 +26,6 @@ import { buildArticleSchema } from "@/lib/seo/schema";
 type ComparePageProps = {
   params: Promise<{ matchup: string }>;
 };
-
-const compareCharts = {
-  "nordvpn-vs-purevpn": nordvpnVsPurevpnChart,
-  "nordvpn-vs-expressvpn": nordvpnVsExpressvpnChart,
-  "surfshark-vs-nordvpn": surfsharkVsNordvpnChart,
-} as const;
 
 export const dynamicParams = false;
 
@@ -167,9 +155,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         <>
           <section className="space-y-4">
             <h2 className="text-xl font-bold text-white">Category-by-Category Breakdown</h2>
-            {compareCharts[comparison.slug as keyof typeof compareCharts] ? (
-              <EditorialChart {...compareCharts[comparison.slug as keyof typeof compareCharts]} />
-            ) : null}
             <div className="space-y-3">
               {comparison.rows.map((row, i) => (
                 <div
@@ -231,7 +216,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
               ))}
             </div>
             <p className="text-xs text-[#475569]">
-              Speed data from Tunnel Report benchmark suite. Prices checked on each provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check the provider&apos;s site before you buy.
+              Prices checked on each provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check the provider&apos;s site before you buy.
             </p>
           </section>
 

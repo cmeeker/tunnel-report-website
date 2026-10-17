@@ -82,6 +82,22 @@
       "statusCode": 301
     },
     {
+      "source": "/guides/how-we-test-vpn-speed",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.tunnelreport.com"
+        }
+      ],
+      "destination": "https://tunnelreport.com/methodology",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/how-we-test-vpn-speed",
+      "destination": "/methodology",
+      "statusCode": 301
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

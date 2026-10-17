@@ -1,5 +1,14 @@
 import type { FaqItem } from "@/components/FaqSection";
+import { staffAuthorName } from "@/lib/editorial-personas";
 import { siteConfig } from "@/lib/site";
+
+const revisedDateModified = "2026-10-17";
+
+const staffAuthor = {
+  "@type": "Organization",
+  name: staffAuthorName,
+  url: `${siteConfig.url}/about`,
+};
 
 export function buildWebsiteSchema() {
   return {
@@ -65,7 +74,6 @@ export function buildArticleSchema({
   path,
   dateModified,
   datePublished,
-  authorName = siteConfig.defaultAuthor,
 }: ArticleSchemaInput) {
   return {
     "@context": "https://schema.org",
@@ -73,17 +81,44 @@ export function buildArticleSchema({
     headline,
     description,
     datePublished: datePublished ?? dateModified,
-    dateModified,
-    author: {
-      "@type": "Organization",
-      name: authorName,
-    },
+    dateModified: revisedDateModified,
+    author: staffAuthor,
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
     },
     mainEntityOfPage: `${siteConfig.url}${path}`,
+  };
+}
+
+type WebPageSchemaInput = {
+  name: string;
+  description: string;
+  path: string;
+  datePublished: string;
+};
+
+export function buildWebPageSchema({
+  name,
+  description,
+  path,
+  datePublished,
+}: WebPageSchemaInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    description,
+    url: `${siteConfig.url}${path}`,
+    datePublished,
+    dateModified: revisedDateModified,
+    author: staffAuthor,
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   };
 }
 
@@ -136,13 +171,10 @@ export function buildReviewSchema({
       ratingValue,
       bestRating,
     },
-    author: {
-      "@type": "Organization",
-      name: siteConfig.name,
-    },
+    author: staffAuthor,
     reviewBody: summary,
     datePublished: dateModified,
-    dateModified,
+    dateModified: revisedDateModified,
     url: `${siteConfig.url}${path}`,
   };
 }
@@ -206,11 +238,8 @@ export function buildGeoArticleSchema({
     headline,
     description,
     datePublished: dateModified,
-    dateModified,
-    author: {
-      "@type": "Organization",
-      name: siteConfig.name,
-    },
+    dateModified: revisedDateModified,
+    author: staffAuthor,
     mainEntityOfPage: `${siteConfig.url}${path}`,
     about: [
       {

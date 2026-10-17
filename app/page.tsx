@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
-import { AuthorByline } from "@/components/AuthorByline";
 import { CitationLink } from "@/components/CitationLink";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
@@ -33,7 +32,7 @@ const homepageFaqs = [
   {
     question: "How does Tunnel Report score VPN services?",
     answer:
-      "We run multi-session speed benchmarks across standardized routes, evaluate privacy policy language against actual audit disclosures, assess jurisdiction risk, and track pricing transparency over time. Each factor is weighted and applied identically across every provider we test.",
+      "Scores are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time. Each factor is weighted the same way for every provider we cover.",
   },
   {
     question: "Do affiliate commissions affect your rankings?",
@@ -44,11 +43,6 @@ const homepageFaqs = [
     question: "How often are reviews updated?",
     answer:
       "Major reviews are refreshed quarterly. When a provider changes pricing, ownership structure, or security posture between cycles, we publish interim updates with visible changelog timestamps.",
-  },
-  {
-    question: "Why do your speed numbers differ from what VPN companies advertise?",
-    answer:
-      "Marketing screenshots typically reflect single-run peaks under ideal conditions. We report median values across multiple sessions, routes, and time windows because that reflects the experience you will actually have at 9pm on a Tuesday.",
   },
   {
     question: "What should privacy-focused readers look for first?",
@@ -90,7 +84,7 @@ export default function Home() {
       >
         <div className="mx-auto w-full max-w-3xl text-center">
           <div className="space-y-5 fade-in-up">
-            <div className="badge badge-teal mx-auto">Independent VPN Testing Lab · 47 Providers</div>
+            <div className="badge badge-teal mx-auto">Independent VPN Coverage</div>
 
             {/* Hero graphic */}
             <div className="relative mx-auto h-36 w-full max-w-2xl sm:h-44 md:h-48">
@@ -102,8 +96,8 @@ export default function Home() {
               <span className="gradient-text"> Start Reading the Audits.</span>
             </h1>
             <p className="mx-auto max-w-xl text-base leading-relaxed text-[#64748b]">
-              Independent speed benchmarks, cited privacy audits, and editorial analysis from
-              security professionals. No pay-to-rank. No undisclosed sponsorships.
+              VPN coverage based on published specs, pricing and third-party reports, with
+              claim-level citations.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <Link href="/best-vpns" className="affiliate-cta">
@@ -113,14 +107,10 @@ export default function Home() {
                 href="/methodology"
                 className="inline-flex min-h-[48px] items-center rounded-xl border border-[#1e293b] px-5 text-sm font-semibold text-[#94a3b8] transition hover:border-[#00d4aa]/30 hover:text-white"
               >
-                Our Methodology
+                How We Rank
               </Link>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-1 text-xs text-[#475569]">
-              <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 rounded-full bg-[#00d4aa]" />
-                47 providers tested
-              </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-1 w-1 rounded-full bg-[#06b6d4]" />
                 Claim-level citations
@@ -226,7 +216,6 @@ export default function Home() {
             <thead>
               <tr>
                 <th>Provider</th>
-                <th>Speed</th>
                 <th>Privacy Profile</th>
                 <th>Price/mo</th>
                 <th>Score</th>
@@ -244,15 +233,6 @@ export default function Home() {
                     >
                       {vpn.name}
                     </Link>
-                  </td>
-                  <td>
-                    {vpn.speedMbps > 0 ? (
-                      <>
-                        <span className="font-mono text-[#00d4aa]">{vpn.speedMbps}</span> Mbps
-                      </>
-                    ) : (
-                      <span className="text-[#94a3b8]">N/A</span>
-                    )}
                   </td>
                   <td className="max-w-[200px]">{vpn.privacy}</td>
                   <td className="font-semibold text-white">{vpn.pricePerMonth}</td>
@@ -287,74 +267,6 @@ export default function Home() {
 
       <hr className="divider-glow" />
 
-      {/* Why trust us */}
-      <section className="grid gap-10 lg:grid-cols-[2fr_1fr] fade-in-up delay-100">
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-white">Why Tunnel Report Exists</h2>
-          <div className="prose-dark space-y-4">
-            <p>
-              The thing that kept gnawing at me was the VPN review ecosystem. Most of the top-ranking pages on
-              Google are funded by the companies they claim to evaluate. Readers deserve better.
-            </p>
-            <p>
-              The numbers make the case on their own. The FBI&apos;s IC3 division reported that
-              Americans lost <strong>$12.5 billion</strong> to internet-enabled crime in 2023 alone,
-              a 22% jump over the year before<CitationLink source={citationSources.S1} />. The
-              Identity Theft Resource Center tracked <strong>3,205 data compromises</strong> in that
-              same period — a 72% increase over the previous record<CitationLink source={citationSources.S2} />.
-            </p>
-            <p>
-              Globally, Freedom House marked a <strong>14th consecutive year</strong> of declining
-              internet freedom<CitationLink source={citationSources.S3} />. When privacy tools are
-              this important, the publications reviewing them need to operate at a higher standard
-              than affiliate-optimized listicles.
-            </p>
-            <p>
-              That is why Tunnel Report exists. We wall off commercial relationships from editorial
-              decisions. We cite our sources at claim level. And we build reviews that a procurement
-              team or a security engineer could actually trust.
-            </p>
-          </div>
-          <AuthorByline />
-        </div>
-        <aside className="space-y-4 lg:pt-12">
-          <div className="glass-card p-5">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-[#64748b]">
-              Editorial Standards
-            </h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#94a3b8]">
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-[#00d4aa]">&#10003;</span>
-                Claim-level source citations
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-[#00d4aa]">&#10003;</span>
-                Published methodology
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-[#00d4aa]">&#10003;</span>
-                Affiliate disclosure on every page
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-[#00d4aa]">&#10003;</span>
-                Quarterly review refresh cycle
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-[#00d4aa]">&#10003;</span>
-                Timestamped corrections policy
-              </li>
-            </ul>
-          </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-[#64748b]">FCC broadband labeling is now required
-              at point of sale<CitationLink source={citationSources.S4} />, giving readers
-              better baseline ISP data to compare against VPN claims.</p>
-          </div>
-        </aside>
-      </section>
-
-      <hr className="divider-glow" />
-
       {/* Latest articles */}
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-white">Latest VPN Analysis</h2>
@@ -379,7 +291,7 @@ export default function Home() {
             {
               title: "How Local ISP Conditions Change Your VPN Experience",
               excerpt:
-                "New FCC labeling requirements finally give consumers standardized latency and fee data. We used that data to map how VPN performance varies by metro area and provider pairing.",
+                "New FCC labeling requirements give consumers standardized latency and fee data. This guide explains what the labels show for each metro area.",
               href: "/vpn/los-angeles",
               image: "/images/article-city.svg",
               badge: "Field Report",

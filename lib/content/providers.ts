@@ -80,22 +80,15 @@ export const providers: Provider[] = [
     reviewDescription:
       "Our complete NordVPN review with real speed benchmark data, privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
     reviewSummary:
-      "NordVPN maintains the strongest composite score in our 2026 testing cycle. Speed consistency, audit cadence, and app maturity keep it ahead of a market that has meaningfully improved around it.",
+      "NordVPN ranks first in our 2026 rankings on audit frequency and app maturity.",
     jurisdiction: "Panama",
     protocolNote: "NordLynx (WireGuard implementation)",
-    speedMetrics: [
-      { label: "US Domestic (median)", value: "905 Mbps", sub: "WireGuard / NordLynx" },
-      { label: "US → London", value: "720 Mbps", sub: "Evening peak window" },
-      { label: "US → Frankfurt", value: "685 Mbps", sub: "Multi-session median" },
-      { label: "Speed Floor", value: "780 Mbps", sub: "Lowest observed domestic" },
-    ],
+    speedMetrics: [],
     sections: [
       {
-        heading: "How Fast Is NordVPN Under Real Load?",
+        heading: "NordLynx and everyday use",
         paragraphs: [
-          "Let me be specific about what \"fast\" means in our testing framework, because this is where most VPN reviews lose credibility. We do not run a single iPerf session at 2am and publish the screenshot. We run 12 sessions per route across three time windows — morning, afternoon, and evening peak — and report the median.",
-          "On a 1 Gbps baseline connection, NordVPN's NordLynx protocol consistently delivered 850-920 Mbps on domestic US routes and 680-760 Mbps on US-to-London transatlantic routes. Those numbers held across our April 2026 testing window.",
-          "What separates NordVPN from providers with similar peak numbers is the speed floor. During evening congestion windows, throughput rarely dropped below 780 Mbps domestically. Several competitors saw floors 200-300 Mbps lower in the same time windows.",
+          "NordVPN's NordLynx protocol is built on WireGuard.",
           "For practical purposes: 4K streaming requires roughly 25 Mbps, and even demanding cloud gaming setups rarely need more than 50 Mbps. NordVPN provides enormous headroom for any consumer workload.",
         ],
       },
@@ -126,17 +119,12 @@ export const providers: Provider[] = [
       {
         question: "Is NordVPN still worth buying in 2026?",
         answer:
-          "For most users who want a single VPN that handles streaming, remote work, and daily browsing without constant tuning, yes. The combination of speed floor stability, audit frequency, and app maturity keeps it at the top of our ranking. The main caveat is renewal pricing — check the year-two rate before committing.",
+          "For most users who want a single VPN that handles streaming, remote work, and daily browsing without constant tuning, yes. NordVPN ranks first in our 2026 rankings on audit frequency and app maturity. The main caveat is renewal pricing — check the year-two rate before committing.",
       },
       {
         question: "Does NordVPN actually keep no logs?",
         answer:
           "NordVPN has completed multiple independent no-logs audits. Our analysis of the audit scope documents confirms they tested server infrastructure, not just policy language.",
-      },
-      {
-        question: "How does NordVPN compare to Surfshark on speed?",
-        answer:
-          "In our testing, NordVPN maintains a higher speed floor on long-distance routes (US to Europe), while Surfshark performs comparably on domestic routes.",
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-protonvpn", "nordvpn-vs-purevpn", "nordvpn-vs-expressvpn", "surfshark-vs-nordvpn"],
@@ -169,20 +157,11 @@ export const providers: Provider[] = [
       "Surfshark is the strongest value play in our 2026 rankings. Unlimited connections and competitive transatlantic speeds make it ideal for households, though power users may want more tuning options.",
     jurisdiction: "Netherlands",
     protocolNote: "WireGuard and OpenVPN",
-    speedMetrics: [
-      { label: "US Domestic (median)", value: "820 Mbps", sub: "WireGuard" },
-      { label: "US → London", value: "640 Mbps", sub: "Evening peak window" },
-      { label: "US → Frankfurt", value: "610 Mbps", sub: "Multi-session median" },
-      { label: "Speed Floor", value: "690 Mbps", sub: "Lowest observed domestic" },
-    ],
+    speedMetrics: [],
     sections: [
       {
-        heading: "How Fast Is Surfshark in Real-World Use?",
-        paragraphs: [
-          "Surfshark's WireGuard implementation delivered a median of 820 Mbps on domestic US routes in our April 2026 cycle — enough headroom for any household streaming scenario.",
-          "Transatlantic performance improved meaningfully since our last ranking cycle. US-to-London medians held around 640 Mbps during evening windows, which is competitive with providers priced significantly higher.",
-          "The practical difference versus NordVPN shows up on long-distance speed floors, not peak numbers. If your primary use is domestic browsing and streaming, Surfshark's overhead is often imperceptible.",
-        ],
+        heading: "Protocols",
+        paragraphs: ["Surfshark supports WireGuard on all its apps."],
       },
       {
         heading: "Privacy and Trust Signals",
@@ -202,18 +181,13 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy Surfshark if you need unlimited device coverage, want strong domestic performance, and prioritize entry pricing over marginal speed advantages on transatlantic routes.",
       skip: "Skip if you need the deepest audit history or the most advanced network configuration options.",
-      alternatives: "NordVPN for speed-floor consistency; Proton VPN for open-source transparency; Mullvad for anonymous payments.",
+      alternatives: "NordVPN for audit frequency; Proton VPN for open-source transparency; Mullvad for anonymous payments.",
     },
     faqs: [
       {
         question: "Is Surfshark as good as NordVPN?",
         answer:
-          "For most household use cases, yes — especially if unlimited devices matter. NordVPN still leads on long-distance speed floors and audit frequency, but the gap has narrowed.",
-      },
-      {
-        question: "Does Surfshark work for Netflix and streaming?",
-        answer:
-          "In our testing, Surfshark reliably accessed major US streaming libraries. Success rates vary by platform and region, as with all VPNs.",
+          "For most household use cases, yes — especially if unlimited devices matter. NordVPN still leads on audit frequency.",
       },
       {
         question: "How many devices can I use with Surfshark?",
@@ -249,20 +223,8 @@ export const providers: Provider[] = [
       "ExpressVPN trades on simplicity and reliability. It is not the fastest or cheapest option, but its polished apps and predictable streaming performance keep it in our top five.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "Lightway and OpenVPN",
-    speedMetrics: [
-      { label: "US Domestic (median)", value: "700 Mbps", sub: "Lightway protocol" },
-      { label: "US → London", value: "580 Mbps", sub: "Evening peak window" },
-      { label: "US → Frankfurt", value: "540 Mbps", sub: "Multi-session median" },
-      { label: "Speed Floor", value: "620 Mbps", sub: "Lowest observed domestic" },
-    ],
+    speedMetrics: [],
     sections: [
-      {
-        heading: "Speed and Stability",
-        paragraphs: [
-          "ExpressVPN's Lightway protocol delivered a median of 700 Mbps domestically in our testing — lower peak numbers than NordVPN or Surfshark, but with remarkably consistent session stability.",
-          "Where ExpressVPN earns its premium positioning is predictability. Reconnection after sleep, network changes, and server switches was smoother than most competitors in our April 2026 cycle.",
-        ],
-      },
       {
         heading: "Privacy Architecture",
         paragraphs: [
@@ -274,13 +236,13 @@ export const providers: Provider[] = [
         heading: "Pricing Reality Check",
         paragraphs: [
           "ExpressVPN is the most expensive provider in our top five. ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026. You are paying for polish and support quality, not raw throughput.",
-          "If budget is your primary constraint, Surfshark or PureVPN deliver more Mbps per dollar. If you value a frictionless setup experience, ExpressVPN's premium may be justified.",
+          "If budget is your primary constraint, Surfshark or PureVPN cost less. If you value a frictionless setup experience, ExpressVPN's premium may be justified.",
         ],
       },
     ],
     whoShouldBuy: {
       buy: "Buy ExpressVPN if you want the most polished consumer experience, reliable streaming access, and are willing to pay a premium for support quality.",
-      skip: "Skip if you are price-sensitive or need the highest throughput numbers — competitors deliver more speed per dollar.",
+      skip: "Skip if you are price-sensitive.",
       alternatives: "NordVPN for best overall balance; Surfshark for family value; Proton VPN for transparency.",
     },
     faqs: [
@@ -292,7 +254,7 @@ export const providers: Provider[] = [
       {
         question: "How does ExpressVPN compare to NordVPN?",
         answer:
-          "NordVPN is faster and cheaper in our benchmarks. ExpressVPN wins on app polish and support quality. See our head-to-head comparison for the full breakdown.",
+          "NordVPN is cheaper at checkout. ExpressVPN wins on app polish and support quality. See our head-to-head comparison for the full breakdown.",
       },
       {
         question: "Does ExpressVPN keep logs?",
@@ -330,12 +292,7 @@ export const providers: Provider[] = [
       "Proton VPN is the transparency leader in our rankings. Open-source clients, Swiss jurisdiction, and a credible free tier make it the best choice for privacy-first users, even if streaming success lags premium competitors.",
     jurisdiction: "Switzerland",
     protocolNote: "WireGuard and OpenVPN (open-source clients)",
-    speedMetrics: [
-      { label: "US Domestic (median)", value: "650 Mbps", sub: "WireGuard" },
-      { label: "US → London", value: "520 Mbps", sub: "Evening peak window" },
-      { label: "US → Frankfurt", value: "490 Mbps", sub: "Multi-session median" },
-      { label: "Speed Floor", value: "480 Mbps", sub: "Lowest observed domestic" },
-    ],
+    speedMetrics: [],
     sections: [
       {
         heading: "Privacy and Transparency",
@@ -348,7 +305,6 @@ export const providers: Provider[] = [
       {
         heading: "Performance Profile",
         paragraphs: [
-          "Proton VPN delivered a median of 650 Mbps domestically in our April 2026 cycle — adequate for streaming and remote work, but below NordVPN and Surfshark on both peak and floor metrics.",
           "Speed variability increased on congested transatlantic routes. Privacy-focused users may accept this tradeoff; performance-first users should weigh alternatives.",
         ],
       },
@@ -411,20 +367,8 @@ export const providers: Provider[] = [
       "PureVPN is the budget entry in our top five. Aggressive pricing and a large server network appeal to price-first buyers, but speed consistency and trust recovery keep it below premium competitors.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "WireGuard and OpenVPN",
-    speedMetrics: [
-      { label: "US Domestic (median)", value: "610 Mbps", sub: "WireGuard" },
-      { label: "US → London", value: "430 Mbps", sub: "Evening peak window" },
-      { label: "US → Frankfurt", value: "400 Mbps", sub: "Multi-session median" },
-      { label: "Speed Floor", value: "380 Mbps", sub: "Lowest observed domestic" },
-    ],
+    speedMetrics: [],
     sections: [
-      {
-        heading: "Speed and Consistency",
-        paragraphs: [
-          "PureVPN delivered a median of 610 Mbps domestically in our April 2026 testing — adequate for HD streaming and typical remote work, but with more regional variability than top-tier competitors.",
-          "Transatlantic routes showed the largest gap versus NordVPN. US-to-London medians around 430 Mbps may bottleneck 4K streaming during peak hours on some server selections.",
-        ],
-      },
       {
         heading: "Privacy and Trust Recovery",
         paragraphs: [
@@ -491,12 +435,7 @@ export const providers: Provider[] = [
       "Mullvad is the anti-marketing VPN. No promotional pricing, no email signup, anonymous account numbers. We earn nothing recommending it — which is exactly why we include it.",
     jurisdiction: "Sweden",
     protocolNote: "WireGuard and OpenVPN (open-source)",
-    speedMetrics: [
-      { label: "EU Domestic (median)", value: "720 Mbps", sub: "WireGuard" },
-      { label: "EU → US East", value: "580 Mbps", sub: "Evening peak window" },
-      { label: "EU → US West", value: "540 Mbps", sub: "Multi-session median" },
-      { label: "Speed Floor", value: "610 Mbps", sub: "Lowest observed EU domestic" },
-    ],
+    speedMetrics: [],
     sections: [
       {
         heading: "Why Mullvad Is Different",
@@ -515,7 +454,7 @@ export const providers: Provider[] = [
       {
         heading: "Performance and Limitations",
         paragraphs: [
-          "Mullvad delivered solid WireGuard performance in our testing, particularly on European routes. US-centric users may find server selection smaller than NordVPN or Surfshark.",
+          "Mullvad supports WireGuard on all its apps. US-centric users may find server selection smaller than NordVPN or Surfshark.",
           "Streaming geo-unblocking is not Mullvad's focus. If your primary use case is accessing region-locked content, competitors with dedicated streaming infrastructure are better choices.",
         ],
       },

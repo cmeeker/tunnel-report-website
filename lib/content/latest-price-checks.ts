@@ -14,7 +14,7 @@ export const latestPriceChecks: PriceCheckLink[] = [
   },
   {
     href: "/best-vpns",
-    label: "Best VPNs of 2026: Tested and Ranked by Our Security Team",
+    label: "Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports",
   },
   {
     href: "/reviews/nordvpn",

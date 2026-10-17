@@ -7,7 +7,6 @@ import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
-import { EditorialChart, nordvpnReviewChart } from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RatingStars } from "@/components/RatingStars";
@@ -177,9 +176,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
           {section.paragraphs.map((para) => (
             <p key={para.slice(0, 40)}>{renderTextWithCitations(para, sourceIdSet)}</p>
           ))}
-          {provider.slug === "nordvpn" && section.heading === "How Fast Is NordVPN Under Real Load?" ? (
-            <EditorialChart {...nordvpnReviewChart} />
-          ) : null}
         </section>
       ))}
 

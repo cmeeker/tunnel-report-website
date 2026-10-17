@@ -6,7 +6,7 @@ export const contentType = "image/png";
 
 export default function Image() {
   return buildOgImage({
-    title: "Tunnel Report Methodology: How We Test and Score VPNs",
+    title: "How We Rank VPNs and Password Managers",
     badge: "Methodology",
   });
 }
