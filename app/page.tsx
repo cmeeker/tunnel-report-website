@@ -10,8 +10,10 @@ import { FaqSection } from "@/components/FaqSection";
 import { PaidPick } from "@/components/PaidPick";
 import { HeroGraphic } from "@/components/HeroGraphic";
 import { JsonLd } from "@/components/JsonLd";
+import { PlainInternalLinkList } from "@/components/PlainInternalLinkList";
 import { SourcesList } from "@/components/SourcesList";
 import { comparisonMap } from "@/lib/content/comparisons";
+import { latestPriceChecks } from "@/lib/content/latest-price-checks";
 import { citationSources } from "@/lib/content/facts";
 import { homepageComparison } from "@/lib/content/vpn-metrics";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
@@ -278,6 +280,10 @@ export default function Home() {
           </table>
         </div>
       </section>
+
+      <hr className="divider-glow" />
+
+      <PlainInternalLinkList title="Latest price checks" links={latestPriceChecks} />
 
       <hr className="divider-glow" />
 
