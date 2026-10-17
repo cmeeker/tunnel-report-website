@@ -11,8 +11,10 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { bestVpnsChart, EditorialChart } from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
+import { PlainInternalLinkList } from "@/components/PlainInternalLinkList";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
+import { relatedPriceGuides } from "@/lib/content/latest-price-checks";
 import { citationSources } from "@/lib/content/facts";
 import { getProviderCtaHref, providerMap } from "@/lib/content/providers";
 import { AFFILIATE_URLS, rankedVpns, useCaseSections } from "@/lib/content/vpn-metrics";
@@ -298,6 +300,8 @@ export default function BestVpnsPage() {
             citationSources.S8,
           ]}
         />
+
+        <PlainInternalLinkList title="Related guides" links={relatedPriceGuides()} />
       </article>
 
       {/* Sticky sidebar */}
