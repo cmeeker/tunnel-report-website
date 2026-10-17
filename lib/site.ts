@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "Tunnel Report publishes independent VPN reviews with real speed benchmarks, cited privacy audits, and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
   locale: "en_US",
-  defaultAuthor: "Tunnel Report Security Team",
+  defaultAuthor: "Tunnel Report Staff",
   updatedDate: "October 15, 2026",
 };
 
@@ -147,9 +147,8 @@ export const primaryNav: PrimaryNavItem[] = [
       {
         heading: "The Publication",
         items: [
-          { label: "Our Methodology", href: "/methodology", description: "How we score and test VPNs" },
+          { label: "How We Rank", href: "/methodology", description: "Published specs, pricing and third-party reports" },
           { label: "Editorial Standards", href: "/about#editorial", description: "Independence & disclosure policy" },
-          { label: "The Team", href: "/about#team", description: "Meet our three editors" },
           { label: "Affiliate Disclosure", href: "/about#disclosure", description: "How commissions work here" },
         ],
       },

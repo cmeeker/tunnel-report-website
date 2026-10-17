@@ -6,12 +6,6 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitedText } from "@/components/CitedText";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
-import {
-  EditorialChart,
-  nordvpnVsExpressvpnChart,
-  nordvpnVsPurevpnChart,
-  surfsharkVsNordvpnChart,
-} from "@/components/EditorialChart";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { PaidPick } from "@/components/PaidPick";
@@ -24,7 +18,6 @@ import {
   getProviderCtaHref,
   providerMap,
 } from "@/lib/content/providers";
-import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getCompareRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema } from "@/lib/seo/schema";
@@ -33,12 +26,6 @@ import { getPageOgImageUrl } from "@/lib/seo/share-images";
 type ComparePageProps = {
   params: Promise<{ matchup: string }>;
 };
-
-const compareCharts = {
-  "nordvpn-vs-purevpn": nordvpnVsPurevpnChart,
-  "nordvpn-vs-expressvpn": nordvpnVsExpressvpnChart,
-  "surfshark-vs-nordvpn": surfsharkVsNordvpnChart,
-} as const;
 
 export const dynamicParams = false;
 
@@ -79,7 +66,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
     });
   };
 
-  const persona = personas[comparison.authorId];
   const leftCta = getProviderCtaHref(left);
   const rightCta = getProviderCtaHref(right);
   const path = `/compare/${comparison.slug}`;
@@ -95,7 +81,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
           path,
           dateModified: comparison.dateModified,
           image: getPageOgImageUrl(path),
-          authorName: persona.name,
         })}
       />
 
@@ -118,7 +103,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         {!isLongform && (
           <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{comparison.intro}</p>
         )}
-        <AuthorByline persona={persona} date={updatedDateLabel} />
+        <AuthorByline date={updatedDateLabel} />
       </header>
 
       {comparison.verdictBox ? (
@@ -170,9 +155,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         <>
           <section className="space-y-4">
             <h2 className="text-xl font-bold text-white">Category-by-Category Breakdown</h2>
-            {compareCharts[comparison.slug as keyof typeof compareCharts] ? (
-              <EditorialChart {...compareCharts[comparison.slug as keyof typeof compareCharts]} />
-            ) : null}
             <div className="space-y-3">
               {comparison.rows.map((row, i) => (
                 <div
@@ -234,7 +216,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
               ))}
             </div>
             <p className="text-xs text-[#475569]">
-              Speed data from Tunnel Report benchmark suite. Prices checked on each provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check the provider&apos;s site before you buy.
+              Prices checked on each provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check the provider&apos;s site before you buy.
             </p>
           </section>
 
@@ -315,7 +297,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         </>
       )}
 
-      <AuthorByline persona={persona} showBio />
+      <AuthorByline />
 
       <hr className="divider-glow" />
 

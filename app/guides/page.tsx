@@ -5,7 +5,6 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { guides } from "@/lib/content/guides";
-import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildItemListSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
@@ -47,7 +46,7 @@ export default function GuidesIndexPage() {
           how protocols work, what no-logs claims mean, why jurisdiction matters, and how pricing
           changes after checkout.
         </p>
-        <AuthorByline persona={personas.marcus} date={siteConfig.updatedDate} />
+        <AuthorByline date={siteConfig.updatedDate} />
       </header>
 
       <section className="grid gap-5 md:grid-cols-2">

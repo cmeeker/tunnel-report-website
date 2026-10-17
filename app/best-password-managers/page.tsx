@@ -16,7 +16,6 @@ import {
 } from "@/components/password-managers";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
-import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
@@ -85,7 +84,6 @@ export default function BestPasswordManagersPage() {
           dateModified: PASSWORD_MANAGER_UPDATED,
           datePublished: PASSWORD_MANAGER_UPDATED,
           image: getPageOgImageUrl(path),
-          authorName: personas.sarah.name,
         })}
       />
 
@@ -105,11 +103,11 @@ export default function BestPasswordManagersPage() {
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
           For most people, Bitwarden is the cheapest full-featured pick, NordPass is the best value if you want a polished app at a low intro price, and 1Password suits families who want strong sharing. This ranking is based on published specs and pricing, not hands-on testing. Prices change often, so check the provider&apos;s site.
         </p>
-        <AuthorByline persona={personas.sarah} date={PASSWORD_MANAGER_UPDATED_LABEL} />
+        <AuthorByline date={PASSWORD_MANAGER_UPDATED_LABEL} />
       </header>
 
       <AffiliateDisclosure>
-        Tunnel Report may earn a commission if you buy NordPass through a link on this page. That&apos;s the only affiliate link here. Every other provider gets a plain link. Our ranking uses published specs and pricing, not payouts.
+        Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
       </AffiliateDisclosure>
 
       <section className="prose-dark space-y-4">
@@ -323,7 +321,7 @@ export default function BestPasswordManagersPage() {
           { href: "/reviews/nordvpn", label: "NordVPN Review" },
           { href: "/best-vpns", label: "Best VPNs" },
           { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
-          { href: "/methodology", label: "Methodology" },
+          { href: "/methodology", label: "How We Rank" },
         ]}
       />
 

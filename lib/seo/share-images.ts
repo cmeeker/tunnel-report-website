@@ -17,7 +17,7 @@ type ShareImage = {
 const shareImages: Record<string, ShareImage> = {
   "/best-vpns": {
     file: "best-vpns-og.webp",
-    alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "Best VPNs of 2026: Tested and Ranked by Our Security Team", and tunnelreport.com in teal.',
+    alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports", and tunnelreport.com in teal.',
   },
   "/reviews/nordvpn": {
     file: "reviews-nordvpn-og.webp",

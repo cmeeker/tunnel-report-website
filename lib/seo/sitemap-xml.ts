@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site";
 export function getSitemapEntries(): MetadataRoute.Sitemap {
   return getSiteRoutes().map((route) => ({
     url: `${siteConfig.url}${route.path}`,
-    lastModified: route.lastModified,
+    lastModified: route.sitemapLastModified ?? route.lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));

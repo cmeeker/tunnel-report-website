@@ -20,7 +20,6 @@ export type Guide = {
   title: string;
   description: string;
   dek: string;
-  authorId: "marcus" | "sarah" | "daniel";
   dateModified: string;
   category: "Methodology" | "Privacy" | "Pricing" | "Protocol";
   sections: GuideSection[];
@@ -45,7 +44,6 @@ export const guides: Guide[] = [
       "WireGuard vs OpenVPN explained in plain English: speed, privacy, auditability, battery life, censorship resistance, and when to switch protocols.",
     dek:
       "WireGuard is usually faster and easier on battery. OpenVPN is older, battle-tested, and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
-    authorId: "marcus",
     dateModified: "2026-10-15",
     category: "Protocol",
     relatedReviewSlugs: ["nordvpn", "surfshark", "protonvpn"],
@@ -62,7 +60,7 @@ export const guides: Guide[] = [
         heading: "Why WireGuard feels faster",
         paragraphs: [
           "WireGuard's codebase is dramatically smaller than OpenVPN's, which reduces overhead and simplifies implementation. In consumer VPN apps, that usually translates into faster connection setup and higher median throughput.",
-          "NordVPN's NordLynx, Surfshark's WireGuard mode, and Proton VPN's WireGuard support all performed better than OpenVPN in our current benchmark cycle, especially on domestic routes.",
+          "NordVPN's NordLynx, Surfshark's WireGuard mode, and Proton VPN all offer WireGuard-based connections.",
         ],
       },
       {
@@ -93,7 +91,6 @@ export const guides: Guide[] = [
       "No-logs VPN claims explained: what providers can still collect, what audits verify, and how to evaluate no-logs marketing without trusting slogans.",
     dek:
       "A no-logs claim is only useful when you understand what data is excluded, what metadata remains, and whether an independent audit tested real infrastructure.",
-    authorId: "daniel",
     dateModified: "2026-10-15",
     category: "Privacy",
     relatedReviewSlugs: ["mullvad", "protonvpn", "nordvpn"],
@@ -134,7 +131,6 @@ export const guides: Guide[] = [
       "VPN jurisdiction explained: how country law, data-retention demands, and intelligence-sharing alliances affect VPN privacy claims.",
     dek:
       "Jurisdiction does not replace technical controls, but it shapes the legal pressure a VPN company can face. Here is how we weigh it in reviews.",
-    authorId: "daniel",
     dateModified: "2026-10-15",
     category: "Privacy",
     relatedReviewSlugs: ["nordvpn", "protonvpn", "expressvpn"],
@@ -169,47 +165,6 @@ export const guides: Guide[] = [
     ],
   },
   {
-    slug: "how-we-test-vpn-speed",
-    title: "How We Test VPN Speed: Median Beats Peak",
-    description:
-      "Tunnel Report's VPN speed-testing methodology: routes, time windows, median throughput, speed floors, and why screenshot benchmarks mislead buyers.",
-    dek:
-      "Peak speed screenshots are easy to game. We report medians and floors because those numbers better match what readers experience during real use.",
-    authorId: "marcus",
-    dateModified: "2026-10-15",
-    category: "Methodology",
-    relatedReviewSlugs: ["nordvpn", "surfshark", "expressvpn"],
-    relatedCompareSlugs: ["surfshark-vs-nordvpn", "surfshark-vs-expressvpn"],
-    sections: [
-      {
-        heading: "Why we avoid single-run screenshots",
-        paragraphs: [
-          "A single speed-test screenshot tells you almost nothing about a VPN. Server load, time of day, route selection, protocol, and local ISP conditions can all swing results dramatically.",
-          "We run repeated sessions and publish median numbers because a stable middle result is harder to manipulate than a best-case peak.",
-        ],
-      },
-      {
-        heading: "Routes and time windows",
-        paragraphs: [
-          "Our standard cycle tests US East, US West, London, and Frankfurt routes across morning, afternoon, and evening windows. Evening results matter because that is when most readers actually stream, game, and work.",
-          "We track domestic median, transatlantic median, and the lowest observed domestic speed floor. The floor often separates good providers from providers with flashy peaks.",
-        ],
-      },
-      {
-        heading: "Interpreting the numbers",
-        paragraphs: [
-          "A VPN that averages 700 Mbps with a 620 Mbps floor can feel better than a VPN that peaks at 900 Mbps and drops to 250 Mbps at night.",
-          "For most readers, latency stability and reconnection behavior matter as much as raw throughput once speeds exceed 200 Mbps.",
-        ],
-      },
-    ],
-    faqs: [
-      { question: "What VPN speed is good enough?", answer: "For 4K streaming, 25 Mbps per stream is enough. For households and gaming, consistency and latency matter more than raw peak speed." },
-      { question: "Why do your VPN speeds differ from provider claims?", answer: "Provider claims often reflect idealized peak runs. We test repeated sessions across routes and time windows." },
-      { question: "Which VPN is fastest?", answer: "NordVPN currently leads our median domestic and transatlantic benchmarks, with Surfshark close behind on domestic routes." },
-    ],
-  },
-  {
     slug: "vpn-renewal-pricing-traps",
     title: "VPN Renewal Prices 2026: Intro vs Renewal Costs Compared",
     h1: "VPN renewal increases: what you pay after the intro deal",
@@ -217,7 +172,6 @@ export const guides: Guide[] = [
       "We checked intro and renewal prices for NordVPN, Surfshark, ExpressVPN, Proton and more on Oct 15, 2026. Here's what they cost after the first term, where providers publish it.",
     dek:
       "The cheapest VPN at checkout is not always the cheapest VPN over two years. Renewal pricing is where many buyers lose the savings they thought they were getting.",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     updatedBadgeLabel: "Updated Oct 15, 2026",
     updatedDateLabel: "October 15, 2026",
@@ -317,7 +271,6 @@ export const guides: Guide[] = [
       "How Surfshark renewal works: when the intro deal ends, how it renews, how to turn off auto-renew, and what Surfshark says about renewal pricing.",
     dek:
       "The 2-year plan is billed once up front, then renews annually. Surfshark charges \"the applicable renewal price\" at renewal. Check that amount in your account before the date.",
-    authorId: "sarah",
     dateModified: "2026-10-06",
     updatedBadgeLabel: "Updated Oct 6, 2026",
     updatedDateLabel: "October 6, 2026",
@@ -416,7 +369,6 @@ export const guides: Guide[] = [
       "How Proton VPN renewal works: intro deal vs renewal rate, switching plans with prorated credit, the 30-day refund, and why Proton says no codes needed.",
     dek:
       "Proton shows the intro price and the renewal price on its plan cards. Plan changes use prorated credit, and the money-back window is 30 days.",
-    authorId: "sarah",
     dateModified: "2026-10-06",
     updatedBadgeLabel: "Updated Oct 6, 2026",
     updatedDateLabel: "October 6, 2026",

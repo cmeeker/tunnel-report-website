@@ -7,7 +7,7 @@ export const contentType = "image/png";
 export default function Image() {
   return buildOgImage({
     title: "Best VPNs of 2026",
-    subtitle: "Tested and ranked by our security team — 47 providers evaluated",
+    subtitle: "Ranked on published specs, pricing and third-party reports",
     badge: "Rankings",
   });
 }

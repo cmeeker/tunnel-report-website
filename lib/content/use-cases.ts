@@ -21,7 +21,6 @@ export type UseCaseGuide = {
   shortTitle: string;
   description: string;
   intro: string;
-  authorId: "marcus" | "sarah" | "daniel";
   dateModified: string;
   primaryPick: string;
   picks: UseCasePick[];
@@ -38,11 +37,10 @@ export const useCaseGuides: UseCaseGuide[] = [
       "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on speed floor, geo-unblocking consistency, and app reliability.",
     intro:
       "Streaming is the use case where VPN marketing most often gets ahead of reality. A provider can post huge speed-test screenshots and still fail if it cannot keep a consistent IP pool, reconnect cleanly after platform blocks, or keep 4K streams buffered during prime time.",
-    authorId: "sarah",
     dateModified: "2026-04-08",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best overall streaming VPN", reason: "Most consistent unblocking with the highest domestic and transatlantic speed floor." },
+      { providerSlug: "nordvpn", label: "Best overall streaming VPN", reason: "NordVPN is our top streaming pick." },
       { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps and reliable region switching for non-technical users.", paidPick: streamingExpressPaidPick },
       { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices and strong US library performance at lower entry pricing." },
     ],
@@ -50,7 +48,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "What actually matters for streaming VPNs",
         paragraphs: [
-          "The important metric is not peak throughput; it is whether the VPN keeps enough speed during evening congestion to avoid buffering while also maintaining access to the content library you want. In our testing, 25 Mbps is enough for a single 4K stream, but households need much more headroom once multiple devices are active.",
+          "The important metric is not peak throughput; it is whether the VPN keeps enough speed during evening congestion to avoid buffering while also maintaining access to the content library you want.",
           "We weight streaming performance by geo-unblocking consistency, reconnect behavior, Smart TV/router support, and median speed floor. NordVPN leads because it performs well across all four, not because it wins every single platform test.",
         ],
       },
@@ -58,7 +56,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Regional sports blackouts are the real buyer intent",
         paragraphs: [
           "Searches for streaming VPNs spike around live sports because blackouts are frustrating and time-sensitive. A VPN that works for a static Netflix library but fails during a live NBA or MLB window is not a real streaming pick.",
-          "NordVPN and ExpressVPN handled the most region switches during our April cycle. Surfshark was close on US libraries, but occasional CAPTCHA and server retries kept it just behind the premium options.",
+          "Surfshark was close on US libraries, but occasional CAPTCHA and server retries kept it just behind the premium options.",
         ],
       },
       {
@@ -70,7 +68,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       },
     ],
     faqs: [
-      { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our top streaming pick because it combines reliable US and international library access with the strongest speed floor in our current benchmark set." },
+      { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our top streaming pick." },
       { question: "Will a VPN always bypass sports blackouts?", answer: "No. Blackout enforcement changes by league, broadcaster, device, and payment profile. A VPN improves location flexibility but cannot guarantee access on every platform." },
       { question: "Is ExpressVPN better than NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is faster and usually cheaper, which makes it the better default for most streaming households." },
     ],
@@ -83,7 +81,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, payment anonymity, and incident-response transparency.",
     intro:
       "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what audits tested, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
-    authorId: "daniel",
     dateModified: "2026-04-08",
     primaryPick: "mullvad",
     picks: [
@@ -128,7 +125,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Torrenting VPN recommendations based on kill switch reliability, P2P support, no-logs verification, jurisdiction, and speed consistency.",
     intro:
       "Torrenting is one of the few consumer VPN use cases where a weak kill switch or sloppy logging policy can create immediate consequences. We prioritize providers that support P2P clearly, document no-logs controls, and maintain stable WireGuard performance.",
-    authorId: "marcus",
     dateModified: "2026-04-08",
     primaryPick: "nordvpn",
     picks: [
@@ -141,7 +137,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "The kill switch is non-negotiable",
         paragraphs: [
           "For torrenting, a kill switch is not a nice-to-have checkbox. If the VPN drops and your torrent client keeps running on your real IP, the VPN failed the use case.",
-          "We weight reconnect behavior and leak prevention more heavily here than streaming success or app aesthetics. NordVPN and Mullvad performed best in our reconnect checks.",
+          "We weight reconnect behavior and leak prevention more heavily here than streaming success or app aesthetics.",
         ],
       },
       {
@@ -155,7 +151,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Speed still matters",
         paragraphs: [
           "P2P transfers expose weak speed floors quickly. A VPN that is fast for a single browser speed test may still struggle under sustained upload/download load.",
-          "NordVPN remains our default pick because it combines P2P support with the strongest sustained throughput. Mullvad is the better ideological pick for users who value account anonymity above convenience.",
+          "NordVPN remains our default pick because it offers P2P-optimized servers and a kill switch. Mullvad is the better ideological pick for users who value account anonymity above convenience.",
         ],
       },
     ],
@@ -173,7 +169,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "The best cheap VPNs based on full lifecycle cost, renewal pricing, device limits, privacy tradeoffs, and speed-per-dollar.",
     intro:
       "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device coverage, speed consistency, and whether privacy controls survive the discount.",
-    authorId: "sarah",
     dateModified: "2026-04-08",
     primaryPick: "surfshark",
     picks: [
@@ -218,11 +213,10 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Gaming VPN recommendations based on latency, packet stability, WireGuard support, DDoS protection claims, and regional routing.",
     intro:
       "Gaming VPN marketing is full of nonsense. A VPN cannot magically lower latency on every route. It can help with routing consistency, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
-    authorId: "marcus",
     dateModified: "2026-04-08",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best gaming VPN overall", reason: "Lowest observed domestic speed floor and stable WireGuard latency." },
+      { providerSlug: "nordvpn", label: "Best gaming VPN overall", reason: "NordVPN is our top gaming pick: it offers WireGuard-based NordLynx on every platform." },
       { providerSlug: "surfshark", label: "Best value gaming VPN", reason: "Strong domestic throughput with unlimited devices for multi-console households." },
       { providerSlug: "expressvpn", label: "Best console setup", reason: "Clear router and device setup guides for living-room gaming.", paidPick: gamingExpressPaidPick },
     ],
@@ -231,7 +225,6 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Latency beats throughput for games",
         paragraphs: [
           "Most games use surprisingly little bandwidth. What matters is latency, jitter, and packet stability. A VPN that posts 900 Mbps but adds unstable routing is worse than a slower provider with cleaner nearby exits.",
-          "NordVPN wins because its domestic speed floor and WireGuard routing were the most stable in our consumer test set.",
         ],
       },
       {
@@ -251,7 +244,6 @@ export const useCaseGuides: UseCaseGuide[] = [
     ],
     faqs: [
       { question: "Can a VPN reduce gaming ping?", answer: "Sometimes, if your ISP route is inefficient. Often it adds latency. Test nearby VPN servers against your actual game before committing." },
-      { question: "What is the best VPN for gaming?", answer: "NordVPN is our top gaming VPN because it had the strongest domestic speed floor and stable WireGuard routing in our benchmark cycle." },
       { question: "Is Surfshark good for gaming?", answer: "Yes for most domestic gaming. Surfshark is a strong value pick, especially for households with multiple devices and consoles." },
     ],
   },
@@ -263,7 +255,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Remote-work VPN picks based on split tunneling, kill switch reliability, network transitions, video-call stability, and malware blocking.",
     intro:
       "Remote workers need a different VPN than streamers. The winning provider must survive coffee-shop Wi-Fi, hotel networks, video calls, cloud apps, and corporate tools without forcing constant troubleshooting.",
-    authorId: "sarah",
     dateModified: "2026-04-08",
     primaryPick: "nordvpn",
     picks: [

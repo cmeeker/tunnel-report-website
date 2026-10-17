@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { CitationLink } from "@/components/CitationLink";
 import { CitedText } from "@/components/CitedText";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { EditorialChart, renewalPricesChart } from "@/components/EditorialChart";
@@ -13,10 +12,10 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
-import { citationSources, getCitationSourcesById, homepageSources } from "@/lib/content/facts";
+import { getCitationSourcesById, homepageSources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { guideMap, guides, guideSlugs } from "@/lib/content/guides";
-import { personas } from "@/lib/editorial-personas";
+import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getGuideRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema } from "@/lib/seo/schema";
@@ -70,7 +69,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const guide = guideMap[slug];
   if (!guide) notFound();
 
-  const persona = personas[guide.authorId];
   const path = `/guides/${guide.slug}`;
 
   return (
@@ -81,7 +79,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           description: guide.description,
           path,
           dateModified: guide.dateModified,
-          authorName: persona.name,
+          authorName: staffAuthorName,
         })}
       />
 
@@ -102,7 +100,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           {guide.h1 ?? guide.title}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{guide.dek}</p>
-        <AuthorByline persona={persona} date={guide.updatedDateLabel ?? siteConfig.updatedDate} />
+        <AuthorByline date={guide.updatedDateLabel ?? siteConfig.updatedDate} />
       </header>
 
       {guide.shortAnswer ? (
@@ -137,14 +135,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
       {guide.sections.map((section) => (
         <section key={section.heading} className="prose-dark space-y-4">
           <h2 className="text-2xl font-bold text-white">{section.heading}</h2>
-          {section.paragraphs.map((paragraph, index) => (
+          {section.paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 48)}>
               {guide.sourceIds ? <CitedText text={paragraph} /> : paragraph}
-              {guide.slug === "how-we-test-vpn-speed" && index === 1 && (
-                <>
-                  <CitationLink source={citationSources.S4} />
-                </>
-              )}
             </p>
           ))}
           {section.chart === "renewal-prices" ? <EditorialChart {...renewalPricesChart} /> : null}

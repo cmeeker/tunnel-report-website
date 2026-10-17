@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
-import { EditorialChart, nordvpnVsProtonvpnChart } from "@/components/EditorialChart";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
 
 const linkClassName =
@@ -46,21 +45,12 @@ export function NordvpnVsProtonvpnLongform() {
         <p>
           <strong>Verification.</strong> NordVPN prices were re-checked on the public pricing page on Oct 15, 2026.
           Proton VPN Plus: $3.49/mo on the 2-year plan ($83.76 for the first 24 months, then $83.88 every 12 months){" "}
-          <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026. Speed
-          figures below are Tunnel Report’s own April 2026 medians from the{" "}
-          <Link href="/reviews/nordvpn" className={linkClassName}>
-            NordVPN review
-          </Link>{" "}
-          and{" "}
-          <Link href="/reviews/protonvpn" className={linkClassName}>
-            Proton VPN review
-          </Link>
-          , not new lab runs.
+          <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.
         </p>
 
         <p>
-          <strong>Use-case verdict, not a trophy.</strong> NordVPN is the household default if you want the higher
-          speed floor, more consistent streaming, and a mature app. Proton VPN is the better pick if you want public
+          <strong>Use-case verdict, not a trophy.</strong> NordVPN is the household default if you want a mature app.
+          Proton VPN is the better pick if you want public
           audit PDFs, open-source clients, Swiss legal posture, and a credible free tier — even if that means giving
           up throughput.
         </p>
@@ -78,18 +68,11 @@ export function NordvpnVsProtonvpnLongform() {
             </thead>
             <tbody>
               <tr>
-                <td>Daily household VPN, 4K, remote work</td>
-                <td>
-                  <strong>NordVPN</strong>
-                </td>
-                <td>Higher domestic median and a higher observed speed floor in our April 2026 cycle.</td>
-              </tr>
-              <tr>
                 <td>Streaming geo-unblocking</td>
                 <td>
                   <strong>NordVPN</strong>
                 </td>
-                <td>More consistent in our qualitative streaming notes. We do not publish invented Netflix win rates.</td>
+                <td>We do not publish invented Netflix win rates.</td>
               </tr>
               <tr>
                 <td>Verifiable no-logs + open-source apps</td>
@@ -142,13 +125,8 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Category-by-category</h2>
         <p>
-          Speed data from the Tunnel Report April 2026 benchmark suite, reported as medians. Prices checked on each
-          provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check the provider&apos;s site
-          before you buy. See{" "}
-          <Link href="/guides/how-we-test-vpn-speed" className={linkClassName}>
-            How we test VPN speed
-          </Link>
-          .
+          Prices checked on each provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check
+          the provider&apos;s site before you buy.
         </p>
 
         <div className="glass-card overflow-x-auto">
@@ -162,30 +140,6 @@ export function NordvpnVsProtonvpnLongform() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Domestic speed (median)</td>
-                <td>NordVPN</td>
-                <td>
-                  <strong>905 Mbps</strong>
-                </td>
-                <td>650 Mbps</td>
-              </tr>
-              <tr>
-                <td>Transatlantic (US → London)</td>
-                <td>NordVPN</td>
-                <td>
-                  <strong>720 Mbps</strong>
-                </td>
-                <td>520 Mbps</td>
-              </tr>
-              <tr>
-                <td>Speed floor (lowest domestic observed)</td>
-                <td>NordVPN</td>
-                <td>
-                  <strong>780 Mbps</strong>
-                </td>
-                <td>480 Mbps</td>
-              </tr>
               <tr>
                 <td>Open source</td>
                 <td>Proton VPN</td>
@@ -203,12 +157,6 @@ export function NordvpnVsProtonvpnLongform() {
                 <td>Draw, different risks</td>
                 <td>Panama (Tefincom / NordVPN); parent Nord Security in the Netherlands</td>
                 <td>Switzerland (Proton AG, Geneva)</td>
-              </tr>
-              <tr>
-                <td>Streaming</td>
-                <td>NordVPN</td>
-                <td>Very consistent in our notes</td>
-                <td>Moderate success; skip if streaming is the primary job</td>
               </tr>
               <tr>
                 <td>Free tier</td>
@@ -239,16 +187,6 @@ export function NordvpnVsProtonvpnLongform() {
           </Link>
           . Proton VPN is ranked for transparency, not for beating NordVPN on throughput.
         </p>
-      </section>
-
-      <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Speed: NordVPN’s floor is the actual story</h2>
-        <p>
-          Twelve sessions per route, publish the median. April 2026 NordVPN review: 905 domestic, 720 London, 685
-          Frankfurt, 780 floor. Proton VPN review: 650 / 520 / 490 / 480. NordVPN wins this category. Proton adequate,
-          not close. 4K ~25 Mbps. Do not paper over Proton’s evening transatlantic variability.
-        </p>
-        <EditorialChart {...nordvpnVsProtonvpnChart} />
       </section>
 
       <section className="prose-dark space-y-4">
@@ -361,9 +299,6 @@ export function NordvpnVsProtonvpnLongform() {
           <Link href="/methodology" className={linkClassName}>
             /methodology
           </Link>
-          <Link href="/guides/how-we-test-vpn-speed" className={linkClassName}>
-            /guides/how-we-test-vpn-speed
-          </Link>
           <Link href="/best-vpns" className={linkClassName}>
             /best-vpns
           </Link>
@@ -374,7 +309,7 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Sources &amp; References (ALL 28 required)</h2>
+        <h2 className="text-2xl font-bold text-white">Sources &amp; References</h2>
         <ol className="list-decimal space-y-2 pl-5 text-sm text-[#cbd5e1]">
           <li>
             <a href="https://tunnelreport.com/compare/nordvpn-vs-protonvpn" className={linkClassName}>
@@ -382,10 +317,7 @@ export function NordvpnVsProtonvpnLongform() {
             </a>{" "}
             fetched 1 Sep 2026
           </li>
-          <li>tunnelreport.com/reviews/nordvpn April 2026 medians 905/720/685/780</li>
-          <li>tunnelreport.com/reviews/protonvpn 650/520/490/480</li>
           <li>tunnelreport.com/methodology</li>
-          <li>tunnelreport.com/guides/how-we-test-vpn-speed</li>
           <li>tunnelreport.com/best-vpns</li>
           <li>
             <NordVpnOutboundLink>https://nordvpn.com/pricing/</NordVpnOutboundLink> live intro/renewal

@@ -111,7 +111,7 @@ export const useCaseSections: UseCaseSection[] = [
     description:
       "Streaming requires consistent geo-unblocking, low buffering overhead, and stable reconnect behavior when platforms detect VPN traffic. NordVPN and ExpressVPN lead our streaming success rates; Surfshark is a strong budget alternative for US libraries.",
     pickSlug: "nordvpn",
-    pickReason: "Highest streaming success rate across Netflix, Hulu, and BBC iPlayer in our April 2026 cycle.",
+    pickReason: "",
   },
   {
     id: "privacy",
@@ -142,9 +142,9 @@ export const useCaseSections: UseCaseSection[] = [
     id: "gaming",
     title: "Best VPN for Gaming in 2026",
     description:
-      "Gaming VPNs need low latency, stable UDP routing, and minimal packet loss — not just high throughput. NordVPN's speed floor advantage matters most for competitive online play; WireGuard protocol is essential.",
+      "Gaming VPNs need low latency, stable UDP routing, and minimal packet loss — not just high throughput. For competitive online play, a WireGuard-based protocol matters most.",
     pickSlug: "nordvpn",
-    pickReason: "Highest domestic speed floor (780 Mbps minimum observed) with WireGuard/NordLynx on all platforms.",
+    pickReason: "WireGuard-based NordLynx on all platforms.",
   },
   {
     id: "work",

@@ -15,7 +15,7 @@ export const PAID_PARTNER_LABEL: Record<PaidPartnerKey, string> = {
 
 export const expressReviewPaidPick: PaidPickSpec = {
   partner: "surfshark",
-  after: " scores 4.6 in our testing and covers unlimited devices on one plan.",
+  after: " covers unlimited devices on one plan.",
 };
 
 export const expressHomePaidPick: PaidPickSpec = {

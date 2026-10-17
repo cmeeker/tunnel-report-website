@@ -16,7 +16,6 @@ import {
 } from "@/components/password-managers";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
-import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
@@ -76,7 +75,6 @@ export default function NordPassVsBitwardenPage() {
           dateModified: PASSWORD_MANAGER_UPDATED,
           datePublished: PASSWORD_MANAGER_UPDATED,
           image: getPageOgImageUrl(path),
-          authorName: personas.sarah.name,
         })}
       />
 
@@ -97,11 +95,11 @@ export default function NordPassVsBitwardenPage() {
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
           Pick Bitwarden if you want open-source code and the lowest predictable bill: Premium is {prices.bitwardenPremiumMonthlyShown}, billed annually at {prices.bitwardenPremiumAnnual}. Pick NordPass if you want a more polished app and a low intro price, {prices.nordpassPremiumTwoYearMonthly} on a 2-year plan. Both have free plans. This comparison is based on published specs and pricing.
         </p>
-        <AuthorByline persona={personas.sarah} date={PASSWORD_MANAGER_UPDATED_LABEL} />
+        <AuthorByline date={PASSWORD_MANAGER_UPDATED_LABEL} />
       </header>
 
       <AffiliateDisclosure>
-        Tunnel Report may earn a commission if you buy NordPass through our link. Bitwarden links are plain links with no commission. This comparison is based on published specs and pricing.
+        Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
       </AffiliateDisclosure>
 
       <section className="prose-dark space-y-4">
@@ -284,7 +282,7 @@ export default function NordPassVsBitwardenPage() {
           { href: "/compare/nordvpn-vs-protonvpn", label: "NordVPN vs Proton VPN" },
           { href: "/reviews/nordvpn", label: "NordVPN Review" },
           { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
-          { href: "/methodology", label: "Methodology" },
+          { href: "/methodology", label: "How We Rank" },
         ]}
       />
 

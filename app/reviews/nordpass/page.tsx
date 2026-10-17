@@ -16,7 +16,6 @@ import {
 } from "@/components/password-managers";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
-import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema, buildReviewSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
@@ -82,7 +81,6 @@ export default function NordPassReviewPage() {
             dateModified: PASSWORD_MANAGER_UPDATED,
             datePublished: PASSWORD_MANAGER_UPDATED,
             image: getPageOgImageUrl(path),
-            authorName: personas.sarah.name,
           }),
           buildReviewSchema({
             itemName: "NordPass",
@@ -110,11 +108,11 @@ export default function NordPassReviewPage() {
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
           NordPass is a solid, easy password manager with modern encryption and a usable free plan. Premium starts at {prices.nordpassPremiumTwoYearMonthly} on a 2-year intro deal. The main thing to watch is the renewal price, which isn&apos;t listed up front. This review is based on published specs and pricing, not hands-on testing.
         </p>
-        <AuthorByline persona={personas.sarah} date={PASSWORD_MANAGER_UPDATED_LABEL} />
+        <AuthorByline date={PASSWORD_MANAGER_UPDATED_LABEL} />
       </header>
 
       <AffiliateDisclosure>
-        Tunnel Report may earn a commission if you buy NordPass through our link. This review is based on published specs and pricing, and the commission doesn&apos;t change what we say.
+        Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
       </AffiliateDisclosure>
 
       <section className="prose-dark space-y-4">
@@ -293,7 +291,7 @@ export default function NordPassReviewPage() {
         </div>
       </section>
 
-      <AuthorByline persona={personas.sarah} showBio />
+      <AuthorByline date={PASSWORD_MANAGER_UPDATED_LABEL} />
 
       <RelatedLinks
         links={[
@@ -302,7 +300,7 @@ export default function NordPassReviewPage() {
           { href: "/reviews/nordvpn", label: "NordVPN Review" },
           { href: "/best-vpns", label: "Best VPNs" },
           { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
-          { href: "/methodology", label: "Methodology" },
+          { href: "/methodology", label: "How We Rank" },
         ]}
       />
 

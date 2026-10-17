@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function DisclosureBanner() {
   return (
     <aside
@@ -9,12 +7,7 @@ export function DisclosureBanner() {
       <span className="mr-2 inline-block rounded bg-[#1e293b] px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#64748b]">
         Disclosure
       </span>
-      Tunnel Report may earn a commission through links on this page. Rankings are determined by
-      {" "}
-      <Link href="/methodology" className="underline decoration-[#1e293b] underline-offset-2 hover:decoration-[#00d4aa]">
-        testing methodology
-      </Link>
-      , not affiliate payouts.
+      Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
     </aside>
   );
 }

@@ -47,7 +47,7 @@ const columns = [
       { href: "/guides", label: "All Guides" },
       { href: "/guides/wireguard-vs-openvpn", label: "WireGuard vs OpenVPN" },
       { href: "/guides/what-is-a-no-logs-vpn", label: "No-Logs VPNs" },
-      { href: "/guides/how-we-test-vpn-speed", label: "Speed Testing" },
+      { href: "/methodology", label: "How We Rank" },
       { href: "/guides/vpn-renewal-pricing-traps", label: "Renewal Pricing" },
     ],
   },
@@ -76,8 +76,7 @@ export function SiteFooter() {
             <span className="font-bold text-white">{siteConfig.name}</span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#94a3b8]">
-            Independent VPN testing, privacy analysis, and editorial coverage built on
-            evidence, not affiliate incentives.
+            VPN and privacy coverage based on published specs, pricing and third-party reports.
           </p>
         </section>
         {columns.map((col) => (
