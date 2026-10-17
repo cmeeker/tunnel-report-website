@@ -327,7 +327,7 @@ export const guides: Guide[] = [
     relatedReviewSlugs: ["surfshark"],
     relatedCompareSlugs: ["surfshark-vs-purevpn"],
     relatedLinks: [
-      { href: "/guides/vpn-renewal-pricing-traps", label: "VPN Renewal Pricing Traps" },
+      { href: "/guides/vpn-renewal-pricing-traps", label: "VPN Renewal Pricing" },
       { href: "/reviews/surfshark", label: "Surfshark Review" },
       { href: "/alternatives/surfshark", label: "Surfshark Alternatives" },
       { href: "/compare/surfshark-vs-purevpn", label: "Surfshark vs PureVPN" },
@@ -426,7 +426,7 @@ export const guides: Guide[] = [
     relatedReviewSlugs: ["protonvpn"],
     relatedCompareSlugs: ["surfshark-vs-protonvpn"],
     relatedLinks: [
-      { href: "/guides/vpn-renewal-pricing-traps", label: "VPN Renewal Pricing Traps" },
+      { href: "/guides/vpn-renewal-pricing-traps", label: "VPN Renewal Pricing" },
       { href: "/reviews/protonvpn", label: "Proton VPN Review" },
       { href: "/alternatives/protonvpn", label: "Proton VPN Alternatives" },
       { href: "/compare/surfshark-vs-protonvpn", label: "Surfshark vs Proton VPN" },

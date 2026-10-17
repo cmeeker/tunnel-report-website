@@ -12,7 +12,6 @@ import {
   PasswordManagerSources,
   PriceBarChart,
   PricingLink,
-  VpnRenewalLink,
   type PasswordSource,
 } from "@/components/password-managers";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -20,6 +19,7 @@ import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, prici
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
+import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
 const title = "Best Password Managers 2026: Prices & Specs Compared";
 const description =
@@ -84,6 +84,7 @@ export default function BestPasswordManagersPage() {
           path,
           dateModified: PASSWORD_MANAGER_UPDATED,
           datePublished: PASSWORD_MANAGER_UPDATED,
+          image: getPageOgImageUrl(path),
           authorName: personas.sarah.name,
         })}
       />
@@ -150,7 +151,7 @@ export default function BestPasswordManagersPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Which password manager is cheapest in 2026?</h2>
         <p>
-          <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>. It has a free plan, and Premium is {prices.bitwardenPremiumMonthly} a month, billed annually at {prices.bitwardenPremiumAnnual} <Cite id="S2" />. NordPass Premium has a lower monthly headline on the 2-year plan ({prices.nordpassPremiumTwoYearMonthly}) <Cite id="S1" />, but that&apos;s an intro rate covering the first 27 months, and NordPass doesn&apos;t publish its renewal rate on the pricing page. If the lowest predictable bill matters most, Bitwarden wins. If you want the lowest first-term cost with a more guided app, look at NordPass.
+          <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>. It has a free plan, and Premium is $1.65 a month, billed annually at {prices.bitwardenPremiumAnnual} <Cite id="S2" />. NordPass Premium has a lower monthly headline on the 2-year plan ({prices.nordpassPremiumTwoYearMonthly}) <Cite id="S1" />, but that&apos;s an intro rate covering the first 27 months, and NordPass doesn&apos;t publish its renewal rate on the pricing page. If the lowest predictable bill matters most, Bitwarden wins. If you want the lowest first-term cost with a more guided app, look at NordPass.
         </p>
       </section>
 
@@ -160,7 +161,7 @@ export default function BestPasswordManagersPage() {
           NordPass covers what most people need: autosave and autofill, password health, a data breach scanner and file attachments on Premium <Cite id="S1" />. On security, NordPass says it uses XChaCha20 encryption with a zero-knowledge design and Argon2id for master password key derivation <Cite id="S7" />. It also lists ISO 27001 and SOC 2 Type 2 certifications and regular independent third-party audits <Cite id="S7" />. There&apos;s a free plan and a 30-day money-back guarantee on paid plans <Cite id="S1" />.
         </p>
         <p>
-          The catch is the intro pricing. {prices.nordpassPremiumTwoYearTotal} covers 27 months. After that, check the renewal rate before you commit, since it isn&apos;t shown up front. Intro rates on VPN plans work the same way. See <VpnRenewalLink />.
+          The catch is the intro pricing. {prices.nordpassPremiumTwoYearTotal} covers 27 months. After that, check the renewal rate before you commit, since it isn&apos;t shown up front.
         </p>
         <p>
           <NordPassPricingLink />

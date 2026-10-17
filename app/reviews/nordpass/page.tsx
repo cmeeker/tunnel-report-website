@@ -12,7 +12,6 @@ import {
   PasswordManagerSources,
   PriceBarChart,
   PricingLink,
-  VpnRenewalLink,
   type PasswordSource,
 } from "@/components/password-managers";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -20,6 +19,7 @@ import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, prici
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema, buildReviewSchema } from "@/lib/seo/schema";
+import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
 const title = "NordPass Review 2026: Pricing, Security and Specs";
 const description =
@@ -81,6 +81,7 @@ export default function NordPassReviewPage() {
             path,
             dateModified: PASSWORD_MANAGER_UPDATED,
             datePublished: PASSWORD_MANAGER_UPDATED,
+            image: getPageOgImageUrl(path),
             authorName: personas.sarah.name,
           }),
           buildReviewSchema({
@@ -137,7 +138,7 @@ export default function NordPassReviewPage() {
           <li><strong>Free:</strong> $0. The page says it includes a 30-day Premium trial.</li>
         </ul>
         <p>
-          Paid plans come with a 30-day money-back guarantee <Cite id="S1" />. The words &quot;for the first 12/27 months&quot; mean these are intro prices. NordPass doesn&apos;t publish the renewal rate on that page, so we don&apos;t list one. Before you buy, check what year two costs on the checkout screen. Prices change often, so check the provider&apos;s site. For the same check on VPN plans, read <VpnRenewalLink />.
+          Paid plans come with a 30-day money-back guarantee <Cite id="S1" />. The words &quot;for the first 12/27 months&quot; mean these are intro prices. NordPass doesn&apos;t publish the renewal rate on that page, so we don&apos;t list one. Before you buy, check what year two costs on the checkout screen. Prices change often, so check the provider&apos;s site.
         </p>
       </section>
 
