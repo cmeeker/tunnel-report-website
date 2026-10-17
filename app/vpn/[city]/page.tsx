@@ -14,7 +14,6 @@ import { getCityRelatedLinks } from "@/lib/seo/related-links";
 import { cityGuideMap } from "@/lib/content/cities";
 import { citationSources, citySources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
-import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildGeoArticleSchema } from "@/lib/seo/schema";
 import { citySlugs, siteConfig } from "@/lib/site";
@@ -103,7 +102,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           connectivity differences, and privacy considerations specific to {guide.city} residents
           against our provider test data.
         </p>
-        <AuthorByline persona={personas.daniel} date={siteConfig.updatedDate} />
+        <AuthorByline date={siteConfig.updatedDate} />
       </header>
 
       <DisclosureBanner />
@@ -157,7 +156,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
 
       <hr className="divider-glow" />
 
-      {/* Privacy concerns - Daniel's policy voice */}
+      {/* Privacy concerns */}
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">
           Privacy Landscape in {guide.city}
@@ -202,7 +201,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           &ldquo;{guide.localColor}&rdquo;
         </p>
         <div className="mt-4">
-          <AuthorByline persona={personas.daniel} />
+          <AuthorByline />
         </div>
       </section>
 
@@ -219,7 +218,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         </div>
       </section>
 
-      <AuthorByline persona={personas.daniel} showBio />
+      <AuthorByline />
 
       <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
 

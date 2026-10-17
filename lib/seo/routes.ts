@@ -7,11 +7,15 @@ import { citySlugs, siteConfig } from "@/lib/site";
 
 import { CONTENT_UPDATED_AT } from "./freshness";
 
+/** Sitemap lastmod for pages whose byline or author schema changed on this date. */
+export const REVISED_SITEMAP_LASTMOD = "2026-10-17";
+
 export type SiteRoute = {
   path: string;
   title: string;
   description: string;
   lastModified: string;
+  sitemapLastModified?: string;
   priority: number;
   changeFrequency: "daily" | "weekly" | "monthly";
   group: "static" | "review" | "compare" | "city" | "use-case" | "alternative" | "guide";
@@ -140,7 +144,10 @@ export function getSiteRoutes(): SiteRoute[] {
         group: "guide" as const,
       };
     }),
-  ];
+  ].map((route) => ({
+    ...route,
+    sitemapLastModified: REVISED_SITEMAP_LASTMOD,
+  }));
 }
 
 export function absoluteUrl(path: string) {

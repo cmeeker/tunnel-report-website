@@ -13,7 +13,7 @@ import { RatingStars } from "@/components/RatingStars";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { alternativeExpressPaidPicks } from "@/lib/content/paid-picks";
 import { getProviderCtaHref, providerMap, providers, providerSlugs, type Provider } from "@/lib/content/providers";
-import { personas } from "@/lib/editorial-personas";
+import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getAlternativesRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
@@ -65,7 +65,6 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
 
   const alternatives = alternativesFor(target);
   const path = `/alternatives/${target.slug}`;
-  const author = personas.sarah;
 
   return (
     <article className="space-y-14 fade-in-up">
@@ -76,7 +75,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
             description: `Independent alternatives to ${target.name}.`,
             path,
             dateModified: target.dateModified,
-            authorName: author.name,
+            authorName: staffAuthorName,
           }),
           buildItemListSchema(
             alternatives.map((alt, index) => ({
@@ -109,7 +108,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
           use case. We compared speed floors, privacy posture, pricing lifecycle, app polish, and
           threat model fit to identify the strongest alternatives.
         </p>
-        <AuthorByline persona={author} date={siteConfig.updatedDate} />
+        <AuthorByline date={siteConfig.updatedDate} />
       </header>
 
       <DisclosureBanner />

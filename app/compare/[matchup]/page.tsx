@@ -24,7 +24,7 @@ import {
   getProviderCtaHref,
   providerMap,
 } from "@/lib/content/providers";
-import { personas } from "@/lib/editorial-personas";
+import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getCompareRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema } from "@/lib/seo/schema";
@@ -78,7 +78,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
     });
   };
 
-  const persona = personas[comparison.authorId];
   const leftCta = getProviderCtaHref(left);
   const rightCta = getProviderCtaHref(right);
   const path = `/compare/${comparison.slug}`;
@@ -93,7 +92,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
           description: comparison.description,
           path,
           dateModified: comparison.dateModified,
-          authorName: persona.name,
+          authorName: staffAuthorName,
         })}
       />
 
@@ -116,7 +115,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         {!isLongform && (
           <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{comparison.intro}</p>
         )}
-        <AuthorByline persona={persona} date={updatedDateLabel} />
+        <AuthorByline date={updatedDateLabel} />
       </header>
 
       {comparison.verdictBox ? (
@@ -313,7 +312,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         </>
       )}
 
-      <AuthorByline persona={persona} showBio />
+      <AuthorByline />
 
       <hr className="divider-glow" />
 

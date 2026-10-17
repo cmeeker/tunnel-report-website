@@ -20,7 +20,6 @@ export type Guide = {
   title: string;
   description: string;
   dek: string;
-  authorId: "marcus" | "sarah" | "daniel";
   dateModified: string;
   category: "Methodology" | "Privacy" | "Pricing" | "Protocol";
   sections: GuideSection[];
@@ -45,7 +44,6 @@ export const guides: Guide[] = [
       "WireGuard vs OpenVPN explained in plain English: speed, privacy, auditability, battery life, censorship resistance, and when to switch protocols.",
     dek:
       "WireGuard is usually faster and easier on battery. OpenVPN is older, battle-tested, and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
-    authorId: "marcus",
     dateModified: "2026-10-15",
     category: "Protocol",
     relatedReviewSlugs: ["nordvpn", "surfshark", "protonvpn"],
@@ -93,7 +91,6 @@ export const guides: Guide[] = [
       "No-logs VPN claims explained: what providers can still collect, what audits verify, and how to evaluate no-logs marketing without trusting slogans.",
     dek:
       "A no-logs claim is only useful when you understand what data is excluded, what metadata remains, and whether an independent audit tested real infrastructure.",
-    authorId: "daniel",
     dateModified: "2026-10-15",
     category: "Privacy",
     relatedReviewSlugs: ["mullvad", "protonvpn", "nordvpn"],
@@ -134,7 +131,6 @@ export const guides: Guide[] = [
       "VPN jurisdiction explained: how country law, data-retention demands, and intelligence-sharing alliances affect VPN privacy claims.",
     dek:
       "Jurisdiction does not replace technical controls, but it shapes the legal pressure a VPN company can face. Here is how we weigh it in reviews.",
-    authorId: "daniel",
     dateModified: "2026-10-15",
     category: "Privacy",
     relatedReviewSlugs: ["nordvpn", "protonvpn", "expressvpn"],
@@ -175,7 +171,6 @@ export const guides: Guide[] = [
       "Tunnel Report's VPN speed-testing methodology: routes, time windows, median throughput, speed floors, and why screenshot benchmarks mislead buyers.",
     dek:
       "Peak speed screenshots are easy to game. We report medians and floors because those numbers better match what readers experience during real use.",
-    authorId: "marcus",
     dateModified: "2026-10-15",
     category: "Methodology",
     relatedReviewSlugs: ["nordvpn", "surfshark", "expressvpn"],
@@ -217,7 +212,6 @@ export const guides: Guide[] = [
       "We checked intro and renewal prices for NordVPN, Surfshark, ExpressVPN, Proton and more on Oct 15, 2026. Here's what they cost after the first term, where providers publish it.",
     dek:
       "The cheapest VPN at checkout is not always the cheapest VPN over two years. Renewal pricing is where many buyers lose the savings they thought they were getting.",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     updatedBadgeLabel: "Updated Oct 15, 2026",
     updatedDateLabel: "October 15, 2026",
@@ -317,7 +311,6 @@ export const guides: Guide[] = [
       "How Surfshark renewal works: when the intro deal ends, how it renews, how to turn off auto-renew, and what Surfshark says about renewal pricing.",
     dek:
       "The 2-year plan is billed once up front, then renews annually. Surfshark charges \"the applicable renewal price\" at renewal. Check that amount in your account before the date.",
-    authorId: "sarah",
     dateModified: "2026-10-06",
     updatedBadgeLabel: "Updated Oct 6, 2026",
     updatedDateLabel: "October 6, 2026",
@@ -416,7 +409,6 @@ export const guides: Guide[] = [
       "How Proton VPN renewal works: intro deal vs renewal rate, switching plans with prorated credit, the 30-day refund, and why Proton says no codes needed.",
     dek:
       "Proton shows the intro price and the renewal price on its plan cards. Plan changes use prorated credit, and the money-back window is 30 days.",
-    authorId: "sarah",
     dateModified: "2026-10-06",
     updatedBadgeLabel: "Updated Oct 6, 2026",
     updatedDateLabel: "October 6, 2026",

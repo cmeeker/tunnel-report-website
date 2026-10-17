@@ -19,7 +19,7 @@ import { citationSources } from "@/lib/content/facts";
 import { getProviderCtaHref, providerMap } from "@/lib/content/providers";
 import { AFFILIATE_URLS, rankedVpns, useCaseSections } from "@/lib/content/vpn-metrics";
 import { getBestVpnsRelatedLinks } from "@/lib/seo/related-links";
-import { personas } from "@/lib/editorial-personas";
+import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
@@ -56,7 +56,7 @@ export default function BestVpnsPage() {
       "Independent ranking of the top VPN services based on speed, privacy controls, and value.",
     path: "/best-vpns",
     dateModified: "2026-04-08",
-    authorName: personas.marcus.name,
+    authorName: staffAuthorName,
   });
 
   const itemListSchema = buildItemListSchema(
@@ -91,7 +91,7 @@ export default function BestVpnsPage() {
             checks — but several providers have shifted position since our last cycle. Here is where
             the market stands.
           </p>
-          <AuthorByline persona={personas.marcus} date={siteConfig.updatedDate} />
+          <AuthorByline date={siteConfig.updatedDate} />
         </header>
 
         <DisclosureBanner />

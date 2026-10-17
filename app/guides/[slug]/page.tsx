@@ -16,7 +16,7 @@ import { SourcesList } from "@/components/SourcesList";
 import { citationSources, getCitationSourcesById, homepageSources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { guideMap, guides, guideSlugs } from "@/lib/content/guides";
-import { personas } from "@/lib/editorial-personas";
+import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getGuideRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema } from "@/lib/seo/schema";
@@ -70,7 +70,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const guide = guideMap[slug];
   if (!guide) notFound();
 
-  const persona = personas[guide.authorId];
   const path = `/guides/${guide.slug}`;
 
   return (
@@ -81,7 +80,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           description: guide.description,
           path,
           dateModified: guide.dateModified,
-          authorName: persona.name,
+          authorName: staffAuthorName,
         })}
       />
 
@@ -102,7 +101,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           {guide.h1 ?? guide.title}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{guide.dek}</p>
-        <AuthorByline persona={persona} date={guide.updatedDateLabel ?? siteConfig.updatedDate} />
+        <AuthorByline date={guide.updatedDateLabel ?? siteConfig.updatedDate} />
       </header>
 
       {guide.shortAnswer ? (

@@ -21,7 +21,6 @@ import {
   type Provider,
 } from "@/lib/content/providers";
 import { citationLinkRel, getCitationSourcesById, reviewSources } from "@/lib/content/facts";
-import { personas } from "@/lib/editorial-personas";
 import { getReviewRelatedLinks } from "@/lib/seo/related-links";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildProductSchema, buildReviewSchema } from "@/lib/seo/schema";
@@ -118,7 +117,6 @@ function renderTextWithCitations(text: string, sourceIds: ReadonlySet<string>): 
 }
 
 function ReviewContent({ provider }: { provider: Provider }) {
-  const persona = personas[provider.authorId];
   const ctaHref = getProviderCtaHref(provider);
   const path = `/reviews/${provider.slug}`;
   const updatedBadgeLabel = provider.updatedBadgeLabel ?? "Updated April 2026";
@@ -167,7 +165,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
           {provider.reviewTitle}
         </h1>
-        <AuthorByline persona={persona} date={updatedDateLabel} />
+        <AuthorByline date={updatedDateLabel} />
         <RatingStars rating={provider.score} size="lg" />
       </header>
 
@@ -245,7 +243,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
         </div>
       </section>
 
-      <AuthorByline persona={persona} showBio />
+      <AuthorByline />
 
       <hr className="divider-glow" />
 

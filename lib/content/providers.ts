@@ -27,7 +27,6 @@ export type Provider = {
   privacySummary: string;
   pricingSummary: string;
   affiliateKey: string | null;
-  authorId: "marcus" | "sarah" | "daniel";
   dateModified: string;
   updatedBadgeLabel?: string;
   updatedDateLabel?: string;
@@ -76,7 +75,6 @@ export const providers: Provider[] = [
     privacySummary: "Audit cadence and public incident handling continue to set a high bar.",
     pricingSummary: "Entry promo pricing is competitive; long-term value depends on renewal terms.",
     affiliateKey: "nordvpn",
-    authorId: "marcus",
     dateModified: "2026-10-15",
     reviewTitle: "NordVPN Review 2026: Speed, Privacy, and Pricing Breakdown",
     reviewDescription:
@@ -163,7 +161,6 @@ export const providers: Provider[] = [
     privacySummary: "Solid security architecture with ongoing external validation.",
     pricingSummary: "Entry plan is among the most affordable in this group.",
     affiliateKey: "surfshark",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     reviewTitle: "Surfshark Review 2026: Best Budget VPN for Families?",
     reviewDescription:
@@ -244,7 +241,6 @@ export const providers: Provider[] = [
     privacySummary: "Transparent trust-center messaging and regular security communications.",
     pricingSummary: "Premium positioning can still make sense for users prioritizing simplicity.",
     affiliateKey: "expressvpn",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     reviewTitle: "ExpressVPN Review 2026: Worth the Premium Price?",
     reviewDescription:
@@ -326,7 +322,6 @@ export const providers: Provider[] = [
     privacySummary: "Strong transparency culture and technical documentation quality.",
     pricingSummary: "Value is strongest for users already in the Proton ecosystem.",
     affiliateKey: "protonvpn",
-    authorId: "daniel",
     dateModified: "2026-10-15",
     reviewTitle: "Proton VPN Review 2026: Privacy-First, Open Source",
     reviewDescription:
@@ -408,7 +403,6 @@ export const providers: Provider[] = [
     privacySummary: "Current trust profile is better than legacy perception, but still monitored closely.",
     pricingSummary: "Budget-friendly entry makes it attractive for price-sensitive users.",
     affiliateKey: "purevpn",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     reviewTitle: "PureVPN Review 2026: Budget Pick, Honest Assessment",
     reviewDescription:
@@ -489,7 +483,6 @@ export const providers: Provider[] = [
     privacySummary: "Industry-leading anonymity model and transparent corporate structure.",
     pricingSummary: "Flat rate with no renewal surprises — refreshingly honest.",
     affiliateKey: null,
-    authorId: "daniel",
     dateModified: "2026-10-15",
     reviewTitle: "Mullvad VPN Review 2026: The Privacy Purist's Choice",
     reviewDescription:
@@ -578,7 +571,6 @@ export const providers: Provider[] = [
     pricingSummary:
       "Pricing is straightforward and includes a “Pricing Guarantee” (same price and duration on renewal) plus a 30-day money-back guarantee for paid plans, with Terms limiting it to the first 30 days of the first order. [HM2][HM5]",
     affiliateKey: "hideme",
-    authorId: "daniel",
     dateModified: "2026-10-15",
     updatedBadgeLabel: "Updated Oct 15, 2026",
     updatedDateLabel: "October 15, 2026",

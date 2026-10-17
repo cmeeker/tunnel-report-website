@@ -17,7 +17,7 @@ import { latestPriceChecks } from "@/lib/content/latest-price-checks";
 import { citationSources } from "@/lib/content/facts";
 import { homepageComparison } from "@/lib/content/vpn-metrics";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
-import { personas } from "@/lib/editorial-personas";
+import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo/schema";
 
@@ -287,14 +287,13 @@ export default function Home() {
 
       <hr className="divider-glow" />
 
-      {/* Why trust us - Sarah's voice */}
+      {/* Why trust us */}
       <section className="grid gap-10 lg:grid-cols-[2fr_1fr] fade-in-up delay-100">
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-white">Why Tunnel Report Exists</h2>
           <div className="prose-dark space-y-4">
             <p>
-              I spent four years covering broadband policy at a national outlet, and the thing that
-              kept gnawing at me was the VPN review ecosystem. Most of the top-ranking pages on
+              The thing that kept gnawing at me was the VPN review ecosystem. Most of the top-ranking pages on
               Google are funded by the companies they claim to evaluate. Readers deserve better.
             </p>
             <p>
@@ -316,7 +315,7 @@ export default function Home() {
               team or a security engineer could actually trust.
             </p>
           </div>
-          <AuthorByline persona={personas.sarah} showBio />
+          <AuthorByline />
         </div>
         <aside className="space-y-4 lg:pt-12">
           <div className="glass-card p-5">
@@ -368,7 +367,6 @@ export default function Home() {
               href: "/reviews/nordvpn",
               image: "/images/article-privacy.svg",
               badge: "Analysis",
-              persona: personas.marcus,
             },
             {
               title: "Surfshark Review 2026: Best Budget VPN for Families?",
@@ -377,7 +375,6 @@ export default function Home() {
               href: "/reviews/surfshark",
               image: "/images/article-speed.svg",
               badge: "Review",
-              persona: personas.sarah,
             },
             {
               title: "How Local ISP Conditions Change Your VPN Experience",
@@ -386,7 +383,6 @@ export default function Home() {
               href: "/vpn/los-angeles",
               image: "/images/article-city.svg",
               badge: "Field Report",
-              persona: personas.daniel,
             },
           ].map((article, i) => (
           <div key={article.title} className={`glass-card glass-card-hover overflow-hidden fade-in-up delay-${(i + 1) * 100 + 100}`}>
@@ -403,12 +399,7 @@ export default function Home() {
                 <h3 className="text-lg font-bold leading-snug text-white">{article.title}</h3>
                 <p className="text-sm leading-relaxed text-[#94a3b8]">{article.excerpt}</p>
                 <div className="flex items-center justify-between pt-1">
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] text-[0.6rem] font-bold text-[#0a0f1e]">
-                      {article.persona.avatar}
-                    </div>
-                    <span className="text-xs text-[#64748b]">{article.persona.name}</span>
-                  </div>
+                  <span className="text-xs text-[#64748b]">{staffAuthorName}</span>
                   <Link href={article.href} className="text-sm font-semibold text-[#00d4aa] transition hover:text-[#00eabb]">
                     Read &rarr;
                   </Link>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqSection } from "@/components/FaqSection";
 import { LastUpdated } from "@/components/LastUpdated";
 import { JsonLd } from "@/components/JsonLd";
-import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
@@ -34,8 +34,6 @@ const aboutFaqs = [
       "Contact our editorial team with the specific claim, the page URL, and a source link if available. We investigate corrections promptly, update the page with visible changelog timestamps, and credit the reporter when appropriate.",
   },
 ];
-
-const teamMembers = Object.values(personas);
 
 export default function AboutPage() {
   return (
@@ -75,26 +73,7 @@ export default function AboutPage() {
       {/* Team bios */}
       <section id="team" className="space-y-6 scroll-mt-28">
         <h2 className="text-2xl font-bold text-white">The Editorial Team</h2>
-        <p className="text-[#94a3b8]">
-          Three editors with distinct expertise and editorial voices. Every major piece of coverage
-          is assigned to the team member whose background best matches the subject matter.
-        </p>
-        <div className="grid gap-5 md:grid-cols-3">
-          {teamMembers.map((person, i) => (
-            <div key={person.id} className={`glass-card glass-card-hover p-8 fade-in-up delay-${(i + 1) * 150}`}>
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] text-sm font-bold text-[#0a0f1e]">
-                  {person.avatar}
-                </div>
-                <div>
-                  <p className="font-bold text-white">{person.name}</p>
-                  <p className="text-sm text-[#00d4aa]">{person.role}</p>
-                </div>
-              </div>
-              <p className="mt-4 text-sm leading-relaxed text-[#94a3b8]">{person.shortBio}</p>
-            </div>
-          ))}
-        </div>
+        <AuthorByline />
       </section>
 
       <hr className="divider-glow" />
@@ -216,7 +195,7 @@ export default function AboutPage() {
             },
             {
               title: "Author Attribution",
-              description: "Every article is attributed to a specific team member with published credentials and editorial voice.",
+              description: "Every article is attributed to Tunnel Report Staff.",
             },
             {
               title: "Open Methodology",

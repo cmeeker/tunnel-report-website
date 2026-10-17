@@ -21,7 +21,6 @@ export type UseCaseGuide = {
   shortTitle: string;
   description: string;
   intro: string;
-  authorId: "marcus" | "sarah" | "daniel";
   dateModified: string;
   primaryPick: string;
   picks: UseCasePick[];
@@ -38,7 +37,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on speed floor, geo-unblocking consistency, and app reliability.",
     intro:
       "Streaming is the use case where VPN marketing most often gets ahead of reality. A provider can post huge speed-test screenshots and still fail if it cannot keep a consistent IP pool, reconnect cleanly after platform blocks, or keep 4K streams buffered during prime time.",
-    authorId: "sarah",
     dateModified: "2026-04-08",
     primaryPick: "nordvpn",
     picks: [
@@ -83,7 +81,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, payment anonymity, and incident-response transparency.",
     intro:
       "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what audits tested, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
-    authorId: "daniel",
     dateModified: "2026-04-08",
     primaryPick: "mullvad",
     picks: [
@@ -128,7 +125,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Torrenting VPN recommendations based on kill switch reliability, P2P support, no-logs verification, jurisdiction, and speed consistency.",
     intro:
       "Torrenting is one of the few consumer VPN use cases where a weak kill switch or sloppy logging policy can create immediate consequences. We prioritize providers that support P2P clearly, document no-logs controls, and maintain stable WireGuard performance.",
-    authorId: "marcus",
     dateModified: "2026-04-08",
     primaryPick: "nordvpn",
     picks: [
@@ -173,7 +169,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "The best cheap VPNs based on full lifecycle cost, renewal pricing, device limits, privacy tradeoffs, and speed-per-dollar.",
     intro:
       "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device coverage, speed consistency, and whether privacy controls survive the discount.",
-    authorId: "sarah",
     dateModified: "2026-04-08",
     primaryPick: "surfshark",
     picks: [
@@ -218,7 +213,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Gaming VPN recommendations based on latency, packet stability, WireGuard support, DDoS protection claims, and regional routing.",
     intro:
       "Gaming VPN marketing is full of nonsense. A VPN cannot magically lower latency on every route. It can help with routing consistency, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
-    authorId: "marcus",
     dateModified: "2026-04-08",
     primaryPick: "nordvpn",
     picks: [
@@ -263,7 +257,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Remote-work VPN picks based on split tunneling, kill switch reliability, network transitions, video-call stability, and malware blocking.",
     intro:
       "Remote workers need a different VPN than streamers. The winning provider must survive coffee-shop Wi-Fi, hotel networks, video calls, cloud apps, and corporate tools without forcing constant troubleshooting.",
-    authorId: "sarah",
     dateModified: "2026-04-08",
     primaryPick: "nordvpn",
     picks: [

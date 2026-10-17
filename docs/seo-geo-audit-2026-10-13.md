@@ -179,7 +179,7 @@ Problems that affect rich results and Copilot extraction:
 
 Google has limited FAQ rich results for most commercial sites. FAQ schema still matters here because Copilot already cites the property (30 citations).
 
-Personas (Marcus Chen, Sarah Voss, Daniel Okafor) have bios and no profile URLs, no `sameAs`, and no author archive. Organization is the only entity an AI crawler can resolve, and it resolves to the homepage. That is thin for a YMYL review site. Author pages are new URLs, so they wait until index coverage moves. Person schema on the existing about page does not require a new URL.
+Named personas had bios and no profile URLs, no `sameAs`, and no author archive. Organization is the only entity an AI crawler can resolve, and it resolves to the homepage. That is thin for a YMYL review site. Author pages are new URLs, so they wait until index coverage moves. Person schema on the existing about page does not require a new URL.
 
 ## Core Web Vitals risks
 

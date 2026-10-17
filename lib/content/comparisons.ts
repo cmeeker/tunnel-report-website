@@ -23,7 +23,6 @@ export type Comparison = {
   title: string;
   description: string;
   intro: string;
-  authorId: "marcus" | "sarah" | "daniel";
   dateModified: string;
   rows: CompareRow[];
   verdictParagraphs: string[];
@@ -53,7 +52,6 @@ export const comparisons: Comparison[] = [
       "NordVPN vs PureVPN: a straight-talking 2026 comparison of speed consistency, privacy posture, pricing transparency, and real-world usability.",
     intro:
       "These two providers sit at opposite ends of the value spectrum in our rankings. NordVPN leads on consistency and trust signals. PureVPN undercuts on price. The question is whether the savings justify what you give up — and for some readers, the honest answer is yes.",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     rows: [
       { category: "Speed (US Domestic)", left: { value: "905 Mbps median", pct: 95 }, right: { value: "610 Mbps median", pct: 64 }, winner: "left" },
@@ -95,7 +93,6 @@ export const comparisons: Comparison[] = [
       "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality — with a clear winner for most buyers in 2026.",
     intro:
       "Both NordVPN and ExpressVPN target the premium consumer segment. NordVPN wins our rankings on speed and value; ExpressVPN wins on app polish and support. This comparison breaks down where each actually delivers.",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     rows: [
       { category: "Speed (US Domestic)", left: { value: "905 Mbps median", pct: 95 }, right: { value: "700 Mbps median", pct: 74 }, winner: "left" },
@@ -136,7 +133,6 @@ export const comparisons: Comparison[] = [
       "Surfshark vs NordVPN — unlimited devices and budget pricing versus speed-floor leadership. Our 2026 head-to-head tells you which to buy.",
     intro:
       "Surfshark and NordVPN are the two most common comparison queries we receive. Surfshark offers unlimited devices and aggressive pricing; NordVPN offers the highest speed floors and audit cadence. Here is how they actually compare.",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     rows: [
       { category: "Speed (US Domestic)", left: { value: "820 Mbps median", pct: 86 }, right: { value: "905 Mbps median", pct: 95 }, winner: "right" },
@@ -177,7 +173,6 @@ export const comparisons: Comparison[] = [
       "Mullvad vs Proton VPN — anonymous payments, open-source clients, and jurisdiction compared. Neither pays us a commission; here is our honest verdict.",
     intro:
       "Mullvad and Proton VPN represent the privacy-first tier of the VPN market. Neither runs aggressive affiliate programs — Tunnel Report earns zero commission from either. That independence makes this comparison particularly important.",
-    authorId: "daniel",
     dateModified: "2026-10-15",
     rows: [
       { category: "Payment Anonymity", left: { value: "Cash, crypto, no email", pct: 98 }, right: { value: "Standard + crypto options", pct: 82 }, winner: "left" },
@@ -219,7 +214,6 @@ export const comparisons: Comparison[] = [
       "Surfshark vs ExpressVPN compared across speed, price, streaming, privacy, and device limits for 2026 buyers.",
     intro:
       "Surfshark and ExpressVPN serve different buyers. Surfshark wins on value and device coverage. ExpressVPN wins on app polish and support quality. The right choice depends on whether you are optimizing for household economics or premium convenience.",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     rows: [
       { category: "Entry Pricing", left: { value: "Surfshark Starter $2.49/mo ($67.23 for the first 27 months, VAT may apply) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left" },
@@ -252,7 +246,6 @@ export const comparisons: Comparison[] = [
       "NordVPN vs Proton VPN compared across speed, privacy transparency, pricing, streaming, and open-source posture.",
     intro:
       "NordVPN is the better all-around consumer VPN. Proton VPN is the stronger transparency story for users who want open-source clients and Swiss jurisdiction. This is a performance-versus-philosophy comparison.",
-    authorId: "marcus",
     dateModified: "2026-10-15",
     rows: [
       { category: "Domestic Speed", left: { value: "905 Mbps median", pct: 95 }, right: { value: "650 Mbps median", pct: 77 }, winner: "left" },
@@ -286,7 +279,6 @@ export const comparisons: Comparison[] = [
       "ExpressVPN vs Proton VPN compared for app polish, privacy, speed, streaming, jurisdiction, and price.",
     intro:
       "ExpressVPN is built for people who want the VPN to disappear into the background. Proton VPN is built for people who want to understand and verify the privacy model. Both are good; they optimize for different readers.",
-    authorId: "daniel",
     dateModified: "2026-10-15",
     rows: [
       { category: "App Simplicity", left: { value: "Best-in-class polish", pct: 92 }, right: { value: "Powerful but denser", pct: 78 }, winner: "left" },
@@ -319,7 +311,6 @@ export const comparisons: Comparison[] = [
       "Surfshark vs PureVPN compared for budget buyers: price, speed, device limits, trust posture, and streaming reliability.",
     intro:
       "Surfshark and PureVPN both compete on price, but they are not interchangeable. Surfshark is the stronger value pick for most households. PureVPN is the aggressive entry-price option with more trust and consistency tradeoffs.",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     rows: [
       { category: "Entry Pricing", left: { value: "Surfshark Starter $2.49/mo ($67.23 for the first 27 months, VAT may apply) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "PureVPN $2.15/mo on the 2-year Standard plan ($58.20 for 27 months, then $47.95/year) [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
@@ -352,7 +343,6 @@ export const comparisons: Comparison[] = [
       "NordVPN vs Mullvad compared on speed, account anonymity, streaming, audits, pricing, and affiliate independence.",
     intro:
       "NordVPN is the best mainstream VPN in our rankings. Mullvad is the privacy purist's choice and pays us nothing. This comparison is useful because both can be the right answer for different readers.",
-    authorId: "marcus",
     dateModified: "2026-10-15",
     rows: [
       { category: "Domestic Speed", left: { value: "905 Mbps median", pct: 95 }, right: { value: "720 Mbps EU median", pct: 85 }, winner: "left" },
@@ -386,7 +376,6 @@ export const comparisons: Comparison[] = [
       "ExpressVPN vs PureVPN compared across price, speed consistency, streaming, trust posture, app reliability, and support.",
     intro:
       "ExpressVPN and PureVPN are almost opposite buying decisions. ExpressVPN is expensive but polished. PureVPN is cheap but more variable. This is the clearest premium-versus-budget comparison in our matrix.",
-    authorId: "sarah",
     dateModified: "2026-10-15",
     rows: [
       { category: "Entry Pricing", left: { value: "ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, right: { value: "PureVPN $2.15/mo on the 2-year Standard plan ($58.20 for 27 months, then $47.95/year) [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
@@ -421,7 +410,6 @@ export const comparisons: Comparison[] = [
       "Surfshark vs Proton VPN compared on devices, audits, jurisdiction, servers, streaming, torrenting and refunds, with a source for each spec.",
     intro:
       "Surfshark scores higher in our testing (4.6 vs 4.4) and covers unlimited devices. Proton VPN is the pick when you want public audit reports, open-source apps, and a free plan to start on.",
-    authorId: "sarah",
     dateModified: "2026-10-06",
     updatedBadgeLabel: "Updated Oct 6, 2026",
     verdictBox:

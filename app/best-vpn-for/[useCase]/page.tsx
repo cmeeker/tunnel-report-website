@@ -14,7 +14,7 @@ import { SourcesList } from "@/components/SourcesList";
 import { homepageSources } from "@/lib/content/facts";
 import { getProviderCtaHref, providerMap } from "@/lib/content/providers";
 import { useCaseGuideMap, useCaseGuides, useCaseSlugs, type UseCaseSlug } from "@/lib/content/use-cases";
-import { personas } from "@/lib/editorial-personas";
+import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getUseCaseRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
@@ -53,7 +53,6 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
   const guide = useCaseGuideMap[useCase as UseCaseSlug];
   if (!guide) notFound();
 
-  const persona = personas[guide.authorId];
   const path = `/best-vpn-for/${guide.slug}`;
   const picks = guide.picks
     .map((pick) => ({ ...pick, provider: providerMap[pick.providerSlug] }))
@@ -64,7 +63,7 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
     description: guide.description,
     path,
     dateModified: guide.dateModified,
-    authorName: persona.name,
+    authorName: staffAuthorName,
   });
 
   const itemListSchema = buildItemListSchema(
@@ -96,7 +95,7 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
           {guide.title}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{guide.intro}</p>
-        <AuthorByline persona={persona} date={siteConfig.updatedDate} />
+        <AuthorByline date={siteConfig.updatedDate} />
       </header>
 
       <DisclosureBanner />
