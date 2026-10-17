@@ -22,6 +22,7 @@ import { getBestVpnsRelatedLinks } from "@/lib/seo/related-links";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
+import { getPageOgImageUrl } from "@/lib/seo/share-images";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -55,7 +56,9 @@ export default function BestVpnsPage() {
     description:
       "Independent ranking of the top VPN services based on speed, privacy controls, and value.",
     path: "/best-vpns",
-    dateModified: "2026-04-08",
+    datePublished: "2026-04-08",
+    dateModified: "2026-10-15",
+    image: getPageOgImageUrl("/best-vpns"),
     authorName: personas.marcus.name,
   });
 

@@ -57,6 +57,7 @@ type ArticleSchemaInput = {
   dateModified: string;
   datePublished?: string;
   authorName?: string;
+  image?: string;
 };
 
 export function buildArticleSchema({
@@ -66,6 +67,7 @@ export function buildArticleSchema({
   dateModified,
   datePublished,
   authorName = siteConfig.defaultAuthor,
+  image,
 }: ArticleSchemaInput) {
   return {
     "@context": "https://schema.org",
@@ -74,6 +76,7 @@ export function buildArticleSchema({
     description,
     datePublished: datePublished ?? dateModified,
     dateModified,
+    ...(image ? { image } : {}),
     author: {
       "@type": "Person",
       name: authorName,
@@ -108,59 +111,76 @@ export function buildItemListSchema(items: ItemListElement[]) {
 
 type ReviewSchemaInput = {
   itemName: string;
-  ratingValue: number;
-  bestRating?: number;
   summary: string;
   path: string;
   dateModified: string;
+  description?: string;
+  ratingValue?: number;
+  bestRating?: number;
 };
 
 export function buildReviewSchema({
   itemName,
-  ratingValue,
-  bestRating = 5,
   summary,
   path,
   dateModified,
+  description,
+  ratingValue,
+  bestRating = 5,
 }: ReviewSchemaInput) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    itemReviewed: {
-      "@type": "Product",
-      name: itemName,
-      url: `${siteConfig.url}${path}`,
-    },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue,
-      bestRating,
-    },
-    author: {
-      "@type": "Organization",
-      name: siteConfig.name,
-    },
-    reviewBody: summary,
-    datePublished: dateModified,
-    dateModified,
-    url: `${siteConfig.url}${path}`,
+  const pageUrl = `${siteConfig.url}${path}`;
+  const author = {
+    "@type": "Organization",
+    name: siteConfig.name,
   };
-}
 
-export function buildProductSchema(
-  name: string,
-  description: string,
-  path: string,
-) {
+  if (typeof ratingValue !== "number") {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "@id": `${pageUrl}#review`,
+      itemReviewed: {
+        "@type": "Organization",
+        "@id": `${pageUrl}#organization`,
+        name: itemName,
+      },
+      author,
+      reviewBody: summary,
+      datePublished: dateModified,
+      dateModified,
+      url: pageUrl,
+    };
+  }
+
+  const productId = `${pageUrl}#product`;
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
-    name,
+    "@id": productId,
+    name: itemName,
     description,
-    url: `${siteConfig.url}${path}`,
+    url: pageUrl,
     brand: {
       "@type": "Brand",
-      name,
+      name: itemName,
+    },
+    review: {
+      "@type": "Review",
+      "@id": `${pageUrl}#review`,
+      itemReviewed: {
+        "@id": productId,
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue,
+        bestRating,
+      },
+      author,
+      reviewBody: summary,
+      datePublished: dateModified,
+      dateModified,
+      url: pageUrl,
     },
   };
 }

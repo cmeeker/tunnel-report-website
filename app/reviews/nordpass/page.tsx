@@ -19,7 +19,7 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
 import { personas } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { buildArticleSchema } from "@/lib/seo/schema";
+import { buildArticleSchema, buildReviewSchema } from "@/lib/seo/schema";
 
 const title = "NordPass Review 2026: Pricing, Security and Specs";
 const description =
@@ -74,14 +74,22 @@ export default function NordPassReviewPage() {
   return (
     <article className="space-y-14 fade-in-up">
       <JsonLd
-        data={buildArticleSchema({
-          headline: h1,
-          description,
-          path,
-          dateModified: PASSWORD_MANAGER_UPDATED,
-          datePublished: PASSWORD_MANAGER_UPDATED,
-          authorName: personas.sarah.name,
-        })}
+        data={[
+          buildArticleSchema({
+            headline: h1,
+            description,
+            path,
+            dateModified: PASSWORD_MANAGER_UPDATED,
+            datePublished: PASSWORD_MANAGER_UPDATED,
+            authorName: personas.sarah.name,
+          }),
+          buildReviewSchema({
+            itemName: "NordPass",
+            summary: description,
+            path,
+            dateModified: PASSWORD_MANAGER_UPDATED,
+          }),
+        ]}
       />
 
       <Breadcrumbs
