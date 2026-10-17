@@ -3,10 +3,10 @@ import type { MetadataRoute } from "next";
 import { getSiteRoutes } from "@/lib/seo/routes";
 import { siteConfig } from "@/lib/site";
 
-export function getSitemapEntries(buildTime = new Date()): MetadataRoute.Sitemap {
+export function getSitemapEntries(): MetadataRoute.Sitemap {
   return getSiteRoutes().map((route) => ({
     url: `${siteConfig.url}${route.path}`,
-    lastModified: buildTime,
+    lastModified: route.lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
