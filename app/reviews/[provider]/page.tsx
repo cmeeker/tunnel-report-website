@@ -147,6 +147,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
           summary: provider.reviewSummary,
           path,
           dateModified: provider.dateModified,
+          datePublished: provider.datePublished,
         })}
       />
 

@@ -53,7 +53,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "New Yorkers have voracious media consumption habits and tend to maintain multiple streaming subscriptions. International content access matters here more than most cities given the demographic diversity — Hindi, Spanish, Mandarin, and Korean streaming services all have significant local demand. VPN reliability for accessing region-locked content libraries is a genuine use case, not just a nice-to-have.",
     recommendation:
-      "Focus on providers with New York or nearby East Coast servers and an automatic kill switch. Verizon Fios fiber plans leave the most headroom for VPN overhead. On Spectrum's 300 Mbps tier, test your speed with the VPN on and off. Test during your actual usage hours — a 6pm benchmark matters more than a 6am one in this market.",
+      "Focus on providers with New York or nearby East Coast servers and an automatic kill switch. Verizon Fios fiber plans leave the most headroom for VPN overhead. On Spectrum's 300 Mbps tier, test your speed with the VPN on and off. Test during your actual usage hours — a 6pm check matters more than a 6am one in this market.",
     neighborhoodNote:
       "Fios coverage is strongest in Manhattan, parts of Brooklyn, and Queens. The Bronx and Staten Island have more Spectrum and Optimum dependency. If you are in a Fios building, your VPN experience will be notably smoother than someone on legacy cable infrastructure in Washington Heights or the South Bronx.",
     populationContext:
@@ -144,7 +144,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "Austin's streaming demand spikes around live music, college sports, F1 weekends, and regional sports blackouts. VPN overhead needs to stay low enough for 4K live streams during evening congestion.",
     recommendation:
-      "On a fiber plan, you have more headroom for VPN overhead than on a lower-tier cable plan. Google Fiber and AT&T Fiber provide enough baseline throughput that WireGuard encryption barely registers. Spectrum users should prioritize NordVPN's speed floor or Surfshark's domestic routing and test during evening windows.",
+      "On a fiber plan, you have more headroom for VPN overhead than on a lower-tier cable plan. Google Fiber and AT&T Fiber provide enough baseline throughput that VPN overhead is less likely to be the bottleneck. Spectrum users on lower-tier cable plans should run their own speed test with the VPN on during evening hours and use the refund window if it falls short.",
     neighborhoodNote:
       "Fiber availability is strongest in newer apartments around the Domain, Mueller, and parts of South Austin. Older central neighborhoods can still depend on Spectrum cable, where evening congestion makes VPN server selection more important.",
     populationContext:

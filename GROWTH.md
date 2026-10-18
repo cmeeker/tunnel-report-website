@@ -49,9 +49,9 @@ Each page should include:
   - "Is NordVPN worth it in 2026?"
   - "Surfshark vs NordVPN for Netflix?"
   - "What is a no-logs VPN?"
-- Publish original-ish numbers: medians, speed floors, renewal prices, audit dates, route notes.
+- Publish original-ish numbers: renewal prices, audit dates, route notes.
 
-## Distribution Cadence
+## Distribution
 
 Do one distribution action per week:
 

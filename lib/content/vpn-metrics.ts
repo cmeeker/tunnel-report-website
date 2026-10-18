@@ -126,7 +126,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "streaming",
     title: "Best VPN for Streaming in 2026",
     description:
-      "Streaming requires consistent geo-unblocking, low buffering overhead, and stable reconnect behavior when platforms detect VPN traffic. NordVPN and ExpressVPN lead our streaming success rates; Surfshark is a strong budget alternative for US libraries.",
+      "For streaming, look at server locations, supported devices (Smart TVs, routers) and the provider's refund window, so you can cancel if a service you use doesn't work. NordVPN and ExpressVPN are our top streaming picks based on published specs; Surfshark is our budget pick.",
     pickSlug: "nordvpn",
     pickReason: "",
   },
@@ -134,7 +134,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "privacy",
     title: "Best VPN for Privacy in 2026",
     description:
-      "Privacy-first buyers should prioritize audit scope, jurisdiction, open-source clients, and payment anonymity over raw speed. Mullvad and Proton VPN lead this category; NordVPN is the best mainstream option with verified infrastructure audits.",
+      "Privacy-first buyers should prioritize audit scope, jurisdiction, open-source clients, and payment anonymity over raw speed.",
     pickSlug: "mullvad",
     pickReason: "Anonymous account numbers, cash/crypto payments, and zero affiliate marketing funnel.",
   },
@@ -144,13 +144,13 @@ export const useCaseSections: UseCaseSection[] = [
     description:
       "P2P users need verified no-logs policies, kill switch reliability, and jurisdictions that resist copyright trolling pressure. NordVPN, Mullvad, and Proton VPN all allow P2P; avoid providers with unclear logging history.",
     pickSlug: "nordvpn",
-    pickReason: "P2P-optimized servers, RAM-only infrastructure, and the strongest audit track record in our top five.",
+    pickReason: "P2P-optimized servers and RAM-only infrastructure.",
   },
   {
     id: "budget",
     title: "Best Cheap VPN in 2026",
     description:
-      "Budget buyers face a real tradeoff: introductory pricing versus renewal surprises and speed consistency. Surfshark offers the best value with unlimited devices. PureVPN Standard is $2.15/mo on its 2-year plan [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026.",
+      "Budget buyers face a real tradeoff: a low first-term price versus a higher renewal price. Surfshark is our budget pick, and its pricing page lists unlimited simultaneous device connections ([Surfshark pricing](https://surfshark.com/pricing), accessed Oct 17, 2026). PureVPN Standard is $2.15/mo on its 2-year plan [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026.",
     pickSlug: "surfshark",
     pickReason:
       "$2.49/mo on the 2-year Starter plan ($67.23 for the first 27 months) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026",
@@ -159,7 +159,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "gaming",
     title: "Best VPN for Gaming in 2026",
     description:
-      "Gaming VPNs need low latency, stable UDP routing, and minimal packet loss — not just high throughput. For competitive online play, a WireGuard-based protocol matters most.",
+      "For competitive online play, a WireGuard-based protocol matters most.",
     pickSlug: "nordvpn",
     pickReason: "WireGuard-based NordLynx on all platforms.",
   },
@@ -169,6 +169,6 @@ export const useCaseSections: UseCaseSection[] = [
     description:
       "Remote work VPNs need reliable kill switches, split tunneling for corporate apps, and stable connections across network changes. NordVPN and ExpressVPN offer the most mature split-tunnel implementations.",
     pickSlug: "nordvpn",
-    pickReason: "Mature kill switch, Threat Protection for malware blocking, and consistent performance on video calls.",
+    pickReason: "Mature kill switch and Threat Protection for malware blocking.",
   },
 ];

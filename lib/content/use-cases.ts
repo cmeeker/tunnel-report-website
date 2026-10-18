@@ -22,6 +22,7 @@ export type UseCaseGuide = {
   description: string;
   intro: string;
   dateModified: string;
+  datePublished?: string;
   updatedDateLabel?: string;
   primaryPick: string;
   picks: UseCasePick[];
@@ -35,22 +36,23 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Streaming in 2026",
     shortTitle: "Streaming",
     description:
-      "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on speed floor, geo-unblocking consistency, and app reliability.",
+      "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on geo-unblocking consistency, and app reliability.",
     intro:
-      "Streaming is the use case where VPN marketing most often gets ahead of reality. A provider can post huge speed-test screenshots and still fail if it cannot keep a consistent IP pool, reconnect cleanly after platform blocks, or keep 4K streams buffered during prime time.",
-    dateModified: "2026-04-08",
+      "Streaming is the use case where VPN marketing most often gets ahead of reality.",
+    datePublished: "2026-04-08",
+    dateModified: "2026-10-18",
+    updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
       { providerSlug: "nordvpn", label: "Best overall streaming VPN", reason: "NordVPN is our top streaming pick." },
       { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps and reliable region switching for non-technical users.", paidPick: streamingExpressPaidPick },
-      { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices and strong US library performance at lower entry pricing." },
+      { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices at lower entry pricing." },
     ],
     sections: [
       {
         heading: "What actually matters for streaming VPNs",
         paragraphs: [
-          "The important metric is not peak throughput; it is whether the VPN keeps enough speed during evening congestion to avoid buffering while also maintaining access to the content library you want.",
-          "We weight streaming performance by geo-unblocking consistency, reconnect behavior, Smart TV/router support, and median speed floor. NordVPN leads because it performs well across all four, not because it wins every single platform test.",
+          "We weigh streaming picks by server locations, Smart TV and router support, simultaneous connections and refund window, based on published specs. NordVPN is our top pick because it covers all four, not because it wins every one.",
         ],
       },
       {
@@ -82,19 +84,21 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, payment anonymity, and incident-response transparency.",
     intro:
       "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what audits tested, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
-    dateModified: "2026-04-08",
+    datePublished: "2026-04-08",
+    dateModified: "2026-10-18",
+    updatedDateLabel: "October 18, 2026",
     primaryPick: "mullvad",
     picks: [
       { providerSlug: "mullvad", label: "Best privacy purist pick", reason: "Anonymous account numbers, cash payments, open-source clients, and no affiliate funnel." },
       { providerSlug: "protonvpn", label: "Best transparency ecosystem", reason: "Swiss jurisdiction, open-source apps, credible free tier, and strong public privacy posture." },
-      { providerSlug: "nordvpn", label: "Best mainstream privacy VPN", reason: "Frequent infrastructure audits and RAM-only server architecture with better speeds." },
+      { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "Frequent infrastructure audits and RAM-only server architecture." },
     ],
     sections: [
       {
         heading: "Audit scope beats audit marketing",
         paragraphs: [
           "A no-logs audit only matters if the scope reaches real infrastructure, server configuration, and retention controls. Many providers advertise audits that are closer to policy reviews than technical verification.",
-          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is the best mainstream provider because its audit cadence and infrastructure claims are more mature than most commercial competitors.",
+          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is our mainstream pick. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
         ],
       },
       {
@@ -123,13 +127,15 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Torrenting in 2026",
     shortTitle: "Torrenting",
     description:
-      "Torrenting VPN recommendations based on kill switch reliability, P2P support, no-logs verification, jurisdiction, and speed consistency.",
+      "Torrenting VPN recommendations based on kill switch reliability, P2P support, no-logs verification, and jurisdiction.",
     intro:
-      "Torrenting is one of the few consumer VPN use cases where a weak kill switch or sloppy logging policy can create immediate consequences. We prioritize providers that support P2P clearly, document no-logs controls, and maintain stable WireGuard performance.",
-    dateModified: "2026-04-08",
+      "Torrenting is one of the few consumer VPN use cases where a weak kill switch or sloppy logging policy can create immediate consequences. We prioritize providers that support P2P clearly and document no-logs controls.",
+    datePublished: "2026-04-08",
+    dateModified: "2026-10-18",
+    updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best torrenting VPN for most users", reason: "P2P-optimized servers, reliable kill switch behavior, and strong speed floor." },
+      { providerSlug: "nordvpn", label: "Best torrenting VPN for most users", reason: "P2P-optimized servers and a built-in kill switch." },
       { providerSlug: "mullvad", label: "Best anonymous torrenting pick", reason: "Minimal account data and flat pricing, with no affiliate relationship influencing placement." },
       { providerSlug: "protonvpn", label: "Best privacy ecosystem", reason: "Open-source clients and clear P2P support on paid servers." },
     ],
@@ -138,7 +144,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "The kill switch is non-negotiable",
         paragraphs: [
           "For torrenting, a kill switch is not a nice-to-have checkbox. If the VPN drops and your torrent client keeps running on your real IP, the VPN failed the use case.",
-          "We weight reconnect behavior and leak prevention more heavily here than streaming success or app aesthetics.",
+          "We weight kill switch and leak-protection features more heavily here than streaming features or app design.",
         ],
       },
       {
@@ -151,7 +157,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Speed still matters",
         paragraphs: [
-          "P2P transfers expose weak speed floors quickly. A VPN that is fast for a single browser speed test may still struggle under sustained upload/download load.",
           "NordVPN remains our default pick because it offers P2P-optimized servers and a kill switch. Mullvad is the better ideological pick for users who value account anonymity above convenience.",
         ],
       },
@@ -169,9 +174,10 @@ export const useCaseGuides: UseCaseGuide[] = [
     description:
       "The best cheap VPNs based on full lifecycle cost, renewal pricing, device limits, privacy tradeoffs, and speed-per-dollar.",
     intro:
-      "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device coverage, speed consistency, and whether privacy controls survive the discount.",
-    dateModified: "2026-10-17",
-    updatedDateLabel: "October 17, 2026",
+      "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device limits, and whether privacy features are included at the discounted tier.",
+    datePublished: "2026-10-17",
+    dateModified: "2026-10-18",
+    updatedDateLabel: "October 18, 2026",
     primaryPick: "surfshark",
     picks: [
       { providerSlug: "surfshark", label: "Best cheap VPN overall", reason: "Unlimited devices on every plan. Intro price: $2.49/mo (USD) on the 24-month + 3-month Starter plan, $67.23 for the first 27 months (VAT may apply). Surfshark's pricing page doesn't list the renewal price, so check it at checkout." },
@@ -190,7 +196,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Where PureVPN fits",
         paragraphs: [
-          "PureVPN is often the lowest sticker price in our top five. That makes it appealing for light domestic browsing, but speed consistency and trust history keep it behind Surfshark as a default recommendation.",
+          "PureVPN is often the lowest sticker price in our top five. That makes it appealing for light domestic browsing, but Surfshark stays our default budget pick.",
           "If budget is your only constraint and you understand the tradeoffs, PureVPN can work. If you want the best cheap VPN for a household, Surfshark is the cleaner pick.",
         ],
       },
@@ -216,20 +222,16 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Gaming VPN recommendations based on latency, packet stability, WireGuard support, DDoS protection claims, and regional routing.",
     intro:
       "Gaming VPN marketing is full of nonsense. A VPN cannot magically lower latency on every route. It can help with routing consistency, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
-    dateModified: "2026-04-08",
+    datePublished: "2026-04-08",
+    dateModified: "2026-10-18",
+    updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
       { providerSlug: "nordvpn", label: "Best gaming VPN overall", reason: "NordVPN is our top gaming pick: it offers WireGuard-based NordLynx on every platform." },
-      { providerSlug: "surfshark", label: "Best value gaming VPN", reason: "Strong domestic throughput with unlimited devices for multi-console households." },
+      { providerSlug: "surfshark", label: "Budget gaming VPN", reason: "Unlimited devices for multi-console households." },
       { providerSlug: "expressvpn", label: "Best console setup", reason: "Clear router and device setup guides for living-room gaming.", paidPick: gamingExpressPaidPick },
     ],
     sections: [
-      {
-        heading: "Latency beats throughput for games",
-        paragraphs: [
-          "Most games use surprisingly little bandwidth. What matters is latency, jitter, and packet stability. A VPN that posts 900 Mbps but adds unstable routing is worse than a slower provider with cleaner nearby exits.",
-        ],
-      },
       {
         heading: "When a gaming VPN helps",
         paragraphs: [
@@ -258,10 +260,12 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Remote-work VPN picks based on split tunneling, kill switch reliability, network transitions, video-call stability, and malware blocking.",
     intro:
       "Remote workers need a different VPN than streamers. The winning provider must survive coffee-shop Wi-Fi, hotel networks, video calls, cloud apps, and corporate tools without forcing constant troubleshooting.",
-    dateModified: "2026-04-08",
+    datePublished: "2026-04-08",
+    dateModified: "2026-10-18",
+    updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best remote-work VPN overall", reason: "Best blend of speed floor, split tunneling, malware blocking, and mature apps." },
+      { providerSlug: "nordvpn", label: "Best remote-work VPN overall", reason: "Split tunneling, malware blocking and apps on every major platform." },
       { providerSlug: "expressvpn", label: "Best for low-maintenance setup", reason: "Polished apps and clear support docs for non-technical workers.", paidPick: workExpressPaidPick },
       { providerSlug: "protonvpn", label: "Best for privacy-minded professionals", reason: "Strong transparency and open-source clients for sensitive workflows." },
     ],
@@ -269,7 +273,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Remote work needs reliability more than peak speed",
         paragraphs: [
-          "A VPN that is impressive in a benchmark but flaky during video calls is a bad work tool. We weight reconnect behavior, split tunneling, and app stability more heavily here than maximum throughput.",
+          "For work, we weight split tunneling, kill switch and platform support more heavily than advertised maximum speeds.",
           "NordVPN is the best default because it has enough speed for video calls and file sync while still offering mature security controls.",
         ],
       },

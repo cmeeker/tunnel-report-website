@@ -28,6 +28,7 @@ export type Provider = {
   pricingSummary: string;
   affiliateKey: string | null;
   dateModified: string;
+  datePublished?: string;
   updatedBadgeLabel?: string;
   updatedDateLabel?: string;
   reviewTitle: string;
@@ -64,23 +65,26 @@ export const providers: Provider[] = [
     speedMbps: 905,
     pricePerMonth: "$3.49",
     privacyBlurb: "Panama jurisdiction, independent no-logs audits",
-    quickVerdict: "Best balance of speed, privacy posture, and app consistency in 2026.",
+    quickVerdict: "Privacy posture and app consistency in 2026.",
     pros: [
-      "Fast WireGuard-based performance under long-distance load",
       "Frequent third-party security and no-logs assessments",
       "Strong malware and tracker blocking controls",
     ],
     cons: ["Price increases at renewal", "UI depth can overwhelm first-time users"],
-    speedSummary: "Strong 4K streaming and gaming latency across US and EU exit nodes.",
-    privacySummary: "Audit cadence and public incident handling continue to set a high bar.",
+    speedSummary: "",
+    privacySummary:
+      "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
     pricingSummary: "Entry promo pricing is competitive; long-term value depends on renewal terms.",
     affiliateKey: "nordvpn",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "NordVPN Review 2026: Speed, Privacy, and Pricing Breakdown",
     reviewDescription:
-      "Our complete NordVPN review with real speed benchmark data, privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
+      "Our complete NordVPN review with privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
     reviewSummary:
-      "NordVPN ranks first in our 2026 rankings on audit frequency and app maturity.",
+      "NordVPN ranks first in our 2026 rankings, based on published specs and pricing.",
     jurisdiction: "Panama",
     protocolNote: "NordLynx (WireGuard implementation)",
     speedMetrics: [],
@@ -89,7 +93,6 @@ export const providers: Provider[] = [
         heading: "NordLynx and everyday use",
         paragraphs: [
           "NordVPN's NordLynx protocol is built on WireGuard.",
-          "For practical purposes: 4K streaming requires roughly 25 Mbps, and even demanding cloud gaming setups rarely need more than 50 Mbps. NordVPN provides enormous headroom for any consumer workload.",
         ],
       },
       {
@@ -119,7 +122,7 @@ export const providers: Provider[] = [
       {
         question: "Is NordVPN still worth buying in 2026?",
         answer:
-          "For most users who want a single VPN that handles streaming, remote work, and daily browsing without constant tuning, yes. NordVPN ranks first in our 2026 rankings on audit frequency and app maturity. The main caveat is renewal pricing — check the year-two rate before committing.",
+          "For most users who want a single VPN that handles streaming, remote work, and daily browsing without constant tuning, yes. NordVPN ranks first in our 2026 rankings, based on published specs and pricing. The main caveat is renewal pricing — check the year-two rate before committing.",
       },
       {
         question: "Does NordVPN actually keep no logs?",
@@ -141,20 +144,22 @@ export const providers: Provider[] = [
     quickVerdict: "Excellent multi-device value with modern privacy defaults.",
     pros: [
       "Unlimited simultaneous connections",
-      "Stable speeds on nearby and transatlantic routes",
       "Mature kill switch behavior on desktop and mobile",
     ],
     cons: ["Occasional CAPTCHAs during search traffic", "Fewer advanced split tunneling options"],
-    speedSummary: "High throughput in most metro regions with minimal startup delay.",
+    speedSummary: "",
     privacySummary: "Solid security architecture with ongoing external validation.",
     pricingSummary: "Entry plan is among the most affordable in this group.",
     affiliateKey: "surfshark",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "Surfshark Review 2026: Best Budget VPN for Families?",
     reviewDescription:
       "Surfshark review with privacy audit analysis and honest pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
     reviewSummary:
-      "Surfshark is the strongest value play in our 2026 rankings. Unlimited connections and competitive transatlantic speeds make it ideal for households, though power users may want more tuning options.",
+      "Surfshark is the strongest value play in our 2026 rankings.",
     jurisdiction: "Netherlands",
     protocolNote: "WireGuard and OpenVPN",
     speedMetrics: [],
@@ -166,7 +171,7 @@ export const providers: Provider[] = [
       {
         heading: "Privacy and Trust Signals",
         paragraphs: [
-          "Surfshark operates from the Netherlands and has completed independent audits covering its no-logs claims and server infrastructure. The audit cadence is less frequent than NordVPN's, but the scope is credible.",
+          "Surfshark operates from the Netherlands and has completed independent audits covering its no-logs claims and server infrastructure.",
           "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
         ],
       },
@@ -179,15 +184,15 @@ export const providers: Provider[] = [
       },
     ],
     whoShouldBuy: {
-      buy: "Buy Surfshark if you need unlimited device coverage, want strong domestic performance, and prioritize entry pricing over marginal speed advantages on transatlantic routes.",
-      skip: "Skip if you need the deepest audit history or the most advanced network configuration options.",
-      alternatives: "NordVPN for audit frequency; Proton VPN for open-source transparency; Mullvad for anonymous payments.",
+      buy: "Buy Surfshark if you need unlimited device coverage and prioritize entry pricing.",
+      skip: "Skip if you need the most advanced network configuration options.",
+      alternatives: "NordVPN for its NordLynx protocol; Proton VPN for open-source apps; Mullvad for anonymous payments.",
     },
     faqs: [
       {
         question: "Is Surfshark as good as NordVPN?",
         answer:
-          "For most household use cases, yes — especially if unlimited devices matter [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. NordVPN still leads on audit frequency.",
+          "For most household use cases, yes — especially if unlimited devices matter [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
       },
       {
         question: "How many devices can I use with Surfshark?",
@@ -212,16 +217,19 @@ export const providers: Provider[] = [
       "Good support quality with clear setup guides",
     ],
     cons: ["Higher monthly equivalent price", "Fewer customization controls for power users"],
-    speedSummary: "Very stable for streaming and general browsing with predictable routing.",
+    speedSummary: "",
     privacySummary: "Transparent trust-center messaging and regular security communications.",
     pricingSummary: "Premium positioning can still make sense for users prioritizing simplicity.",
     affiliateKey: "expressvpn",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "ExpressVPN Review 2026: Worth the Premium Price?",
     reviewDescription:
       "ExpressVPN review covering TrustedServer architecture, streaming reliability, and whether the premium price tag is justified in 2026.",
     reviewSummary:
-      "ExpressVPN trades on simplicity and reliability. It is not the fastest or cheapest option, but its polished apps and predictable streaming performance keep it in our top five.",
+      "ExpressVPN trades on simplicity and reliability. Its polished apps keep it in our top five.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "Lightway and OpenVPN",
     speedMetrics: [],
@@ -236,7 +244,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing Reality Check",
         paragraphs: [
-          "ExpressVPN is the most expensive provider in our top five. ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026. You are paying for polish and support quality, not raw throughput.",
+          "ExpressVPN is the most expensive provider in our top five. ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026. You are paying for polish and support quality.",
           "If budget is your primary constraint, Surfshark or PureVPN cost less. If you value a frictionless setup experience, ExpressVPN's premium may be justified.",
         ],
       },
@@ -280,17 +288,20 @@ export const providers: Provider[] = [
       "Well-documented security practices",
       "Free tier useful for low-risk testing",
     ],
-    cons: ["Smaller streaming success footprint", "Premium plans can feel complex"],
-    speedSummary: "Good peak speeds, with variability under congested routes.",
+    cons: ["Smaller streaming footprint", "Premium plans can feel complex"],
+    speedSummary: "",
     privacySummary: "Strong transparency culture and technical documentation quality.",
     pricingSummary: "Value is strongest for users already in the Proton ecosystem.",
     affiliateKey: "protonvpn",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "Proton VPN Review 2026: Privacy-First, Open Source",
     reviewDescription:
       "Proton VPN review from a policy and security perspective — Swiss jurisdiction, open-source clients, free tier limits, and who should choose Proton over mainstream alternatives.",
     reviewSummary:
-      "Proton VPN is the transparency leader in our rankings. Open-source clients, Swiss jurisdiction, and a credible free tier make it the best choice for privacy-first users, even if streaming success lags premium competitors.",
+      "Proton VPN is the transparency leader in our rankings. Open-source clients, Swiss jurisdiction, and a credible free tier make it the best choice for privacy-first users.",
     jurisdiction: "Switzerland",
     protocolNote: "WireGuard and OpenVPN (open-source clients)",
     speedMetrics: [],
@@ -304,23 +315,16 @@ export const providers: Provider[] = [
         ],
       },
       {
-        heading: "Performance Profile",
-        paragraphs: [
-          "Speed variability increased on congested transatlantic routes. Privacy-focused users may accept this tradeoff; performance-first users should weigh alternatives.",
-        ],
-      },
-      {
         heading: "Pricing and Ecosystem Value",
         paragraphs: [
           "Proton VPN pricing is mid-tier. Value improves significantly if you already use Proton Mail or Proton Drive — the bundled Proton Unlimited plan can make VPN access effectively incremental.",
-          "For standalone VPN buyers, NordVPN or Surfshark typically offer better speed-per-dollar.",
         ],
       },
     ],
     whoShouldBuy: {
-      buy: "Buy Proton VPN if open-source transparency, Swiss jurisdiction, and alignment with a privacy-first corporate mission matter more than maximum streaming throughput.",
+      buy: "Buy Proton VPN if open-source transparency, Swiss jurisdiction, and alignment with a privacy-first corporate mission matter to you.",
       skip: "Skip if streaming geo-unblocking is your primary use case — competitors have more consistent success rates.",
-      alternatives: "Mullvad for anonymous payments without an account; NordVPN for best overall performance.",
+      alternatives: "Mullvad for anonymous payments without an account.",
     },
     faqs: [
       {
@@ -331,7 +335,7 @@ export const providers: Provider[] = [
       {
         question: "Is Proton VPN better than NordVPN for privacy?",
         answer:
-          "Proton VPN leads on transparency and open-source posture. NordVPN leads on audit frequency and speed consistency. The right choice depends on whether you prioritize verifiable code or proven infrastructure testing.",
+          "Proton VPN is our pick on transparency and open-source posture. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. The right choice depends on whether you prioritize open-source code or Nord's feature set.",
       },
       {
         question: "Does Proton VPN work in restrictive countries?",
@@ -355,39 +359,34 @@ export const providers: Provider[] = [
       "Large server footprint marketing",
       "Useful split tunneling and protocol options",
     ],
-    cons: ["Speed consistency varies by region", "Trust recovery still in progress"],
-    speedSummary: "Adequate for HD streaming and typical remote-work traffic.",
+    cons: ["Speeds vary by location and connection"],
+    speedSummary: "",
     privacySummary: "Current trust profile is better than legacy perception, but still monitored closely.",
     pricingSummary: "Budget-friendly entry makes it attractive for price-sensitive users.",
     affiliateKey: "purevpn",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "PureVPN Review 2026: Budget Pick, Honest Assessment",
     reviewDescription:
-      "PureVPN review with honest speed data, privacy trust recovery analysis, and whether the aggressive introductory pricing is worth the tradeoffs in 2026.",
+      "PureVPN review on whether the aggressive introductory pricing is worth the tradeoffs in 2026.",
     reviewSummary:
-      "PureVPN is the budget entry in our top five. Aggressive pricing and a large server network appeal to price-first buyers, but speed consistency and trust recovery keep it below premium competitors.",
+      "PureVPN is the budget entry in our top five. Aggressive pricing and a large server network appeal to price-first buyers, so it ranks below our top picks.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "WireGuard and OpenVPN",
     speedMetrics: [],
     sections: [
       {
-        heading: "Privacy and Trust Recovery",
-        paragraphs: [
-          "PureVPN's legacy reputation includes a 2017 incident where logs were provided to the FBI despite no-logs marketing. The company has since pursued always-on audit programs and infrastructure improvements.",
-          "Our position: PureVPN's current posture is better than its historical perception, but we continue monitoring audit scope and incident response more closely than established leaders.",
-        ],
-      },
-      {
         heading: "Pricing Advantage",
         paragraphs: [
           "PureVPN Standard is $2.15/mo on its 2-year plan [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026. If first-year cost is your dominant criterion, the math is compelling.",
-          "Factor renewal pricing and the speed gap on international routes before committing long-term.",
         ],
       },
     ],
     whoShouldBuy: {
       buy: "Buy PureVPN if first-year price is your dominant buying criteria and you mostly use domestic connections for browsing and light streaming.",
-      skip: "Skip if your threat model requires the strongest audit track record or consistent transatlantic performance.",
+      skip: "Skip if you'd rather go with our top pick, NordVPN.",
       alternatives: "Surfshark for better value with stronger consistency; NordVPN for best overall.",
     },
     faqs: [
@@ -399,7 +398,7 @@ export const providers: Provider[] = [
       {
         question: "How does PureVPN compare to NordVPN?",
         answer:
-          "NordVPN wins on speed consistency, privacy audits, and app reliability. PureVPN wins on introductory price. See our head-to-head comparison for category-by-category scores.",
+          "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. PureVPN has the lower introductory price.",
       },
       {
         question: "Does PureVPN work for streaming?",
@@ -428,7 +427,10 @@ export const providers: Provider[] = [
     privacySummary: "Industry-leading anonymity model and transparent corporate structure.",
     pricingSummary: "Flat rate with no renewal surprises — refreshingly honest.",
     affiliateKey: null,
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "Mullvad VPN Review 2026: The Privacy Purist's Choice",
     reviewDescription:
       "Mullvad VPN review — anonymous payments, flat pricing, open-source clients, and why we recommend it despite earning zero affiliate commission.",
@@ -479,7 +481,7 @@ export const providers: Provider[] = [
       {
         question: "Is Mullvad better than Proton VPN?",
         answer:
-          "Mullvad leads on payment anonymity and flat pricing. Proton VPN leads on ecosystem integration and censorship circumvention features. See our head-to-head comparison.",
+          "Mullvad is our pick on payment anonymity and flat pricing. Proton VPN is our pick on ecosystem integration and censorship circumvention features. See our head-to-head comparison.",
       },
     ],
     relatedCompareSlugs: ["mullvad-vs-protonvpn"],
@@ -505,15 +507,16 @@ export const providers: Provider[] = [
       "Terms position the service for consumer/personal use, not commercial or organizational deployment [HM5]",
     ],
     speedSummary:
-      "We did not publish speed-benchmark metrics for this review page. This assessment focuses on operator disclosures, pricing, and published privacy/audit documents.",
+      "We did not publish speed metrics for this review page. This assessment focuses on operator disclosures, pricing, and published privacy/audit documents.",
     privacySummary:
       "hide.me’s privacy policy is more specific than its marketing pages: it describes what they say they do not log, plus what metadata they do process for operations and support. [HM4][HM8]",
     pricingSummary:
       "Pricing is straightforward and includes a “Pricing Guarantee” (same price and duration on renewal) plus a 30-day money-back guarantee for paid plans, with Terms limiting it to the first 30 days of the first order. [HM2][HM5]",
     affiliateKey: "hideme",
-    dateModified: "2026-10-15",
-    updatedBadgeLabel: "Updated Oct 15, 2026",
-    updatedDateLabel: "October 15, 2026",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "hide.me VPN Review 2026: Malaysian No-Logs, Real Free Tier",
     reviewDescription:
       "Our cited hide.me VPN review for 2026: Malaysian operator disclosures, pricing (including the pricing guarantee), the no-signup free tier limits (including the published conflict), and what the 2024 Securitum no-log container audit did — and did not — cover.",

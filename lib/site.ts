@@ -56,18 +56,18 @@ export const primaryNav: PrimaryNavItem[] = [
     featured: {
       label: "Best VPNs 2026",
       href: "/best-vpns",
-      description: "Our top-ranked providers scored across speed, privacy, jurisdiction, and pricing transparency.",
+      description: "Our top-ranked providers, compared on privacy, jurisdiction, and pricing transparency.",
       badge: "Updated April 2026",
     },
     columns: [
       {
         heading: "By Use Case",
         items: [
-          { label: "Best VPN for Streaming", href: "/best-vpn-for/streaming", description: "No buffering, no geo-blocks" },
+          { label: "Best VPN for Streaming", href: "/best-vpn-for/streaming", description: "Server locations and refund window" },
           { label: "Best VPN for Privacy", href: "/best-vpn-for/privacy", description: "Audited no-log policies" },
           { label: "Best VPN for Torrenting", href: "/best-vpn-for/torrenting", description: "P2P-optimized servers" },
           { label: "Best Cheap VPN 2026", href: "/best-vpn-for/budget", description: "Under $3/mo, still solid" },
-          { label: "Best VPN for Gaming", href: "/best-vpn-for/gaming", description: "Low latency, stable connections" },
+          { label: "Best VPN for Gaming", href: "/best-vpn-for/gaming", description: "WireGuard-based protocol" },
           { label: "Best VPN for Work", href: "/best-vpn-for/work", description: "Split tunneling + kill switch" },
         ],
       },
@@ -103,7 +103,7 @@ export const primaryNav: PrimaryNavItem[] = [
     featured: {
       label: "NordVPN vs Proton VPN",
       href: "/compare/nordvpn-vs-protonvpn",
-      description: "Speed leader vs transparency — 6-category head-to-head breakdown.",
+      description: "6-category head-to-head breakdown.",
     },
     columns: [
       {
@@ -111,8 +111,8 @@ export const primaryNav: PrimaryNavItem[] = [
         items: [
           { label: "NordVPN vs PureVPN", href: "/compare/nordvpn-vs-purevpn", description: "Full 6-category breakdown" },
           { label: "NordVPN vs ExpressVPN", href: "/compare/nordvpn-vs-expressvpn", description: "Premium head-to-head" },
-          { label: "NordVPN vs Proton VPN", href: "/compare/nordvpn-vs-protonvpn", description: "Speed leader vs transparency" },
-          { label: "Surfshark vs NordVPN", href: "/compare/surfshark-vs-nordvpn", description: "Value vs performance" },
+          { label: "NordVPN vs Proton VPN", href: "/compare/nordvpn-vs-protonvpn", description: "Head-to-head" },
+          { label: "Surfshark vs NordVPN", href: "/compare/surfshark-vs-nordvpn", description: "Value" },
           { label: "Mullvad vs Proton VPN", href: "/compare/mullvad-vs-protonvpn", description: "Privacy-first showdown" },
           { label: "NordPass vs Bitwarden", href: "/compare/nordpass-vs-bitwarden", description: "Password manager price and fit" },
         ],

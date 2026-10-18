@@ -39,7 +39,7 @@ const bestVpnFaqs = [
   {
     question: "Why is NordVPN ranked first over cheaper alternatives?",
     answer:
-      "Because our scoring weights consistent performance and verifiable security behavior more heavily than introductory pricing. NordVPN keeps the top spot on audit cadence and app maturity.",
+      "Because our ranking weights published security features and pricing over the full plan term more heavily than introductory pricing. NordVPN is our top pick based on published specs.",
   },
   {
     question: "Can I trust a free VPN instead?",
@@ -55,7 +55,7 @@ export default function BestVpnsPage() {
       "Independent ranking of the top VPN services based on speed, privacy controls, and value.",
     path: "/best-vpns",
     datePublished: "2026-04-08",
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-18",
     image: getPageOgImageUrl("/best-vpns"),
   });
 
@@ -80,7 +80,7 @@ export default function BestVpnsPage() {
         />
 
         <header className="space-y-5">
-          <span className="badge badge-teal">Updated April 2026</span>
+          <span className="badge badge-teal">Updated October 18, 2026</span>
           <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
             Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports
           </h1>
@@ -88,7 +88,7 @@ export default function BestVpnsPage() {
             Several providers have shifted position since our last update. Here is where the market
             stands.
           </p>
-          <AuthorByline date={siteConfig.updatedDate} />
+          <AuthorByline date="October 18, 2026" />
         </header>
 
         <DisclosureBanner />
@@ -96,10 +96,8 @@ export default function BestVpnsPage() {
         <section className="prose-dark space-y-4">
           <h2 className="text-xl font-bold text-white">What Changed in This Update</h2>
           <p>
-            The biggest shift since our Q4 2025 rankings is in the mid-tier: Surfshark&apos;s connection
-            stability improved materially on transatlantic routes, and Proton VPN&apos;s free tier
-            continues to function as a credible entry point for low-risk users. NordVPN keeps the top
-            spot on audit cadence and app maturity.
+            The biggest shift since our Q4 2025 rankings is in the mid-tier: Proton VPN&apos;s free tier
+            continues to function as a credible entry point for low-risk users. NordVPN stays our top pick.
           </p>
           <p>
             The regulatory backdrop matters too. The FBI&apos;s IC3 reported $12.5 billion in online
@@ -166,14 +164,12 @@ export default function BestVpnsPage() {
                   </div>
                 </div>
 
-                <div className="grid gap-4 rounded-lg border border-[#1e293b] bg-[#0d1221] p-4 md:grid-cols-3">
-                  <div>
-                    <p className="text-xs font-semibold uppercase text-[#64748b]">Speed</p>
-                    <p className="mt-1 text-sm text-[#94a3b8]">{vpn.speedSummary}</p>
-                  </div>
+                <div className="grid gap-4 rounded-lg border border-[#1e293b] bg-[#0d1221] p-4 md:grid-cols-2">
                   <div>
                     <p className="text-xs font-semibold uppercase text-[#64748b]">Privacy</p>
-                    <p className="mt-1 text-sm text-[#94a3b8]">{vpn.privacySummary}</p>
+                    <p className="mt-1 text-sm text-[#94a3b8]">
+                      <CitedText text={vpn.privacySummary} />
+                    </p>
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase text-[#64748b]">Value</p>
@@ -304,8 +300,8 @@ export default function BestVpnsPage() {
           <span className="badge badge-teal mb-3 text-[0.65rem]">Editor&apos;s Choice</span>
           <h2 className="text-lg font-bold text-white">Quick Pick: NordVPN</h2>
           <p className="mt-2 text-sm leading-relaxed text-[#94a3b8]">
-            If you need one recommendation, NordVPN ranks first on audit frequency and app maturity
-            in this update.
+            If you need one recommendation, NordVPN is our top pick in this update, based on published
+            specs.
           </p>
           <div className="mt-4">
             <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />

@@ -21,6 +21,7 @@ export type Guide = {
   description: string;
   dek: string;
   dateModified: string;
+  datePublished?: string;
   category: "Methodology" | "Privacy" | "Pricing" | "Protocol";
   sections: GuideSection[];
   faqs: FaqItem[];
@@ -41,10 +42,13 @@ export const guides: Guide[] = [
     slug: "wireguard-vs-openvpn",
     title: "WireGuard vs OpenVPN: Which VPN Protocol Should You Use?",
     description:
-      "WireGuard vs OpenVPN explained in plain English: speed, privacy, auditability, battery life, censorship resistance, and when to switch protocols.",
+      "WireGuard vs OpenVPN explained in plain English: privacy, auditability, battery life, censorship resistance, and when to switch protocols.",
     dek:
-      "WireGuard is usually faster and easier on battery. OpenVPN is older, battle-tested, and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
-    dateModified: "2026-10-15",
+      "OpenVPN is older, battle-tested, and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     category: "Protocol",
     relatedReviewSlugs: ["nordvpn", "surfshark", "protonvpn"],
     relatedCompareSlugs: ["surfshark-vs-nordvpn", "nordvpn-vs-expressvpn"],
@@ -52,14 +56,14 @@ export const guides: Guide[] = [
       {
         heading: "The short version",
         paragraphs: [
-          "For most users in 2026, WireGuard or a WireGuard-based implementation should be the default protocol. It is leaner, faster to reconnect, and typically easier on laptop and phone batteries than OpenVPN.",
+          "For most users in 2026, WireGuard or a WireGuard-based implementation should be the default protocol. It is leaner and typically easier on laptop and phone batteries than OpenVPN.",
           "OpenVPN still matters. It has a long security history, mature tooling, and can be easier to disguise on networks that aggressively block newer VPN protocols.",
         ],
       },
       {
-        heading: "Why WireGuard feels faster",
+        heading: "WireGuard",
         paragraphs: [
-          "WireGuard's codebase is dramatically smaller than OpenVPN's, which reduces overhead and simplifies implementation. In consumer VPN apps, that usually translates into faster connection setup and higher median throughput.",
+          "WireGuard's codebase is dramatically smaller than OpenVPN's, which reduces overhead and simplifies implementation.",
           "NordVPN's NordLynx, Surfshark's WireGuard mode, and Proton VPN all offer WireGuard-based connections.",
         ],
       },
@@ -91,7 +95,10 @@ export const guides: Guide[] = [
       "No-logs VPN claims explained: what providers can still collect, what audits verify, and how to evaluate no-logs marketing without trusting slogans.",
     dek:
       "A no-logs claim is only useful when you understand what data is excluded, what metadata remains, and whether an independent audit tested real infrastructure.",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     category: "Privacy",
     relatedReviewSlugs: ["mullvad", "protonvpn", "nordvpn"],
     relatedCompareSlugs: ["mullvad-vs-protonvpn", "nordvpn-vs-protonvpn"],
@@ -121,7 +128,7 @@ export const guides: Guide[] = [
     faqs: [
       { question: "Can a no-logs VPN identify me?", answer: "It may still have account, payment, or support records. Strong providers minimize this data and keep it separate from traffic activity." },
       { question: "Are no-logs audits trustworthy?", answer: "Some are. Trust depends on auditor reputation, technical scope, publication detail, and whether audits repeat over time." },
-      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad leads on account minimization. NordVPN leads among mainstream affiliate providers on audit cadence and infrastructure maturity." },
+      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad requires no email to sign up. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025." },
     ],
   },
   {
@@ -172,9 +179,10 @@ export const guides: Guide[] = [
       "We checked intro and renewal prices for NordVPN, Surfshark, ExpressVPN, Proton and more on Oct 15, 2026. Here's what they cost after the first term, where providers publish it.",
     dek:
       "The cheapest VPN at checkout is not always the cheapest VPN over two years. Renewal pricing is where many buyers lose the savings they thought they were getting.",
-    dateModified: "2026-10-15",
-    updatedBadgeLabel: "Updated Oct 15, 2026",
-    updatedDateLabel: "October 15, 2026",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     category: "Pricing",
     sourceIds: ["S5", "S8", "S7", "S6", "P1", "MV1", "H1"],
     relatedReviewSlugs: ["surfshark", "purevpn", "nordvpn"],
@@ -252,7 +260,7 @@ export const guides: Guide[] = [
       {
         heading: "When switching makes sense",
         paragraphs: [
-          "Switch when renewal pricing rises and your current provider is not clearly better for your use case. Surfshark and PureVPN often win on entry price; NordVPN and ExpressVPN justify higher prices with stronger performance or polish.",
+          "Switch when renewal pricing rises and your current provider is not clearly better for your use case. Surfshark and PureVPN often win on entry price.",
           "If your current provider is reliable and the renewal rate is fair, switching for a marginal discount may not be worth the setup friction.",
         ],
       },

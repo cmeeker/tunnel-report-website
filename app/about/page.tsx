@@ -7,7 +7,6 @@ import { LastUpdated } from "@/components/LastUpdated";
 import { JsonLd } from "@/components/JsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
-import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "About Tunnel Report: Methodology and Editorial Standards",
@@ -43,7 +42,8 @@ export default function AboutPage() {
           description:
             "Methodology, editorial standards, and corrections policy for Tunnel Report VPN coverage.",
           path: "/about",
-          dateModified: "2026-04-08",
+          datePublished: "2026-04-08",
+          dateModified: "2026-10-18",
         })}
       />
 
@@ -65,7 +65,8 @@ export default function AboutPage() {
           smaller than it should be, and readers who care about measurable protection deserve a
           publication that operates at a higher standard.
         </p>
-        <LastUpdated date={siteConfig.updatedDate} />      </header>
+        <LastUpdated date="October 18, 2026" />
+      </header>
 
       <hr className="divider-glow" />
 
@@ -175,7 +176,7 @@ export default function AboutPage() {
             },
             {
               title: "Open Methodology",
-              description: "Our testing framework is published in full. Readers can evaluate our process, not just our conclusions.",
+              description: "Our ranking method is published in full. Readers can evaluate our process, not just our conclusions.",
             },
           ].map((item) => (
             <div key={item.title} className="glass-card p-7">

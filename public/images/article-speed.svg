@@ -6,5 +6,5 @@
   <circle cx="320" cy="220" r="10" fill="#00D4AA"/>
   <circle cx="420" cy="140" r="10" fill="#00D4AA"/>
   <circle cx="520" cy="165" r="10" fill="#00D4AA"/>
-  <text x="72" y="72" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">Speed Benchmarks</text>
+  <text x="72" y="72" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="24" font-weight="700">Published specs</text>
 </svg>

@@ -10,7 +10,7 @@ export function buildLlmsText({ full = false } = {}) {
     "",
     "Purpose",
     "- Tunnel Report is an independent publication focused on VPN testing, privacy analysis, and comparison reporting.",
-    "- Rankings are based on repeatable benchmarks, privacy policy analysis, jurisdiction review, and pricing transparency.",
+    "- Rankings are based on published specs, privacy policy analysis, jurisdiction review, and pricing transparency.",
     "- Affiliate relationships are disclosed and do not determine scores or editorial conclusions.",
     "",
     "Primary Routes",
