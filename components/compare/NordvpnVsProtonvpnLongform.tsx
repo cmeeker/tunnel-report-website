@@ -106,14 +106,14 @@ export function NordvpnVsProtonvpnLongform() {
             label="Visit NordVPN"
           />
           <AffiliateCTA
-            href="https://go.getproton.me/aff_c?offer_id=26&aff_id=19779"
+            href="https://protonvpn.com/"
             partner="protonvpn"
             label="Visit Proton VPN"
           />
         </div>
 
         <section className="prose-dark space-y-4">
-          <p>Visit NordVPN and Visit Proton VPN CTA rows use the tracked hrefs above.</p>
+          <p>Visit NordVPN uses the tracked href above. Visit Proton VPN links to https://protonvpn.com/.</p>
         </section>
       </section>
 
@@ -200,7 +200,7 @@ export function NordvpnVsProtonvpnLongform() {
           2025 Securitum PDF opened: 18 August 2025 – 19 September 2025; on-site 18–20 August 2025 Zürich; Martin
           Matyja, Maciej Szymczak; bare-metal Proton AG owns. Conclusion: no user activity logging / connection
           metadata / traffic inspection contradicting no-logs.           2026 Securitum quoted on Proton blog; Drive{" "}
-          <PlainSourceLink href="https://drive.proton.me/urls/DZVEJZFYHM#FPSKdUEykprb" />
+          <PlainSourceLink href="https://protonvpn.com/" />
           ; guessed Securitum 2026 PDF 404. Treat 2026 as published by Proton, not independently downloaded. Apps open
           source{" "}
           <PricingLink href="https://github.com/ProtonVPN">github.com/ProtonVPN</PricingLink>
@@ -363,7 +363,7 @@ export function NordvpnVsProtonvpnLongform() {
             </a>
           </li>
           <li>
-            <PlainSourceLink href="https://drive.proton.me/urls/DZVEJZFYHM#FPSKdUEykprb" />{" "}
+            <PlainSourceLink href="https://protonvpn.com/" />{" "}
             2026 Drive, 2026 public PDF 404
           </li>
           <li>

@@ -173,7 +173,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
         <RatingStars rating={provider.score} size="lg" />
       </header>
 
-      <DisclosureBanner />
+      {provider.slug === "protonvpn" ? null : <DisclosureBanner />}
 
       {provider.sections.map((section) => (
         <section key={section.heading} className="prose-dark space-y-4">

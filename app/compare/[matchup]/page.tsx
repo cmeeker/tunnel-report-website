@@ -123,7 +123,11 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         </section>
       ) : null}
 
-      {comparison.slug === "surfshark-vs-protonvpn" ? null : <DisclosureBanner />}
+      {comparison.slug === "surfshark-vs-protonvpn" ||
+      comparison.slug === "expressvpn-vs-protonvpn" ||
+      comparison.slug === "mullvad-vs-protonvpn" ? null : (
+        <DisclosureBanner />
+      )}
 
       {comparison.specRows ? (
         <section className="space-y-4">
@@ -281,11 +285,10 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                   />
                 ) : (
                   <a
-                    href="https://go.getproton.me/aff_c?offer_id=26&aff_id=19779"
+                    href="https://protonvpn.com/"
                     className="affiliate-cta inline-flex"
                     target="_blank"
-                    rel="nofollow sponsored noopener noreferrer"
-                    data-partner="protonvpn"
+                    rel="noopener noreferrer"
                   >
                     Visit Proton VPN
                   </a>

@@ -6,6 +6,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
+import { CitedText } from "@/components/CitedText";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -56,7 +57,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
   const cityFaqs = [
     {
       question: `What is the best VPN for ${guide.city} residents?`,
-      answer: `Based on our testing with local ISPs (${guide.localIsps.join(", ")}), NordVPN offers the best combination of speed consistency and low-latency routing for ${guide.city} users. Surfshark is a strong budget alternative. ${guide.recommendation}`,
+      answer: `NordVPN is our top pick for ${guide.city} based on its published specs, including independent no-logs audits [nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/). Surfshark is our budget pick, with unlimited devices on every plan [V1]. ${guide.recommendation}`,
     },
     {
       question: `Does VPN performance vary by neighborhood in ${guide.city}?`,
@@ -64,7 +65,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
     },
     {
       question: `Which ${guide.city} ISP works best with a VPN?`,
-      answer: `Fiber-based ISPs in ${guide.city} provide the best VPN experience because the higher baseline speeds absorb VPN overhead more gracefully.`,
+      answer: `Every VPN adds some overhead, so a faster plan leaves more headroom. Run a speed test with the VPN on and off at the times you usually go online.`,
     },
   ];
 
@@ -111,8 +112,8 @@ export default async function CityVpnPage({ params }: CityPageProps) {
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-white">Local ISP Baseline Speeds in {guide.city}</h2>
         <p className="text-sm text-[#94a3b8]">
-          Understanding your ISP baseline matters because VPN overhead is a percentage of your
-          available bandwidth. FCC broadband labeling now requires standardized speed
+          Your ISP plan sets the ceiling, and a VPN can only lower it, so start with your plan&apos;s
+          advertised speed. FCC broadband labeling now requires standardized speed
           disclosures<CitationLink source={citationSources.S4} />.
         </p>
         <div className="glass-card overflow-x-auto p-2">
@@ -160,7 +161,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         <h2 className="text-2xl font-bold text-white">
           Streaming, Media, and Local Use Cases
         </h2>
-        <p>{guide.streamingNeeds}</p>
+        <p><CitedText text={guide.streamingNeeds} /></p>
       </section>
 
       <hr className="divider-glow" />
@@ -170,7 +171,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         <h2 className="text-2xl font-bold text-white">
           Neighborhood-Level Connectivity in {guide.city}
         </h2>
-        <p>{guide.neighborhoodNote}</p>
+        <p><CitedText text={guide.neighborhoodNote} /></p>
       </section>
 
       {guide.localColor ? (
@@ -196,7 +197,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           <span className="badge badge-teal">Recommendation for {guide.city}</span>
         </div>
         <div className="space-y-5 p-8">
-          <p className="leading-relaxed text-[#cbd5e1]">{guide.recommendation}</p>
+          <p className="leading-relaxed text-[#cbd5e1]"><CitedText text={guide.recommendation} /></p>
           <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
         </div>
       </section>
@@ -205,7 +206,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
 
       <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
 
-      <FaqSection faqs={cityFaqs} />
+      <FaqSection faqs={cityFaqs} renderAnswer={(answer) => <CitedText text={answer} />} />
 
       <SourcesList sources={citySources} />
     </article>

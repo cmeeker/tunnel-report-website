@@ -112,7 +112,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </section>
       ) : null}
 
-      <DisclosureBanner />
+      {guide.slug === "protonvpn-renewal-price" ? null : <DisclosureBanner />}
 
       {guide.shortAnswer ? null : (
       <section className="surface-card p-8">
