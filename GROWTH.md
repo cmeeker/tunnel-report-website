@@ -51,7 +51,7 @@ Each page should include:
   - "What is a no-logs VPN?"
 - Publish original-ish numbers: renewal prices, audit dates, route notes.
 
-## Distribution Cadence
+## Distribution
 
 Do one distribution action per week:
 

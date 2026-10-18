@@ -164,11 +164,7 @@ export default function BestVpnsPage() {
                   </div>
                 </div>
 
-                <div className="grid gap-4 rounded-lg border border-[#1e293b] bg-[#0d1221] p-4 md:grid-cols-3">
-                  <div>
-                    <p className="text-xs font-semibold uppercase text-[#64748b]">Speed</p>
-                    <p className="mt-1 text-sm text-[#94a3b8]">{vpn.speedSummary}</p>
-                  </div>
+                <div className="grid gap-4 rounded-lg border border-[#1e293b] bg-[#0d1221] p-4 md:grid-cols-2">
                   <div>
                     <p className="text-xs font-semibold uppercase text-[#64748b]">Privacy</p>
                     <p className="mt-1 text-sm text-[#94a3b8]">
