@@ -208,7 +208,7 @@ export function NordvpnVsProtonvpnLongform() {
           59 of 59 in 2025).
         </p>
 
-        <p>Who wins privacy: Proton transparency; NordVPN audit cadence with login wall disclosed.</p>
+        <p>Who wins privacy: Proton transparency.</p>
       </section>
 
       <section className="prose-dark space-y-4">

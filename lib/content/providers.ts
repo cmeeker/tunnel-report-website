@@ -73,7 +73,7 @@ export const providers: Provider[] = [
     ],
     cons: ["Price increases at renewal", "UI depth can overwhelm first-time users"],
     speedSummary: "Strong 4K streaming and gaming latency across US and EU exit nodes.",
-    privacySummary: "Audit cadence and public incident handling continue to set a high bar.",
+    privacySummary: "Public incident handling continues to set a high bar.",
     pricingSummary: "Entry promo pricing is competitive; long-term value depends on renewal terms.",
     affiliateKey: "nordvpn",
     datePublished: "2026-10-15",
@@ -84,7 +84,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "Our complete NordVPN review with privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
     reviewSummary:
-      "NordVPN ranks first in our 2026 rankings on audit frequency and app maturity.",
+      "NordVPN ranks first in our 2026 rankings on app maturity.",
     jurisdiction: "Panama",
     protocolNote: "NordLynx (WireGuard implementation)",
     speedMetrics: [],
@@ -123,7 +123,7 @@ export const providers: Provider[] = [
       {
         question: "Is NordVPN still worth buying in 2026?",
         answer:
-          "For most users who want a single VPN that handles streaming, remote work, and daily browsing without constant tuning, yes. NordVPN ranks first in our 2026 rankings on audit frequency and app maturity. The main caveat is renewal pricing — check the year-two rate before committing.",
+          "For most users who want a single VPN that handles streaming, remote work, and daily browsing without constant tuning, yes. NordVPN ranks first in our 2026 rankings on app maturity. The main caveat is renewal pricing — check the year-two rate before committing.",
       },
       {
         question: "Does NordVPN actually keep no logs?",
@@ -173,7 +173,7 @@ export const providers: Provider[] = [
       {
         heading: "Privacy and Trust Signals",
         paragraphs: [
-          "Surfshark operates from the Netherlands and has completed independent audits covering its no-logs claims and server infrastructure. The audit cadence is less frequent than NordVPN's, but the scope is credible.",
+          "Surfshark operates from the Netherlands and has completed independent audits covering its no-logs claims and server infrastructure.",
           "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
         ],
       },
@@ -188,13 +188,13 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy Surfshark if you need unlimited device coverage, want strong domestic performance, and prioritize entry pricing over marginal speed advantages on transatlantic routes.",
       skip: "Skip if you need the most advanced network configuration options.",
-      alternatives: "NordVPN for audit frequency; Proton VPN for open-source transparency; Mullvad for anonymous payments.",
+      alternatives: "Proton VPN for open-source transparency; Mullvad for anonymous payments.",
     },
     faqs: [
       {
         question: "Is Surfshark as good as NordVPN?",
         answer:
-          "For most household use cases, yes — especially if unlimited devices matter [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. NordVPN still leads on audit frequency.",
+          "For most household use cases, yes — especially if unlimited devices matter [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
       },
       {
         question: "How many devices can I use with Surfshark?",
@@ -378,7 +378,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "PureVPN review with honest speed data, privacy trust recovery analysis, and whether the aggressive introductory pricing is worth the tradeoffs in 2026.",
     reviewSummary:
-      "PureVPN is the budget entry in our top five. Aggressive pricing and a large server network appeal to price-first buyers, but its published privacy history keeps it below our top picks.",
+      "PureVPN is the budget entry in our top five. Aggressive pricing and a large server network appeal to price-first buyers, so it ranks below our top picks.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "WireGuard and OpenVPN",
     speedMetrics: [],
@@ -400,7 +400,7 @@ export const providers: Provider[] = [
     ],
     whoShouldBuy: {
       buy: "Buy PureVPN if first-year price is your dominant buying criteria and you mostly use domestic connections for browsing and light streaming.",
-      skip: "Skip if your threat model requires the strongest audit track record or consistent transatlantic performance.",
+      skip: "Skip if your threat model requires consistent transatlantic performance.",
       alternatives: "Surfshark for better value with stronger consistency; NordVPN for best overall.",
     },
     faqs: [

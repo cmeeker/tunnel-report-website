@@ -21,6 +21,7 @@ export type Guide = {
   description: string;
   dek: string;
   dateModified: string;
+  datePublished?: string;
   category: "Methodology" | "Privacy" | "Pricing" | "Protocol";
   sections: GuideSection[];
   faqs: FaqItem[];
@@ -91,7 +92,10 @@ export const guides: Guide[] = [
       "No-logs VPN claims explained: what providers can still collect, what audits verify, and how to evaluate no-logs marketing without trusting slogans.",
     dek:
       "A no-logs claim is only useful when you understand what data is excluded, what metadata remains, and whether an independent audit tested real infrastructure.",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     category: "Privacy",
     relatedReviewSlugs: ["mullvad", "protonvpn", "nordvpn"],
     relatedCompareSlugs: ["mullvad-vs-protonvpn", "nordvpn-vs-protonvpn"],
@@ -121,7 +125,7 @@ export const guides: Guide[] = [
     faqs: [
       { question: "Can a no-logs VPN identify me?", answer: "It may still have account, payment, or support records. Strong providers minimize this data and keep it separate from traffic activity." },
       { question: "Are no-logs audits trustworthy?", answer: "Some are. Trust depends on auditor reputation, technical scope, publication detail, and whether audits repeat over time." },
-      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad leads on account minimization. NordVPN leads among mainstream affiliate providers on audit cadence and infrastructure maturity." },
+      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad leads on account minimization. NordVPN leads among mainstream affiliate providers on infrastructure maturity." },
     ],
   },
   {

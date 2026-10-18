@@ -92,7 +92,7 @@ const staticRoutes: SiteRoute[] = [
 const sitemapLastModified: Record<string, string> = {
   "/reviews/nordvpn": "2026-10-18",
   "/reviews/protonvpn": "2026-10-18",
-  "/compare/nordvpn-vs-protonvpn": "2026-10-17",
+  "/compare/nordvpn-vs-protonvpn": "2026-10-18",
   "/guides/surfshark-renewal-price": "2026-10-17",
   "/guides/protonvpn-renewal-price": "2026-10-17",
 };

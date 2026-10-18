@@ -39,7 +39,7 @@ const bestVpnFaqs = [
   {
     question: "Why is NordVPN ranked first over cheaper alternatives?",
     answer:
-      "Because our scoring weights consistent performance and verifiable security behavior more heavily than introductory pricing. NordVPN keeps the top spot on audit cadence and app maturity.",
+      "Because our scoring weights consistent performance and verifiable security behavior more heavily than introductory pricing. NordVPN keeps the top spot on app maturity.",
   },
   {
     question: "Can I trust a free VPN instead?",
@@ -99,7 +99,7 @@ export default function BestVpnsPage() {
             The biggest shift since our Q4 2025 rankings is in the mid-tier: Surfshark&apos;s connection
             stability improved materially on transatlantic routes, and Proton VPN&apos;s free tier
             continues to function as a credible entry point for low-risk users. NordVPN keeps the top
-            spot on audit cadence and app maturity.
+            spot on app maturity.
           </p>
           <p>
             The regulatory backdrop matters too. The FBI&apos;s IC3 reported $12.5 billion in online
@@ -304,7 +304,7 @@ export default function BestVpnsPage() {
           <span className="badge badge-teal mb-3 text-[0.65rem]">Editor&apos;s Choice</span>
           <h2 className="text-lg font-bold text-white">Quick Pick: NordVPN</h2>
           <p className="mt-2 text-sm leading-relaxed text-[#94a3b8]">
-            If you need one recommendation, NordVPN ranks first on audit frequency and app maturity
+            If you need one recommendation, NordVPN ranks first on app maturity
             in this update.
           </p>
           <div className="mt-4">

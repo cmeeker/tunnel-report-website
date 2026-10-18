@@ -85,7 +85,9 @@ export const useCaseGuides: UseCaseGuide[] = [
       "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, payment anonymity, and incident-response transparency.",
     intro:
       "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what audits tested, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
-    dateModified: "2026-04-08",
+    datePublished: "2026-04-08",
+    dateModified: "2026-10-18",
+    updatedDateLabel: "October 18, 2026",
     primaryPick: "mullvad",
     picks: [
       { providerSlug: "mullvad", label: "Best privacy purist pick", reason: "Anonymous account numbers, cash payments, open-source clients, and no affiliate funnel." },
@@ -97,7 +99,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Audit scope beats audit marketing",
         paragraphs: [
           "A no-logs audit only matters if the scope reaches real infrastructure, server configuration, and retention controls. Many providers advertise audits that are closer to policy reviews than technical verification.",
-          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is the best mainstream provider because its audit cadence and infrastructure claims are more mature than most commercial competitors.",
+          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is the best mainstream provider because its infrastructure claims are more mature than most commercial competitors.",
         ],
       },
       {
@@ -195,7 +197,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Where PureVPN fits",
         paragraphs: [
-          "PureVPN is often the lowest sticker price in our top five. That makes it appealing for light domestic browsing, but its published privacy history keeps it behind Surfshark as our default pick.",
+          "PureVPN is often the lowest sticker price in our top five. That makes it appealing for light domestic browsing, but Surfshark stays our default budget pick.",
           "If budget is your only constraint and you understand the tradeoffs, PureVPN can work. If you want the best cheap VPN for a household, Surfshark is the cleaner pick.",
         ],
       },
