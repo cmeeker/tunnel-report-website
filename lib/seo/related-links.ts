@@ -1,3 +1,4 @@
+import { blackFridayHub } from "@/lib/content/black-friday-2026";
 import { comparisonMap, comparisons } from "@/lib/content/comparisons";
 import { guideMap, guides } from "@/lib/content/guides";
 import { providerMap, providers } from "@/lib/content/providers";
@@ -5,6 +6,13 @@ import { useCaseGuideMap, useCaseGuides, type UseCaseSlug } from "@/lib/content/
 import { citySlugs } from "@/lib/site";
 
 import type { RelatedLink } from "@/components/RelatedLinks";
+
+const blackFridayPricesLink: RelatedLink = {
+  href: blackFridayHub.path,
+  label: "Black Friday 2026 prices",
+};
+
+const blackFridayReviewSlugs = new Set(["nordvpn", "surfshark", "protonvpn", "hideme"]);
 
 export function getReviewRelatedLinks(slug: string): RelatedLink[] {
   const provider = providerMap[slug];
@@ -33,6 +41,7 @@ export function getReviewRelatedLinks(slug: string): RelatedLink[] {
 
   const city = citySlugs[0];
   return [
+    ...(blackFridayReviewSlugs.has(slug) ? [blackFridayPricesLink] : []),
     ...links.slice(0, 4),
     ...otherReviews,
     { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
@@ -86,6 +95,7 @@ export function getCityRelatedLinks(citySlug: string): RelatedLink[] {
 
 export function getBestVpnsRelatedLinks(): RelatedLink[] {
   return [
+    blackFridayPricesLink,
     { href: "/reviews/nordvpn", label: "NordVPN Full Review" },
     { href: "/reviews/surfshark", label: "Surfshark Review" },
     { href: "/compare/nordvpn-vs-expressvpn", label: "NordVPN vs ExpressVPN" },
@@ -103,6 +113,7 @@ export function getUseCaseRelatedLinks(slug: UseCaseSlug): RelatedLink[] {
   const pick = guide ? providerMap[guide.primaryPick] : undefined;
 
   return [
+    ...(slug === "budget" ? [blackFridayPricesLink] : []),
     { href: "/best-vpns", label: "Best VPN Rankings 2026" },
     ...(pick ? [{ href: `/reviews/${pick.slug}`, label: `${pick.name} Full Review` }] : []),
     { href: "/compare/surfshark-vs-nordvpn", label: "Surfshark vs NordVPN" },
