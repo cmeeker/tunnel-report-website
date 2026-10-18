@@ -167,7 +167,7 @@ export const providers: Provider[] = [
         heading: "Privacy and Trust Signals",
         paragraphs: [
           "Surfshark operates from the Netherlands and has completed independent audits covering its no-logs claims and server infrastructure. The audit cadence is less frequent than NordVPN's, but the scope is credible.",
-          "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops.",
+          "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
         ],
       },
       {
@@ -187,11 +187,12 @@ export const providers: Provider[] = [
       {
         question: "Is Surfshark as good as NordVPN?",
         answer:
-          "For most household use cases, yes — especially if unlimited devices matter. NordVPN still leads on audit frequency.",
+          "For most household use cases, yes — especially if unlimited devices matter [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. NordVPN still leads on audit frequency.",
       },
       {
         question: "How many devices can I use with Surfshark?",
-        answer: "Surfshark allows unlimited simultaneous connections on a single subscription — a genuine differentiator in this market.",
+        answer:
+            "Surfshark allows unlimited simultaneous connections on a single subscription — a genuine differentiator in this market [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
       },
     ],
     relatedCompareSlugs: ["surfshark-vs-nordvpn", "nordvpn-vs-purevpn"],
