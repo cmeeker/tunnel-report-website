@@ -78,7 +78,8 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           path: `/vpn/${guide.slug}`,
           city: guide.city,
           region: guide.region,
-          dateModified: "2026-04-08",
+          datePublished: "2026-04-08",
+          dateModified: guide.slug === "austin" || guide.slug === "new-york" ? "2026-10-18" : "2026-04-08",
         })}
       />
 
@@ -103,7 +104,9 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           connectivity differences, and privacy considerations specific to {guide.city} residents
           against our provider test data.
         </p>
-        <AuthorByline date="October 17, 2026" />
+        <AuthorByline
+          date={guide.slug === "austin" || guide.slug === "new-york" ? "October 18, 2026" : "October 17, 2026"}
+        />
       </header>
 
       <DisclosureBanner />

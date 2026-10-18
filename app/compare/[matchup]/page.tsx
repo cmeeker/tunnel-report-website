@@ -79,6 +79,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
           headline: comparison.h1 ?? comparison.title,
           description: comparison.description,
           path,
+          datePublished: comparison.datePublished,
           dateModified: comparison.dateModified,
           image: getPageOgImageUrl(path),
         })}
@@ -101,7 +102,9 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
           {comparison.h1 ?? comparison.title}
         </h1>
         {!isLongform && (
-          <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{comparison.intro}</p>
+          <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
+            <CitedText text={comparison.intro} />
+          </p>
         )}
         <AuthorByline date={updatedDateLabel} />
       </header>

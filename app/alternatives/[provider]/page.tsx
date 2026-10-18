@@ -74,7 +74,8 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
             headline: `Best ${target.name} Alternatives in 2026`,
             description: `Independent alternatives to ${target.name}.`,
             path,
-            dateModified: target.dateModified,
+            datePublished: "2026-10-15",
+            dateModified: "2026-10-18",
             authorName: staffAuthorName,
           }),
           buildItemListSchema(
@@ -98,17 +99,17 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       <header className="space-y-5">
         <div className="flex flex-wrap gap-2">
           <span className="badge badge-cyan">Alternatives</span>
-          <span className="badge badge-violet">Updated April 2026</span>
+          <span className="badge badge-violet">Updated October 18, 2026</span>
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
           Best {target.name} Alternatives in 2026
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
           {target.name} is a strong fit for some buyers, but it is not the right default for every
-          use case. We compared speed floors, privacy posture, pricing lifecycle, app polish, and
-          threat model fit to identify the strongest alternatives.
+          use case. We compared published specs, privacy policies, pricing over the full plan term, and
+          third-party reports to pick the alternatives below.
         </p>
-        <AuthorByline date={siteConfig.updatedDate} />
+        <AuthorByline date="October 18, 2026" />
       </header>
 
       <DisclosureBanner />

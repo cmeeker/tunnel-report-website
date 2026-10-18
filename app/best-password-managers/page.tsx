@@ -15,7 +15,7 @@ import {
   type PasswordSource,
 } from "@/components/password-managers";
 import { RelatedLinks } from "@/components/RelatedLinks";
-import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
+import { PASSWORD_MANAGER_UPDATED, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "What is the best password manager in 2026?",
     answer:
-      "Based on published specs and pricing, Bitwarden is the best free or low-cost pick, NordPass is the best value on intro pricing, and 1Password suits families.",
+      "Based on published specs and pricing, Bitwarden is the best free or low-cost pick, NordPass is the low intro-price pick, and 1Password suits families.",
   },
   {
     question: "What's the cheapest paid password manager?",
@@ -81,7 +81,7 @@ export default function BestPasswordManagersPage() {
           headline: h1,
           description,
           path,
-          dateModified: PASSWORD_MANAGER_UPDATED,
+          dateModified: "2026-10-18",
           datePublished: PASSWORD_MANAGER_UPDATED,
           image: getPageOgImageUrl(path),
         })}
@@ -97,13 +97,13 @@ export default function BestPasswordManagersPage() {
       <header className="space-y-5">
         <div className="flex flex-wrap gap-2">
           <span className="badge badge-teal">Published specs and pricing</span>
-          <span className="badge badge-violet">Updated {PASSWORD_MANAGER_UPDATED_LABEL}</span>
+          <span className="badge badge-violet">Updated October 18, 2026</span>
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">{h1}</h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          For most people, Bitwarden is the cheapest full-featured pick, NordPass is the best value if you want a polished app at a low intro price, and 1Password suits families who want strong sharing. This ranking is based on published specs and pricing, not hands-on testing. Prices change often, so check the provider&apos;s site.
+          For most people, Bitwarden is the cheapest full-featured pick, NordPass is the low intro-price pick if you want a polished app, and 1Password suits families who want strong sharing. This ranking is based on published specs and pricing, not hands-on testing. Prices change often, so check the provider&apos;s site.
         </p>
-        <AuthorByline date={PASSWORD_MANAGER_UPDATED_LABEL} />
+        <AuthorByline date="October 18, 2026" />
       </header>
 
       <AffiliateDisclosure>
@@ -114,7 +114,7 @@ export default function BestPasswordManagersPage() {
         <h2 className="text-2xl font-bold text-white">Quick picks</h2>
         <ul className="list-disc space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li>
-            <strong>Best value overall: NordPass.</strong> Premium is {prices.nordpassPremiumTwoYearMonthly} on the 2-year plan, {prices.nordpassPremiumTwoYearTotal} for the first 27 months (intro rate) <Cite id="S1" />. <NordPassPricingLink />
+            <strong>Low intro-price pick: NordPass.</strong> Premium is {prices.nordpassPremiumTwoYearMonthly} on the 2-year plan, {prices.nordpassPremiumTwoYearTotal} for the first 27 months (intro rate) <Cite id="S1" />. <NordPassPricingLink />
           </li>
           <li>
             <strong>Best free and cheapest paid: <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>.</strong> There&apos;s a free plan. Premium is {prices.bitwardenPremiumMonthly}, billed annually at {prices.bitwardenPremiumAnnual} <Cite id="S2" />.

@@ -26,7 +26,7 @@ const staticRoutes: SiteRoute[] = [
     path: "/",
     title: "Tunnel Report",
     description: siteConfig.description,
-    lastModified: CONTENT_UPDATED_AT,
+    lastModified: "2026-10-18",
     priority: 1,
     changeFrequency: "daily",
     group: "static",
@@ -35,7 +35,7 @@ const staticRoutes: SiteRoute[] = [
     path: "/best-vpns",
     title: "Best VPNs of 2026",
     description: "Independent 2026 VPN rankings from Tunnel Report.",
-    lastModified: "2026-10-15",
+    lastModified: "2026-10-18",
     priority: 0.95,
     changeFrequency: "weekly",
     group: "static",
@@ -45,7 +45,7 @@ const staticRoutes: SiteRoute[] = [
     title: "Best Password Managers 2026: Prices & Specs Compared",
     description:
       "NordPass, Bitwarden, 1Password, Proton Pass, Dashlane and Keeper compared on published pricing, encryption and audits. Plain answers, no hype.",
-    lastModified: "2026-10-17",
+    lastModified: "2026-10-18",
     priority: 0.92,
     changeFrequency: "weekly",
     group: "static",
@@ -63,7 +63,7 @@ const staticRoutes: SiteRoute[] = [
     path: "/about",
     title: "About Tunnel Report",
     description: "Team, methodology, and editorial standards.",
-    lastModified: CONTENT_UPDATED_AT,
+    lastModified: "2026-10-18",
     priority: 0.7,
     changeFrequency: "monthly",
     group: "static",
@@ -90,8 +90,8 @@ const staticRoutes: SiteRoute[] = [
 ];
 
 const sitemapLastModified: Record<string, string> = {
-  "/reviews/nordvpn": "2026-10-17",
-  "/reviews/protonvpn": "2026-10-17",
+  "/reviews/nordvpn": "2026-10-18",
+  "/reviews/protonvpn": "2026-10-18",
   "/compare/nordvpn-vs-protonvpn": "2026-10-17",
   "/guides/surfshark-renewal-price": "2026-10-17",
   "/guides/protonvpn-renewal-price": "2026-10-17",
@@ -99,6 +99,10 @@ const sitemapLastModified: Record<string, string> = {
 
 function sitemapDate(path: string, contentDate: string) {
   return sitemapLastModified[path] ?? contentDate;
+}
+
+function laterIsoDate(left: string, right: string) {
+  return left > right ? left : right;
 }
 
 export function getSiteRoutes(): SiteRoute[] {
@@ -132,7 +136,7 @@ export function getSiteRoutes(): SiteRoute[] {
         path: `/alternatives/${slug}`,
         title: `Best ${provider.name} Alternatives in 2026`,
         description: `Independent alternatives to ${provider.name}.`,
-        lastModified: provider.dateModified,
+        lastModified: "2026-10-18",
         priority: 0.78,
         changeFrequency: "weekly" as const,
         group: "alternative" as const,
@@ -166,7 +170,7 @@ export function getSiteRoutes(): SiteRoute[] {
         path: `/vpn/${slug}`,
         title: `Best VPN for ${city.city} in 2026`,
         description: `Localized VPN recommendations for ${city.city}, ${city.region}.`,
-        lastModified: "2026-10-17",
+        lastModified: slug === "austin" || slug === "new-york" ? "2026-10-18" : "2026-10-17",
         priority: 0.8,
         changeFrequency: "weekly" as const,
         group: "city" as const,
@@ -198,7 +202,7 @@ export function getSiteRoutes(): SiteRoute[] {
     }),
   ].map((route) => ({
     ...route,
-    sitemapLastModified: REVISED_SITEMAP_LASTMOD,
+    sitemapLastModified: laterIsoDate(route.lastModified, REVISED_SITEMAP_LASTMOD),
   }));
 }
 

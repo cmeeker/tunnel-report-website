@@ -28,6 +28,7 @@ export type Provider = {
   pricingSummary: string;
   affiliateKey: string | null;
   dateModified: string;
+  datePublished?: string;
   updatedBadgeLabel?: string;
   updatedDateLabel?: string;
   reviewTitle: string;
@@ -75,10 +76,13 @@ export const providers: Provider[] = [
     privacySummary: "Audit cadence and public incident handling continue to set a high bar.",
     pricingSummary: "Entry promo pricing is competitive; long-term value depends on renewal terms.",
     affiliateKey: "nordvpn",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "NordVPN Review 2026: Speed, Privacy, and Pricing Breakdown",
     reviewDescription:
-      "Our complete NordVPN review with real speed benchmark data, privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
+      "Our complete NordVPN review with privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
     reviewSummary:
       "NordVPN ranks first in our 2026 rankings on audit frequency and app maturity.",
     jurisdiction: "Panama",
@@ -149,7 +153,10 @@ export const providers: Provider[] = [
     privacySummary: "Solid security architecture with ongoing external validation.",
     pricingSummary: "Entry plan is among the most affordable in this group.",
     affiliateKey: "surfshark",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "Surfshark Review 2026: Best Budget VPN for Families?",
     reviewDescription:
       "Surfshark review with privacy audit analysis and honest pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
@@ -180,7 +187,7 @@ export const providers: Provider[] = [
     ],
     whoShouldBuy: {
       buy: "Buy Surfshark if you need unlimited device coverage, want strong domestic performance, and prioritize entry pricing over marginal speed advantages on transatlantic routes.",
-      skip: "Skip if you need the deepest audit history or the most advanced network configuration options.",
+      skip: "Skip if you need the most advanced network configuration options.",
       alternatives: "NordVPN for audit frequency; Proton VPN for open-source transparency; Mullvad for anonymous payments.",
     },
     faqs: [
@@ -280,17 +287,20 @@ export const providers: Provider[] = [
       "Well-documented security practices",
       "Free tier useful for low-risk testing",
     ],
-    cons: ["Smaller streaming success footprint", "Premium plans can feel complex"],
+    cons: ["Smaller streaming footprint", "Premium plans can feel complex"],
     speedSummary: "Good peak speeds, with variability under congested routes.",
     privacySummary: "Strong transparency culture and technical documentation quality.",
     pricingSummary: "Value is strongest for users already in the Proton ecosystem.",
     affiliateKey: "protonvpn",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "Proton VPN Review 2026: Privacy-First, Open Source",
     reviewDescription:
       "Proton VPN review from a policy and security perspective — Swiss jurisdiction, open-source clients, free tier limits, and who should choose Proton over mainstream alternatives.",
     reviewSummary:
-      "Proton VPN is the transparency leader in our rankings. Open-source clients, Swiss jurisdiction, and a credible free tier make it the best choice for privacy-first users, even if streaming success lags premium competitors.",
+      "Proton VPN is the transparency leader in our rankings. Open-source clients, Swiss jurisdiction, and a credible free tier make it the best choice for privacy-first users, even if streaming lags premium competitors.",
     jurisdiction: "Switzerland",
     protocolNote: "WireGuard and OpenVPN (open-source clients)",
     speedMetrics: [],
@@ -331,7 +341,7 @@ export const providers: Provider[] = [
       {
         question: "Is Proton VPN better than NordVPN for privacy?",
         answer:
-          "Proton VPN leads on transparency and open-source posture. NordVPN leads on audit frequency and speed consistency. The right choice depends on whether you prioritize verifiable code or proven infrastructure testing.",
+          "Proton VPN leads on transparency and open-source posture. The right choice depends on whether you prioritize open-source code or third-party assurance reports.",
       },
       {
         question: "Does Proton VPN work in restrictive countries?",
@@ -355,17 +365,20 @@ export const providers: Provider[] = [
       "Large server footprint marketing",
       "Useful split tunneling and protocol options",
     ],
-    cons: ["Speed consistency varies by region", "Trust recovery still in progress"],
+    cons: ["Speeds vary by location and connection", "Trust recovery still in progress"],
     speedSummary: "Adequate for HD streaming and typical remote-work traffic.",
     privacySummary: "Current trust profile is better than legacy perception, but still monitored closely.",
     pricingSummary: "Budget-friendly entry makes it attractive for price-sensitive users.",
     affiliateKey: "purevpn",
-    dateModified: "2026-10-15",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "PureVPN Review 2026: Budget Pick, Honest Assessment",
     reviewDescription:
       "PureVPN review with honest speed data, privacy trust recovery analysis, and whether the aggressive introductory pricing is worth the tradeoffs in 2026.",
     reviewSummary:
-      "PureVPN is the budget entry in our top five. Aggressive pricing and a large server network appeal to price-first buyers, but speed consistency and trust recovery keep it below premium competitors.",
+      "PureVPN is the budget entry in our top five. Aggressive pricing and a large server network appeal to price-first buyers, but its published privacy history keeps it below our top picks.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "WireGuard and OpenVPN",
     speedMetrics: [],
@@ -399,7 +412,7 @@ export const providers: Provider[] = [
       {
         question: "How does PureVPN compare to NordVPN?",
         answer:
-          "NordVPN wins on speed consistency, privacy audits, and app reliability. PureVPN wins on introductory price. See our head-to-head comparison for category-by-category scores.",
+          "PureVPN has the lower introductory price.",
       },
       {
         question: "Does PureVPN work for streaming?",
@@ -505,15 +518,16 @@ export const providers: Provider[] = [
       "Terms position the service for consumer/personal use, not commercial or organizational deployment [HM5]",
     ],
     speedSummary:
-      "We did not publish speed-benchmark metrics for this review page. This assessment focuses on operator disclosures, pricing, and published privacy/audit documents.",
+      "We did not publish speed metrics for this review page. This assessment focuses on operator disclosures, pricing, and published privacy/audit documents.",
     privacySummary:
       "hide.me’s privacy policy is more specific than its marketing pages: it describes what they say they do not log, plus what metadata they do process for operations and support. [HM4][HM8]",
     pricingSummary:
       "Pricing is straightforward and includes a “Pricing Guarantee” (same price and duration on renewal) plus a 30-day money-back guarantee for paid plans, with Terms limiting it to the first 30 days of the first order. [HM2][HM5]",
     affiliateKey: "hideme",
-    dateModified: "2026-10-15",
-    updatedBadgeLabel: "Updated Oct 15, 2026",
-    updatedDateLabel: "October 15, 2026",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-18",
+    updatedBadgeLabel: "Updated Oct 18, 2026",
+    updatedDateLabel: "October 18, 2026",
     reviewTitle: "hide.me VPN Review 2026: Malaysian No-Logs, Real Free Tier",
     reviewDescription:
       "Our cited hide.me VPN review for 2026: Malaysian operator disclosures, pricing (including the pricing guarantee), the no-signup free tier limits (including the published conflict), and what the 2024 Securitum no-log container audit did — and did not — cover.",

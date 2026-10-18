@@ -4,5 +4,5 @@
   <path d="M450 110L620 185V305C620 397 553 467 450 500C347 467 280 397 280 305V185L450 110Z" fill="#00D4AA" fill-opacity="0.15" stroke="#00D4AA" stroke-width="8"/>
   <path d="M360 286L421 347L543 226" stroke="#00D4AA" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="72" y="90" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="30" font-weight="700">Tunnel Report Labs</text>
-  <text x="72" y="134" fill="#94A3B8" font-family="Arial, sans-serif" font-size="22">Independent VPN Benchmark Environment</text>
+  <text x="72" y="134" fill="#94A3B8" font-family="Arial, sans-serif" font-size="22">Independent VPN coverage</text>
 </svg>

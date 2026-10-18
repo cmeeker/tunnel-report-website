@@ -62,6 +62,7 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
     headline: guide.title,
     description: guide.description,
     path,
+    datePublished: guide.datePublished,
     dateModified: guide.dateModified,
     authorName: staffAuthorName,
   });

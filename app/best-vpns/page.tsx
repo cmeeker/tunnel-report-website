@@ -55,7 +55,7 @@ export default function BestVpnsPage() {
       "Independent ranking of the top VPN services based on speed, privacy controls, and value.",
     path: "/best-vpns",
     datePublished: "2026-04-08",
-    dateModified: "2026-10-15",
+    dateModified: "2026-10-18",
     image: getPageOgImageUrl("/best-vpns"),
   });
 
@@ -80,7 +80,7 @@ export default function BestVpnsPage() {
         />
 
         <header className="space-y-5">
-          <span className="badge badge-teal">Updated April 2026</span>
+          <span className="badge badge-teal">Updated October 18, 2026</span>
           <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
             Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports
           </h1>
@@ -88,7 +88,7 @@ export default function BestVpnsPage() {
             Several providers have shifted position since our last update. Here is where the market
             stands.
           </p>
-          <AuthorByline date={siteConfig.updatedDate} />
+          <AuthorByline date="October 18, 2026" />
         </header>
 
         <DisclosureBanner />

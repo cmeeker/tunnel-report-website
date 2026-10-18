@@ -4,7 +4,7 @@ Independent VPN review site at [tunnelreport.com](https://tunnelreport.com). Edi
 
 ## Mission
 
-Publish verifiable VPN guidance: cited sources, named editors, repeatable benchmarks, and rankings that are not pay-to-rank.
+Publish verifiable VPN guidance: cited sources, named editors, published specs, and rankings that are not pay-to-rank.
 
 ## Local development
 

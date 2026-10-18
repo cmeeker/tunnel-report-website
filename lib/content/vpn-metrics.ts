@@ -126,7 +126,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "streaming",
     title: "Best VPN for Streaming in 2026",
     description:
-      "Streaming requires consistent geo-unblocking, low buffering overhead, and stable reconnect behavior when platforms detect VPN traffic. NordVPN and ExpressVPN lead our streaming success rates; Surfshark is a strong budget alternative for US libraries.",
+      "For streaming, look at server locations, supported devices (Smart TVs, routers) and the provider's refund window, so you can cancel if a service you use doesn't work. NordVPN and ExpressVPN are our top streaming picks based on published specs; Surfshark is our budget pick.",
     pickSlug: "nordvpn",
     pickReason: "",
   },
@@ -150,7 +150,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "budget",
     title: "Best Cheap VPN in 2026",
     description:
-      "Budget buyers face a real tradeoff: introductory pricing versus renewal surprises and speed consistency. Surfshark offers the best value with unlimited devices. PureVPN Standard is $2.15/mo on its 2-year plan [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026.",
+      "Budget buyers face a real tradeoff: a low first-term price versus a higher renewal price. Surfshark is our budget pick, and its pricing page lists unlimited simultaneous device connections ([Surfshark pricing](https://surfshark.com/pricing), accessed Oct 17, 2026). PureVPN Standard is $2.15/mo on its 2-year plan [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026.",
     pickSlug: "surfshark",
     pickReason:
       "$2.49/mo on the 2-year Starter plan ($67.23 for the first 27 months) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026",

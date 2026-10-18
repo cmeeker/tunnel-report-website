@@ -4,6 +4,10 @@ import { siteConfig } from "@/lib/site";
 
 const revisedDateModified = "2026-10-17";
 
+function resolveDateModified(dateModified: string) {
+  return dateModified > revisedDateModified ? dateModified : revisedDateModified;
+}
+
 const staffAuthor = {
   "@type": "Organization",
   name: staffAuthorName,
@@ -83,7 +87,7 @@ export function buildArticleSchema({
     headline,
     description,
     datePublished: datePublished ?? dateModified,
-    dateModified: revisedDateModified,
+    dateModified: resolveDateModified(dateModified),
     ...(image ? { image } : {}),
     author: staffAuthor,
     publisher: {
@@ -149,6 +153,7 @@ type ReviewSchemaInput = {
   summary: string;
   path: string;
   dateModified: string;
+  datePublished?: string;
   description?: string;
   ratingValue?: number;
   bestRating?: number;
@@ -159,12 +164,14 @@ export function buildReviewSchema({
   summary,
   path,
   dateModified,
+  datePublished,
   description,
   ratingValue,
   bestRating = 5,
 }: ReviewSchemaInput) {
   const pageUrl = `${siteConfig.url}${path}`;
   const author = staffAuthor;
+  const published = datePublished ?? dateModified;
 
   if (typeof ratingValue !== "number") {
     return {
@@ -178,8 +185,8 @@ export function buildReviewSchema({
       },
       author,
       reviewBody: summary,
-      datePublished: dateModified,
-      dateModified: revisedDateModified,
+      datePublished: published,
+      dateModified: resolveDateModified(dateModified),
       url: pageUrl,
     };
   }
@@ -210,8 +217,8 @@ export function buildReviewSchema({
       },
       author,
       reviewBody: summary,
-      datePublished: dateModified,
-      dateModified: revisedDateModified,
+      datePublished: published,
+      dateModified: resolveDateModified(dateModified),
       url: pageUrl,
     },
   };
@@ -242,6 +249,7 @@ type GeoArticleSchemaInput = {
   city: string;
   region: string;
   dateModified: string;
+  datePublished?: string;
 };
 
 export function buildGeoArticleSchema({
@@ -251,14 +259,15 @@ export function buildGeoArticleSchema({
   city,
   region,
   dateModified,
+  datePublished,
 }: GeoArticleSchemaInput) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline,
     description,
-    datePublished: dateModified,
-    dateModified: revisedDateModified,
+    datePublished: datePublished ?? dateModified,
+    dateModified: resolveDateModified(dateModified),
     author: staffAuthor,
     mainEntityOfPage: `${siteConfig.url}${path}`,
     about: [
