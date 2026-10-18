@@ -1,3 +1,4 @@
+import { blackFridayHub, surfsharkBlackFriday } from "@/lib/content/black-friday-2026";
 import { comparisonSlugs, comparisons } from "@/lib/content/comparisons";
 import { cityGuideMap } from "@/lib/content/cities";
 import { guideSlugs, guides } from "@/lib/content/guides";
@@ -18,7 +19,7 @@ export type SiteRoute = {
   sitemapLastModified?: string;
   priority: number;
   changeFrequency: "daily" | "weekly" | "monthly";
-  group: "static" | "review" | "compare" | "city" | "use-case" | "alternative" | "guide";
+  group: "static" | "review" | "compare" | "city" | "use-case" | "alternative" | "guide" | "deal";
 };
 
 const staticRoutes: SiteRoute[] = [
@@ -105,8 +106,32 @@ function laterIsoDate(left: string, right: string) {
   return left > right ? left : right;
 }
 
+const blackFridayDealRoutes: SiteRoute[] = [
+  {
+    path: blackFridayHub.path,
+    title: blackFridayHub.title,
+    description: blackFridayHub.description,
+    lastModified: "2026-10-18",
+    sitemapLastModified: "2026-10-18",
+    priority: 0.88,
+    changeFrequency: "daily",
+    group: "deal",
+  },
+  {
+    path: surfsharkBlackFriday.path,
+    title: surfsharkBlackFriday.title,
+    description: surfsharkBlackFriday.description,
+    lastModified: "2026-10-18",
+    sitemapLastModified: "2026-10-18",
+    priority: 0.82,
+    changeFrequency: "weekly",
+    group: "deal",
+  },
+];
+
 export function getSiteRoutes(): SiteRoute[] {
   return [
+    ...[
     ...staticRoutes,
     ...providerSlugs.map((slug) => {
       const provider = providers.find((item) => item.slug === slug)!;
@@ -203,7 +228,9 @@ export function getSiteRoutes(): SiteRoute[] {
   ].map((route) => ({
     ...route,
     sitemapLastModified: laterIsoDate(route.lastModified, REVISED_SITEMAP_LASTMOD),
-  }));
+  })),
+    ...blackFridayDealRoutes,
+  ];
 }
 
 export function absoluteUrl(path: string) {
