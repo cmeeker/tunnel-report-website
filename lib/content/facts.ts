@@ -14,11 +14,13 @@ const TRACKED_CITATION_URLS = new Set([
   AFFILIATE_URLS.nordvpn,
   "https://billing.purevpn.com/aff.php?aff=49388038",
   "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
-  "https://go.getproton.me/aff_c?offer_id=26&aff_id=19779",
   "https://hide.me/?friend=6a89f8e9ae1ca",
 ]);
 
 export function citationLinkRel(url: string): string {
+  if (url.includes("friend=6a89f8e9ae1ca")) {
+    return "sponsored nofollow noopener noreferrer";
+  }
   if (TRACKED_CITATION_URLS.has(url)) {
     return "nofollow sponsored noopener noreferrer";
   }
@@ -106,7 +108,7 @@ export const citationSources: Record<string, CitationSource> = {
     id: "HM1",
     title: "hide.me VPN (Homepage)",
     publisher: "hide.me",
-    url: "https://hide.me/?friend=6a89f8e9ae1ca",
+    url: "https://hide.me/en/",
     year: 2026,
     retrievedAt: "Aug 25, 2026",
   },

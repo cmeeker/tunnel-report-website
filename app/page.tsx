@@ -14,14 +14,13 @@ import { comparisonMap } from "@/lib/content/comparisons";
 import { latestPriceChecks } from "@/lib/content/latest-price-checks";
 import { citationSources } from "@/lib/content/facts";
 import { homepageComparison } from "@/lib/content/vpn-metrics";
-import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Independent VPN Reviews & 2026 Rankings | Tunnel Report",
   description:
-    "Tunnel Report publishes independent VPN reviews with real speed benchmarks, cited privacy audits, and editorial analysis from security professionals. No pay-to-rank. No sponsored results.",
+    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   path: "/",
   type: "website",
 });
@@ -57,16 +56,13 @@ const FEATURED_COMPARE_SLUGS = [
 ] as const;
 
 export default function Home() {
-  const nordPricingSource = { ...citationSources.S5, url: AFFILIATE_URLS.nordvpn };
-  const purePricingSource = { ...citationSources.S6, url: AFFILIATE_URLS.purevpn };
-
   const homepageSourcesNoPricingLeaks = [
     citationSources.S1,
     citationSources.S2,
     citationSources.S3,
     citationSources.S4,
-    nordPricingSource,
-    purePricingSource,
+    citationSources.S5,
+    citationSources.S6,
     citationSources.S7,
     citationSources.S8,
   ];
@@ -199,9 +195,9 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-bold text-white">VPN Head-to-Head Comparison</h2>
             <p className="mt-1 text-sm text-[#94a3b8]">
-              Entry pricing from provider sites at last verification
-              <CitationLink source={nordPricingSource} />
-              <CitationLink source={purePricingSource} />
+              Entry pricing from each provider&apos;s pricing page, checked October 15, 2026.
+              <CitationLink source={citationSources.S5} />
+              <CitationLink source={citationSources.S6} />
               <CitationLink source={citationSources.S7} />
               <CitationLink source={citationSources.S8} />
             </p>
@@ -213,7 +209,7 @@ export default function Home() {
               <tr>
                 <th>Provider</th>
                 <th>Privacy Profile</th>
-                <th>Price/mo</th>
+                <th>Price (intro vs renewal)</th>
                 <th>Score</th>
                 <th></th>
               </tr>
@@ -255,6 +251,7 @@ export default function Home() {
             </tbody>
           </table>
         </div>
+        <p className="text-sm text-[#94a3b8]">Prices change often, so check the provider&apos;s site.</p>
       </section>
 
       <hr className="divider-glow" />

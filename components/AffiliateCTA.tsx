@@ -1,4 +1,4 @@
-"use client";
+import { PaidAffiliateCTA } from "@/components/PaidAffiliateCTA";
 
 type AffiliateCTAProps = {
   href: string;
@@ -7,29 +7,20 @@ type AffiliateCTAProps = {
   className?: string;
 };
 
-export function AffiliateCTA({ href, partner, label, className = "" }: AffiliateCTAProps) {
-  const handleClick = () => {
-    if (typeof window !== "undefined" && "gtag" in window) {
-      const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
-      gtag?.("event", "affiliate_click", {
-        partner,
-        link_url: href,
-        event_category: "affiliate",
-        event_label: partner,
-      });
-    }
-  };
+/** Tracked paid partners. ExpressVPN is unpaid and must not be serialized as a partner prop. */
+const PAID_PARTNERS = new Set(["nordvpn", "nordpass", "surfshark", "purevpn", "hideme"]);
 
-  const rel = "nofollow sponsored noopener noreferrer";
+export function AffiliateCTA({ href, partner, label, className = "" }: AffiliateCTAProps) {
+  if (PAID_PARTNERS.has(partner)) {
+    return <PaidAffiliateCTA href={href} partner={partner} label={label} className={className} />;
+  }
 
   return (
     <a
       href={href}
-      data-partner={partner}
-      onClick={handleClick}
       className={`affiliate-cta ${className}`.trim()}
       target="_blank"
-      rel={rel}
+      rel="noopener noreferrer"
     >
       {label}
     </a>

@@ -28,9 +28,9 @@ export const cityGuides: CityGuide[] = [
     privacyConcern:
       "LA has one of the highest concentrations of public Wi-Fi usage in the country — across coffee shops in Silver Lake, co-working spaces in Santa Monica, and event venues from Hollywood to Long Beach. Every unencrypted connection on those networks is an opportunity for session hijacking, credential theft, or passive traffic surveillance. The entertainment industry concentration also means intellectual property concerns push some users toward VPN usage for work-related browsing.",
     streamingNeeds:
-      "Sports blackouts are a real pain point here. Dodgers games, Lakers broadcasts, and regional sports network restrictions make location flexibility a common VPN use case. LA residents also stream heavily — Netflix, Hulu, and YouTube TV penetration rates are among the highest in any US metro — so VPN overhead needs to be minimal enough that 4K streams do not buffer.",
+      "Sports blackouts are a real pain point here. Dodgers games, Lakers broadcasts, and regional sports network restrictions make location flexibility a common VPN use case. LA residents stream a lot, so pick a server close to LA and test 4K playback inside the provider's refund window.",
     recommendation:
-      "Prioritize providers with strong West Coast server presence and WireGuard support for low-latency performance. NordVPN and Surfshark both maintain LA-area endpoints that perform well during evening congestion. If you are on AT&T Fiber or Frontier Fiber with gigabit baseline speeds, you will notice the VPN overhead less than Spectrum users on 300 Mbps plans.",
+      "Prioritize providers with West Coast servers and a WireGuard-based protocol. NordVPN and Surfshark both list Los Angeles servers. A gigabit fiber plan leaves more headroom for VPN overhead than a 300 Mbps cable plan.",
     neighborhoodNote:
       "Connection quality varies significantly across the LA basin. Fiber availability in Westside neighborhoods (Santa Monica, West LA, Century City) is ahead of Eastside and Valley areas where older cable infrastructure dominates. If you are in a fiber-served area, your VPN experience will be materially better than someone on legacy coax in East Hollywood or Panorama City.",
     populationContext:
@@ -53,7 +53,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "New Yorkers have voracious media consumption habits and tend to maintain multiple streaming subscriptions. International content access matters here more than most cities given the demographic diversity — Hindi, Spanish, Mandarin, and Korean streaming services all have significant local demand. VPN reliability for accessing region-locked content libraries is a genuine use case, not just a nice-to-have.",
     recommendation:
-      "Focus on providers with fast East Coast routing and strong reconnection behavior. Verizon Fios users should see minimal speed impact from NordVPN or Surfshark given the fiber baseline. Spectrum users in Manhattan may notice more overhead on the 300 Mbps tier. Test during your actual usage hours — a 6pm benchmark matters more than a 6am one in this market.",
+      "Focus on providers with New York or nearby East Coast servers and an automatic kill switch. Verizon Fios fiber plans leave the most headroom for VPN overhead. On Spectrum's 300 Mbps tier, test your speed with the VPN on and off. Test during your actual usage hours — a 6pm benchmark matters more than a 6am one in this market.",
     neighborhoodNote:
       "Fios coverage is strongest in Manhattan, parts of Brooklyn, and Queens. The Bronx and Staten Island have more Spectrum and Optimum dependency. If you are in a Fios building, your VPN experience will be notably smoother than someone on legacy cable infrastructure in Washington Heights or the South Bronx.",
     populationContext:
@@ -76,9 +76,9 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "Sports drive VPN usage in Chicago more than almost any other city. Between the Bears, Bulls, Blackhawks, Cubs, and White Sox — all with various regional broadcast restrictions and league pass complexities — location flexibility through VPN is practically a household utility. Streaming stability during evening hours when the entire metro is online matters enormously.",
     recommendation:
-      "Choose providers with strong Midwest endpoint coverage and stable protocol fallback behavior. Chicago's ISP landscape is better than average — gigabit fiber from AT&T and Xfinity is widely available — so most users will have enough baseline bandwidth that VPN overhead is not the bottleneck. Prioritize evening stability over peak speed claims.",
+      "Choose a provider with servers in or near Chicago and a WireGuard-based protocol option. Chicago's ISP landscape is better than average — gigabit fiber from AT&T and Xfinity is widely available. Prioritize evening stability over peak speed claims.",
     neighborhoodNote:
-      "Fiber availability is strong in the Loop, River North, and Lincoln Park, but deteriorates in some South Side and West Side neighborhoods where cable remains the primary infrastructure. If you are in an AT&T Fiber or Xfinity gigabit area, expect a smooth VPN experience. Legacy cable areas may see more noticeable speed reduction.",
+      "Fiber availability is strong in the Loop, River North, and Lincoln Park, but deteriorates in some South Side and West Side neighborhoods where cable remains the primary infrastructure. If you are in an AT&T Fiber or Xfinity gigabit area, expect a smooth VPN experience. Areas still on older cable plans have less headroom, so test your speed with the VPN on.",
     populationContext:
       "The Chicago metro area serves approximately 9.5 million residents and functions as the primary Midwest hub for internet backbone routing.",
     localColor: "",
@@ -98,7 +98,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "Large household sizes in Houston mean VPN services need to handle simultaneous connections without degradation. A family with four people streaming different content at 4K requires consistent throughput, not just peak numbers. Sports access is also significant — Texans, Astros, and Rockets broadcasts all carry regional restrictions.",
     recommendation:
-      "Look for services with strong split tunneling so you can route streaming traffic through VPN while keeping latency-sensitive applications (gaming, video calls) on a direct connection. Tachus users in served areas have the best baseline in Houston and will see minimal VPN impact. Xfinity users should expect slightly more overhead on the 300 Mbps tier.",
+      "Look for services with strong split tunneling so you can route streaming traffic through VPN while keeping latency-sensitive applications (gaming, video calls) on a direct connection. Tachus fiber, where it's available, leaves the most headroom. On Xfinity's 300 Mbps tier, run a speed test with the VPN on and off before you commit.",
     neighborhoodNote:
       "Tachus fiber is expanding but still limited to specific areas including The Heights, Montrose, and parts of the Energy Corridor. Most of suburban Houston relies on Xfinity cable or AT&T. If you are in a Tachus-served area, count yourself lucky — it is among the best residential ISPs in Texas.",
     populationContext:
@@ -121,7 +121,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "Miami's bilingual and multicultural population creates genuine demand for both US and Latin American streaming libraries. Accessing content from Colombia, Brazil, Argentina, and Mexico alongside standard US platforms is a normal household requirement, not an edge case. VPN routing quality to Latin American servers matters here more than in any other US metro.",
     recommendation:
-      "Prioritize providers with fast Florida exits and dependable Latin American routing. NordVPN's Panama jurisdiction and strong Latin American server presence align well with Miami user needs. Surfshark is also competitive here. Avoid providers whose Latin American server infrastructure is an afterthought — you can tell by the latency.",
+      "Prioritize providers with fast Florida exits and dependable Latin American routing. NordVPN is based in Panama [Where is NordVPN based](https://support.nordvpn.com/hc/en-us/articles/19441152966161-Where-is-NordVPN-based). Surfshark is also competitive here. Check a provider's server list for the Latin American countries you need before you buy.",
     neighborhoodNote:
       "Fiber availability varies sharply. Brickell and Downtown have strong AT&T Fiber and Xfinity coverage, but many condo buildings — especially in the Beach — are locked into Hotwire Communications or similar bulk-service agreements with lower speed ceilings. Check your building's ISP situation before assuming gigabit is available.",
     populationContext:
@@ -142,9 +142,9 @@ export const cityGuides: CityGuide[] = [
     privacyConcern:
       "Austin combines a large remote-work population with a dense coffee-shop and co-working culture. That means a lot of professional traffic moves across semi-public Wi-Fi networks in East Austin, Downtown, and the Domain. For workers handling client files, developer credentials, or financial dashboards, a VPN is less about hiding casual browsing and more about reducing exposure on networks you do not control.",
     streamingNeeds:
-      "Austin's streaming demand spikes around live music, college sports, F1 weekends, and regional sports blackouts. VPN overhead needs to stay low enough for 4K live streams during evening congestion, especially for Spectrum users on older cable segments.",
+      "Austin's streaming demand spikes around live music, college sports, F1 weekends, and regional sports blackouts. VPN overhead needs to stay low enough for 4K live streams during evening congestion.",
     recommendation:
-      "Austin fiber users can run NordVPN or Surfshark with minimal noticeable overhead. Google Fiber and AT&T Fiber provide enough baseline throughput that WireGuard encryption barely registers. Spectrum users should prioritize NordVPN's speed floor or Surfshark's domestic routing and test during evening windows.",
+      "On a fiber plan, you have more headroom for VPN overhead than on a lower-tier cable plan. Google Fiber and AT&T Fiber provide enough baseline throughput that WireGuard encryption barely registers. Spectrum users should prioritize NordVPN's speed floor or Surfshark's domestic routing and test during evening windows.",
     neighborhoodNote:
       "Fiber availability is strongest in newer apartments around the Domain, Mueller, and parts of South Austin. Older central neighborhoods can still depend on Spectrum cable, where evening congestion makes VPN server selection more important.",
     populationContext:
@@ -165,9 +165,9 @@ export const cityGuides: CityGuide[] = [
     privacyConcern:
       "Seattle's tech workforce creates a high concentration of users moving between corporate networks, home fiber, apartment Wi-Fi, and public workspaces. The privacy risk is less about novelty and more about volume: thousands of technically capable workers handling sensitive systems from networks with uneven controls.",
     streamingNeeds:
-      "Seahawks, Mariners, and Kraken coverage creates regional blackout frustration, while Seattle's international workforce drives demand for streaming libraries in Asia and Europe. Low-latency West Coast and transpacific routing matter more here than in most cities.",
+      "Seahawks, Mariners, and Kraken coverage creates regional blackout frustration, while Seattle's international workforce drives demand for streaming libraries in Asia and Europe. If you need Asian content or work with Asia-Pacific teams, check for servers in the countries you need.",
     recommendation:
-      "Prioritize VPNs with strong West Coast and Asia-Pacific routing. NordVPN is the best default, Surfshark is strong on domestic value, and Proton VPN is attractive for privacy-focused tech workers who do not need the best streaming performance.",
+      "Prioritize VPNs with West Coast and Asia-Pacific servers. NordVPN is our default pick, Surfshark is the budget pick, and Proton VPN suits privacy-focused users.",
     neighborhoodNote:
       "Fiber availability is strong in newer buildings and parts of the Eastside, but Xfinity remains common in older Seattle apartments. If you are in a high-rise with shared building infrastructure, test VPN stability during evening peak rather than relying on daytime speed tests.",
     populationContext:
@@ -188,9 +188,9 @@ export const cityGuides: CityGuide[] = [
     privacyConcern:
       "Dallas has a large finance, healthcare, logistics, and corporate-travel footprint. Users frequently move between home offices, hotel networks, airport lounges, and client sites. That creates a practical need for VPNs that reconnect cleanly and do not break video calls or cloud dashboards.",
     streamingNeeds:
-      "Cowboys, Mavericks, Stars, and Rangers coverage makes regional sports access a recurring issue. Dallas users also benefit from central US routing because many VPN providers maintain strong Texas or nearby Midwest exits.",
+      "Cowboys, Mavericks, Stars, and Rangers coverage makes regional sports access a recurring issue. Most major VPN providers list servers in Texas, so Dallas users have nearby options.",
     recommendation:
-      "NordVPN is the best default for Dallas because central routing and high speed floors work well across both fiber and cable baselines. Surfshark is the value pick for households, while ExpressVPN is easiest for frequent business travelers.",
+      "NordVPN is the best default for Dallas because central routing works across both fiber and cable baselines. Surfshark is the value pick for households, while ExpressVPN is easiest for frequent business travelers.",
     neighborhoodNote:
       "Fiber is strong in newer suburban developments and corporate corridors, but older apartments may still depend on Spectrum. If your baseline is under 300 Mbps during peak hours, choose a nearby WireGuard server before testing long-distance exits.",
     populationContext:
@@ -211,11 +211,11 @@ export const cityGuides: CityGuide[] = [
     privacyConcern:
       "Atlanta's airport, film production economy, universities, and corporate headquarters create constant movement across public and semi-public networks. A VPN is useful for travelers, students, production staff, and remote workers who bounce between campus, studio, hotel, and home connections.",
     streamingNeeds:
-      "Atlanta sports blackouts and heavy streaming demand make low-overhead VPN routing important. East Coast exits perform well for most US libraries, while transatlantic routing matters for international content.",
+      "Atlanta sports blackouts and heavy streaming demand make low-overhead VPN routing important. For US streaming, pick a server close to Atlanta. For international content, you need a server in that country.",
     recommendation:
-      "NordVPN is the best all-around Atlanta pick because it combines East Coast routing strength with reliable streaming access. Surfshark is a strong budget option, and ExpressVPN makes sense for travelers who want the least setup friction.",
+      "NordVPN is the best all-around Atlanta pick because it combines East Coast routing strength with reliable streaming access. Surfshark is the budget pick, and ExpressVPN is worth a look for travelers who want simple setup.",
     neighborhoodNote:
-      "Fiber availability is strongest in newer apartment corridors and parts of Midtown, Buckhead, and suburban developments. Older homes and student housing can still depend heavily on Xfinity, where evening congestion changes VPN performance materially.",
+      "Fiber availability is strongest in newer apartment corridors and parts of Midtown, Buckhead, and suburban developments. Older homes and student housing can still depend heavily on Xfinity, where evening congestion can slow any connection, VPN or not.",
     populationContext:
       "The Atlanta metro serves more than 6 million residents and functions as the Southeast's busiest travel and corporate connectivity hub.",
     localColor:
@@ -236,7 +236,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "Nuggets, Avalanche, Rockies, and regional sports access drive blackout-related VPN demand, while mountain travel creates inconsistent network conditions. A VPN needs to handle lower-quality Wi-Fi without constant reconnect loops.",
     recommendation:
-      "NordVPN is the safest Denver default thanks to strong domestic speed floors and mature reconnect behavior. Surfshark is a good household value pick, especially for families splitting time between home, travel, and second devices.",
+      "NordVPN is our Denver default based on its published specs. Surfshark is a good household value pick, especially for families splitting time between home, travel, and second devices.",
     neighborhoodNote:
       "Fiber availability varies sharply between central Denver, newer suburbs, and mountain-adjacent communities. If you regularly work from ski towns or short-term rentals, test VPN stability on weaker Wi-Fi rather than relying on home fiber results.",
     populationContext:

@@ -69,6 +69,23 @@ const HOMEPAGE_COMPARISON_SLUGS = [
   "mullvad",
 ] as const;
 
+const HOMEPAGE_PRICE_COPY: Record<(typeof HOMEPAGE_COMPARISON_SLUGS)[number], string> = {
+  nordvpn:
+    "$3.49/mo intro (USD) on the 2-year + 3-month Basic plan: $94.23 for the first 27 months. Renews at $139.08/year.",
+  surfshark:
+    "$2.49/mo intro (USD) on the 24-month + 3-month Starter plan: $67.23 for the first 27 months (VAT may apply). Renewal price isn't listed on Surfshark's pricing page; check at checkout.",
+  expressvpn:
+    "$4.99/mo intro (USD) on the 12-month + 3-month Basic plan: $74.85 for the first 15 months. Renews at $99.95/year.",
+  protonvpn:
+    "$3.49/mo intro (USD) on the 2-year VPN Plus plan: $83.76 for the first 24 months. Renews at $83.88 every 12 months.",
+  purevpn:
+    "$2.15/mo intro (USD) on the 2-year + 3-month Standard plan: $58.20 for 27 months. Renews at $47.95/year.",
+  hideme:
+    "$2.69/mo (USD) on the 24-month + 2-month Premium plan: $69.99 every 26 months. No intro rate: it renews at the same price and term.",
+  mullvad:
+    "€5/mo (EUR, incl. VAT) on any term (1 month, 1 year or 1 decade). No intro rate: same €5/mo at renewal.",
+};
+
 export const homepageComparison: VpnTableEntry[] = HOMEPAGE_COMPARISON_SLUGS.map((slug) => {
   const provider = providerMap[slug];
   const isAffiliate = Boolean(provider.affiliateKey);
@@ -78,7 +95,7 @@ export const homepageComparison: VpnTableEntry[] = HOMEPAGE_COMPARISON_SLUGS.map
     name: provider.name,
     speedMbps: provider.speedMbps,
     privacy: provider.privacyBlurb,
-    pricePerMonth: provider.pricePerMonth,
+    pricePerMonth: HOMEPAGE_PRICE_COPY[slug],
     score: provider.score,
     href: isAffiliate ? AFFILIATE_URLS[provider.affiliateKey as keyof typeof AFFILIATE_URLS] : `/reviews/${provider.slug}`,
     partner: provider.affiliateKey ?? provider.slug,

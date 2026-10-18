@@ -6,6 +6,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CitationLink } from "@/components/CitationLink";
+import { CitedText } from "@/components/CitedText";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -16,7 +17,7 @@ import { citationSources, citySources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildGeoArticleSchema } from "@/lib/seo/schema";
-import { citySlugs, siteConfig } from "@/lib/site";
+import { citySlugs } from "@/lib/site";
 
 type CityPageProps = {
   params: Promise<{ city: string }>;
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   return buildPageMetadata({
     title: `Best VPN for ${guide.city} in 2026: Local ISP Data & Privacy Analysis`,
-    description: `Tunnel Report's ${guide.city} VPN guide covers local ISP speed benchmarks, neighborhood connectivity differences, privacy considerations, and the best VPN providers for ${guide.region} residents in 2026.`,
+    description: `Tunnel Report's ${guide.city} VPN guide covers local ISPs, privacy considerations and the best VPN providers for ${guide.region} residents in 2026.`,
     path: `/vpn/${guide.slug}`,
   });
 }
@@ -56,7 +57,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
   const cityFaqs = [
     {
       question: `What is the best VPN for ${guide.city} residents?`,
-      answer: `Based on our testing with local ISPs (${guide.localIsps.join(", ")}), NordVPN offers the best combination of speed consistency and low-latency routing for ${guide.city} users. Surfshark is a strong budget alternative. ${guide.recommendation}`,
+      answer: `NordVPN is our top pick for ${guide.city} based on its published specs, including its WireGuard-based NordLynx protocol and US servers. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. Surfshark is our budget pick, with unlimited devices on every plan [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. ${guide.recommendation}`,
     },
     {
       question: `Does VPN performance vary by neighborhood in ${guide.city}?`,
@@ -64,7 +65,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
     },
     {
       question: `Which ${guide.city} ISP works best with a VPN?`,
-      answer: `Fiber-based ISPs in ${guide.city} provide the best VPN experience because the higher baseline speeds absorb VPN overhead more gracefully.`,
+      answer: `Every VPN adds some overhead, so a faster plan leaves more headroom. Run a speed test with the VPN on and off at the times you usually go online.`,
     },
   ];
 
@@ -84,7 +85,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "City Guides", path: "/vpn/los-angeles" },
+          { name: "City Guides", path: "/vpn" },
           { name: guide.city, path: `/vpn/${guide.slug}` },
         ]}
       />
@@ -102,7 +103,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           connectivity differences, and privacy considerations specific to {guide.city} residents
           against our provider test data.
         </p>
-        <AuthorByline date={siteConfig.updatedDate} />
+        <AuthorByline date="October 17, 2026" />
       </header>
 
       <DisclosureBanner />
@@ -111,8 +112,8 @@ export default async function CityVpnPage({ params }: CityPageProps) {
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-white">Local ISP Baseline Speeds in {guide.city}</h2>
         <p className="text-sm text-[#94a3b8]">
-          Understanding your ISP baseline matters because VPN overhead is a percentage of your
-          available bandwidth. FCC broadband labeling now requires standardized speed
+          Your ISP plan sets the ceiling, and a VPN can only lower it, so start with your plan&apos;s
+          advertised speed. FCC broadband labeling now requires standardized speed
           disclosures<CitationLink source={citationSources.S4} />.
         </p>
         <div className="glass-card overflow-x-auto p-2">
@@ -160,7 +161,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         <h2 className="text-2xl font-bold text-white">
           Streaming, Media, and Local Use Cases
         </h2>
-        <p>{guide.streamingNeeds}</p>
+        <p><CitedText text={guide.streamingNeeds} /></p>
       </section>
 
       <hr className="divider-glow" />
@@ -170,7 +171,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         <h2 className="text-2xl font-bold text-white">
           Neighborhood-Level Connectivity in {guide.city}
         </h2>
-        <p>{guide.neighborhoodNote}</p>
+        <p><CitedText text={guide.neighborhoodNote} /></p>
       </section>
 
       {guide.localColor ? (
@@ -196,7 +197,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
           <span className="badge badge-teal">Recommendation for {guide.city}</span>
         </div>
         <div className="space-y-5 p-8">
-          <p className="leading-relaxed text-[#cbd5e1]">{guide.recommendation}</p>
+          <p className="leading-relaxed text-[#cbd5e1]"><CitedText text={guide.recommendation} /></p>
           <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
         </div>
       </section>
@@ -205,7 +206,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
 
       <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
 
-      <FaqSection faqs={cityFaqs} />
+      <FaqSection faqs={cityFaqs} renderAnswer={(answer) => <CitedText text={answer} />} />
 
       <SourcesList sources={citySources} />
     </article>

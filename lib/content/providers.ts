@@ -51,7 +51,7 @@ export const AFFILIATE_URLS: Record<string, string> = {
   purevpn: "https://billing.purevpn.com/aff.php?aff=49388038",
   surfshark: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
   expressvpn: "https://www.expressvpn.com/order",
-  protonvpn: "https://go.getproton.me/aff_c?offer_id=26&aff_id=19779",
+  protonvpn: "https://protonvpn.com/",
   hideme: "https://hide.me/?friend=6a89f8e9ae1ca",
 };
 
@@ -152,7 +152,7 @@ export const providers: Provider[] = [
     dateModified: "2026-10-15",
     reviewTitle: "Surfshark Review 2026: Best Budget VPN for Families?",
     reviewDescription:
-      "Surfshark review with speed benchmarks, privacy audit analysis, and honest pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
+      "Surfshark review with privacy audit analysis and honest pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
     reviewSummary:
       "Surfshark is the strongest value play in our 2026 rankings. Unlimited connections and competitive transatlantic speeds make it ideal for households, though power users may want more tuning options.",
     jurisdiction: "Netherlands",
@@ -167,7 +167,7 @@ export const providers: Provider[] = [
         heading: "Privacy and Trust Signals",
         paragraphs: [
           "Surfshark operates from the Netherlands and has completed independent audits covering its no-logs claims and server infrastructure. The audit cadence is less frequent than NordVPN's, but the scope is credible.",
-          "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops.",
+          "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
         ],
       },
       {
@@ -187,11 +187,12 @@ export const providers: Provider[] = [
       {
         question: "Is Surfshark as good as NordVPN?",
         answer:
-          "For most household use cases, yes — especially if unlimited devices matter. NordVPN still leads on audit frequency.",
+          "For most household use cases, yes — especially if unlimited devices matter [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. NordVPN still leads on audit frequency.",
       },
       {
         question: "How many devices can I use with Surfshark?",
-        answer: "Surfshark allows unlimited simultaneous connections on a single subscription — a genuine differentiator in this market.",
+        answer:
+            "Surfshark allows unlimited simultaneous connections on a single subscription — a genuine differentiator in this market [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
       },
     ],
     relatedCompareSlugs: ["surfshark-vs-nordvpn", "nordvpn-vs-purevpn"],
@@ -218,7 +219,7 @@ export const providers: Provider[] = [
     dateModified: "2026-10-15",
     reviewTitle: "ExpressVPN Review 2026: Worth the Premium Price?",
     reviewDescription:
-      "ExpressVPN review covering TrustedServer architecture, real speed benchmarks, streaming reliability, and whether the premium price tag is justified in 2026.",
+      "ExpressVPN review covering TrustedServer architecture, streaming reliability, and whether the premium price tag is justified in 2026.",
     reviewSummary:
       "ExpressVPN trades on simplicity and reliability. It is not the fastest or cheapest option, but its polished apps and predictable streaming performance keep it in our top five.",
     jurisdiction: "British Virgin Islands",

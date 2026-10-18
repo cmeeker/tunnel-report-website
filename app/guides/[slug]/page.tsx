@@ -30,7 +30,7 @@ function OfficialSourceLink({ cell }: { cell: string }) {
   const link = cell.match(MARKDOWN_LINK);
   if (!link) return cell;
   return (
-    <a href={link[2]} target="_blank" rel="noopener" className={officialLinkClassName}>
+    <a href={link[2]} target="_blank" rel="noopener noreferrer" className={officialLinkClassName}>
       {link[1]}
     </a>
   );
@@ -112,7 +112,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </section>
       ) : null}
 
-      <DisclosureBanner />
+      {guide.slug === "protonvpn-renewal-price" ? null : <DisclosureBanner />}
 
       {guide.shortAnswer ? null : (
       <section className="surface-card p-8">

@@ -67,5 +67,5 @@ export const renewalPricesChart = {
   src: "/charts/guides-vpn-renewal-prices-chart.webp",
   width: 1200,
   height: 760,
-  alt: "Chart of VPN intro and renewal prices checked Oct 15, 2026: seven plans, each shown with its plan length, intro total and renewal price, in USD except Mullvad in EUR. Surfshark renewal not shown because it could not be verified.",
+  alt: "Table of six USD VPN plans with intro price, renewal, and a check date on each row. NordVPN Basic 2 yr + 3 mo: $3.49/mo ($94.23 for 27 months), renews at $139.08/year, checked Oct 15, 2026. ExpressVPN Basic 12 mo + 3 mo: $4.99/mo ($74.85 for 15 months), renews at $99.95/year, checked Oct 15, 2026. Surfshark Starter 24 mo + 3 mo: $2.49/mo ($67.23 for 27 months), renewal not listed on the pricing page, checked Oct 15, 2026. PureVPN Standard 2 yr + 3 mo: $2.15/mo ($58.20 for 27 months), renews at $47.95/year, checked Oct 15, 2026. Proton VPN Plus 2 yr: $3.49/mo ($83.76 for 24 months), renews at $83.88 every 12 months, checked Oct 6, 2026. hide.me Premium 24 mo + 2 mo: $2.69/mo ($69.99 for 26 months), renews at $69.99 every 26 months, checked Oct 6, 2026.",
 } as const;
