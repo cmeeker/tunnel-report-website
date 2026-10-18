@@ -46,8 +46,7 @@ export function NordvpnVsProtonvpnLongform() {
         <p>
           <strong>Use-case verdict, not a trophy.</strong> NordVPN is the household default if you want a mature app.
           Proton VPN is the better pick if you want public
-          audit PDFs, open-source clients, Swiss legal posture, and a credible free tier — even if that means giving
-          up throughput.
+          audit PDFs, open-source clients, Swiss legal posture, and a credible free tier.
         </p>
       </section>
 
@@ -176,11 +175,11 @@ export function NordvpnVsProtonvpnLongform() {
         </div>
 
         <p>
-          Those scores are from our standalone reviews, not a new head-to-head trophy. NordVPN still leads the{" "}
+          Those scores are from our standalone reviews, not a new head-to-head trophy. NordVPN is our pick in the{" "}
           <Link href="/best-vpns" className={linkClassName}>
             2026 rankings
           </Link>
-          . Proton VPN is ranked for transparency, not for beating NordVPN on throughput.
+          . Proton VPN is ranked for transparency.
         </p>
       </section>
 
@@ -208,7 +207,18 @@ export function NordvpnVsProtonvpnLongform() {
           59 of 59 in 2025).
         </p>
 
-        <p>Who wins privacy: Proton transparency.</p>
+        <p>
+          Privacy: Proton publishes open-source apps;{" "}
+          <a
+            href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClassName}
+          >
+            NordVPN says
+          </a>{" "}
+          it has passed six independent assurance engagements (full report behind a Nord Account login).
+        </p>
       </section>
 
       <section className="prose-dark space-y-4">

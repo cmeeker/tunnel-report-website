@@ -216,7 +216,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
       <FaqSection
         faqs={guide.faqs}
-        renderAnswer={guide.sourceIds ? (answer) => <CitedText text={answer} /> : undefined}
+        renderAnswer={(answer) => <CitedText text={answer} />}
       />
 
       <SourcesList

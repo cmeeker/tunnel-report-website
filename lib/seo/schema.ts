@@ -48,6 +48,10 @@ export function buildOrganizationSchema() {
   };
 }
 
+function visibleFaqAnswer(answer: string) {
+  return answer.replace(/\[([^\]]+)\]\(https?:\/\/[^)\s]+\)/g, "$1");
+}
+
 export function buildFAQSchema(faqs: FaqItem[]) {
   return {
     "@context": "https://schema.org",
@@ -57,7 +61,7 @@ export function buildFAQSchema(faqs: FaqItem[]) {
       name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.answer,
+        text: visibleFaqAnswer(faq.answer),
       },
     })),
   };

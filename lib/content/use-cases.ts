@@ -38,7 +38,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     description:
       "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on geo-unblocking consistency, and app reliability.",
     intro:
-      "Streaming is the use case where VPN marketing most often gets ahead of reality. A provider can post huge speed-test screenshots and still fail if it cannot keep a consistent IP pool, reconnect cleanly after platform blocks, or keep 4K streams buffered during prime time.",
+      "Streaming is the use case where VPN marketing most often gets ahead of reality.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -46,13 +46,12 @@ export const useCaseGuides: UseCaseGuide[] = [
     picks: [
       { providerSlug: "nordvpn", label: "Best overall streaming VPN", reason: "NordVPN is our top streaming pick." },
       { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps and reliable region switching for non-technical users.", paidPick: streamingExpressPaidPick },
-      { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices and strong US library performance at lower entry pricing." },
+      { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices at lower entry pricing." },
     ],
     sections: [
       {
         heading: "What actually matters for streaming VPNs",
         paragraphs: [
-          "The important metric is not peak throughput; it is whether the VPN keeps enough speed during evening congestion to avoid buffering while also maintaining access to the content library you want.",
           "We weigh streaming picks by server locations, Smart TV and router support, simultaneous connections and refund window, based on published specs. NordVPN is our top pick because it covers all four, not because it wins every one.",
         ],
       },
@@ -92,14 +91,14 @@ export const useCaseGuides: UseCaseGuide[] = [
     picks: [
       { providerSlug: "mullvad", label: "Best privacy purist pick", reason: "Anonymous account numbers, cash payments, open-source clients, and no affiliate funnel." },
       { providerSlug: "protonvpn", label: "Best transparency ecosystem", reason: "Swiss jurisdiction, open-source apps, credible free tier, and strong public privacy posture." },
-      { providerSlug: "nordvpn", label: "Best mainstream privacy VPN", reason: "Frequent infrastructure audits and RAM-only server architecture with better speeds." },
+      { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "Frequent infrastructure audits and RAM-only server architecture." },
     ],
     sections: [
       {
         heading: "Audit scope beats audit marketing",
         paragraphs: [
           "A no-logs audit only matters if the scope reaches real infrastructure, server configuration, and retention controls. Many providers advertise audits that are closer to policy reviews than technical verification.",
-          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is the best mainstream provider because its infrastructure claims are more mature than most commercial competitors.",
+          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is our mainstream pick. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
         ],
       },
       {
@@ -130,7 +129,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     description:
       "Torrenting VPN recommendations based on kill switch reliability, P2P support, no-logs verification, and jurisdiction.",
     intro:
-      "Torrenting is one of the few consumer VPN use cases where a weak kill switch or sloppy logging policy can create immediate consequences. We prioritize providers that support P2P clearly, document no-logs controls, and maintain stable WireGuard performance.",
+      "Torrenting is one of the few consumer VPN use cases where a weak kill switch or sloppy logging policy can create immediate consequences. We prioritize providers that support P2P clearly and document no-logs controls.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -229,16 +228,10 @@ export const useCaseGuides: UseCaseGuide[] = [
     primaryPick: "nordvpn",
     picks: [
       { providerSlug: "nordvpn", label: "Best gaming VPN overall", reason: "NordVPN is our top gaming pick: it offers WireGuard-based NordLynx on every platform." },
-      { providerSlug: "surfshark", label: "Budget gaming VPN", reason: "Strong domestic throughput with unlimited devices for multi-console households." },
+      { providerSlug: "surfshark", label: "Budget gaming VPN", reason: "Unlimited devices for multi-console households." },
       { providerSlug: "expressvpn", label: "Best console setup", reason: "Clear router and device setup guides for living-room gaming.", paidPick: gamingExpressPaidPick },
     ],
     sections: [
-      {
-        heading: "Latency beats throughput for games",
-        paragraphs: [
-          "Most games use surprisingly little bandwidth. What matters is latency, jitter, and packet stability. A VPN that posts 900 Mbps but adds unstable routing is worse than a slower provider with cleaner nearby exits.",
-        ],
-      },
       {
         heading: "When a gaming VPN helps",
         paragraphs: [

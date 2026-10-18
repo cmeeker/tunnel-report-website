@@ -134,7 +134,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "privacy",
     title: "Best VPN for Privacy in 2026",
     description:
-      "Privacy-first buyers should prioritize audit scope, jurisdiction, open-source clients, and payment anonymity over raw speed. Mullvad and Proton VPN lead this category; NordVPN is the best mainstream option with verified infrastructure audits.",
+      "Privacy-first buyers should prioritize audit scope, jurisdiction, open-source clients, and payment anonymity over raw speed.",
     pickSlug: "mullvad",
     pickReason: "Anonymous account numbers, cash/crypto payments, and zero affiliate marketing funnel.",
   },
@@ -159,7 +159,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "gaming",
     title: "Best VPN for Gaming in 2026",
     description:
-      "Gaming VPNs need low latency, stable UDP routing, and minimal packet loss — not just high throughput. For competitive online play, a WireGuard-based protocol matters most.",
+      "For competitive online play, a WireGuard-based protocol matters most.",
     pickSlug: "nordvpn",
     pickReason: "WireGuard-based NordLynx on all platforms.",
   },
@@ -169,6 +169,6 @@ export const useCaseSections: UseCaseSection[] = [
     description:
       "Remote work VPNs need reliable kill switches, split tunneling for corporate apps, and stable connections across network changes. NordVPN and ExpressVPN offer the most mature split-tunnel implementations.",
     pickSlug: "nordvpn",
-    pickReason: "Mature kill switch, Threat Protection for malware blocking, and consistent performance on video calls.",
+    pickReason: "Mature kill switch and Threat Protection for malware blocking.",
   },
 ];

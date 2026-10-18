@@ -276,7 +276,7 @@ export default function Home() {
             {
               title: "Surfshark Review 2026: Best Budget VPN for Families?",
               excerpt:
-                "Unlimited devices, aggressive pricing, and improving transatlantic speeds — our full Surfshark review breaks down where it beats NordVPN and where it does not.",
+                "Unlimited devices and aggressive pricing — our full Surfshark review breaks down where it beats NordVPN and where it does not.",
               href: "/reviews/surfshark",
               image: "/images/article-speed.svg",
               badge: "Review",

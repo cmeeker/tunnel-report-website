@@ -39,7 +39,7 @@ const bestVpnFaqs = [
   {
     question: "Why is NordVPN ranked first over cheaper alternatives?",
     answer:
-      "Because our scoring weights consistent performance and verifiable security behavior more heavily than introductory pricing. NordVPN keeps the top spot on app maturity.",
+      "Because our ranking weights published security features and pricing over the full plan term more heavily than introductory pricing. NordVPN is our top pick based on published specs.",
   },
   {
     question: "Can I trust a free VPN instead?",
@@ -96,10 +96,8 @@ export default function BestVpnsPage() {
         <section className="prose-dark space-y-4">
           <h2 className="text-xl font-bold text-white">What Changed in This Update</h2>
           <p>
-            The biggest shift since our Q4 2025 rankings is in the mid-tier: Surfshark&apos;s connection
-            stability improved materially on transatlantic routes, and Proton VPN&apos;s free tier
-            continues to function as a credible entry point for low-risk users. NordVPN keeps the top
-            spot on app maturity.
+            The biggest shift since our Q4 2025 rankings is in the mid-tier: Proton VPN&apos;s free tier
+            continues to function as a credible entry point for low-risk users. NordVPN stays our top pick.
           </p>
           <p>
             The regulatory backdrop matters too. The FBI&apos;s IC3 reported $12.5 billion in online
@@ -173,7 +171,9 @@ export default function BestVpnsPage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase text-[#64748b]">Privacy</p>
-                    <p className="mt-1 text-sm text-[#94a3b8]">{vpn.privacySummary}</p>
+                    <p className="mt-1 text-sm text-[#94a3b8]">
+                      <CitedText text={vpn.privacySummary} />
+                    </p>
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase text-[#64748b]">Value</p>
@@ -304,8 +304,8 @@ export default function BestVpnsPage() {
           <span className="badge badge-teal mb-3 text-[0.65rem]">Editor&apos;s Choice</span>
           <h2 className="text-lg font-bold text-white">Quick Pick: NordVPN</h2>
           <p className="mt-2 text-sm leading-relaxed text-[#94a3b8]">
-            If you need one recommendation, NordVPN ranks first on app maturity
-            in this update.
+            If you need one recommendation, NordVPN is our top pick in this update, based on published
+            specs.
           </p>
           <div className="mt-4">
             <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />

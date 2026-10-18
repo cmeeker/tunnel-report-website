@@ -7,6 +7,7 @@ import { PaidPick } from "@/components/PaidPick";
 import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
+import { CitedText } from "@/components/CitedText";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -144,7 +145,9 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
         <section key={section.heading} className="prose-dark space-y-4">
           <h2 className="text-2xl font-bold text-white">{section.heading}</h2>
           {section.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+            <p key={paragraph.slice(0, 48)}>
+              <CitedText text={paragraph} />
+            </p>
           ))}
         </section>
       ))}
