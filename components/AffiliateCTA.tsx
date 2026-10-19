@@ -8,7 +8,7 @@ type AffiliateCTAProps = {
 };
 
 /** Tracked paid partners. ExpressVPN is unpaid and must not be serialized as a partner prop. */
-const PAID_PARTNERS = new Set(["nordvpn", "nordpass", "surfshark", "purevpn", "hideme"]);
+const PAID_PARTNERS = new Set(["nordvpn", "nordpass", "surfshark", "purevpn", "hideme", "protonvpn"]);
 
 export function AffiliateCTA({ href, partner, label, className = "" }: AffiliateCTAProps) {
   if (PAID_PARTNERS.has(partner)) {

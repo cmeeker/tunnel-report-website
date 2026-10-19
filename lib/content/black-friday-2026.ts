@@ -1,4 +1,5 @@
 import { staffAuthorName } from "@/lib/editorial-personas";
+import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { siteConfig } from "@/lib/site";
 
 export const DEAL_DATE_MODIFIED = "2026-10-18";
@@ -42,7 +43,8 @@ export const paidLinks = {
 
 export const protonPricingLink = {
   label: "See Proton VPN pricing",
-  href: "https://protonvpn.com/pricing",
+  href: AFFILIATE_URLS.protonvpn,
+  partner: "protonvpn",
 } as const;
 
 export const vendorSources = {

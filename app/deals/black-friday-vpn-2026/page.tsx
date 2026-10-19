@@ -122,9 +122,12 @@ export default function BlackFridayVpnHubPage() {
               <PlainOutboundLink key="proton-src" href={vendorSources.protonvpn}>
                 protonvpn.com/pricing
               </PlainOutboundLink>,
-              <PlainOutboundLink key="proton-cta" href={protonPricingLink.href}>
-                {protonPricingLink.label}
-              </PlainOutboundLink>,
+              <PaidVisitLink
+                key="proton-cta"
+                href={protonPricingLink.href}
+                partner={protonPricingLink.partner}
+                label={protonPricingLink.label}
+              />,
             ],
             [
               "hide.me",
@@ -255,7 +258,11 @@ export default function BlackFridayVpnHubPage() {
           </Link>
         </p>
         <p>
-          <PlainOutboundLink href={protonPricingLink.href}>{protonPricingLink.label}</PlainOutboundLink>
+          <PaidVisitLink
+            href={protonPricingLink.href}
+            partner={protonPricingLink.partner}
+            label={protonPricingLink.label}
+          />
         </p>
       </section>
 

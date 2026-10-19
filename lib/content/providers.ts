@@ -52,7 +52,7 @@ export const AFFILIATE_URLS: Record<string, string> = {
   purevpn: "https://billing.purevpn.com/aff.php?aff=49388038",
   surfshark: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
   expressvpn: "https://www.expressvpn.com/order",
-  protonvpn: "https://protonvpn.com/",
+  protonvpn: "https://go.getproton.me/aff_c?offer_id=26&aff_id=19779",
   hideme: "https://hide.me/?friend=6a89f8e9ae1ca",
 };
 
