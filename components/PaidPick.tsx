@@ -7,7 +7,6 @@ type PaidPickProps = {
 };
 
 export function PaidPick({ pick, className = "" }: PaidPickProps) {
-  const plain = pick.partner === "protonvpn";
   return (
     <p className={`paid-pick mt-2 text-sm text-[#94a3b8] ${className}`.trim()}>
       Or try a paid pick:{" "}
@@ -15,13 +14,11 @@ export function PaidPick({ pick, className = "" }: PaidPickProps) {
         href={AFFILIATE_URLS[pick.partner]}
         target="_blank"
         rel={
-          plain
-            ? "noopener noreferrer"
-            : pick.partner === "hideme"
-              ? "sponsored nofollow noopener noreferrer"
-              : "nofollow sponsored noopener noreferrer"
+          pick.partner === "hideme"
+            ? "sponsored nofollow noopener noreferrer"
+            : "nofollow sponsored noopener noreferrer"
         }
-        {...(plain ? {} : { "data-partner": pick.partner })}
+        data-partner={pick.partner}
       >
         {PAID_PARTNER_LABEL[pick.partner]}
       </a>

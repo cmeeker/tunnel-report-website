@@ -15,6 +15,7 @@ import { NordvpnVsProtonvpnLongform } from "@/components/compare/NordvpnVsProton
 import { comparisonMap, comparisonSlugs, type Comparison } from "@/lib/content/comparisons";
 import { citationSources, compareSources, getCitationSourcesById } from "@/lib/content/facts";
 import {
+  AFFILIATE_URLS,
   getProviderCtaHref,
   providerMap,
 } from "@/lib/content/providers";
@@ -126,11 +127,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         </section>
       ) : null}
 
-      {comparison.slug === "surfshark-vs-protonvpn" ||
-      comparison.slug === "expressvpn-vs-protonvpn" ||
-      comparison.slug === "mullvad-vs-protonvpn" ? null : (
-        <DisclosureBanner />
-      )}
+      {comparison.slug === "surfshark-vs-protonvpn" ? null : <DisclosureBanner />}
 
       {comparison.specRows ? (
         <section className="space-y-4">
@@ -287,14 +284,11 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                     label={`Visit ${right.name}`}
                   />
                 ) : (
-                  <a
-                    href="https://protonvpn.com/"
-                    className="affiliate-cta inline-flex"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visit Proton VPN
-                  </a>
+                  <AffiliateCTA
+                    href={AFFILIATE_URLS.protonvpn}
+                    partner="protonvpn"
+                    label="Visit Proton VPN"
+                  />
                 )}
                 {right.affiliateKey === "expressvpn" && comparison.expressPaidPick ? (
                   <PaidPick pick={comparison.expressPaidPick} />

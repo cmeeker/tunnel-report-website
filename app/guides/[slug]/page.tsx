@@ -104,6 +104,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <AuthorByline date={guide.updatedDateLabel ?? siteConfig.updatedDate} />
       </header>
 
+      {guide.slug === "protonvpn-renewal-price" ? <DisclosureBanner /> : null}
+
       {guide.shortAnswer ? (
         <section className="surface-card p-8">
           <h2 className="text-lg font-bold text-white">Short answer</h2>

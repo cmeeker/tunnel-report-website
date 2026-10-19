@@ -105,14 +105,14 @@ export function NordvpnVsProtonvpnLongform() {
             label="Visit NordVPN"
           />
           <AffiliateCTA
-            href="https://protonvpn.com/"
+            href={AFFILIATE_URLS.protonvpn}
             partner="protonvpn"
             label="Visit Proton VPN"
           />
         </div>
 
         <section className="prose-dark space-y-4">
-          <p>Visit NordVPN uses the tracked href above. Visit Proton VPN links to https://protonvpn.com/.</p>
+          <p>Visit NordVPN uses the tracked href above. Visit Proton VPN uses the tracked href above.</p>
         </section>
       </section>
 
