@@ -58,16 +58,19 @@ export type ShareImageMeta = {
   width: number;
   height: number;
   alt: string;
-  type: "image/webp" | "image/svg+xml";
+  type: "image/webp" | "image/png";
 };
 
-/** Site default share image. The NordVPN vs Proton VPN WebP bakes in a retired headline. */
+/**
+ * Homepage PNG from `app/opengraph-image.tsx` (1200×630).
+ * Used when a page must not serve `og-default.svg` or a stale custom WebP.
+ */
 const defaultOgImage: ShareImageMeta = {
-  url: `${siteConfig.url}/images/og-default.svg`,
+  url: `${siteConfig.url}/opengraph-image`,
   width: shareImageSize.width,
   height: shareImageSize.height,
   alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "NordVPN vs Proton VPN 2026: Features, Privacy and Pricing Compared", and tunnelreport.com in teal.',
-  type: "image/svg+xml",
+  type: "image/png",
 };
 
 export function getShareImage(path: string): ShareImageMeta | undefined {
