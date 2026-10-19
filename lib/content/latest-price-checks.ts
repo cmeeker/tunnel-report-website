@@ -22,7 +22,7 @@ export const latestPriceChecks: PriceCheckLink[] = [
   },
   {
     href: "/compare/nordvpn-vs-protonvpn",
-    label: "NordVPN vs Proton VPN 2026: Speed Leader or Privacy Ecosystem?",
+    label: "NordVPN vs Proton VPN 2026: Features, Privacy and Pricing Compared",
   },
   {
     href: "/compare/nordvpn-vs-purevpn",

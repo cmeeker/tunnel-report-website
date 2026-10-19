@@ -27,10 +27,6 @@ const shareImages: Record<string, ShareImage> = {
     file: "compare-nordvpn-vs-purevpn-og.webp",
     alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "NordVPN vs PureVPN 2026: Head-to-Head Comparison", and tunnelreport.com in teal.',
   },
-  "/compare/nordvpn-vs-protonvpn": {
-    file: "compare-nordvpn-vs-protonvpn-og.webp",
-    alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "NordVPN vs Proton VPN 2026: Speed Leader or Privacy Ecosystem?", and tunnelreport.com in teal.',
-  },
   "/compare/nordvpn-vs-expressvpn": {
     file: "compare-nordvpn-vs-expressvpn-og.webp",
     alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "NordVPN vs ExpressVPN 2026: Which Premium VPN Wins?", and tunnelreport.com in teal.',
@@ -62,10 +58,21 @@ export type ShareImageMeta = {
   width: number;
   height: number;
   alt: string;
-  type: "image/webp";
+  type: "image/webp" | "image/svg+xml";
+};
+
+/** Site default share image. The NordVPN vs Proton VPN WebP bakes in a retired headline. */
+const defaultOgImage: ShareImageMeta = {
+  url: `${siteConfig.url}/images/og-default.svg`,
+  width: shareImageSize.width,
+  height: shareImageSize.height,
+  alt: 'Tunnel Report share image on a dark navy background with the teal shield icon and wordmark, headline "NordVPN vs Proton VPN 2026: Features, Privacy and Pricing Compared", and tunnelreport.com in teal.',
+  type: "image/svg+xml",
 };
 
 export function getShareImage(path: string): ShareImageMeta | undefined {
+  if (path === "/compare/nordvpn-vs-protonvpn") return defaultOgImage;
+
   const image = shareImages[path];
   if (!image) return undefined;
 

@@ -230,7 +230,7 @@ export const comparisons: Comparison[] = [
     slug: "nordvpn-vs-protonvpn",
     leftSlug: "nordvpn",
     rightSlug: "protonvpn",
-    title: "NordVPN vs Proton VPN 2026: Speed Leader or Privacy Ecosystem?",
+    title: "NordVPN vs Proton VPN 2026: Features, Privacy and Pricing Compared",
     description:
       "NordVPN vs Proton VPN compared across speed, privacy transparency, pricing, streaming, and open-source posture.",
     intro:
