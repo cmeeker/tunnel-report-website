@@ -108,7 +108,7 @@ export default function BlackFridayVpnHubPage() {
               "Basic, 2-year + 3 mo",
               "$94.23 for first 27 months ($3.49/mo)",
               "$139.08/year",
-              <PlainOutboundLink key="nord-src" href={paidLinks.nordvpn.href}>
+              <PlainOutboundLink key="nord-src" href={vendorSources.nordvpn}>
                 nordvpn.com/pricing/
               </PlainOutboundLink>,
               <PaidVisitLink key="nord-cta" {...paidLinks.nordvpn} />,
@@ -183,7 +183,7 @@ export default function BlackFridayVpnHubPage() {
             ],
           ]}
         />
-        <SourceLine href={paidLinks.nordvpn.href} label="nordvpn.com/pricing/" />
+        <SourceLine href={vendorSources.nordvpn} label="nordvpn.com/pricing/" />
         <p>
           NordVPN&apos;s pricing page lists 10 devices secured at once and a 30-day money-back
           guarantee on all plans.

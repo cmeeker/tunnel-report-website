@@ -2,23 +2,22 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
-import { citationLinkRel } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
 
 const linkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
 
-function PlainSourceLink({ href, children }: { href: string; children?: ReactNode }) {
+function PlainSourceLink({ href }: { href: string }) {
   return (
-    <a href={href} target="_blank" rel={citationLinkRel(href)} className={linkClassName}>
-      {children ?? href}
+    <a href={href} target="_blank" rel="noopener noreferrer" className={linkClassName}>
+      {href}
     </a>
   );
 }
 
 function PricingLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <a href={href} target="_blank" rel={citationLinkRel(href)} className={linkClassName}>
+    <a href={href} target="_blank" rel="noopener noreferrer" className={linkClassName}>
       {children}
     </a>
   );
@@ -260,7 +259,7 @@ export function NordvpnVsProtonvpnLongform() {
         <h2 className="text-2xl font-bold text-white">Apps, devices, and network claims</h2>
         <p>
           Both 10 simultaneous connections. NordVPN thousands of servers in 225+ locations{" "}
-          <PricingLink href={AFFILIATE_URLS.nordvpn}>nordvpn.com/pricing</PricingLink>, as of Oct 2026, NordLynx.
+          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>, as of Oct 2026, NordLynx.
           Proton Plus 20,000+ servers 140+ countries{" "}
           <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026. Price
           Basic not Complete/Prime extras.
@@ -271,7 +270,7 @@ export function NordvpnVsProtonvpnLongform() {
         <h2 className="text-2xl font-bold text-white">Pricing: what we could verify on Oct 15, 2026</h2>
         <p>
           NordVPN live{" "}
-          <PricingLink href={AFFILIATE_URLS.nordvpn}>nordvpn.com/pricing</PricingLink>: 2-year+3mo Basic $3.49
+          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>: 2-year+3mo Basic $3.49
           intro, $94.23 / 27 months, renews $139.08/year; 1-year Basic $5.49 / $65.88, as of Oct 2026. Older blog $2.99
           is stale. Proton VPN Plus: $3.49/mo on the 2-year plan ($83.76 for the first 24 months, then $83.88 every 12
           months) <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.
@@ -329,7 +328,7 @@ export function NordvpnVsProtonvpnLongform() {
           <li>tunnelreport.com/methodology</li>
           <li>tunnelreport.com/best-vpns</li>
           <li>
-            <PlainSourceLink href={AFFILIATE_URLS.nordvpn}>https://nordvpn.com/pricing/</PlainSourceLink> live intro/renewal
+            <PlainSourceLink href="https://nordvpn.com/pricing/" /> live intro/renewal
           </li>
           <li>
             <PlainSourceLink href="https://nordvpn.com/blog/how-much-does-nordvpn-cost/" />{" "}

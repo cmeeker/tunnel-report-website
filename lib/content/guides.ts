@@ -208,7 +208,7 @@ export const guides: Guide[] = [
               "NordVPN Basic, 2 yr + 3 mo",
               "$3.49/mo ($94.23 for 27 months)",
               "$139.08/year",
-              "[nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902)",
+              "[nordvpn.com/pricing](https://nordvpn.com/pricing/)",
             ],
             [
               "ExpressVPN Basic, 12 mo + 3 mo",

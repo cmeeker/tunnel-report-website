@@ -48,6 +48,7 @@ export const protonPricingLink = {
 } as const;
 
 export const vendorSources = {
+  nordvpn: "https://nordvpn.com/pricing/",
   surfshark: "https://surfshark.com/pricing",
   protonvpn: "https://protonvpn.com/pricing",
   hideme: "https://hide.me/en/pricing",

@@ -5,16 +5,10 @@ export type CitationSource = {
   title: string;
   publisher: string;
   url: string;
-  /** Click target when the cited page is also a buy link. Displayed source text stays `url`. */
-  linkHref?: string;
   year: number;
   retrievedAt: string;
   retrievedVerb?: "accessed" | "checked";
 };
-
-export function citationOutboundHref(source: CitationSource): string {
-  return source.linkHref ?? source.url;
-}
 
 const TRACKED_CITATION_URLS = new Set([
   AFFILIATE_URLS.nordvpn,
@@ -71,7 +65,6 @@ export const citationSources: Record<string, CitationSource> = {
     title: "NordVPN Pricing",
     publisher: "Nord Security",
     url: "https://nordvpn.com/pricing/",
-    linkHref: AFFILIATE_URLS.nordvpn,
     year: 2026,
     retrievedAt: "Oct 15, 2026",
     retrievedVerb: "checked",
