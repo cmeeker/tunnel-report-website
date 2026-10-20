@@ -12,7 +12,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
-import { getCitationSourcesById, homepageSources } from "@/lib/content/facts";
+import { citationLinkRel, getCitationSourcesById, homepageSources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { guideMap, guides, guideSlugs } from "@/lib/content/guides";
 import { staffAuthorName } from "@/lib/editorial-personas";
@@ -30,7 +30,7 @@ function OfficialSourceLink({ cell }: { cell: string }) {
   const link = cell.match(MARKDOWN_LINK);
   if (!link) return cell;
   return (
-    <a href={link[2]} target="_blank" rel="noopener noreferrer" className={officialLinkClassName}>
+    <a href={link[2]} target="_blank" rel={citationLinkRel(link[2])} className={officialLinkClassName}>
       {link[1]}
     </a>
   );

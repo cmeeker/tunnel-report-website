@@ -106,8 +106,8 @@ export const providers: Provider[] = [
       {
         heading: "What Does NordVPN Actually Cost After the Promo Ends?",
         paragraphs: [
-          "The introductory pricing on NordVPN's website is competitive — $3.49/mo on the 2-year Basic plan, billed $94.23 for the first 27 months [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026. That is genuinely good value for the service quality.",
-          "The part most reviews bury: renewal pricing is materially higher. After that, it renews at $139.08/year, about $11.59/mo [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026. Readers should factor the full lifecycle cost into their decision.",
+          "The introductory pricing on NordVPN's website is competitive — $3.49/mo on the 2-year Basic plan, billed $94.23 for the first 27 months [nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902), as of Oct 2026. That is genuinely good value for the service quality.",
+          "The part most reviews bury: renewal pricing is materially higher. After that, it renews at $139.08/year, about $11.59/mo [nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902), as of Oct 2026. Readers should factor the full lifecycle cost into their decision.",
           "If you are price-sensitive, set a calendar reminder before your term expires and evaluate whether to renew, switch, or negotiate.",
         ],
       },
