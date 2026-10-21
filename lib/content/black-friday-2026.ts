@@ -31,7 +31,7 @@ export const paidLinks = {
   },
   surfshark: {
     label: "Visit Surfshark",
-    href: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
+    href: "https://get.surfshark.net/aff_c?offer_id=2065&aff_id=49525",
     partner: "surfshark",
   },
   hideme: {
