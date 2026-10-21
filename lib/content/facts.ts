@@ -13,7 +13,7 @@ export type CitationSource = {
 const TRACKED_CITATION_URLS = new Set([
   AFFILIATE_URLS.nordvpn,
   "https://billing.purevpn.com/aff.php?aff=49388038",
-  "https://get.surfshark.net/aff_c?offer_id=926&aff_id=49525",
+  "https://get.surfshark.net/aff_c?offer_id=2065&aff_id=49525",
   "https://hide.me/?friend=6a89f8e9ae1ca",
 ]);
 
