@@ -271,8 +271,8 @@ export function NordvpnVsProtonvpnLongform() {
         <p>
           NordVPN live{" "}
           <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>: 2-year+3mo Basic $3.49
-          intro, $94.23 / 27 months, renews $139.08/year; 1-year Basic $5.49 / $65.88, as of Oct 2026. Older blog $2.99
-          is stale. Proton VPN Plus: $3.49/mo on the 2-year plan ($83.76 for the first 24 months, then $83.88 every 12
+          intro, $94.23 / 27 months, renews $139.08/year; 1-year Basic $5.49 / $65.88, as of Oct 2026. Proton VPN
+          Plus: $3.49/mo on the 2-year plan ($83.76 for the first 24 months, then $83.88 every 12
           months) <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.
           Free $0; Plus standalone; Unlimited ecosystem.
         </p>
@@ -336,7 +336,7 @@ export function NordvpnVsProtonvpnLongform() {
           </li>
           <li>
             <PlainSourceLink href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/" />{" "}
-            3 Feb 2026 Deloitte PDF not public
+            3 Feb 2026
           </li>
           <li>
             <PlainSourceLink href="https://nordvpn.com/features/no-log-vpn/" />
