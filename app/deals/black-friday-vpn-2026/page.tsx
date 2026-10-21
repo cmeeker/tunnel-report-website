@@ -22,6 +22,7 @@ import {
   nordFaqs,
   paidLinks,
   protonFaqs,
+  nordBlackFriday,
   protonPricingLink,
   surfsharkBlackFriday,
   vendorSources,
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   robots: "index,follow",
 };
 
-const planHeaders = ["Status", "Plan", "Intro (USD)", "Renewal"];
+const planHeaders = ["Status", "Plan", "Price", "Renewal"];
 
 export default function BlackFridayVpnHubPage() {
   return (
@@ -73,10 +74,10 @@ export default function BlackFridayVpnHubPage() {
       <section className="prose-dark space-y-4">
         <p>
           As of Oct 17, 2026, Surfshark is the only one of these four providers showing an offer it
-          labels &quot;Black Friday deal&quot;: Surfshark One, 24 months + 3 extra months, $67.23 for
-          the first 27 months ($2.49/mo, VAT may apply; renewal: check at checkout). NordVPN, Proton
-          VPN and hide.me have not announced Black Friday deals yet, so we list their current prices
-          below, labeled as current prices. We update this page as vendors publish their offers.
+          labels &quot;Black Friday deal&quot;: Surfshark One, 24 months + 3 extra months. See current
+          pricing. Renewal: check at checkout. NordVPN, Proton VPN and hide.me have not announced
+          Black Friday deals yet, so we list their current plans below, labeled as current prices. We
+          update this page as vendors publish their offers.
         </p>
         <p>{PRICE_CHANGE_LINE}</p>
       </section>
@@ -88,14 +89,14 @@ export default function BlackFridayVpnHubPage() {
           Black Friday VPN offers at a glance (as of Oct 17, 2026)
         </h2>
         <PriceTable
-          caption="VPN Black Friday offers, as of Oct 17, 2026 (USD). Source: each provider's own pricing page."
-          headers={["Provider", "Status", "Plan and length", "Intro price (USD)", "Renewal", "Source", "Link"]}
+          caption="VPN Black Friday offers, as of Oct 17, 2026. See current pricing. Source: each provider's own pricing page."
+          headers={["Provider", "Status", "Plan and length", "Price", "Renewal", "Source", "Link"]}
           rows={[
             [
               "Surfshark",
               "Black Friday deal (per Surfshark)",
               "Surfshark One, 24 mo + 3 mo",
-              "$67.23 for first 27 months ($2.49/mo), VAT may apply",
+              "See current pricing",
               "Check at checkout",
               <PlainOutboundLink key="ss-src" href={vendorSources.surfshark}>
                 surfshark.com/pricing
@@ -106,8 +107,8 @@ export default function BlackFridayVpnHubPage() {
               "NordVPN",
               "Deal not announced yet, check back. Current price shown.",
               "Basic, 2-year + 3 mo",
-              "$94.23 for first 27 months ($3.49/mo)",
-              "$139.08/year",
+              "See current pricing",
+              "See current pricing",
               <PlainOutboundLink key="nord-src" href={vendorSources.nordvpn}>
                 nordvpn.com/pricing/
               </PlainOutboundLink>,
@@ -117,8 +118,8 @@ export default function BlackFridayVpnHubPage() {
               "Proton VPN",
               "Deal not announced yet, check back. Current price shown.",
               "VPN Plus, 2 years",
-              "$83.76 for first 24 months ($3.49/mo)",
-              "$83.88 every 12 months",
+              "See current pricing",
+              "See current pricing",
               <PlainOutboundLink key="proton-src" href={vendorSources.protonvpn}>
                 protonvpn.com/pricing
               </PlainOutboundLink>,
@@ -133,8 +134,8 @@ export default function BlackFridayVpnHubPage() {
               "hide.me",
               "Deal not announced yet, check back. Current price shown.",
               "Premium, 24 mo + 2 mo",
-              "$69.99 every 26 months ($2.69/mo)",
-              "$69.99 every 26 months (vendor pricing guarantee)",
+              "See current pricing",
+              "See current pricing",
               <PlainOutboundLink key="hide-src" href={vendorSources.hideme}>
                 hide.me/en/pricing
               </PlainOutboundLink>,
@@ -142,6 +143,22 @@ export default function BlackFridayVpnHubPage() {
             ],
           ]}
         />
+      </section>
+
+      <section className="surface-card p-8">
+        <h2 className="text-lg font-bold text-white">Provider Black Friday pages</h2>
+        <ul className="mt-3 space-y-2.5 text-sm">
+          <li>
+            <Link href={nordBlackFriday.path} className={textLinkClassName}>
+              NordVPN Black Friday 2026 deal
+            </Link>
+          </li>
+          <li>
+            <Link href={surfsharkBlackFriday.path} className={textLinkClassName}>
+              Surfshark Black Friday 2026 deal
+            </Link>
+          </li>
+        </ul>
       </section>
 
       <section className="prose-dark space-y-4">
@@ -163,8 +180,8 @@ export default function BlackFridayVpnHubPage() {
         </h2>
         <p>
           NordVPN has not announced a Black Friday 2026 deal yet, check back. As of Oct 17, 2026, the
-          current price (not a Black Friday deal) for NordVPN Basic is $94.23 for the first 27 months
-          (2-year plan + 3 extra months, $3.49/mo, USD), and NordVPN states it renews at $139.08/year.
+          current price (not a Black Friday deal) for NordVPN Basic (2-year plan + 3 extra months) is
+          on NordVPN&apos;s site. See current pricing. Renewal: see current pricing.
         </p>
         <PriceTable
           headers={planHeaders}
@@ -172,13 +189,13 @@ export default function BlackFridayVpnHubPage() {
             [
               "Current price, not a Black Friday deal",
               "Basic, 2-year + 3 extra months",
-              "$94.23 for first 27 months ($3.49/mo); sales tax may apply",
-              "$139.08/year",
+              "See current pricing",
+              "See current pricing",
             ],
             [
               "Current price, not a Black Friday deal",
               "Basic, 1-year",
-              "$65.88 for first 12 months ($5.49/mo)",
+              "See current pricing",
               "Renewal not listed on the pricing page",
             ],
           ]}
@@ -193,6 +210,10 @@ export default function BlackFridayVpnHubPage() {
           <Link href="/reviews/nordvpn" className={textLinkClassName}>
             NordVPN review
           </Link>
+          <span className="mx-2 text-[#475569]">·</span>
+          <Link href={nordBlackFriday.path} className={textLinkClassName}>
+            NordVPN Black Friday 2026 deal
+          </Link>
         </p>
         <PaidVisitLink {...paidLinks.nordvpn} />
       </section>
@@ -201,9 +222,8 @@ export default function BlackFridayVpnHubPage() {
         <h2 className="text-2xl font-bold text-white">Surfshark: Black Friday deal (per Surfshark)</h2>
         <p>
           As of Oct 17, 2026, Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra
-          months) a &quot;Black Friday deal&quot;: $67.23 for the first 27 months ($2.49/mo, USD, VAT
-          may apply). Renewal: check at checkout. Surfshark has not published an end date for this
-          deal.
+          months) a &quot;Black Friday deal.&quot; See current pricing. Renewal: check at checkout.
+          Surfshark has not published an end date for this deal.
         </p>
         <p>
           Surfshark&apos;s pricing page states &quot;unlimited simultaneous device connections&quot; (
@@ -226,9 +246,8 @@ export default function BlackFridayVpnHubPage() {
         </h2>
         <p>
           Proton VPN has not announced its Black Friday 2026 deal yet, check back. As of Oct 17,
-          2026, the current price (not a Black Friday deal) for Proton VPN Plus is $83.76 for the
-          first 24 months (2-year plan, $3.49/mo, USD), and Proton states it then renews at $83.88
-          every 12 months.
+          2026, the current price (not a Black Friday deal) for Proton VPN Plus (2-year plan) is on
+          Proton&apos;s site. See current pricing. Renewal: see current pricing.
         </p>
         <p>
           As of Oct 17, 2026, Proton&apos;s Black Friday page says &quot;Black Friday is over&quot; for
@@ -241,8 +260,8 @@ export default function BlackFridayVpnHubPage() {
             [
               "Deal not announced yet, check back. Current price, not a Black Friday deal.",
               "VPN Plus, 2 years",
-              "$83.76 for first 24 months ($3.49/mo)",
-              "$83.88 every 12 months",
+              "See current pricing",
+              "See current pricing",
             ],
           ]}
         />
@@ -272,8 +291,8 @@ export default function BlackFridayVpnHubPage() {
         </h2>
         <p>
           hide.me has not announced a Black Friday 2026 deal yet, check back. As of Oct 17, 2026, the
-          current price (not a Black Friday deal) for hide.me Premium is $69.99 every 26 months (24
-          months + 2 months extra, $2.69/mo, USD), and hide.me&apos;s pricing guarantee says the plan
+          current price (not a Black Friday deal) for hide.me Premium (24 months + 2 months extra) is
+          on hide.me&apos;s site. See current pricing. hide.me&apos;s pricing guarantee says the plan
           &quot;always renews with the same price and duration.&quot;
         </p>
         <PriceTable
@@ -282,16 +301,16 @@ export default function BlackFridayVpnHubPage() {
             [
               "Current price, not a Black Friday deal",
               "Premium, 24 months + 2 months extra",
-              "$69.99 every 26 months ($2.69/mo); VAT may apply",
-              "$69.99 every 26 months (vendor pricing guarantee)",
+              "See current pricing",
+              "See current pricing",
             ],
             [
               "Current price",
               "Premium, 12 months + 1 month extra",
-              "$54.99 every 13 months ($4.23/mo)",
-              "$54.99 every 13 months",
+              "See current pricing",
+              "See current pricing",
             ],
-            ["Current price", "Premium, 1 month", "$11.99 monthly", "$11.99 monthly"],
+            ["Current price", "Premium, 1 month", "See current pricing", "See current pricing"],
           ]}
         />
         <SourceLine href={vendorSources.hideme} label="hide.me/en/pricing" />
@@ -321,10 +340,10 @@ export default function BlackFridayVpnHubPage() {
           .
         </p>
         <p>
-          NordVPN&apos;s pricing page states the Basic 2-year plan renews at $139.08/year. A renewal
-          price for the 1-year term is not listed on the pricing page. Proton&apos;s pricing page
-          states the VPN Plus 2-year plan renews at $83.88 every 12 months. hide.me&apos;s pricing
-          page states its plans always renew with the same price and duration. Surfshark does not
+          See current pricing for NordVPN Basic renewal. A renewal price for the 1-year term is not
+          listed on the pricing page. See current pricing for the Proton VPN Plus renewal.
+          hide.me&apos;s pricing page states its plans always renew with the same price and duration.
+          Surfshark does not
           list a renewal amount on the pricing page, so check the renewal price at checkout. See the{" "}
           <Link href="/guides/surfshark-renewal-price" className={textLinkClassName}>
             Surfshark renewal price
@@ -340,8 +359,8 @@ export default function BlackFridayVpnHubPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">How we track these deals</h2>
         <p>
-          These figures come from each provider&apos;s own pricing page, read on Oct 17, 2026. Every
-          price names the plan length, the USD amount, and the renewal price next to the intro price.
+          These rows come from each provider&apos;s own pricing page, read on Oct 17, 2026. See current
+          pricing for the intro amount and the renewal amount next to the plan length.
           A row is labeled &quot;Black Friday deal (per [Vendor])&quot; only when that vendor&apos;s
           page labels the offer a Black Friday deal. Otherwise the row says the deal is not announced
           yet, or it is labeled &quot;Current price, not a Black Friday deal.&quot;
@@ -363,6 +382,11 @@ export default function BlackFridayVpnHubPage() {
           <li>
             <Link href={surfsharkBlackFriday.path} className={textLinkClassName}>
               Surfshark Black Friday 2026 deal
+            </Link>
+          </li>
+          <li>
+            <Link href={nordBlackFriday.path} className={textLinkClassName}>
+              NordVPN Black Friday 2026 deal
             </Link>
           </li>
           <li>

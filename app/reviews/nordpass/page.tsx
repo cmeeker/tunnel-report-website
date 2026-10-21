@@ -22,7 +22,7 @@ import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
 const title = "NordPass Review 2026: Pricing, Security and Specs";
 const description =
-  "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, plans from $1.39/month intro, and who should skip it.";
+  "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, and who should skip it. See current pricing.";
 const h1 = "NordPass Review 2026: What You Get and What It Costs";
 const path = "/reviews/nordpass";
 
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Is NordPass free?",
     answer:
-      "There's a free plan. Premium starts at $1.39/month on a 2-year intro plan ($37.53 for the first 27 months).",
+      "There's a free plan. See current pricing for Premium on the 2-year intro plan.",
   },
   {
     question: "What encryption does NordPass use?",
@@ -133,7 +133,7 @@ export default function NordPassReviewPage() {
           <li><strong>Premium, 1-year plan:</strong> {prices.nordpassPremiumOneYearMonthly}, {prices.nordpassPremiumOneYearTotal} for the first 12 months. Intro rate.</li>
           <li><strong>Family (6 users), 2-year plan:</strong> {prices.nordpassFamilyTwoYearMonthly} + 3 extra months, {prices.nordpassFamilyTwoYearTotal} for the first 27 months. Intro rate.</li>
           <li><strong>Family (6 users), 1-year plan:</strong> {prices.nordpassFamilyOneYearMonthly}, {prices.nordpassFamilyOneYearTotal} for the first 12 months. Intro rate.</li>
-          <li><strong>Free:</strong> $0. The page says it includes a 30-day Premium trial.</li>
+          <li><strong>Free:</strong> The page lists a free plan and says it includes a 30-day Premium trial.</li>
         </ul>
         <p>
           Paid plans come with a 30-day money-back guarantee <Cite id="S1" />. The words &quot;for the first 12/27 months&quot; mean these are intro prices. NordPass doesn&apos;t publish the renewal rate on that page, so we don&apos;t list one. Before you buy, check what year two costs on the checkout screen. Prices change often, so check the provider&apos;s site.
@@ -172,7 +172,7 @@ export default function NordPassReviewPage() {
         <h2 className="text-2xl font-bold text-white">How does NordPass compare to rivals?</h2>
         <ul className="list-disc space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li><PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink> has a free plan and is cheaper at full price. Premium is {prices.bitwardenPremiumMonthlyShown}, billed annually at {prices.bitwardenPremiumAnnual} <Cite id="S3" />. It&apos;s also open source. NordPass feels more polished and has a lower intro headline.</li>
-          <li><PricingLink href={pricingUrls.onePassword}>1Password</PricingLink> costs more. It&apos;s {prices.onePasswordIndividualPromo} per month with annual billing on the current promo, {prices.onePasswordIndividualRegular} regular <Cite id="S4" />. It&apos;s strong for families who share a lot. There&apos;s no free plan.</li>
+          <li><PricingLink href={pricingUrls.onePassword}>1Password</PricingLink> costs more. It&apos;s {prices.onePasswordIndividualPromo} with annual billing on the current promo, {prices.onePasswordIndividualRegular} regular <Cite id="S4" />. It&apos;s strong for families who share a lot. There&apos;s no free plan.</li>
           <li><PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink> has open-source apps. Pass Plus is {prices.protonPlusMonthly}, billed at {prices.protonPlusBilled} every 12 months <Cite id="S5" />.</li>
         </ul>
         <p>Full ranking: <EditorialLink href="/best-password-managers">Best password managers</EditorialLink>.</p>
@@ -205,13 +205,13 @@ export default function NordPassReviewPage() {
       </section>
 
       <PriceBarChart
-        title="NordPass intro pricing by plan and term (USD, total for first term)"
+        title="See current pricing"
         note="Intro rates. Renewal not published on pricing page."
         bars={[
-          { label: "Premium, 1-year (12 months)", amountLabel: prices.nordpassPremiumOneYearTotal, value: 23.88 },
-          { label: "Premium, 2-year (27 months)", amountLabel: prices.nordpassPremiumTwoYearTotal, value: 37.53 },
-          { label: "Family, 1-year (12 months)", amountLabel: prices.nordpassFamilyOneYearTotal, value: 44.28 },
-          { label: "Family, 2-year (27 months)", amountLabel: prices.nordpassFamilyTwoYearTotal, value: 67.23 },
+          { label: "Premium, 1-year (12 months)", amountLabel: prices.nordpassPremiumOneYearTotal, value: 1 },
+          { label: "Premium, 2-year (27 months)", amountLabel: prices.nordpassPremiumTwoYearTotal, value: 1 },
+          { label: "Family, 1-year (12 months)", amountLabel: prices.nordpassFamilyOneYearTotal, value: 1 },
+          { label: "Family, 2-year (27 months)", amountLabel: prices.nordpassFamilyTwoYearTotal, value: 1 },
         ]}
         source="Source: nordpass.com/pricing, as of Oct 2026. Prices change often, so check the provider's site. tunnelreport.com"
       />
@@ -242,14 +242,14 @@ export default function NordPassReviewPage() {
                 <th scope="row">Lowest single-user price shown</th>
                 <td>{prices.nordpassPremiumTwoYearMonthly}, 2-yr, {prices.nordpassPremiumTwoYearTotal} first 27 months (intro) <Cite id="S1" /></td>
                 <td>{prices.bitwardenPremiumMonthlyShown}, billed annually at {prices.bitwardenPremiumAnnual} <Cite id="S3" /></td>
-                <td>{prices.onePasswordIndividualPromo} per month, annual (promo; regular {prices.onePasswordIndividualRegular}) <Cite id="S4" /></td>
+                <td>{prices.onePasswordIndividualPromo}, annual (promo; regular {prices.onePasswordIndividualRegular}) <Cite id="S4" /></td>
                 <td>{prices.protonPlusMonthly}, billed at {prices.protonPlusBilled} every 12 months <Cite id="S5" /></td>
               </tr>
               <tr>
                 <th scope="row">Family plan</th>
                 <td>6 users, {prices.nordpassFamilyTwoYearMonthly} 2-yr intro <Cite id="S1" /></td>
                 <td>6 accounts, {prices.bitwardenFamilyMonthly}, billed annually at {prices.bitwardenFamilyAnnual} <Cite id="S3" /></td>
-                <td>5 members, {prices.onePasswordFamiliesPromo} promo / {prices.onePasswordFamiliesRegular} regular per month <Cite id="S4" /></td>
+                <td>5 members, {prices.onePasswordFamiliesPromo} promo / {prices.onePasswordFamiliesRegular} regular <Cite id="S4" /></td>
                 <td>6 users, {prices.protonFamilyMonthly}, billed at {prices.protonFamilyBilled} every 12 months <Cite id="S5" /></td>
               </tr>
               <tr>

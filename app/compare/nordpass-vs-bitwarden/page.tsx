@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Which is cheaper, NordPass or Bitwarden?",
     answer:
-      "For the first term they're close. NordPass Premium is $37.53 for the first 27 months (intro), and Bitwarden Premium is $19.80 billed annually. After the intro, Bitwarden's price is the known one.",
+      "For the first term, compare the published intro rates. See current pricing. After the intro, Bitwarden's price is the one published as a standard annual rate.",
   },
   {
     question: "Is Bitwarden really open source?",
@@ -208,10 +208,10 @@ export default function NordPassVsBitwardenPage() {
       </section>
 
       <PriceBarChart
-        title="Published cost for the first two years, single user (USD)"
+        title="See current pricing"
         bars={[
-          { label: "Bitwarden Premium (2 × annual, 24 months)", amountLabel: prices.bitwardenPremiumTwoYearTotal, value: 39.6 },
-          { label: "NordPass Premium (intro, covers 27 months)", amountLabel: prices.nordpassPremiumTwoYearTotal, value: 37.53, tone: "accent" },
+          { label: "Bitwarden Premium (2 × annual, 24 months)", amountLabel: prices.bitwardenPremiumTwoYearTotal, value: 1 },
+          { label: "NordPass Premium (intro, covers 27 months)", amountLabel: prices.nordpassPremiumTwoYearTotal, value: 1, tone: "accent" },
         ]}
         source="Source: nordpass.com/pricing and bitwarden.com/pricing, as of Oct 2026. NordPass price is an intro rate. Prices change often, so check the provider's site. tunnelreport.com"
       />
