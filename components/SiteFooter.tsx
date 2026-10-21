@@ -2,8 +2,6 @@ import Link from "next/link";
 
 import { siteConfig } from "@/lib/site";
 
-// TODO: Ship /terms from tunnel-terms.md. That file was not in the workspace uploads,
-// so the Terms link below 404s until the page is added beside Privacy.
 const columns = [
   {
     title: "Reviews",
