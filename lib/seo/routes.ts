@@ -70,6 +70,25 @@ const staticRoutes: SiteRoute[] = [
     group: "static",
   },
   {
+    path: "/privacy",
+    title: "Privacy Policy",
+    description:
+      "How Tunnel Report collects, uses, and keeps data, including Google Analytics 4 and Vercel Web Analytics.",
+    lastModified: "2026-10-21",
+    priority: 0.4,
+    changeFrequency: "monthly",
+    group: "static",
+  },
+  {
+    path: "/terms",
+    title: "Terms of Use",
+    description: "Terms of Use for tunnelreport.com, operated by Strand and Stone LLC.",
+    lastModified: "2026-10-21",
+    priority: 0.4,
+    changeFrequency: "monthly",
+    group: "static",
+  },
+  {
     path: "/guides",
     title: "VPN Guides",
     description: "VPN protocols, privacy, pricing, and testing explained.",

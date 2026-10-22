@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000).
 |----------|----------|---------|
 | `NORD_AFFILIATE_NETWORK_ID` | For CLI only | TUNE network ID (default: `nordvpn`) |
 | `NORD_AFFILIATE_API_KEY` | For CLI only | Nord affiliate API — **server-side only** |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional | Google Analytics 4 measurement ID |
+| `NEXT_PUBLIC_GA_ID` | Optional | Google Analytics 4 measurement ID. Unset renders no gtag. |
 | `INDEXNOW_SUBMIT_SECRET` | Optional | Bearer token for `POST /api/indexnow` |
 
 See [example.env](example.env) and [GROWTH.md](GROWTH.md) for post-deploy indexing steps.
@@ -67,4 +67,4 @@ npm run nord-affiliate -- track <offer_id> [url_id]
 
 ## Deploy
 
-Optimized for [Vercel](https://vercel.com). Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in the Vercel project env for analytics.
+Optimized for [Vercel](https://vercel.com). Set `NEXT_PUBLIC_GA_ID` in the Vercel project env before the production build. `NEXT_PUBLIC_*` values are inlined at build time, so a change needs a new deploy. Leave it unset to ship with no Google tag.

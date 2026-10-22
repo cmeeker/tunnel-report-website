@@ -7,7 +7,7 @@ export const NORDPASS_AFFILIATE_HREF =
 export const textLinkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
 
-const NORDPASS_REL = "sponsored nofollow noopener noreferrer";
+const NORDPASS_REL = "nofollow sponsored noopener noreferrer";
 
 export function NordPassPricingLink({ presentation = "inline" }: { presentation?: "inline" | "button" }) {
   return (
