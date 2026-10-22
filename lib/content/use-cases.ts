@@ -33,7 +33,7 @@ export type UseCaseGuide = {
 export const useCaseGuides: UseCaseGuide[] = [
   {
     slug: "streaming",
-    title: "Best VPN for Streaming in 2026",
+    title: "VPNs for Streaming in 2026: What to Compare",
     shortTitle: "Streaming",
     description:
       "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on geo-unblocking consistency, and app reliability.",

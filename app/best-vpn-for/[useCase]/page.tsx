@@ -42,11 +42,17 @@ export async function generateMetadata({ params }: UseCasePageProps): Promise<Me
     });
   }
 
-  return buildPageMetadata({
+  const metadata = buildPageMetadata({
     title: guide.title,
     description: guide.description,
     path: `/best-vpn-for/${guide.slug}`,
   });
+
+  if (guide.slug === "streaming") {
+    return { ...metadata, title: { absolute: guide.title } };
+  }
+
+  return metadata;
 }
 
 export default async function UseCasePage({ params }: UseCasePageProps) {
