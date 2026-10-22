@@ -33,7 +33,7 @@ export type UseCaseGuide = {
 export const useCaseGuides: UseCaseGuide[] = [
   {
     slug: "streaming",
-    title: "Best VPN for Streaming in 2026",
+    title: "VPNs for Streaming in 2026: What to Compare",
     shortTitle: "Streaming",
     description:
       "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on geo-unblocking consistency, and app reliability.",
@@ -180,8 +180,8 @@ export const useCaseGuides: UseCaseGuide[] = [
     updatedDateLabel: "October 18, 2026",
     primaryPick: "surfshark",
     picks: [
-      { providerSlug: "surfshark", label: "Best cheap VPN overall", reason: "Unlimited devices on every plan. Intro price: $2.49/mo (USD) on the 24-month + 3-month Starter plan, $67.23 for the first 27 months (VAT may apply). Surfshark's pricing page doesn't list the renewal price, so check it at checkout." },
-      { providerSlug: "purevpn", label: "Lowest entry price", reason: "Intro price: $2.15/mo (USD) on the 2-year + 3-month Standard plan, $58.20 for 27 months, renewing at $47.95/year. More tradeoffs on trust track record." },
+      { providerSlug: "surfshark", label: "Best cheap VPN overall", reason: "Unlimited devices on every plan. See current pricing for the 24-month + 3-month Starter plan. Surfshark's pricing page doesn't list the renewal price, so check it at checkout." },
+      { providerSlug: "purevpn", label: "Lowest entry price", reason: "See current pricing for the 2-year + 3-month Standard plan, including renewal. More tradeoffs on trust track record." },
       { providerSlug: "protonvpn", label: "Best free tier", reason: "A usable free plan from a credible privacy company, with paid upgrades available." },
     ],
     sections: [
@@ -209,7 +209,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       },
     ],
     faqs: [
-      { question: "What is the best cheap VPN?", answer: "Surfshark is our best cheap VPN because unlimited devices make its intro price ($2.49/mo USD on the 24-month + 3-month Starter plan) go further than rivals' discounts. Check the renewal price at checkout." },
+      { question: "What is the best cheap VPN?", answer: "Surfshark is our best cheap VPN because unlimited devices make the plan go further than rivals. See current pricing on the 24-month + 3-month Starter plan. Check the renewal price at checkout." },
       { question: "Is PureVPN worth it for the price?", answer: "PureVPN can be worth it for price-first buyers, but it trails Surfshark and NordVPN on trust track record." },
       { question: "Should I use a free VPN?", answer: "Use Proton VPN's free tier if you need a credible free option. Avoid random free VPNs with unclear ownership or data monetization." },
     ],

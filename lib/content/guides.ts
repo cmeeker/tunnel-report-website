@@ -198,52 +198,51 @@ export const guides: Guide[] = [
       {
         heading: "What VPNs cost after the intro term (Oct 2026)",
         paragraphs: [
-          "Most VPNs charge a low rate for your first term and then renew at a higher one. On the 2-year deals we checked in October 2026, NordVPN renews at $139.08 a year and ExpressVPN at $99.95, while Mullvad and hide.me charge the same price every time. Here's each provider's intro rate next to its renewal rate.",
+          "Most VPNs charge a low rate for your first term and then renew at a higher one. See current pricing for each intro rate and renewal rate. Mullvad and hide.me charge the same price every time.",
         ],
-        chart: "renewal-prices",
         table: {
           headers: ["Provider (base plan)", "Intro price", "Renews at", "Source (as of Oct 2026)"],
           rows: [
             [
               "NordVPN Basic, 2 yr + 3 mo",
-              "$3.49/mo ($94.23 for 27 months)",
-              "$139.08/year",
+              "See current pricing",
+              "See current pricing",
               "[nordvpn.com/pricing](https://nordvpn.com/pricing/)",
             ],
             [
               "ExpressVPN Basic, 12 mo + 3 mo",
-              "$4.99/mo ($74.85 for 15 months)",
-              "$99.95/year",
+              "See current pricing",
+              "See current pricing",
               "[expressvpn.com/pricing](https://www.expressvpn.com/pricing)",
             ],
             [
               "Surfshark Starter, 24 mo + 3 mo",
-              "$2.49/mo ($67.23 for 27 months)",
+              "See current pricing",
               "Not listed on the pricing page",
               "[surfshark.com/pricing](https://surfshark.com/pricing)",
             ],
             [
               "PureVPN Standard, 2 yr + 3 mo",
-              "$2.15/mo ($58.20 for 27 months)",
-              "$47.95/year",
+              "See current pricing",
+              "See current pricing",
               "[purevpn.com/order](https://www.purevpn.com/order)",
             ],
             [
               "Proton VPN Plus, 2 yr",
-              "$3.49/mo ($83.76 for 24 months)",
-              "$83.88 every 12 months",
+              "See current pricing",
+              "See current pricing",
               "[protonvpn.com/pricing](https://protonvpn.com/pricing)",
             ],
             [
               "Mullvad (one plan)",
-              "€5/mo (EUR, incl. VAT) on any term",
-              "€5/mo, no intro rate",
+              "See current pricing",
+              "See current pricing",
               "[mullvad.net/pricing](https://mullvad.net/en/pricing)",
             ],
             [
               "hide.me Premium, 24 mo + 2 mo",
-              "$2.69/mo ($69.99 for 26 months)",
-              "$69.99 every 26 months",
+              "See current pricing",
+              "See current pricing",
               "[hide.me/pricing](https://hide.me/en/pricing)",
             ],
           ],
@@ -267,7 +266,7 @@ export const guides: Guide[] = [
     ],
     faqs: [
       { question: "Why do VPN prices go up at renewal?", answer: "Introductory discounts are acquisition offers. Renewal pricing usually reflects the standard plan rate after the promotional term ends." },
-      { question: "Which VPN has the best long-term value?", answer: "Surfshark is strongest for multi-device households. Mullvad has the cleanest flat-rate pricing (€5/month on every plan length [mullvad.net/pricing](https://mullvad.net/en/pricing), as of Oct 2026) but no affiliate program and fewer streaming features." },
+      { question: "Which VPN has the best long-term value?", answer: "Surfshark is strongest for multi-device households. Mullvad has the cleanest flat-rate pricing (see current pricing on [mullvad.net/pricing](https://mullvad.net/en/pricing)) but no affiliate program and fewer streaming features." },
       { question: "Can I cancel before VPN renewal?", answer: "Usually yes, but policies vary. Set a reminder before the renewal date and confirm cancellation in your account dashboard." },
     ],
   },
@@ -400,7 +399,7 @@ export const guides: Guide[] = [
         heading: "Where the renewal number is shown",
         paragraphs: [
           "Proton's pricing page renders each plan card with a billing line: \"Billed at <price> for the first <cycle> months, then renews at <price> every <cycle> month(s)\" [P1]. The intro amount and the renewal amount are supposed to sit on that same card.",
-          "A static fetch of protonvpn.com/pricing on Oct 6, 2026 returned JavaScript placeholders ($0.00 and $XX.XX) instead of live prices, so this page does not state a dollar renewal rate.",
+          "A static fetch of protonvpn.com/pricing on Oct 6, 2026 returned JavaScript placeholders instead of live prices, so this page does not state a renewal rate. See current pricing.",
         ],
       },
       {

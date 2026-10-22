@@ -42,11 +42,17 @@ export async function generateMetadata({ params }: UseCasePageProps): Promise<Me
     });
   }
 
-  return buildPageMetadata({
+  const metadata = buildPageMetadata({
     title: guide.title,
     description: guide.description,
     path: `/best-vpn-for/${guide.slug}`,
   });
+
+  if (guide.slug === "streaming") {
+    return { ...metadata, title: { absolute: guide.title } };
+  }
+
+  return metadata;
 }
 
 export default async function UseCasePage({ params }: UseCasePageProps) {
@@ -111,7 +117,9 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
             const href = getProviderCtaHref(pick.provider);
             return (
               <div key={pick.provider.slug} className="glass-card p-7">
-                <span className="badge badge-cyan mb-4 text-[0.65rem]">#{index + 1} {pick.label}</span>
+                <span className="badge badge-cyan mb-4 text-[0.65rem]">
+                  {index === 0 ? pick.label : `#${index + 1} ${pick.label}`}
+                </span>
                 <h3 className="text-xl font-bold text-white">{pick.provider.name}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[#94a3b8]">{pick.reason}</p>
                 <div className="mt-5 flex flex-wrap items-center gap-3">

@@ -1,4 +1,4 @@
-import { blackFridayHub, surfsharkBlackFriday } from "@/lib/content/black-friday-2026";
+import { blackFridayHub, nordBlackFriday, surfsharkBlackFriday } from "@/lib/content/black-friday-2026";
 import { comparisonSlugs, comparisons } from "@/lib/content/comparisons";
 import { cityGuideMap } from "@/lib/content/cities";
 import { guideSlugs, guides } from "@/lib/content/guides";
@@ -146,6 +146,21 @@ const blackFridayDealRoutes: SiteRoute[] = [
     changeFrequency: "weekly",
     group: "deal",
   },
+  {
+    path: nordBlackFriday.path,
+    title: nordBlackFriday.title,
+    description: nordBlackFriday.description,
+    lastModified: "2026-10-21",
+    sitemapLastModified: "2026-10-21",
+    priority: 0.82,
+    changeFrequency: "weekly",
+    group: "deal",
+  },
+  // protonBlackFriday is intentionally absent. The page is noindex and unlinked.
+  // To publish: set its robots metadata to "index,follow", add a route object here
+  // (same shape as nordBlackFriday), then link it from the Black Friday hub
+  // (Provider Black Friday pages, the Proton section, and Related reading) and
+  // from the Nord deal page Related reading.
 ];
 
 export function getSiteRoutes(): SiteRoute[] {
@@ -168,7 +183,7 @@ export function getSiteRoutes(): SiteRoute[] {
       path: "/reviews/nordpass",
       title: "NordPass Review 2026: Pricing, Security and Specs",
       description:
-        "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, plans from $1.39/month intro, and who should skip it.",
+        "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, and who should skip it. See current pricing.",
       lastModified: "2026-10-17",
       priority: 0.9,
       changeFrequency: "weekly" as const,

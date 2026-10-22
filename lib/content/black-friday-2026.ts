@@ -11,7 +11,7 @@ export const blackFridayHub = {
   path: "/deals/black-friday-vpn-2026",
   title: "Black Friday VPN Deals 2026: NordVPN, Surfshark, Proton VPN, hide.me",
   description:
-    "Black Friday 2026 VPN deal tracker with plan length, USD intro price and renewal for NordVPN, Surfshark, Proton VPN and hide.me.",
+    "Black Friday 2026 VPN deal tracker for NordVPN, Surfshark, Proton VPN and hide.me. See current pricing on each provider's site.",
   h1: "Black Friday VPN Deals 2026",
 } as const;
 
@@ -19,9 +19,28 @@ export const surfsharkBlackFriday = {
   path: "/deals/surfshark-black-friday-2026",
   title: "Surfshark Black Friday 2026 Deal: Plan, Price and Renewal",
   description:
-    "Surfshark Black Friday 2026: Surfshark One 24+3 months is $67.23 for the first 27 months ($2.49/mo). Renewal: check at checkout. As of Oct 17, 2026.",
+    "Surfshark Black Friday 2026: Surfshark One, 24 months + 3 extra months. See current pricing. Renewal: check at checkout. As of Oct 17, 2026.",
   h1: "Surfshark Black Friday 2026 Deal",
 } as const;
+
+export const nordBlackFriday = {
+  path: "/deals/nordvpn-black-friday-2026",
+  title: "NordVPN Black Friday 2026 Deal: Plans and Renewal",
+  description:
+    "NordVPN Black Friday 2026: what NordVPN is offering, which plans it covers, and what to check at renewal. See current pricing on NordVPN's site.",
+  h1: "NordVPN Black Friday 2026 Deal",
+} as const;
+
+export const protonBlackFriday = {
+  path: "/deals/proton-vpn-black-friday-2026",
+  title: "Proton VPN Black Friday 2026 Deal: Plans and Renewal",
+  description:
+    "Proton VPN Black Friday 2026: what Proton is offering on VPN Plus, how renewal works, and where to check. See current pricing on Proton's site.",
+  h1: "Proton VPN Black Friday 2026 Deal",
+} as const;
+
+export const NORD_PROTON_DEAL_DATE = "2026-10-21";
+export const NORD_PROTON_CHECKED_LABEL = "Oct 21, 2026";
 
 export const paidLinks = {
   nordvpn: {
@@ -53,6 +72,11 @@ export const vendorSources = {
   protonvpn: "https://protonvpn.com/pricing",
   hideme: "https://hide.me/en/pricing",
   nordBlackFriday: "https://nordvpn.com/black-friday/",
+  nordNoLogs: "https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/",
+  nordRefund: "https://support.nordvpn.com/hc/en-us/articles/19476991311121-What-is-your-refund-policy",
+  protonPlans: "https://protonvpn.com/support/proton-vpn-plans",
+  protonNoLogsAudit: "https://protonvpn.com/blog/no-logs-audit",
+  protonNoLogsPolicy: "https://protonvpn.com/features/no-logs-policy",
 } as const;
 
 export type DealFaq = {
@@ -68,12 +92,12 @@ export const hubFaqs: DealFaq[] = [
   {
     question: "Which VPNs have announced Black Friday 2026 deals so far?",
     answer:
-      "As of Oct 17, 2026, Surfshark labels its Surfshark One 24-month + 3-month plan a Black Friday deal: $67.23 for the first 27 months ($2.49/mo, VAT may apply); renewal is shown at checkout. NordVPN, Proton VPN and hide.me have not announced Black Friday deals yet. Prices change often, so check the provider's site before you buy.",
+      "As of Oct 17, 2026, Surfshark labels its Surfshark One 24-month + 3-month plan a Black Friday deal. See current pricing. Renewal is shown at checkout. NordVPN, Proton VPN and hide.me have not announced Black Friday deals yet. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "Does the Black Friday price apply when the plan renews?",
     answer:
-      "Not necessarily. As of Oct 17, 2026: NordVPN Basic 2-year renews at $139.08/year; Proton VPN Plus 2-year renews at $83.88 every 12 months; hide.me Premium renews at the same price and duration; Surfshark's renewal amount is shown at checkout.",
+      "Not necessarily. See current pricing. As of Oct 17, 2026, check NordVPN Basic, Proton VPN Plus, and hide.me Premium on each provider's site. hide.me's pricing page states its plans always renew with the same price and duration. Surfshark's renewal amount is shown at checkout.",
   },
   {
     question: "When will Proton VPN's Black Friday deal be available?",
@@ -91,12 +115,12 @@ export const nordFaqs: DealFaq[] = [
   {
     question: "How much does NordVPN cost right now?",
     answer:
-      "As of Oct 17, 2026, NordVPN Basic costs $94.23 for the first 27 months (2-year plan + 3 extra months, $3.49/mo, USD), or $65.88 for the first 12 months on the 1-year plan ($5.49/mo). These are current prices, not Black Friday deals. Prices change often, so check the provider's site before you buy.",
+      "See current pricing. As of Oct 17, 2026, NordVPN Basic (2-year plan + 3 extra months) and the 1-year plan are current prices, not Black Friday deals. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "What does NordVPN renew at?",
     answer:
-      "NordVPN's pricing page states the Basic 2-year plan renews at $139.08/year. A renewal price for the 1-year term is not listed on the pricing page.",
+      "See current pricing. NordVPN's pricing page lists the Basic 2-year renewal separately from the intro price. A renewal price for the 1-year term is not listed on the pricing page.",
   },
   {
     question: "Does NordVPN offer a money-back guarantee?",
@@ -113,12 +137,12 @@ export const protonFaqs: DealFaq[] = [
   {
     question: "How much does Proton VPN Plus cost right now?",
     answer:
-      "As of Oct 17, 2026, Proton VPN Plus costs $83.76 for the first 24 months on the 2-year plan ($3.49/mo, USD). This is the current price, not a Black Friday deal. Prices change often, so check the provider's site before you buy.",
+      "See current pricing. As of Oct 17, 2026, Proton VPN Plus on the 2-year plan is the current price, not a Black Friday deal. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "What does Proton VPN Plus renew at?",
     answer:
-      "Proton's pricing page states the VPN Plus 2-year plan renews at $83.88 every 12 months.",
+      "See current pricing. Proton's pricing page lists the VPN Plus 2-year renewal separately from the intro price.",
   },
 ];
 
@@ -131,7 +155,7 @@ export const hidemeFaqs: DealFaq[] = [
   {
     question: "How much does hide.me Premium cost?",
     answer:
-      "As of Oct 17, 2026: $69.99 every 26 months (24 + 2 months, $2.69/mo), $54.99 every 13 months (12 + 1 month, $4.23/mo), or $11.99 monthly, in USD; VAT may apply. These are current prices, not Black Friday deals. Prices change often, so check the provider's site before you buy.",
+      "See current pricing for hide.me Premium (26 months, 13 months, and monthly). VAT may apply. As of Oct 17, 2026, these are current prices, not Black Friday deals. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "Does hide.me's price go up at renewal?",
@@ -144,7 +168,7 @@ export const surfsharkFaqs: DealFaq[] = [
   {
     question: "What is Surfshark's Black Friday 2026 deal?",
     answer:
-      "As of Oct 17, 2026, Surfshark labels Surfshark One (24 months + 3 extra months) a Black Friday deal: $67.23 for the first 27 months ($2.49/mo, USD, VAT may apply). Renewal: check at checkout. Prices change often, so check the provider's site before you buy.",
+      "As of Oct 17, 2026, Surfshark labels Surfshark One (24 months + 3 extra months) a Black Friday deal. See current pricing. Renewal: check at checkout. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "How much does Surfshark cost after the first term?",
@@ -159,7 +183,50 @@ export const surfsharkFaqs: DealFaq[] = [
   {
     question: "Is Surfshark One priced differently from Starter right now?",
     answer:
-      "As of Oct 17, 2026, Surfshark One and Surfshark Starter both show $67.23 for the first 27 months ($2.49/mo) on the 24-month + 3-month term.",
+      "As of Oct 17, 2026, Surfshark One and Surfshark Starter show the same intro amount on the 24-month + 3-month term. See current pricing.",
+  },
+];
+
+export const nordDealFaqs: DealFaq[] = [
+  {
+    question: "Does NordVPN have a Black Friday deal in 2026?",
+    answer: "Current price, not a Black Friday deal. See current pricing on NordVPN's site.",
+  },
+  {
+    question: "Which NordVPN plans are included?",
+    answer: "NordVPN lists Basic, Plus, and Complete.",
+  },
+  {
+    question: "What does NordVPN renew at?",
+    answer: "Renewal differs from intro; see current pricing at nordvpn.com/pricing/.",
+  },
+  {
+    question: "Does NordVPN offer a money-back guarantee?",
+    answer: `NordVPN states its money-back terms on its refund policy page: ${vendorSources.nordRefund}.`,
+  },
+  {
+    question: "Is NordVPN's no-logs policy audited?",
+    answer:
+      "NordVPN says its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
+  },
+];
+
+export const protonDealFaqs: DealFaq[] = [
+  {
+    question: "Does Proton VPN have a Black Friday deal in 2026?",
+    answer: "Current price, not a Black Friday deal. See current pricing on Proton's site.",
+  },
+  {
+    question: "Which plans are included?",
+    answer: "Proton lists VPN Plus and Proton Unlimited.",
+  },
+  {
+    question: "What does Proton VPN Plus renew at?",
+    answer: "See current pricing. Renewal differs from the intro price.",
+  },
+  {
+    question: "Is Proton VPN's no-logs policy audited?",
+    answer: "Proton says its no-logs policy is independently audited.",
   },
 ];
 
@@ -169,18 +236,20 @@ export function buildDealArticleSchema({
   headline,
   description,
   path,
+  date = DEAL_DATE_MODIFIED,
 }: {
   headline: string;
   description: string;
   path: string;
+  date?: string;
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline,
     description,
-    datePublished: DEAL_DATE_MODIFIED,
-    dateModified: DEAL_DATE_MODIFIED,
+    datePublished: date,
+    dateModified: date,
     author: {
       "@type": "Organization",
       name: staffAuthorName,

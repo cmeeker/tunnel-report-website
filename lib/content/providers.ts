@@ -63,7 +63,7 @@ export const providers: Provider[] = [
     rank: 1,
     score: 4.8,
     speedMbps: 905,
-    pricePerMonth: "$3.49",
+    pricePerMonth: "See current pricing",
     privacyBlurb: "Panama jurisdiction, independent no-logs audits",
     quickVerdict: "Privacy posture and app consistency in 2026.",
     pros: [
@@ -106,8 +106,8 @@ export const providers: Provider[] = [
       {
         heading: "What Does NordVPN Actually Cost After the Promo Ends?",
         paragraphs: [
-          "The introductory pricing on NordVPN's website is competitive — $3.49/mo on the 2-year Basic plan, billed $94.23 for the first 27 months [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026. That is genuinely good value for the service quality.",
-          "The part most reviews bury: renewal pricing is materially higher. After that, it renews at $139.08/year, about $11.59/mo [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026. Readers should factor the full lifecycle cost into their decision.",
+          "See current pricing on the 2-year Basic plan [nordvpn.com/pricing](https://nordvpn.com/pricing/). Intro and renewal prices differ, so read both before you buy.",
+          "Renewal pricing is different from the intro price. See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/). Readers should factor the full lifecycle cost into their decision.",
           "If you are price-sensitive, set a calendar reminder before your term expires and evaluate whether to renew, switch, or negotiate.",
         ],
       },
@@ -139,7 +139,7 @@ export const providers: Provider[] = [
     rank: 2,
     score: 4.6,
     speedMbps: 820,
-    pricePerMonth: "$2.49",
+    pricePerMonth: "See current pricing",
     privacyBlurb: "Diskless infrastructure and independent audits",
     quickVerdict: "Excellent multi-device value with modern privacy defaults.",
     pros: [
@@ -178,7 +178,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing and Value",
         paragraphs: [
-          "Surfshark Starter $2.49/mo ($67.23 for the first 27 months, VAT may apply) [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026. Read the checkout terms carefully.",
+          "See current pricing for Surfshark Starter [surfshark.com/pricing](https://surfshark.com/pricing). Read the checkout terms carefully.",
           "For price-sensitive households that need coverage on many devices, Surfshark frequently offers better economics than premium-tier competitors.",
         ],
       },
@@ -208,7 +208,7 @@ export const providers: Provider[] = [
     rank: 3,
     score: 4.5,
     speedMbps: 700,
-    pricePerMonth: "$4.99",
+    pricePerMonth: "See current pricing",
     privacyBlurb: "TrustedServer architecture with regular audits",
     quickVerdict: "Strong reliability and polished apps, but often priced above peers.",
     pros: [
@@ -244,7 +244,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing Reality Check",
         paragraphs: [
-          "ExpressVPN is the most expensive provider in our top five. ExpressVPN $4.99/mo on the 12-month + 3-month Basic plan ($74.85 for the first 15 months, then $99.95/year) [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026. You are paying for polish and support quality.",
+          "ExpressVPN is priced as a premium option in our top five. See current pricing [expressvpn.com/order](https://www.expressvpn.com/order). You are paying for polish and support quality.",
           "If budget is your primary constraint, Surfshark or PureVPN cost less. If you value a frictionless setup experience, ExpressVPN's premium may be justified.",
         ],
       },
@@ -280,7 +280,7 @@ export const providers: Provider[] = [
     rank: 4,
     score: 4.4,
     speedMbps: 650,
-    pricePerMonth: "$3.49",
+    pricePerMonth: "See current pricing",
     privacyBlurb: "Swiss jurisdiction, open-source clients, transparent security",
     quickVerdict: "Best for privacy-focused users who want transparency over aggressive promos.",
     pros: [
@@ -351,7 +351,7 @@ export const providers: Provider[] = [
     rank: 5,
     score: 4.2,
     speedMbps: 610,
-    pricePerMonth: "$2.15",
+    pricePerMonth: "See current pricing",
     privacyBlurb: "Always-on audit claims, split tunneling options",
     quickVerdict: "Feature-rich budget option with improving consistency.",
     pros: [
@@ -380,7 +380,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing Advantage",
         paragraphs: [
-          "PureVPN Standard is $2.15/mo on its 2-year plan [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026. If first-year cost is your dominant criterion, the math is compelling.",
+          "See current pricing for PureVPN Standard [purevpn.com/order](https://www.purevpn.com/order). If first-term cost is your dominant criterion, compare that figure on PureVPN's site before you buy.",
         ],
       },
     ],
@@ -414,12 +414,12 @@ export const providers: Provider[] = [
     rank: 0,
     score: 4.3,
     speedMbps: 720,
-    pricePerMonth: "€5/mo flat",
+    pricePerMonth: "See current pricing",
     privacyBlurb: "Anonymous account numbers, no email required, Swedish jurisdiction",
     quickVerdict: "The privacy purist's choice — flat pricing, no affiliate funnel, maximum anonymity.",
     pros: [
       "Anonymous account numbers — no email required",
-      "Flat €5/month pricing with no promotional tricks",
+      "Flat pricing with no promotional tricks. See current pricing.",
       "Open-source clients and transparent ownership",
     ],
     cons: ["No affiliate program (we earn nothing recommending it)", "Fewer streaming-optimized features", "Smaller server network than mega-providers"],
@@ -443,7 +443,7 @@ export const providers: Provider[] = [
       {
         heading: "Why Mullvad Is Different",
         paragraphs: [
-          "Mullvad does not run promotional pricing, affiliate programs, or aggressive retargeting. You generate an anonymous account number, pay €5/month, and connect. That business model alignment matters for privacy credibility.",
+          "Mullvad does not run promotional pricing, affiliate programs, or aggressive retargeting. You generate an anonymous account number, pay the posted rate (see current pricing), and connect. That business model alignment matters for privacy credibility.",
           "Tunnel Report earns zero commission from Mullvad. We include it because editorial independence means recommending products that serve readers, not just revenue.",
         ],
       },
@@ -492,7 +492,7 @@ export const providers: Provider[] = [
     rank: 0,
     score: 4.1,
     speedMbps: 0,
-    pricePerMonth: "$2.69",
+    pricePerMonth: "See current pricing",
     privacyBlurb: "Malaysian operator with a named 2024 no-log container audit (scope-limited)",
     quickVerdict:
       "A rare no-signup free VPN from a Malaysian operator — compelling, but with important scope and free-tier caveats.",
@@ -541,7 +541,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing: Published USD Rates, Pricing Guarantee, and Refund Limits",
         paragraphs: [
-          "As of Oct 15, 2026, hide.me Premium lists $11.99/mo; $4.23/mo, billed $54.99 every 13 months (12 mo + 1 mo); and $2.69/mo, billed $69.99 every 26 months (24 mo + 2 mo). [HM2]",
+          "See current pricing for hide.me Premium on the monthly, 13-month, and 26-month terms. [HM2]",
           "hide.me also advertises a “Pricing Guarantee,” stating renewals keep the same price and duration as the original subscription term. [HM2]",
           "hide.me describes a 30-day money-back guarantee on paid plans, while its Terms limit refunds to the first 30 days of the first order. Read both pages together if you’re buying mainly for the refund backstop. [HM2][HM5]",
           "hide.me also publishes network-scale claims — for example, “92 locations” and “2600 servers,” and up to 10 simultaneous connections on Premium — but those are vendor claims, not independently verified in this review. [HM1][HM2][HM12]",

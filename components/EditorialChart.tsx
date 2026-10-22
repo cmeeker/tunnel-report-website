@@ -46,26 +46,26 @@ export const nordvpnVsPurevpnChart = {
   src: "/charts/compare-nordvpn-vs-purevpn-chart.webp",
   width: 1200,
   height: 675,
-  alt: "Grouped bar chart of NordVPN vs PureVPN median speeds and intro prices. US domestic: NordVPN 905 Mbps, PureVPN 610 Mbps. Transatlantic: NordVPN 720 Mbps, PureVPN 430 Mbps. Intro price: NordVPN $3.49/mo (USD, 2 yrs + 3 mo) and PureVPN $2.15/mo (USD, 2 yrs + 3 mo). Speeds from Tunnel Report, April 2026. Prices from nordvpn.com and purevpn.com as of Oct 15, 2026.",
+  alt: "Grouped bar chart of NordVPN vs PureVPN median speeds. US domestic: NordVPN 905 Mbps, PureVPN 610 Mbps. Transatlantic: NordVPN 720 Mbps, PureVPN 430 Mbps. Intro price: see current pricing. Speeds from Tunnel Report, April 2026.",
 } as const;
 
 export const nordvpnVsExpressvpnChart = {
   src: "/charts/compare-nordvpn-vs-expressvpn-chart.webp",
   width: 1200,
   height: 675,
-  alt: "Grouped bar chart of NordVPN vs ExpressVPN median speeds and intro prices. US domestic: NordVPN 905 Mbps, ExpressVPN 700 Mbps. Transatlantic: NordVPN 720 Mbps, ExpressVPN 580 Mbps. Intro price: NordVPN $3.49/mo (USD, 2 yrs + 3 mo) and ExpressVPN $4.99/mo (USD, 12 + 3 mo). Speeds from Tunnel Report, April 2026. Prices from nordvpn.com and expressvpn.com as of Oct 15, 2026.",
+  alt: "Grouped bar chart of NordVPN vs ExpressVPN median speeds. US domestic: NordVPN 905 Mbps, ExpressVPN 700 Mbps. Transatlantic: NordVPN 720 Mbps, ExpressVPN 580 Mbps. Intro price: see current pricing. Speeds from Tunnel Report, April 2026.",
 } as const;
 
 export const surfsharkVsNordvpnChart = {
   src: "/charts/compare-surfshark-vs-nordvpn-chart.webp",
   width: 1200,
   height: 675,
-  alt: "Grouped bar chart of Surfshark vs NordVPN median speeds and intro prices. US domestic: Surfshark 820 Mbps, NordVPN 905 Mbps. Transatlantic: Surfshark 640 Mbps, NordVPN 720 Mbps. Intro price: Surfshark $2.49/mo (USD, 24 + 3 mo) and NordVPN $3.49/mo (USD, 2 yrs + 3 mo). Speeds from Tunnel Report, April 2026. Prices from surfshark.com and nordvpn.com as of Oct 15, 2026.",
+  alt: "Grouped bar chart of Surfshark vs NordVPN median speeds. US domestic: Surfshark 820 Mbps, NordVPN 905 Mbps. Transatlantic: Surfshark 640 Mbps, NordVPN 720 Mbps. Intro price: see current pricing. Speeds from Tunnel Report, April 2026.",
 } as const;
 
 export const renewalPricesChart = {
   src: "/charts/guides-vpn-renewal-prices-chart.webp",
   width: 1200,
   height: 760,
-  alt: "Table of six USD VPN plans with intro price, renewal, and a check date on each row. NordVPN Basic 2 yr + 3 mo: $3.49/mo ($94.23 for 27 months), renews at $139.08/year, checked Oct 15, 2026. ExpressVPN Basic 12 mo + 3 mo: $4.99/mo ($74.85 for 15 months), renews at $99.95/year, checked Oct 15, 2026. Surfshark Starter 24 mo + 3 mo: $2.49/mo ($67.23 for 27 months), renewal not listed on the pricing page, checked Oct 15, 2026. PureVPN Standard 2 yr + 3 mo: $2.15/mo ($58.20 for 27 months), renews at $47.95/year, checked Oct 15, 2026. Proton VPN Plus 2 yr: $3.49/mo ($83.76 for 24 months), renews at $83.88 every 12 months, checked Oct 6, 2026. hide.me Premium 24 mo + 2 mo: $2.69/mo ($69.99 for 26 months), renews at $69.99 every 26 months, checked Oct 6, 2026.",
+  alt: "Renewal pricing reminder for NordVPN, ExpressVPN, Surfshark, PureVPN, Proton VPN, and hide.me. See current pricing on each provider's site.",
 } as const;

@@ -68,9 +68,9 @@ export default function SurfsharkBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <p>
           As of Oct 17, 2026, Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra
-          months) a &quot;Black Friday deal&quot;: $67.23 for the first 27 months ($2.49/mo, USD, VAT
-          may apply). Surfshark does not list the renewal amount on that page, so check the renewal
-          price at checkout. Surfshark has not published an end date for this deal. {PRICE_CHANGE_LINE}
+          months) a &quot;Black Friday deal.&quot; See current pricing. Surfshark does not list the
+          renewal amount on that page, so check the renewal price at checkout. Surfshark has not
+          published an end date for this deal. {PRICE_CHANGE_LINE}
         </p>
       </section>
 
@@ -78,18 +78,18 @@ export default function SurfsharkBlackFridayPage() {
 
       <section className="space-y-4">
         <PriceTable
-          headers={["Status", "Plan", "Intro (USD)", "Renewal"]}
+          headers={["Status", "Plan", "Price", "Renewal"]}
           rows={[
             [
               "Black Friday deal (per Surfshark)",
               "Surfshark One, 24 months + 3 extra months",
-              "$67.23 for first 27 months ($2.49/mo), VAT may apply",
+              "See current pricing",
               "Check at checkout",
             ],
             [
               "Current price, not a Black Friday deal",
               "Surfshark Starter, 24 months + 3 extra months",
-              "$67.23 for first 27 months ($2.49/mo), VAT may apply",
+              "See current pricing",
               "Check at checkout",
             ],
           ]}
@@ -101,10 +101,10 @@ export default function SurfsharkBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Surfshark&apos;s Black Friday 2026 deal at a glance</h2>
         <p>
-          The labeled offer is Surfshark One for 24 months + 3 extra months: $67.23 for the first 27
-          months ($2.49/mo, USD, VAT may apply). The status label is &quot;Black Friday deal (per
-          Surfshark).&quot; Renewal: check at checkout. Surfshark Starter on the same term is listed
-          as a current price, not a Black Friday deal, at the same intro amount.
+          The labeled offer is Surfshark One for 24 months + 3 extra months. See current pricing. The
+          status label is &quot;Black Friday deal (per Surfshark).&quot; Renewal: check at checkout.
+          Surfshark Starter on the same term is listed as a current price, not a Black Friday deal.
+          See current pricing.
         </p>
       </section>
 

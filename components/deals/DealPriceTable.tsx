@@ -65,10 +65,18 @@ export function PriceTable({
   );
 }
 
-export function SourceLine({ href, label }: { href: string; label: string }) {
+export function SourceLine({
+  href,
+  label,
+  accessed = "Oct 17, 2026",
+}: {
+  href: string;
+  label: string;
+  accessed?: string;
+}) {
   return (
     <p className="text-sm text-[#94a3b8]">
-      Source: <PlainOutboundLink href={href}>{label}</PlainOutboundLink> (accessed Oct 17, 2026)
+      Source: <PlainOutboundLink href={href}>{label}</PlainOutboundLink> (accessed {accessed})
     </p>
   );
 }

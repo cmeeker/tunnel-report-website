@@ -141,7 +141,9 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
             <div key={alt.slug} className="glass-card overflow-hidden">
               <div className="flex items-center justify-between border-b border-[#1e293b] px-6 py-4">
                 <div>
-                  <span className="badge badge-teal mb-2 text-[0.65rem]">#{index + 1} Alternative</span>
+                  <span className="badge badge-teal mb-2 text-[0.65rem]">
+                    {index === 0 ? "Alternative" : `#${index + 1} Alternative`}
+                  </span>
                   <h3 className="text-xl font-bold text-white">{alt.name}</h3>
                 </div>
                 <RatingStars rating={alt.score} />

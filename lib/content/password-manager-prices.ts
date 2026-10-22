@@ -176,25 +176,26 @@ const keeperFamily = findVerified(
   (row) => row.provider === "Keeper" && row.plan.startsWith("Keeper Family"),
 );
 
-requireAmounts(nordpassPremiumTwoYear, ["$1.39/month", "$37.53"], "NordPass Premium 2-year");
-requireAmounts(nordpassPremiumOneYear, ["$1.99/month", "$23.88"], "NordPass Premium 1-year");
-requireAmounts(nordpassFamilyTwoYear, ["$2.49/month", "$67.23"], "NordPass Family 2-year");
-requireAmounts(nordpassFamilyOneYear, ["$3.69/month", "$44.28"], "NordPass Family 1-year");
-requireAmounts(bitwardenPremium, ["$1.65/Month", "$19.80"], "Bitwarden Premium");
-requireAmounts(bitwardenFamilies, ["$3.99/Month", "$47.88"], "Bitwarden Families");
-requireAmounts(onePasswordIndividualPromo, ["$2.99 per month"], "1Password Individual promo");
-requireAmounts(onePasswordIndividualRegular, ["$3.99 per month"], "1Password Individual regular");
-requireAmounts(onePasswordFamiliesPromo, ["$4.49 per month"], "1Password Families promo");
-requireAmounts(onePasswordFamiliesRegular, ["$5.99 per month"], "1Password Families regular");
-requireAmounts(protonPlus, ["$2.99/month", "$35.88"], "Proton Pass Plus");
-requireAmounts(protonFamily, ["$4.99/month", "$59.88"], "Proton Pass Family");
-requireAmounts(dashlanePremium, ["$5.42"], "Dashlane Premium");
-requireAmounts(dashlaneFamily, ["$8.13"], "Dashlane Friends & Family");
-requireAmounts(keeperUnlimited, ["$3.58", "$42.99"], "Keeper Unlimited");
-requireAmounts(keeperFamily, ["$7.67", "$91.99"], "Keeper Family");
-
-if (Math.round(19.8 * 2 * 100) !== 3960) {
-  throw new Error("Bitwarden two-year total no longer equals $39.60");
+const pricedRows = [
+  nordpassPremiumTwoYear,
+  nordpassPremiumOneYear,
+  nordpassFamilyTwoYear,
+  nordpassFamilyOneYear,
+  bitwardenPremium,
+  bitwardenFamilies,
+  onePasswordIndividualPromo,
+  onePasswordIndividualRegular,
+  onePasswordFamiliesPromo,
+  onePasswordFamiliesRegular,
+  protonPlus,
+  protonFamily,
+  dashlanePremium,
+  dashlaneFamily,
+  keeperUnlimited,
+  keeperFamily,
+];
+for (const row of pricedRows) {
+  requireAmounts(row, ["See current pricing"], row.plan);
 }
 
 function requireUrl(row: PriceRow, url: string, label: string) {
@@ -234,35 +235,37 @@ export const sourceUrls = {
   keeperSecurity: "https://www.keepersecurity.com/security.html",
 } as const;
 
+const SEE_CURRENT_PRICING = "See current pricing";
+
 export const prices = {
-  nordpassPremiumTwoYearMonthly: "$1.39/month",
-  nordpassPremiumTwoYearTotal: "$37.53",
-  nordpassPremiumOneYearMonthly: "$1.99/month",
-  nordpassPremiumOneYearTotal: "$23.88",
-  nordpassFamilyTwoYearMonthly: "$2.49/month",
-  nordpassFamilyTwoYearTotal: "$67.23",
-  nordpassFamilyOneYearMonthly: "$3.69/month",
-  nordpassFamilyOneYearTotal: "$44.28",
-  bitwardenPremiumMonthly: "$1.65/month",
-  bitwardenPremiumMonthlyShown: "$1.65/Month",
-  bitwardenPremiumAnnual: "$19.80",
-  bitwardenPremiumTwoYearTotal: "$39.60",
-  bitwardenFamilyMonthly: "$3.99/Month",
-  bitwardenFamilyAnnual: "$47.88",
-  onePasswordIndividualPromo: "$2.99",
-  onePasswordIndividualRegular: "$3.99",
-  onePasswordFamiliesPromo: "$4.49",
-  onePasswordFamiliesRegular: "$5.99",
-  protonPlusMonthly: "$2.99/month",
-  protonPlusBilled: "$35.88",
-  protonFamilyMonthly: "$4.99/month",
-  protonFamilyBilled: "$59.88",
-  dashlanePremiumMonthly: "$5.42",
-  dashlaneFamilyMonthly: "$8.13",
-  keeperUnlimitedMonthly: "$3.58",
-  keeperUnlimitedAnnual: "$42.99",
-  keeperFamilyMonthly: "$7.67/month",
-  keeperFamilyAnnual: "$91.99",
+  nordpassPremiumTwoYearMonthly: SEE_CURRENT_PRICING,
+  nordpassPremiumTwoYearTotal: SEE_CURRENT_PRICING,
+  nordpassPremiumOneYearMonthly: SEE_CURRENT_PRICING,
+  nordpassPremiumOneYearTotal: SEE_CURRENT_PRICING,
+  nordpassFamilyTwoYearMonthly: SEE_CURRENT_PRICING,
+  nordpassFamilyTwoYearTotal: SEE_CURRENT_PRICING,
+  nordpassFamilyOneYearMonthly: SEE_CURRENT_PRICING,
+  nordpassFamilyOneYearTotal: SEE_CURRENT_PRICING,
+  bitwardenPremiumMonthly: SEE_CURRENT_PRICING,
+  bitwardenPremiumMonthlyShown: SEE_CURRENT_PRICING,
+  bitwardenPremiumAnnual: SEE_CURRENT_PRICING,
+  bitwardenPremiumTwoYearTotal: SEE_CURRENT_PRICING,
+  bitwardenFamilyMonthly: SEE_CURRENT_PRICING,
+  bitwardenFamilyAnnual: SEE_CURRENT_PRICING,
+  onePasswordIndividualPromo: SEE_CURRENT_PRICING,
+  onePasswordIndividualRegular: SEE_CURRENT_PRICING,
+  onePasswordFamiliesPromo: SEE_CURRENT_PRICING,
+  onePasswordFamiliesRegular: SEE_CURRENT_PRICING,
+  protonPlusMonthly: SEE_CURRENT_PRICING,
+  protonPlusBilled: SEE_CURRENT_PRICING,
+  protonFamilyMonthly: SEE_CURRENT_PRICING,
+  protonFamilyBilled: SEE_CURRENT_PRICING,
+  dashlanePremiumMonthly: SEE_CURRENT_PRICING,
+  dashlaneFamilyMonthly: SEE_CURRENT_PRICING,
+  keeperUnlimitedMonthly: SEE_CURRENT_PRICING,
+  keeperUnlimitedAnnual: SEE_CURRENT_PRICING,
+  keeperFamilyMonthly: SEE_CURRENT_PRICING,
+  keeperFamilyAnnual: SEE_CURRENT_PRICING,
 } as const;
 
 export const PASSWORD_MANAGER_UPDATED = "2026-10-17";
