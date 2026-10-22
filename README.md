@@ -63,7 +63,7 @@ npm run nord-affiliate -- track <offer_id> [url_id]
 - `app/sitemap.ts` — all reviews, compares, cities, and core pages
 - `/llms.txt` and `/llms-full.txt` — generated LLM crawler summaries
 - `/feed.xml` — RSS for reviews, comparisons, and guides
-- IndexNow key at `/762d214b3bde92d04de73a8c7efba27c.txt`; `node scripts/indexnow.mjs <url...>` or `npm run indexnow` after deploy
+- IndexNow key at `/762d214b3bde92d04de73a8c7efba27c.txt`. Submit paths with `npm run indexnow -- /best-vpns`, or the full sitemap with `npm run indexnow -- --all`
 
 ## Deploy
 

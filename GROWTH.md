@@ -12,7 +12,7 @@ This file covers the external work that cannot be completed from code. The site 
 2. Verify Bing Webmaster Tools.
    - Import from Google Search Console if available.
    - Submit `https://tunnelreport.com/sitemap.xml`.
-   - Use IndexNow after deploy: `npm run indexnow`.
+   - Use IndexNow after deploy: `npm run indexnow -- --all`.
 
 3. Configure GA4.
    - Create a property for Tunnel Report.

@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "nord-affiliate": "npx tsx scripts/nord-affiliate-cli.ts",
-    "indexnow": "npx tsx scripts/indexnow-ping.ts"
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
