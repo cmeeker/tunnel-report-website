@@ -254,7 +254,7 @@ export function NordvpnVsProtonvpnLongform() {
         <h2 className="text-2xl font-bold text-white">Apps, devices, and network claims</h2>
         <p>
           Both 10 simultaneous connections. NordVPN thousands of servers in 225+ locations{" "}
-          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>, as of Oct 2026, NordLynx.
+          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing/</PricingLink>, as of Oct 2026, NordLynx.
           Proton Plus 20,000+ servers 140+ countries{" "}
           <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026. Price
           Basic not Complete/Prime extras.
@@ -265,7 +265,7 @@ export function NordvpnVsProtonvpnLongform() {
         <h2 className="text-2xl font-bold text-white">Pricing: what we could verify on Oct 15, 2026</h2>
         <p>
           NordVPN live{" "}
-          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>: 2-year+3mo Basic
+          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing/</PricingLink>: 2-year+3mo Basic
           and 1-year Basic, see current pricing, as of Oct 2026. Older blog figures are stale. Proton VPN Plus: see
           current pricing on the 2-year plan{" "}
           <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.

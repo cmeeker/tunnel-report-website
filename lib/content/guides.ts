@@ -207,13 +207,13 @@ export const guides: Guide[] = [
               "NordVPN Basic, 2 yr + 3 mo",
               "See current pricing",
               "See current pricing",
-              "[nordvpn.com/pricing](https://nordvpn.com/pricing/)",
+              "[nordvpn.com/pricing/](https://nordvpn.com/pricing/)",
             ],
             [
               "ExpressVPN Basic, 12 mo + 3 mo",
               "See current pricing",
               "See current pricing",
-              "[expressvpn.com/pricing](https://www.expressvpn.com/pricing)",
+              "[www.expressvpn.com/pricing](https://www.expressvpn.com/pricing)",
             ],
             [
               "Surfshark Starter, 24 mo + 3 mo",
@@ -225,7 +225,7 @@ export const guides: Guide[] = [
               "PureVPN Standard, 2 yr + 3 mo",
               "See current pricing",
               "See current pricing",
-              "[purevpn.com/order](https://www.purevpn.com/order)",
+              "[www.purevpn.com/order](https://www.purevpn.com/order)",
             ],
             [
               "Proton VPN Plus, 2 yr",

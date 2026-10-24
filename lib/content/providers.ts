@@ -106,8 +106,8 @@ export const providers: Provider[] = [
       {
         heading: "What Does NordVPN Actually Cost After the Promo Ends?",
         paragraphs: [
-          "See current pricing on the 2-year Basic plan [nordvpn.com/pricing](https://nordvpn.com/pricing/). Intro and renewal prices differ, so read both before you buy.",
-          "Renewal pricing is different from the intro price. See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/). Readers should factor the full lifecycle cost into their decision.",
+          "See current pricing on the 2-year Basic plan [nordvpn.com/pricing/](https://nordvpn.com/pricing/). Intro and renewal prices differ, so read both before you buy.",
+          "Renewal pricing is different from the intro price. See current pricing [nordvpn.com/pricing/](https://nordvpn.com/pricing/). Readers should factor the full lifecycle cost into their decision.",
           "If you are price-sensitive, set a calendar reminder before your term expires and evaluate whether to renew, switch, or negotiate.",
         ],
       },
@@ -244,7 +244,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing Reality Check",
         paragraphs: [
-          "ExpressVPN is priced as a premium option in our top five. See current pricing [expressvpn.com/order](https://www.expressvpn.com/order). You are paying for polish and support quality.",
+          "ExpressVPN is priced as a premium option in our top five. See current pricing [www.expressvpn.com/order](https://www.expressvpn.com/order). You are paying for polish and support quality.",
           "If budget is your primary constraint, Surfshark or PureVPN cost less. If you value a frictionless setup experience, ExpressVPN's premium may be justified.",
         ],
       },
@@ -380,7 +380,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing Advantage",
         paragraphs: [
-          "See current pricing for PureVPN Standard [purevpn.com/order](https://www.purevpn.com/order). If first-term cost is your dominant criterion, compare that figure on PureVPN's site before you buy.",
+          "See current pricing for PureVPN Standard [www.purevpn.com/order](https://www.purevpn.com/order). If first-term cost is your dominant criterion, compare that figure on PureVPN's site before you buy.",
         ],
       },
     ],

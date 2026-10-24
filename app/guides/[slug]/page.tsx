@@ -70,6 +70,34 @@ export default async function GuidePage({ params }: GuidePageProps) {
   if (!guide) notFound();
 
   const path = `/guides/${guide.slug}`;
+  const mentionsNordVpn = Boolean(
+    guide.title.includes("NordVPN") ||
+      guide.description.includes("NordVPN") ||
+      guide.dek.includes("NordVPN") ||
+      guide.shortAnswer?.includes("NordVPN") ||
+      guide.sections.some(
+        (section) =>
+          section.heading.includes("NordVPN") || section.paragraphs.some((paragraph) => paragraph.includes("NordVPN")),
+      ) ||
+      guide.faqs.some(
+        (faq) => faq.question.includes("NordVPN") || faq.answer.includes("NordVPN"),
+      ),
+  );
+  const mentionsNordPass = Boolean(
+    guide.title.includes("NordPass") ||
+      guide.description.includes("NordPass") ||
+      guide.dek.includes("NordPass") ||
+      guide.shortAnswer?.includes("NordPass") ||
+      guide.sections.some(
+        (section) =>
+          section.heading.includes("NordPass") || section.paragraphs.some((paragraph) => paragraph.includes("NordPass")),
+      ) ||
+      guide.faqs.some(
+        (faq) => faq.question.includes("NordPass") || faq.answer.includes("NordPass"),
+      ),
+  );
+  const showNordVpnCta = mentionsNordVpn;
+  const showNordPassCta = mentionsNordPass;
 
   return (
     <article className="space-y-14 fade-in-up">
@@ -211,6 +239,18 @@ export default async function GuidePage({ params }: GuidePageProps) {
             partner={guide.cta.partner}
             label={guide.cta.label}
           />
+        </div>
+      ) : null}
+
+      {showNordVpnCta ? (
+        <div>
+          <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
+        </div>
+      ) : null}
+
+      {showNordPassCta ? (
+        <div>
+          <AffiliateCTA href={AFFILIATE_URLS.nordpass} partner="nordpass" label="Visit NordPass" />
         </div>
       ) : null}
 
