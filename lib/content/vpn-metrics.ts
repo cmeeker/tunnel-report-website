@@ -143,7 +143,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "budget",
     title: "Best Cheap VPN in 2026",
     description:
-      "Budget buyers face a real tradeoff: a low first-term price versus a higher renewal price. Surfshark is our budget pick, and its pricing page lists unlimited simultaneous device connections ([Surfshark pricing](https://surfshark.com/pricing), accessed Oct 17, 2026). See current pricing for PureVPN Standard [purevpn.com/order](https://www.purevpn.com/order).",
+      "Budget buyers face a real tradeoff: a low first-term price versus a higher renewal price. Surfshark is our budget pick, and its pricing page lists unlimited simultaneous device connections ([Surfshark pricing](https://surfshark.com/pricing), accessed Oct 17, 2026). See current pricing for PureVPN Standard [www.purevpn.com/order](https://www.purevpn.com/order).",
     pickSlug: "surfshark",
     pickReason:
       "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026",
