@@ -57,9 +57,9 @@ export const comparisons: Comparison[] = [
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
-      { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, right: { value: "See current pricing [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 90 }, winner: "right" },
+      { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902), as of Oct 2026", pct: 72 }, right: { value: "See current pricing [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 90 }, winner: "right" },
       { category: "App Reliability", left: { value: "Polished, mature across platforms", pct: 90 }, right: { value: "Functional, occasional reconnect issues", pct: 65 }, winner: "left" },
-      { category: "Server Network", left: { value: "NordVPN: thousands of servers in 225+ locations [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 0 }, right: { value: "PureVPN: 80+ locations [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 0 }, winner: "uncompared" },
+      { category: "Server Network", left: { value: "NordVPN: thousands of servers in 225+ locations [nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902), as of Oct 2026", pct: 0 }, right: { value: "PureVPN: 80+ locations [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
       "Choose PureVPN if first-year price is your dominant buying criteria and you are mostly using the VPN for domestic browsing or light streaming. You are comfortable with a provider actively rebuilding its trust profile.",
@@ -92,7 +92,7 @@ export const comparisons: Comparison[] = [
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
       { category: "Privacy Audits", left: { value: "Frequent infrastructure audits", pct: 92 }, right: { value: "TrustedServer RAM-only audits", pct: 88 }, winner: "left" },
-      { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 78 }, right: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left", note: "Different plan lengths; compare the totals." },
+      { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902), as of Oct 2026", pct: 78 }, right: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left", note: "Different plan lengths; compare the totals." },
       { category: "App Experience", left: { value: "Feature-rich, some complexity", pct: 85 }, right: { value: "Polished, minimal friction", pct: 92 }, winner: "right" },
       { category: "Streaming Reliability", left: { value: "Consistent major platforms", pct: 90 }, right: { value: "Very reliable geo-unblocking", pct: 91 }, winner: "draw" },
     ],
@@ -122,13 +122,13 @@ export const comparisons: Comparison[] = [
     description:
       "Surfshark vs NordVPN — unlimited devices and budget pricing compared side by side.",
     intro:
-      "Surfshark and NordVPN are two of the most compared VPNs. Surfshark's pricing page lists [unlimited](https://surfshark.com/pricing) simultaneous device connections; [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. Here is how they compare on published specs and pricing.",
+      "Surfshark and NordVPN are two of the most compared VPNs. Surfshark's pricing page lists [unlimited](https://surfshark.com/pricing) simultaneous device connections; [NordVPN says](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. Here is how they compare on published specs and pricing.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
       { category: "Device Limit", left: { value: "Unlimited connections", pct: 98 }, right: { value: "10 simultaneous devices", pct: 70 }, winner: "left" },
-      { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, winner: "left" },
+      { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902), as of Oct 2026", pct: 72 }, winner: "left" },
       { category: "Privacy Audits", left: { value: "Regular independent audits", pct: 82 }, right: { value: "Frequent infrastructure audits", pct: 92 }, winner: "right" },
     ],
     verdictParagraphs: [

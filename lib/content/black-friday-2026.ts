@@ -67,13 +67,13 @@ export const protonPricingLink = {
 } as const;
 
 export const vendorSources = {
-  nordvpn: "https://nordvpn.com/pricing/",
+  nordvpn: AFFILIATE_URLS.nordvpn,
   surfshark: "https://surfshark.com/pricing",
   protonvpn: "https://protonvpn.com/pricing",
   hideme: "https://hide.me/en/pricing",
-  nordBlackFriday: "https://nordvpn.com/black-friday/",
-  nordNoLogs: "https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/",
-  nordRefund: "https://support.nordvpn.com/hc/en-us/articles/19476991311121-What-is-your-refund-policy",
+  nordBlackFriday: AFFILIATE_URLS.nordvpn,
+  nordNoLogs: AFFILIATE_URLS.nordvpn,
+  nordRefund: AFFILIATE_URLS.nordvpn,
   protonPlans: "https://protonvpn.com/support/proton-vpn-plans",
   protonNoLogsAudit: "https://protonvpn.com/blog/no-logs-audit",
   protonNoLogsPolicy: "https://protonvpn.com/features/no-logs-policy",

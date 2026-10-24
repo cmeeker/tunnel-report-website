@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
+import { AFFILIATE_URLS } from "@/lib/content/providers";
+
 type PriceRow = {
   provider: string;
   plan: string;
@@ -209,7 +211,7 @@ requireUrl(onePasswordIndividualPromo, "https://1password.com/pricing/password-m
 requireUrl(protonPlus, "https://proton.me/pass/pricing", "Proton Pass");
 requireUrl(dashlanePremium, "https://www.dashlane.com/personal-pricing", "Dashlane");
 requireUrl(keeperUnlimited, "https://www.keepersecurity.com/pricing/personal-and-family.html", "Keeper");
-requireUrl(nordpassPremiumTwoYear, "https://nordpass.com/pricing/", "NordPass");
+requireUrl(nordpassPremiumTwoYear, AFFILIATE_URLS.nordpass, "NordPass");
 
 export const pricingUrls = {
   bitwarden: bitwardenPremium.sourceUrl,
@@ -221,7 +223,7 @@ export const pricingUrls = {
 
 export const sourceUrls = {
   nordpassPricing: nordpassPremiumTwoYear.sourceUrl,
-  nordpassSecurity: "https://nordpass.com/security/",
+  nordpassSecurity: AFFILIATE_URLS.nordpass,
   bitwardenPricing: bitwardenPremium.sourceUrl,
   bitwardenAudits: "https://bitwarden.com/help/is-bitwarden-audited/",
   bitwardenWhitePaper: "https://bitwarden.com/help/bitwarden-security-white-paper/",

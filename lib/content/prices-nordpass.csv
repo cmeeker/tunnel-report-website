@@ -1,10 +1,10 @@
 provider,plan,billing_period,price_as_shown,billed_total_as_shown,currency,rate_type,status,source_url,as_of,notes
-NordPass,Premium,2-year plan (27 months incl. 3 extra),See current pricing,See current pricing,USD,intro,VERIFIED,https://nordpass.com/pricing/,Oct 2026,Intro term includes extra months. Discount percentage removed from this file.
-NordPass,Premium,1-year plan,See current pricing,See current pricing,USD,intro,VERIFIED,https://nordpass.com/pricing/,Oct 2026,Intro rate. Discount percentage removed from this file.
-NordPass,Family (6 users),2-year plan (27 months incl. 3 extra),See current pricing,See current pricing,USD,intro,VERIFIED,https://nordpass.com/pricing/,Oct 2026,Intro term includes extra months. Discount percentage removed from this file.
-NordPass,Family (6 users),1-year plan,See current pricing,See current pricing,USD,intro,VERIFIED,https://nordpass.com/pricing/,Oct 2026,Intro rate. Discount percentage removed from this file.
-NordPass,Free,n/a,Free,n/a,USD,n/a,VERIFIED,https://nordpass.com/pricing/,Oct 2026,Free plan listed; page says it includes a 30-day Premium trial
-NordPass,Premium / Family,renewal,UNVERIFIED,UNVERIFIED,USD,renewal,UNVERIFIED,https://nordpass.com/pricing/,Oct 2026,Renewal rate not shown on pricing page. Keep off page.
+NordPass,Premium,2-year plan (27 months incl. 3 extra),See current pricing,See current pricing,USD,intro,VERIFIED,https://go.nordpass.io/aff_c?offer_id=488&aff_id=158647&url_id=9356,Oct 2026,Intro term includes extra months. Discount percentage removed from this file.
+NordPass,Premium,1-year plan,See current pricing,See current pricing,USD,intro,VERIFIED,https://go.nordpass.io/aff_c?offer_id=488&aff_id=158647&url_id=9356,Oct 2026,Intro rate. Discount percentage removed from this file.
+NordPass,Family (6 users),2-year plan (27 months incl. 3 extra),See current pricing,See current pricing,USD,intro,VERIFIED,https://go.nordpass.io/aff_c?offer_id=488&aff_id=158647&url_id=9356,Oct 2026,Intro term includes extra months. Discount percentage removed from this file.
+NordPass,Family (6 users),1-year plan,See current pricing,See current pricing,USD,intro,VERIFIED,https://go.nordpass.io/aff_c?offer_id=488&aff_id=158647&url_id=9356,Oct 2026,Intro rate. Discount percentage removed from this file.
+NordPass,Free,n/a,Free,n/a,USD,n/a,VERIFIED,https://go.nordpass.io/aff_c?offer_id=488&aff_id=158647&url_id=9356,Oct 2026,Free plan listed; page says it includes a 30-day Premium trial
+NordPass,Premium / Family,renewal,UNVERIFIED,UNVERIFIED,USD,renewal,UNVERIFIED,https://go.nordpass.io/aff_c?offer_id=488&aff_id=158647&url_id=9356,Oct 2026,Renewal rate not shown on pricing page. Keep off page.
 Bitwarden,Free,n/a,Free,n/a,USD,n/a,VERIFIED,https://bitwarden.com/pricing/,Oct 2026,
 Bitwarden,Premium (1 account),annual,See current pricing,See current pricing,USD,standard (no intro shown),VERIFIED,https://bitwarden.com/pricing/,Oct 2026,Pricing shown in USD and based on an annual subscription. Taxes not included.
 Bitwarden,Families (6 accounts),annual,See current pricing,See current pricing,USD,standard (no intro shown),VERIFIED,https://bitwarden.com/pricing/,Oct 2026,Up to 6 users.
