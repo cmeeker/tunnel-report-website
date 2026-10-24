@@ -3,21 +3,24 @@ import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
+import { citationLinkRel } from "@/lib/content/facts";
 
 const linkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
 
-function PlainSourceLink({ href }: { href: string }) {
+function PlainSourceLink({ href, label }: { href: string; label?: string }) {
+  const rel = citationLinkRel(href);
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={linkClassName}>
-      {href}
+    <a href={href} target="_blank" rel={rel} className={linkClassName}>
+      {label ?? href}
     </a>
   );
 }
 
 function PricingLink({ href, children }: { href: string; children: ReactNode }) {
+  const rel = citationLinkRel(href);
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={linkClassName}>
+    <a href={href} target="_blank" rel={rel} className={linkClassName}>
       {children}
     </a>
   );
@@ -184,9 +187,9 @@ export function NordvpnVsProtonvpnLongform() {
 
         <p>
           <a
-            href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/"
+            href={AFFILIATE_URLS.nordvpn}
             target="_blank"
-            rel="noopener noreferrer"
+            rel={citationLinkRel(AFFILIATE_URLS.nordvpn)}
             className={linkClassName}
           >
             NordVPN says it has passed six independent assurance engagements; the full report is behind a Nord Account login.
@@ -212,9 +215,9 @@ export function NordvpnVsProtonvpnLongform() {
         <p>
           Privacy: Proton publishes open-source apps;{" "}
           <a
-            href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/"
+            href={AFFILIATE_URLS.nordvpn}
             target="_blank"
-            rel="noopener noreferrer"
+            rel={citationLinkRel(AFFILIATE_URLS.nordvpn)}
             className={linkClassName}
           >
             NordVPN says
@@ -254,7 +257,7 @@ export function NordvpnVsProtonvpnLongform() {
         <h2 className="text-2xl font-bold text-white">Apps, devices, and network claims</h2>
         <p>
           Both 10 simultaneous connections. NordVPN thousands of servers in 225+ locations{" "}
-          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>, as of Oct 2026, NordLynx.
+          <PricingLink href={AFFILIATE_URLS.nordvpn}>nordvpn.com/pricing</PricingLink>, as of Oct 2026, NordLynx.
           Proton Plus 20,000+ servers 140+ countries{" "}
           <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026. Price
           Basic not Complete/Prime extras.
@@ -265,7 +268,7 @@ export function NordvpnVsProtonvpnLongform() {
         <h2 className="text-2xl font-bold text-white">Pricing: what we could verify on Oct 15, 2026</h2>
         <p>
           NordVPN live{" "}
-          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>: 2-year+3mo Basic
+          <PricingLink href={AFFILIATE_URLS.nordvpn}>nordvpn.com/pricing</PricingLink>: 2-year+3mo Basic
           and 1-year Basic, see current pricing, as of Oct 2026. Older blog figures are stale. Proton VPN Plus: see
           current pricing on the 2-year plan{" "}
           <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.
@@ -321,27 +324,40 @@ export function NordvpnVsProtonvpnLongform() {
           <li>tunnelreport.com/methodology</li>
           <li>tunnelreport.com/best-vpns</li>
           <li>
-            <PlainSourceLink href="https://nordvpn.com/pricing/" /> live intro/renewal
+            <PlainSourceLink href={AFFILIATE_URLS.nordvpn} label="https://nordvpn.com/pricing/" /> live intro/renewal
           </li>
           <li>
-            <PlainSourceLink href="https://nordvpn.com/blog/how-much-does-nordvpn-cost/" />{" "}
+            <PlainSourceLink
+              href={AFFILIATE_URLS.nordvpn}
+              label="https://nordvpn.com/blog/how-much-does-nordvpn-cost/"
+            />{" "}
             24 Oct 2025
           </li>
           <li>
-            <PlainSourceLink href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/" />{" "}
+            <PlainSourceLink
+              href={AFFILIATE_URLS.nordvpn}
+              label="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/"
+            />{" "}
             3 Feb 2026
           </li>
           <li>
-            <PlainSourceLink href="https://nordvpn.com/features/no-log-vpn/" />
+            <PlainSourceLink href={AFFILIATE_URLS.nordvpn} label="https://nordvpn.com/features/no-log-vpn/" />
           </li>
           <li>
-            <PlainSourceLink href="https://nordvpn.com/blog/ram-based-servers/" /> 28 Aug 2024
+            <PlainSourceLink href={AFFILIATE_URLS.nordvpn} label="https://nordvpn.com/blog/ram-based-servers/" /> 28
+            Aug 2024
           </li>
           <li>
-            <PlainSourceLink href="https://support.nordvpn.com/hc/en-us/articles/19441152966161-Where-is-NordVPN-based" />
+            <PlainSourceLink
+              href={AFFILIATE_URLS.nordvpn}
+              label="https://support.nordvpn.com/hc/en-us/articles/19441152966161-Where-is-NordVPN-based"
+            />
           </li>
           <li>
-            <PlainSourceLink href="https://support.nordvpn.com/hc/en-us/articles/19476991311121-What-is-your-refund-policy" />
+            <PlainSourceLink
+              href={AFFILIATE_URLS.nordvpn}
+              label="https://support.nordvpn.com/hc/en-us/articles/19476991311121-What-is-your-refund-policy"
+            />
           </li>
           <li>
             <PlainSourceLink href="https://protonvpn.com/" />

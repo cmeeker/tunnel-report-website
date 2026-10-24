@@ -73,7 +73,7 @@ export const providers: Provider[] = [
     cons: ["Price increases at renewal", "UI depth can overwhelm first-time users"],
     speedSummary: "",
     privacySummary:
-      "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
+      "[NordVPN says](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
     pricingSummary: "Entry promo pricing is competitive; long-term value depends on renewal terms.",
     affiliateKey: "nordvpn",
     datePublished: "2026-10-15",
@@ -106,8 +106,8 @@ export const providers: Provider[] = [
       {
         heading: "What Does NordVPN Actually Cost After the Promo Ends?",
         paragraphs: [
-          "See current pricing on the 2-year Basic plan [nordvpn.com/pricing](https://nordvpn.com/pricing/). Intro and renewal prices differ, so read both before you buy.",
-          "Renewal pricing is different from the intro price. See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/). Readers should factor the full lifecycle cost into their decision.",
+          "See current pricing on the 2-year Basic plan [nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902). Intro and renewal prices differ, so read both before you buy.",
+          "Renewal pricing is different from the intro price. See current pricing [nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902). Readers should factor the full lifecycle cost into their decision.",
           "If you are price-sensitive, set a calendar reminder before your term expires and evaluate whether to renew, switch, or negotiate.",
         ],
       },
@@ -335,7 +335,7 @@ export const providers: Provider[] = [
       {
         question: "Is Proton VPN better than NordVPN for privacy?",
         answer:
-          "Proton VPN is our pick on transparency and open-source posture. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. The right choice depends on whether you prioritize open-source code or Nord's feature set.",
+          "Proton VPN is our pick on transparency and open-source posture. [NordVPN says](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. The right choice depends on whether you prioritize open-source code or Nord's feature set.",
       },
       {
         question: "Does Proton VPN work in restrictive countries?",
@@ -398,7 +398,7 @@ export const providers: Provider[] = [
       {
         question: "How does PureVPN compare to NordVPN?",
         answer:
-          "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. PureVPN has the lower introductory price.",
+          "[NordVPN says](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. PureVPN has the lower introductory price.",
       },
       {
         question: "Does PureVPN work for streaming?",

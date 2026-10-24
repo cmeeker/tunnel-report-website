@@ -121,7 +121,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "Miami's bilingual and multicultural population creates genuine demand for both US and Latin American streaming libraries. Accessing content from Colombia, Brazil, Argentina, and Mexico alongside standard US platforms is a normal household requirement, not an edge case. VPN routing quality to Latin American servers matters here more than in any other US metro.",
     recommendation:
-      "Prioritize providers with fast Florida exits and dependable Latin American routing. NordVPN is based in Panama [Where is NordVPN based](https://support.nordvpn.com/hc/en-us/articles/19441152966161-Where-is-NordVPN-based). Surfshark is also competitive here. Check a provider's server list for the Latin American countries you need before you buy.",
+      "Prioritize providers with fast Florida exits and dependable Latin American routing. NordVPN is based in Panama [Where is NordVPN based](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902). Surfshark is also competitive here. Check a provider's server list for the Latin American countries you need before you buy.",
     neighborhoodNote:
       "Fiber availability varies sharply. Brickell and Downtown have strong AT&T Fiber and Xfinity coverage, but many condo buildings — especially in the Beach — are locked into Hotwire Communications or similar bulk-service agreements with lower speed ceilings. Check your building's ISP situation before assuming gigabit is available.",
     populationContext:

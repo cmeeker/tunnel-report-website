@@ -128,7 +128,7 @@ export const guides: Guide[] = [
     faqs: [
       { question: "Can a no-logs VPN identify me?", answer: "It may still have account, payment, or support records. Strong providers minimize this data and keep it separate from traffic activity." },
       { question: "Are no-logs audits trustworthy?", answer: "Some are. Trust depends on auditor reputation, technical scope, publication detail, and whether audits repeat over time." },
-      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad requires no email to sign up. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025." },
+      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad requires no email to sign up. [NordVPN says](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025." },
     ],
   },
   {
@@ -207,7 +207,7 @@ export const guides: Guide[] = [
               "NordVPN Basic, 2 yr + 3 mo",
               "See current pricing",
               "See current pricing",
-              "[nordvpn.com/pricing](https://nordvpn.com/pricing/)",
+              "[nordvpn.com/pricing](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902)",
             ],
             [
               "ExpressVPN Basic, 12 mo + 3 mo",

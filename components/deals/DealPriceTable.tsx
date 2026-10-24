@@ -1,13 +1,15 @@
 import type { ReactNode } from "react";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { citationLinkRel } from "@/lib/content/facts";
 
 export const textLinkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
 
 export function PlainOutboundLink({ href, children }: { href: string; children: ReactNode }) {
+  const rel = citationLinkRel(href);
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={textLinkClassName}>
+    <a href={href} target="_blank" rel={rel} className={textLinkClassName}>
       {children}
     </a>
   );

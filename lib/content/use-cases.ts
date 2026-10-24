@@ -98,7 +98,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Audit scope beats audit marketing",
         paragraphs: [
           "A no-logs audit only matters if the scope reaches real infrastructure, server configuration, and retention controls. Many providers advertise audits that are closer to policy reviews than technical verification.",
-          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is our mainstream pick. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
+          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is our mainstream pick. [NordVPN says](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=158647&url_id=902) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
         ],
       },
       {

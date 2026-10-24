@@ -12,6 +12,7 @@ export type CitationSource = {
 
 const TRACKED_CITATION_URLS = new Set([
   AFFILIATE_URLS.nordvpn,
+  AFFILIATE_URLS.nordpass,
   "https://billing.purevpn.com/aff.php?aff=49388038",
   "https://get.surfshark.net/aff_c?offer_id=2065&aff_id=49525",
   "https://hide.me/?friend=6a89f8e9ae1ca",
@@ -64,7 +65,7 @@ export const citationSources: Record<string, CitationSource> = {
     id: "S5",
     title: "NordVPN Pricing",
     publisher: "Nord Security",
-    url: "https://nordvpn.com/pricing/",
+    url: AFFILIATE_URLS.nordvpn,
     year: 2026,
     retrievedAt: "Oct 15, 2026",
     retrievedVerb: "checked",
