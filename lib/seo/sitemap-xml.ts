@@ -80,6 +80,10 @@ function resolveSitemapLastModified(path: string): string | undefined {
 
   if (path === "/") return gitLastModifiedDate("app/page.tsx") ?? undefined;
 
+  if (path === "/compare" || path === "/alternatives" || path === "/reviews" || path === "/deals") {
+    return "2026-10-25";
+  }
+
   // Default: treat as an app route with a corresponding page component.
   const candidate = `app${path}/page.tsx`;
   return gitLastModifiedDate(candidate) ?? undefined;

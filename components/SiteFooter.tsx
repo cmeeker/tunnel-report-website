@@ -6,6 +6,10 @@ const columns = [
   {
     title: "Reviews",
     links: [
+      { href: "/reviews", label: "All Reviews" },
+      { href: "/compare", label: "All Comparisons" },
+      { href: "/alternatives", label: "All Alternatives" },
+      { href: "/deals", label: "Deals" },
       { href: "/best-vpns", label: "Best VPNs 2026" },
       { href: "/best-password-managers", label: "Best Password Managers" },
       { href: "/reviews/nordvpn", label: "NordVPN Review" },

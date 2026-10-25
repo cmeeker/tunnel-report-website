@@ -14,9 +14,11 @@ import {
   PricingLink,
   type PasswordSource,
 } from "@/components/password-managers";
+import { RelatedCards } from "@/components/RelatedCards";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { relatedHubCard } from "@/lib/seo/related-cards";
 import { buildArticleSchema, buildReviewSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
@@ -94,7 +96,7 @@ export default function NordPassReviewPage() {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "Reviews", path: "/reviews/nordvpn" },
+          { name: "Reviews", path: "/reviews" },
           { name: "NordPass", path },
         ]}
       />
@@ -293,16 +295,21 @@ export default function NordPassReviewPage() {
 
       <AuthorByline date={PASSWORD_MANAGER_UPDATED_LABEL} />
 
-      <RelatedLinks
-        links={[
-          { href: "/best-password-managers", label: "Best Password Managers" },
-          { href: "/compare/nordpass-vs-bitwarden", label: "NordPass vs Bitwarden" },
-          { href: "/reviews/nordvpn", label: "NordVPN Review" },
-          { href: "/best-vpns", label: "Best VPNs" },
-          { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
-          { href: "/methodology", label: "How We Rank" },
-        ]}
-      />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks
+          links={[
+            { href: "/best-password-managers", label: "Best Password Managers" },
+            { href: "/compare/nordpass-vs-bitwarden", label: "NordPass vs Bitwarden" },
+            { href: "/reviews/nordvpn", label: "NordVPN Review" },
+            { href: "/best-vpns", label: "Best VPNs" },
+            { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
+            { href: "/methodology", label: "How We Rank" },
+          ]}
+        />
+        <div className="min-w-0">
+          <RelatedCards cards={[relatedHubCard("/reviews")]} />
+        </div>
+      </div>
 
       <FaqSection faqs={faqs} />
       <PasswordManagerSources sources={sources} />

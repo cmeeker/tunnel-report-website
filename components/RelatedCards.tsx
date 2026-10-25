@@ -10,15 +10,17 @@ export type RelatedCard = {
 export function RelatedCards({
   title = "Related pages",
   cards,
+  showHeading = true,
 }: {
   title?: string;
   cards: RelatedCard[];
+  showHeading?: boolean;
 }) {
   if (cards.length === 0) return null;
 
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl font-bold text-white">{title}</h2>
+      {showHeading ? <h2 className="text-2xl font-bold text-white">{title}</h2> : null}
       <div className="grid gap-5 md:grid-cols-2">
         {cards.map((card) => (
           <Link
