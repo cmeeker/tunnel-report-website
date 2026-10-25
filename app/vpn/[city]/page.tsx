@@ -9,8 +9,10 @@ import { CitationLink } from "@/components/CitationLink";
 import { CitedText } from "@/components/CitedText";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
+import { RelatedCards } from "@/components/RelatedCards";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { getCitySiblingCards } from "@/lib/seo/related-cards";
 import { getCityRelatedLinks } from "@/lib/seo/related-links";
 import { cityGuideMap } from "@/lib/content/cities";
 import { citationSources, citySources } from "@/lib/content/facts";
@@ -207,7 +209,12 @@ export default async function CityVpnPage({ params }: CityPageProps) {
 
       <AuthorByline />
 
-      <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
+        <div className="min-w-0">
+          <RelatedCards cards={getCitySiblingCards(guide.slug)} />
+        </div>
+      </div>
 
       <FaqSection faqs={cityFaqs} renderAnswer={(answer) => <CitedText text={answer} />} />
 

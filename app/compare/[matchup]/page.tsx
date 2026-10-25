@@ -9,6 +9,7 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { PaidPick } from "@/components/PaidPick";
+import { RelatedCards } from "@/components/RelatedCards";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
 import { NordvpnVsProtonvpnLongform } from "@/components/compare/NordvpnVsProtonvpnLongform";
@@ -20,6 +21,7 @@ import {
   providerMap,
 } from "@/lib/content/providers";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { getCompareRelatedCards } from "@/lib/seo/related-cards";
 import { getCompareRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
@@ -303,7 +305,12 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
 
       <hr className="divider-glow" />
 
-      <RelatedLinks links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)} />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)} />
+        <div className="min-w-0">
+          <RelatedCards cards={getCompareRelatedCards(comparison.slug)} />
+        </div>
+      </div>
 
       {!isLongform && (
         <>
