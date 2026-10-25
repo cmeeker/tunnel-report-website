@@ -57,9 +57,9 @@ export const comparisons: Comparison[] = [
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
-      { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, right: { value: "See current pricing [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 90 }, winner: "right" },
+      { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing/](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, right: { value: "See current pricing [www.purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 90 }, winner: "right" },
       { category: "App Reliability", left: { value: "Polished, mature across platforms", pct: 90 }, right: { value: "Functional, occasional reconnect issues", pct: 65 }, winner: "left" },
-      { category: "Server Network", left: { value: "NordVPN: thousands of servers in 225+ locations [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 0 }, right: { value: "PureVPN: 80+ locations [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 0 }, winner: "uncompared" },
+      { category: "Server Network", left: { value: "NordVPN: thousands of servers in 225+ locations [nordvpn.com/pricing/](https://nordvpn.com/pricing/), as of Oct 2026", pct: 0 }, right: { value: "PureVPN: 80+ locations [www.purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
       "Choose PureVPN if first-year price is your dominant buying criteria and you are mostly using the VPN for domestic browsing or light streaming. You are comfortable with a provider actively rebuilding its trust profile.",
@@ -92,7 +92,7 @@ export const comparisons: Comparison[] = [
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
       { category: "Privacy Audits", left: { value: "Frequent infrastructure audits", pct: 92 }, right: { value: "TrustedServer RAM-only audits", pct: 88 }, winner: "left" },
-      { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 78 }, right: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left", note: "Different plan lengths; compare the totals." },
+      { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing/](https://nordvpn.com/pricing/), as of Oct 2026", pct: 78 }, right: { value: "See current pricing [www.expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left", note: "Different plan lengths; compare the totals." },
       { category: "App Experience", left: { value: "Feature-rich, some complexity", pct: 85 }, right: { value: "Polished, minimal friction", pct: 92 }, winner: "right" },
       { category: "Streaming Reliability", left: { value: "Consistent major platforms", pct: 90 }, right: { value: "Very reliable geo-unblocking", pct: 91 }, winner: "draw" },
     ],
@@ -128,7 +128,7 @@ export const comparisons: Comparison[] = [
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
       { category: "Device Limit", left: { value: "Unlimited connections", pct: 98 }, right: { value: "10 simultaneous devices", pct: 70 }, winner: "left" },
-      { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, winner: "left" },
+      { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [nordvpn.com/pricing/](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, winner: "left" },
       { category: "Privacy Audits", left: { value: "Regular independent audits", pct: 82 }, right: { value: "Frequent infrastructure audits", pct: 92 }, winner: "right" },
     ],
     verdictParagraphs: [
@@ -206,7 +206,7 @@ export const comparisons: Comparison[] = [
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
-      { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left" },
+      { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [www.expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left" },
       { category: "Device Limit", left: { value: "Unlimited devices", pct: 98 }, right: { value: "8 simultaneous devices", pct: 72 }, winner: "left" },
       { category: "App Polish", left: { value: "Modern, improving", pct: 85 }, right: { value: "Best-in-class simplicity", pct: 92 }, winner: "right" },
       { category: "Streaming Reliability", left: { value: "Strong US libraries", pct: 84 }, right: { value: "Very consistent region switching", pct: 91 }, winner: "right" },
@@ -302,7 +302,7 @@ export const comparisons: Comparison[] = [
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
-      { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
+      { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [www.purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
       { category: "Device Limit", left: { value: "Unlimited devices", pct: 98 }, right: { value: "10 devices", pct: 75 }, winner: "left" },
       { category: "Streaming", left: { value: "Strong US libraries", pct: 84 }, right: { value: "Variable", pct: 68 }, winner: "left" },
       { category: "Feature Depth", left: { value: "Modern consumer suite", pct: 86 }, right: { value: "Broad feature list", pct: 78 }, winner: "left" },
@@ -367,7 +367,7 @@ export const comparisons: Comparison[] = [
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
-      { category: "Entry Pricing", left: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, right: { value: "See current pricing [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
+      { category: "Entry Pricing", left: { value: "See current pricing [www.expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, right: { value: "See current pricing [www.purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
       { category: "App Reliability", left: { value: "Polished, stable", pct: 92 }, right: { value: "Functional, variable", pct: 65 }, winner: "left" },
       { category: "Streaming", left: { value: "Very reliable", pct: 91 }, right: { value: "Variable", pct: 68 }, winner: "left" },
       { category: "Trust Profile", left: { value: "TrustedServer audits", pct: 88 }, right: { value: "Improving, legacy concerns", pct: 58 }, winner: "left" },
