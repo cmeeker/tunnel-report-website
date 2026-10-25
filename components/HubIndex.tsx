@@ -15,6 +15,12 @@ type HubCopy = {
   intro: string;
 };
 
+/** Visible H1 drops a trailing brand suffix. The document title stays the signed string. */
+function visibleHubHeading(title: string): string {
+  const suffix = ` | ${siteConfig.name}`;
+  return title.endsWith(suffix) ? title.slice(0, -suffix.length) : title;
+}
+
 export function buildHubMetadata(hub: Pick<HubCopy, "path" | "title" | "description">): Metadata {
   return {
     ...buildPageMetadata({
@@ -57,7 +63,9 @@ export function HubIndex({
       />
 
       <header className="space-y-5">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">{hub.title}</h1>
+        <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
+          {visibleHubHeading(hub.title)}
+        </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{hub.intro}</p>
       </header>
 
