@@ -1,10 +1,8 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 
-import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
-import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
 
@@ -119,9 +117,6 @@ export default function PrivacyPage() {
           may set its own cookies and collect data under its own privacy policy. We don&apos;t control
           that data, so please read the partner&apos;s policy.
         </p>
-        <div>
-          <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
-        </div>
       </section>
 
       <section className="prose-dark space-y-4">

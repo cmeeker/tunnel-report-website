@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqSection } from "@/components/FaqSection";
 import { LastUpdated } from "@/components/LastUpdated";
 import { JsonLd } from "@/components/JsonLd";
-import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
 
@@ -210,9 +208,6 @@ export default function AboutPage() {
             </Link>
           </li>
         </ul>
-        <div className="mt-6">
-          <AffiliateCTA href={AFFILIATE_URLS.nordvpn} partner="nordvpn" label="Visit NordVPN" />
-        </div>
       </section>
 
       <FaqSection faqs={aboutFaqs} />
