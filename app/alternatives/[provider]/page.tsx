@@ -11,11 +11,13 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RatingStars } from "@/components/RatingStars";
 import { RelatedCards } from "@/components/RelatedCards";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { alternativeExpressPaidPicks } from "@/lib/content/paid-picks";
 import { getProviderCtaHref, providerMap, providers, providerSlugs, type Provider } from "@/lib/content/providers";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getAlternativesRelatedCards } from "@/lib/seo/related-cards";
+import { getAlternativesRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
@@ -201,7 +203,12 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         </p>
       </section>
 
-      <RelatedCards cards={getAlternativesRelatedCards(target.slug)} />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks links={getAlternativesRelatedLinks(target.slug)} />
+        <div className="min-w-0">
+          <RelatedCards cards={getAlternativesRelatedCards(target.slug)} />
+        </div>
+      </div>
 
       <FaqSection
         faqs={[

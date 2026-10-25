@@ -12,6 +12,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RatingStars } from "@/components/RatingStars";
 import { RelatedCards } from "@/components/RelatedCards";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
 import {
   AFFILIATE_URLS,
@@ -22,6 +23,7 @@ import {
 } from "@/lib/content/providers";
 import { citationLinkRel, getCitationSourcesById, reviewSources } from "@/lib/content/facts";
 import { getReviewRelatedCards } from "@/lib/seo/related-cards";
+import { getReviewRelatedLinks } from "@/lib/seo/related-links";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildReviewSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
@@ -249,7 +251,12 @@ function ReviewContent({ provider }: { provider: Provider }) {
 
       <hr className="divider-glow" />
 
-      <RelatedCards cards={getReviewRelatedCards(provider.slug)} />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks links={getReviewRelatedLinks(provider.slug)} />
+        <div className="min-w-0">
+          <RelatedCards cards={getReviewRelatedCards(provider.slug)} />
+        </div>
+      </div>
 
       <FaqSection
         faqs={provider.faqs}
