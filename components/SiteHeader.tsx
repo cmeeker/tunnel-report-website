@@ -303,7 +303,7 @@ export function SiteHeader() {
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label="Primary" className="hidden md:block">
+          <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-0.5">
               {primaryNav.map((item) => {
                 const hasDropdown = !!(item.featured || (item.columns && item.columns.length > 0));
@@ -322,15 +322,17 @@ export function SiteHeader() {
                       href={item.href}
                       aria-haspopup={hasDropdown ? "true" : undefined}
                       aria-expanded={isOpen ? "true" : undefined}
-                      className={`flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
+                      className={`flex items-center whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
                         isOpen ? "bg-white/[0.06] text-white" : "text-[#94a3b8] hover:bg-white/[0.06] hover:text-white"
                       }`}
                     >
                       {item.label}
                       {hasDropdown && <ChevronDown open={isOpen} />}
                     </Link>
-                    {hasDropdown && isOpen && (
-                      <DesktopDropdown item={item} onClose={() => setOpenKey(null)} />
+                    {hasDropdown && (
+                      <div className={isOpen ? undefined : "hidden"}>
+                        <DesktopDropdown item={item} onClose={() => setOpenKey(null)} />
+                      </div>
                     )}
                   </li>
                 );
@@ -341,7 +343,7 @@ export function SiteHeader() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(true)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-[#94a3b8] transition hover:bg-white/[0.06] hover:text-white md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-[#94a3b8] transition hover:bg-white/[0.06] hover:text-white lg:hidden"
             aria-label="Open navigation"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>

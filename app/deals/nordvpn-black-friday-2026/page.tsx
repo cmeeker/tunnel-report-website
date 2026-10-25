@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedCards } from "@/components/RelatedCards";
 import {
   PaidVisitLink,
   PlainOutboundLink,
@@ -27,6 +28,7 @@ import {
 } from "@/lib/content/black-friday-2026";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { relatedHubCard } from "@/lib/seo/related-cards";
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
@@ -67,7 +69,7 @@ export default function NordvpnBlackFridayPage() {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: blackFridayHub.h1, path: blackFridayHub.path },
+          { name: "Deals", path: "/deals" },
           { name: nordBlackFriday.h1, path: nordBlackFriday.path },
         ]}
       />
@@ -217,6 +219,8 @@ export default function NordvpnBlackFridayPage() {
           </li>
         </ul>
       </section>
+
+      <RelatedCards cards={[relatedHubCard("/deals")]} />
     </article>
   );
 }

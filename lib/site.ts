@@ -74,7 +74,7 @@ export const primaryNav: PrimaryNavItem[] = [
     ],
   },
   {
-    href: "/reviews/nordvpn",
+    href: "/reviews",
     label: "Reviews",
     featured: {
       label: "NordVPN Review",
@@ -98,7 +98,7 @@ export const primaryNav: PrimaryNavItem[] = [
     ],
   },
   {
-    href: "/compare/nordvpn-vs-protonvpn",
+    href: "/compare",
     label: "Compare",
     featured: {
       label: "NordVPN vs Proton VPN",
@@ -115,6 +115,38 @@ export const primaryNav: PrimaryNavItem[] = [
           { label: "Surfshark vs NordVPN", href: "/compare/surfshark-vs-nordvpn", description: "Value" },
           { label: "Mullvad vs Proton VPN", href: "/compare/mullvad-vs-protonvpn", description: "Privacy-first showdown" },
           { label: "NordPass vs Bitwarden", href: "/compare/nordpass-vs-bitwarden", description: "Password manager price and fit" },
+        ],
+      },
+    ],
+  },
+  {
+    href: "/alternatives",
+    label: "Alternatives",
+    columns: [
+      {
+        heading: "By Provider",
+        items: [
+          { label: "NordVPN", href: "/alternatives/nordvpn" },
+          { label: "Surfshark", href: "/alternatives/surfshark" },
+          { label: "ExpressVPN", href: "/alternatives/expressvpn" },
+          { label: "Proton VPN", href: "/alternatives/protonvpn" },
+          { label: "PureVPN", href: "/alternatives/purevpn" },
+          { label: "Mullvad", href: "/alternatives/mullvad" },
+          { label: "hide.me", href: "/alternatives/hideme" },
+        ],
+      },
+    ],
+  },
+  {
+    href: "/deals",
+    label: "Deals",
+    columns: [
+      {
+        heading: "Black Friday 2026",
+        items: [
+          { label: "Black Friday VPN Deals 2026", href: "/deals/black-friday-vpn-2026" },
+          { label: "Surfshark Black Friday 2026 Deal", href: "/deals/surfshark-black-friday-2026" },
+          { label: "NordVPN Black Friday 2026 Deal", href: "/deals/nordvpn-black-friday-2026" },
         ],
       },
     ],

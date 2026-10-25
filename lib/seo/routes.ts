@@ -1,4 +1,5 @@
 import { blackFridayHub, nordBlackFriday, surfsharkBlackFriday } from "@/lib/content/black-friday-2026";
+import { alternativesHub, compareHub, dealsHub, reviewsHub } from "@/lib/content/hubs";
 import { comparisonSlugs, comparisons } from "@/lib/content/comparisons";
 import { cityGuideMap } from "@/lib/content/cities";
 import { guideSlugs, guides } from "@/lib/content/guides";
@@ -161,6 +162,47 @@ const blackFridayDealRoutes: SiteRoute[] = [
   // (same shape as nordBlackFriday), then link it from the Black Friday hub
   // (Provider Black Friday pages, the Proton section, and Related reading) and
   // from the Nord deal page Related reading.
+  // The /deals index lists only the indexed deal pages. Leave Proton off that index
+  // until this route exists.
+];
+
+const tunnelHubRoutes: SiteRoute[] = [
+  {
+    path: compareHub.path,
+    title: compareHub.title,
+    description: compareHub.description,
+    lastModified: "2026-10-25",
+    priority: 0.8,
+    changeFrequency: "weekly",
+    group: "compare",
+  },
+  {
+    path: alternativesHub.path,
+    title: alternativesHub.title,
+    description: alternativesHub.description,
+    lastModified: "2026-10-25",
+    priority: 0.8,
+    changeFrequency: "weekly",
+    group: "alternative",
+  },
+  {
+    path: reviewsHub.path,
+    title: reviewsHub.title,
+    description: reviewsHub.description,
+    lastModified: "2026-10-25",
+    priority: 0.8,
+    changeFrequency: "weekly",
+    group: "review",
+  },
+  {
+    path: dealsHub.path,
+    title: dealsHub.title,
+    description: dealsHub.description,
+    lastModified: "2026-10-25",
+    priority: 0.84,
+    changeFrequency: "daily",
+    group: "deal",
+  },
 ];
 
 export function getSiteRoutes(): SiteRoute[] {
@@ -264,6 +306,7 @@ export function getSiteRoutes(): SiteRoute[] {
     sitemapLastModified: laterIsoDate(route.lastModified, REVISED_SITEMAP_LASTMOD),
   })),
     ...blackFridayDealRoutes,
+    ...tunnelHubRoutes,
   ];
 }
 
