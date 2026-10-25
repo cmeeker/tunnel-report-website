@@ -10,12 +10,12 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RatingStars } from "@/components/RatingStars";
-import { RelatedLinks } from "@/components/RelatedLinks";
+import { RelatedCards } from "@/components/RelatedCards";
 import { alternativeExpressPaidPicks } from "@/lib/content/paid-picks";
 import { getProviderCtaHref, providerMap, providers, providerSlugs, type Provider } from "@/lib/content/providers";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { getAlternativesRelatedLinks } from "@/lib/seo/related-links";
+import { getAlternativesRelatedCards } from "@/lib/seo/related-cards";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
@@ -201,7 +201,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         </p>
       </section>
 
-      <RelatedLinks links={getAlternativesRelatedLinks(target.slug)} />
+      <RelatedCards cards={getAlternativesRelatedCards(target.slug)} />
 
       <FaqSection
         faqs={[

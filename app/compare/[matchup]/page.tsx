@@ -9,7 +9,7 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { PaidPick } from "@/components/PaidPick";
-import { RelatedLinks } from "@/components/RelatedLinks";
+import { RelatedCards } from "@/components/RelatedCards";
 import { SourcesList } from "@/components/SourcesList";
 import { NordvpnVsProtonvpnLongform } from "@/components/compare/NordvpnVsProtonvpnLongform";
 import { comparisonMap, comparisonSlugs, type Comparison } from "@/lib/content/comparisons";
@@ -20,7 +20,7 @@ import {
   providerMap,
 } from "@/lib/content/providers";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { getCompareRelatedLinks } from "@/lib/seo/related-links";
+import { getCompareRelatedCards } from "@/lib/seo/related-cards";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
@@ -303,7 +303,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
 
       <hr className="divider-glow" />
 
-      <RelatedLinks links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)} />
+      <RelatedCards cards={getCompareRelatedCards(comparison.slug)} />
 
       {!isLongform && (
         <>

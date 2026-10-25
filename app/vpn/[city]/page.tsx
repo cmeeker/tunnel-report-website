@@ -9,9 +9,9 @@ import { CitationLink } from "@/components/CitationLink";
 import { CitedText } from "@/components/CitedText";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
-import { getCityRelatedLinks } from "@/lib/seo/related-links";
+import { RelatedCards } from "@/components/RelatedCards";
+import { getCitySiblingCards } from "@/lib/seo/related-cards";
 import { cityGuideMap } from "@/lib/content/cities";
 import { citationSources, citySources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
@@ -207,7 +207,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
 
       <AuthorByline />
 
-      <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
+      <RelatedCards cards={getCitySiblingCards(guide.slug)} />
 
       <FaqSection faqs={cityFaqs} renderAnswer={(answer) => <CitedText text={answer} />} />
 

@@ -11,7 +11,7 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RatingStars } from "@/components/RatingStars";
-import { RelatedLinks } from "@/components/RelatedLinks";
+import { RelatedCards } from "@/components/RelatedCards";
 import { SourcesList } from "@/components/SourcesList";
 import {
   AFFILIATE_URLS,
@@ -21,7 +21,7 @@ import {
   type Provider,
 } from "@/lib/content/providers";
 import { citationLinkRel, getCitationSourcesById, reviewSources } from "@/lib/content/facts";
-import { getReviewRelatedLinks } from "@/lib/seo/related-links";
+import { getReviewRelatedCards } from "@/lib/seo/related-cards";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildReviewSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
@@ -249,7 +249,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
 
       <hr className="divider-glow" />
 
-      <RelatedLinks links={getReviewRelatedLinks(provider.slug)} />
+      <RelatedCards cards={getReviewRelatedCards(provider.slug)} />
 
       <FaqSection
         faqs={provider.faqs}
