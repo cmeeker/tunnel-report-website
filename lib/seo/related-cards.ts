@@ -1,5 +1,6 @@
 import type { RelatedCard } from "@/components/RelatedCards";
 import { blackFridayHub, nordBlackFriday, surfsharkBlackFriday } from "@/lib/content/black-friday-2026";
+import { alternativesHub, compareHub, dealsHub, reviewsHub } from "@/lib/content/hubs";
 import { comparisonMap, comparisons } from "@/lib/content/comparisons";
 import { cityGuideMap } from "@/lib/content/cities";
 import { guideMap } from "@/lib/content/guides";
@@ -72,6 +73,10 @@ const fixedDescriptions: Record<string, string> = {
     "NordPass vs Bitwarden on published pricing, encryption, audits, and free plans.",
   "/reviews/nordpass":
     "NordPass review of published specs: XChaCha20 encryption, audits, and who should skip it.",
+  [compareHub.path]: compareHub.description,
+  [alternativesHub.path]: alternativesHub.description,
+  [reviewsHub.path]: reviewsHub.description,
+  [dealsHub.path]: dealsHub.description,
 };
 
 function alternativesDescription(slug: string): string | null {
@@ -206,6 +211,7 @@ export function getAlternativesRelatedCards(providerSlug: string): RelatedCard[]
     ordered.map((slug) => `/alternatives/${slug}`),
     4,
   );
+  append(cards, [alternativesHub.path]);
   return cards;
 }
 
@@ -258,6 +264,7 @@ export function getCompareRelatedCards(matchupSlug: string): RelatedCard[] {
     4,
   );
   if (matchupSlug === "nordvpn-vs-protonvpn") append(cards, ["/compare/nordpass-vs-bitwarden"]);
+  append(cards, [compareHub.path]);
   return cards;
 }
 
@@ -292,6 +299,7 @@ export function getReviewRelatedCards(providerSlug: string): RelatedCard[] {
 
   if (providerSlug === "nordvpn") append(cards, [nordBlackFriday.path]);
   if (providerSlug === "surfshark") append(cards, [surfsharkBlackFriday.path]);
+  append(cards, [reviewsHub.path]);
   return cards;
 }
 
@@ -317,4 +325,89 @@ export function getCitySiblingCards(citySlug: string): RelatedCard[] {
     2,
   );
   return cards;
+}
+
+function hubCard(path: string, title: string): RelatedCard {
+  return { href: path, title, description: factualCardDescription(path) };
+}
+
+const compareHubPaths = [
+  "/compare/nordvpn-vs-expressvpn",
+  "/compare/nordvpn-vs-purevpn",
+  "/compare/nordvpn-vs-protonvpn",
+  "/compare/nordvpn-vs-mullvad",
+  "/compare/surfshark-vs-nordvpn",
+  "/compare/surfshark-vs-expressvpn",
+  "/compare/surfshark-vs-purevpn",
+  "/compare/surfshark-vs-protonvpn",
+  "/compare/expressvpn-vs-protonvpn",
+  "/compare/expressvpn-vs-purevpn",
+  "/compare/mullvad-vs-protonvpn",
+  "/compare/nordpass-vs-bitwarden",
+] as const;
+
+function compareHubTitle(path: string): string {
+  if (path === "/compare/nordpass-vs-bitwarden") return "NordPass vs Bitwarden";
+  const slug = path.slice("/compare/".length);
+  const comparison = comparisonMap[slug];
+  if (!comparison) throw new Error(`Missing comparison for hub card ${path}`);
+  return comparison.breadcrumbLabel ?? comparison.title.replace(/ 2026:.*/, "");
+}
+
+export function getCompareHubCards(): RelatedCard[] {
+  return compareHubPaths.map((path) => hubCard(path, compareHubTitle(path)));
+}
+
+const reviewHubPaths = [
+  "/reviews/nordvpn",
+  "/reviews/surfshark",
+  "/reviews/expressvpn",
+  "/reviews/protonvpn",
+  "/reviews/purevpn",
+  "/reviews/mullvad",
+  "/reviews/hideme",
+  "/reviews/nordpass",
+] as const;
+
+function reviewHubTitle(path: string): string {
+  if (path === "/reviews/nordpass") return "NordPass";
+  const provider = providerMap[path.slice("/reviews/".length)];
+  if (!provider) throw new Error(`Missing provider for hub card ${path}`);
+  return provider.name;
+}
+
+export function getReviewsHubCards(): RelatedCard[] {
+  return reviewHubPaths.map((path) => hubCard(path, reviewHubTitle(path)));
+}
+
+const alternativesHubSlugs = [
+  "nordvpn",
+  "surfshark",
+  "expressvpn",
+  "protonvpn",
+  "purevpn",
+  "mullvad",
+  "hideme",
+] as const;
+
+export function getAlternativesHubCards(): RelatedCard[] {
+  return alternativesHubSlugs.map((slug) => {
+    const provider = providerMap[slug];
+    if (!provider) throw new Error(`Missing provider for alternatives hub card ${slug}`);
+    return hubCard(`/alternatives/${slug}`, `Alternatives to ${provider.name}`);
+  });
+}
+
+export function getDealsHubCards(): RelatedCard[] {
+  return [
+    hubCard(blackFridayHub.path, blackFridayHub.h1),
+    hubCard(surfsharkBlackFriday.path, surfsharkBlackFriday.h1),
+    hubCard(nordBlackFriday.path, nordBlackFriday.h1),
+  ];
+}
+
+export function relatedHubCard(path: string): RelatedCard {
+  const card = cardFor(path);
+  if (!card) throw new Error(`Missing hub card for ${path}`);
+  return card;
 }

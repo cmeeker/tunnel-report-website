@@ -156,7 +156,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "Reviews", path: "/reviews/nordvpn" },
+          { name: "Reviews", path: "/reviews" },
           { name: provider.name, path },
         ]}
       />

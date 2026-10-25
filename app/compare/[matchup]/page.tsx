@@ -91,7 +91,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "Compare", path: "/compare/nordvpn-vs-purevpn" },
+          { name: "Compare", path: "/compare" },
           { name: comparison.breadcrumbLabel ?? comparison.title.replace(/ 2026:.*/, ""), path },
         ]}
       />

@@ -93,7 +93,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "Alternatives", path: "/alternatives/nordvpn" },
+          { name: "Alternatives", path: "/alternatives" },
           { name: target.name, path },
         ]}
       />

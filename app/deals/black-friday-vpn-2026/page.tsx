@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedCards } from "@/components/RelatedCards";
 import {
   PaidVisitLink,
   PlainOutboundLink,
@@ -29,6 +30,7 @@ import {
 } from "@/lib/content/black-friday-2026";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { relatedHubCard } from "@/lib/seo/related-cards";
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
@@ -55,6 +57,7 @@ export default function BlackFridayVpnHubPage() {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
+          { name: "Deals", path: "/deals" },
           { name: blackFridayHub.h1, path: blackFridayHub.path },
         ]}
       />
@@ -491,6 +494,8 @@ export default function BlackFridayVpnHubPage() {
           </li>
         </ul>
       </section>
+
+      <RelatedCards cards={[relatedHubCard("/deals")]} />
     </article>
   );
 }

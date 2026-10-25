@@ -14,9 +14,11 @@ import {
   PricingLink,
   type PasswordSource,
 } from "@/components/password-managers";
+import { RelatedCards } from "@/components/RelatedCards";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { PASSWORD_MANAGER_UPDATED, PASSWORD_MANAGER_UPDATED_LABEL, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { relatedHubCard } from "@/lib/seo/related-cards";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
@@ -81,7 +83,7 @@ export default function NordPassVsBitwardenPage() {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "Compare", path: "/compare/nordvpn-vs-protonvpn" },
+          { name: "Compare", path: "/compare" },
           { name: "NordPass vs Bitwarden", path },
         ]}
       />
@@ -275,16 +277,21 @@ export default function NordPassVsBitwardenPage() {
         <p className="text-sm text-[#64748b]">Based on published specs and pricing. Prices change often, so check the provider&apos;s site.</p>
       </section>
 
-      <RelatedLinks
-        links={[
-          { href: "/reviews/nordpass", label: "NordPass Review" },
-          { href: "/best-password-managers", label: "Best Password Managers" },
-          { href: "/compare/nordvpn-vs-protonvpn", label: "NordVPN vs Proton VPN" },
-          { href: "/reviews/nordvpn", label: "NordVPN Review" },
-          { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
-          { href: "/methodology", label: "How We Rank" },
-        ]}
-      />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks
+          links={[
+            { href: "/reviews/nordpass", label: "NordPass Review" },
+            { href: "/best-password-managers", label: "Best Password Managers" },
+            { href: "/compare/nordvpn-vs-protonvpn", label: "NordVPN vs Proton VPN" },
+            { href: "/reviews/nordvpn", label: "NordVPN Review" },
+            { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
+            { href: "/methodology", label: "How We Rank" },
+          ]}
+        />
+        <div className="min-w-0">
+          <RelatedCards cards={[relatedHubCard("/compare")]} />
+        </div>
+      </div>
 
       <FaqSection faqs={faqs} />
       <PasswordManagerSources sources={sources} />
