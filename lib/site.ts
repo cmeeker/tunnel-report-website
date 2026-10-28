@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Tunnel Report",
   shortName: "TunnelReport",
   url: "https://tunnelreport.com",
-  tagline: "Independent VPN Intelligence",
+  tagline: "VPN Comparison Guides",
   description:
-    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "Tunnel Report publishes VPN comparison guides based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   locale: "en_US",
   defaultAuthor: "Tunnel Report Staff",
   updatedDate: "October 15, 2026",

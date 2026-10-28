@@ -270,9 +270,8 @@ export default function BestVpnsPage() {
         <section className="prose-dark space-y-4">
           <h2 className="text-xl font-bold text-white">How We Built This Ranking</h2>
           <p>
-            Privacy scoring accounts for audit scope (not just whether an audit happened, but what it
-            actually tested), incident response transparency, jurisdiction risk profile, and how clearly
-            the provider communicates data retention practices to regular users.
+            Where a provider publishes an audit report, we note what the audit covered, per the
+            provider&apos;s own report.
           </p>
           <p>
             Pricing analysis looks beyond introductory offers. We track renewal rates, mandatory add-on
