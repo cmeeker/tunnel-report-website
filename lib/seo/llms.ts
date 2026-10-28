@@ -31,7 +31,6 @@ export function buildLlmsText({ full = false } = {}) {
     "Editorial Standards",
     "- Claim-level citations are preferred for statistics, pricing, security, and policy claims.",
     "- Every monetized page includes affiliate disclosure.",
-    "- Mullvad is covered despite no affiliate commission.",
   );
 
   return `${lines.join("\n")}\n`;

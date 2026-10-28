@@ -105,7 +105,6 @@ export default function AboutPage() {
 
       {/* Editorial independence */}
       <section id="editorial" className="prose-dark space-y-4 scroll-mt-28">
-        <h2 className="text-2xl font-bold text-white">If a page includes an affiliate link, the disclosure is visible on-page.</h2>
         <p>
           If a page includes an affiliate link, the disclosure is visible on-page. We use a
           banner format so readers always know when commercial links are present.

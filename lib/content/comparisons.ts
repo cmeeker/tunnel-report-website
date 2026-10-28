@@ -198,7 +198,7 @@ export const comparisons: Comparison[] = [
     rows: [
       { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left" },
       { category: "Device Limit", left: { value: "Unlimited devices", pct: 98 }, right: { value: "8 simultaneous devices", pct: 72 }, winner: "left" },
-      { category: "App Polish", left: { value: "Modern", pct: 85 }, right: { value: "Best-in-class simplicity", pct: 92 }, winner: "right" },
+      { category: "App Polish", left: { value: "Modern", pct: 85 }, right: { value: "See provider", pct: 92 }, winner: "right" },
       { category: "Streaming", left: { value: "See provider", pct: 84 }, right: { value: "See provider", pct: 91 }, winner: "right" },
       { category: "Privacy", left: { value: "See provider", pct: 82 }, right: { value: "See provider", pct: 88 }, winner: "right" },
     ],
@@ -241,9 +241,7 @@ export const comparisons: Comparison[] = [
     rightPickLabel: "Alternative pick",
     leftBadge: "",
     rightBadge: "",
-    faqs: [
-      { question: "Is Proton VPN safer than NordVPN?", answer: "Proton VPN has open-source clients." },
-    ],
+    faqs: [],
   },
   {
     slug: "expressvpn-vs-protonvpn",
@@ -257,7 +255,7 @@ export const comparisons: Comparison[] = [
       "ExpressVPN is built for people who want the VPN to disappear into the background. Proton VPN is built for people who want to understand and verify the privacy model. Both are good; they optimize for different readers.",
     dateModified: "2026-10-15",
     rows: [
-      { category: "App Simplicity", left: { value: "Best-in-class polish", pct: 92 }, right: { value: "Powerful but denser", pct: 78 }, winner: "left" },
+      { category: "App Simplicity", left: { value: "See provider", pct: 92 }, right: { value: "Powerful but denser", pct: 78 }, winner: "left" },
       { category: "Open Source", left: { value: "Limited", pct: 60 }, right: { value: "Open-source clients", pct: 95 }, winner: "right" },
       { category: "Streaming", left: { value: "See provider", pct: 91 }, right: { value: "See provider", pct: 70 }, winner: "left" },
       { category: "Pricing", left: { value: "Premium", pct: 55 }, right: { value: "Mid-tier + free", pct: 78 }, winner: "right" },

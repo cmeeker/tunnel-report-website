@@ -177,7 +177,7 @@ export const providers: Provider[] = [
         heading: "Privacy",
         paragraphs: [
           "Surfshark operates from the Netherlands. [Surfshark says](https://surfshark.com/blog/deloitte-nologs-policy-verified-again) its audit covers its no-logs claims and server infrastructure.",
-          "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
+          "Unlimited device connections — you are not rationing slots across phones, tablets, and laptops [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
         ],
       },
       {
@@ -201,7 +201,7 @@ export const providers: Provider[] = [
       {
         question: "How many devices can I use with Surfshark?",
         answer:
-            "Surfshark allows unlimited simultaneous connections on a single subscription — a genuine differentiator in this market [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
+            "Surfshark allows unlimited simultaneous connections on a single subscription [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
       },
     ],
     relatedCompareSlugs: ["surfshark-vs-nordvpn", "nordvpn-vs-purevpn"],
@@ -425,7 +425,7 @@ export const providers: Provider[] = [
     updatedDateLabel: "October 18, 2026",
     reviewTitle: "Mullvad VPN Review 2026: The Privacy Purist's Choice",
     reviewDescription:
-      "Mullvad VPN review — anonymous payments, flat pricing, open-source clients, and why we recommend it despite earning zero affiliate commission.",
+      "Mullvad VPN review — anonymous payments, flat pricing, open-source clients.",
     reviewSummary:
       "Mullvad is the anti-marketing VPN. No promotional pricing, no email signup, anonymous account numbers. We earn nothing recommending it — which is exactly why we include it.",
     jurisdiction: "Sweden",
@@ -460,11 +460,6 @@ export const providers: Provider[] = [
       alternatives: "Proton VPN for Swiss jurisdiction with a free tier; NordVPN for our default pick consumer experience.",
     },
     faqs: [
-      {
-        question: "Why does Tunnel Report recommend Mullvad if you earn no commission?",
-        answer:
-          "Mullvad's anonymity model is genuinely best-in-class.",
-      },
       {
         question: "How do I pay for Mullvad anonymously?",
         answer:
