@@ -18,18 +18,18 @@ import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Independent VPN Reviews & 2026 Rankings | Tunnel Report",
+  title: "VPN Comparison Guides & 2026 Picks | Tunnel Report",
   description:
-    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "Tunnel Report publishes VPN comparison guides based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   path: "/",
   type: "website",
 });
 
 const homepageFaqs = [
   {
-    question: "How does Tunnel Report score VPN services?",
+    question: "How does Tunnel Report choose its VPN picks?",
     answer:
-      "Scores are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time. Each factor is weighted the same way for every provider we cover.",
+      "Our picks are based on published specs, pricing and third-party reports. We did not run our own speed or unblocking tests. We may earn a commission if you sign up through some links on this site.",
   },
   {
     question: "Do affiliate commissions affect your rankings?",
@@ -76,7 +76,7 @@ export default function Home() {
       >
         <div className="mx-auto w-full max-w-3xl text-center">
           <div className="space-y-5 fade-in-up">
-            <div className="badge badge-teal mx-auto">Independent VPN Coverage</div>
+            <div className="badge badge-teal mx-auto">VPN Comparison Guides</div>
 
             {/* Hero graphic */}
             <div className="relative mx-auto h-36 w-full max-w-2xl sm:h-44 md:h-48">

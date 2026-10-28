@@ -81,7 +81,7 @@ export function buildOgImage({ title, subtitle, badge }: OgImageOptions) {
           <div style={{ fontSize: 24, fontWeight: 700, color: "#00d4aa" }}>
             Tunnel Report
           </div>
-          <div style={{ fontSize: 20, color: "#64748b" }}>Independent VPN Intelligence</div>
+          <div style={{ fontSize: 20, color: "#64748b" }}>VPN Comparison Guides</div>
         </div>
       </div>
     ),

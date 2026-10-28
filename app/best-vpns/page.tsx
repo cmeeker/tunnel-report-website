@@ -26,7 +26,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports",
   description:
-    "We compared VPN providers based on published specs, pricing and third-party reports.",
+    "Comparison of VPN services based on published specs, pricing and third-party reports.",
   path: "/best-vpns",
 });
 

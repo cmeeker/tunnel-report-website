@@ -23,7 +23,7 @@ export default function NotFound() {
       </h1>
       <p className="mx-auto mt-5 max-w-md text-base leading-relaxed text-[#64748b]">
         The page you&apos;re looking for doesn&apos;t exist or has moved. Head back to our
-        independent VPN rankings.
+        VPN comparison guides.
       </p>
 
       <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

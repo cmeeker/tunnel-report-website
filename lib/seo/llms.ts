@@ -9,9 +9,10 @@ export function buildLlmsText({ full = false } = {}) {
     `Tagline: ${siteConfig.tagline}`,
     "",
     "Purpose",
-    "- Tunnel Report is an independent publication focused on VPN rankings, privacy analysis, and comparison reporting.",
+    "- Tunnel Report is a publication that compares VPNs based on published specs, pricing and third-party reports.",
     "- Rankings are based on published specs, privacy policy analysis, jurisdiction review, and pricing transparency.",
     "- Affiliate relationships are disclosed and do not determine scores or editorial conclusions.",
+    "Some links are affiliate links; we may earn a commission.",
     "",
     "Primary Routes",
   ];
@@ -22,7 +23,7 @@ export function buildLlmsText({ full = false } = {}) {
       lines.push(`  Summary: ${route.description}`);
       lines.push(`  Group: ${route.group}`);
       lines.push(`  Last updated: ${route.lastModified}`);
-      lines.push(`  Primary claim: Independent ${route.group} coverage with visible methodology and editorial disclosure.`);
+      lines.push("  Primary claim: VPN comparison guides based on published specs, pricing and third-party reports.");
     }
   }
 

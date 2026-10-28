@@ -38,7 +38,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "VPNs for Streaming in 2026: What to Compare",
     shortTitle: "Streaming",
     description:
-      "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on geo-unblocking consistency, and app reliability.",
+      "Comparison of streaming VPN services based on published specs, pricing and third-party reports.",
     schemaDescription:
       "Comparison of streaming VPN services based on published specs, pricing and third-party reports.",
     intro:
@@ -176,7 +176,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best Cheap VPN in 2026",
     shortTitle: "Budget",
     description:
-      "The best cheap VPNs based on full lifecycle cost, renewal pricing, device limits, privacy tradeoffs, and speed-per-dollar.",
+      "Comparison of budget VPN services based on published specs, pricing and third-party reports.",
     schemaDescription:
       "Comparison of budget VPN services based on published specs, pricing and third-party reports.",
     intro:
@@ -225,7 +225,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Gaming in 2026",
     shortTitle: "Gaming",
     description:
-      "Gaming VPN recommendations based on latency, packet stability, WireGuard support, DDoS protection claims, and regional routing.",
+      "Comparison of gaming VPN services based on published specs, pricing and third-party reports.",
     schemaDescription:
       "Comparison of gaming VPN services based on published specs, pricing and third-party reports.",
     intro:
@@ -265,7 +265,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Remote Work in 2026",
     shortTitle: "Remote Work",
     description:
-      "Remote-work VPN picks based on split tunneling, kill switch reliability, network transitions, video-call stability, and malware blocking.",
+      "Comparison of work VPN services based on published specs, pricing and third-party reports.",
     schemaDescription:
       "Comparison of work VPN services based on published specs, pricing and third-party reports.",
     intro:
