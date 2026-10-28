@@ -220,7 +220,7 @@ export default function Home() {
               {homepageComparison.map((vpn, i) => (
                 <tr key={vpn.name}>
                   <td className="font-semibold text-white">
-                    {i === 0 && <span className="badge badge-teal mr-2 text-[0.65rem]">Top Pick</span>}
+                    {i === 0 && <span className="badge badge-teal mr-2 text-[0.65rem]">Our default pick</span>}
                     <Link
                       href={`/reviews/${vpn.slug}`}
                       className="text-white transition hover:text-[#00d4aa]"

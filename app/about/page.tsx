@@ -84,7 +84,7 @@ export default function AboutPage() {
             <strong> incident response history</strong> (how the provider handled past security events).
           </p>
           <p>
-            We assign higher weight to verifiable actions than marketing claims. A provider that
+            A provider that
             completed a narrow-scope audit but responded to a real incident appears earlier in this list
             than one that trumpets a broad audit without demonstrable operational security improvement.
           </p>

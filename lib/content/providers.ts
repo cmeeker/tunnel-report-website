@@ -90,7 +90,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "Our complete NordVPN review with privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
     reviewSummary:
-      "NordVPN ranks first in our 2026 rankings, based on published specs and pricing.",
+      "NordVPN is listed first, based on published specs and pricing.",
     jurisdiction: "Panama",
     protocolNote: "NordLynx (WireGuard implementation)",
     speedMetrics: [],
@@ -128,7 +128,7 @@ export const providers: Provider[] = [
       {
         question: "Is NordVPN still worth buying in 2026?",
         answer:
-          "For most users who want a single VPN that handles streaming, remote work, and daily browsing without constant tuning, yes. NordVPN ranks first in our 2026 rankings, based on published specs and pricing. The main caveat is renewal pricing — check the year-two rate before committing.",
+          "For most users who want a single VPN that handles streaming, remote work, and daily browsing without constant tuning, yes. NordVPN is listed first, based on published specs and pricing. The main caveat is renewal pricing — check the year-two rate before committing.",
       },
       {
         question: "Does NordVPN actually keep no logs?",
@@ -165,7 +165,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "Surfshark review with privacy audit analysis and honest pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
     reviewSummary:
-      "Surfshark is the strongest value play in our 2026 rankings.",
+      "Surfshark is the strongest value play.",
     jurisdiction: "Netherlands",
     protocolNote: "WireGuard and OpenVPN",
     speedMetrics: [],
@@ -234,7 +234,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "ExpressVPN review covering TrustedServer architecture, streaming reliability, and whether the premium price tag is justified in 2026.",
     reviewSummary:
-      "ExpressVPN trades on simplicity and reliability. Its polished apps keep it in our top five.",
+      "ExpressVPN trades on simplicity and reliability.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "Lightway and OpenVPN",
     speedMetrics: [],
@@ -249,7 +249,7 @@ export const providers: Provider[] = [
       {
         heading: "Pricing Reality Check",
         paragraphs: [
-          "ExpressVPN is priced as a premium option in our top five. See current pricing [expressvpn.com/order](https://www.expressvpn.com/order). You are paying for polish and support quality.",
+          "ExpressVPN is priced as a premium option. See current pricing [expressvpn.com/order](https://www.expressvpn.com/order). You are paying for polish and support quality.",
           "If budget is your primary constraint, Surfshark or PureVPN cost less. If you value a frictionless setup experience, ExpressVPN's premium may be justified.",
         ],
       },
@@ -282,7 +282,7 @@ export const providers: Provider[] = [
     speedMbps: 650,
     pricePerMonth: "See current pricing",
     privacyBlurb: "Swiss jurisdiction, open-source clients",
-    quickVerdict: "Best for privacy-focused users.",
+    quickVerdict: "Our privacy-first pick",
     pros: [
       "Strong public privacy mission and open-source posture",
       "Well-documented security practices",
@@ -300,7 +300,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "Proton VPN review from a policy and security perspective — Swiss jurisdiction, open-source clients, free tier limits, and who should choose Proton over mainstream alternatives.",
     reviewSummary:
-      "Open-source clients, Swiss jurisdiction, and a credible free tier make it the best choice for privacy-first users.",
+      "Open-source clients, Swiss jurisdiction, and a credible free tier make it a good option for privacy-first users, based on its published policies.",
     jurisdiction: "Switzerland",
     protocolNote: "WireGuard and OpenVPN (open-source clients)",
     speedMetrics: [],
@@ -373,7 +373,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "PureVPN review on whether the aggressive introductory pricing is worth the tradeoffs in 2026.",
     reviewSummary:
-      "PureVPN is the budget entry in our top five. Aggressive pricing and a large server network appeal to price-first buyers, so it ranks below our top picks.",
+      "PureVPN is the budget entry. Aggressive pricing and a large server network appeal to price-first buyers.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "WireGuard and OpenVPN",
     speedMetrics: [],
@@ -387,7 +387,7 @@ export const providers: Provider[] = [
     ],
     whoShouldBuy: {
       buy: "Buy PureVPN if first-year price is your dominant buying criteria and you mostly use domestic connections for browsing and light streaming.",
-      skip: "Skip if you'd rather go with our top pick, NordVPN.",
+      skip: "Skip if you'd rather go with our default pick, NordVPN.",
       alternatives: "Surfshark for better value with stronger consistency; NordVPN for best overall.",
     },
     faqs: [

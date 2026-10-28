@@ -58,7 +58,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
   const cityFaqs = [
     {
       question: `What is the best VPN for ${guide.city} residents?`,
-      answer: `NordVPN is our top pick for ${guide.city} based on its published specs, including its WireGuard-based NordLynx protocol and US servers. ${nordAuditsClaim} Surfshark is our budget pick, with unlimited devices on every plan [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. ${guide.recommendation}`,
+      answer: `NordVPN is our default pick for ${guide.city} based on its published specs, including its WireGuard-based NordLynx protocol and US servers. ${nordAuditsClaim} Surfshark is our budget pick, with unlimited devices on every plan [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. ${guide.recommendation}`,
     },
     {
       question: `Does VPN performance vary by neighborhood in ${guide.city}?`,
@@ -102,8 +102,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
           {guide.populationContext} This guide maps local ISP conditions, neighborhood-level
-          connectivity differences, and privacy considerations specific to {guide.city} residents
-          against our provider test data.
+          connectivity differences, and privacy considerations specific to {guide.city} residents.
         </p>
         <AuthorByline
           date={guide.slug === "austin" || guide.slug === "new-york" ? "October 18, 2026" : "October 17, 2026"}

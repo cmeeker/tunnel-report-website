@@ -54,7 +54,7 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs PureVPN: a straight-talking 2026 comparison of specs, privacy policies, pricing and features.",
     intro:
-      "These two providers sit at opposite ends of the value spectrum in our rankings. PureVPN undercuts on price. The question is whether the savings justify what you give up — and for some readers, the honest answer is yes.",
+      "These two providers sit at opposite ends of the value spectrum. PureVPN undercuts on price. The question is whether the savings justify what you give up — and for some readers, the honest answer is yes.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -88,7 +88,7 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality — with a clear winner for most buyers in 2026.",
     intro:
-      "Both NordVPN and ExpressVPN target the premium consumer segment. NordVPN wins our rankings on value; ExpressVPN wins on app polish and support. This comparison breaks down where each actually delivers.",
+      "Both NordVPN and ExpressVPN target the premium consumer segment. NordVPN wins on value; ExpressVPN wins on app polish and support. This comparison breaks down where each actually delivers.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -96,14 +96,14 @@ export const comparisons: Comparison[] = [
       { category: "Privacy Audits", left: { value: "Frequent infrastructure audits", pct: 92 }, right: { value: "TrustedServer RAM-only audits", pct: 88 }, winner: "left" },
       { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 78 }, right: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left", note: "Different plan lengths; compare the totals." },
       { category: "App Experience", left: { value: "Feature-rich, some complexity", pct: 85 }, right: { value: "Polished, minimal friction", pct: 92 }, winner: "right" },
-      { category: "Streaming Reliability", left: { value: "Consistent major platforms", pct: 90 }, right: { value: "", pct: 91 }, winner: "draw" },
+      { category: "Streaming Reliability", left: { value: "See provider", pct: 90 }, right: { value: "See provider", pct: 91 }, winner: "draw" },
     ],
     verdictParagraphs: [
-      "Choose NordVPN if a lower checkout price and its NordLynx protocol matter most. It ranks first in our 2026 rankings, based on published specs and pricing.",
+      "Choose NordVPN if a lower checkout price and its NordLynx protocol matter most. It is listed first, based on published specs and pricing.",
       "Choose ExpressVPN if you want the smoothest onboarding experience and are willing to pay a premium for support quality and app polish.",
       "For most readers, NordVPN is the better default. ExpressVPN justifies its premium only if you specifically value frictionless setup.",
     ],
-    leftPickLabel: "Best Overall",
+    leftPickLabel: "Our default pick",
     rightPickLabel: "Best UX",
     leftBadge: "NordVPN wins",
     rightBadge: "ExpressVPN wins",
@@ -138,10 +138,10 @@ export const comparisons: Comparison[] = [
     verdictParagraphs: [
       "Choose Surfshark if you need unlimited device coverage, want the lowest entry price, and primarily use domestic connections. The value proposition for families is genuinely strong.",
       "Choose NordVPN if you want its NordLynx protocol and a large server network. Choose Surfshark if device count and first-term price matter more.",
-      "For households with many devices on a budget, Surfshark wins. For users who want the best overall VPN without compromise, NordVPN remains our top pick.",
+      "For households with many devices on a budget, Surfshark wins. For users who want the best overall VPN without compromise, NordVPN remains our default pick.",
     ],
     leftPickLabel: "Budget pick",
-    rightPickLabel: "Best Overall",
+    rightPickLabel: "Our default pick",
     leftBadge: "Surfshark wins",
     rightBadge: "NordVPN wins",
     faqs: [
@@ -252,7 +252,7 @@ export const comparisons: Comparison[] = [
       "Choose Proton VPN if you want Swiss jurisdiction and the Proton ecosystem.",
       "NordVPN wins for most buyers. Proton VPN wins for readers who are consciously optimizing for published information over convenience.",
     ],
-    leftPickLabel: "Best Overall",
+    leftPickLabel: "Our default pick",
     rightPickLabel: "Alternative pick",
     leftBadge: "NordVPN wins",
     rightBadge: "Proton VPN wins",

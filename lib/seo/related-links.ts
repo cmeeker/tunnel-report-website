@@ -57,7 +57,7 @@ export function getCompareRelatedLinks(slug: string): RelatedLink[] {
   return [
     { href: `/reviews/${comparison.leftSlug}`, label: `Full ${providerMap[comparison.leftSlug]?.name ?? comparison.leftSlug} Review` },
     { href: `/reviews/${comparison.rightSlug}`, label: `Full ${providerMap[comparison.rightSlug]?.name ?? comparison.rightSlug} Review` },
-    { href: "/best-vpns", label: "Best VPN Rankings 2026" },
+    { href: "/best-vpns", label: "Best VPN Picks 2026" },
     { href: "/best-vpn-for/budget", label: "Best Cheap VPN" },
     { href: "/methodology", label: "How We Rank" },
     ...comparisons
@@ -114,7 +114,7 @@ export function getUseCaseRelatedLinks(slug: UseCaseSlug): RelatedLink[] {
 
   return [
     ...(slug === "budget" ? [blackFridayPricesLink] : []),
-    { href: "/best-vpns", label: "Best VPN Rankings 2026" },
+    { href: "/best-vpns", label: "Best VPN Picks 2026" },
     ...(pick ? [{ href: `/reviews/${pick.slug}`, label: `${pick.name} Full Review` }] : []),
     { href: "/compare/surfshark-vs-nordvpn", label: "Surfshark vs NordVPN" },
     { href: "/compare/nordvpn-vs-expressvpn", label: "NordVPN vs ExpressVPN" },
@@ -134,7 +134,7 @@ export function getAlternativesRelatedLinks(slug: string): RelatedLink[] {
     .map((item) => ({ href: `/reviews/${item.slug}`, label: `${item.name} Review` }));
 
   return [
-    { href: "/best-vpns", label: "Best VPN Rankings 2026" },
+    { href: "/best-vpns", label: "Best VPN Picks 2026" },
     ...(provider ? [{ href: `/reviews/${provider.slug}`, label: `${provider.name} Review` }] : []),
     ...similarReviews,
     { href: "/best-vpn-for/budget", label: "Best Cheap VPN" },
@@ -147,7 +147,7 @@ export function getGuideRelatedLinks(slug: string): RelatedLink[] {
   if (!guide) return getBestVpnsRelatedLinks();
 
   return [
-    { href: "/best-vpns", label: "Best VPN Rankings 2026" },
+    { href: "/best-vpns", label: "Best VPN Picks 2026" },
     ...guide.relatedReviewSlugs
       .filter((providerSlug) => providerMap[providerSlug])
       .slice(0, 3)

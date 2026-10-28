@@ -181,11 +181,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">The honest recommendation</h2>
-        <p>
-          If {target.name} solves your main use case and you are comfortable with its limitations, you
-          do not need to switch just because another provider ranks higher in one category. VPNs are
-          tools, not collectibles.
-        </p>
+        <p>VPNs are tools, not collectibles.</p>
         <p>
           The strongest alternative for most readers is usually the provider that fixes the specific
           thing {target.name} does not do well enough for your situation: lower renewal cost, stronger

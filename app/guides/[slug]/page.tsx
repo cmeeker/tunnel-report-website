@@ -126,7 +126,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <Link href="/best-vpns" className="text-sm font-medium text-[#00d4aa] hover:underline">
-            Best VPN rankings
+            Best VPN Picks 2026
           </Link>
           <Link href="/methodology" className="text-sm font-medium text-[#00d4aa] hover:underline">
             Full methodology

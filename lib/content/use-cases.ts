@@ -57,7 +57,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "What actually matters for streaming VPNs",
         paragraphs: [
-          "We weigh streaming picks by server locations, Smart TV and router support, simultaneous connections and refund window, based on published specs. NordVPN is our top pick because it covers all four, not because it wins every one.",
+          "NordVPN is our default pick because it covers all four, not because it wins every one.",
         ],
       },
       {
@@ -88,7 +88,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     description:
       "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, and payment anonymity.",
     intro:
-      "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what a published audit covered, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
+      "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We look at controls that providers publish and third parties can verify.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -149,7 +149,6 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "The kill switch is non-negotiable",
         paragraphs: [
           "For torrenting, a kill switch is not a nice-to-have checkbox. If the VPN drops and your torrent client keeps running on your real IP, the VPN failed the use case.",
-          "We weight kill switch and leak-protection features more heavily here than streaming features or app design.",
         ],
       },
       {
@@ -176,7 +175,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     schemaDescription:
       "Comparison of budget VPN services based on published specs, pricing and third-party reports.",
     intro:
-      "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device limits, and whether privacy features are included at the discounted tier.",
+      "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math.",
     datePublished: "2026-10-17",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -198,7 +197,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Where PureVPN fits",
         paragraphs: [
-          "PureVPN is often the lowest sticker price in our top five. That makes it appealing for light domestic browsing, but Surfshark stays our default budget pick.",
+          "PureVPN is often the lowest sticker price. That makes it appealing for light domestic browsing, but Surfshark stays our default budget pick.",
           "If budget is your only constraint and you understand the tradeoffs, PureVPN can work. If you want the best cheap VPN for a household, Surfshark is the cleaner pick.",
         ],
       },
@@ -279,7 +278,6 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Remote work needs reliability",
         paragraphs: [
-          "For work, we weight split tunneling, kill switch and platform support.",
           "NordVPN is the best default because it offers mature security controls.",
         ],
       },
