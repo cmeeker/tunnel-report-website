@@ -11,9 +11,11 @@ import { HeroGraphic } from "@/components/HeroGraphic";
 import { PlainInternalLinkList } from "@/components/PlainInternalLinkList";
 import { SourcesList } from "@/components/SourcesList";
 import { comparisonMap } from "@/lib/content/comparisons";
+import { providerMap } from "@/lib/content/providers";
 import { latestPriceChecks } from "@/lib/content/latest-price-checks";
 import { citationSources } from "@/lib/content/facts";
 import { homepageComparison } from "@/lib/content/vpn-metrics";
+import { PICK_LABELS } from "@/app/best-vpns/page";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -34,7 +36,7 @@ const homepageFaqs = [
   {
     question: "Do affiliate commissions affect your rankings?",
     answer:
-      "No. Editorial scoring is walled off from commercial relationships. We disclose affiliate links on every page where they appear, and commission potential has never changed a ranking position. Our methodology is published in full.",
+      "We may earn a commission if you sign up through some links on this site, at no extra cost to you. Our picks are based on published specs, pricing and third-party reports.",
   },
   {
     question: "How often are reviews updated?",
@@ -44,7 +46,7 @@ const homepageFaqs = [
   {
     question: "What should privacy-focused readers look for first?",
     answer:
-      "Independent audit scope and frequency, transparent incident response history, kill switch reliability, and clear data-retention language. A low price means nothing if the provider cannot demonstrate these fundamentals.",
+      "Kill switch reliability and clear data-retention language. A low price means nothing if the provider cannot demonstrate these fundamentals.",
   },
 ];
 
@@ -154,7 +156,7 @@ export default function Home() {
         <div>
           <h2 className="text-2xl font-bold text-white">Popular VPN Comparisons</h2>
           <p className="mt-1 text-sm text-[#94a3b8]">
-            Head-to-head breakdowns across speed, privacy, pricing, UX, jurisdiction, and support.
+            Head-to-head breakdowns across privacy, pricing, UX, jurisdiction, and support.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2">
@@ -174,7 +176,7 @@ export default function Home() {
                       {label}
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-[#94a3b8]">
-                      {comparison.description}
+                      {`Comparison of ${providerMap[comparison.leftSlug]?.name ?? "VPN"} and ${providerMap[comparison.rightSlug]?.name ?? "VPN"} based on published specs, pricing and third-party reports.`}
                     </p>
                   </div>
                   <span className="shrink-0 text-sm font-semibold text-[#00d4aa] opacity-80 transition group-hover:opacity-100">
@@ -210,7 +212,7 @@ export default function Home() {
                 <th>Provider</th>
                 <th>Privacy Profile</th>
                 <th>Price (intro vs renewal)</th>
-                <th>Score</th>
+                <th>Best for</th>
                 <th></th>
               </tr>
             </thead>
@@ -228,14 +230,7 @@ export default function Home() {
                   </td>
                   <td className="max-w-[200px]">{vpn.privacy}</td>
                   <td className="font-semibold text-white">{vpn.pricePerMonth}</td>
-                  <td>
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-white">{vpn.score.toFixed(1)}</span>
-                      <div className="score-bar w-16">
-                        <div className="score-bar-fill" style={{ width: `${(vpn.score / 5) * 100}%` }} />
-                      </div>
-                    </div>
-                  </td>
+                  <td>{PICK_LABELS[vpn.slug] ?? ""}</td>
                   <td>
                     {vpn.isAffiliate ? (
                       <AffiliateCTA href={vpn.href} partner={vpn.partner} label={vpn.ctaLabel ?? "Visit"} />
@@ -284,7 +279,7 @@ export default function Home() {
             {
               title: "How Local ISP Conditions Change Your VPN Experience",
               excerpt:
-                "New FCC labeling requirements give consumers standardized latency and fee data. This guide explains what the labels show for each metro area.",
+                "New FCC labeling requirements give consumers standardized fee data. This guide explains what the labels show for each metro area.",
               href: "/vpn/los-angeles",
               image: "/images/article-city.svg",
               badge: "Field Report",

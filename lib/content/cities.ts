@@ -76,7 +76,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "Sports drive VPN usage in Chicago more than almost any other city. Between the Bears, Bulls, Blackhawks, Cubs, and White Sox — all with various regional broadcast restrictions and league pass complexities — location flexibility through VPN is practically a household utility. Streaming stability during evening hours when the entire metro is online matters enormously.",
     recommendation:
-      "Choose a provider with servers in or near Chicago and a WireGuard-based protocol option. Chicago's ISP landscape is better than average — gigabit fiber from AT&T and Xfinity is widely available. Prioritize evening stability over peak speed claims.",
+      "Choose a provider with servers in or near Chicago and a WireGuard-based protocol option. Chicago's ISP landscape is better than average — gigabit fiber from AT&T and Xfinity is widely available. Prioritize evening stability.",
     neighborhoodNote:
       "Fiber availability is strong in the Loop, River North, and Lincoln Park, but deteriorates in some South Side and West Side neighborhoods where cable remains the primary infrastructure. If you are in an AT&T Fiber or Xfinity gigabit area, expect a smooth VPN experience. Areas still on older cable plans have less headroom, so test your speed with the VPN on.",
     populationContext:
@@ -232,7 +232,7 @@ export const cityGuides: CityGuide[] = [
       { name: "Ting", advertised: "1 Gbps", typical: "900 Mbps" },
     ],
     privacyConcern:
-      "Denver combines remote work, tourism, universities, and a heavy short-term rental market. Users often connect from cafes, ski-town lodges, hotels, airports, and apartment networks with very different security standards. VPN stability across changing networks matters more than peak speed.",
+      "Denver combines remote work, tourism, universities, and a heavy short-term rental market. Users often connect from cafes, ski-town lodges, hotels, airports, and apartment networks with very different security standards. VPN stability across changing networks matters.",
     streamingNeeds:
       "Nuggets, Avalanche, Rockies, and regional sports access drive blackout-related VPN demand, while mountain travel creates inconsistent network conditions. A VPN needs to handle lower-quality Wi-Fi without constant reconnect loops.",
     recommendation:
@@ -242,7 +242,7 @@ export const cityGuides: CityGuide[] = [
     populationContext:
       "The Denver metro serves roughly 3 million residents and a large tourism population moving across uneven network environments.",
     localColor:
-      "Denver is where a VPN has to survive a video call from a condo, a coffee shop, and a mountain lodge in the same week. Peak speed matters less than not falling over.",
+      "Denver is where a VPN has to survive a video call from a condo, a coffee shop, and a mountain lodge in the same week.",
   },
 ];
 

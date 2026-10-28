@@ -65,7 +65,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
     },
     {
       question: `Which ${guide.city} ISP works best with a VPN?`,
-      answer: `Every VPN adds some overhead, so a faster plan leaves more headroom. Run a speed test with the VPN on and off at the times you usually go online.`,
+      answer: `Every VPN adds some overhead. Run a speed test with the VPN on and off at the times you usually go online.`,
     },
   ];
 

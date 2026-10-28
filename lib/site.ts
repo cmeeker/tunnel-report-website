@@ -86,7 +86,7 @@ export const primaryNav: PrimaryNavItem[] = [
       {
         heading: "Provider Reviews",
         items: [
-          { label: "NordVPN", href: "/reviews/nordvpn", description: "Full review + speed data" },
+          { label: "NordVPN", href: "/reviews/nordvpn", description: "Full review" },
           { label: "Surfshark", href: "/reviews/surfshark", description: "Unlimited devices, budget value" },
           { label: "ExpressVPN", href: "/reviews/expressvpn", description: "Premium apps and streaming" },
           { label: "Proton VPN", href: "/reviews/protonvpn", description: "Open-source, Swiss privacy" },

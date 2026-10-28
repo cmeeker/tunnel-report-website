@@ -19,12 +19,12 @@ const aboutFaqs = [
   {
     question: "How is Tunnel Report funded?",
     answer:
-      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. Affiliate potential does not influence rankings, scores, or editorial conclusions.",
+      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. We may earn a commission if you sign up through some links on this site.",
   },
   {
     question: "Can VPN companies pay for better reviews?",
     answer:
-      "No. We do not accept payment for review outcomes. Our methodology is applied consistently across all providers regardless of commercial relationship status.",
+      "We may earn a commission if you sign up through some links on this site.",
   },
   {
     question: "How do I report an error in your coverage?",
@@ -60,7 +60,7 @@ export default function AboutPage() {
           About Tunnel Report
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          Tunnel Report is an independent VPN review and privacy publication. We exist because
+          Tunnel Report is a VPN comparison and privacy publication based on published specs, pricing and third-party reports. We exist because
           the overlap between affiliate-funded content and genuinely useful security guidance is
           smaller than it should be, and readers who care about measurable protection deserve a
           publication that operates at a higher standard.
@@ -78,15 +78,15 @@ export default function AboutPage() {
           <h3 className="text-lg font-bold text-white">Privacy & Security Analysis</h3>
           <p>
             Privacy evaluation covers four dimensions: <strong>policy language</strong> (what the provider
-            commits to in writing), <strong>audit scope</strong> (what independent auditors actually
-            tested, not just whether an audit happened), <strong>jurisdiction risk</strong> (data
+            commits to in writing), <strong>audit scope</strong> (what a published audit covered,
+            not just whether an audit happened), <strong>jurisdiction risk</strong> (data
             retention laws, intelligence-sharing agreements, and compulsion mechanisms), and
             <strong> incident response history</strong> (how the provider handled past security events).
           </p>
           <p>
             We assign higher weight to verifiable actions than marketing claims. A provider that
-            completed a narrow-scope audit but responded transparently to a real incident scores higher
-            than one that trumpets a broad audit without demonstrable operational security improvement.
+            completed a narrow-scope audit but responded to a real incident is weighted above
+            one that trumpets a broad audit without demonstrable operational security improvement.
           </p>
         </div>
 
@@ -111,19 +111,13 @@ export default function AboutPage() {
 
       {/* Editorial independence */}
       <section id="editorial" className="prose-dark space-y-4 scroll-mt-28">
-        <h2 className="text-2xl font-bold text-white">How Editorial Independence Works</h2>
+        <h2 className="text-2xl font-bold text-white">If a page includes an affiliate link, the disclosure is visible on-page.</h2>
         <p>
-          Commercial relationships do not influence editorial output. This is not a platitude — it is
-          an operational structure. Review conclusions are drafted by the assigned editor and reviewed
-          by at least one other team member before publication. The commercial team does not see review
-          content before it goes live, does not have edit access to published pages, and does not
-          participate in scoring discussions.
+          If a page includes an affiliate link, the disclosure is visible on-page. We use a consistent
+          banner format so readers always know when commercial links are present.
         </p>
         <p id="disclosure" className="scroll-mt-28">
-          If a page includes an affiliate link, the disclosure is visible on-page. We use a consistent
-          banner format so readers always know when commercial links are present. Affiliate potential
-          does not guarantee positive coverage — and in several cases, providers with high commission
-          rates receive lower scores than providers with modest or no affiliate programs.
+          We may earn a commission if you sign up through some links on this site.
         </p>
       </section>
 

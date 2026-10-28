@@ -18,7 +18,7 @@ export const latestPriceChecks: PriceCheckLink[] = [
   },
   {
     href: "/reviews/nordvpn",
-    label: "NordVPN Review 2026: Speed, Privacy, and Pricing Breakdown",
+    label: "NordVPN Review 2026: Overview, Privacy, and Pricing Breakdown",
   },
   {
     href: "/compare/nordvpn-vs-protonvpn",

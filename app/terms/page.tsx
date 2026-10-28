@@ -71,9 +71,8 @@ export default function TermsPage() {
         <h2 className="text-2xl font-bold text-white">2. Affiliate links</h2>
         <p>
           Some links on the Site are affiliate links. If you click one and buy something, we may earn
-          a commission at no extra cost to you. This does not change the price you pay. We aim to keep
-          our rankings independent of commissions; see our methodology and editorial standards on the
-          Site.
+          a commission at no extra cost to you. This does not change the price you pay. We may earn a
+          commission if you sign up through some links on this site.
         </p>
       </section>
 

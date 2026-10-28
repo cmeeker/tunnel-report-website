@@ -35,7 +35,7 @@ const staticRoutes: SiteRoute[] = [
   {
     path: "/best-vpns",
     title: "Best VPNs of 2026",
-    description: "Independent 2026 VPN rankings from Tunnel Report.",
+    description: "2026 VPN comparison guides based on published specs, pricing and third-party reports.",
     lastModified: "2026-10-18",
     priority: 0.95,
     changeFrequency: "weekly",
@@ -54,7 +54,7 @@ const staticRoutes: SiteRoute[] = [
   {
     path: "/methodology",
     title: "Tunnel Report Methodology",
-    description: "How Tunnel Report tests and scores VPNs.",
+    description: "2026 VPN comparison guides based on published specs, pricing and third-party reports.",
     lastModified: CONTENT_UPDATED_AT,
     priority: 0.72,
     changeFrequency: "monthly",
@@ -172,7 +172,7 @@ export function getSiteRoutes(): SiteRoute[] {
       return {
         path: `/reviews/${slug}`,
         title: provider.reviewTitle,
-        description: provider.reviewDescription,
+        description: `${provider.name} overview based on published specs, pricing and third-party reports.`,
         lastModified: sitemapDate(`/reviews/${slug}`, provider.dateModified),
         priority: 0.9,
         changeFrequency: "weekly" as const,
@@ -194,7 +194,7 @@ export function getSiteRoutes(): SiteRoute[] {
       return {
         path: `/alternatives/${slug}`,
         title: `Best ${provider.name} Alternatives in 2026`,
-        description: `Independent alternatives to ${provider.name}.`,
+        description: "2026 VPN comparison guides based on published specs, pricing and third-party reports.",
         lastModified: "2026-10-18",
         priority: 0.78,
         changeFrequency: "weekly" as const,
@@ -206,7 +206,7 @@ export function getSiteRoutes(): SiteRoute[] {
       return {
         path: `/compare/${slug}`,
         title: comparison.title,
-        description: comparison.description,
+        description: `Comparison of ${providers.find((item) => item.slug === comparison.leftSlug)?.name ?? "VPN"} and ${providers.find((item) => item.slug === comparison.rightSlug)?.name ?? "VPN"} based on published specs, pricing and third-party reports.`,
         lastModified: sitemapDate(`/compare/${slug}`, comparison.dateModified),
         priority: 0.85,
         changeFrequency: "weekly" as const,

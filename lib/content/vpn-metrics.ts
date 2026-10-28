@@ -127,7 +127,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "privacy",
     title: "Best VPN for Privacy in 2026",
     description:
-      "Privacy-first buyers should prioritize audit scope, jurisdiction, open-source clients, and payment anonymity over raw speed.",
+      "Privacy-first buyers should prioritize audit scope, jurisdiction, open-source clients, and payment anonymity.",
     pickSlug: "mullvad",
     pickReason: "Anonymous account numbers, cash/crypto payments, and zero affiliate marketing funnel.",
   },

@@ -13,7 +13,9 @@ export default async function Image({ params }: Props) {
 
   return buildOgImage({
     title: guide?.title ?? "Best VPN by Use Case",
-    subtitle: guide?.description.slice(0, 125) ?? "Independent VPN recommendations by use case",
+    subtitle:
+      guide?.description.slice(0, 125) ??
+      "Comparison of VPN services based on published specs, pricing and third-party reports.",
     badge: "Use Case Guide · 2026",
   });
 }

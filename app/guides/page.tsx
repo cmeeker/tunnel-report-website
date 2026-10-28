@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "VPN Guides: Protocols, Privacy, Pricing, and Testing",
   description:
-    "Tunnel Report's evergreen VPN guides explain protocols, no-logs claims, jurisdiction, speed testing, and renewal pricing.",
+    "VPN guides based on published specs, pricing and third-party reports.",
   path: "/guides",
 });
 

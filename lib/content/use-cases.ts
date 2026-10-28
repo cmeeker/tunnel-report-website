@@ -87,7 +87,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     description:
       "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, payment anonymity, and incident-response transparency.",
     intro:
-      "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what audits tested, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
+      "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what a published audit covered, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -155,7 +155,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "No-logs claims need technical backing",
         paragraphs: [
           "Torrenting creates a sharper incentive for copyright complaints and legal requests. That makes audit scope, jurisdiction, and server design more important than generic privacy copy.",
-          "RAM-only infrastructure, independently reviewed no-logs systems, and minimal account data are the strongest signals we can verify without access to internal systems.",
+          "RAM-only infrastructure and minimal account data are the strongest signals we can verify without access to internal systems.",
         ],
       },
       {
@@ -209,7 +209,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Free is not always cheaper",
         paragraphs: [
-          "Free VPNs often monetize through ads, data collection, or bandwidth restrictions. Proton VPN is the exception we trust for low-risk testing, but its free tier is not a full replacement for a paid VPN.",
+          "Free VPNs often monetize through ads, data collection, or bandwidth restrictions. Proton VPN's free tier is not a full replacement for a paid VPN.",
           "If your threat model includes credential protection or regular public Wi-Fi, do not choose a random free VPN just to save a few dollars a month.",
         ],
       },
@@ -229,7 +229,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     schemaDescription:
       "Comparison of gaming VPN services based on published specs, pricing and third-party reports.",
     intro:
-      "Gaming VPN marketing is full of nonsense. A VPN cannot magically lower latency on every route. It can help with routing consistency, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
+      "Gaming VPN marketing is full of nonsense. It can help with routing consistency, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -281,10 +281,10 @@ export const useCaseGuides: UseCaseGuide[] = [
     ],
     sections: [
       {
-        heading: "Remote work needs reliability more than peak speed",
+        heading: "Remote work needs reliability",
         paragraphs: [
-          "For work, we weight split tunneling, kill switch and platform support more heavily than advertised maximum speeds.",
-          "NordVPN is the best default because it has enough speed for video calls and file sync while still offering mature security controls.",
+          "For work, we weight split tunneling, kill switch and platform support.",
+          "NordVPN is the best default because it offers mature security controls.",
         ],
       },
       {

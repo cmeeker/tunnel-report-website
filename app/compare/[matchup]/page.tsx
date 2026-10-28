@@ -40,13 +40,15 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
   if (!c) {
     return buildPageMetadata({
       title: "VPN Comparison",
-      description: "Independent VPN comparison from Tunnel Report.",
+      description: "Comparison of VPN services based on published specs, pricing and third-party reports.",
       path: `/compare/${matchup}`,
     });
   }
+  const leftName = providerMap[c.leftSlug]?.name ?? "VPN";
+  const rightName = providerMap[c.rightSlug]?.name ?? "VPN";
   return buildPageMetadata({
     title: c.title,
-    description: c.description,
+    description: `Comparison of ${leftName} and ${rightName} based on published specs, pricing and third-party reports.`,
     path: `/compare/${c.slug}`,
   });
 }
@@ -78,7 +80,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
       <JsonLd
         data={buildArticleSchema({
           headline: comparison.h1 ?? comparison.title,
-          description: comparison.description,
+          description: `Comparison of ${left.name} and ${right.name} based on published specs, pricing and third-party reports.`,
           path,
           datePublished: comparison.datePublished,
           dateModified: comparison.dateModified,

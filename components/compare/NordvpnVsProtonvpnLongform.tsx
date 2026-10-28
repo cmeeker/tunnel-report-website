@@ -29,8 +29,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <p>
           <strong>Affiliate disclosure.</strong> Tunnel Report earns a commission if you buy through outbound links on
-          this page. That does not change scores, category winners, or the use-case recommendation. Editorial scoring
-          is walled off from commercial relationships; the method is on our{" "}
+          this page. The method is on our{" "}
           <Link href="/methodology" className={linkClassName}>
             methodology
           </Link>{" "}
@@ -62,7 +61,7 @@ export function NordvpnVsProtonvpnLongform() {
             </thead>
             <tbody>
               <tr>
-                <td>Streaming geo-unblocking</td>
+                <td>Streaming</td>
                 <td>
                   <strong>NordVPN</strong>
                 </td>
@@ -160,23 +159,10 @@ export function NordvpnVsProtonvpnLongform() {
                 <td>Mature across platforms</td>
                 <td>Good, more technical</td>
               </tr>
-              <tr>
-                <td>Composite score (our reviews)</td>
-                <td>NordVPN</td>
-                <td>4.8 / 5</td>
-                <td>4.4 / 5</td>
-              </tr>
             </tbody>
           </table>
         </div>
 
-        <p>
-          Those scores are from our standalone reviews, not a new head-to-head trophy. NordVPN is our pick in the{" "}
-          <Link href="/best-vpns" className={linkClassName}>
-            2026 rankings
-          </Link>
-          . Proton VPN is ranked for transparency.
-        </p>
       </section>
 
       <section className="prose-dark space-y-4">
@@ -197,7 +183,7 @@ export function NordvpnVsProtonvpnLongform() {
           Netherlands.
         </p>
 
-        <h3 className="text-xl font-bold text-white">Proton VPN — public PDFs, open clients, court-tested empty logs</h3>
+        <h3 className="text-xl font-bold text-white">Proton VPN — public PDFs and open clients</h3>
         <p>
           2025 Securitum PDF opened: 18 August 2025 – 19 September 2025; on-site 18–20 August 2025 Zürich; Martin
           Matyja, Maciej Szymczak; bare-metal Proton AG owns. Conclusion: no user activity logging / connection
@@ -236,8 +222,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Streaming: NordVPN, without fake win rates</h2>
         <p>
-          No invented Netflix/Hulu/BBC percentages. NordVPN more consistent. Proton marketing claims streaming on Plus;
-          our qualitative result is weaker.
+          No invented Netflix/Hulu/BBC percentages. Proton marketing claims streaming on Plus.
         </p>
       </section>
 
@@ -276,7 +261,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Who should actually buy which</h2>
         <p>
-          NordVPN household speed/streaming, budget renewal: see current pricing. Proton transparency/open-source/Swiss/suite, start
+          NordVPN for households, budget renewal: see current pricing. Proton open-source/Swiss/suite, start
           Free. Do not buy a VPN for coffee-shop Wi-Fi once a year. No overall trophy.
         </p>
       </section>

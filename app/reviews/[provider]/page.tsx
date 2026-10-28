@@ -42,13 +42,13 @@ export async function generateMetadata({ params }: ReviewPageProps): Promise<Met
   if (!p) {
     return buildPageMetadata({
       title: "VPN Review",
-      description: "Independent VPN review from Tunnel Report.",
+      description: "VPN overview based on published specs, pricing and third-party reports.",
       path: `/reviews/${provider}`,
     });
   }
   return buildPageMetadata({
     title: p.reviewTitle,
-    description: p.reviewDescription,
+    description: `${p.name} overview based on published specs, pricing and third-party reports.`,
     path: `/reviews/${p.slug}`,
   });
 }
@@ -141,8 +141,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
       <JsonLd
         data={buildReviewSchema({
           itemName: provider.name,
-          description:
-            "Consumer VPN service evaluated by Tunnel Report for speed, privacy, and pricing clarity.",
+          description: `${provider.name} overview based on published specs, pricing and third-party reports.`,
           ratingValue: provider.score,
           summary: provider.reviewSummary,
           path,

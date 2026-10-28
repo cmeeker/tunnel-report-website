@@ -44,7 +44,7 @@ export const guides: Guide[] = [
     description:
       "WireGuard vs OpenVPN explained in plain English: privacy, auditability, battery life, censorship resistance, and when to switch protocols.",
     dek:
-      "OpenVPN is older, battle-tested, and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
+      "OpenVPN is older and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -94,7 +94,7 @@ export const guides: Guide[] = [
     description:
       "No-logs VPN claims explained: what providers can still collect, what audits verify, and how to evaluate no-logs marketing without trusting slogans.",
     dek:
-      "A no-logs claim is only useful when you understand what data is excluded, what metadata remains, and whether an independent audit tested real infrastructure.",
+      "A no-logs claim is only useful when you understand what data is excluded and what metadata remains.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",

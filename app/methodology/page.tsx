@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site";
 
 const pageTitle = "How We Rank VPNs and Password Managers";
 const pageDescription =
-  "How Tunnel Report ranks VPNs and password managers: published specs, real pricing (intro vs renewal), independent audits and third-party reports.";
+  "2026 VPN comparison guides based on published specs, pricing and third-party reports.";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageTitle,
@@ -61,7 +61,7 @@ export default function MethodologyPage() {
             Prices change often, so check the provider&apos;s site.
           </li>
           <li>
-            Independent audits and privacy policies: what&apos;s been audited, by whom, and when, as
+            Published audits and privacy policies: what&apos;s been audited, by whom, and when, as
             the provider or auditor publishes it.
           </li>
           <li>

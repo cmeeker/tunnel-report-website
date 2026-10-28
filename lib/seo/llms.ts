@@ -10,8 +10,8 @@ export function buildLlmsText({ full = false } = {}) {
     "",
     "Purpose",
     "- Tunnel Report is a publication that compares VPNs based on published specs, pricing and third-party reports.",
-    "- Rankings are based on published specs, privacy policy analysis, jurisdiction review, and pricing transparency.",
-    "- Affiliate relationships are disclosed and do not determine scores or editorial conclusions.",
+    "- Rankings are based on published specs, pricing and third-party reports.",
+    "- We may earn commissions from some links.",
     "- Some links are affiliate links; we may earn a commission.",
     "",
     "Primary Routes",
@@ -32,7 +32,7 @@ export function buildLlmsText({ full = false } = {}) {
     "Editorial Standards",
     "- Claim-level citations are preferred for statistics, pricing, security, and policy claims.",
     "- Every monetized page includes affiliate disclosure.",
-    "- Mullvad is covered despite no affiliate commission to demonstrate editorial independence.",
+    "- Mullvad is covered despite no affiliate commission.",
   );
 
   return `${lines.join("\n")}\n`;

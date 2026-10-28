@@ -33,7 +33,7 @@ export const metadata: Metadata = buildPageMetadata({
 const bestVpnsArticleDescription =
   "Comparison of VPN services based on published specs, pricing and third-party reports.";
 
-const PICK_LABELS: Record<string, string> = {
+export const PICK_LABELS: Record<string, string> = {
   nordvpn: "Our default pick",
   surfshark: "Our family-value pick",
   protonvpn: "Our privacy-first pick",

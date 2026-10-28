@@ -46,14 +46,14 @@ export async function generateMetadata({ params }: AlternativesPageProps): Promi
   if (!target) {
     return buildPageMetadata({
       title: "Best VPN Alternatives",
-      description: "Independent VPN alternative recommendations from Tunnel Report.",
+      description: "Alternatives to VPN services compared on published specs, pricing and third-party reports.",
       path: `/alternatives/${provider}`,
     });
   }
 
   return buildPageMetadata({
     title: `Best ${target.name} Alternatives in 2026`,
-    description: `The best ${target.name} alternatives based on speed, privacy posture, pricing, and real-world usability. Independent recommendations from Tunnel Report.`,
+    description: `Alternatives to ${target.name} compared on published specs, pricing and third-party reports.`,
     path: `/alternatives/${target.slug}`,
   });
 }
@@ -72,7 +72,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         data={[
           buildArticleSchema({
             headline: `Best ${target.name} Alternatives in 2026`,
-            description: `Independent alternatives to ${target.name}.`,
+            description: `Alternatives to ${target.name} compared on published specs, pricing and third-party reports.`,
             path,
             datePublished: "2026-10-15",
             dateModified: "2026-10-18",
@@ -118,7 +118,6 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         <h2 className="text-2xl font-bold text-white">Why look beyond {target.name}?</h2>
         <div className="mt-4 grid gap-5 md:grid-cols-3">
           <div>
-            <p className="text-xs font-semibold uppercase text-[#64748b]">Current score</p>
             <RatingStars rating={target.score} />
           </div>
           <div>
@@ -207,16 +206,16 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         faqs={[
           {
             question: `What is the best ${target.name} alternative?`,
-            answer: `${alternatives[0]?.name ?? "NordVPN"} is the strongest alternative for most readers because it offers the best blend of score, feature coverage, and real-world fit against ${target.name}'s limitations.`,
+            answer: `${alternatives[0]?.name ?? "NordVPN"} is the strongest alternative for most readers because it offers the best blend of feature coverage and real-world fit against ${target.name}'s limitations.`,
           },
           {
             question: `Should I switch from ${target.name}?`,
-            answer: `Only if ${target.name}'s limitations affect your actual use case. If your current provider is fast, private enough for your threat model, and priced fairly at renewal, switching may not be worth the hassle.`,
+            answer: `Only if ${target.name}'s limitations affect your actual use case. If your current provider is private enough for your threat model, and priced fairly at renewal, switching may not be worth the hassle.`,
           },
           {
             question: "Do affiliate commissions affect these alternatives?",
             answer:
-              "No. Tunnel Report includes non-affiliate recommendations like Mullvad when they serve readers. Commercial relationships do not determine rankings or editorial conclusions.",
+              "We may earn a commission if you sign up through some links on this site.",
           },
         ]}
       />
