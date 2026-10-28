@@ -83,11 +83,6 @@ export default function AboutPage() {
             retention laws, intelligence-sharing agreements, and compulsion mechanisms), and
             <strong> incident response history</strong> (how the provider handled past security events).
           </p>
-          <p>
-            A provider that
-            completed a narrow-scope audit but responded to a real incident appears earlier in this list
-            than one that trumpets a broad audit without demonstrable operational security improvement.
-          </p>
         </div>
 
         <div className="glass-card p-7">

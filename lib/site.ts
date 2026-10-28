@@ -59,7 +59,7 @@ export const primaryNav: PrimaryNavItem[] = [
     featured: {
       label: "Best VPNs 2026",
       href: "/best-vpns",
-      description: "Our top-ranked providers, compared on privacy, jurisdiction, and pricing.",
+      description: "Our picks, compared on privacy, jurisdiction, and pricing.",
       badge: "Updated April 2026",
     },
     columns: [

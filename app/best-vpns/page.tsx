@@ -49,8 +49,9 @@ const bestVpnFaqs = [
     answer: affiliateDisclosureAnswer,
   },
   {
-    question: "Why is NordVPN listed first over cheaper alternatives?",
-    answer: "NordVPN is our default pick based on published specs.",
+    question: "Why is NordVPN listed first?",
+    answer:
+      "It is our default pick based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   },
   {
     question: "Can I trust a free VPN instead?",

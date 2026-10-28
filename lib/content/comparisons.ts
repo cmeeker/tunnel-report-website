@@ -88,18 +88,17 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality — with a clear winner for most buyers in 2026.",
     intro:
-      "Both NordVPN and ExpressVPN target the premium consumer segment. NordVPN wins on value; ExpressVPN wins on app polish and support. This comparison breaks down where each actually delivers.",
+      "Both NordVPN and ExpressVPN target the premium consumer segment. ExpressVPN wins on app polish and support. This comparison breaks down where each actually delivers.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
-      { category: "Privacy Audits", left: { value: "Frequent infrastructure audits", pct: 92 }, right: { value: "TrustedServer RAM-only audits", pct: 88 }, winner: "left" },
       { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 78 }, right: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left", note: "Different plan lengths; compare the totals." },
       { category: "App Experience", left: { value: "Feature-rich, some complexity", pct: 85 }, right: { value: "Polished, minimal friction", pct: 92 }, winner: "right" },
       { category: "Streaming Reliability", left: { value: "See provider", pct: 90 }, right: { value: "See provider", pct: 91 }, winner: "draw" },
     ],
     verdictParagraphs: [
-      "Choose NordVPN if a lower checkout price and its NordLynx protocol matter most. It is listed first, based on published specs and pricing.",
+      "Choose NordVPN if a lower checkout price and its NordLynx protocol matter most. It is our default pick.",
       "Choose ExpressVPN if you want the smoothest onboarding experience and are willing to pay a premium for support quality and app polish.",
       "For most readers, NordVPN is the better default. ExpressVPN justifies its premium only if you specifically value frictionless setup.",
     ],
@@ -112,7 +111,7 @@ export const comparisons: Comparison[] = [
       {
         question: "Which is better for Netflix?",
         answer:
-          "Both work reliably for major US streaming libraries. ExpressVPN has a slight edge in session stability during server switches.",
+          "Both work reliably for major US streaming libraries.",
       },
     ],
   },
@@ -133,12 +132,12 @@ export const comparisons: Comparison[] = [
     rows: [
       { category: "Device Limit", left: { value: "Unlimited connections", pct: 98 }, right: { value: "10 simultaneous devices", pct: 70 }, winner: "left" },
       { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, winner: "left" },
-      { category: "Privacy Audits", left: { value: `[Surfshark says](${SURFSHARK_AUDIT_URL}) its audit covers its service`, pct: 82 }, right: { value: "Frequent infrastructure audits", pct: 92 }, winner: "right" },
+      { category: "Privacy Audits", left: { value: `[Surfshark says](${SURFSHARK_AUDIT_URL}) its audit covers its service`, pct: 82 }, right: { value: "", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
       "Choose Surfshark if you need unlimited device coverage, want the lowest entry price, and primarily use domestic connections. The value proposition for families is genuinely strong.",
       "Choose NordVPN if you want its NordLynx protocol and a large server network. Choose Surfshark if device count and first-term price matter more.",
-      "For households with many devices on a budget, Surfshark wins. For users who want the best overall VPN without compromise, NordVPN remains our default pick.",
+      "For households with many devices on a budget, Surfshark wins. For users who want our default pick without compromise, NordVPN remains our default pick.",
     ],
     leftPickLabel: "Budget pick",
     rightPickLabel: "Our default pick",

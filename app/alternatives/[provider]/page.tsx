@@ -132,9 +132,9 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
             <div key={alt.slug} className="glass-card overflow-hidden">
               <div className="flex items-center justify-between border-b border-[#1e293b] px-6 py-4">
                 <div>
-                  <span className="badge badge-teal mb-2 text-[0.65rem]">
-                    {index === 0 ? "Alternative" : `#${index + 1} Alternative`}
-                  </span>
+                  {index === 0 ? (
+                    <span className="badge badge-teal mb-2 text-[0.65rem]">Alternative</span>
+                  ) : null}
                   <h3 className="text-xl font-bold text-white">{alt.name}</h3>
                 </div>
               </div>
@@ -180,13 +180,8 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">The honest recommendation</h2>
+        <h2 className="text-2xl font-bold text-white">Things to consider</h2>
         <p>VPNs are tools, not collectibles.</p>
-        <p>
-          The strongest alternative for most readers is usually the provider that fixes the specific
-          thing {target.name} does not do well enough for your situation: lower renewal cost, stronger
-          privacy posture, better streaming reliability, or simpler apps.
-        </p>
       </section>
 
       <RelatedLinks links={getAlternativesRelatedLinks(target.slug)} />

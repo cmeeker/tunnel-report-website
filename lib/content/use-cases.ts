@@ -49,7 +49,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best overall streaming VPN", reason: "NordVPN is our top streaming pick." },
+      { providerSlug: "nordvpn", label: "Our default streaming pick", reason: "NordVPN is our default streaming pick." },
       { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps and reliable region switching for non-technical users.", paidPick: streamingExpressPaidPick },
       { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices at lower entry pricing." },
     ],
@@ -76,7 +76,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       },
     ],
     faqs: [
-      { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our top streaming pick." },
+      { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our default streaming pick." },
       { question: "Will a VPN always bypass sports blackouts?", answer: "No. Blackout enforcement changes by league, broadcaster, device, and payment profile. A VPN improves location flexibility but cannot guarantee access on every platform." },
       { question: "Is ExpressVPN better than NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is our default pick for most streaming households based on its published features and plan pricing. Check each provider's pricing page for current terms, and note that no VPN can guarantee access to a streaming service." },
     ],
@@ -96,7 +96,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     picks: [
       { providerSlug: "mullvad", label: "Best privacy purist pick", reason: "Anonymous account numbers, cash payments, open-source clients, and no affiliate funnel." },
       { providerSlug: "protonvpn", label: "Open-source apps", reason: "Swiss jurisdiction, open-source apps, credible free tier, and strong public privacy posture." },
-      { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "Frequent infrastructure audits and RAM-only server architecture." },
+      { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "" },
     ],
     sections: [
       {

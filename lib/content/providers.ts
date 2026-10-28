@@ -90,7 +90,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "Our complete NordVPN review with privacy audit analysis, honest pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
     reviewSummary:
-      "NordVPN is listed first, based on published specs and pricing.",
+      "It is our default pick.",
     jurisdiction: "Panama",
     protocolNote: "NordLynx (WireGuard implementation)",
     speedMetrics: [],
@@ -106,7 +106,7 @@ export const providers: Provider[] = [
         paragraphs: [
           "Privacy evaluation in VPN reviews usually stops at \"they say no logs.\" We look at three layers: policy language, what a published audit covered, and how the company has responded to real incidents.",
           "NordVPN operates under Panamanian jurisdiction, outside Five Eyes intelligence-sharing agreements. That removes one category of compulsion, though jurisdiction alone does not guarantee privacy.",
-          "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its audit covers server infrastructure. Audit summaries include RAM-only server verification, meaning data is not written to persistent storage in a way that could survive a server seizure.",
+          "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its audit covers server infrastructure.",
         ],
       },
       {
@@ -257,7 +257,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy ExpressVPN if you want the most polished consumer experience, reliable streaming access, and are willing to pay a premium for support quality.",
       skip: "Skip if you are price-sensitive.",
-      alternatives: "NordVPN for best overall balance; Surfshark for family value.",
+      alternatives: "NordVPN for our default pick balance; Surfshark for family value.",
     },
     faqs: [
       {
@@ -309,7 +309,7 @@ export const providers: Provider[] = [
         heading: "Privacy and Audits",
         paragraphs: [
           "Proton VPN's Swiss jurisdiction is among the strongest in consumer VPN markets. Switzerland's Federal Act on Data Protection provides meaningful legal protections, and Proton's public benefit corporate structure aligns incentives with user privacy.",
-          "All Proton VPN clients are open source. [Proton VPN says](https://protonvpn.com/blog/no-logs-audit) its audit covers its clients. For readers who want to verify security claims rather than trust marketing, this is a meaningful differentiator.",
+          "All Proton VPN clients are open source. For readers who want to verify security claims rather than trust marketing, this is a meaningful differentiator.",
           "The free tier remains functional for low-risk browsing, though it limits server selection versus paid plans.",
         ],
       },
@@ -388,7 +388,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy PureVPN if first-year price is your dominant buying criteria and you mostly use domestic connections for browsing and light streaming.",
       skip: "Skip if you'd rather go with our default pick, NordVPN.",
-      alternatives: "Surfshark for better value with stronger consistency; NordVPN for best overall.",
+      alternatives: "Surfshark for better value with stronger consistency; NordVPN for our default pick.",
     },
     faqs: [
       {
@@ -466,7 +466,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy Mullvad if anonymous payments and flat honest pricing matter more than streaming convenience or affiliate-driven promotions.",
       skip: "Skip if streaming is your primary use case or you need the largest server network.",
-      alternatives: "Proton VPN for Swiss jurisdiction with a free tier; NordVPN for best overall consumer experience.",
+      alternatives: "Proton VPN for Swiss jurisdiction with a free tier; NordVPN for our default pick consumer experience.",
     },
     faqs: [
       {
