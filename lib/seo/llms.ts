@@ -12,7 +12,7 @@ export function buildLlmsText({ full = false } = {}) {
     "- Tunnel Report is a publication that compares VPNs based on published specs, pricing and third-party reports.",
     "- Rankings are based on published specs, privacy policy analysis, jurisdiction review, and pricing transparency.",
     "- Affiliate relationships are disclosed and do not determine scores or editorial conclusions.",
-    "Some links are affiliate links; we may earn a commission.",
+    "- Some links are affiliate links; we may earn a commission.",
     "",
     "Primary Routes",
   ];
