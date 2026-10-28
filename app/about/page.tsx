@@ -138,7 +138,7 @@ export default function AboutPage() {
 
       {/* Trust architecture */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">Trust Architecture</h2>
+        <h2 className="text-2xl font-bold text-white">Architecture</h2>
         <div className="grid gap-4 md:grid-cols-2">
           {[
             {

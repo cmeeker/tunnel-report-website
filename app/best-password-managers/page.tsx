@@ -101,7 +101,7 @@ export default function BestPasswordManagersPage() {
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">{h1}</h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          For most people, Bitwarden is the cheapest full-featured pick, NordPass is the low intro-price pick if you want a polished app, and 1Password suits families who want strong sharing. These picks are based on published specs, pricing and third-party reports. Prices change often, so check the provider&apos;s site.
+          For most people, Bitwarden is the cheapest full-featured pick, NordPass is the low intro-price pick if you want a polished app, and 1Password suits families who want sharing. These picks are based on published specs, pricing and third-party reports. Prices change often, so check the provider&apos;s site.
         </p>
         <AuthorByline date="October 18, 2026" />
       </header>
@@ -137,11 +137,10 @@ export default function BestPasswordManagersPage() {
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">How did we pick these?</h2>
-        <p>We didn&apos;t run lab tests on password managers, and we won&apos;t pretend we did. This list is based on published specs and pricing. We read each provider&apos;s official pricing page in October 2026 and its security documentation. For each one we looked at four things:</p>
+        <p>We didn&apos;t run lab tests on password managers, and we won&apos;t pretend we did. This list is based on published specs and pricing. We read each provider&apos;s official pricing page in October 2026 and its security documentation. For each one we looked at three things:</p>
         <ol className="list-decimal space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li><strong>Price you actually pay.</strong> We note whether a number is an intro rate or a regular rate. Where a renewal price isn&apos;t published, we say so and leave it out.</li>
           <li><strong>Encryption and key handling,</strong> as the provider documents it.</li>
-          <li><strong>Independent checks,</strong> such as certifications the provider publishes.</li>
           <li><strong>Plan fit,</strong> meaning solo, family or sharing.</li>
         </ol>
       </section>
@@ -205,7 +204,7 @@ export default function BestPasswordManagersPage() {
         <h2 className="text-2xl font-bold text-white">What should you look for in a password manager?</h2>
         <ul className="list-disc space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li><strong>Zero-knowledge encryption.</strong> The provider shouldn&apos;t be able to read your vault. All six here say they work this way <Cite id="S7" /><Cite id="S9" /><Cite id="S10" /><Cite id="S11" /><Cite id="S12" /><Cite id="S13" />.</li>
-          <li><strong>Published certifications.</strong> Look for certifications the provider publishes, not just &quot;military-grade&quot; claims.</li>
+          <li><strong>Published audits.</strong> Look for named third-party audits or certifications, not just &quot;military-grade&quot; claims.</li>
           <li><strong>Passkey and 2FA support.</strong> Check each provider&apos;s current feature list.</li>
           <li><strong>Renewal price.</strong> Intro deals are fine. Just know what year two costs.</li>
           <li><strong>Easy export.</strong> You should be able to leave.</li>

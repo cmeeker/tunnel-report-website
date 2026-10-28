@@ -78,7 +78,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     faqs: [
       { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our default streaming pick." },
       { question: "Will a VPN always bypass sports blackouts?", answer: "No. Blackout enforcement changes by league, broadcaster, device, and payment profile. A VPN improves location flexibility but cannot guarantee access on every platform." },
-      { question: "Is ExpressVPN better than NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is our default pick for most streaming households based on its published features and plan pricing. Check each provider's pricing page for current terms, and note that no VPN can guarantee access to a streaming service." },
+      { question: "ExpressVPN or NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is our default pick for most streaming households based on its published features and plan pricing. Check each provider's pricing page for current terms, and note that no VPN can guarantee access to a streaming service." },
     ],
   },
   {
@@ -95,7 +95,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     primaryPick: "mullvad",
     picks: [
       { providerSlug: "mullvad", label: "Privacy purist pick", reason: "Anonymous account numbers, cash payments, open-source clients, and no affiliate funnel." },
-      { providerSlug: "protonvpn", label: "Open-source apps", reason: "Swiss jurisdiction, open-source apps, credible free tier, and strong public privacy posture." },
+      { providerSlug: "protonvpn", label: "Open-source apps", reason: "Swiss jurisdiction, open-source apps, credible free tier, and public privacy posture." },
       { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "" },
     ],
     sections: [
@@ -153,7 +153,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "No-logs claims need technical backing",
         paragraphs: [
           "Torrenting creates a sharper incentive for copyright complaints and legal requests. That makes jurisdiction and server design more important than generic privacy copy.",
-          "NordVPN remains our default pick because it offers P2P-optimized servers and a kill switch. Mullvad is the better ideological pick for users who value account anonymity above convenience.",
+          "NordVPN remains our default pick because it offers P2P-optimized servers and a kill switch.",
         ],
       },
     ],
@@ -179,7 +179,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     primaryPick: "surfshark",
     picks: [
       { providerSlug: "surfshark", label: "Cheap VPN pick", reason: "Unlimited devices on every plan. See current pricing for the 24-month + 3-month Starter plan. Surfshark's pricing page doesn't list the renewal price, so check it at checkout." },
-      { providerSlug: "purevpn", label: "Lowest entry price", reason: "See current pricing for the 2-year + 3-month Standard plan, including renewal. More tradeoffs on trust track record." },
+      { providerSlug: "purevpn", label: "Lowest entry price", reason: "See current pricing for the 2-year + 3-month Standard plan, including renewal." },
       { providerSlug: "protonvpn", label: "Free tier pick", reason: "A usable free plan from a credible privacy company, with paid upgrades available." },
     ],
     sections: [
@@ -195,7 +195,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Where PureVPN fits",
         paragraphs: [
           "PureVPN is often the lowest sticker price. That makes it appealing for light domestic browsing, but Surfshark stays our default budget pick.",
-          "If budget is your only constraint and you understand the tradeoffs, PureVPN can work. If you want the best cheap VPN for a household, Surfshark is the cleaner pick.",
+          "If budget is your only constraint and you understand the tradeoffs, PureVPN can work.",
         ],
       },
       {
@@ -208,7 +208,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     ],
     faqs: [
       { question: "What is the best cheap VPN?", answer: "Surfshark is our best cheap VPN because unlimited devices make the plan go further than rivals. See current pricing on the 24-month + 3-month Starter plan. Check the renewal price at checkout." },
-      { question: "Is PureVPN worth it for the price?", answer: "PureVPN can be worth it for price-first buyers, but it trails Surfshark and NordVPN on trust track record." },
+      { question: "Is PureVPN worth it for the price?", answer: "PureVPN can be worth it for price-first buyers." },
       { question: "Should I use a free VPN?", answer: "Use Proton VPN's free tier if you need a credible free option. Avoid random free VPNs with unclear ownership or data monetization." },
     ],
   },
@@ -221,7 +221,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     schemaDescription:
       "Comparison of gaming VPN services based on published specs, pricing and third-party reports.",
     intro:
-      "Gaming VPN marketing is full of nonsense. It can help with routing, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
+      "Gaming VPN marketing is full of nonsense. It can help with routing, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has nearby servers.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -242,14 +242,14 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Console setup changes which pick fits.",
         paragraphs: [
-          "PlayStation, Xbox, and Switch support usually means router-level setup or Smart DNS. ExpressVPN earns points here because its setup documentation is cleaner for non-technical users.",
+          "PlayStation, Xbox, and Switch support usually means router-level setup or Smart DNS.",
           "PC gamers should prioritize WireGuard support, nearby exits, and a kill switch that does not interrupt game updates or voice chat unnecessarily.",
         ],
       },
     ],
     faqs: [
       { question: "Can a VPN reduce gaming ping?", answer: "Sometimes, if your ISP route is inefficient. Often it adds latency. Test nearby VPN servers against your actual game before committing." },
-      { question: "Is Surfshark good for gaming?", answer: "Yes for most domestic gaming. Surfshark is a strong value pick, especially for households with multiple devices and consoles." },
+      { question: "Is Surfshark good for gaming?", answer: "Yes for most domestic gaming, especially for households with multiple devices and consoles." },
     ],
   },
   {
@@ -282,7 +282,6 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Split tunneling matters",
         paragraphs: [
           "Remote workers often need some apps protected and others left alone: corporate VPN, Zoom, Slack, cloud storage, browser sessions, and printer discovery can conflict if every packet is forced through one tunnel.",
-          "NordVPN and ExpressVPN handle split tunneling more cleanly than budget providers. Proton VPN is a better choice when privacy and open-source posture matter more than convenience.",
         ],
       },
       {
@@ -296,7 +295,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     faqs: [
       { question: "What is the best VPN for remote work?", answer: "NordVPN is our pick for remote work based on its published feature set (such as split tunneling, per NordVPN's support pages) and plan pricing." },
       { question: "Do I need a VPN if my company already has one?", answer: "Maybe not. If your company VPN covers all sensitive work traffic, a personal VPN may be redundant or even conflict with corporate tooling." },
-      { question: "Will a VPN slow down Zoom?", answer: "A good VPN should not noticeably affect Zoom on a strong connection. Poor server selection or long-distance routing can add latency and reduce call quality." },
+      { question: "Will a VPN slow down Zoom?", answer: "A good VPN should not noticeably affect Zoom. Poor server selection or long-distance routing can add latency and reduce call quality." },
     ],
   },
 ];

@@ -86,7 +86,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
-              VPN Reviews You Can Trust.<br />
+              VPN Reviews<br />
               <span className="gradient-text"> Start Reading.</span>
             </h1>
             <p className="mx-auto max-w-xl text-base leading-relaxed text-[#64748b]">
@@ -271,7 +271,7 @@ export default function Home() {
             {
               title: "Surfshark Review 2026: Best Budget VPN for Families?",
               excerpt:
-                "Unlimited devices and aggressive pricing — our full Surfshark review breaks down where it beats NordVPN and where it does not.",
+                "Unlimited devices and aggressive pricing.",
               href: "/reviews/surfshark",
               image: "/images/article-speed.svg",
               badge: "Review",

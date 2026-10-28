@@ -74,8 +74,7 @@ export const providers: Provider[] = [
     privacyBlurb: "Panama jurisdiction",
     quickVerdict: "Privacy and app details in 2026.",
     pros: [
-      "Frequent third-party security and no-logs assessments",
-      "Strong malware and tracker blocking controls",
+      "Malware and tracker blocking controls",
     ],
     cons: ["Price increases at renewal", "UI depth can overwhelm first-time users"],
     speedSummary: "",
@@ -147,14 +146,14 @@ export const providers: Provider[] = [
     speedMbps: 820,
     pricePerMonth: "See current pricing",
     privacyBlurb: "Diskless infrastructure",
-    quickVerdict: "Excellent multi-device value with modern privacy defaults.",
+    quickVerdict: "Multi-device value with modern privacy defaults.",
     pros: [
       "Unlimited simultaneous connections",
       "Kill switch on desktop and mobile",
     ],
     cons: ["Fewer advanced split tunneling options"],
     speedSummary: "",
-    privacySummary: "Solid security architecture with ongoing external validation.",
+    privacySummary: "See provider",
     pricingSummary: "Entry plan is among the most affordable in this group.",
     affiliateKey: "surfshark",
     datePublished: "2026-10-15",
@@ -175,7 +174,7 @@ export const providers: Provider[] = [
         paragraphs: ["Surfshark supports WireGuard on all its apps."],
       },
       {
-        heading: "Privacy and Trust Signals",
+        heading: "Privacy",
         paragraphs: [
           "Surfshark operates from the Netherlands. [Surfshark says](https://surfshark.com/blog/deloitte-nologs-policy-verified-again) its audit covers its no-logs claims and server infrastructure.",
           "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
@@ -185,7 +184,6 @@ export const providers: Provider[] = [
         heading: "Pricing and Value",
         paragraphs: [
           "See current pricing for Surfshark Starter [surfshark.com/pricing](https://surfshark.com/pricing). Read the checkout terms carefully.",
-          "For price-sensitive households that need coverage on many devices, Surfshark frequently offers better economics than premium-tier competitors.",
         ],
       },
     ],
@@ -283,8 +281,7 @@ export const providers: Provider[] = [
     privacyBlurb: "Swiss jurisdiction, open-source clients",
     quickVerdict: "Our privacy-first pick",
     pros: [
-      "Strong public privacy mission and open-source posture",
-      "Well-documented security practices",
+      "Open-source posture",
     ],
     cons: ["Smaller streaming footprint", "Premium plans can feel complex"],
     speedSummary: "",
@@ -308,7 +305,7 @@ export const providers: Provider[] = [
         heading: "Privacy",
         paragraphs: [
           "Switzerland's Federal Act on Data Protection provides meaningful legal protections, and Proton's public benefit corporate structure aligns incentives with user privacy.",
-          "All Proton VPN clients are open source. For readers who want to verify security claims rather than trust marketing, this is a meaningful differentiator.",
+          "All Proton VPN clients are open source. For readers who want to verify security claims, this is a meaningful differentiator.",
           "The free tier remains functional for low-risk browsing, though it limits server selection versus paid plans.",
         ],
       },
@@ -331,7 +328,7 @@ export const providers: Provider[] = [
           "Yes, for low-risk browsing. It limits server countries versus paid tiers, but it doesn't harvest your data the way many free VPNs do.",
       },
       {
-        question: "Is Proton VPN better than NordVPN for privacy?",
+        question: "Proton VPN or NordVPN for privacy?",
         answer:
           "Proton VPN is our pick on open-source posture. " +
             nordAuditsClaim +
@@ -361,7 +358,7 @@ export const providers: Provider[] = [
     ],
     cons: [],
     speedSummary: "",
-    privacySummary: "Current trust profile is better than legacy perception, but still monitored closely.",
+    privacySummary: "See provider",
     pricingSummary: "Budget-friendly entry makes it attractive for price-sensitive users.",
     affiliateKey: "purevpn",
     datePublished: "2026-10-15",
@@ -387,14 +384,9 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy PureVPN if first-year price is your dominant buying criteria and you mostly use domestic connections for browsing and light streaming.",
       skip: "Skip if you'd rather go with our default pick, NordVPN.",
-      alternatives: "Surfshark for better value; NordVPN for our default pick.",
+      alternatives: "Surfshark; NordVPN for our default pick.",
     },
     faqs: [
-      {
-        question: "Is PureVPN safe to use in 2026?",
-        answer:
-          "It is adequate for casual privacy needs, but users with higher threat models should prefer providers with longer trust track records.",
-      },
       {
         question: "How does PureVPN compare to NordVPN?",
         answer:
@@ -403,7 +395,7 @@ export const providers: Provider[] = [
       {
         question: "Does PureVPN work for streaming?",
         answer:
-          "PureVPN works for many streaming services but has more variable success rates than NordVPN or ExpressVPN, particularly with region-locked libraries.",
+          "PureVPN works for many streaming services.",
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-purevpn"],
@@ -423,7 +415,7 @@ export const providers: Provider[] = [
       "Open-source clients",
     ],
     cons: ["No affiliate program (we earn nothing recommending it)", "Fewer streaming-optimized features", "Smaller server network than mega-providers"],
-    speedSummary: "Solid WireGuard performance.",
+    speedSummary: "WireGuard performance.",
     privacySummary: "Anonymity model.",
     pricingSummary: "Flat rate with no renewal surprises.",
     affiliateKey: null,
@@ -450,7 +442,7 @@ export const providers: Provider[] = [
       {
         heading: "Privacy Architecture",
         paragraphs: [
-          "Mullvad accepts cash and cryptocurrency payments. No email address is required for account creation. Swedish jurisdiction is not as strong as Switzerland, but Mullvad's operational practices — minimal data collection, open-source clients, public ownership structure — compensate.",
+          "Mullvad accepts cash and cryptocurrency payments. No email address is required for account creation. Swedish jurisdiction. Mullvad's operational practices — minimal data collection, open-source clients, public ownership structure.",
           "All Mullvad apps are open source. The company publishes detailed security documentation.",
         ],
       },
@@ -458,7 +450,7 @@ export const providers: Provider[] = [
         heading: "Performance and Limitations",
         paragraphs: [
           "Mullvad supports WireGuard on all its apps. US-centric users may find server selection smaller than NordVPN or Surfshark.",
-          "Streaming is not Mullvad's focus. If your primary use case is accessing region-locked content, competitors with dedicated streaming infrastructure are better choices.",
+          "Streaming is not Mullvad's focus.",
         ],
       },
     ],
@@ -479,7 +471,7 @@ export const providers: Provider[] = [
           "Mullvad accepts cash by mail, cryptocurrency, and standard payment methods. Account creation requires only a generated account number — no email.",
       },
       {
-        question: "Is Mullvad better than Proton VPN?",
+        question: "Mullvad or Proton VPN?",
         answer:
           "Mullvad is our pick on payment anonymity and flat pricing. Proton VPN is our pick on ecosystem integration and censorship circumvention features. See our head-to-head comparison.",
       },
@@ -562,7 +554,7 @@ export const providers: Provider[] = [
       alternatives:
         "Consider alternatives if your priority is open-source clients. [HM14]",
       skip:
-        "Skip or look elsewhere if you need free-tier streaming support, if you’re buying for commercial/organizational use (the Terms describe consumer/personal use constraints), or if your trust requirement is a fleet-wide inspection rather than a scope-limited container review. [HM3][HM5][HM9]",
+        "Skip or look elsewhere if you need free-tier streaming support, if you’re buying for commercial/organizational use (the Terms describe consumer/personal use constraints), or if your requirement is a fleet-wide inspection rather than a scope-limited container review. [HM3][HM5][HM9]",
     },
     faqs: [
       {

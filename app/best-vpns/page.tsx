@@ -54,7 +54,7 @@ const bestVpnFaqs = [
       "It is our default pick based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   },
   {
-    question: "Can I trust a free VPN instead?",
+    question: "A free VPN instead?",
     answer:
       "Free VPNs typically monetize through advertising, data collection, or bandwidth resale. If your threat model includes any form of surveillance or credential protection, the economics of free VPN providers should give you serious pause.",
   },
@@ -114,7 +114,7 @@ export default function BestVpnsPage() {
             The regulatory backdrop matters too. The FBI&apos;s IC3 reported $12.5 billion in online
             fraud losses for 2023<CitationLink source={citationSources.S1} />, and the FCC&apos;s
             broadband labeling mandate<CitationLink source={citationSources.S4} /> now gives consumers
-            better baseline data to compare against VPN performance claims. Both developments raise the
+            baseline data to compare against VPN performance claims. Both developments raise the
             stakes for choosing the right provider.
           </p>
         </section>
@@ -201,7 +201,7 @@ export default function BestVpnsPage() {
         <section className="space-y-8">
           <h2 className="text-2xl font-bold text-white">Best VPN by Use Case</h2>
           <p className="max-w-3xl text-[#94a3b8]">
-            If you have a specific use case, these targeted picks may serve you better than the general list.
+            If you have a specific use case, these targeted picks may serve you.
           </p>
           {useCaseSections.map((section) => {
             const pick = providerMap[section.pickSlug];

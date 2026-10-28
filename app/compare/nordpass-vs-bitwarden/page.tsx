@@ -33,11 +33,6 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "Is NordPass better than Bitwarden?",
-    answer:
-      "Neither is strictly better.",
-  },
-  {
     question: "Which is cheaper, NordPass or Bitwarden?",
     answer:
       "For the first term, compare the published intro rates. See current pricing. After the intro, Bitwarden's price is the one published as a standard annual rate.",
@@ -145,13 +140,13 @@ export default function NordPassVsBitwardenPage() {
         <h2 className="text-2xl font-bold text-white">Which is more secure?</h2>
         <p>Both use zero-knowledge, end-to-end encryption, meaning your vault is encrypted on your device before it syncs. They differ in the details.</p>
         <p>
-          <strong>NordPass</strong> says it uses XChaCha20 for vault encryption, XChaCha20-Poly1305-IETF to protect your private key locally, and Argon2id for your master password, and that it lists ISO 27001 and SOC 2 Type 2 certifications, regular independent third-party audits, and a bug bounty <Cite id="S2" />.
+          <strong>NordPass</strong> says it uses XChaCha20 for vault encryption, XChaCha20-Poly1305-IETF to protect your private key locally, and Argon2id for your master password. It lists ISO 27001 and SOC 2 Type 2 certifications, regular third-party audits and a bug bounty <Cite id="S2" />.
         </p>
         <p>
           <strong>Bitwarden</strong> documents end-to-end AES-CBC 256-bit encryption with HMAC authentication. It uses PBKDF2 SHA-256 by default and lets you switch to Argon2id <Cite id="S5" />. Bitwarden says it publishes yearly third-party security audits, is ISO 27001 certified, and that its code is open source <Cite id="S4" />.
         </p>
         <p>
-          <strong>Our take, based on published specs:</strong> both are strong. NordPass&apos;s edge is a modern cipher and Argon2id by default. Neither choice is a mistake on security.
+          <strong>Our take, based on published specs:</strong> Neither choice is a mistake on security.
         </p>
       </section>
 
@@ -169,7 +164,7 @@ export default function NordPassVsBitwardenPage() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Which has the better free plan?</h2>
+        <h2 className="text-2xl font-bold text-white">Free plan</h2>
         <p>
           Both have one <Cite id="S1" /><Cite id="S3" />. NordPass says its Free plan includes a 30-day Premium trial <Cite id="S1" />. Bitwarden&apos;s free plan is a long-running, well-known option for people who just want a no-cost vault. If you want to stay free for good, Bitwarden is the safer bet. If you want to try premium features first, NordPass&apos;s trial helps.
         </p>
@@ -183,14 +178,14 @@ export default function NordPassVsBitwardenPage() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Which is better for families?</h2>
+        <h2 className="text-2xl font-bold text-white">Families</h2>
         <p>
           On published prices, <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink> Families is {prices.bitwardenFamilyMonthly}, billed annually at {prices.bitwardenFamilyAnnual} for 6 accounts <Cite id="S3" />. NordPass Family is {prices.nordpassFamilyTwoYearMonthly} on the 2-year intro ({prices.nordpassFamilyTwoYearTotal} for 27 months) or {prices.nordpassFamilyOneYearMonthly} on 1 year ({prices.nordpassFamilyOneYearTotal} for 12 months), also for 6 accounts <Cite id="S1" />. For year one, they&apos;re close. For the long run, Bitwarden&apos;s price is the one you can plan around.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Which is better for business?</h2>
+        <h2 className="text-2xl font-bold text-white">Business</h2>
         <p>
           Both sell team plans. NordPass lists Teams, Business and Enterprise tiers on its pricing page <Cite id="S1" />. Bitwarden lists Teams and Enterprise <Cite id="S3" />. Business pricing changes often and depends on seats, so we don&apos;t quote it here. Prices change often, so check the provider&apos;s site.
         </p>

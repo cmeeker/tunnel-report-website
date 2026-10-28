@@ -45,7 +45,7 @@ export const guides: Guide[] = [
     description:
       "WireGuard vs OpenVPN explained in plain English: privacy, battery life, censorship resistance, and when to switch protocols.",
     dek:
-      "OpenVPN is older and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
+      "OpenVPN is older. The right protocol depends on your threat model, not brand marketing.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -84,7 +84,7 @@ export const guides: Guide[] = [
     ],
     faqs: [
       { question: "Is WireGuard safer than OpenVPN?", answer: "WireGuard is modern and small, which helps security review, but safety depends on provider implementation. OpenVPN remains secure when configured correctly." },
-      { question: "Should I use TCP or UDP?", answer: "Use UDP for speed when possible. Use TCP/443 when networks block VPN traffic or you need better compatibility." },
+      { question: "Should I use TCP or UDP?", answer: "Use UDP for speed when possible. Use TCP/443 when networks block VPN traffic." },
       { question: "What protocol does NordVPN use?", answer: "NordVPN's default protocol is NordLynx, its WireGuard-based implementation." },
     ],
   },
@@ -92,7 +92,7 @@ export const guides: Guide[] = [
     slug: "what-is-a-no-logs-vpn",
     title: "What Is a No-Logs VPN, Really?",
     description:
-      "No-logs VPN claims explained: what providers can still collect, and how to evaluate no-logs marketing without trusting slogans.",
+      "No-logs VPN claims explained: what providers can still collect, and how to evaluate no-logs marketing.",
     dek:
       "A no-logs claim is only useful when you understand what data is excluded and what metadata remains.",
     datePublished: "2026-10-15",
@@ -139,7 +139,7 @@ export const guides: Guide[] = [
         heading: "Jurisdiction is pressure, not proof",
         paragraphs: [
           "A privacy-friendly jurisdiction can reduce compelled data-retention risk, but it cannot make a bad logging system safe. Technical architecture still matters.",
-          "We treat jurisdiction as one factor in a broader trust model: policy language, incident response, ownership, and infrastructure design.",
+          "We treat jurisdiction as one factor: policy language, incident response, ownership, and infrastructure design.",
         ],
       },
       {
@@ -158,9 +158,9 @@ export const guides: Guide[] = [
       },
     ],
     faqs: [
-      { question: "What is the best VPN jurisdiction?", answer: "There is no single best jurisdiction. Switzerland and Panama are strong on paper; implementation matters just as much." },
-      { question: "Should I avoid US-based VPNs?", answer: "Not automatically, but US jurisdiction increases legal exposure. We prefer providers with strong jurisdiction." },
-      { question: "Is British Virgin Islands jurisdiction good for VPNs?", answer: "It is generally favorable for consumer VPN privacy, which is one reason ExpressVPN uses it prominently in trust messaging." },
+      { question: "What is the best VPN jurisdiction?", answer: "There is no single best jurisdiction. Switzerland and Panama. Implementation matters just as much." },
+      { question: "Should I avoid US-based VPNs?", answer: "Not automatically, but US jurisdiction increases legal exposure." },
+      { question: "Is British Virgin Islands jurisdiction good for VPNs?", answer: "It is generally favorable for consumer VPN privacy, which is one reason ExpressVPN uses it prominently in messaging." },
     ],
   },
   {
@@ -251,7 +251,7 @@ export const guides: Guide[] = [
       {
         heading: "When switching makes sense",
         paragraphs: [
-          "Switch when renewal pricing rises and your current provider is not clearly better for your use case.",
+          "Switch when renewal pricing rises.",
           "If the renewal rate is fair, switching for a marginal discount may not be worth the setup friction.",
         ],
       },

@@ -104,7 +104,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
           Alternatives to {target.name}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          {target.name} is a strong fit for some buyers, but it is not the right default for every
+          {target.name} is a fit for some buyers, but it is not the right default for every
           use case. We compared published specs, privacy policies, pricing over the full plan term, and
           third-party reports to pick the alternatives below.
         </p>

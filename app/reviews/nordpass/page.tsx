@@ -106,7 +106,7 @@ export default function NordPassReviewPage() {
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">{h1}</h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          NordPass is a solid, easy password manager with modern encryption and a usable free plan. Premium starts at {prices.nordpassPremiumTwoYearMonthly} on a 2-year intro deal. The main thing to watch is the renewal price, which isn&apos;t listed up front. This review is based on published specs and pricing, not hands-on testing.
+          NordPass is an easy password manager with modern encryption and a usable free plan. Premium starts at {prices.nordpassPremiumTwoYearMonthly} on a 2-year intro deal. The main thing to watch is the renewal price, which isn&apos;t listed up front. This review is based on published specs and pricing, not hands-on testing.
         </p>
         <AuthorByline date={PASSWORD_MANAGER_UPDATED_LABEL} />
       </header>
@@ -142,7 +142,7 @@ export default function NordPassReviewPage() {
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Is NordPass safe?</h2>
-        <p>Based on what NordPass publishes, the security setup is strong <Cite id="S2" />:</p>
+        <p>Based on what NordPass publishes <Cite id="S2" />:</p>
         <ul className="list-disc space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li><strong>Encryption:</strong> vault data is encrypted with XChaCha20. Your private key is encrypted locally using XChaCha20-Poly1305-IETF.</li>
           <li><strong>Key derivation:</strong> your master password goes through Argon2id.</li>
@@ -150,7 +150,7 @@ export default function NordPassReviewPage() {
           <li><strong>Outside checks:</strong> NordPass says it lists ISO 27001 and SOC 2 Type 2 certifications, regular independent third-party audits, and a bug bounty program <Cite id="S2" />.</li>
         </ul>
         <p>
-          What we can&apos;t tell you: NordPass&apos;s code isn&apos;t open source the way <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>&apos;s or <PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink>&apos;s is. If open code matters to you, that&apos;s a real reason to look elsewhere. See <EditorialLink href="/compare/nordpass-vs-bitwarden">NordPass vs Bitwarden</EditorialLink>.
+          What we can&apos;t tell you: we haven&apos;t reviewed the audit reports line by line, and NordPass&apos;s code isn&apos;t open source the way <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>&apos;s or <PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink>&apos;s is. If open code matters to you, that&apos;s a real reason to look elsewhere. See <EditorialLink href="/compare/nordpass-vs-bitwarden">NordPass vs Bitwarden</EditorialLink>.
         </p>
       </section>
 
@@ -172,7 +172,7 @@ export default function NordPassReviewPage() {
         <h2 className="text-2xl font-bold text-white">How does NordPass compare to rivals?</h2>
         <ul className="list-disc space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li><PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink> has a free plan and is cheaper at full price. Premium is {prices.bitwardenPremiumMonthlyShown}, billed annually at {prices.bitwardenPremiumAnnual} <Cite id="S3" />. It&apos;s also open source. NordPass feels more polished and has a lower intro headline.</li>
-          <li><PricingLink href={pricingUrls.onePassword}>1Password</PricingLink> costs more. It&apos;s {prices.onePasswordIndividualPromo} with annual billing on the current promo, {prices.onePasswordIndividualRegular} regular <Cite id="S4" />. It&apos;s strong for families who share a lot. There&apos;s no free plan.</li>
+          <li><PricingLink href={pricingUrls.onePassword}>1Password</PricingLink> costs more. It&apos;s {prices.onePasswordIndividualPromo} with annual billing on the current promo, {prices.onePasswordIndividualRegular} regular <Cite id="S4" />. There&apos;s no free plan.</li>
           <li><PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink> has open-source apps. Pass Plus is {prices.protonPlusMonthly}, billed at {prices.protonPlusBilled} every 12 months <Cite id="S5" />.</li>
         </ul>
         <p>Full comparison: <EditorialLink href="/best-password-managers">Best password managers</EditorialLink>.</p>

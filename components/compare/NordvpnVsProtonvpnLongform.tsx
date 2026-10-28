@@ -44,7 +44,7 @@ export function NordvpnVsProtonvpnLongform() {
 
         <p>
           <strong>Use-case verdict, not a trophy.</strong> NordVPN is the household default if you want an app.
-          Proton VPN is the better pick if you want
+          Proton VPN is the pick if you want
           open-source clients, Swiss legal posture, and a free tier.
         </p>
       </section>
