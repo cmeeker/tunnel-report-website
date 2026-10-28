@@ -112,7 +112,7 @@ export default function NordPassReviewPage() {
       </header>
 
       <AffiliateDisclosure>
-        Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
+        Picks are based on published specs, pricing and third-party reports. We may earn a commission from some links.
       </AffiliateDisclosure>
 
       <section className="prose-dark space-y-4">
@@ -175,7 +175,7 @@ export default function NordPassReviewPage() {
           <li><PricingLink href={pricingUrls.onePassword}>1Password</PricingLink> costs more. It&apos;s {prices.onePasswordIndividualPromo} with annual billing on the current promo, {prices.onePasswordIndividualRegular} regular <Cite id="S4" />. It&apos;s strong for families who share a lot. There&apos;s no free plan.</li>
           <li><PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink> has open-source apps. Pass Plus is {prices.protonPlusMonthly}, billed at {prices.protonPlusBilled} every 12 months <Cite id="S5" />.</li>
         </ul>
-        <p>Full ranking: <EditorialLink href="/best-password-managers">Best password managers</EditorialLink>.</p>
+        <p>Full comparison: <EditorialLink href="/best-password-managers">Best password managers</EditorialLink>.</p>
       </section>
 
       <section className="prose-dark space-y-4">

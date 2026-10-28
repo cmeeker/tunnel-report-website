@@ -20,7 +20,7 @@ export const expressReviewPaidPick: PaidPickSpec = {
 
 export const expressHomePaidPick: PaidPickSpec = {
   partner: "protonvpn",
-  after: " has open-source apps and five straight annual no-logs audits.",
+  after: " has open-source apps.",
 };
 
 export const expressBestVpnsPaidPick: PaidPickSpec = {
@@ -31,7 +31,7 @@ export const expressBestVpnsPaidPick: PaidPickSpec = {
 export const alternativeExpressPaidPicks: Record<string, PaidPickSpec> = {
   hideme: {
     partner: "protonvpn",
-    after: " Plus covers 10 devices and publishes yearly Securitum no-logs audits.",
+    after: " Plus covers 10 devices.",
   },
   mullvad: {
     partner: "protonvpn",
@@ -71,7 +71,7 @@ export const compareExpressPaidPicks: Record<string, PaidPickSpec> = {
   },
   "nordvpn-vs-expressvpn": {
     partner: "surfshark",
-    after: " runs RAM-only servers and allows unlimited simultaneous devices on one subscription.",
+    after: " allows unlimited simultaneous devices on one subscription.",
   },
   "surfshark-vs-expressvpn": {
     partner: "surfshark",

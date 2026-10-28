@@ -119,7 +119,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "streaming",
     title: "Best VPN for Streaming in 2026",
     description:
-      "For streaming, look at server locations, supported devices (Smart TVs, routers) and the provider's refund window, so you can cancel if a service you use doesn't work. NordVPN and ExpressVPN are our top streaming picks based on published specs; Surfshark is our budget pick.",
+      "For streaming, look at server locations, supported devices (Smart TVs, routers) and the provider's refund window, so you can cancel if a service you use doesn't work. NordVPN and ExpressVPN are our streaming picks based on published specs; Surfshark is our budget pick.",
     pickSlug: "nordvpn",
     pickReason: "",
   },
@@ -137,7 +137,7 @@ export const useCaseSections: UseCaseSection[] = [
     description:
       "P2P users need verified no-logs policies, kill switch reliability, and jurisdictions that resist copyright trolling pressure. NordVPN, Mullvad, and Proton VPN all allow P2P; avoid providers with unclear logging history.",
     pickSlug: "nordvpn",
-    pickReason: "P2P-optimized servers and RAM-only infrastructure.",
+    pickReason: "P2P-optimized servers.",
   },
   {
     id: "budget",

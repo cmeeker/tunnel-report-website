@@ -20,7 +20,7 @@ const aboutFaqs = [
   {
     question: "How is Tunnel Report funded?",
     answer:
-      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. We may earn a commission if you sign up through some links on this site.",
+      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on pages where affiliate links appear. We may earn a commission if you sign up through some links on this site.",
   },
   {
     question: "Do you earn money from VPN links?",
@@ -165,7 +165,7 @@ export default function AboutPage() {
             },
             {
               title: "Open Methodology",
-              description: "Our ranking method is published in full. Readers can evaluate our process, not just our conclusions.",
+              description: "How we compare VPNs is published in full. Readers can evaluate our process, not just our conclusions.",
             },
           ].map((item) => (
             <div key={item.title} className="glass-card p-7">
@@ -183,7 +183,7 @@ export default function AboutPage() {
         <ul className="mt-3 space-y-2.5">
           <li>
             <Link href="/best-vpns" className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]">
-              Best VPNs of 2026 — Full Rankings &rarr;
+              Best VPNs of 2026 — Full comparison &rarr;
             </Link>
           </li>
           <li>

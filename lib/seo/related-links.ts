@@ -19,8 +19,8 @@ export function getReviewRelatedLinks(slug: string): RelatedLink[] {
   if (!provider) return [];
 
   const links: RelatedLink[] = [
-    { href: "/methodology", label: "How We Rank" },
-    { href: "/best-vpns", label: "Best VPNs of 2026 — Full Rankings" },
+    { href: "/methodology", label: "How We Pick" },
+    { href: "/best-vpns", label: "Best VPNs of 2026 — Full comparison" },
     ...provider.relatedCompareSlugs
       .filter((s) => comparisonMap[s])
       .slice(0, 2)
@@ -59,7 +59,7 @@ export function getCompareRelatedLinks(slug: string): RelatedLink[] {
     { href: `/reviews/${comparison.rightSlug}`, label: `Full ${providerMap[comparison.rightSlug]?.name ?? comparison.rightSlug} Review` },
     { href: "/best-vpns", label: "Best VPN Picks 2026" },
     { href: "/best-vpn-for/budget", label: "Best Cheap VPN" },
-    { href: "/methodology", label: "How We Rank" },
+    { href: "/methodology", label: "How We Pick" },
     ...comparisons
       .filter((c) => c.slug !== slug)
       .slice(0, 2)

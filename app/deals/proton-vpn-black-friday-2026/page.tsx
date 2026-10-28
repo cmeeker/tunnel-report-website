@@ -42,6 +42,19 @@ export const metadata: Metadata = {
 
 const plans = ["VPN Plus", "Proton Unlimited"] as const;
 
+function renderProtonDealAnswer(answer: string) {
+  const lead = "Proton says";
+  if (answer.startsWith(`${lead} its no-logs policy is independently audited`)) {
+    return (
+      <>
+        <PlainOutboundLink href={vendorSources.protonNoLogsAudit}>{lead}</PlainOutboundLink>
+        {answer.slice(lead.length)}
+      </>
+    );
+  }
+  return answer;
+}
+
 export default function ProtonVpnBlackFridayPage() {
   return (
     <article className="space-y-14 fade-in-up">
@@ -117,7 +130,7 @@ export default function ProtonVpnBlackFridayPage() {
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Is Proton VPN&apos;s no-logs policy audited?</h2>
-        <p>{protonDealFaqs[3].answer}</p>
+        <p>{renderProtonDealAnswer(protonDealFaqs[3].answer)}</p>
         <p>
           <PlainOutboundLink href={vendorSources.protonNoLogsAudit}>
             protonvpn.com/blog/no-logs-audit
@@ -153,7 +166,7 @@ export default function ProtonVpnBlackFridayPage() {
         </p>
       </section>
 
-      <FaqSection faqs={protonDealFaqs} />
+      <FaqSection faqs={protonDealFaqs} renderAnswer={renderProtonDealAnswer} />
 
       <section className="surface-card p-8">
         <h2 className="text-lg font-bold text-white">Related reading</h2>

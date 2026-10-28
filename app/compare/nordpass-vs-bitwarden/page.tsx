@@ -99,7 +99,7 @@ export default function NordPassVsBitwardenPage() {
       </header>
 
       <AffiliateDisclosure>
-        Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
+        Picks are based on published specs, pricing and third-party reports. We may earn a commission from some links.
       </AffiliateDisclosure>
 
       <section className="prose-dark space-y-4">

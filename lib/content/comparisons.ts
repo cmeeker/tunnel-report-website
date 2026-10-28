@@ -60,7 +60,7 @@ export const comparisons: Comparison[] = [
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
       { category: "Entry Pricing", left: { value: "See current pricing [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 72 }, right: { value: "See current pricing [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 90 }, winner: "right" },
-      { category: "App Reliability", left: { value: "Polished, mature across platforms", pct: 90 }, right: { value: "Functional, occasional reconnect issues", pct: 65 }, winner: "left" },
+      { category: "App Reliability", left: { value: "See provider", pct: 90 }, right: { value: "See provider", pct: 65 }, winner: "left" },
       { category: "Server Network", left: { value: "NordVPN: thousands of servers in 225+ locations [nordvpn.com/pricing](https://nordvpn.com/pricing/), as of Oct 2026", pct: 0 }, right: { value: "PureVPN: 80+ locations [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
@@ -86,9 +86,9 @@ export const comparisons: Comparison[] = [
     expressPaidPick: compareExpressPaidPicks["nordvpn-vs-expressvpn"],
     title: "NordVPN vs ExpressVPN 2026: Which Premium VPN Wins?",
     description:
-      "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality — with a clear winner for most buyers in 2026.",
+      "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality.",
     intro:
-      "Both NordVPN and ExpressVPN target the premium consumer segment. ExpressVPN wins on app polish and support. This comparison breaks down where each actually delivers.",
+      "Both NordVPN and ExpressVPN target the premium consumer segment. This comparison breaks down where each actually delivers.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -104,16 +104,10 @@ export const comparisons: Comparison[] = [
     ],
     leftPickLabel: "Our default pick",
     rightPickLabel: "Best UX",
-    leftBadge: "NordVPN wins",
-    rightBadge: "ExpressVPN wins",
+    leftBadge: "",
+    rightBadge: "",
     sourceIds: ["S5", "S8"],
-    faqs: [
-      {
-        question: "Which is better for Netflix?",
-        answer:
-          "Both work reliably for major US streaming libraries.",
-      },
-    ],
+    faqs: [],
   },
   {
     slug: "surfshark-vs-nordvpn",
@@ -162,7 +156,7 @@ export const comparisons: Comparison[] = [
     rightSlug: "protonvpn",
     title: "Mullvad vs Proton VPN 2026: Privacy-First Showdown",
     description:
-      "Mullvad vs Proton VPN — anonymous payments, open-source clients, and jurisdiction compared. Neither pays us a commission; here is our honest verdict.",
+      "Mullvad vs Proton VPN — anonymous payments, open-source clients, and jurisdiction compared. Neither pays us a commission; here is our verdict.",
     intro:
       "Mullvad and Proton VPN represent the privacy-first tier of the VPN market. Neither runs aggressive affiliate programs — Tunnel Report earns zero commission from either.",
     dateModified: "2026-10-15",
@@ -174,7 +168,7 @@ export const comparisons: Comparison[] = [
       { category: "Censorship Tools", left: { value: "Bridge servers available", pct: 78 }, right: { value: "Specialized anti-censorship", pct: 88 }, winner: "right" },
     ],
     verdictParagraphs: [
-      "Choose Mullvad if payment anonymity is your top priority. No email signup, cash-by-mail payments, and flat honest pricing without promotional tricks.",
+      "Choose Mullvad if payment anonymity is your top priority. No email signup, cash-by-mail payments, and flat pricing without promotional tricks.",
       "Choose Proton VPN if Swiss jurisdiction, a functional free tier, and integrated Proton ecosystem tools matter more than maximum payment anonymity.",
       "For most privacy-focused readers, Mullvad wins on operational anonymity while Proton VPN wins on legal jurisdiction and ecosystem breadth. You cannot go wrong with either — both are meaningfully better than marketing-heavy consumer VPNs on privacy fundamentals.",
     ],
@@ -211,8 +205,8 @@ export const comparisons: Comparison[] = [
       { category: "Entry Pricing", left: { value: "See current pricing [surfshark.com/pricing](https://surfshark.com/pricing), as of Oct 2026", pct: 88 }, right: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, winner: "left" },
       { category: "Device Limit", left: { value: "Unlimited devices", pct: 98 }, right: { value: "8 simultaneous devices", pct: 72 }, winner: "left" },
       { category: "App Polish", left: { value: "Modern, improving", pct: 85 }, right: { value: "Best-in-class simplicity", pct: 92 }, winner: "right" },
-      { category: "Streaming Reliability", left: { value: "Strong US libraries", pct: 84 }, right: { value: "Very consistent region switching", pct: 91 }, winner: "right" },
-      { category: "Privacy Audits", left: { value: "Regular external audits", pct: 82 }, right: { value: "TrustedServer audits", pct: 88 }, winner: "right" },
+      { category: "Streaming Reliability", left: { value: "See provider", pct: 84 }, right: { value: "See provider", pct: 91 }, winner: "right" },
+      { category: "Privacy Audits", left: { value: "See provider", pct: 82 }, right: { value: "See provider", pct: 88 }, winner: "right" },
     ],
     verdictParagraphs: [
       "Choose Surfshark for a household with many devices. It is cheaper at checkout.",
@@ -243,7 +237,7 @@ export const comparisons: Comparison[] = [
     rows: [
       { category: "Open Source", left: { value: "Closed-source apps", pct: 62 }, right: { value: "Open-source clients", pct: 95 }, winner: "right" },
       { category: "Jurisdiction", left: { value: "Panama", pct: 90 }, right: { value: "Switzerland", pct: 92 }, winner: "draw" },
-      { category: "Streaming", left: { value: "Very consistent", pct: 90 }, right: { value: "Moderate success", pct: 70 }, winner: "left" },
+      { category: "Streaming", left: { value: "See provider", pct: 90 }, right: { value: "Moderate success", pct: 70 }, winner: "left" },
       { category: "Free Tier", left: { value: "None", pct: 0 }, right: { value: "Credible free plan", pct: 90 }, winner: "right" },
       { category: "App Reliability", left: { value: "Mature across platforms", pct: 90 }, right: { value: "Good, more technical", pct: 78 }, winner: "left" },
     ],
@@ -273,7 +267,7 @@ export const comparisons: Comparison[] = [
     rows: [
       { category: "App Simplicity", left: { value: "Best-in-class polish", pct: 92 }, right: { value: "Powerful but denser", pct: 78 }, winner: "left" },
       { category: "Open Source", left: { value: "Limited", pct: 60 }, right: { value: "Open-source clients", pct: 95 }, winner: "right" },
-      { category: "Streaming", left: { value: "Very reliable", pct: 91 }, right: { value: "Variable", pct: 70 }, winner: "left" },
+      { category: "Streaming", left: { value: "See provider", pct: 91 }, right: { value: "Variable", pct: 70 }, winner: "left" },
       { category: "Pricing", left: { value: "Premium", pct: 55 }, right: { value: "Mid-tier + free", pct: 78 }, winner: "right" },
       { category: "Jurisdiction", left: { value: "British Virgin Islands", pct: 88 }, right: { value: "Switzerland", pct: 92 }, winner: "right" },
     ],
@@ -336,8 +330,8 @@ export const comparisons: Comparison[] = [
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
       { category: "Account Anonymity", left: { value: "Email/account required", pct: 65 }, right: { value: "No email, account number", pct: 98 }, winner: "right" },
-      { category: "Streaming", left: { value: "Very consistent", pct: 90 }, right: { value: "Not a focus", pct: 55 }, winner: "left" },
-      { category: "Pricing Honesty", left: { value: "Promo + renewal", pct: 72 }, right: { value: "See current pricing", pct: 95 }, winner: "right" },
+      { category: "Streaming", left: { value: "See provider", pct: 90 }, right: { value: "Not a focus", pct: 55 }, winner: "left" },
+      { category: "Pricing", left: { value: "Promo + renewal", pct: 72 }, right: { value: "See current pricing", pct: 95 }, winner: "right" },
       { category: "Mainstream UX", left: { value: "Polished apps", pct: 90 }, right: { value: "Functional, sparse", pct: 74 }, winner: "left" },
       { category: "Affiliate Bias Risk", left: { value: "Affiliate program", pct: 70 }, right: { value: "No affiliate program", pct: 98 }, winner: "right" },
     ],
@@ -370,9 +364,9 @@ export const comparisons: Comparison[] = [
     updatedBadgeLabel: "Updated Oct 18, 2026",
     rows: [
       { category: "Entry Pricing", left: { value: "See current pricing [expressvpn.com/order](https://www.expressvpn.com/order), as of Oct 2026", pct: 55 }, right: { value: "See current pricing [purevpn.com/order](https://www.purevpn.com/order), as of Oct 2026", pct: 92 }, winner: "right" },
-      { category: "App Reliability", left: { value: "Polished, stable", pct: 92 }, right: { value: "Functional, variable", pct: 65 }, winner: "left" },
-      { category: "Streaming", left: { value: "Very reliable", pct: 91 }, right: { value: "Variable", pct: 68 }, winner: "left" },
-      { category: "Trust Profile", left: { value: "TrustedServer audits", pct: 88 }, right: { value: "Improving, legacy concerns", pct: 58 }, winner: "left" },
+      { category: "App Reliability", left: { value: "See provider", pct: 92 }, right: { value: "See provider", pct: 65 }, winner: "left" },
+      { category: "Streaming", left: { value: "See provider", pct: 91 }, right: { value: "Variable", pct: 68 }, winner: "left" },
+      { category: "Trust Profile", left: { value: "See provider", pct: 88 }, right: { value: "Improving, legacy concerns", pct: 58 }, winner: "left" },
       { category: "Support Quality", left: { value: "Excellent docs/chat", pct: 90 }, right: { value: "Adequate", pct: 70 }, winner: "left" },
     ],
     verdictParagraphs: [
@@ -385,7 +379,7 @@ export const comparisons: Comparison[] = [
     leftBadge: "ExpressVPN wins",
     rightBadge: "PureVPN wins",
     faqs: [
-      { question: "Is ExpressVPN worth paying more than PureVPN?", answer: "Yes if streaming reliability and support matter. No if your only goal is cheap domestic browsing." },
+      { question: "Is ExpressVPN worth paying more than PureVPN?", answer: "Yes if streaming and support matter. No if your only goal is cheap domestic browsing." },
     ],
   },
   {
@@ -446,13 +440,13 @@ export const comparisons: Comparison[] = [
       },
       {
         spec: "Server storage",
-        left: "RAM-only servers [V2]",
+        left: "See provider",
         right: "Not stated on the Proton pages we checked on Oct 6, 2026",
       },
     ],
     rows: [
       { category: "Devices", left: { value: "Unlimited", pct: 98 }, right: { value: "10 on VPN Plus", pct: 70 }, winner: "left" },
-      { category: "Privacy & audits", left: { value: "Deloitte, customer-only report", pct: 82 }, right: { value: "Public Securitum reports", pct: 94 }, winner: "right" },
+      { category: "Privacy & audits", left: { value: "See provider", pct: 82 }, right: { value: "See provider", pct: 94 }, winner: "right" },
       { category: "Jurisdiction", left: { value: "Netherlands", pct: 80 }, right: { value: "Switzerland", pct: 92 }, winner: "right" },
       { category: "Torrenting", left: { value: "Marked P2P locations", pct: 80 }, right: { value: "P2P plus port forwarding", pct: 88 }, winner: "right" },
       { category: "Free option", left: { value: "Trial, 3 devices", pct: 40 }, right: { value: "Free plan, 1 device", pct: 88 }, winner: "right" },

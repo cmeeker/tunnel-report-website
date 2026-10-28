@@ -42,7 +42,7 @@ export default function GuidesIndexPage() {
           VPN Guides: Protocols, Privacy and Pricing Explained
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          Evergreen explainers for readers who want to understand the mechanics behind our rankings:
+          Evergreen explainers for readers who want to understand the mechanics behind our comparisons:
           how protocols work, what no-logs claims mean, why jurisdiction matters, and how pricing
           changes after checkout.
         </p>

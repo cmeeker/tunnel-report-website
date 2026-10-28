@@ -107,7 +107,7 @@ export default function BestPasswordManagersPage() {
       </header>
 
       <AffiliateDisclosure>
-        Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
+        Picks are based on published specs, pricing and third-party reports. We may earn a commission from some links.
       </AffiliateDisclosure>
 
       <section className="prose-dark space-y-4">
@@ -137,11 +137,10 @@ export default function BestPasswordManagersPage() {
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">How did we pick these?</h2>
-        <p>We didn&apos;t run lab tests on password managers, and we won&apos;t pretend we did. This list is based on published specs and pricing. We read each provider&apos;s official pricing page in October 2026 and its security documentation. For each one we looked at four things:</p>
+        <p>We didn&apos;t run lab tests on password managers, and we won&apos;t pretend we did. This list is based on published specs and pricing. We read each provider&apos;s official pricing page in October 2026 and its security documentation. For each one we looked at three things:</p>
         <ol className="list-decimal space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li><strong>Price you actually pay.</strong> We note whether a number is an intro rate or a regular rate. Where a renewal price isn&apos;t published, we say so and leave it out.</li>
           <li><strong>Encryption and key handling,</strong> as the provider documents it.</li>
-          <li><strong>Independent checks,</strong> such as third-party audits and certifications the provider publishes.</li>
           <li><strong>Plan fit,</strong> meaning solo, family or sharing.</li>
         </ol>
       </section>

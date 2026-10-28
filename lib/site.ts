@@ -93,7 +93,7 @@ export const primaryNav: PrimaryNavItem[] = [
           { label: "Surfshark", href: "/reviews/surfshark", description: "Unlimited devices, budget value" },
           { label: "ExpressVPN", href: "/reviews/expressvpn", description: "Premium apps and streaming" },
           { label: "Proton VPN", href: "/reviews/protonvpn", description: "Open-source, Swiss privacy" },
-          { label: "PureVPN", href: "/reviews/purevpn", description: "Budget pick, honest assessment" },
+          { label: "PureVPN", href: "/reviews/purevpn", description: "Budget pick, our assessment" },
           { label: "Mullvad VPN", href: "/reviews/mullvad", description: "Privacy purist — no affiliate" },
           { label: "NordPass", href: "/reviews/nordpass", description: "Password manager specs and pricing" },
         ],
@@ -150,7 +150,7 @@ export const primaryNav: PrimaryNavItem[] = [
       {
         heading: "The Publication",
         items: [
-          { label: "How We Rank", href: "/methodology", description: "Published specs, pricing and third-party reports" },
+          { label: "How We Pick", href: "/methodology", description: "Published specs, pricing and third-party reports" },
           { label: "Editorial Standards", href: "/about#editorial", description: "Affiliate disclosure policy" },
           { label: "Affiliate Disclosure", href: "/about#disclosure", description: "How commissions work here" },
         ],

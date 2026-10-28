@@ -121,7 +121,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <section className="surface-card p-8">
         <h2 className="text-lg font-bold text-white">Quick Take</h2>
         <p className="mt-3 leading-relaxed text-[#94a3b8]">
-          This guide supports our VPN rankings and comparisons. It is written for readers who want
+          This guide supports our VPN comparisons. It is written for readers who want
           the methodology behind our recommendations, not just a one-click buying decision.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">

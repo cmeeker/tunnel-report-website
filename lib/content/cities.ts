@@ -213,7 +213,7 @@ export const cityGuides: CityGuide[] = [
     streamingNeeds:
       "Atlanta sports blackouts and heavy streaming demand make low-overhead VPN routing important. For US streaming, pick a server close to Atlanta. For international content, you need a server in that country.",
     recommendation:
-      "NordVPN is the best all-around Atlanta pick because it combines East Coast routing strength with reliable streaming access. Surfshark is the budget pick, and ExpressVPN is worth a look for travelers who want simple setup.",
+      "NordVPN is our default pick for Atlanta. Surfshark is the budget pick, and ExpressVPN is worth a look for travelers who want simple setup.",
     neighborhoodNote:
       "Fiber availability is strongest in newer apartment corridors and parts of Midtown, Buckhead, and suburban developments. Older homes and student housing can still depend heavily on Xfinity, where evening congestion can slow any connection, VPN or not.",
     populationContext:

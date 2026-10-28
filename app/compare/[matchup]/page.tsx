@@ -171,12 +171,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                 >
                   <div className="mb-3 flex items-center justify-between">
                     <h3 className="text-sm font-semibold text-[#e8ecf4]">{row.category}</h3>
-                    {row.winner === "left" && (
-                      <span className="badge badge-teal text-[0.6rem]">{left.name} wins</span>
-                    )}
-                    {row.winner === "right" && (
-                      <span className="badge badge-cyan text-[0.6rem]">{right.name} wins</span>
-                    )}
                     {row.winner === "draw" && (
                       <span className="badge badge-violet text-[0.6rem]">Draw</span>
                     )}
@@ -294,14 +288,16 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
 
       <RelatedLinks links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)} />
 
+      {!isLongform && comparison.faqs.length > 0 ? (
+        <FaqSection
+          faqs={comparison.faqs}
+          renderAnswer={
+            comparison.sourceIds ? (answer) => <CitedText text={answer} /> : undefined
+          }
+        />
+      ) : null}
       {!isLongform && (
         <>
-          <FaqSection
-            faqs={comparison.faqs}
-            renderAnswer={
-              comparison.sourceIds ? (answer) => <CitedText text={answer} /> : undefined
-            }
-          />
           <SourcesList
             sources={
               comparison.sourceIds

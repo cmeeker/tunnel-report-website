@@ -35,7 +35,7 @@ const homepageFaqs = [
       "Our picks are based on published specs, pricing and third-party reports. We did not run our own speed or unblocking tests. We may earn a commission if you sign up through some links on this site.",
   },
   {
-    question: "Do affiliate commissions affect your rankings?",
+    question: "Do you earn money from VPN links?",
     answer: affiliateDisclosureAnswer,
   },
   {
@@ -95,13 +95,13 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <Link href="/best-vpns" className="affiliate-cta">
-                See 2026 Rankings
+                See 2026 picks
               </Link>
               <Link
                 href="/methodology"
                 className="inline-flex min-h-[48px] items-center rounded-xl border border-[#1e293b] px-5 text-sm font-semibold text-[#94a3b8] transition hover:border-[#00d4aa]/30 hover:text-white"
               >
-                How We Rank
+                How We Pick
               </Link>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-1 text-xs text-[#475569]">
@@ -263,7 +263,7 @@ export default function Home() {
             {
               title: "VPN Privacy Audits: What Actually Matters in 2026",
               excerpt:
-                "Not all audits test the same controls. I walked through scope documents from four major providers and found the gap between marketing claims and actual test coverage is often wider than vendors let on.",
+                "Providers publish audit scope documents; read each provider's own report for what it covered.",
               href: "/reviews/nordvpn",
               image: "/images/article-privacy.svg",
               badge: "Analysis",

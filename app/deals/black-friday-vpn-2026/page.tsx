@@ -374,7 +374,21 @@ export default function BlackFridayVpnHubPage() {
         </p>
       </section>
 
-      <FaqSection faqs={hubPageFaqs} />
+      <FaqSection
+        faqs={hubPageFaqs}
+        renderAnswer={(answer) => {
+          const lead = "Proton says";
+          if (answer.startsWith(`${lead} its no-logs policy is independently audited`)) {
+            return (
+              <>
+                <PlainOutboundLink href={vendorSources.protonNoLogsAudit}>{lead}</PlainOutboundLink>
+                {answer.slice(lead.length)}
+              </>
+            );
+          }
+          return answer;
+        }}
+      />
 
       <section className="surface-card p-8">
         <h2 className="text-lg font-bold text-white">Related reading</h2>

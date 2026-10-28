@@ -204,7 +204,7 @@ function MobileNav({ onClose }: { onClose: () => void }) {
 
         <div className="border-t border-white/[0.06] px-5 py-4">
           <Link href="/best-vpns" onClick={onClose} className="affiliate-cta w-full justify-center">
-            See 2026 VPN Rankings
+            See 2026 VPN picks
           </Link>
         </div>
       </div>

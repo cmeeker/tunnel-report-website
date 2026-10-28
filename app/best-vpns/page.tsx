@@ -45,7 +45,7 @@ export const PICK_LABELS: Record<string, string> = {
 
 const bestVpnFaqs = [
   {
-    question: "How do you rank VPNs?",
+    question: "How do you pick VPNs?",
     answer: affiliateDisclosureAnswer,
   },
   {
@@ -107,7 +107,7 @@ export default function BestVpnsPage() {
         <section className="prose-dark space-y-4">
           <h2 className="text-xl font-bold text-white">What Changed in This Update</h2>
           <p>
-            The biggest shift since our Q4 2025 rankings is in the mid-tier: Proton VPN&apos;s free tier
+            The biggest shift since our Q4 2025 comparison is in the mid-tier: Proton VPN&apos;s free tier
             continues to function as a credible entry point for low-risk users. NordVPN stays our default pick.
           </p>
           <p>
@@ -133,9 +133,6 @@ export default function BestVpnsPage() {
             >
               <div className="flex items-center justify-between border-b border-[#1e293b] px-6 py-4">
                 <div className="flex items-center gap-4">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#00d4aa] to-[#06b6d4] text-lg font-extrabold text-[#0a0f1e]">
-                    {vpn.rank}
-                  </span>
                   <div>
                     <h3 className="text-xl font-bold text-white">{vpn.name}</h3>
                     <p className="text-sm text-[#64748b]">{vpn.quickVerdict}</p>
@@ -263,7 +260,7 @@ export default function BestVpnsPage() {
         <hr className="divider-glow" />
 
         <section className="prose-dark space-y-4">
-          <h2 className="text-xl font-bold text-white">How We Built This Ranking</h2>
+          <h2 className="text-xl font-bold text-white">How We Built This Comparison</h2>
           <p>
             Where a provider publishes an audit report, we note what the audit covered, per the
             provider&apos;s own report.

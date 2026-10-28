@@ -50,7 +50,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     primaryPick: "nordvpn",
     picks: [
       { providerSlug: "nordvpn", label: "Our default streaming pick", reason: "NordVPN is our default streaming pick." },
-      { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps and reliable region switching for non-technical users.", paidPick: streamingExpressPaidPick },
+      { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps for non-technical users.", paidPick: streamingExpressPaidPick },
       { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices at lower entry pricing." },
     ],
     sections: [
@@ -88,7 +88,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     description:
       "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, and payment anonymity.",
     intro:
-      "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We look at controls that providers publish and third parties can verify.",
+      "We look at controls that providers publish and third parties can verify.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -122,7 +122,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       },
     ],
     faqs: [
-      { question: "What is the most private VPN?", answer: "Mullvad is our top privacy pick because it minimizes account data, supports anonymous payments, and does not participate in the affiliate incentives that shape most VPN rankings." },
+      { question: "What is the most private VPN?", answer: "Mullvad is our privacy pick because it minimizes account data, supports anonymous payments, and does not participate in the affiliate incentives that shape most VPN rankings." },
       { question: "Is Proton VPN better than Mullvad?", answer: "Proton VPN has stronger ecosystem and Swiss-jurisdiction advantages. Mullvad has stronger account anonymity and simpler pricing." },
       { question: "Do privacy VPNs work for streaming?", answer: "Sometimes, but streaming is not the core design goal for Mullvad or Proton VPN. Choose NordVPN or ExpressVPN if streaming is your primary use case." },
     ],
@@ -155,14 +155,14 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "No-logs claims need technical backing",
         paragraphs: [
           "Torrenting creates a sharper incentive for copyright complaints and legal requests. That makes audit scope, jurisdiction, and server design more important than generic privacy copy.",
-          "RAM-only infrastructure and minimal account data are the strongest signals we can verify without access to internal systems.",
+          "Minimal account data.",
           "NordVPN remains our default pick because it offers P2P-optimized servers and a kill switch. Mullvad is the better ideological pick for users who value account anonymity above convenience.",
         ],
       },
     ],
     faqs: [
       { question: "Is torrenting safe with a VPN?", answer: "A VPN reduces IP exposure only if the kill switch and leak protection work correctly. It does not make illegal downloads legal or remove all risk." },
-      { question: "Which VPN is best for torrenting?", answer: "NordVPN is our best default torrenting VPN. Mullvad is the best privacy-first option for users who want minimal account data." },
+      { question: "Which VPN is best for torrenting?", answer: "NordVPN is our default torrenting pick. Mullvad is our privacy pick." },
       { question: "Do free VPNs work for torrenting?", answer: "Most free VPNs are poor torrenting choices because they restrict bandwidth, block P2P, or monetize user data." },
     ],
   },
@@ -175,7 +175,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     schemaDescription:
       "Comparison of budget VPN services based on published specs, pricing and third-party reports.",
     intro:
-      "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math.",
+      "Cheap VPN picks are easy to manipulate because most providers advertise the first-year price and bury renewal math.",
     datePublished: "2026-10-17",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
@@ -243,7 +243,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         ],
       },
       {
-        heading: "Console setup changes the ranking",
+        heading: "Console setup changes which pick fits.",
         paragraphs: [
           "PlayStation, Xbox, and Switch support usually means router-level setup or Smart DNS. ExpressVPN earns points here because its setup documentation is cleaner for non-technical users.",
           "PC gamers should prioritize WireGuard support, nearby exits, and a kill switch that does not interrupt game updates or voice chat unnecessarily.",

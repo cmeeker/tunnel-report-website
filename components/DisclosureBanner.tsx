@@ -7,7 +7,7 @@ export function DisclosureBanner() {
       <span className="mr-2 inline-block rounded bg-[#1e293b] px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#64748b]">
         Disclosure
       </span>
-      Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
+      Our picks are based on published specs, pricing and third-party reports. We may earn a commission from some links.
     </aside>
   );
 }

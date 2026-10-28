@@ -194,7 +194,7 @@ export function getSiteRoutes(): SiteRoute[] {
       return {
         path: `/alternatives/${slug}`,
         title: `Alternatives to ${provider.name}`,
-        description: "2026 VPN comparison guides based on published specs, pricing and third-party reports.",
+        description: `Alternatives to ${provider.name} compared on published specs, pricing and third-party reports.`,
         lastModified: "2026-10-18",
         priority: 0.78,
         changeFrequency: "weekly" as const,

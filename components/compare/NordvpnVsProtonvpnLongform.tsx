@@ -179,8 +179,16 @@ export function NordvpnVsProtonvpnLongform() {
           </a>
           {". "}
           Sixth: Deloitte Lithuania, ISAE 3000 (Revised), fieldwork 10 November – 12 December
-          2025, report 12 December 2025, blog 3 February 2026. RAM-only diskless servers (explainer 28 August 2024).
-          Panama operating jurisdiction; Nord Security
+          2025, report 12 December 2025, blog 3 February 2026.{" "}
+          <a
+            href="https://nordvpn.com/blog/ram-based-servers/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClassName}
+          >
+            NordVPN says
+          </a>{" "}
+          its servers are RAM-only diskless servers. Panama operating jurisdiction; Nord Security
           Netherlands.
         </p>
 
