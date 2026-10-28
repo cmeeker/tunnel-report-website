@@ -50,12 +50,7 @@ const bestVpnFaqs = [
   {
     question: "How do you rank VPNs?",
     answer:
-      "Our picks are editorial, based on published specs, pricing and third-party reports. We may earn a commission from some links.",
-  },
-  {
-    question: "How was this ranking built?",
-    answer:
-      "The ranking is based on published specs, pricing and third-party reports: privacy policy analysis, jurisdiction risk and pricing transparency.",
+      "Our picks are editorial. Rankings are based on published specs, pricing and third-party reports. We did not run our own speed or unblocking tests. Privacy policy analysis, jurisdiction risk and pricing transparency. We may earn a commission from some links.",
   },
   {
     question: "Why is NordVPN ranked first over cheaper alternatives?",
