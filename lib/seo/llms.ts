@@ -11,7 +11,6 @@ export function buildLlmsText({ full = false } = {}) {
     "Purpose",
     "- Tunnel Report is a publication that compares VPNs based on published specs, pricing and third-party reports.",
     "- Our picks are based on published specs, pricing and third-party reports.",
-    "- We may earn commissions from some links.",
     "- Some links are affiliate links; we may earn a commission.",
     "",
     "Primary Routes",
