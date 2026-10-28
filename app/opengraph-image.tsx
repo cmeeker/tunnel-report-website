@@ -9,6 +9,6 @@ export default function Image() {
   return buildOgImage({
     title: siteConfig.name,
     subtitle: siteConfig.tagline,
-    badge: "Independent VPN Testing",
+    badge: "VPN Comparison Guides",
   });
 }

@@ -12,8 +12,10 @@ export default async function Image({ params }: Props) {
   const target = providerMap[provider];
 
   return buildOgImage({
-    title: target ? `Best ${target.name} Alternatives` : "Best VPN Alternatives",
-    subtitle: "Independent picks based on speed, privacy, pricing, and real-world usability",
+    title: target ? `Alternatives to ${target.name}` : "Alternatives to VPN services",
+    subtitle: target
+      ? `Alternatives to ${target.name} compared on published specs, pricing and third-party reports.`
+      : "Alternatives to VPN services compared on published specs, pricing and third-party reports.",
     badge: "Alternatives · 2026",
   });
 }

@@ -170,7 +170,7 @@ export const citationSources: Record<string, CitationSource> = {
   },
   HM9: {
     id: "HM9",
-    title: "Securitum Audit: hide.me no-log policy (v1.0, 7 Jun 2024)",
+    title: "Securitum: hide.me no-log policy (v1.0, 7 Jun 2024)",
     publisher: "Securitum",
     url: "https://hide.me/downloads/Securitum_Hide.me_no-log-policy_20240607.pdf",
     year: 2024,
@@ -178,7 +178,7 @@ export const citationSources: Record<string, CitationSource> = {
   },
   HM10: {
     id: "HM10",
-    title: "Transparency Report 2024 (PDF)",
+    title: "hide.me report 2024 (PDF)",
     publisher: "hide.me",
     url: "https://hide.me/downloads/hide.me-transparency-report-2024.pdf",
     year: 2024,
@@ -186,7 +186,7 @@ export const citationSources: Record<string, CitationSource> = {
   },
   HM11: {
     id: "HM11",
-    title: "Transparency Report 2025 (PDF)",
+    title: "hide.me report 2025 (PDF)",
     publisher: "hide.me",
     url: "https://hide.me/downloads/hide.me-transparency-report-2025.pdf",
     year: 2025,
@@ -234,7 +234,7 @@ export const citationSources: Record<string, CitationSource> = {
   },
   V3: {
     id: "V3",
-    title: "Deloitte no-logs policy verified again (Jun 16, 2025)",
+    title: "Deloitte no-logs policy (Jun 16, 2025)",
     publisher: "Surfshark",
     url: "https://surfshark.com/blog/deloitte-nologs-policy-verified-again",
     year: 2025,
@@ -282,7 +282,7 @@ export const citationSources: Record<string, CitationSource> = {
   },
   P2: {
     id: "P2",
-    title: "For 5th year running, Proton VPN passes external no-logs audit",
+    title: "For 5th year running, Proton VPN passes an external no-logs review",
     publisher: "Proton VPN",
     url: "https://protonvpn.com/blog/no-logs-audit",
     year: 2026,
@@ -298,7 +298,7 @@ export const citationSources: Record<string, CitationSource> = {
   },
   P3b: {
     id: "P3b",
-    title: "Proton VPN's no-logs policy holds up under scrutiny of fourth independent audit",
+    title: "Proton VPN's no-logs policy holds up under scrutiny",
     publisher: "TechRadar",
     url: "https://www.techradar.com/vpn/vpn-privacy-security/proton-vpns-no-logs-policy-holds-up-under-scrutiny-of-fourth-independent-audit",
     year: 2025,

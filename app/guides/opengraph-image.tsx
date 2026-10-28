@@ -7,7 +7,7 @@ export const contentType = "image/png";
 export default function Image() {
   return buildOgImage({
     title: "VPN Guides",
-    subtitle: "Protocols, privacy, pricing, jurisdiction, and speed testing explained",
+    subtitle: "VPN guides based on published specs, pricing and third-party reports.",
     badge: "Guides · 2026",
   });
 }

@@ -40,13 +40,15 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
   if (!c) {
     return buildPageMetadata({
       title: "VPN Comparison",
-      description: "Independent VPN comparison from Tunnel Report.",
+      description: "Comparison of VPN services based on published specs, pricing and third-party reports.",
       path: `/compare/${matchup}`,
     });
   }
+  const leftName = providerMap[c.leftSlug]?.name ?? "VPN";
+  const rightName = providerMap[c.rightSlug]?.name ?? "VPN";
   return buildPageMetadata({
     title: c.title,
-    description: c.description,
+    description: `Comparison of ${leftName} and ${rightName} based on published specs, pricing and third-party reports.`,
     path: `/compare/${c.slug}`,
   });
 }
@@ -78,7 +80,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
       <JsonLd
         data={buildArticleSchema({
           headline: comparison.h1 ?? comparison.title,
-          description: comparison.description,
+          description: `Comparison of ${left.name} and ${right.name} based on published specs, pricing and third-party reports.`,
           path,
           datePublished: comparison.datePublished,
           dateModified: comparison.dateModified,
@@ -169,12 +171,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                 >
                   <div className="mb-3 flex items-center justify-between">
                     <h3 className="text-sm font-semibold text-[#e8ecf4]">{row.category}</h3>
-                    {row.winner === "left" && (
-                      <span className="badge badge-teal text-[0.6rem]">{left.name} wins</span>
-                    )}
-                    {row.winner === "right" && (
-                      <span className="badge badge-cyan text-[0.6rem]">{right.name} wins</span>
-                    )}
                     {row.winner === "draw" && (
                       <span className="badge badge-violet text-[0.6rem]">Draw</span>
                     )}
@@ -190,11 +186,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                           <CitedText text={row.left.value} />
                         </span>
                       </div>
-                      {row.winner !== "uncompared" ? (
-                        <div className="score-bar mt-1.5">
-                          <div className="score-bar-fill" style={{ width: `${row.left.pct}%` }} />
-                        </div>
-                      ) : null}
                     </div>
                     <div>
                       <div className="flex items-start justify-between gap-3 text-sm">
@@ -203,14 +194,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                           <CitedText text={row.right.value} />
                         </span>
                       </div>
-                      {row.winner !== "uncompared" ? (
-                        <div className="mt-1.5 h-[6px] overflow-hidden rounded-[3px] bg-[#1e293b]">
-                          <div
-                            className="h-full rounded-[3px] bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]"
-                            style={{ width: `${row.right.pct}%` }}
-                          />
-                        </div>
-                      ) : null}
                     </div>
                   </div>
                   {row.note ? (
@@ -305,14 +288,16 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
 
       <RelatedLinks links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)} />
 
+      {comparison.faqs.length > 0 ? (
+        <FaqSection
+          faqs={comparison.faqs}
+          renderAnswer={
+            comparison.sourceIds ? (answer) => <CitedText text={answer} /> : undefined
+          }
+        />
+      ) : null}
       {!isLongform && (
         <>
-          <FaqSection
-            faqs={comparison.faqs}
-            renderAnswer={
-              comparison.sourceIds ? (answer) => <CitedText text={answer} /> : undefined
-            }
-          />
           <SourcesList
             sources={
               comparison.sourceIds

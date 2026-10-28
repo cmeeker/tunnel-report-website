@@ -6,7 +6,7 @@ export const contentType = "image/png";
 
 export default function Image() {
   return buildOgImage({
-    title: "How We Rank VPNs and Password Managers",
+    title: "How We Pick VPNs and Password Managers",
     badge: "Methodology",
   });
 }

@@ -10,9 +10,9 @@ import { buildItemListSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "VPN Guides: Protocols, Privacy, Pricing, and Testing",
+  title: "VPN Guides: Protocols, Privacy and Pricing Explained",
   description:
-    "Tunnel Report's evergreen VPN guides explain protocols, no-logs claims, jurisdiction, speed testing, and renewal pricing.",
+    "VPN guides based on published specs, pricing and third-party reports.",
   path: "/guides",
 });
 
@@ -39,10 +39,10 @@ export default function GuidesIndexPage() {
       <header className="space-y-5">
         <span className="badge badge-cyan">VPN Guides</span>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
-          VPN Guides: Protocols, Privacy, Pricing, and Testing
+          VPN Guides: Protocols, Privacy and Pricing Explained
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          Evergreen explainers for readers who want to understand the mechanics behind our rankings:
+          Evergreen explainers for readers who want to understand the mechanics behind our comparisons:
           how protocols work, what no-logs claims mean, why jurisdiction matters, and how pricing
           changes after checkout.
         </p>

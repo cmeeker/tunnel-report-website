@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildWebPageSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
-const pageTitle = "How We Rank VPNs and Password Managers";
+const pageTitle = "How We Pick VPNs and Password Managers";
 const pageDescription =
-  "How Tunnel Report ranks VPNs and password managers: published specs, real pricing (intro vs renewal), independent audits and third-party reports.";
+  "2026 VPN comparison guides based on published specs, pricing and third-party reports.";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageTitle,
@@ -33,16 +33,16 @@ export default function MethodologyPage() {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "How We Rank", path: "/methodology" },
+          { name: "How We Pick", path: "/methodology" },
         ]}
       />
 
       <header className="space-y-5">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
-          How We Rank
+          How We Pick
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          Tunnel Report ranks VPNs and password managers using published specs, pricing and
+          Tunnel Report compares VPNs and password managers using published specs, pricing and
           third-party reports. We don&apos;t run our own lab tests, so you won&apos;t see our own
           speed numbers here.
         </p>
@@ -61,8 +61,7 @@ export default function MethodologyPage() {
             Prices change often, so check the provider&apos;s site.
           </li>
           <li>
-            Independent audits and privacy policies: what&apos;s been audited, by whom, and when, as
-            the provider or auditor publishes it.
+            Privacy policies: what the provider publishes about logging, and when.
           </li>
           <li>
             Third-party reports: named outside sources, linked and dated when we cite them.
@@ -73,7 +72,7 @@ export default function MethodologyPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">How money fits in</h2>
         <p>
-          We may earn a commission from some links. Rankings are based on published specs, pricing
+          We may earn a commission from some links. Our picks are based on published specs, pricing
           and third-party reports.
         </p>
       </section>

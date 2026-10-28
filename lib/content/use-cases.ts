@@ -5,6 +5,7 @@ import {
   workExpressPaidPick,
   type PaidPickSpec,
 } from "@/lib/content/paid-picks";
+import { nordAuditsClaim } from "@/lib/content/providers";
 
 export type UseCaseSlug = "streaming" | "privacy" | "torrenting" | "budget" | "gaming" | "work";
 
@@ -20,6 +21,8 @@ export type UseCaseGuide = {
   title: string;
   shortTitle: string;
   description: string;
+  /** Article JSON-LD only. Meta description stays on `description`. */
+  schemaDescription?: string;
   intro: string;
   dateModified: string;
   datePublished?: string;
@@ -36,7 +39,9 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "VPNs for Streaming in 2026: What to Compare",
     shortTitle: "Streaming",
     description:
-      "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on geo-unblocking consistency, and app reliability.",
+      "Comparison of streaming VPN services based on published specs, pricing and third-party reports.",
+    schemaDescription:
+      "Comparison of streaming VPN services based on published specs, pricing and third-party reports.",
     intro:
       "Streaming is the use case where VPN marketing most often gets ahead of reality.",
     datePublished: "2026-04-08",
@@ -44,36 +49,36 @@ export const useCaseGuides: UseCaseGuide[] = [
     updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best overall streaming VPN", reason: "NordVPN is our top streaming pick." },
-      { providerSlug: "expressvpn", label: "Best premium streaming UX", reason: "Polished apps and reliable region switching for non-technical users.", paidPick: streamingExpressPaidPick },
-      { providerSlug: "surfshark", label: "Best family value", reason: "Unlimited devices at lower entry pricing." },
+      { providerSlug: "nordvpn", label: "Our default streaming pick", reason: "NordVPN is our default streaming pick." },
+      { providerSlug: "expressvpn", label: "Streaming pick", reason: "Polished apps for non-technical users.", paidPick: streamingExpressPaidPick },
+      { providerSlug: "surfshark", label: "Family value pick", reason: "Unlimited devices at lower entry pricing." },
     ],
     sections: [
       {
         heading: "What actually matters for streaming VPNs",
         paragraphs: [
-          "We weigh streaming picks by server locations, Smart TV and router support, simultaneous connections and refund window, based on published specs. NordVPN is our top pick because it covers all four, not because it wins every one.",
+          "NordVPN is our default pick because it covers all four.",
         ],
       },
       {
         heading: "Regional sports blackouts are the real buyer intent",
         paragraphs: [
           "Searches for streaming VPNs spike around live sports because blackouts are frustrating and time-sensitive. A VPN that works for a static Netflix library but fails during a live NBA or MLB window is not a real streaming pick.",
-          "Surfshark was close on US libraries, but occasional CAPTCHA and server retries kept it just behind the premium options.",
+          "Surfshark is our family-value pick because its plans allow unlimited devices, according to Surfshark.",
         ],
       },
       {
         heading: "The privacy tradeoff",
         paragraphs: [
-          "Streaming users often prioritize access over privacy, but logging posture still matters. A streaming VPN still routes your traffic, still sees timing metadata, and still deserves the same audit scrutiny as a privacy-first provider.",
-          "If streaming is your only use case, you may not need the most anonymous provider. You do need a provider with stable infrastructure and a clear no-logs policy.",
+          "Streaming users often prioritize access over privacy, but logging posture still matters. A streaming VPN still routes your traffic and still sees timing metadata.",
+          "If streaming is your only use case, you may not need the most anonymous provider. You do need a provider with a published no-logs policy.",
         ],
       },
     ],
     faqs: [
-      { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our top streaming pick." },
+      { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our default streaming pick." },
       { question: "Will a VPN always bypass sports blackouts?", answer: "No. Blackout enforcement changes by league, broadcaster, device, and payment profile. A VPN improves location flexibility but cannot guarantee access on every platform." },
-      { question: "Is ExpressVPN better than NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is faster and usually cheaper, which makes it the better default for most streaming households." },
+      { question: "ExpressVPN or NordVPN for streaming?", answer: "NordVPN is our default pick for most streaming households based on its published features and plan pricing. Check each provider's pricing page for current terms, and note that no VPN can guarantee access to a streaming service." },
     ],
   },
   {
@@ -81,31 +86,30 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Privacy in 2026",
     shortTitle: "Privacy",
     description:
-      "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, payment anonymity, and incident-response transparency.",
+      "Privacy-first VPN picks based on open-source clients, jurisdiction, and payment anonymity.",
     intro:
-      "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what audits tested, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
+      "We look at controls that providers publish and third parties can verify.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
     primaryPick: "mullvad",
     picks: [
-      { providerSlug: "mullvad", label: "Best privacy purist pick", reason: "Anonymous account numbers, cash payments, open-source clients, and no affiliate funnel." },
-      { providerSlug: "protonvpn", label: "Best transparency ecosystem", reason: "Swiss jurisdiction, open-source apps, credible free tier, and strong public privacy posture." },
-      { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "Frequent infrastructure audits and RAM-only server architecture." },
+      { providerSlug: "mullvad", label: "Privacy purist pick", reason: "Anonymous account numbers, cash payments, open-source clients, and no affiliate funnel." },
+      { providerSlug: "protonvpn", label: "Open-source apps", reason: "Swiss jurisdiction, open-source apps, credible free tier, and public privacy posture." },
+      { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "" },
     ],
     sections: [
       {
-        heading: "Audit scope beats audit marketing",
+        heading: "What providers publish",
         paragraphs: [
-          "A no-logs audit only matters if the scope reaches real infrastructure, server configuration, and retention controls. Many providers advertise audits that are closer to policy reviews than technical verification.",
-          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is our mainstream pick. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
+          "Mullvad and Proton VPN stand out. NordVPN is our mainstream pick. " + nordAuditsClaim,
         ],
       },
       {
         heading: "Payment anonymity matters for some users",
         paragraphs: [
           "Most VPN buyers do not need cash-by-mail payments, but the option reveals something important about provider philosophy. Mullvad's account-number model minimizes stored personal data from the first interaction.",
-          "Proton VPN is less anonymous at signup but stronger as a broader privacy ecosystem. If you already use Proton Mail or Drive, the bundle can make sense.",
+          "Proton VPN is less anonymous at signup. If you already use Proton Mail or Drive, the bundle can make sense.",
         ],
       },
       {
@@ -117,8 +121,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       },
     ],
     faqs: [
-      { question: "What is the most private VPN?", answer: "Mullvad is our top privacy pick because it minimizes account data, supports anonymous payments, and does not participate in the affiliate incentives that shape most VPN rankings." },
-      { question: "Is Proton VPN better than Mullvad?", answer: "Proton VPN has stronger ecosystem and Swiss-jurisdiction advantages. Mullvad has stronger account anonymity and simpler pricing." },
+      { question: "What is the most private VPN?", answer: "Mullvad is our privacy pick because it minimizes account data, supports anonymous payments, and does not participate in the affiliate incentives." },
       { question: "Do privacy VPNs work for streaming?", answer: "Sometimes, but streaming is not the core design goal for Mullvad or Proton VPN. Choose NordVPN or ExpressVPN if streaming is your primary use case." },
     ],
   },
@@ -127,7 +130,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Torrenting in 2026",
     shortTitle: "Torrenting",
     description:
-      "Torrenting VPN recommendations based on kill switch reliability, P2P support, no-logs verification, and jurisdiction.",
+      "Torrenting VPN recommendations based on kill switch behavior, P2P support, and jurisdiction.",
     intro:
       "Torrenting is one of the few consumer VPN use cases where a weak kill switch or sloppy logging policy can create immediate consequences. We prioritize providers that support P2P clearly and document no-logs controls.",
     datePublished: "2026-04-08",
@@ -135,35 +138,28 @@ export const useCaseGuides: UseCaseGuide[] = [
     updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best torrenting VPN for most users", reason: "P2P-optimized servers and a built-in kill switch." },
-      { providerSlug: "mullvad", label: "Best anonymous torrenting pick", reason: "Minimal account data and flat pricing, with no affiliate relationship influencing placement." },
-      { providerSlug: "protonvpn", label: "Best privacy ecosystem", reason: "Open-source clients and clear P2P support on paid servers." },
+      { providerSlug: "nordvpn", label: "Torrenting pick", reason: "P2P-optimized servers and a built-in kill switch." },
+      { providerSlug: "mullvad", label: "Anonymous torrenting pick", reason: "Minimal account data and flat pricing, with no affiliate relationship influencing placement." },
+      { providerSlug: "protonvpn", label: "Privacy ecosystem pick", reason: "Open-source clients and clear P2P support on paid servers." },
     ],
     sections: [
       {
         heading: "The kill switch is non-negotiable",
         paragraphs: [
           "For torrenting, a kill switch is not a nice-to-have checkbox. If the VPN drops and your torrent client keeps running on your real IP, the VPN failed the use case.",
-          "We weight kill switch and leak-protection features more heavily here than streaming features or app design.",
         ],
       },
       {
         heading: "No-logs claims need technical backing",
         paragraphs: [
-          "Torrenting creates a sharper incentive for copyright complaints and legal requests. That makes audit scope, jurisdiction, and server design more important than generic privacy copy.",
-          "RAM-only infrastructure, independently reviewed no-logs systems, and minimal account data are the strongest signals we can verify without access to internal systems.",
-        ],
-      },
-      {
-        heading: "Speed still matters",
-        paragraphs: [
-          "NordVPN remains our default pick because it offers P2P-optimized servers and a kill switch. Mullvad is the better ideological pick for users who value account anonymity above convenience.",
+          "Torrenting creates a sharper incentive for copyright complaints and legal requests. That makes jurisdiction and server design more important than generic privacy copy.",
+          "NordVPN remains our default pick because it offers P2P-optimized servers and a kill switch.",
         ],
       },
     ],
     faqs: [
       { question: "Is torrenting safe with a VPN?", answer: "A VPN reduces IP exposure only if the kill switch and leak protection work correctly. It does not make illegal downloads legal or remove all risk." },
-      { question: "Which VPN is best for torrenting?", answer: "NordVPN is our best default torrenting VPN. Mullvad is the best privacy-first option for users who want minimal account data." },
+      { question: "Which VPN is best for torrenting?", answer: "NordVPN is our default torrenting pick. Mullvad is our privacy pick." },
       { question: "Do free VPNs work for torrenting?", answer: "Most free VPNs are poor torrenting choices because they restrict bandwidth, block P2P, or monetize user data." },
     ],
   },
@@ -172,45 +168,47 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best Cheap VPN in 2026",
     shortTitle: "Budget",
     description:
-      "The best cheap VPNs based on full lifecycle cost, renewal pricing, device limits, privacy tradeoffs, and speed-per-dollar.",
+      "Comparison of budget VPN services based on published specs, pricing and third-party reports.",
+    schemaDescription:
+      "Comparison of budget VPN services based on published specs, pricing and third-party reports.",
     intro:
-      "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device limits, and whether privacy features are included at the discounted tier.",
+      "Cheap VPN picks are easy to manipulate because most providers advertise the first-year price and bury renewal math.",
     datePublished: "2026-10-17",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
     primaryPick: "surfshark",
     picks: [
-      { providerSlug: "surfshark", label: "Best cheap VPN overall", reason: "Unlimited devices on every plan. See current pricing for the 24-month + 3-month Starter plan. Surfshark's pricing page doesn't list the renewal price, so check it at checkout." },
-      { providerSlug: "purevpn", label: "Lowest entry price", reason: "See current pricing for the 2-year + 3-month Standard plan, including renewal. More tradeoffs on trust track record." },
-      { providerSlug: "protonvpn", label: "Best free tier", reason: "A usable free plan from a credible privacy company, with paid upgrades available." },
+      { providerSlug: "surfshark", label: "Cheap VPN pick", reason: "Unlimited devices on every plan. See current pricing for the 24-month + 3-month Starter plan. Surfshark's pricing page doesn't list the renewal price, so check it at checkout." },
+      { providerSlug: "purevpn", label: "Lowest entry price", reason: "See current pricing for the 2-year + 3-month Standard plan, including renewal." },
+      { providerSlug: "protonvpn", label: "Free tier pick", reason: "A usable free plan from a credible privacy company, with paid upgrades available." },
     ],
     sections: [
       {
         heading: "Intro pricing is not the whole cost",
         paragraphs: [
           "Most VPN providers discount heavily for the first term and raise prices at renewal. The real question is whether the first-term savings justify the year-two increase and any feature gaps.",
-          "Surfshark wins this category because unlimited devices improve household value. A cheaper plan with a tight device cap often costs more once you cover every phone, tablet, and laptop.",
+          "A cheaper plan with a tight device cap often costs more once you cover every phone, tablet, and laptop.",
           "Prices checked October 15, 2026. Prices change often, so check the provider's site.",
         ],
       },
       {
         heading: "Where PureVPN fits",
         paragraphs: [
-          "PureVPN is often the lowest sticker price in our top five. That makes it appealing for light domestic browsing, but Surfshark stays our default budget pick.",
-          "If budget is your only constraint and you understand the tradeoffs, PureVPN can work. If you want the best cheap VPN for a household, Surfshark is the cleaner pick.",
+          "PureVPN is often the lowest sticker price. That makes it appealing for light domestic browsing, but Surfshark stays our default budget pick.",
+          "If budget is your only constraint and you understand the tradeoffs, PureVPN can work.",
         ],
       },
       {
         heading: "Free is not always cheaper",
         paragraphs: [
-          "Free VPNs often monetize through ads, data collection, or bandwidth restrictions. Proton VPN is the exception we trust for low-risk testing, but its free tier is not a full replacement for a paid VPN.",
+          "Free VPNs often monetize through ads, data collection, or bandwidth restrictions. Proton VPN's free tier is not a full replacement for a paid VPN.",
           "If your threat model includes credential protection or regular public Wi-Fi, do not choose a random free VPN just to save a few dollars a month.",
         ],
       },
     ],
     faqs: [
       { question: "What is the best cheap VPN?", answer: "Surfshark is our best cheap VPN because unlimited devices make the plan go further than rivals. See current pricing on the 24-month + 3-month Starter plan. Check the renewal price at checkout." },
-      { question: "Is PureVPN worth it for the price?", answer: "PureVPN can be worth it for price-first buyers, but it trails Surfshark and NordVPN on trust track record." },
+      { question: "Is PureVPN worth it for the price?", answer: "PureVPN can be worth it for price-first buyers." },
       { question: "Should I use a free VPN?", answer: "Use Proton VPN's free tier if you need a credible free option. Avoid random free VPNs with unclear ownership or data monetization." },
     ],
   },
@@ -219,17 +217,19 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Gaming in 2026",
     shortTitle: "Gaming",
     description:
-      "Gaming VPN recommendations based on latency, packet stability, WireGuard support, DDoS protection claims, and regional routing.",
+      "Comparison of gaming VPN services based on published specs, pricing and third-party reports.",
+    schemaDescription:
+      "Comparison of gaming VPN services based on published specs, pricing and third-party reports.",
     intro:
-      "Gaming VPN marketing is full of nonsense. A VPN cannot magically lower latency on every route. It can help with routing consistency, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
+      "Gaming VPN marketing is full of nonsense. It can help with routing, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has nearby servers.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best gaming VPN overall", reason: "NordVPN is our top gaming pick: it offers WireGuard-based NordLynx on every platform." },
+      { providerSlug: "nordvpn", label: "Gaming pick", reason: "NordVPN is our top gaming pick: it offers WireGuard-based NordLynx on every platform." },
       { providerSlug: "surfshark", label: "Budget gaming VPN", reason: "Unlimited devices for multi-console households." },
-      { providerSlug: "expressvpn", label: "Best console setup", reason: "Clear router and device setup guides for living-room gaming.", paidPick: gamingExpressPaidPick },
+      { providerSlug: "expressvpn", label: "Console setup pick", reason: "Clear router and device setup guides for living-room gaming.", paidPick: gamingExpressPaidPick },
     ],
     sections: [
       {
@@ -240,16 +240,16 @@ export const useCaseGuides: UseCaseGuide[] = [
         ],
       },
       {
-        heading: "Console setup changes the ranking",
+        heading: "Console setup changes which pick fits.",
         paragraphs: [
-          "PlayStation, Xbox, and Switch support usually means router-level setup or Smart DNS. ExpressVPN earns points here because its setup documentation is cleaner for non-technical users.",
+          "PlayStation, Xbox, and Switch support usually means router-level setup or Smart DNS.",
           "PC gamers should prioritize WireGuard support, nearby exits, and a kill switch that does not interrupt game updates or voice chat unnecessarily.",
         ],
       },
     ],
     faqs: [
       { question: "Can a VPN reduce gaming ping?", answer: "Sometimes, if your ISP route is inefficient. Often it adds latency. Test nearby VPN servers against your actual game before committing." },
-      { question: "Is Surfshark good for gaming?", answer: "Yes for most domestic gaming. Surfshark is a strong value pick, especially for households with multiple devices and consoles." },
+      { question: "Is Surfshark good for gaming?", answer: "Yes for most domestic gaming, especially for households with multiple devices and consoles." },
     ],
   },
   {
@@ -257,45 +257,45 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Remote Work in 2026",
     shortTitle: "Remote Work",
     description:
-      "Remote-work VPN picks based on split tunneling, kill switch reliability, network transitions, video-call stability, and malware blocking.",
+      "Comparison of work VPN services based on published specs, pricing and third-party reports.",
+    schemaDescription:
+      "Comparison of work VPN services based on published specs, pricing and third-party reports.",
     intro:
-      "Remote workers need a different VPN than streamers. The winning provider must survive coffee-shop Wi-Fi, hotel networks, video calls, cloud apps, and corporate tools without forcing constant troubleshooting.",
+      "Remote workers need a different VPN than streamers. The provider must survive coffee-shop Wi-Fi, hotel networks, video calls, cloud apps, and corporate tools without forcing constant troubleshooting.",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
     updatedDateLabel: "October 18, 2026",
     primaryPick: "nordvpn",
     picks: [
-      { providerSlug: "nordvpn", label: "Best remote-work VPN overall", reason: "Split tunneling, malware blocking and apps on every major platform." },
-      { providerSlug: "expressvpn", label: "Best for low-maintenance setup", reason: "Polished apps and clear support docs for non-technical workers.", paidPick: workExpressPaidPick },
-      { providerSlug: "protonvpn", label: "Best for privacy-minded professionals", reason: "Strong transparency and open-source clients for sensitive workflows." },
+      { providerSlug: "nordvpn", label: "Remote-work pick", reason: "Split tunneling, malware blocking and apps on every major platform." },
+      { providerSlug: "expressvpn", label: "Low-maintenance setup pick", reason: "Polished apps and clear support docs for non-technical workers.", paidPick: workExpressPaidPick },
+      { providerSlug: "protonvpn", label: "Privacy-minded professionals pick", reason: "Open-source clients for sensitive workflows." },
     ],
     sections: [
       {
-        heading: "Remote work needs reliability more than peak speed",
+        heading: "What remote work needs from a VPN",
         paragraphs: [
-          "For work, we weight split tunneling, kill switch and platform support more heavily than advertised maximum speeds.",
-          "NordVPN is the best default because it has enough speed for video calls and file sync while still offering mature security controls.",
+          "NordVPN is our default pick because it offers security controls.",
         ],
       },
       {
         heading: "Split tunneling matters",
         paragraphs: [
           "Remote workers often need some apps protected and others left alone: corporate VPN, Zoom, Slack, cloud storage, browser sessions, and printer discovery can conflict if every packet is forced through one tunnel.",
-          "NordVPN and ExpressVPN handle split tunneling more cleanly than budget providers. Proton VPN is a better choice when privacy and open-source posture matter more than convenience.",
         ],
       },
       {
         heading: "Public Wi-Fi is still the core use case",
         paragraphs: [
           "Coffee shops, airports, hotels, and conferences remain messy network environments. HTTPS helps, but a VPN still reduces passive local-network exposure and shields DNS behavior from the access point operator.",
-          "If you work only from a trusted home fiber connection, a VPN may be less important than password hygiene, device updates, and multi-factor authentication.",
+          "If you work only from a home fiber connection, a VPN may be less important than password hygiene, device updates, and multi-factor authentication.",
         ],
       },
     ],
     faqs: [
-      { question: "What is the best VPN for remote work?", answer: "NordVPN is our best remote-work VPN because it combines stable speeds, mature apps, split tunneling, and malware/tracker blocking." },
+      { question: "What is the best VPN for remote work?", answer: "NordVPN is our pick for remote work based on its published feature set (such as split tunneling, per NordVPN's support pages) and plan pricing." },
       { question: "Do I need a VPN if my company already has one?", answer: "Maybe not. If your company VPN covers all sensitive work traffic, a personal VPN may be redundant or even conflict with corporate tooling." },
-      { question: "Will a VPN slow down Zoom?", answer: "A good VPN should not noticeably affect Zoom on a strong connection. Poor server selection or long-distance routing can add latency and reduce call quality." },
+      { question: "Will a VPN slow down Zoom?", answer: "A good VPN should not noticeably affect Zoom. Poor server selection or long-distance routing can add latency and reduce call quality." },
     ],
   },
 ];

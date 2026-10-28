@@ -11,30 +11,32 @@ import { HeroGraphic } from "@/components/HeroGraphic";
 import { PlainInternalLinkList } from "@/components/PlainInternalLinkList";
 import { SourcesList } from "@/components/SourcesList";
 import { comparisonMap } from "@/lib/content/comparisons";
+import { providerMap } from "@/lib/content/providers";
 import { latestPriceChecks } from "@/lib/content/latest-price-checks";
 import { citationSources } from "@/lib/content/facts";
 import { homepageComparison } from "@/lib/content/vpn-metrics";
+import { PICK_LABELS } from "@/app/best-vpns/page";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { affiliateDisclosureAnswer } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Independent VPN Reviews & 2026 Rankings | Tunnel Report",
+  title: "VPN Comparison Guides & 2026 Picks | Tunnel Report",
   description:
-    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "Tunnel Report publishes VPN comparison guides based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   path: "/",
   type: "website",
 });
 
 const homepageFaqs = [
   {
-    question: "How does Tunnel Report score VPN services?",
+    question: "How does Tunnel Report choose its VPN picks?",
     answer:
-      "Scores are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time. Each factor is weighted the same way for every provider we cover.",
+      "Our picks are based on published specs, pricing and third-party reports. We did not run our own speed or unblocking tests. We may earn a commission if you sign up through some links on this site.",
   },
   {
-    question: "Do affiliate commissions affect your rankings?",
-    answer:
-      "No. Editorial scoring is walled off from commercial relationships. We disclose affiliate links on every page where they appear, and commission potential has never changed a ranking position. Our methodology is published in full.",
+    question: "Do you earn money from VPN links?",
+    answer: affiliateDisclosureAnswer,
   },
   {
     question: "How often are reviews updated?",
@@ -44,7 +46,7 @@ const homepageFaqs = [
   {
     question: "What should privacy-focused readers look for first?",
     answer:
-      "Independent audit scope and frequency, transparent incident response history, kill switch reliability, and clear data-retention language. A low price means nothing if the provider cannot demonstrate these fundamentals.",
+      "Kill switch behavior and clear data-retention language. A low price means nothing if the provider cannot demonstrate these fundamentals.",
   },
 ];
 
@@ -76,7 +78,7 @@ export default function Home() {
       >
         <div className="mx-auto w-full max-w-3xl text-center">
           <div className="space-y-5 fade-in-up">
-            <div className="badge badge-teal mx-auto">Independent VPN Coverage</div>
+            <div className="badge badge-teal mx-auto">VPN Comparison Guides</div>
 
             {/* Hero graphic */}
             <div className="relative mx-auto h-36 w-full max-w-2xl sm:h-44 md:h-48">
@@ -84,22 +86,24 @@ export default function Home() {
             </div>
 
             <h1 className="text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
-              VPN Reviews You Can Trust.<br />
-              <span className="gradient-text"> Start Reading the Audits.</span>
+              VPN Reviews
             </h1>
+            <Link href="/best-vpns" className="affiliate-cta">
+              Start Reading
+            </Link>
             <p className="mx-auto max-w-xl text-base leading-relaxed text-[#64748b]">
               VPN coverage based on published specs, pricing and third-party reports, with
               claim-level citations.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <Link href="/best-vpns" className="affiliate-cta">
-                See 2026 Rankings
+                See 2026 picks
               </Link>
               <Link
                 href="/methodology"
                 className="inline-flex min-h-[48px] items-center rounded-xl border border-[#1e293b] px-5 text-sm font-semibold text-[#94a3b8] transition hover:border-[#00d4aa]/30 hover:text-white"
               >
-                How We Rank
+                How We Pick
               </Link>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-1 text-xs text-[#475569]">
@@ -154,7 +158,7 @@ export default function Home() {
         <div>
           <h2 className="text-2xl font-bold text-white">Popular VPN Comparisons</h2>
           <p className="mt-1 text-sm text-[#94a3b8]">
-            Head-to-head breakdowns across speed, privacy, pricing, UX, jurisdiction, and support.
+            Head-to-head breakdowns across privacy, pricing, UX, jurisdiction, and support.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2">
@@ -174,7 +178,7 @@ export default function Home() {
                       {label}
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-[#94a3b8]">
-                      {comparison.description}
+                      {`Comparison of ${providerMap[comparison.leftSlug]?.name ?? "VPN"} and ${providerMap[comparison.rightSlug]?.name ?? "VPN"} based on published specs, pricing and third-party reports.`}
                     </p>
                   </div>
                   <span className="shrink-0 text-sm font-semibold text-[#00d4aa] opacity-80 transition group-hover:opacity-100">
@@ -210,7 +214,7 @@ export default function Home() {
                 <th>Provider</th>
                 <th>Privacy Profile</th>
                 <th>Price (intro vs renewal)</th>
-                <th>Score</th>
+                <th>Best for</th>
                 <th></th>
               </tr>
             </thead>
@@ -218,7 +222,7 @@ export default function Home() {
               {homepageComparison.map((vpn, i) => (
                 <tr key={vpn.name}>
                   <td className="font-semibold text-white">
-                    {i === 0 && <span className="badge badge-teal mr-2 text-[0.65rem]">Top Pick</span>}
+                    {i === 0 && <span className="badge badge-teal mr-2 text-[0.65rem]">Our default pick</span>}
                     <Link
                       href={`/reviews/${vpn.slug}`}
                       className="text-white transition hover:text-[#00d4aa]"
@@ -228,14 +232,7 @@ export default function Home() {
                   </td>
                   <td className="max-w-[200px]">{vpn.privacy}</td>
                   <td className="font-semibold text-white">{vpn.pricePerMonth}</td>
-                  <td>
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-white">{vpn.score.toFixed(1)}</span>
-                      <div className="score-bar w-16">
-                        <div className="score-bar-fill" style={{ width: `${(vpn.score / 5) * 100}%` }} />
-                      </div>
-                    </div>
-                  </td>
+                  <td>{PICK_LABELS[vpn.slug] ?? "Alternative pick"}</td>
                   <td>
                     {vpn.isAffiliate ? (
                       <AffiliateCTA href={vpn.href} partner={vpn.partner} label={vpn.ctaLabel ?? "Visit"} />
@@ -266,9 +263,9 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-3">
           {[
             {
-              title: "VPN Privacy Audits: What Actually Matters in 2026",
+              title: "VPN Privacy: What Actually Matters in 2026",
               excerpt:
-                "Not all audits test the same controls. I walked through scope documents from four major providers and found the gap between marketing claims and actual test coverage is often wider than vendors let on.",
+                "Providers publish scope documents; read each provider's own report for what it covered.",
               href: "/reviews/nordvpn",
               image: "/images/article-privacy.svg",
               badge: "Analysis",
@@ -276,7 +273,7 @@ export default function Home() {
             {
               title: "Surfshark Review 2026: Best Budget VPN for Families?",
               excerpt:
-                "Unlimited devices and aggressive pricing — our full Surfshark review breaks down where it beats NordVPN and where it does not.",
+                "Unlimited devices and aggressive pricing.",
               href: "/reviews/surfshark",
               image: "/images/article-speed.svg",
               badge: "Review",
@@ -284,7 +281,7 @@ export default function Home() {
             {
               title: "How Local ISP Conditions Change Your VPN Experience",
               excerpt:
-                "New FCC labeling requirements give consumers standardized latency and fee data. This guide explains what the labels show for each metro area.",
+                "New FCC labeling requirements give consumers standardized fee data. This guide explains what the labels show for each metro area.",
               href: "/vpn/los-angeles",
               image: "/images/article-city.svg",
               badge: "Field Report",

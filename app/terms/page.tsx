@@ -71,9 +71,8 @@ export default function TermsPage() {
         <h2 className="text-2xl font-bold text-white">2. Affiliate links</h2>
         <p>
           Some links on the Site are affiliate links. If you click one and buy something, we may earn
-          a commission at no extra cost to you. This does not change the price you pay. We aim to keep
-          our rankings independent of commissions; see our methodology and editorial standards on the
-          Site.
+          a commission at no extra cost to you. This does not change the price you pay. We may earn a
+          commission if you sign up through some links on this site.
         </p>
       </section>
 
@@ -98,7 +97,7 @@ export default function TermsPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">5. Intellectual property</h2>
         <p>
-          The Site&apos;s content, including text, rankings, graphics and design, is owned by us or
+          The Site&apos;s content, including text, comparisons, graphics and design, is owned by us or
           our licensors and protected by law. You may view and share links to it for personal,
           non-commercial use. You may not copy, republish or scrape substantial parts of it without
           our written permission. Product names and logos belong to their owners.

@@ -13,6 +13,7 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
 import { getCityRelatedLinks } from "@/lib/seo/related-links";
 import { cityGuideMap } from "@/lib/content/cities";
+import { nordAuditsClaim } from "@/lib/content/providers";
 import { citationSources, citySources } from "@/lib/content/facts";
 import { AFFILIATE_URLS } from "@/lib/content/vpn-metrics";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -57,7 +58,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
   const cityFaqs = [
     {
       question: `What is the best VPN for ${guide.city} residents?`,
-      answer: `NordVPN is our top pick for ${guide.city} based on its published specs, including its WireGuard-based NordLynx protocol and US servers. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. Surfshark is our budget pick, with unlimited devices on every plan [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. ${guide.recommendation}`,
+      answer: `NordVPN is our default pick for ${guide.city} based on its published specs, including its WireGuard-based NordLynx protocol and US servers. ${nordAuditsClaim} Surfshark is our budget pick, with unlimited devices on every plan [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. ${guide.recommendation}`,
     },
     {
       question: `Does VPN performance vary by neighborhood in ${guide.city}?`,
@@ -65,7 +66,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
     },
     {
       question: `Which ${guide.city} ISP works best with a VPN?`,
-      answer: `Every VPN adds some overhead, so a faster plan leaves more headroom. Run a speed test with the VPN on and off at the times you usually go online.`,
+      answer: `Every VPN adds some overhead. Run a speed test with the VPN on and off at the times you usually go online.`,
     },
   ];
 
@@ -101,8 +102,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
           {guide.populationContext} This guide maps local ISP conditions, neighborhood-level
-          connectivity differences, and privacy considerations specific to {guide.city} residents
-          against our provider test data.
+          connectivity differences, and privacy considerations specific to {guide.city} residents.
         </p>
         <AuthorByline
           date={guide.slug === "austin" || guide.slug === "new-york" ? "October 18, 2026" : "October 17, 2026"}

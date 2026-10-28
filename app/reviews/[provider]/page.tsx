@@ -10,7 +10,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RatingStars } from "@/components/RatingStars";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
 import {
@@ -42,13 +41,13 @@ export async function generateMetadata({ params }: ReviewPageProps): Promise<Met
   if (!p) {
     return buildPageMetadata({
       title: "VPN Review",
-      description: "Independent VPN review from Tunnel Report.",
+      description: "VPN overview based on published specs, pricing and third-party reports.",
       path: `/reviews/${provider}`,
     });
   }
   return buildPageMetadata({
     title: p.reviewTitle,
-    description: p.reviewDescription,
+    description: `${p.name} overview based on published specs, pricing and third-party reports.`,
     path: `/reviews/${p.slug}`,
   });
 }
@@ -141,9 +140,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
       <JsonLd
         data={buildReviewSchema({
           itemName: provider.name,
-          description:
-            "Consumer VPN service evaluated by Tunnel Report for speed, privacy, and pricing clarity.",
-          ratingValue: provider.score,
+          description: `${provider.name} overview based on published specs, pricing and third-party reports.`,
           summary: provider.reviewSummary,
           path,
           dateModified: provider.dateModified,
@@ -171,7 +168,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
           {provider.reviewTitle}
         </h1>
         <AuthorByline date={updatedDateLabel} />
-        <RatingStars rating={provider.score} size="lg" />
       </header>
 
       <DisclosureBanner />
@@ -224,7 +220,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
           <p className="text-lg leading-relaxed text-[#cbd5e1]">
             {renderTextWithCitations(provider.reviewSummary, sourceIdSet)}
           </p>
-          <RatingStars rating={provider.score} size="lg" />
           {ctaHref ? (
             <AffiliateCTA
               href={ctaHref}

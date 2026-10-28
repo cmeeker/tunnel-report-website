@@ -9,7 +9,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RatingStars } from "@/components/RatingStars";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { alternativeExpressPaidPicks } from "@/lib/content/paid-picks";
 import { getProviderCtaHref, providerMap, providers, providerSlugs, type Provider } from "@/lib/content/providers";
@@ -45,15 +44,15 @@ export async function generateMetadata({ params }: AlternativesPageProps): Promi
   const target = providerMap[provider];
   if (!target) {
     return buildPageMetadata({
-      title: "Best VPN Alternatives",
-      description: "Independent VPN alternative recommendations from Tunnel Report.",
+      title: "Alternatives to VPN services",
+      description: "Alternatives to VPN services compared on published specs, pricing and third-party reports.",
       path: `/alternatives/${provider}`,
     });
   }
 
   return buildPageMetadata({
-    title: `Best ${target.name} Alternatives in 2026`,
-    description: `The best ${target.name} alternatives based on speed, privacy posture, pricing, and real-world usability. Independent recommendations from Tunnel Report.`,
+    title: `Alternatives to ${target.name}`,
+    description: `Alternatives to ${target.name} compared on published specs, pricing and third-party reports.`,
     path: `/alternatives/${target.slug}`,
   });
 }
@@ -71,8 +70,8 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       <JsonLd
         data={[
           buildArticleSchema({
-            headline: `Best ${target.name} Alternatives in 2026`,
-            description: `Independent alternatives to ${target.name}.`,
+            headline: `Alternatives to ${target.name}`,
+            description: `Alternatives to ${target.name} compared on published specs, pricing and third-party reports.`,
             path,
             datePublished: "2026-10-15",
             dateModified: "2026-10-18",
@@ -102,10 +101,10 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
           <span className="badge badge-violet">Updated October 18, 2026</span>
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
-          Best {target.name} Alternatives in 2026
+          Alternatives to {target.name}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          {target.name} is a strong fit for some buyers, but it is not the right default for every
+          {target.name} is a fit for some buyers, but it is not the right default for every
           use case. We compared published specs, privacy policies, pricing over the full plan term, and
           third-party reports to pick the alternatives below.
         </p>
@@ -116,24 +115,16 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
 
       <section className="glass-card p-8">
         <h2 className="text-2xl font-bold text-white">Why look beyond {target.name}?</h2>
-        <div className="mt-4 grid gap-5 md:grid-cols-3">
-          <div>
-            <p className="text-xs font-semibold uppercase text-[#64748b]">Current score</p>
-            <RatingStars rating={target.score} />
-          </div>
+        <div className="mt-4 grid gap-5 md:grid-cols-2">
           <div>
             <p className="text-xs font-semibold uppercase text-[#64748b]">Main limitation</p>
             <p className="mt-2 text-sm text-[#94a3b8]">{target.cons[0]}</p>
-          </div>
-          <div>
-            <p className="text-xs font-semibold uppercase text-[#64748b]">Best reason to stay</p>
-            <p className="mt-2 text-sm text-[#94a3b8]">{target.pros[0]}</p>
           </div>
         </div>
       </section>
 
       <section className="space-y-5">
-        <h2 className="text-2xl font-bold text-white">Top Alternatives to {target.name}</h2>
+        <h2 className="text-2xl font-bold text-white">Alternatives to {target.name}</h2>
         {alternatives.map((alt, index) => {
           const href = getProviderCtaHref(alt);
           const paidPick = alt.slug === "expressvpn" ? alternativeExpressPaidPicks[target.slug] : undefined;
@@ -141,15 +132,16 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
             <div key={alt.slug} className="glass-card overflow-hidden">
               <div className="flex items-center justify-between border-b border-[#1e293b] px-6 py-4">
                 <div>
-                  <span className="badge badge-teal mb-2 text-[0.65rem]">
-                    {index === 0 ? "Alternative" : `#${index + 1} Alternative`}
-                  </span>
+                  {index === 0 ? (
+                    <span className="badge badge-teal mb-2 text-[0.65rem]">Alternative</span>
+                  ) : null}
                   <h3 className="text-xl font-bold text-white">{alt.name}</h3>
                 </div>
-                <RatingStars rating={alt.score} />
               </div>
               <div className="space-y-5 p-8">
-                <p className="leading-relaxed text-[#94a3b8]">{alt.quickVerdict}</p>
+                {/\b(best|top)\b/i.test(alt.quickVerdict) ? null : (
+                  <p className="leading-relaxed text-[#94a3b8]">{alt.quickVerdict}</p>
+                )}
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <h4 className="text-sm font-semibold uppercase tracking-wide text-[#00d4aa]">
@@ -188,17 +180,8 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">The honest recommendation</h2>
-        <p>
-          If {target.name} solves your main use case and you are comfortable with its limitations, you
-          do not need to switch just because another provider ranks higher in one category. VPNs are
-          tools, not collectibles.
-        </p>
-        <p>
-          The strongest alternative for most readers is usually the provider that fixes the specific
-          thing {target.name} does not do well enough for your situation: lower renewal cost, stronger
-          privacy posture, better streaming reliability, or simpler apps.
-        </p>
+        <h2 className="text-2xl font-bold text-white">Things to consider</h2>
+        <p>VPNs are tools, not collectibles.</p>
       </section>
 
       <RelatedLinks links={getAlternativesRelatedLinks(target.slug)} />
@@ -206,17 +189,13 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       <FaqSection
         faqs={[
           {
-            question: `What is the best ${target.name} alternative?`,
-            answer: `${alternatives[0]?.name ?? "NordVPN"} is the strongest alternative for most readers because it offers the best blend of score, feature coverage, and real-world fit against ${target.name}'s limitations.`,
-          },
-          {
             question: `Should I switch from ${target.name}?`,
-            answer: `Only if ${target.name}'s limitations affect your actual use case. If your current provider is fast, private enough for your threat model, and priced fairly at renewal, switching may not be worth the hassle.`,
+            answer: `Only if ${target.name}'s limitations affect your actual use case. If your current provider is private enough for your threat model, and priced fairly at renewal, switching may not be worth the hassle.`,
           },
           {
             question: "Do affiliate commissions affect these alternatives?",
             answer:
-              "No. Tunnel Report includes non-affiliate recommendations like Mullvad when they serve readers. Commercial relationships do not determine rankings or editorial conclusions.",
+              "We may earn a commission if you sign up through some links on this site.",
           },
         ]}
       />

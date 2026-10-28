@@ -29,8 +29,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <p>
           <strong>Affiliate disclosure.</strong> Tunnel Report earns a commission if you buy through outbound links on
-          this page. That does not change scores, category winners, or the use-case recommendation. Editorial scoring
-          is walled off from commercial relationships; the method is on our{" "}
+          this page. The method is on our{" "}
           <Link href="/methodology" className={linkClassName}>
             methodology
           </Link>{" "}
@@ -38,15 +37,15 @@ export function NordvpnVsProtonvpnLongform() {
         </p>
 
         <p>
-          <strong>Verification.</strong> NordVPN prices were re-checked on the public pricing page on Oct 15, 2026.
+          <strong>Price check.</strong> NordVPN prices were re-checked on the public pricing page on Oct 15, 2026.
           Proton VPN Plus: see current pricing on the 2-year plan.{" "}
           <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.
         </p>
 
         <p>
-          <strong>Use-case verdict, not a trophy.</strong> NordVPN is the household default if you want a mature app.
-          Proton VPN is the better pick if you want public
-          audit PDFs, open-source clients, Swiss legal posture, and a credible free tier.
+          <strong>Use-case verdict, not a trophy.</strong> NordVPN is the household default if you want an app.
+          Proton VPN is the pick if you want
+          open-source clients, Swiss legal posture, and a free tier.
         </p>
       </section>
 
@@ -62,19 +61,19 @@ export function NordvpnVsProtonvpnLongform() {
             </thead>
             <tbody>
               <tr>
-                <td>Streaming geo-unblocking</td>
+                <td>Streaming</td>
                 <td>
                   <strong>NordVPN</strong>
                 </td>
                 <td>We do not publish invented Netflix win rates.</td>
               </tr>
               <tr>
-                <td>Verifiable no-logs + open-source apps</td>
+                <td>No-logs + open-source apps</td>
                 <td>
                   <strong>Proton VPN</strong>
                 </td>
                 <td>
-                  Fifth annual Securitum infrastructure audit; 2025 report is a public PDF. Apps are on GitHub.
+                  Apps are on GitHub.
                 </td>
               </tr>
               <tr>
@@ -82,7 +81,7 @@ export function NordvpnVsProtonvpnLongform() {
                 <td>
                   <strong>Proton VPN</strong>
                 </td>
-                <td>Proton AG, Geneva. Value is strongest if you already pay for the ecosystem.</td>
+                <td>Proton AG, Geneva.</td>
               </tr>
               <tr>
                 <td>Try before you pay</td>
@@ -90,7 +89,7 @@ export function NordvpnVsProtonvpnLongform() {
                   <strong>Proton VPN</strong>
                 </td>
                 <td>
-                  Audited no-logs free plan. NordVPN has no free tier; it sells a 30-day money-back window on the first
+                  NordVPN has no free tier; it sells a 30-day money-back window on the first
                   term.
                 </td>
               </tr>
@@ -137,12 +136,6 @@ export function NordvpnVsProtonvpnLongform() {
                 <td>Open-source clients (GitHub)</td>
               </tr>
               <tr>
-                <td>Audit PDF access</td>
-                <td>Proton VPN</td>
-                <td>Deloitte ISAE 3000; full report behind Nord Account login</td>
-                <td>Securitum annual reports; 2025 PDF is public</td>
-              </tr>
-              <tr>
                 <td>Jurisdiction</td>
                 <td>Draw, different risks</td>
                 <td>Panama (Tefincom / NordVPN); parent Nord Security in the Netherlands</td>
@@ -155,32 +148,19 @@ export function NordvpnVsProtonvpnLongform() {
                 <td>Credible free plan (1 device, limited countries)</td>
               </tr>
               <tr>
-                <td>App reliability</td>
+                <td>Apps</td>
                 <td>NordVPN</td>
-                <td>Mature across platforms</td>
+                <td>See provider</td>
                 <td>Good, more technical</td>
-              </tr>
-              <tr>
-                <td>Composite score (our reviews)</td>
-                <td>NordVPN</td>
-                <td>4.8 / 5</td>
-                <td>4.4 / 5</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p>
-          Those scores are from our standalone reviews, not a new head-to-head trophy. NordVPN is our pick in the{" "}
-          <Link href="/best-vpns" className={linkClassName}>
-            2026 rankings
-          </Link>
-          . Proton VPN is ranked for transparency.
-        </p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Privacy and audits: two different kinds of proof</h2>
+        <h2 className="text-2xl font-bold text-white">Privacy: two different kinds of proof</h2>
 
         <p>
           <a
@@ -189,24 +169,25 @@ export function NordvpnVsProtonvpnLongform() {
             rel="noopener noreferrer"
             className={linkClassName}
           >
-            NordVPN says it has passed six independent assurance engagements; the full report is behind a Nord Account login.
+            NordVPN says its audits comprised six independent assurance engagements
+          </a>
+          {". "}
+          <a
+            href="https://nordvpn.com/blog/ram-based-servers/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClassName}
+          >
+            NordVPN says
           </a>{" "}
-          Sixth: Deloitte Lithuania, ISAE 3000 (Revised), fieldwork 10 November – 12 December
-          2025, report 12 December 2025, blog 3 February 2026. RAM-only diskless servers (explainer 28 August 2024).
-          Panama operating jurisdiction; Nord Security
+          its servers are RAM-only diskless servers. Panama operating jurisdiction; Nord Security
           Netherlands.
         </p>
 
-        <h3 className="text-xl font-bold text-white">Proton VPN — public PDFs, open clients, court-tested empty logs</h3>
+        <h3 className="text-xl font-bold text-white">Proton VPN — open clients</h3>
         <p>
-          2025 Securitum PDF opened: 18 August 2025 – 19 September 2025; on-site 18–20 August 2025 Zürich; Martin
-          Matyja, Maciej Szymczak; bare-metal Proton AG owns. Conclusion: no user activity logging / connection
-          metadata / traffic inspection contradicting no-logs.           2026 Securitum quoted on Proton blog; Drive{" "}
-          <PlainSourceLink href="https://protonvpn.com/" /> Apps open
-          source{" "}
-          <PricingLink href="https://github.com/ProtonVPN">github.com/ProtonVPN</PricingLink>
-          . Transparency report through June 2026: 458 Swiss orders, every request denied (47 of 47 through June 2026;
-          59 of 59 in 2025).
+          Apps are open source{" "}
+          <PricingLink href="https://github.com/ProtonVPN">github.com/ProtonVPN</PricingLink>.
         </p>
 
         <p>
@@ -217,9 +198,9 @@ export function NordvpnVsProtonvpnLongform() {
             rel="noopener noreferrer"
             className={linkClassName}
           >
-            NordVPN says
-          </a>{" "}
-          it has passed six independent assurance engagements (full report behind a Nord Account login).
+            NordVPN says its audits comprised six independent assurance engagements
+          </a>
+          {"."}
         </p>
       </section>
 
@@ -236,8 +217,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Streaming: NordVPN, without fake win rates</h2>
         <p>
-          No invented Netflix/Hulu/BBC percentages. NordVPN more consistent. Proton marketing claims streaming on Plus;
-          our qualitative result is weaker.
+          No invented Netflix/Hulu/BBC percentages. Proton marketing claims streaming on Plus.
         </p>
       </section>
 
@@ -276,7 +256,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Who should actually buy which</h2>
         <p>
-          NordVPN household speed/streaming, budget renewal: see current pricing. Proton transparency/open-source/Swiss/suite, start
+          NordVPN for households, budget renewal: see current pricing. Proton open-source/Swiss/suite, start
           Free. Do not buy a VPN for coffee-shop Wi-Fi once a year. No overall trophy.
         </p>
       </section>
@@ -413,7 +393,7 @@ export function NordvpnVsProtonvpnLongform() {
           </li>
         </ol>
 
-        <p>End: Prices and audit-access notes re-checked Oct 15, 2026. Confirm at checkout.</p>
+        <p>End: Prices re-checked Oct 15, 2026. Confirm at checkout.</p>
       </section>
     </div>
   );

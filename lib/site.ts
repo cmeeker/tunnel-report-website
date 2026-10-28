@@ -2,13 +2,16 @@ export const siteConfig = {
   name: "Tunnel Report",
   shortName: "TunnelReport",
   url: "https://tunnelreport.com",
-  tagline: "Independent VPN Intelligence",
+  tagline: "VPN Comparison Guides",
   description:
-    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "Tunnel Report publishes VPN comparison guides based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   locale: "en_US",
   defaultAuthor: "Tunnel Report Staff",
   updatedDate: "October 15, 2026",
 };
+
+export const affiliateDisclosureAnswer =
+  "We may earn a commission if you sign up through some links on this site, at no extra cost to you. Our picks are based on published specs, pricing and third-party reports.";
 
 export const citySlugs = [
   "los-angeles",
@@ -56,7 +59,7 @@ export const primaryNav: PrimaryNavItem[] = [
     featured: {
       label: "Best VPNs 2026",
       href: "/best-vpns",
-      description: "Our top-ranked providers, compared on privacy, jurisdiction, and pricing transparency.",
+      description: "Our picks, compared on privacy, jurisdiction, and pricing.",
       badge: "Updated April 2026",
     },
     columns: [
@@ -64,7 +67,7 @@ export const primaryNav: PrimaryNavItem[] = [
         heading: "By Use Case",
         items: [
           { label: "Best VPN for Streaming", href: "/best-vpn-for/streaming", description: "Server locations and refund window" },
-          { label: "Best VPN for Privacy", href: "/best-vpn-for/privacy", description: "Audited no-log policies" },
+          { label: "Best VPN for Privacy", href: "/best-vpn-for/privacy", description: "Jurisdiction and open-source clients" },
           { label: "Best VPN for Torrenting", href: "/best-vpn-for/torrenting", description: "P2P-optimized servers" },
           { label: "Best Cheap VPN 2026", href: "/best-vpn-for/budget", description: "See current pricing" },
           { label: "Best VPN for Gaming", href: "/best-vpn-for/gaming", description: "WireGuard-based protocol" },
@@ -79,18 +82,18 @@ export const primaryNav: PrimaryNavItem[] = [
     featured: {
       label: "NordVPN Review",
       href: "/reviews/nordvpn",
-      description: "In-depth audit of privacy policy language and security architecture.",
-      badge: "Verified 2026",
+      description: "Privacy policy language and security architecture.",
+      badge: "2026",
     },
     columns: [
       {
         heading: "Provider Reviews",
         items: [
-          { label: "NordVPN", href: "/reviews/nordvpn", description: "Full review + speed data" },
+          { label: "NordVPN", href: "/reviews/nordvpn", description: "Full review" },
           { label: "Surfshark", href: "/reviews/surfshark", description: "Unlimited devices, budget value" },
           { label: "ExpressVPN", href: "/reviews/expressvpn", description: "Premium apps and streaming" },
           { label: "Proton VPN", href: "/reviews/protonvpn", description: "Open-source, Swiss privacy" },
-          { label: "PureVPN", href: "/reviews/purevpn", description: "Budget pick, honest assessment" },
+          { label: "PureVPN", href: "/reviews/purevpn", description: "Budget pick, our assessment" },
           { label: "Mullvad VPN", href: "/reviews/mullvad", description: "Privacy purist — no affiliate" },
           { label: "NordPass", href: "/reviews/nordpass", description: "Password manager specs and pricing" },
         ],
@@ -147,8 +150,8 @@ export const primaryNav: PrimaryNavItem[] = [
       {
         heading: "The Publication",
         items: [
-          { label: "How We Rank", href: "/methodology", description: "Published specs, pricing and third-party reports" },
-          { label: "Editorial Standards", href: "/about#editorial", description: "Independence & disclosure policy" },
+          { label: "How We Pick", href: "/methodology", description: "Published specs, pricing and third-party reports" },
+          { label: "Editorial Standards", href: "/about#editorial", description: "Affiliate disclosure policy" },
           { label: "Affiliate Disclosure", href: "/about#disclosure", description: "How commissions work here" },
         ],
       },

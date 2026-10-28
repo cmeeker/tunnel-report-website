@@ -14,11 +14,11 @@ export const latestPriceChecks: PriceCheckLink[] = [
   },
   {
     href: "/best-vpns",
-    label: "Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports",
+    label: "Best VPNs of 2026: Compared on Published Specs, Pricing and Third-Party Reports",
   },
   {
     href: "/reviews/nordvpn",
-    label: "NordVPN Review 2026: Speed, Privacy, and Pricing Breakdown",
+    label: "NordVPN Review 2026: Overview, Privacy, and Pricing Breakdown",
   },
   {
     href: "/compare/nordvpn-vs-protonvpn",
@@ -30,7 +30,7 @@ export const latestPriceChecks: PriceCheckLink[] = [
   },
   {
     href: "/compare/nordvpn-vs-expressvpn",
-    label: "NordVPN vs ExpressVPN 2026: Which Premium VPN Wins?",
+    label: "NordVPN vs ExpressVPN 2026: Which Premium VPN Fits You?",
   },
   {
     href: "/compare/surfshark-vs-nordvpn",

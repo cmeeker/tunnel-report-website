@@ -47,7 +47,7 @@ const columns = [
       { href: "/guides", label: "All Guides" },
       { href: "/guides/wireguard-vs-openvpn", label: "WireGuard vs OpenVPN" },
       { href: "/guides/what-is-a-no-logs-vpn", label: "No-Logs VPNs" },
-      { href: "/methodology", label: "How We Rank" },
+      { href: "/methodology", label: "How We Pick" },
       { href: "/guides/vpn-renewal-pricing-traps", label: "Renewal Pricing" },
     ],
   },

@@ -205,9 +205,9 @@ export const nordDealFaqs: DealFaq[] = [
     answer: `NordVPN states its money-back terms on its refund policy page: ${vendorSources.nordRefund}.`,
   },
   {
-    question: "Is NordVPN's no-logs policy audited?",
+    question: "What does NordVPN say about no-logs?",
     answer:
-      "NordVPN says its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
+      "NordVPN says its audits comprised six independent assurance engagements.",
   },
 ];
 
@@ -225,7 +225,7 @@ export const protonDealFaqs: DealFaq[] = [
     answer: "See current pricing. Renewal differs from the intro price.",
   },
   {
-    question: "Is Proton VPN's no-logs policy audited?",
+    question: "What does Proton VPN say about no-logs?",
     answer: "Proton says its no-logs policy is independently audited.",
   },
 ];

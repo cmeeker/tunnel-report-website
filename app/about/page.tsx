@@ -7,6 +7,7 @@ import { LastUpdated } from "@/components/LastUpdated";
 import { JsonLd } from "@/components/JsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
+import { affiliateDisclosureAnswer } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "About Tunnel Report: Methodology and Editorial Standards",
@@ -19,17 +20,16 @@ const aboutFaqs = [
   {
     question: "How is Tunnel Report funded?",
     answer:
-      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. Affiliate potential does not influence rankings, scores, or editorial conclusions.",
+      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on pages where affiliate links appear. We may earn a commission if you sign up through some links on this site.",
   },
   {
-    question: "Can VPN companies pay for better reviews?",
-    answer:
-      "No. We do not accept payment for review outcomes. Our methodology is applied consistently across all providers regardless of commercial relationship status.",
+    question: "Do you earn money from VPN links?",
+    answer: affiliateDisclosureAnswer,
   },
   {
     question: "How do I report an error in your coverage?",
     answer:
-      "Contact our editorial team with the specific claim, the page URL, and a source link if available. We investigate corrections promptly, update the page with visible changelog timestamps, and credit the reporter when appropriate.",
+      "Contact us with the specific claim, the page URL, and a source link if available. We investigate corrections promptly, update the page with visible changelog timestamps, and credit the reporter when appropriate.",
   },
 ];
 
@@ -60,10 +60,10 @@ export default function AboutPage() {
           About Tunnel Report
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          Tunnel Report is an independent VPN review and privacy publication. We exist because
-          the overlap between affiliate-funded content and genuinely useful security guidance is
-          smaller than it should be, and readers who care about measurable protection deserve a
-          publication that operates at a higher standard.
+          Tunnel Report is a VPN comparison and privacy publication based on published specs, pricing and third-party reports. We exist because
+          the overlap between affiliate-funded content and useful security guidance is
+          smaller than it should be, and readers who care about protection deserve a
+          publication.
         </p>
         <LastUpdated date="October 18, 2026" />
       </header>
@@ -77,21 +77,15 @@ export default function AboutPage() {
         <div className="glass-card p-7">
           <h3 className="text-lg font-bold text-white">Privacy & Security Analysis</h3>
           <p>
-            Privacy evaluation covers four dimensions: <strong>policy language</strong> (what the provider
-            commits to in writing), <strong>audit scope</strong> (what independent auditors actually
-            tested, not just whether an audit happened), <strong>jurisdiction risk</strong> (data
+            Privacy evaluation covers three dimensions: <strong>policy language</strong> (what the provider
+            commits to in writing), <strong>jurisdiction risk</strong> (data
             retention laws, intelligence-sharing agreements, and compulsion mechanisms), and
             <strong> incident response history</strong> (how the provider handled past security events).
-          </p>
-          <p>
-            We assign higher weight to verifiable actions than marketing claims. A provider that
-            completed a narrow-scope audit but responded transparently to a real incident scores higher
-            than one that trumpets a broad audit without demonstrable operational security improvement.
           </p>
         </div>
 
         <div className="glass-card p-7">
-          <h3 className="text-lg font-bold text-white">Pricing Transparency</h3>
+          <h3 className="text-lg font-bold text-white">How we use pricing information</h3>
           <p>
             VPN pricing analysis in most reviews stops at the introductory rate. We track four
             dimensions: <strong>initial promotional price</strong>, <strong>renewal rate</strong> after
@@ -111,19 +105,12 @@ export default function AboutPage() {
 
       {/* Editorial independence */}
       <section id="editorial" className="prose-dark space-y-4 scroll-mt-28">
-        <h2 className="text-2xl font-bold text-white">How Editorial Independence Works</h2>
         <p>
-          Commercial relationships do not influence editorial output. This is not a platitude — it is
-          an operational structure. Review conclusions are drafted by the assigned editor and reviewed
-          by at least one other team member before publication. The commercial team does not see review
-          content before it goes live, does not have edit access to published pages, and does not
-          participate in scoring discussions.
+          If a page includes an affiliate link, the disclosure is visible on-page. We use a
+          banner format so readers always know when commercial links are present.
         </p>
         <p id="disclosure" className="scroll-mt-28">
-          If a page includes an affiliate link, the disclosure is visible on-page. We use a consistent
-          banner format so readers always know when commercial links are present. Affiliate potential
-          does not guarantee positive coverage — and in several cases, providers with high commission
-          rates receive lower scores than providers with modest or no affiliate programs.
+          We may earn a commission if you sign up through some links on this site.
         </p>
       </section>
 
@@ -133,7 +120,7 @@ export default function AboutPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Corrections Policy</h2>
         <p>
-          Accuracy is the foundation of editorial credibility. When we publish inaccurate pricing,
+          Accuracy matters. When we publish inaccurate pricing,
           technical claims, or outdated policy details, we update the page and refresh the timestamp.
           Material corrections include a visible changelog note in the relevant section so readers can
           see what changed, when, and why.
@@ -150,7 +137,7 @@ export default function AboutPage() {
 
       {/* Trust architecture */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">Trust Architecture</h2>
+        <h2 className="text-2xl font-bold text-white">Architecture</h2>
         <div className="grid gap-4 md:grid-cols-2">
           {[
             {
@@ -159,7 +146,7 @@ export default function AboutPage() {
             },
             {
               title: "Visible Timestamps",
-              description: "Every page shows its last verification date. Stale content is flagged for review in our editorial queue.",
+              description: "Pages show a last-updated date.",
             },
             {
               title: "Structured Data",
@@ -176,7 +163,7 @@ export default function AboutPage() {
             },
             {
               title: "Open Methodology",
-              description: "Our ranking method is published in full. Readers can evaluate our process, not just our conclusions.",
+              description: "How we compare VPNs is published in full. Readers can evaluate our process, not just our conclusions.",
             },
           ].map((item) => (
             <div key={item.title} className="glass-card p-7">
@@ -194,7 +181,7 @@ export default function AboutPage() {
         <ul className="mt-3 space-y-2.5">
           <li>
             <Link href="/best-vpns" className="text-sm text-[#94a3b8] transition hover:text-[#00d4aa]">
-              Best VPNs of 2026 — Full Rankings &rarr;
+              Best VPNs of 2026 — Full comparison &rarr;
             </Link>
           </li>
           <li>

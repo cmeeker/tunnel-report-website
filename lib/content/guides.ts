@@ -1,6 +1,7 @@
 import type { FaqItem } from "@/components/FaqSection";
 import type { RelatedLink } from "@/components/RelatedLinks";
 import type { PaidPartnerKey } from "@/lib/content/paid-picks";
+import { nordAuditsClaim } from "@/lib/content/providers";
 
 export type GuideTable = {
   headers: string[];
@@ -42,9 +43,9 @@ export const guides: Guide[] = [
     slug: "wireguard-vs-openvpn",
     title: "WireGuard vs OpenVPN: Which VPN Protocol Should You Use?",
     description:
-      "WireGuard vs OpenVPN explained in plain English: privacy, auditability, battery life, censorship resistance, and when to switch protocols.",
+      "WireGuard vs OpenVPN explained in plain English: privacy, battery life, censorship resistance, and when to switch protocols.",
     dek:
-      "OpenVPN is older, battle-tested, and sometimes better for restrictive networks. The right protocol depends on your threat model, not brand marketing.",
+      "OpenVPN is older. The right protocol depends on your threat model, not brand marketing.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -57,7 +58,7 @@ export const guides: Guide[] = [
         heading: "The short version",
         paragraphs: [
           "For most users in 2026, WireGuard or a WireGuard-based implementation should be the default protocol. It is leaner and typically easier on laptop and phone batteries than OpenVPN.",
-          "OpenVPN still matters. It has a long security history, mature tooling, and can be easier to disguise on networks that aggressively block newer VPN protocols.",
+          "OpenVPN still matters. It has a long security history, tooling, and can be easier to disguise on networks that aggressively block newer VPN protocols.",
         ],
       },
       {
@@ -68,7 +69,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "When OpenVPN still wins",
+        heading: "When OpenVPN still fits",
         paragraphs: [
           "OpenVPN can run over TCP/443, which makes it look more like ordinary HTTPS traffic. That can help on restrictive hotel, campus, or workplace networks where UDP-based VPN traffic is blocked.",
           "If your VPN fails to connect on WireGuard while traveling, OpenVPN TCP is the first fallback we recommend before switching providers.",
@@ -78,13 +79,12 @@ export const guides: Guide[] = [
         heading: "Privacy is about implementation",
         paragraphs: [
           "Protocol choice alone does not determine privacy. Logging policy, account model, DNS handling, kill switch behavior, and provider jurisdiction matter more than the acronym printed in the app settings.",
-          "A well-implemented WireGuard provider with audited no-logs controls beats a poorly managed OpenVPN provider every time.",
         ],
       },
     ],
     faqs: [
       { question: "Is WireGuard safer than OpenVPN?", answer: "WireGuard is modern and small, which helps security review, but safety depends on provider implementation. OpenVPN remains secure when configured correctly." },
-      { question: "Should I use TCP or UDP?", answer: "Use UDP for speed when possible. Use TCP/443 when networks block VPN traffic or you need better compatibility." },
+      { question: "Should I use TCP or UDP?", answer: "Use UDP for speed when possible. Use TCP/443 when networks block VPN traffic." },
       { question: "What protocol does NordVPN use?", answer: "NordVPN's default protocol is NordLynx, its WireGuard-based implementation." },
     ],
   },
@@ -92,9 +92,9 @@ export const guides: Guide[] = [
     slug: "what-is-a-no-logs-vpn",
     title: "What Is a No-Logs VPN, Really?",
     description:
-      "No-logs VPN claims explained: what providers can still collect, what audits verify, and how to evaluate no-logs marketing without trusting slogans.",
+      "No-logs VPN claims explained: what providers can still collect, and how to evaluate no-logs marketing.",
     dek:
-      "A no-logs claim is only useful when you understand what data is excluded, what metadata remains, and whether an independent audit tested real infrastructure.",
+      "A no-logs claim is only useful when you understand what data is excluded and what metadata remains.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -111,13 +111,6 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "Audit scope is everything",
-        paragraphs: [
-          "The strongest audits test server infrastructure, logging pipelines, configuration, and retention controls. Weak audits review policy language and call it verification.",
-          "When we evaluate providers, we look for evidence that auditors had access to systems, not just marketing copy.",
-        ],
-      },
-      {
         heading: "Legal jurisdiction still matters",
         paragraphs: [
           "Jurisdiction determines what demands a provider may face and how it can contest them. Panama, Switzerland, and the British Virgin Islands are structurally different from countries with expansive data-retention obligations.",
@@ -127,8 +120,7 @@ export const guides: Guide[] = [
     ],
     faqs: [
       { question: "Can a no-logs VPN identify me?", answer: "It may still have account, payment, or support records. Strong providers minimize this data and keep it separate from traffic activity." },
-      { question: "Are no-logs audits trustworthy?", answer: "Some are. Trust depends on auditor reputation, technical scope, publication detail, and whether audits repeat over time." },
-      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad requires no email to sign up. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025." },
+      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad requires no email to sign up. " + nordAuditsClaim },
     ],
   },
   {
@@ -146,8 +138,8 @@ export const guides: Guide[] = [
       {
         heading: "Jurisdiction is pressure, not proof",
         paragraphs: [
-          "A privacy-friendly jurisdiction can reduce compelled data-retention risk, but it cannot make a bad logging system safe. Technical architecture and audit evidence still matter.",
-          "We treat jurisdiction as one factor in a broader trust model: policy language, audits, incident response, ownership, and infrastructure design.",
+          "A privacy-friendly jurisdiction can reduce compelled data-retention risk, but it cannot make a bad logging system safe. Technical architecture still matters.",
+          "We treat jurisdiction as one factor: policy language, incident response, ownership, and infrastructure design.",
         ],
       },
       {
@@ -161,14 +153,14 @@ export const guides: Guide[] = [
         heading: "How top providers compare",
         paragraphs: [
           "NordVPN operates from Panama, Proton VPN from Switzerland, and ExpressVPN from the British Virgin Islands. Each offers legal advantages over providers in aggressive retention regimes.",
-          "Mullvad operates from Sweden, which is less marketing-friendly than Panama or Switzerland, but its account model and transparency posture offset some jurisdiction concerns.",
+          "Mullvad operates from Sweden, which is less marketing-friendly than Panama or Switzerland, but its account model and published policies offset some jurisdiction concerns.",
         ],
       },
     ],
     faqs: [
-      { question: "What is the best VPN jurisdiction?", answer: "There is no single best jurisdiction. Switzerland and Panama are strong on paper; implementation and audits matter just as much." },
-      { question: "Should I avoid US-based VPNs?", answer: "Not automatically, but US jurisdiction increases legal exposure. We prefer providers that combine strong jurisdiction with audited no-logs infrastructure." },
-      { question: "Is British Virgin Islands jurisdiction good for VPNs?", answer: "It is generally favorable for consumer VPN privacy, which is one reason ExpressVPN uses it prominently in trust messaging." },
+      { question: "What is the best VPN jurisdiction?", answer: "There is no single best jurisdiction. Switzerland and Panama are strong on paper; implementation matters just as much." },
+      { question: "Should I avoid US-based VPNs?", answer: "Not automatically, but US jurisdiction increases legal exposure." },
+      { question: "Is British Virgin Islands jurisdiction good for VPNs?", answer: "It is generally favorable for consumer VPN privacy, which is one reason ExpressVPN uses it prominently in messaging." },
     ],
   },
   {
@@ -259,14 +251,14 @@ export const guides: Guide[] = [
       {
         heading: "When switching makes sense",
         paragraphs: [
-          "Switch when renewal pricing rises and your current provider is not clearly better for your use case. Surfshark and PureVPN often win on entry price.",
-          "If your current provider is reliable and the renewal rate is fair, switching for a marginal discount may not be worth the setup friction.",
+          "Switch when renewal pricing rises.",
+          "If the renewal rate is fair, switching for a marginal discount may not be worth the setup friction.",
         ],
       },
     ],
     faqs: [
       { question: "Why do VPN prices go up at renewal?", answer: "Introductory discounts are acquisition offers. Renewal pricing usually reflects the standard plan rate after the promotional term ends." },
-      { question: "Which VPN has the best long-term value?", answer: "Surfshark is strongest for multi-device households. Mullvad has the cleanest flat-rate pricing (see current pricing on [mullvad.net/pricing](https://mullvad.net/en/pricing)) but no affiliate program and fewer streaming features." },
+      { question: "Which VPN has the best long-term value?", answer: "Surfshark covers unlimited devices for households. Mullvad has the cleanest flat-rate pricing (see current pricing on [mullvad.net/pricing](https://mullvad.net/en/pricing)) but no affiliate program and fewer streaming features." },
       { question: "Can I cancel before VPN renewal?", answer: "Usually yes, but policies vary. Set a reminder before the renewal date and confirm cancellation in your account dashboard." },
     ],
   },
