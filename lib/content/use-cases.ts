@@ -273,7 +273,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     ],
     sections: [
       {
-        heading: "Remote work needs",
+        heading: "Remote work needs reliability more than peak speed",
         paragraphs: [
           "NordVPN is the best default because it offers security controls.",
         ],
