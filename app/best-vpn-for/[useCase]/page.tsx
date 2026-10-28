@@ -118,7 +118,7 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
             return (
               <div key={pick.provider.slug} className="glass-card p-7">
                 <span className="badge badge-cyan mb-4 text-[0.65rem]">
-                  {index === 0 ? pick.label : `#${index + 1} ${pick.label}`}
+                  {pick.label}
                 </span>
                 <h3 className="text-xl font-bold text-white">{pick.provider.name}</h3>
                 {pick.reason ? (

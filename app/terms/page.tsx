@@ -97,7 +97,7 @@ export default function TermsPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">5. Intellectual property</h2>
         <p>
-          The Site&apos;s content, including text, rankings, graphics and design, is owned by us or
+          The Site&apos;s content, including text, comparisons, graphics and design, is owned by us or
           our licensors and protected by law. You may view and share links to it for personal,
           non-commercial use. You may not copy, republish or scrape substantial parts of it without
           our written permission. Product names and logos belong to their owners.

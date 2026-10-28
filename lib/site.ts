@@ -67,7 +67,7 @@ export const primaryNav: PrimaryNavItem[] = [
         heading: "By Use Case",
         items: [
           { label: "Best VPN for Streaming", href: "/best-vpn-for/streaming", description: "Server locations and refund window" },
-          { label: "Best VPN for Privacy", href: "/best-vpn-for/privacy", description: "Audited no-log policies" },
+          { label: "Best VPN for Privacy", href: "/best-vpn-for/privacy", description: "Jurisdiction and open-source clients" },
           { label: "Best VPN for Torrenting", href: "/best-vpn-for/torrenting", description: "P2P-optimized servers" },
           { label: "Best Cheap VPN 2026", href: "/best-vpn-for/budget", description: "See current pricing" },
           { label: "Best VPN for Gaming", href: "/best-vpn-for/gaming", description: "WireGuard-based protocol" },
@@ -82,8 +82,8 @@ export const primaryNav: PrimaryNavItem[] = [
     featured: {
       label: "NordVPN Review",
       href: "/reviews/nordvpn",
-      description: "In-depth audit of privacy policy language and security architecture.",
-      badge: "Verified 2026",
+      description: "Privacy policy language and security architecture.",
+      badge: "2026",
     },
     columns: [
       {

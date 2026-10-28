@@ -7,7 +7,7 @@ export const contentType = "image/png";
 export default function Image() {
   return buildOgImage({
     title: "NordPass vs Bitwarden 2026: Price, Security, Fit",
-    subtitle: "Published pricing, encryption, audits, and free plans.",
+    subtitle: "Published pricing, encryption, and free plans.",
     badge: "Comparison",
   });
 }

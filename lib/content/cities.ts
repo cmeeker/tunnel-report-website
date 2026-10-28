@@ -51,7 +51,7 @@ export const cityGuides: CityGuide[] = [
     privacyConcern:
       "New York's density creates unique privacy exposure. Shared apartment buildings mean shared network infrastructure. Co-working spaces in Midtown and Brooklyn see thousands of devices cycling through daily, and the subway system's rolling Wi-Fi rollout introduces another layer of public network risk. Enterprise workers commuting between Midtown offices and home setups in the boroughs often need VPN connections that can survive the rapid network transitions between underground, street-level, and building Wi-Fi.",
     streamingNeeds:
-      "New Yorkers have voracious media consumption habits and tend to maintain multiple streaming subscriptions. International content access matters here more than most cities given the demographic diversity — Hindi, Spanish, Mandarin, and Korean streaming services all have significant local demand. VPN reliability for accessing region-locked content libraries is a genuine use case, not just a nice-to-have.",
+      "New Yorkers have voracious media consumption habits and tend to maintain multiple streaming subscriptions. International content access matters here more than most cities given the demographic diversity — Hindi, Spanish, Mandarin, and Korean streaming services all have significant local demand. Accessing region-locked content libraries is a genuine use case, not just a nice-to-have.",
     recommendation:
       "Focus on providers with New York or nearby East Coast servers and an automatic kill switch. Verizon Fios fiber plans leave the most headroom for VPN overhead. On Spectrum's 300 Mbps tier, test your speed with the VPN on and off. Test during your actual usage hours — a 6pm check matters more than a 6am one in this market.",
     neighborhoodNote:
@@ -59,7 +59,7 @@ export const cityGuides: CityGuide[] = [
     populationContext:
       "The NYC metro region serves over 20 million people and has the highest density of internet-connected devices per square mile of any US market.",
     localColor:
-      "If you have ever tried to do a video call from a WeWork in Midtown while your VPN keeps dropping because the building's Wi-Fi cannot decide which access point you belong to, you understand why reconnection reliability matters more in New York than raw throughput numbers.",
+      "If you have ever tried to do a video call from a WeWork in Midtown while your VPN keeps dropping because the building's Wi-Fi cannot decide which access point you belong to, you understand why reconnection matters more in New York than raw throughput numbers.",
   },
   {
     slug: "chicago",
@@ -96,13 +96,13 @@ export const cityGuides: CityGuide[] = [
     privacyConcern:
       "Houston's sprawling geography means heavy mobile data usage during commutes, and Texas's energy sector brings enterprise security requirements into residential contexts. Severe weather events regularly push people onto mobile hotspots and backup networks where encryption becomes more critical. The city's international business connections — particularly to Latin America and the energy-producing regions — add cross-border privacy considerations that many users do not think about until they are connecting to a hotel network in Mexico City.",
     streamingNeeds:
-      "Large household sizes in Houston mean VPN services need to handle simultaneous connections without degradation. A family with four people streaming different content at 4K requires consistent throughput, not just peak numbers. Sports access is also significant — Texans, Astros, and Rockets broadcasts all carry regional restrictions.",
+      "Large household sizes in Houston mean VPN services need to handle simultaneous connections without degradation. A family with four people streaming different content at 4K requires throughput, not just peak numbers. Sports access is also significant — Texans, Astros, and Rockets broadcasts all carry regional restrictions.",
     recommendation:
       "Look for services with strong split tunneling so you can route streaming traffic through VPN while keeping latency-sensitive applications (gaming, video calls) on a direct connection. Tachus fiber, where it's available, leaves the most headroom. On Xfinity's 300 Mbps tier, run a speed test with the VPN on and off before you commit.",
     neighborhoodNote:
       "Tachus fiber is expanding but still limited to specific areas including The Heights, Montrose, and parts of the Energy Corridor. Most of suburban Houston relies on Xfinity cable or AT&T. If you are in a Tachus-served area, count yourself lucky — it is among the best residential ISPs in Texas.",
     populationContext:
-      "Greater Houston serves roughly 7 million residents across a geographic footprint larger than some states, making connection consistency across the metro area highly variable.",
+      "Greater Houston serves roughly 7 million residents across a geographic footprint larger than some states, making connections across the metro area highly variable.",
     localColor:
       "Houston might be the only city where your VPN needs change seasonally. Hurricane season means backup connectivity plans, and anyone who lived through the 2021 winter storm knows that network resilience is not an abstract concept here.",
   },
@@ -196,7 +196,7 @@ export const cityGuides: CityGuide[] = [
     populationContext:
       "The Dallas-Fort Worth metro serves more than 7 million residents and is one of the country's largest corporate connectivity markets.",
     localColor:
-      "Dallas users do not need a theoretical privacy pitch. Anyone who has joined a board call from hotel Wi-Fi near DFW already understands why reliable tunneling matters.",
+      "Dallas users do not need a theoretical privacy pitch. Anyone who has joined a board call from hotel Wi-Fi near DFW already understands why tunneling matters.",
   },
   {
     slug: "atlanta",
@@ -234,7 +234,7 @@ export const cityGuides: CityGuide[] = [
     privacyConcern:
       "Denver combines remote work, tourism, universities, and a heavy short-term rental market. Users often connect from cafes, ski-town lodges, hotels, airports, and apartment networks with very different security standards. VPN stability across changing networks matters.",
     streamingNeeds:
-      "Nuggets, Avalanche, Rockies, and regional sports access drive blackout-related VPN demand, while mountain travel creates inconsistent network conditions. A VPN needs to handle lower-quality Wi-Fi without constant reconnect loops.",
+      "Nuggets, Avalanche, Rockies, and regional sports access drive blackout-related VPN demand, while mountain travel creates variable network conditions. A VPN needs to handle lower-quality Wi-Fi without constant reconnect loops.",
     recommendation:
       "NordVPN is our Denver default based on its published specs. Surfshark is a good household value pick, especially for families splitting time between home, travel, and second devices.",
     neighborhoodNote:

@@ -72,7 +72,7 @@ export const providers: Provider[] = [
     speedMbps: 905,
     pricePerMonth: "See current pricing",
     privacyBlurb: "Panama jurisdiction",
-    quickVerdict: "Privacy posture and app consistency in 2026.",
+    quickVerdict: "Privacy and app details in 2026.",
     pros: [
       "Frequent third-party security and no-logs assessments",
       "Strong malware and tracker blocking controls",
@@ -88,7 +88,7 @@ export const providers: Provider[] = [
     updatedDateLabel: "October 18, 2026",
     reviewTitle: "NordVPN Review 2026: Overview, Privacy, and Pricing Breakdown",
     reviewDescription:
-      "Our complete NordVPN review with privacy audit analysis, pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
+      "Our complete NordVPN review with a pricing breakdown, and a clear verdict on who should — and shouldn't — buy it in 2026.",
     reviewSummary:
       "It is our default pick.",
     jurisdiction: "Panama",
@@ -104,7 +104,7 @@ export const providers: Provider[] = [
       {
         heading: "Is NordVPN's Privacy Model Strong Enough for 2026?",
         paragraphs: [
-          "Privacy evaluation in VPN reviews usually stops at \"they say no logs.\" We look at three layers: policy language, what a published audit covered, and how the company has responded to real incidents.",
+          "Privacy evaluation in VPN reviews usually stops at \"they say no logs.\" We look at two layers: policy language, and how the company has responded to real incidents.",
           "NordVPN operates under Panamanian jurisdiction, outside Five Eyes intelligence-sharing agreements. That removes one category of compulsion, though jurisdiction alone does not guarantee privacy.",
           "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its audit covers server infrastructure.",
         ],
@@ -150,7 +150,7 @@ export const providers: Provider[] = [
     quickVerdict: "Excellent multi-device value with modern privacy defaults.",
     pros: [
       "Unlimited simultaneous connections",
-      "Mature kill switch behavior on desktop and mobile",
+      "Kill switch on desktop and mobile",
     ],
     cons: ["Fewer advanced split tunneling options"],
     speedSummary: "",
@@ -163,9 +163,9 @@ export const providers: Provider[] = [
     updatedDateLabel: "October 18, 2026",
     reviewTitle: "Surfshark Review 2026: Best Budget VPN for Families?",
     reviewDescription:
-      "Surfshark review with privacy audit analysis and pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
+      "Surfshark review with pricing — including whether unlimited devices justify switching from NordVPN in 2026.",
     reviewSummary:
-      "Surfshark is the strongest value play.",
+      "Unlimited simultaneous connections.",
     jurisdiction: "Netherlands",
     protocolNote: "WireGuard and OpenVPN",
     speedMetrics: [],
@@ -234,7 +234,7 @@ export const providers: Provider[] = [
     reviewDescription:
       "ExpressVPN review covering streaming, and whether the premium price tag is justified in 2026.",
     reviewSummary:
-      "ExpressVPN trades on simplicity and reliability.",
+      "ExpressVPN trades on simplicity.",
     jurisdiction: "British Virgin Islands",
     protocolNote: "Lightway and OpenVPN",
     speedMetrics: [],
@@ -267,7 +267,7 @@ export const providers: Provider[] = [
       {
         question: "How does ExpressVPN compare to NordVPN?",
         answer:
-          "NordVPN is cheaper at checkout. ExpressVPN wins on app polish and support quality. See our head-to-head comparison for the full breakdown.",
+          "NordVPN is cheaper at checkout. See our head-to-head comparison for the full breakdown.",
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-expressvpn"],
@@ -288,8 +288,8 @@ export const providers: Provider[] = [
     ],
     cons: ["Smaller streaming footprint", "Premium plans can feel complex"],
     speedSummary: "",
-    privacySummary: "[Publishes audit reports](https://protonvpn.com/blog/no-logs-audit)",
-    pricingSummary: "Value is strongest for users already in the Proton ecosystem.",
+    privacySummary: "[Proton VPN says](https://protonvpn.com/blog/no-logs-audit) it publishes audit reports.",
+    pricingSummary: "For users already in the Proton ecosystem.",
     affiliateKey: "protonvpn",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
@@ -305,9 +305,9 @@ export const providers: Provider[] = [
     speedMetrics: [],
     sections: [
       {
-        heading: "Privacy and Audits",
+        heading: "Privacy",
         paragraphs: [
-          "Proton VPN's Swiss jurisdiction is among the strongest in consumer VPN markets. Switzerland's Federal Act on Data Protection provides meaningful legal protections, and Proton's public benefit corporate structure aligns incentives with user privacy.",
+          "Switzerland's Federal Act on Data Protection provides meaningful legal protections, and Proton's public benefit corporate structure aligns incentives with user privacy.",
           "All Proton VPN clients are open source. For readers who want to verify security claims rather than trust marketing, this is a meaningful differentiator.",
           "The free tier remains functional for low-risk browsing, though it limits server selection versus paid plans.",
         ],
@@ -353,7 +353,7 @@ export const providers: Provider[] = [
     speedMbps: 610,
     pricePerMonth: "See current pricing",
     privacyBlurb: "Split tunneling options",
-    quickVerdict: "Feature-rich budget option with improving consistency.",
+    quickVerdict: "Feature-rich budget option.",
     pros: [
       "Aggressive introductory pricing",
       "Large server footprint marketing",
@@ -424,7 +424,7 @@ export const providers: Provider[] = [
     ],
     cons: ["No affiliate program (we earn nothing recommending it)", "Fewer streaming-optimized features", "Smaller server network than mega-providers"],
     speedSummary: "Solid WireGuard performance.",
-    privacySummary: "Industry-leading anonymity model.",
+    privacySummary: "Anonymity model.",
     pricingSummary: "Flat rate with no renewal surprises.",
     affiliateKey: null,
     datePublished: "2026-10-15",
@@ -493,21 +493,21 @@ export const providers: Provider[] = [
     score: 4.1,
     speedMbps: 0,
     pricePerMonth: "See current pricing",
-    privacyBlurb: "Malaysian operator with a named 2024 no-log container audit (scope-limited)",
+    privacyBlurb: "Malaysian operator",
     quickVerdict:
       "A rare no-signup free VPN from a Malaysian operator — compelling, but with important scope and free-tier caveats.",
     pros: [
       "Free tier exists with no signup required (but published limits conflict across pages) [HM1][HM2][HM3][HM8][HM12]",
       "Wide protocol menu: WireGuard, OpenVPN, SoftEther, IKEv2, SSTP (per hide.me) [HM13]",
-      "Securitum (2024) audit of a declared no-log container image (scope-limited) [HM9]",
+      "hide.me says its 2024 Securitum PDF covers a declared no-log container image (scope-limited) [HM9]",
     ],
     cons: [
       "Free tier limits conflict (10GB/month vs unlimited) and streaming-optimized servers are Premium-only [HM1][HM2][HM3][HM12]",
-      "Audit scope is not a fleet inspection and not a 2025–2026 re-audit [HM9]",
+      "hide.me says the published scope is one container image, not a fleet inspection [HM9]",
       "Terms position the service for consumer/personal use, not commercial or organizational deployment [HM5]",
     ],
     speedSummary:
-      "We did not publish speed metrics for this review page. This assessment focuses on operator disclosures, pricing, and published privacy/audit documents.",
+      "We did not publish speed metrics for this review page. This assessment focuses on operator disclosures, pricing, and published privacy documents.",
     privacySummary:
       "hide.me’s privacy policy is more specific than its marketing pages: it describes what they say they do not log, plus what metadata they do process for operations and support. [HM4][HM8]",
     pricingSummary:
@@ -519,9 +519,9 @@ export const providers: Provider[] = [
     updatedDateLabel: "October 18, 2026",
     reviewTitle: "hide.me VPN Review 2026: Malaysian No-Logs, Real Free Tier",
     reviewDescription:
-      "Our cited hide.me VPN review for 2026: Malaysian operator disclosures, pricing (including the pricing guarantee), the no-signup free tier limits (including the published conflict), and what the 2024 Securitum no-log container audit did — and did not — cover.",
+      "Our cited hide.me VPN review for 2026: Malaysian operator disclosures, pricing (including the pricing guarantee), and the no-signup free tier limits (including the published conflict).",
     reviewSummary:
-      "hide.me is one of the few mainstream VPN brands that still offers a no-signup free tier — but its own pages publish two different limit stories. The strongest trust signal here is a named 2024 Securitum audit of a declared no-log container image, paired with a privacy policy that spells out what they say they do and don’t log. If you want a 2025–2026 re-audit, audited clients, or a streaming-first free plan, this is not the best fit. [HM1][HM2][HM3][HM4][HM9][HM11][HM14]",
+      "hide.me is one of the few mainstream VPN brands that still offers a no-signup free tier — but its own pages publish two different limit stories. [HM1][HM2][HM3]",
     jurisdiction: "Malaysia (Labuan) [HM7][HM5]",
     protocolNote: "WireGuard, OpenVPN, SoftEther, IKEv2, SSTP (as listed by hide.me) [HM13]",
     speedMetrics: [],
@@ -533,9 +533,8 @@ export const providers: Provider[] = [
           "The same policy also describes data it does process: email during signup (and it says paid users can later remove it), a troubleshooting log it says is erased every few hours, aggregated monthly traffic counters, website logs, and support-ticket data via Zendesk (name + email). This is stricter — and more specific — than a blanket “zero personal data” marketing claim. [HM4]",
           "On lawful orders, the privacy policy says hide.me will comply with a valid court order, and states that it has “nothing to hand over” under its stated no-logging design. The policy adds that if law required persistent connection logs, it says it would notify users and attempt to move or close the service. [HM4]",
           "On operator identity, hide.me describes itself as a product of eVenture Ltd / eVenture Limited in Labuan, Malaysia (company no. LL09685), with registered-office details referenced on its privacy and legal pages. The legal terms state governing-law jurisdiction in Malaysia, and the Terms page shows an update date of 25 Aug 2026. hide.me also presents its founding year as 2012. [HM4][HM5][HM6][HM7]",
-          "hide.me publishes a scope-limited no-logs audit PDF by Securitum titled “no-log policy.” The document states work dates 19 Mar–6 Jun 2024 (document date 7 Jun 2024, v1.0) and lists authors Paweł Różański and Maciej Szymczak, evaluating the product “as of 15 Mar 2024.” The scope describes one example LXC container plus configuration review and interviews, with hide.me stating all nodes share that image. Securitum reports that the declared container no-log policy applied, that the only log observed was a daemon-start log, and that it contained no user activity or traffic; it also notes nDPI/iptables BitTorrent scripts were present but inactive and found no process/alarm to detect unauthorized logging enablement. This is not described as a fleet-wide inspection, a 2025–2026 re-audit, an application/client audit, or a claim of diskless/RAM-only servers. [HM9]",
-          "hide.me also publishes transparency-report PDFs. In its 2025 report, it states it received 13 law-enforcement requests in 2024 and 9 in 2025, and says it replies but has nothing to hand over under its stated logging approach. [HM10][HM11]",
-          "Finally, hide.me’s press materials include additional trust signals (for example, VTI re-accreditation announcements) and older third-party audit references (for example, a 2015 DefenseCode/Leon Juranic reference). We treat those as vendor claims unless the primary audit documents and scope are published. [HM12]",
+          "hide.me says it publishes a 2024 Securitum PDF on a declared no-log policy for a container image [HM9].",
+          "hide.me says that in its 2025 report it received 13 law-enforcement requests in 2024 and 9 in 2025, and that it replies but has nothing to hand over under its stated logging approach [HM10][HM11].",
         ],
       },
       {
@@ -544,7 +543,7 @@ export const providers: Provider[] = [
           "See current pricing for hide.me Premium on the monthly, 13-month, and 26-month terms. [HM2]",
           "hide.me also advertises a “Pricing Guarantee,” stating renewals keep the same price and duration as the original subscription term. [HM2]",
           "hide.me describes a 30-day money-back guarantee on paid plans, while its Terms limit refunds to the first 30 days of the first order. Read both pages together if you’re buying mainly for the refund backstop. [HM2][HM5]",
-          "hide.me also publishes network-scale claims — for example, “92 locations” and “2600 servers,” and up to 10 simultaneous connections on Premium — but those are vendor claims, not verified in this review. [HM1][HM2][HM12]",
+          "hide.me also publishes network-scale claims — for example, “92 locations” and “2600 servers,” and up to 10 simultaneous connections on Premium — but those are vendor claims, not checked in this review. [HM1][HM2][HM12]",
         ],
       },
       {
@@ -559,9 +558,9 @@ export const providers: Provider[] = [
     ],
     whoShouldBuy: {
       buy:
-        "Buy hide.me if you want a no-signup free VPN and you accept the published free-tier tradeoffs (including the 8-location / 1-connection limitations and the 10GB vs unlimited conflict), or if you value having a named 2024 audit document to read yourself — with clear scope limits. [HM1][HM2][HM3][HM9][HM12]",
+        "Buy hide.me if you want a no-signup free VPN and you accept the published free-tier tradeoffs (including the 8-location / 1-connection limitations and the 10GB vs unlimited conflict). [HM1][HM2][HM3][HM12]",
       alternatives:
-        "Consider alternatives if your priority is open-source clients, or if you need a provider that has a more current (2025–2026) no-logs verification program. [HM14][HM9]",
+        "Consider alternatives if your priority is open-source clients. [HM14]",
       skip:
         "Skip or look elsewhere if you need free-tier streaming support, if you’re buying for commercial/organizational use (the Terms describe consumer/personal use constraints), or if your trust requirement is a fleet-wide inspection rather than a scope-limited container review. [HM3][HM5][HM9]",
     },
@@ -572,9 +571,9 @@ export const providers: Provider[] = [
           "hide.me describes itself as a product of eVenture (eVenture Ltd / eVenture Limited) in Labuan, Malaysia, and lists corporate/legal details and registered-office information on its privacy and legal pages. [HM4][HM5][HM7]",
       },
       {
-        question: "Does hide.me have a third-party no-logs audit?",
+        question: "Does hide.me publish a third-party no-logs PDF?",
         answer:
-          "hide.me publishes a 2024 Securitum audit PDF focused on a declared no-log policy for a container image and its configuration. The scope is not a fleet inspection and does not claim to audit apps, accounts, or payments. [HM9]",
+          "hide.me says it publishes a 2024 Securitum PDF on a declared no-log policy for a container image and its configuration. The scope is not a fleet inspection and does not cover apps, accounts, or payments. [HM9]",
       },
       {
         question: "What’s the deal with the free tier limits?",

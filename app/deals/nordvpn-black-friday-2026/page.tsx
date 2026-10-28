@@ -137,8 +137,8 @@ export default function NordvpnBlackFridayPage() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Is NordVPN&apos;s no-logs policy audited?</h2>
-        <p>{nordDealFaqs[4].answer}</p>
+        <h2 className="text-2xl font-bold text-white">What does NordVPN say about no-logs?</h2>
+        <p>{renderNordDealAnswer(nordDealFaqs[4].answer)}</p>
         <p>
           Source:{" "}
           <PlainOutboundLink href={vendorSources.nordNoLogs}>

@@ -45,7 +45,7 @@ const staticRoutes: SiteRoute[] = [
     path: "/best-password-managers",
     title: "Best Password Managers 2026: Prices & Specs Compared",
     description:
-      "NordPass, Bitwarden, 1Password, Proton Pass, Dashlane and Keeper compared on published pricing, encryption and audits. Plain answers, no hype.",
+      "NordPass, Bitwarden, 1Password, Proton Pass, Dashlane and Keeper compared on published pricing and encryption. Plain answers, no hype.",
     lastModified: "2026-10-18",
     priority: 0.92,
     changeFrequency: "weekly",
@@ -183,7 +183,7 @@ export function getSiteRoutes(): SiteRoute[] {
       path: "/reviews/nordpass",
       title: "NordPass Review 2026: Pricing, Security and Specs",
       description:
-        "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, and who should skip it. See current pricing.",
+        "NordPass review based on published specs and pricing: XChaCha20 encryption, and who should skip it. See current pricing.",
       lastModified: "2026-10-17",
       priority: 0.9,
       changeFrequency: "weekly" as const,
@@ -217,7 +217,7 @@ export function getSiteRoutes(): SiteRoute[] {
       path: "/compare/nordpass-vs-bitwarden",
       title: "NordPass vs Bitwarden 2026: Price, Security, Fit",
       description:
-        "NordPass vs Bitwarden on published pricing, encryption, audits and free plans. Bitwarden wins on cost and open code; NordPass on polish.",
+        "NordPass vs Bitwarden on published pricing, encryption and free plans.",
       lastModified: "2026-10-17",
       priority: 0.85,
       changeFrequency: "weekly" as const,

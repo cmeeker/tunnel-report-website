@@ -46,7 +46,7 @@ const homepageFaqs = [
   {
     question: "What should privacy-focused readers look for first?",
     answer:
-      "Kill switch reliability and clear data-retention language. A low price means nothing if the provider cannot demonstrate these fundamentals.",
+      "Kill switch behavior and clear data-retention language. A low price means nothing if the provider cannot demonstrate these fundamentals.",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function Home() {
 
             <h1 className="text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
               VPN Reviews You Can Trust.<br />
-              <span className="gradient-text"> Start Reading the Audits.</span>
+              <span className="gradient-text"> Start Reading.</span>
             </h1>
             <p className="mx-auto max-w-xl text-base leading-relaxed text-[#64748b]">
               VPN coverage based on published specs, pricing and third-party reports, with
@@ -261,9 +261,9 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-3">
           {[
             {
-              title: "VPN Privacy Audits: What Actually Matters in 2026",
+              title: "VPN Privacy: What Actually Matters in 2026",
               excerpt:
-                "Providers publish audit scope documents; read each provider's own report for what it covered.",
+                "Providers publish scope documents; read each provider's own report for what it covered.",
               href: "/reviews/nordvpn",
               image: "/images/article-privacy.svg",
               badge: "Analysis",

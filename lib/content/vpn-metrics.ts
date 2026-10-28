@@ -127,7 +127,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "privacy",
     title: "Best VPN for Privacy in 2026",
     description:
-      "Privacy-first buyers should prioritize audit scope, jurisdiction, open-source clients, and payment anonymity.",
+      "Privacy-first buyers should prioritize jurisdiction, open-source clients, and payment anonymity.",
     pickSlug: "mullvad",
     pickReason: "Anonymous account numbers, cash/crypto payments, and zero affiliate marketing funnel.",
   },
@@ -135,7 +135,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "torrenting",
     title: "Best VPN for Torrenting in 2026",
     description:
-      "P2P users need verified no-logs policies, kill switch reliability, and jurisdictions that resist copyright trolling pressure. NordVPN, Mullvad, and Proton VPN all allow P2P; avoid providers with unclear logging history.",
+      "P2P users need no-logs policies, kill switch behavior, and jurisdictions that resist copyright trolling pressure. NordVPN, Mullvad, and Proton VPN all allow P2P; avoid providers with unclear logging history.",
     pickSlug: "nordvpn",
     pickReason: "P2P-optimized servers.",
   },
@@ -160,8 +160,8 @@ export const useCaseSections: UseCaseSection[] = [
     id: "work",
     title: "Best VPN for Remote Work in 2026",
     description:
-      "Remote work VPNs need reliable kill switches, split tunneling for corporate apps, and stable connections across network changes. NordVPN and ExpressVPN offer the most mature split-tunnel implementations.",
+      "Remote work VPNs need kill switches, split tunneling for corporate apps, and stable connections across network changes. NordVPN and ExpressVPN offer split tunneling.",
     pickSlug: "nordvpn",
-    pickReason: "Mature kill switch and Threat Protection for malware blocking.",
+    pickReason: "Kill switch and Threat Protection for malware blocking.",
   },
 ];

@@ -77,9 +77,8 @@ export default function AboutPage() {
         <div className="glass-card p-7">
           <h3 className="text-lg font-bold text-white">Privacy & Security Analysis</h3>
           <p>
-            Privacy evaluation covers four dimensions: <strong>policy language</strong> (what the provider
-            commits to in writing), <strong>audit scope</strong> (what a published audit covered,
-            not just whether an audit happened), <strong>jurisdiction risk</strong> (data
+            Privacy evaluation covers three dimensions: <strong>policy language</strong> (what the provider
+            commits to in writing), <strong>jurisdiction risk</strong> (data
             retention laws, intelligence-sharing agreements, and compulsion mechanisms), and
             <strong> incident response history</strong> (how the provider handled past security events).
           </p>
@@ -108,7 +107,7 @@ export default function AboutPage() {
       <section id="editorial" className="prose-dark space-y-4 scroll-mt-28">
         <h2 className="text-2xl font-bold text-white">If a page includes an affiliate link, the disclosure is visible on-page.</h2>
         <p>
-          If a page includes an affiliate link, the disclosure is visible on-page. We use a consistent
+          If a page includes an affiliate link, the disclosure is visible on-page. We use a
           banner format so readers always know when commercial links are present.
         </p>
         <p id="disclosure" className="scroll-mt-28">

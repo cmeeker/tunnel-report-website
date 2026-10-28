@@ -22,7 +22,7 @@ import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
 const title = "NordPass Review 2026: Pricing, Security and Specs";
 const description =
-  "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, and who should skip it. See current pricing.";
+  "NordPass review based on published specs and pricing: XChaCha20 encryption, and who should skip it. See current pricing.";
 const h1 = "NordPass Review 2026: What You Get and What It Costs";
 const path = "/reviews/nordpass";
 
@@ -47,9 +47,9 @@ const faqs = [
     answer: "XChaCha20, with Argon2id for the master password and a zero-knowledge design, according to NordPass.",
   },
   {
-    question: "Has NordPass been audited?",
+    question: "What certifications does NordPass list?",
     answer:
-      "NordPass says it undergoes regular independent third-party audits and lists ISO 27001 and SOC 2 Type 2 certifications.",
+      "NordPass says it lists ISO 27001 and SOC 2 Type 2 certifications.",
   },
   {
     question: "Does NordPass come with NordVPN?",
@@ -66,7 +66,7 @@ const sources: PasswordSource[] = [
   { id: "S6", title: "Bitwarden security white paper", publisher: "Bitwarden", url: sourceUrls.bitwardenWhitePaper, year: 2026 },
   { id: "S7", title: "1Password security", publisher: "1Password", url: sourceUrls.onePasswordSecurity, year: 2026 },
   { id: "S8", title: "Proton Pass security", publisher: "Proton", url: sourceUrls.protonSecurity, year: 2026 },
-  { id: "S9", title: "Bitwarden compliance & audits", publisher: "Bitwarden", url: sourceUrls.bitwardenAudits, year: 2026 },
+  { id: "S9", title: "Bitwarden compliance", publisher: "Bitwarden", url: sourceUrls.bitwardenAudits, year: 2026 },
 ];
 
 export default function NordPassReviewPage() {
@@ -147,10 +147,10 @@ export default function NordPassReviewPage() {
           <li><strong>Encryption:</strong> vault data is encrypted with XChaCha20. Your private key is encrypted locally using XChaCha20-Poly1305-IETF.</li>
           <li><strong>Key derivation:</strong> your master password goes through Argon2id.</li>
           <li><strong>Zero-knowledge:</strong> NordPass says no one at the company can see what&apos;s in your vault, because data is encrypted on your device.</li>
-          <li><strong>Outside checks:</strong> NordPass lists ISO 27001 and SOC 2 Type 2 certifications, regular independent third-party audits and a bug bounty program.</li>
+          <li><strong>Outside checks:</strong> NordPass says it lists ISO 27001 and SOC 2 Type 2 certifications, regular independent third-party audits, and a bug bounty program <Cite id="S2" />.</li>
         </ul>
         <p>
-          What we can&apos;t tell you: we haven&apos;t reviewed the audit reports line by line, and NordPass&apos;s code isn&apos;t open source the way <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>&apos;s or <PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink>&apos;s is. If open code matters to you, that&apos;s a real reason to look elsewhere. See <EditorialLink href="/compare/nordpass-vs-bitwarden">NordPass vs Bitwarden</EditorialLink>.
+          What we can&apos;t tell you: NordPass&apos;s code isn&apos;t open source the way <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>&apos;s or <PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink>&apos;s is. If open code matters to you, that&apos;s a real reason to look elsewhere. See <EditorialLink href="/compare/nordpass-vs-bitwarden">NordPass vs Bitwarden</EditorialLink>.
         </p>
       </section>
 
@@ -267,11 +267,11 @@ export default function NordPassReviewPage() {
                 <td>Yes <Cite id="S8" /></td>
               </tr>
               <tr>
-                <th scope="row">Published certifications/audits</th>
-                <td>ISO 27001, SOC 2 Type 2, third-party audits <Cite id="S2" /></td>
-                <td>Annual third-party audits, ISO 27001 <Cite id="S9" /></td>
+                <th scope="row">Published certifications</th>
+                <td>NordPass says: ISO 27001, SOC 2 Type 2, third-party audits <Cite id="S2" /></td>
+                <td>Bitwarden says: annual third-party audits, ISO 27001 <Cite id="S9" /></td>
                 <td>SOC 2 Type 2 <Cite id="S7" /></td>
-                <td>Independent audits <Cite id="S8" /></td>
+                <td>Proton says: independent audits <Cite id="S8" /></td>
               </tr>
             </tbody>
           </table>
@@ -300,7 +300,7 @@ export default function NordPassReviewPage() {
           { href: "/reviews/nordvpn", label: "NordVPN Review" },
           { href: "/best-vpns", label: "Best VPNs" },
           { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
-          { href: "/methodology", label: "How We Rank" },
+          { href: "/methodology", label: "How We Pick" },
         ]}
       />
 

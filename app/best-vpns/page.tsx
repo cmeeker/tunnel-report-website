@@ -262,7 +262,7 @@ export default function BestVpnsPage() {
         <section className="prose-dark space-y-4">
           <h2 className="text-xl font-bold text-white">How We Built This Comparison</h2>
           <p>
-            Where a provider publishes an audit report, we note what the audit covered, per the
+            Where a provider publishes a report, we note what it covered, per the
             provider&apos;s own report.
           </p>
           <p>

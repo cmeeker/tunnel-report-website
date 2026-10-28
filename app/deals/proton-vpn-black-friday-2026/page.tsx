@@ -129,7 +129,7 @@ export default function ProtonVpnBlackFridayPage() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Is Proton VPN&apos;s no-logs policy audited?</h2>
+        <h2 className="text-2xl font-bold text-white">What does Proton VPN say about no-logs?</h2>
         <p>{renderProtonDealAnswer(protonDealFaqs[3].answer)}</p>
         <p>
           <PlainOutboundLink href={vendorSources.protonNoLogsAudit}>

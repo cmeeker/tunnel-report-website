@@ -22,7 +22,7 @@ import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
 const title = "NordPass vs Bitwarden 2026: Price, Security, Fit";
 const description =
-  "NordPass vs Bitwarden on published pricing, encryption, audits and free plans. Bitwarden wins on cost and open code; NordPass on polish.";
+  "NordPass vs Bitwarden on published pricing, encryption and free plans.";
 const h1 = "NordPass vs Bitwarden: Which Password Manager Fits You?";
 const path = "/compare/nordpass-vs-bitwarden";
 
@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "Is NordPass better than Bitwarden?",
     answer:
-      "Neither is strictly better. Bitwarden wins on price predictability and open code. NordPass wins on polish and first-term price, based on published specs and pricing.",
+      "Neither is strictly better.",
   },
   {
     question: "Which is cheaper, NordPass or Bitwarden?",
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: "Is Bitwarden really open source?",
-    answer: "Yes. Bitwarden says its code is open source and publishes third-party audits.",
+    answer: "Yes. Bitwarden says its code is open source.",
   },
   {
     question: "What encryption does NordPass use vs Bitwarden?",
@@ -60,7 +60,7 @@ const sources: PasswordSource[] = [
   { id: "S1", title: "NordPass pricing", publisher: "NordPass", url: sourceUrls.nordpassPricing, year: 2026 },
   { id: "S2", title: "NordPass security", publisher: "NordPass", url: sourceUrls.nordpassSecurity, year: 2026 },
   { id: "S3", title: "Bitwarden pricing", publisher: "Bitwarden", url: sourceUrls.bitwardenPricing, year: 2026 },
-  { id: "S4", title: "Bitwarden compliance & audits", publisher: "Bitwarden", url: sourceUrls.bitwardenAudits, year: 2026 },
+  { id: "S4", title: "Bitwarden compliance", publisher: "Bitwarden", url: sourceUrls.bitwardenAudits, year: 2026 },
   { id: "S5", title: "Bitwarden security white paper", publisher: "Bitwarden", url: sourceUrls.bitwardenWhitePaper, year: 2026 },
 ];
 
@@ -145,13 +145,13 @@ export default function NordPassVsBitwardenPage() {
         <h2 className="text-2xl font-bold text-white">Which is more secure?</h2>
         <p>Both use zero-knowledge, end-to-end encryption, meaning your vault is encrypted on your device before it syncs. They differ in the details.</p>
         <p>
-          <strong>NordPass</strong> says it uses XChaCha20 for vault encryption, XChaCha20-Poly1305-IETF to protect your private key locally, and Argon2id for your master password. It lists ISO 27001 and SOC 2 Type 2 certifications, regular independent third-party audits and a bug bounty <Cite id="S2" />.
+          <strong>NordPass</strong> says it uses XChaCha20 for vault encryption, XChaCha20-Poly1305-IETF to protect your private key locally, and Argon2id for your master password, and that it lists ISO 27001 and SOC 2 Type 2 certifications, regular independent third-party audits, and a bug bounty <Cite id="S2" />.
         </p>
         <p>
-          <strong>Bitwarden</strong> documents end-to-end AES-CBC 256-bit encryption with HMAC authentication. It uses PBKDF2 SHA-256 by default and lets you switch to Argon2id <Cite id="S5" />. Bitwarden publishes yearly third-party security audits, is ISO 27001 certified, and says its code is open source <Cite id="S4" />.
+          <strong>Bitwarden</strong> documents end-to-end AES-CBC 256-bit encryption with HMAC authentication. It uses PBKDF2 SHA-256 by default and lets you switch to Argon2id <Cite id="S5" />. Bitwarden says it publishes yearly third-party security audits, is ISO 27001 certified, and that its code is open source <Cite id="S4" />.
         </p>
         <p>
-          <strong>Our take, based on published specs:</strong> both are strong. Bitwarden&apos;s edge is published information, because anyone can read the code and the audit reports are public. NordPass&apos;s edge is a modern cipher and Argon2id by default. Neither choice is a mistake on security.
+          <strong>Our take, based on published specs:</strong> both are strong. NordPass&apos;s edge is a modern cipher and Argon2id by default. Neither choice is a mistake on security.
         </p>
       </section>
 
@@ -161,7 +161,7 @@ export default function NordPassVsBitwardenPage() {
         <ul className="list-disc space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li><strong>Zero-knowledge, end-to-end encryption.</strong> Neither company says it can read your vault <Cite id="S2" /><Cite id="S5" />.</li>
           <li><strong>Argon2id support.</strong> It&apos;s the default on NordPass and optional on Bitwarden <Cite id="S2" /><Cite id="S5" />.</li>
-          <li><strong>ISO 27001 certification and third-party audits</strong> <Cite id="S2" /><Cite id="S4" />.</li>
+          <li><strong>ISO 27001 certification.</strong> NordPass says it lists third-party audits <Cite id="S2" />. Bitwarden says it publishes third-party audits <Cite id="S4" />.</li>
           <li><strong>Free plans plus paid Premium and six-person family tiers</strong> <Cite id="S1" /><Cite id="S3" />.</li>
           <li><strong>Team and business plans</strong> <Cite id="S1" /><Cite id="S3" />.</li>
         </ul>
@@ -260,9 +260,9 @@ export default function NordPassVsBitwardenPage() {
                 <td>Yes <Cite id="S4" /></td>
               </tr>
               <tr>
-                <th scope="row">Certifications/audits</th>
-                <td>ISO 27001, SOC 2 Type 2, third-party audits <Cite id="S2" /></td>
-                <td>Annual third-party audits, ISO 27001 <Cite id="S4" /></td>
+                <th scope="row">Certifications</th>
+                <td>NordPass says: ISO 27001, SOC 2 Type 2, third-party audits <Cite id="S2" /></td>
+                <td>Bitwarden says: annual third-party audits, ISO 27001 <Cite id="S4" /></td>
               </tr>
               <tr>
                 <th scope="row">Money-back</th>
@@ -282,7 +282,7 @@ export default function NordPassVsBitwardenPage() {
           { href: "/compare/nordvpn-vs-protonvpn", label: "NordVPN vs Proton VPN" },
           { href: "/reviews/nordvpn", label: "NordVPN Review" },
           { href: "/best-vpn-for/privacy", label: "Best VPN for Privacy" },
-          { href: "/methodology", label: "How We Rank" },
+          { href: "/methodology", label: "How We Pick" },
         ]}
       />
 

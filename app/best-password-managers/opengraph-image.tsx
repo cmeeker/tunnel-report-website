@@ -7,7 +7,7 @@ export const contentType = "image/png";
 export default function Image() {
   return buildOgImage({
     title: "Best Password Managers 2026: Prices & Specs Compared",
-    subtitle: "Published pricing, encryption, and audits. No hands-on scores.",
+    subtitle: "Published pricing and encryption. No hands-on scores.",
     badge: "Published specs",
   });
 }

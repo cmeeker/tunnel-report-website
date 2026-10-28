@@ -25,7 +25,7 @@ export const expressHomePaidPick: PaidPickSpec = {
 
 export const expressBestVpnsPaidPick: PaidPickSpec = {
   partner: "surfshark",
-  after: " covers unlimited devices, and Deloitte assessed its no-logs policy in 2023 and 2025.",
+  after: " covers unlimited devices.",
 };
 
 export const alternativeExpressPaidPicks: Record<string, PaidPickSpec> = {

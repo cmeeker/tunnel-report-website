@@ -288,7 +288,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
 
       <RelatedLinks links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)} />
 
-      {!isLongform && comparison.faqs.length > 0 ? (
+      {comparison.faqs.length > 0 ? (
         <FaqSection
           faqs={comparison.faqs}
           renderAnswer={

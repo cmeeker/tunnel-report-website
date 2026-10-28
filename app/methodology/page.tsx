@@ -61,8 +61,7 @@ export default function MethodologyPage() {
             Prices change often, so check the provider&apos;s site.
           </li>
           <li>
-            Published audits and privacy policies: what&apos;s been audited, by whom, and when, as
-            the provider or auditor publishes it.
+            Privacy policies: what the provider publishes about logging, and when.
           </li>
           <li>
             Third-party reports: named outside sources, linked and dated when we cite them.

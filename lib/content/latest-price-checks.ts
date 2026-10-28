@@ -30,7 +30,7 @@ export const latestPriceChecks: PriceCheckLink[] = [
   },
   {
     href: "/compare/nordvpn-vs-expressvpn",
-    label: "NordVPN vs ExpressVPN 2026: Which Premium VPN Wins?",
+    label: "NordVPN vs ExpressVPN 2026: Which Premium VPN Fits You?",
   },
   {
     href: "/compare/surfshark-vs-nordvpn",
