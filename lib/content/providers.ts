@@ -321,7 +321,7 @@ export const providers: Provider[] = [
       },
     ],
     whoShouldBuy: {
-      buy: "Buy Proton VPN if [Proton VPN publishes its app source code](https://github.com/ProtonVPN), Swiss jurisdiction, and alignment with a privacy-first corporate mission matter to you.",
+      buy: "Swiss jurisdiction, [published app source code](https://github.com/ProtonVPN), and alignment with a privacy-first corporate mission matter to you.",
       skip: "Skip if streaming is your primary use case.",
       alternatives: "Mullvad for anonymous payments without an account.",
     },

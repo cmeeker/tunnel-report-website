@@ -41,15 +41,28 @@ const plans = ["Basic", "Plus", "Complete"] as const;
 
 function renderNordDealAnswer(answer: string): ReactNode {
   const refundUrl = vendorSources.nordRefund;
-  if (!answer.includes(refundUrl)) return answer;
-  const [before, after] = answer.split(refundUrl);
-  return (
-    <>
-      {before}
-      <PlainOutboundLink href={refundUrl}>{refundUrl}</PlainOutboundLink>
-      {after}
-    </>
-  );
+  if (answer.includes(refundUrl)) {
+    const [before, after] = answer.split(refundUrl);
+    return (
+      <>
+        {before}
+        <PlainOutboundLink href={refundUrl}>{refundUrl}</PlainOutboundLink>
+        {after}
+      </>
+    );
+  }
+
+  const auditLead = "NordVPN says";
+  if (answer.startsWith(`${auditLead} its audits comprised six independent assurance engagements`)) {
+    return (
+      <>
+        <PlainOutboundLink href={vendorSources.nordNoLogs}>{auditLead}</PlainOutboundLink>
+        {answer.slice(auditLead.length)}
+      </>
+    );
+  }
+
+  return answer;
 }
 
 export default function NordvpnBlackFridayPage() {
