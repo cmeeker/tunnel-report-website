@@ -10,17 +10,16 @@ import {
   EditorialLink,
   NordPassPricingLink,
   PasswordManagerSources,
-  PriceBarChart,
   PricingLink,
   type PasswordSource,
 } from "@/components/password-managers";
 import { RelatedLinks } from "@/components/RelatedLinks";
-import { PASSWORD_MANAGER_UPDATED, prices, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
+import { PASSWORD_MANAGER_UPDATED, pricingUrls, sourceUrls } from "@/lib/content/password-manager-prices";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
-const title = "Best Password Managers 2026: Prices & Specs Compared";
+const title = "Best Password Managers 2026: Compared on Published Specs";
 const description =
   "NordPass, Bitwarden, 1Password, Proton Pass, Dashlane and Keeper compared on published pricing and encryption. Plain answers, no hype.";
 const h1 = "Best Password Managers in 2026, Compared on Price and Specs";
@@ -35,12 +34,12 @@ const faqs = [
   {
     question: "What is the best password manager in 2026?",
     answer:
-      "Based on published specs and pricing, Bitwarden is the best free or low-cost pick, NordPass is the low intro-price pick, and 1Password suits families.",
+      "Based on published specs and pricing, 1Password suits families.",
   },
   {
-    question: "What's the cheapest paid password manager?",
+    question: "Which password managers have a free plan?",
     answer:
-      "See current pricing for Bitwarden Premium and NordPass Premium. Prices change often, so check the provider's site.",
+      "Bitwarden has a free plan. NordPass, 1Password, Proton Pass, Dashlane and Keeper have paid plans; check each provider's pricing page.",
   },
   {
     question: "Is NordPass safe?",
@@ -101,7 +100,7 @@ export default function BestPasswordManagersPage() {
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">{h1}</h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          For most people, Bitwarden is the cheapest full-featured pick, NordPass is the low intro-price pick if you want a polished app, and 1Password suits families who want sharing. These picks are based on published specs, pricing and third-party reports. Prices change often, so check the provider&apos;s site.
+          Bitwarden has a free plan. NordPass, 1Password, Proton Pass, Dashlane and Keeper have paid plans; check each provider&apos;s pricing page. These picks are based on published specs, pricing and third-party reports. Prices change often, so check the provider&apos;s site.
         </p>
         <AuthorByline date="October 18, 2026" />
       </header>
@@ -114,22 +113,22 @@ export default function BestPasswordManagersPage() {
         <h2 className="text-2xl font-bold text-white">Quick picks</h2>
         <ul className="list-disc space-y-3 pl-5 leading-relaxed text-[#94a3b8]">
           <li>
-            <strong>Low intro-price pick: NordPass.</strong> Premium is {prices.nordpassPremiumTwoYearMonthly} on the 2-year plan, {prices.nordpassPremiumTwoYearTotal} for the first 27 months (intro rate) <Cite id="S1" />. <NordPassPricingLink />
+            <strong>NordPass.</strong> NordPass pricing: see <PricingLink href={sourceUrls.nordpassPricing}>NordPass&apos;s pricing page</PricingLink>.
           </li>
           <li>
-            <strong>Best free and cheapest paid: <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>.</strong> There&apos;s a free plan. Premium is {prices.bitwardenPremiumMonthly}, billed annually at {prices.bitwardenPremiumAnnual} <Cite id="S2" />.
+            <strong>Bitwarden.</strong> There&apos;s a free plan. Bitwarden pricing: see <PricingLink href={pricingUrls.bitwarden}>Bitwarden&apos;s pricing page</PricingLink>.
           </li>
           <li>
-            <strong>Best for families who share a lot: <PricingLink href={pricingUrls.onePassword}>1Password</PricingLink>.</strong> Families is {prices.onePasswordFamiliesPromo} with annual billing during the current promotion. The regular price is {prices.onePasswordFamiliesRegular} <Cite id="S3" />.
+            <strong>Best for families who share a lot: <PricingLink href={pricingUrls.onePassword}>1Password</PricingLink>.</strong> 1Password pricing: see <PricingLink href={pricingUrls.onePassword}>1Password&apos;s pricing page</PricingLink>.
           </li>
           <li>
-            <strong>Best privacy-first suite: <PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink>.</strong> Pass Plus is {prices.protonPlusMonthly}, billed at {prices.protonPlusBilled} every 12 months <Cite id="S4" />.
+            <strong>Best for Proton users: <PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink>.</strong> Proton Pass pricing: see <PricingLink href={pricingUrls.protonPass}>Proton Pass&apos;s pricing page</PricingLink>.
           </li>
           <li>
-            <strong>Best bundle with a VPN: <PricingLink href={pricingUrls.dashlane}>Dashlane</PricingLink>.</strong> Premium is {prices.dashlanePremiumMonthly}, billed annually, and includes a VPN <Cite id="S5" />.
+            <strong>Best bundle with a VPN: <PricingLink href={pricingUrls.dashlane}>Dashlane</PricingLink>.</strong> Dashlane pricing: see <PricingLink href={pricingUrls.dashlane}>Dashlane&apos;s pricing page</PricingLink>.
           </li>
           <li>
-            <strong>Best for many vaults in one plan: <PricingLink href={pricingUrls.keeper}>Keeper</PricingLink>.</strong> Keeper Family is {prices.keeperFamilyMonthly} ({prices.keeperFamilyAnnual} billed annually) for 5 private vaults <Cite id="S6" />.
+            <strong>Best for many vaults in one plan: <PricingLink href={pricingUrls.keeper}>Keeper</PricingLink>.</strong> Keeper pricing: see <PricingLink href={pricingUrls.keeper}>Keeper&apos;s pricing page</PricingLink>.
           </li>
         </ul>
         <p>Prices change often, so check the provider&apos;s site.</p>
@@ -146,19 +145,12 @@ export default function BestPasswordManagersPage() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Which password manager is cheapest in 2026?</h2>
-        <p>
-          <PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink>. It has a free plan. See current pricing for Premium <Cite id="S2" />. NordPass Premium&apos;s 2-year headline is an intro rate covering the first 27 months ({prices.nordpassPremiumTwoYearMonthly}) <Cite id="S1" />, and NordPass doesn&apos;t publish its renewal rate on the pricing page. If you want the lowest first-term cost with a more guided app, look at NordPass.
-        </p>
-      </section>
-
-      <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Why is NordPass our value pick?</h2>
         <p>
           NordPass covers what most people need: autosave and autofill, password health, a data breach scanner and file attachments on Premium <Cite id="S1" />. On security, NordPass says it uses XChaCha20 encryption with a zero-knowledge design and Argon2id for master password key derivation, and that it lists ISO 27001 and SOC 2 Type 2 certifications and regular independent third-party audits <Cite id="S7" />. There&apos;s a free plan and a 30-day money-back guarantee on paid plans <Cite id="S1" />.
         </p>
         <p>
-          The catch is the intro pricing. {prices.nordpassPremiumTwoYearTotal} covers 27 months. After that, check the renewal rate before you commit, since it isn&apos;t shown up front.
+          The catch is the intro pricing. NordPass pricing: see <PricingLink href={sourceUrls.nordpassPricing}>NordPass&apos;s pricing page</PricingLink>. After that, check the renewal rate before you commit, since it isn&apos;t shown up front.
         </p>
         <p>
           <NordPassPricingLink />
@@ -175,28 +167,28 @@ export default function BestPasswordManagersPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Who should pick 1Password?</h2>
         <p>
-          Families and people who share a lot. <PricingLink href={pricingUrls.onePassword}>1Password</PricingLink> pairs your account password with a 128-bit Secret Key, and it says it is SOC 2 Type 2 certified <Cite id="S10" />. The current promo is {prices.onePasswordIndividualPromo} for Individual and {prices.onePasswordFamiliesPromo} for Families, billed annually. Regular prices are {prices.onePasswordIndividualRegular} and {prices.onePasswordFamiliesRegular} <Cite id="S3" />. It has no free plan.
+          Families and people who share a lot. <PricingLink href={pricingUrls.onePassword}>1Password</PricingLink> pairs your account password with a 128-bit Secret Key, and it says it is SOC 2 Type 2 certified <Cite id="S10" />. 1Password pricing: see <PricingLink href={pricingUrls.onePassword}>1Password&apos;s pricing page</PricingLink>. It has no free plan.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">What about Proton Pass?</h2>
         <p>
-          <PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink> suits people who already use Proton Mail or want open-source apps. Proton says all Pass apps are open source, vaults use 256-bit AES-GCM, and Pass has been independently audited <Cite id="S11" />. Pass Plus is {prices.protonPlusMonthly}, billed at {prices.protonPlusBilled} every 12 months. Pass Family is {prices.protonFamilyMonthly}, billed at {prices.protonFamilyBilled} every 12 months <Cite id="S4" />. The page shows both as discounts off higher list prices, and renewal terms aren&apos;t stated.
+          <PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink> suits people who already use Proton Mail or want open-source apps. Proton says all Pass apps are open source, vaults use 256-bit AES-GCM, and Pass has been independently audited <Cite id="S11" />. Proton Pass pricing: see <PricingLink href={pricingUrls.protonPass}>Proton Pass&apos;s pricing page</PricingLink>. Renewal terms aren&apos;t stated.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Is Dashlane worth the higher price?</h2>
         <p>
-          Only if you want a VPN in the same bill. <PricingLink href={pricingUrls.dashlane}>Dashlane</PricingLink> Premium is {prices.dashlanePremiumMonthly}, billed annually, and includes a VPN. Friends &amp; Family is {prices.dashlaneFamilyMonthly} for 10 members <Cite id="S5" />. Dashlane describes a zero-knowledge architecture with local encryption and decryption <Cite id="S12" />.
+          Only if you want a VPN in the same bill. <PricingLink href={pricingUrls.dashlane}>Dashlane</PricingLink> includes a VPN on Premium. Friends &amp; Family is for 10 members. Dashlane pricing: see <PricingLink href={pricingUrls.dashlane}>Dashlane&apos;s pricing page</PricingLink>. Dashlane describes a zero-knowledge architecture with local encryption and decryption <Cite id="S12" />.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Is Keeper good for families?</h2>
         <p>
-          <PricingLink href={pricingUrls.keeper}>Keeper</PricingLink> Family gives 5 private vaults and 10GB of file storage for {prices.keeperFamilyMonthly} ({prices.keeperFamilyAnnual} billed annually) <Cite id="S6" />. Keeper says it uses AES 256-bit encryption plus elliptic-curve cryptography under a zero-knowledge model <Cite id="S13" />. Add-ons cost extra.
+          <PricingLink href={pricingUrls.keeper}>Keeper</PricingLink> Family gives 5 private vaults and 10GB of file storage. Keeper pricing: see <PricingLink href={pricingUrls.keeper}>Keeper&apos;s pricing page</PricingLink>. Keeper says it uses AES 256-bit encryption plus elliptic-curve cryptography under a zero-knowledge model <Cite id="S13" />. Add-ons cost extra.
         </p>
       </section>
 
@@ -217,19 +209,6 @@ export default function BestPasswordManagersPage() {
           They do different jobs. A VPN protects the connection. A password manager protects the logins. Reused passwords stay a risk with or without a VPN. If you&apos;re sorting your VPN first, start with our <EditorialLink href="/best-vpns">best VPNs</EditorialLink> comparison and <EditorialLink href="/best-vpn-for/privacy">best VPN for privacy</EditorialLink> guide.
         </p>
       </section>
-
-      <PriceBarChart
-        title="See current pricing"
-        bars={[
-          { label: "Bitwarden Premium", amountLabel: prices.bitwardenPremiumMonthly, value: 1 },
-          { label: "NordPass Premium (2-yr intro)", amountLabel: prices.nordpassPremiumTwoYearMonthly, value: 1 },
-          { label: "1Password Individual (promo)", amountLabel: prices.onePasswordIndividualPromo, value: 1 },
-          { label: "Proton Pass Plus", amountLabel: prices.protonPlusMonthly, value: 1 },
-          { label: "Keeper Unlimited", amountLabel: prices.keeperUnlimitedMonthly, value: 1 },
-          { label: "Dashlane Premium", amountLabel: prices.dashlanePremiumMonthly, value: 1 },
-        ]}
-        source="Source: official pricing pages of each provider, as of Oct 2026. Intro and promo rates noted. Prices change often, so check the provider's site. tunnelreport.com"
-      />
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">Comparison table</h2>
@@ -252,7 +231,7 @@ export default function BestPasswordManagersPage() {
                 <th scope="row">NordPass</th>
                 <td>Yes</td>
                 <td>Premium, 2-year</td>
-                <td>{prices.nordpassPremiumTwoYearMonthly} · {prices.nordpassPremiumTwoYearTotal} for the first 27 months</td>
+                <td>NordPass pricing: see <PricingLink href={sourceUrls.nordpassPricing}>NordPass&apos;s pricing page</PricingLink>.</td>
                 <td>Intro</td>
                 <td>XChaCha20, zero-knowledge</td>
                 <td><Cite id="S1" /><Cite id="S7" /></td>
@@ -261,7 +240,7 @@ export default function BestPasswordManagersPage() {
                 <th scope="row"><PricingLink href={pricingUrls.bitwarden}>Bitwarden</PricingLink></th>
                 <td>Yes</td>
                 <td>Premium, annual</td>
-                <td>{prices.bitwardenPremiumMonthlyShown} · billed annually at {prices.bitwardenPremiumAnnual}</td>
+                <td>Bitwarden pricing: see <PricingLink href={pricingUrls.bitwarden}>Bitwarden&apos;s pricing page</PricingLink>.</td>
                 <td>Standard</td>
                 <td>AES-CBC 256-bit</td>
                 <td><Cite id="S2" /><Cite id="S9" /></td>
@@ -270,7 +249,7 @@ export default function BestPasswordManagersPage() {
                 <th scope="row"><PricingLink href={pricingUrls.onePassword}>1Password</PricingLink></th>
                 <td>No</td>
                 <td>Individual, annual</td>
-                <td>{prices.onePasswordIndividualPromo} (regular {prices.onePasswordIndividualRegular})</td>
+                <td>1Password pricing: see <PricingLink href={pricingUrls.onePassword}>1Password&apos;s pricing page</PricingLink>.</td>
                 <td>Promo</td>
                 <td>Password + 128-bit Secret Key</td>
                 <td><Cite id="S3" /><Cite id="S10" /></td>
@@ -279,7 +258,7 @@ export default function BestPasswordManagersPage() {
                 <th scope="row"><PricingLink href={pricingUrls.protonPass}>Proton Pass</PricingLink></th>
                 <td>Yes</td>
                 <td>Pass Plus, 12 months</td>
-                <td>{prices.protonPlusMonthly} · billed at {prices.protonPlusBilled} every 12 months</td>
+                <td>Proton Pass pricing: see <PricingLink href={pricingUrls.protonPass}>Proton Pass&apos;s pricing page</PricingLink>.</td>
                 <td>Discounted</td>
                 <td>256-bit AES-GCM</td>
                 <td><Cite id="S4" /><Cite id="S11" /></td>
@@ -288,7 +267,7 @@ export default function BestPasswordManagersPage() {
                 <th scope="row"><PricingLink href={pricingUrls.dashlane}>Dashlane</PricingLink></th>
                 <td>—</td>
                 <td>Premium, annual</td>
-                <td>{prices.dashlanePremiumMonthly} Per month, billed annually</td>
+                <td>Dashlane pricing: see <PricingLink href={pricingUrls.dashlane}>Dashlane&apos;s pricing page</PricingLink>.</td>
                 <td>Standard</td>
                 <td>Zero-knowledge, local encryption</td>
                 <td><Cite id="S5" /><Cite id="S12" /></td>
@@ -297,7 +276,7 @@ export default function BestPasswordManagersPage() {
                 <th scope="row"><PricingLink href={pricingUrls.keeper}>Keeper</PricingLink></th>
                 <td>—</td>
                 <td>Keeper Unlimited, annual</td>
-                <td>{prices.keeperUnlimitedMonthly} · {prices.keeperUnlimitedAnnual} billed annually</td>
+                <td>Keeper pricing: see <PricingLink href={pricingUrls.keeper}>Keeper&apos;s pricing page</PricingLink>.</td>
                 <td>Standard</td>
                 <td>AES 256-bit + ECC</td>
                 <td><Cite id="S6" /><Cite id="S13" /></td>
@@ -310,7 +289,7 @@ export default function BestPasswordManagersPage() {
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Verdict</h2>
-        <p>Pick Bitwarden if you want free or the cheapest predictable bill. Pick NordPass for a low intro price and a polished app. Pick 1Password for family sharing. All picks are based on published specs and pricing. Prices change often, so check the provider&apos;s site.</p>
+        <p>Pick Bitwarden if you want a free plan. Pick 1Password for family sharing. All picks are based on published specs and pricing. Prices change often, so check the provider&apos;s site.</p>
       </section>
 
       <RelatedLinks

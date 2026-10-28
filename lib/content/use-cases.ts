@@ -71,14 +71,14 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "The privacy tradeoff",
         paragraphs: [
           "Streaming users often prioritize access over privacy, but logging posture still matters. A streaming VPN still routes your traffic and still sees timing metadata.",
-          "If streaming is your only use case, you may not need the most anonymous provider. You do need a provider with stable infrastructure and a clear no-logs policy.",
+          "If streaming is your only use case, you may not need the most anonymous provider. You do need a provider with a published no-logs policy.",
         ],
       },
     ],
     faqs: [
       { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our default streaming pick." },
       { question: "Will a VPN always bypass sports blackouts?", answer: "No. Blackout enforcement changes by league, broadcaster, device, and payment profile. A VPN improves location flexibility but cannot guarantee access on every platform." },
-      { question: "ExpressVPN or NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is our default pick for most streaming households based on its published features and plan pricing. Check each provider's pricing page for current terms, and note that no VPN can guarantee access to a streaming service." },
+      { question: "ExpressVPN or NordVPN for streaming?", answer: "NordVPN is our default pick for most streaming households based on its published features and plan pricing. Check each provider's pricing page for current terms, and note that no VPN can guarantee access to a streaming service." },
     ],
   },
   {
@@ -273,7 +273,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     ],
     sections: [
       {
-        heading: "Remote work needs reliability more than peak speed",
+        heading: "What remote work needs from a VPN",
         paragraphs: [
           "NordVPN is our default pick because it offers security controls.",
         ],

@@ -43,7 +43,7 @@ const staticRoutes: SiteRoute[] = [
   },
   {
     path: "/best-password-managers",
-    title: "Best Password Managers 2026: Prices & Specs Compared",
+    title: "Best Password Managers 2026: Compared on Published Specs",
     description:
       "NordPass, Bitwarden, 1Password, Proton Pass, Dashlane and Keeper compared on published pricing and encryption. Plain answers, no hype.",
     lastModified: "2026-10-18",

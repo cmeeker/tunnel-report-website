@@ -29,7 +29,7 @@ const aboutFaqs = [
   {
     question: "How do I report an error in your coverage?",
     answer:
-      "Contact our editorial team with the specific claim, the page URL, and a source link if available. We investigate corrections promptly, update the page with visible changelog timestamps, and credit the reporter when appropriate.",
+      "Contact us with the specific claim, the page URL, and a source link if available. We investigate corrections promptly, update the page with visible changelog timestamps, and credit the reporter when appropriate.",
   },
 ];
 
@@ -120,7 +120,7 @@ export default function AboutPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Corrections Policy</h2>
         <p>
-          Accuracy is the foundation of editorial credibility. When we publish inaccurate pricing,
+          Accuracy matters. When we publish inaccurate pricing,
           technical claims, or outdated policy details, we update the page and refresh the timestamp.
           Material corrections include a visible changelog note in the relevant section so readers can
           see what changed, when, and why.
