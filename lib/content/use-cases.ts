@@ -20,6 +20,8 @@ export type UseCaseGuide = {
   title: string;
   shortTitle: string;
   description: string;
+  /** Article JSON-LD only. Meta description stays on `description`. */
+  schemaDescription?: string;
   intro: string;
   dateModified: string;
   datePublished?: string;
@@ -37,6 +39,8 @@ export const useCaseGuides: UseCaseGuide[] = [
     shortTitle: "Streaming",
     description:
       "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on geo-unblocking consistency, and app reliability.",
+    schemaDescription:
+      "Comparison of streaming VPN services based on published specs, pricing and third-party reports.",
     intro:
       "Streaming is the use case where VPN marketing most often gets ahead of reality.",
     datePublished: "2026-04-08",
@@ -59,7 +63,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Regional sports blackouts are the real buyer intent",
         paragraphs: [
           "Searches for streaming VPNs spike around live sports because blackouts are frustrating and time-sensitive. A VPN that works for a static Netflix library but fails during a live NBA or MLB window is not a real streaming pick.",
-          "Surfshark was close on US libraries, but occasional CAPTCHA and server retries kept it just behind the premium options.",
+          "Surfshark is our family-value pick because its plans allow unlimited devices, according to Surfshark.",
         ],
       },
       {
@@ -73,7 +77,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     faqs: [
       { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our top streaming pick." },
       { question: "Will a VPN always bypass sports blackouts?", answer: "No. Blackout enforcement changes by league, broadcaster, device, and payment profile. A VPN improves location flexibility but cannot guarantee access on every platform." },
-      { question: "Is ExpressVPN better than NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is faster and usually cheaper, which makes it the better default for most streaming households." },
+      { question: "Is ExpressVPN better than NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is our default pick for most streaming households based on its published features and plan pricing. Check each provider's pricing page for current terms, and note that no VPN can guarantee access to a streaming service." },
     ],
   },
   {
@@ -173,6 +177,8 @@ export const useCaseGuides: UseCaseGuide[] = [
     shortTitle: "Budget",
     description:
       "The best cheap VPNs based on full lifecycle cost, renewal pricing, device limits, privacy tradeoffs, and speed-per-dollar.",
+    schemaDescription:
+      "Comparison of budget VPN services based on published specs, pricing and third-party reports.",
     intro:
       "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device limits, and whether privacy features are included at the discounted tier.",
     datePublished: "2026-10-17",
@@ -220,6 +226,8 @@ export const useCaseGuides: UseCaseGuide[] = [
     shortTitle: "Gaming",
     description:
       "Gaming VPN recommendations based on latency, packet stability, WireGuard support, DDoS protection claims, and regional routing.",
+    schemaDescription:
+      "Comparison of gaming VPN services based on published specs, pricing and third-party reports.",
     intro:
       "Gaming VPN marketing is full of nonsense. A VPN cannot magically lower latency on every route. It can help with routing consistency, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
     datePublished: "2026-04-08",
@@ -258,6 +266,8 @@ export const useCaseGuides: UseCaseGuide[] = [
     shortTitle: "Remote Work",
     description:
       "Remote-work VPN picks based on split tunneling, kill switch reliability, network transitions, video-call stability, and malware blocking.",
+    schemaDescription:
+      "Comparison of work VPN services based on published specs, pricing and third-party reports.",
     intro:
       "Remote workers need a different VPN than streamers. The winning provider must survive coffee-shop Wi-Fi, hotel networks, video calls, cloud apps, and corporate tools without forcing constant troubleshooting.",
     datePublished: "2026-04-08",
@@ -293,7 +303,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       },
     ],
     faqs: [
-      { question: "What is the best VPN for remote work?", answer: "NordVPN is our best remote-work VPN because it combines stable speeds, mature apps, split tunneling, and malware/tracker blocking." },
+      { question: "What is the best VPN for remote work?", answer: "NordVPN is our pick for remote work based on its published feature set (such as split tunneling, per NordVPN's support pages) and plan pricing." },
       { question: "Do I need a VPN if my company already has one?", answer: "Maybe not. If your company VPN covers all sensitive work traffic, a personal VPN may be redundant or even conflict with corporate tooling." },
       { question: "Will a VPN slow down Zoom?", answer: "A good VPN should not noticeably affect Zoom on a strong connection. Poor server selection or long-distance routing can add latency and reduce call quality." },
     ],

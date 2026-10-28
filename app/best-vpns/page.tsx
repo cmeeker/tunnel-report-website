@@ -30,7 +30,28 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/best-vpns",
 });
 
+const bestVpnsArticleDescription =
+  "Comparison of VPN services based on published specs, pricing and third-party reports.";
+
+const PICK_LABELS: Record<string, string> = {
+  nordvpn: "Our default pick",
+  surfshark: "Our family-value pick",
+  protonvpn: "Our privacy-first pick",
+  expressvpn: "Alternative pick",
+  purevpn: "Budget alternative",
+};
+
+const REMOVED_LIMITATION_LINES = new Set([
+  "Occasional CAPTCHAs during search traffic",
+  "Speeds vary by location and connection",
+]);
+
 const bestVpnFaqs = [
+  {
+    question: "How do you rank VPNs?",
+    answer:
+      "Our picks are editorial, based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+  },
   {
     question: "How was this ranking built?",
     answer:
@@ -51,8 +72,7 @@ const bestVpnFaqs = [
 export default function BestVpnsPage() {
   const articleSchema = buildArticleSchema({
     headline: "Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports",
-    description:
-      "Independent ranking of the top VPN services based on speed, privacy controls, and value.",
+    description: bestVpnsArticleDescription,
     path: "/best-vpns",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
@@ -112,7 +132,10 @@ export default function BestVpnsPage() {
 
         {/* Ranked VPN cards */}
         <section className="space-y-6">
-          {rankedVpns.map((vpn, i) => (
+          {rankedVpns.map((vpn, i) => {
+            const pickLabel = PICK_LABELS[vpn.slug];
+            const limitations = vpn.cons.filter((con) => !REMOVED_LIMITATION_LINES.has(con));
+            return (
             <div
               key={vpn.name}
               id={vpn.name.toLowerCase().replace(/\s+/g, "-")}
@@ -126,14 +149,7 @@ export default function BestVpnsPage() {
                   <div>
                     <h3 className="text-xl font-bold text-white">{vpn.name}</h3>
                     <p className="text-sm text-[#64748b]">{vpn.quickVerdict}</p>
-                  </div>
-                </div>
-                <div className="hidden items-center gap-3 sm:flex">
-                  <div className="text-right">
-                    <p className="text-2xl font-extrabold gradient-text">{vpn.score.toFixed(1)}</p>
-                    <div className="score-bar mt-1 w-20">
-                      <div className="score-bar-fill" style={{ width: `${(vpn.score / 5) * 100}%` }} />
-                    </div>
+                    {pickLabel ? <span className="badge badge-cyan mt-2">{pickLabel}</span> : null}
                   </div>
                 </div>
               </div>
@@ -154,7 +170,7 @@ export default function BestVpnsPage() {
                   <div>
                     <h4 className="text-sm font-semibold uppercase tracking-wide text-[#f87171]">Limitations</h4>
                     <ul className="mt-2 space-y-1.5">
-                      {vpn.cons.map((con) => (
+                      {limitations.map((con) => (
                         <li key={con} className="flex gap-2 text-sm text-[#cbd5e1]">
                           <span className="mt-0.5 shrink-0 text-[#f87171]">&minus;</span>
                           {con}
@@ -189,7 +205,8 @@ export default function BestVpnsPage() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </section>
 
         <hr className="divider-glow" />
@@ -197,8 +214,7 @@ export default function BestVpnsPage() {
         <section className="space-y-8">
           <h2 className="text-2xl font-bold text-white">Best VPN by Use Case</h2>
           <p className="max-w-3xl text-[#94a3b8]">
-            Rankings above reflect overall composite scores. If you have a specific use case, these
-            targeted picks may serve you better than the general list.
+            If you have a specific use case, these targeted picks may serve you better than the general list.
           </p>
           {useCaseSections.map((section) => {
             const pick = providerMap[section.pickSlug];

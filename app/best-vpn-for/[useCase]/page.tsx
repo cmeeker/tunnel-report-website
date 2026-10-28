@@ -67,7 +67,7 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
 
   const articleSchema = buildArticleSchema({
     headline: guide.title,
-    description: guide.description,
+    description: guide.schemaDescription ?? guide.description,
     path,
     datePublished: guide.datePublished,
     dateModified: guide.dateModified,
