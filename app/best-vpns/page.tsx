@@ -41,16 +41,11 @@ const PICK_LABELS: Record<string, string> = {
   purevpn: "Budget alternative",
 };
 
-const REMOVED_LIMITATION_LINES = new Set([
-  "Occasional CAPTCHAs during search traffic",
-  "Speeds vary by location and connection",
-]);
-
 const bestVpnFaqs = [
   {
     question: "How do you rank VPNs?",
     answer:
-      "Our picks are editorial. Rankings are based on published specs, pricing and third-party reports. We did not run our own speed or unblocking tests. Privacy policy analysis, jurisdiction risk and pricing transparency. We may earn a commission from some links.",
+      "Our picks are editorial. Rankings are based on published specs, pricing and third-party reports. We did not run our own speed or unblocking tests. We may earn a commission from some links.",
   },
   {
     question: "Why is NordVPN ranked first over cheaper alternatives?",
@@ -129,7 +124,6 @@ export default function BestVpnsPage() {
         <section className="space-y-6">
           {rankedVpns.map((vpn, i) => {
             const pickLabel = PICK_LABELS[vpn.slug];
-            const limitations = vpn.cons.filter((con) => !REMOVED_LIMITATION_LINES.has(con));
             return (
             <div
               key={vpn.name}
@@ -165,7 +159,7 @@ export default function BestVpnsPage() {
                   <div>
                     <h4 className="text-sm font-semibold uppercase tracking-wide text-[#f87171]">Limitations</h4>
                     <ul className="mt-2 space-y-1.5">
-                      {limitations.map((con) => (
+                      {vpn.cons.map((con) => (
                         <li key={con} className="flex gap-2 text-sm text-[#cbd5e1]">
                           <span className="mt-0.5 shrink-0 text-[#f87171]">&minus;</span>
                           {con}
