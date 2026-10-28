@@ -151,7 +151,7 @@ export default function NordPassVsBitwardenPage() {
           <strong>Bitwarden</strong> documents end-to-end AES-CBC 256-bit encryption with HMAC authentication. It uses PBKDF2 SHA-256 by default and lets you switch to Argon2id <Cite id="S5" />. Bitwarden publishes yearly third-party security audits, is ISO 27001 certified, and says its code is open source <Cite id="S4" />.
         </p>
         <p>
-          <strong>Our take, based on published specs:</strong> both are strong. Bitwarden&apos;s edge is transparency, because anyone can read the code and the audit reports are public. NordPass&apos;s edge is a modern cipher and Argon2id by default. Neither choice is a mistake on security.
+          <strong>Our take, based on published specs:</strong> both are strong. Bitwarden&apos;s edge is published information, because anyone can read the code and the audit reports are public. NordPass&apos;s edge is a modern cipher and Argon2id by default. Neither choice is a mistake on security.
         </p>
       </section>
 

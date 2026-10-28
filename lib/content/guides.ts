@@ -1,6 +1,7 @@
 import type { FaqItem } from "@/components/FaqSection";
 import type { RelatedLink } from "@/components/RelatedLinks";
 import type { PaidPartnerKey } from "@/lib/content/paid-picks";
+import { nordAuditsClaim } from "@/lib/content/providers";
 
 export type GuideTable = {
   headers: string[];
@@ -128,7 +129,7 @@ export const guides: Guide[] = [
     faqs: [
       { question: "Can a no-logs VPN identify me?", answer: "It may still have account, payment, or support records. Strong providers minimize this data and keep it separate from traffic activity." },
       { question: "Are no-logs audits trustworthy?", answer: "Some are. Trust depends on auditor reputation, technical scope, publication detail, and whether audits repeat over time." },
-      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad requires no email to sign up. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025." },
+      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad requires no email to sign up. " + nordAuditsClaim },
     ],
   },
   {
@@ -161,7 +162,7 @@ export const guides: Guide[] = [
         heading: "How top providers compare",
         paragraphs: [
           "NordVPN operates from Panama, Proton VPN from Switzerland, and ExpressVPN from the British Virgin Islands. Each offers legal advantages over providers in aggressive retention regimes.",
-          "Mullvad operates from Sweden, which is less marketing-friendly than Panama or Switzerland, but its account model and transparency posture offset some jurisdiction concerns.",
+          "Mullvad operates from Sweden, which is less marketing-friendly than Panama or Switzerland, but its account model and published policies offset some jurisdiction concerns.",
         ],
       },
     ],

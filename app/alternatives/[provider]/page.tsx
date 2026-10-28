@@ -9,7 +9,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RatingStars } from "@/components/RatingStars";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { alternativeExpressPaidPicks } from "@/lib/content/paid-picks";
 import { getProviderCtaHref, providerMap, providers, providerSlugs, type Provider } from "@/lib/content/providers";
@@ -45,14 +44,14 @@ export async function generateMetadata({ params }: AlternativesPageProps): Promi
   const target = providerMap[provider];
   if (!target) {
     return buildPageMetadata({
-      title: "Best VPN Alternatives",
+      title: "Alternatives to VPN services",
       description: "Alternatives to VPN services compared on published specs, pricing and third-party reports.",
       path: `/alternatives/${provider}`,
     });
   }
 
   return buildPageMetadata({
-    title: `Best ${target.name} Alternatives in 2026`,
+    title: `Alternatives to ${target.name}`,
     description: `Alternatives to ${target.name} compared on published specs, pricing and third-party reports.`,
     path: `/alternatives/${target.slug}`,
   });
@@ -71,7 +70,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       <JsonLd
         data={[
           buildArticleSchema({
-            headline: `Best ${target.name} Alternatives in 2026`,
+            headline: `Alternatives to ${target.name}`,
             description: `Alternatives to ${target.name} compared on published specs, pricing and third-party reports.`,
             path,
             datePublished: "2026-10-15",
@@ -102,7 +101,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
           <span className="badge badge-violet">Updated October 18, 2026</span>
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
-          Best {target.name} Alternatives in 2026
+          Alternatives to {target.name}
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
           {target.name} is a strong fit for some buyers, but it is not the right default for every
@@ -116,23 +115,16 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
 
       <section className="glass-card p-8">
         <h2 className="text-2xl font-bold text-white">Why look beyond {target.name}?</h2>
-        <div className="mt-4 grid gap-5 md:grid-cols-3">
-          <div>
-            <RatingStars rating={target.score} />
-          </div>
+        <div className="mt-4 grid gap-5 md:grid-cols-2">
           <div>
             <p className="text-xs font-semibold uppercase text-[#64748b]">Main limitation</p>
             <p className="mt-2 text-sm text-[#94a3b8]">{target.cons[0]}</p>
-          </div>
-          <div>
-            <p className="text-xs font-semibold uppercase text-[#64748b]">Best reason to stay</p>
-            <p className="mt-2 text-sm text-[#94a3b8]">{target.pros[0]}</p>
           </div>
         </div>
       </section>
 
       <section className="space-y-5">
-        <h2 className="text-2xl font-bold text-white">Top Alternatives to {target.name}</h2>
+        <h2 className="text-2xl font-bold text-white">Alternatives to {target.name}</h2>
         {alternatives.map((alt, index) => {
           const href = getProviderCtaHref(alt);
           const paidPick = alt.slug === "expressvpn" ? alternativeExpressPaidPicks[target.slug] : undefined;
@@ -145,10 +137,11 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
                   </span>
                   <h3 className="text-xl font-bold text-white">{alt.name}</h3>
                 </div>
-                <RatingStars rating={alt.score} />
               </div>
               <div className="space-y-5 p-8">
-                <p className="leading-relaxed text-[#94a3b8]">{alt.quickVerdict}</p>
+                {/\b(best|top)\b/i.test(alt.quickVerdict) ? null : (
+                  <p className="leading-relaxed text-[#94a3b8]">{alt.quickVerdict}</p>
+                )}
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <h4 className="text-sm font-semibold uppercase tracking-wide text-[#00d4aa]">
@@ -204,10 +197,6 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
 
       <FaqSection
         faqs={[
-          {
-            question: `What is the best ${target.name} alternative?`,
-            answer: `${alternatives[0]?.name ?? "NordVPN"} is the strongest alternative for most readers because it offers the best blend of feature coverage and real-world fit against ${target.name}'s limitations.`,
-          },
           {
             question: `Should I switch from ${target.name}?`,
             answer: `Only if ${target.name}'s limitations affect your actual use case. If your current provider is private enough for your threat model, and priced fairly at renewal, switching may not be worth the hassle.`,

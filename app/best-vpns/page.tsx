@@ -21,7 +21,7 @@ import { getBestVpnsRelatedLinks } from "@/lib/seo/related-links";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
 import { getPageOgImageUrl } from "@/lib/seo/share-images";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, affiliateDisclosureAnswer } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports",
@@ -39,13 +39,14 @@ export const PICK_LABELS: Record<string, string> = {
   protonvpn: "Our privacy-first pick",
   expressvpn: "Alternative pick",
   purevpn: "Budget alternative",
+  hideme: "Alternative pick",
+  mullvad: "Alternative pick",
 };
 
 const bestVpnFaqs = [
   {
     question: "How do you rank VPNs?",
-    answer:
-      "Our picks are editorial. Rankings are based on published specs, pricing and third-party reports. We did not run our own speed or unblocking tests. We may earn a commission from some links.",
+    answer: affiliateDisclosureAnswer,
   },
   {
     question: "Why is NordVPN ranked first over cheaper alternatives?",

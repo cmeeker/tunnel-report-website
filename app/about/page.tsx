@@ -7,6 +7,7 @@ import { LastUpdated } from "@/components/LastUpdated";
 import { JsonLd } from "@/components/JsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildArticleSchema } from "@/lib/seo/schema";
+import { affiliateDisclosureAnswer } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "About Tunnel Report: Methodology and Editorial Standards",
@@ -22,9 +23,8 @@ const aboutFaqs = [
       "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. We may earn a commission if you sign up through some links on this site.",
   },
   {
-    question: "Can VPN companies pay for better reviews?",
-    answer:
-      "We may earn a commission if you sign up through some links on this site.",
+    question: "Do you earn money from VPN links?",
+    answer: affiliateDisclosureAnswer,
   },
   {
     question: "How do I report an error in your coverage?",
@@ -85,13 +85,13 @@ export default function AboutPage() {
           </p>
           <p>
             We assign higher weight to verifiable actions than marketing claims. A provider that
-            completed a narrow-scope audit but responded to a real incident is weighted above
-            one that trumpets a broad audit without demonstrable operational security improvement.
+            completed a narrow-scope audit but responded to a real incident appears earlier in this list
+            than one that trumpets a broad audit without demonstrable operational security improvement.
           </p>
         </div>
 
         <div className="glass-card p-7">
-          <h3 className="text-lg font-bold text-white">Pricing Transparency</h3>
+          <h3 className="text-lg font-bold text-white">How we use pricing information</h3>
           <p>
             VPN pricing analysis in most reviews stops at the introductory rate. We track four
             dimensions: <strong>initial promotional price</strong>, <strong>renewal rate</strong> after

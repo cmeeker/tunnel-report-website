@@ -5,6 +5,7 @@ import {
   workExpressPaidPick,
   type PaidPickSpec,
 } from "@/lib/content/paid-picks";
+import { nordAuditsClaim } from "@/lib/content/providers";
 
 export type UseCaseSlug = "streaming" | "privacy" | "torrenting" | "budget" | "gaming" | "work";
 
@@ -85,7 +86,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Privacy in 2026",
     shortTitle: "Privacy",
     description:
-      "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, payment anonymity, and incident-response transparency.",
+      "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, and payment anonymity.",
     intro:
       "Privacy VPN rankings should not be affiliate rankings wearing a darker color palette. We weight verifiable controls: what a published audit covered, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
     datePublished: "2026-04-08",
@@ -94,7 +95,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     primaryPick: "mullvad",
     picks: [
       { providerSlug: "mullvad", label: "Best privacy purist pick", reason: "Anonymous account numbers, cash payments, open-source clients, and no affiliate funnel." },
-      { providerSlug: "protonvpn", label: "Best transparency ecosystem", reason: "Swiss jurisdiction, open-source apps, credible free tier, and strong public privacy posture." },
+      { providerSlug: "protonvpn", label: "Open-source apps", reason: "Swiss jurisdiction, open-source apps, credible free tier, and strong public privacy posture." },
       { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "Frequent infrastructure audits and RAM-only server architecture." },
     ],
     sections: [
@@ -102,7 +103,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "Audit scope beats audit marketing",
         paragraphs: [
           "A no-logs audit only matters if the scope reaches real infrastructure, server configuration, and retention controls. Many providers advertise audits that are closer to policy reviews than technical verification.",
-          "Mullvad and Proton VPN stand out because their transparency posture extends beyond a one-line audit badge. NordVPN is our mainstream pick. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
+          "Mullvad and Proton VPN stand out. NordVPN is our mainstream pick. " + nordAuditsClaim,
         ],
       },
       {
@@ -156,11 +157,6 @@ export const useCaseGuides: UseCaseGuide[] = [
         paragraphs: [
           "Torrenting creates a sharper incentive for copyright complaints and legal requests. That makes audit scope, jurisdiction, and server design more important than generic privacy copy.",
           "RAM-only infrastructure and minimal account data are the strongest signals we can verify without access to internal systems.",
-        ],
-      },
-      {
-        heading: "Speed still matters",
-        paragraphs: [
           "NordVPN remains our default pick because it offers P2P-optimized servers and a kill switch. Mullvad is the better ideological pick for users who value account anonymity above convenience.",
         ],
       },
@@ -277,7 +273,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     picks: [
       { providerSlug: "nordvpn", label: "Best remote-work VPN overall", reason: "Split tunneling, malware blocking and apps on every major platform." },
       { providerSlug: "expressvpn", label: "Best for low-maintenance setup", reason: "Polished apps and clear support docs for non-technical workers.", paidPick: workExpressPaidPick },
-      { providerSlug: "protonvpn", label: "Best for privacy-minded professionals", reason: "Strong transparency and open-source clients for sensitive workflows." },
+      { providerSlug: "protonvpn", label: "Best for privacy-minded professionals", reason: "Open-source clients for sensitive workflows." },
     ],
     sections: [
       {

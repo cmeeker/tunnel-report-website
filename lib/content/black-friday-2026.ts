@@ -207,7 +207,7 @@ export const nordDealFaqs: DealFaq[] = [
   {
     question: "Is NordVPN's no-logs policy audited?",
     answer:
-      "NordVPN says its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
+      "NordVPN says its audits comprised six independent assurance engagements.",
   },
 ];
 

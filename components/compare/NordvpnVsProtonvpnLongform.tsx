@@ -175,8 +175,9 @@ export function NordvpnVsProtonvpnLongform() {
             rel="noopener noreferrer"
             className={linkClassName}
           >
-            NordVPN says it has passed six independent assurance engagements; the full report is behind a Nord Account login.
-          </a>{" "}
+            NordVPN says its audits comprised six independent assurance engagements
+          </a>
+          {". "}
           Sixth: Deloitte Lithuania, ISAE 3000 (Revised), fieldwork 10 November – 12 December
           2025, report 12 December 2025, blog 3 February 2026. RAM-only diskless servers (explainer 28 August 2024).
           Panama operating jurisdiction; Nord Security
@@ -203,9 +204,9 @@ export function NordvpnVsProtonvpnLongform() {
             rel="noopener noreferrer"
             className={linkClassName}
           >
-            NordVPN says
+            NordVPN says its audits comprised six independent assurance engagements
           </a>{" "}
-          it has passed six independent assurance engagements (full report behind a Nord Account login).
+          (full report behind a Nord Account login).
         </p>
       </section>
 

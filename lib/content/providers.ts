@@ -1,6 +1,13 @@
 import type { FaqItem } from "@/components/FaqSection";
 import { expressReviewPaidPick, type PaidPickSpec } from "@/lib/content/paid-picks";
 
+export const NORD_AUDIT_URL = "https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/";
+export const SURFSHARK_AUDIT_URL = "https://surfshark.com/blog/deloitte-nologs-policy-verified-again";
+export const PROTON_AUDIT_URL = "https://protonvpn.com/blog/no-logs-audit";
+export const PROTON_SOURCE_URL = "https://github.com/ProtonVPN";
+
+export const nordAuditsClaim = `[NordVPN says](${NORD_AUDIT_URL}) its audits comprised six independent assurance engagements.`;
+
 export type ProviderSpeedMetric = {
   label: string;
   value: string;
@@ -72,8 +79,7 @@ export const providers: Provider[] = [
     ],
     cons: ["Price increases at renewal", "UI depth can overwhelm first-time users"],
     speedSummary: "",
-    privacySummary:
-      "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025.",
+    privacySummary: nordAuditsClaim,
     pricingSummary: "Entry promo pricing is competitive; long-term value depends on renewal terms.",
     affiliateKey: "nordvpn",
     datePublished: "2026-10-15",
@@ -100,7 +106,7 @@ export const providers: Provider[] = [
         paragraphs: [
           "Privacy evaluation in VPN reviews usually stops at \"they say no logs.\" We look at three layers: policy language, what a published audit covered, and how the company has responded to real incidents.",
           "NordVPN operates under Panamanian jurisdiction, outside Five Eyes intelligence-sharing agreements. That removes one category of compulsion, though jurisdiction alone does not guarantee privacy.",
-          "NordVPN says its audit covers server infrastructure. Audit summaries include RAM-only server verification, meaning data is not written to persistent storage in a way that could survive a server seizure.",
+          "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its audit covers server infrastructure. Audit summaries include RAM-only server verification, meaning data is not written to persistent storage in a way that could survive a server seizure.",
         ],
       },
       {
@@ -116,7 +122,7 @@ export const providers: Provider[] = [
       buy: "Buy NordVPN if you want a single provider that handles streaming, daily browsing, remote work VPN needs, and multi-device coverage without requiring you to become a networking expert.",
       skip: "Skip VPN entirely if your threat model does not actually require one — we would rather lose a commission than recommend a product someone does not need.",
       alternatives:
-        "Consider Surfshark for cost sensitivity, Proton VPN for open-source transparency, or Mullvad if you want a privacy-first provider with no marketing funnel.",
+        "Consider Surfshark for cost sensitivity, or Mullvad if you want a privacy-first provider with no marketing funnel.",
     },
     faqs: [
       {
@@ -127,7 +133,7 @@ export const providers: Provider[] = [
       {
         question: "Does NordVPN actually keep no logs?",
         answer:
-          "NordVPN says its audit covered server infrastructure, not just policy language.",
+          "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its audit covered server infrastructure, not just policy language.",
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-protonvpn", "nordvpn-vs-purevpn", "nordvpn-vs-expressvpn", "surfshark-vs-nordvpn"],
@@ -171,7 +177,7 @@ export const providers: Provider[] = [
       {
         heading: "Privacy and Trust Signals",
         paragraphs: [
-          "Surfshark operates from the Netherlands. Surfshark says its audit covers its no-logs claims and server infrastructure.",
+          "Surfshark operates from the Netherlands. [Surfshark says](https://surfshark.com/blog/deloitte-nologs-policy-verified-again) its audit covers its no-logs claims and server infrastructure.",
           "Unlimited device connections are a genuine differentiator for families — you are not rationing slots across phones, tablets, and laptops [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026.",
         ],
       },
@@ -236,7 +242,7 @@ export const providers: Provider[] = [
       {
         heading: "Privacy Architecture",
         paragraphs: [
-          "ExpressVPN's TrustedServer technology runs entirely in RAM, with no writable persistent storage on VPN servers. ExpressVPN says its audit covers its servers.",
+          "ExpressVPN's TrustedServer technology runs entirely in RAM, with no writable persistent storage on VPN servers.",
           "British Virgin Islands jurisdiction provides structural separation from major surveillance alliances, similar to other top-tier consumer VPNs.",
         ],
       },
@@ -251,7 +257,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy ExpressVPN if you want the most polished consumer experience, reliable streaming access, and are willing to pay a premium for support quality.",
       skip: "Skip if you are price-sensitive.",
-      alternatives: "NordVPN for best overall balance; Surfshark for family value; Proton VPN for transparency.",
+      alternatives: "NordVPN for best overall balance; Surfshark for family value.",
     },
     faqs: [
       {
@@ -263,11 +269,6 @@ export const providers: Provider[] = [
         question: "How does ExpressVPN compare to NordVPN?",
         answer:
           "NordVPN is cheaper at checkout. ExpressVPN wins on app polish and support quality. See our head-to-head comparison for the full breakdown.",
-      },
-      {
-        question: "Does ExpressVPN keep logs?",
-        answer:
-          "ExpressVPN says its audit covers its no-logs policy. TrustedServer RAM-only architecture supports this claim technically.",
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-expressvpn"],
@@ -281,14 +282,14 @@ export const providers: Provider[] = [
     speedMbps: 650,
     pricePerMonth: "See current pricing",
     privacyBlurb: "Swiss jurisdiction, open-source clients",
-    quickVerdict: "Best for privacy-focused users who want transparency over aggressive promos.",
+    quickVerdict: "Best for privacy-focused users.",
     pros: [
       "Strong public privacy mission and open-source posture",
       "Well-documented security practices",
     ],
     cons: ["Smaller streaming footprint", "Premium plans can feel complex"],
     speedSummary: "",
-    privacySummary: "Strong transparency culture and technical documentation quality.",
+    privacySummary: "[Publishes audit reports](https://protonvpn.com/blog/no-logs-audit)",
     pricingSummary: "Value is strongest for users already in the Proton ecosystem.",
     affiliateKey: "protonvpn",
     datePublished: "2026-10-15",
@@ -299,16 +300,16 @@ export const providers: Provider[] = [
     reviewDescription:
       "Proton VPN review from a policy and security perspective — Swiss jurisdiction, open-source clients, free tier limits, and who should choose Proton over mainstream alternatives.",
     reviewSummary:
-      "Proton VPN is the transparency leader in our rankings. Open-source clients, Swiss jurisdiction, and a credible free tier make it the best choice for privacy-first users.",
+      "Open-source clients, Swiss jurisdiction, and a credible free tier make it the best choice for privacy-first users.",
     jurisdiction: "Switzerland",
     protocolNote: "WireGuard and OpenVPN (open-source clients)",
     speedMetrics: [],
     sections: [
       {
-        heading: "Privacy and Transparency",
+        heading: "Privacy and Audits",
         paragraphs: [
           "Proton VPN's Swiss jurisdiction is among the strongest in consumer VPN markets. Switzerland's Federal Act on Data Protection provides meaningful legal protections, and Proton's public benefit corporate structure aligns incentives with user privacy.",
-          "All Proton VPN clients are open source. Proton VPN says its audit covers its clients. For readers who want to verify security claims rather than trust marketing, this is a meaningful differentiator.",
+          "All Proton VPN clients are open source. [Proton VPN says](https://protonvpn.com/blog/no-logs-audit) its audit covers its clients. For readers who want to verify security claims rather than trust marketing, this is a meaningful differentiator.",
           "The free tier remains functional for low-risk browsing, though it limits server selection versus paid plans.",
         ],
       },
@@ -320,7 +321,7 @@ export const providers: Provider[] = [
       },
     ],
     whoShouldBuy: {
-      buy: "Buy Proton VPN if open-source transparency, Swiss jurisdiction, and alignment with a privacy-first corporate mission matter to you.",
+      buy: "Buy Proton VPN if [Proton VPN publishes its app source code](https://github.com/ProtonVPN), Swiss jurisdiction, and alignment with a privacy-first corporate mission matter to you.",
       skip: "Skip if streaming is your primary use case.",
       alternatives: "Mullvad for anonymous payments without an account.",
     },
@@ -333,7 +334,9 @@ export const providers: Provider[] = [
       {
         question: "Is Proton VPN better than NordVPN for privacy?",
         answer:
-          "Proton VPN is our pick on transparency and open-source posture. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. The right choice depends on whether you prioritize open-source code or Nord's feature set.",
+          "Proton VPN is our pick on open-source posture. " +
+            nordAuditsClaim +
+            " The right choice depends on whether you prioritize open-source code or Nord's feature set.",
       },
       {
         question: "Does Proton VPN work in restrictive countries?",
@@ -396,7 +399,7 @@ export const providers: Provider[] = [
       {
         question: "How does PureVPN compare to NordVPN?",
         answer:
-          "[NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. PureVPN has the lower introductory price.",
+          nordAuditsClaim + " PureVPN has the lower introductory price.",
       },
       {
         question: "Does PureVPN work for streaming?",
@@ -449,7 +452,7 @@ export const providers: Provider[] = [
         heading: "Privacy Architecture",
         paragraphs: [
           "Mullvad accepts cash and cryptocurrency payments. No email address is required for account creation. Swedish jurisdiction is not as strong as Switzerland, but Mullvad's operational practices — minimal data collection, open-source clients, public ownership structure — compensate.",
-          "All Mullvad apps are open source. The company publishes detailed security documentation. Mullvad says its audit covers its apps.",
+          "All Mullvad apps are open source. The company publishes detailed security documentation.",
         ],
       },
       {
@@ -461,7 +464,7 @@ export const providers: Provider[] = [
       },
     ],
     whoShouldBuy: {
-      buy: "Buy Mullvad if anonymous payments, flat honest pricing, and open-source transparency matter more than streaming convenience or affiliate-driven promotions.",
+      buy: "Buy Mullvad if anonymous payments and flat honest pricing matter more than streaming convenience or affiliate-driven promotions.",
       skip: "Skip if streaming is your primary use case or you need the largest server network.",
       alternatives: "Proton VPN for Swiss jurisdiction with a free tier; NordVPN for best overall consumer experience.",
     },

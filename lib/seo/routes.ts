@@ -91,7 +91,7 @@ const staticRoutes: SiteRoute[] = [
   {
     path: "/guides",
     title: "VPN Guides",
-    description: "VPN protocols, privacy, pricing, and testing explained.",
+    description: "VPN protocols, privacy and pricing explained.",
     lastModified: "2026-10-17",
     priority: 0.8,
     changeFrequency: "weekly",
@@ -193,7 +193,7 @@ export function getSiteRoutes(): SiteRoute[] {
       const provider = providers.find((item) => item.slug === slug)!;
       return {
         path: `/alternatives/${slug}`,
-        title: `Best ${provider.name} Alternatives in 2026`,
+        title: `Alternatives to ${provider.name}`,
         description: "2026 VPN comparison guides based on published specs, pricing and third-party reports.",
         lastModified: "2026-10-18",
         priority: 0.78,

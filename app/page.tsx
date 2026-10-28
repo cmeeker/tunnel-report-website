@@ -18,6 +18,7 @@ import { homepageComparison } from "@/lib/content/vpn-metrics";
 import { PICK_LABELS } from "@/app/best-vpns/page";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { affiliateDisclosureAnswer } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "VPN Comparison Guides & 2026 Picks | Tunnel Report",
@@ -35,8 +36,7 @@ const homepageFaqs = [
   },
   {
     question: "Do affiliate commissions affect your rankings?",
-    answer:
-      "We may earn a commission if you sign up through some links on this site, at no extra cost to you. Our picks are based on published specs, pricing and third-party reports.",
+    answer: affiliateDisclosureAnswer,
   },
   {
     question: "How often are reviews updated?",
@@ -230,7 +230,7 @@ export default function Home() {
                   </td>
                   <td className="max-w-[200px]">{vpn.privacy}</td>
                   <td className="font-semibold text-white">{vpn.pricePerMonth}</td>
-                  <td>{PICK_LABELS[vpn.slug] ?? ""}</td>
+                  <td>{PICK_LABELS[vpn.slug] ?? "Alternative pick"}</td>
                   <td>
                     {vpn.isAffiliate ? (
                       <AffiliateCTA href={vpn.href} partner={vpn.partner} label={vpn.ctaLabel ?? "Visit"} />

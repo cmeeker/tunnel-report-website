@@ -192,11 +192,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                           <CitedText text={row.left.value} />
                         </span>
                       </div>
-                      {row.winner !== "uncompared" ? (
-                        <div className="score-bar mt-1.5">
-                          <div className="score-bar-fill" style={{ width: `${row.left.pct}%` }} />
-                        </div>
-                      ) : null}
                     </div>
                     <div>
                       <div className="flex items-start justify-between gap-3 text-sm">
@@ -205,14 +200,6 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
                           <CitedText text={row.right.value} />
                         </span>
                       </div>
-                      {row.winner !== "uncompared" ? (
-                        <div className="mt-1.5 h-[6px] overflow-hidden rounded-[3px] bg-[#1e293b]">
-                          <div
-                            className="h-full rounded-[3px] bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]"
-                            style={{ width: `${row.right.pct}%` }}
-                          />
-                        </div>
-                      ) : null}
                     </div>
                   </div>
                   {row.note ? (

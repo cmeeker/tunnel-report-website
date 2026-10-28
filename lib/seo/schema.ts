@@ -159,8 +159,6 @@ type ReviewSchemaInput = {
   dateModified: string;
   datePublished?: string;
   description?: string;
-  ratingValue?: number;
-  bestRating?: number;
 };
 
 export function buildReviewSchema({
@@ -169,62 +167,25 @@ export function buildReviewSchema({
   path,
   dateModified,
   datePublished,
-  description,
-  ratingValue,
-  bestRating = 5,
 }: ReviewSchemaInput) {
   const pageUrl = `${siteConfig.url}${path}`;
   const author = staffAuthor;
   const published = datePublished ?? dateModified;
 
-  if (typeof ratingValue !== "number") {
-    return {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "@id": `${pageUrl}#review`,
-      itemReviewed: {
-        "@type": "Organization",
-        "@id": `${pageUrl}#organization`,
-        name: itemName,
-      },
-      author,
-      reviewBody: summary,
-      datePublished: published,
-      dateModified: resolveDateModified(dateModified),
-      url: pageUrl,
-    };
-  }
-
-  const productId = `${pageUrl}#product`;
-
   return {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": productId,
-    name: itemName,
-    description,
-    url: pageUrl,
-    brand: {
-      "@type": "Brand",
+    "@type": "Review",
+    "@id": `${pageUrl}#review`,
+    itemReviewed: {
+      "@type": "Organization",
+      "@id": `${pageUrl}#organization`,
       name: itemName,
     },
-    review: {
-      "@type": "Review",
-      "@id": `${pageUrl}#review`,
-      itemReviewed: {
-        "@id": productId,
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue,
-        bestRating,
-      },
-      author,
-      reviewBody: summary,
-      datePublished: published,
-      dateModified: resolveDateModified(dateModified),
-      url: pageUrl,
-    },
+    author,
+    reviewBody: summary,
+    datePublished: published,
+    dateModified: resolveDateModified(dateModified),
+    url: pageUrl,
   };
 }
 

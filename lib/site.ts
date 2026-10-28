@@ -10,6 +10,9 @@ export const siteConfig = {
   updatedDate: "October 15, 2026",
 };
 
+export const affiliateDisclosureAnswer =
+  "We may earn a commission if you sign up through some links on this site, at no extra cost to you. Our picks are based on published specs, pricing and third-party reports.";
+
 export const citySlugs = [
   "los-angeles",
   "new-york",
@@ -56,7 +59,7 @@ export const primaryNav: PrimaryNavItem[] = [
     featured: {
       label: "Best VPNs 2026",
       href: "/best-vpns",
-      description: "Our top-ranked providers, compared on privacy, jurisdiction, and pricing transparency.",
+      description: "Our top-ranked providers, compared on privacy, jurisdiction, and pricing.",
       badge: "Updated April 2026",
     },
     columns: [
@@ -148,7 +151,7 @@ export const primaryNav: PrimaryNavItem[] = [
         heading: "The Publication",
         items: [
           { label: "How We Rank", href: "/methodology", description: "Published specs, pricing and third-party reports" },
-          { label: "Editorial Standards", href: "/about#editorial", description: "Independence & disclosure policy" },
+          { label: "Editorial Standards", href: "/about#editorial", description: "Affiliate disclosure policy" },
           { label: "Affiliate Disclosure", href: "/about#disclosure", description: "How commissions work here" },
         ],
       },

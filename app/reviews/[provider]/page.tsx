@@ -10,7 +10,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RatingStars } from "@/components/RatingStars";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
 import {
@@ -142,7 +141,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
         data={buildReviewSchema({
           itemName: provider.name,
           description: `${provider.name} overview based on published specs, pricing and third-party reports.`,
-          ratingValue: provider.score,
           summary: provider.reviewSummary,
           path,
           dateModified: provider.dateModified,
@@ -170,7 +168,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
           {provider.reviewTitle}
         </h1>
         <AuthorByline date={updatedDateLabel} />
-        <RatingStars rating={provider.score} size="lg" />
       </header>
 
       <DisclosureBanner />
@@ -223,7 +220,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
           <p className="text-lg leading-relaxed text-[#cbd5e1]">
             {renderTextWithCitations(provider.reviewSummary, sourceIdSet)}
           </p>
-          <RatingStars rating={provider.score} size="lg" />
           {ctaHref ? (
             <AffiliateCTA
               href={ctaHref}
