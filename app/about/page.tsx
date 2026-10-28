@@ -62,7 +62,7 @@ export default function AboutPage() {
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
           Tunnel Report is a VPN comparison and privacy publication based on published specs, pricing and third-party reports. We exist because
           the overlap between affiliate-funded content and useful security guidance is
-          smaller than it should be, and readers who care about measurable protection deserve a
+          smaller than it should be, and readers who care about protection deserve a
           publication.
         </p>
         <LastUpdated date="October 18, 2026" />

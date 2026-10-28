@@ -275,7 +275,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       {
         heading: "Remote work needs reliability more than peak speed",
         paragraphs: [
-          "NordVPN is the best default because it offers security controls.",
+          "NordVPN is our default pick because it offers security controls.",
         ],
       },
       {
