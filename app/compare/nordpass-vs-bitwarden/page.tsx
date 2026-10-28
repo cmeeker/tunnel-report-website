@@ -166,7 +166,7 @@ export default function NordPassVsBitwardenPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Free plan</h2>
         <p>
-          Both have one <Cite id="S1" /><Cite id="S3" />. NordPass says its Free plan includes a 30-day Premium trial <Cite id="S1" />. Bitwarden&apos;s free plan is a long-running, well-known option for people who just want a no-cost vault. If you want to stay free for good, Bitwarden is the safer bet. If you want to try premium features first, NordPass&apos;s trial helps.
+          Both have one <Cite id="S1" /><Cite id="S3" />. NordPass says its Free plan includes a 30-day Premium trial <Cite id="S1" />. Bitwarden&apos;s free plan is a long-running, well-known option for people who just want a no-cost vault. If you want to try premium features first, NordPass&apos;s trial helps.
         </p>
       </section>
 

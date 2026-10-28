@@ -86,9 +86,11 @@ export default function Home() {
             </div>
 
             <h1 className="text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
-              VPN Reviews<br />
-              <span className="gradient-text"> Start Reading.</span>
+              VPN Reviews
             </h1>
+            <Link href="/best-vpns" className="affiliate-cta">
+              Start Reading
+            </Link>
             <p className="mx-auto max-w-xl text-base leading-relaxed text-[#64748b]">
               VPN coverage based on published specs, pricing and third-party reports, with
               claim-level citations.
