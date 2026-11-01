@@ -70,9 +70,9 @@ export const comparisons: Comparison[] = [
     rightBadge: "",
     faqs: [
       {
-        question: "Is PureVPN a good budget alternative to NordVPN?",
+        question: "How do PureVPN and NordVPN compare on price?",
         answer:
-          "PureVPN offers lower introductory pricing. NordVPN is our pick if you want its NordLynx protocol and larger feature set.",
+          "Check each provider's page for current pricing, device limits and features before you choose.",
       },
     ],
   },
@@ -83,7 +83,7 @@ export const comparisons: Comparison[] = [
     expressPaidPick: compareExpressPaidPicks["nordvpn-vs-expressvpn"],
     title: "NordVPN vs ExpressVPN 2026: Which Premium VPN Wins?",
     description:
-      "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality — with a clear winner for most buyers in 2026.",
+      "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality.",
     intro:
       "Both NordVPN and ExpressVPN target the premium consumer segment. This comparison sets out what each provider's own pages say so you can decide which fits.",
     datePublished: "2026-10-15",
@@ -94,9 +94,7 @@ export const comparisons: Comparison[] = [
       { category: "Entry Pricing", left: { value: "Check [NordVPN's page](https://nordvpn.com/pricing/) for current pricing.", pct: 0 }, right: { value: "Check [ExpressVPN's page](https://www.expressvpn.com/order) for current pricing.", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
-      "Choose NordVPN if a lower checkout price and its NordLynx protocol matter most. It ranks first in our 2026 rankings, based on published specs and pricing.",
       "Check each provider's page for current features and pricing before you choose.",
-      "For most readers, NordVPN is the better default. ExpressVPN justifies its premium only if you specifically value frictionless setup.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
@@ -105,7 +103,7 @@ export const comparisons: Comparison[] = [
     sourceIds: ["S5", "S8"],
     faqs: [
       {
-        question: "Which is better for Netflix?",
+        question: "How do NordVPN and ExpressVPN compare on streaming?",
         answer:
           "Check each provider's page for which streaming services it says it supports.",
       },
@@ -119,7 +117,7 @@ export const comparisons: Comparison[] = [
     description:
       "Surfshark vs NordVPN — unlimited devices and budget pricing compared side by side.",
     intro:
-      "Surfshark and NordVPN are two of the most compared VPNs. Surfshark's pricing page lists [unlimited](https://surfshark.com/pricing) simultaneous device connections; [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. Here is how they compare on published specs and pricing.",
+      "Surfshark and NordVPN are two of the most compared VPNs. Surfshark's pricing page lists [unlimited](https://surfshark.com/pricing) simultaneous device connections. Here is how they compare on published specs and pricing.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -129,9 +127,7 @@ export const comparisons: Comparison[] = [
       { category: "Privacy Audits", left: { value: "Check [Surfshark's page](https://surfshark.com/) for current details.", pct: 0 }, right: { value: "Check [NordVPN's page](https://nordvpn.com/) for current details.", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
-      "Choose Surfshark if you need unlimited device coverage, want the lowest entry price, and primarily use domestic connections. The value proposition for families is genuinely strong.",
-      "Choose NordVPN if you want its NordLynx protocol and a large server network. Choose Surfshark if device count and first-term price matter more.",
-      "For households with many devices on a budget, Surfshark wins. For users who want the best overall VPN without compromise, NordVPN remains our top pick.",
+      "Check each provider's page for current pricing.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
@@ -156,9 +152,9 @@ export const comparisons: Comparison[] = [
     rightSlug: "protonvpn",
     title: "Mullvad vs Proton VPN 2026: Privacy-First Showdown",
     description:
-      "Mullvad vs Proton VPN — anonymous payments, open-source clients, and jurisdiction compared. Neither pays us a commission; here is our honest verdict.",
+      "Mullvad vs Proton VPN — anonymous payments, open-source clients, and jurisdiction compared.",
     intro:
-      "Mullvad and Proton VPN represent the privacy-first tier of the VPN market. Neither runs aggressive affiliate programs — Tunnel Report earns zero commission from either. That independence makes this comparison particularly important.",
+      "Mullvad and Proton VPN represent the privacy-first tier of the VPN market.",
     dateModified: "2026-10-15",
     rows: [
       { category: "Payment Anonymity", left: { value: "Cash, crypto, no email ([Mullvad's page](https://mullvad.net/en/pricing))", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/support/payment-options) for current details.", pct: 0 }, winner: "uncompared" },
@@ -168,9 +164,9 @@ export const comparisons: Comparison[] = [
       { category: "Censorship Tools", left: { value: "Check [Mullvad's page](https://mullvad.net/en/) for current details.", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/) for current details.", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
-      "Choose Mullvad if payment anonymity is your top priority. No email signup, cash-by-mail payments, and flat honest pricing without promotional tricks.",
+      "Choose Mullvad if payment anonymity matters to you; see Mullvad's pricing page.",
       "Choose Proton VPN if Swiss jurisdiction, a functional free tier, and integrated Proton ecosystem tools matter more than maximum payment anonymity.",
-      "For most privacy-focused readers, Mullvad wins on operational anonymity while Proton VPN wins on legal jurisdiction and ecosystem breadth. You cannot go wrong with either — both are meaningfully better than marketing-heavy consumer VPNs on privacy fundamentals.",
+      "Mullvad says its signup needs no email address ([Mullvad's page](https://mullvad.net/en/help/no-logging-data-policy)). Proton VPN says it is based in Switzerland ([Proton VPN's page](https://protonvpn.com/about)).",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
@@ -178,14 +174,14 @@ export const comparisons: Comparison[] = [
     rightBadge: "",
     faqs: [
       {
-        question: "Does Tunnel Report earn commission from Mullvad or Proton VPN?",
+        question: "Does Tunnel Report earn a commission from links on this site?",
         answer:
-          "No. Neither provider operates a traditional affiliate program that pays us. We include them because editorial independence requires covering the best privacy options regardless of revenue.",
+          "Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy through them. See our affiliate disclosure on each page.",
       },
       {
-        question: "Which is better for torrenting?",
+        question: "How do Mullvad and Proton VPN compare on torrenting?",
         answer:
-          "Both allow P2P on their networks. Mullvad's anonymity model is stronger for users who want no account trail; Proton VPN offers comparable technical support with more hand-holding documentation.",
+          "Check each provider's page for current features and pricing before you choose.",
       },
     ],
   },
@@ -208,17 +204,14 @@ export const comparisons: Comparison[] = [
       { category: "Privacy Audits", left: { value: "Check [Surfshark's page](https://surfshark.com/) for current details.", pct: 0 }, right: { value: "Check [ExpressVPN's page](https://www.expressvpn.com/) for current details.", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
-      "Choose Surfshark for a household with many devices. It is cheaper at checkout.",
-      "Check each provider's page for current features and pricing before you choose.",
-      "Check each provider's page for current pricing, device limits and features before you choose.",
+      "Choose Surfshark for a household with many devices.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
     leftBadge: "",
     rightBadge: "",
     faqs: [
-      { question: "Is Surfshark better than ExpressVPN?", answer: "Check each provider's page for current pricing, device limits and features before you choose." },
-      { question: "Which is cheaper long-term?", answer: "Surfshark is cheaper for most households, especially when unlimited devices replace multiple subscriptions." },
+      { question: "How do Surfshark and ExpressVPN compare on pricing and features?", answer: "Check each provider's page for current features and pricing before you choose." },
     ],
   },
   {
@@ -229,7 +222,7 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs Proton VPN compared across speed, privacy transparency, pricing, streaming, and open-source posture.",
     intro:
-      "NordVPN is the better all-around consumer VPN. Proton VPN is the stronger transparency story for users who want open-source clients and Swiss jurisdiction.",
+      "Check each provider's page for current features and pricing before you choose.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -240,7 +233,6 @@ export const comparisons: Comparison[] = [
     ],
     verdictParagraphs: [
       "Choose Proton VPN if you want open-source transparency, Swiss jurisdiction, and the Proton ecosystem.",
-      "NordVPN wins for most buyers. Proton VPN wins for readers who are consciously optimizing for transparency over convenience.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
@@ -267,17 +259,14 @@ export const comparisons: Comparison[] = [
       { category: "Jurisdiction", left: { value: "British Virgin Islands ([ExpressVPN's page](https://www.expressvpn.com/privacy-policy))", pct: 0 }, right: { value: "Switzerland ([Proton VPN's page](https://protonvpn.com/about))", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
-      "Check each provider's page for current features and pricing before you choose.",
       "Choose Proton VPN if Swiss jurisdiction, as stated on Proton VPN's own page, matters to you.",
-      "ExpressVPN is easier. Proton VPN is more transparent. The better pick depends on your tolerance for complexity.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
     leftBadge: "",
     rightBadge: "",
     faqs: [
-      { question: "Is ExpressVPN better than Proton VPN?", answer: "Check each provider's page for current features and pricing before you choose." },
-      { question: "Which has better jurisdiction?", answer: "Both are favorable; Proton's Switzerland positioning is stronger for privacy-first users." },
+      { question: "How do ExpressVPN and Proton VPN compare on features and pricing?", answer: "Check each provider's page for current features and pricing before you choose." },
     ],
   },
   {
@@ -297,16 +286,15 @@ export const comparisons: Comparison[] = [
       { category: "Device Limit", left: { value: "Unlimited devices ([Surfshark's page](https://surfshark.com/pricing))", pct: 0 }, right: { value: "Up to 10 devices ([PureVPN's page](https://www.purevpn.com/order))", pct: 0 }, winner: "uncompared" },
     ],
     verdictParagraphs: [
-      "Choose Surfshark if you want the better cheap VPN for a household.",
       "Choose PureVPN if the lowest first-term price is your dominant criterion and you mostly use domestic connections.",
-      "For most budget buyers, Surfshark is worth the small premium.",
+      "Check each provider's page for current pricing.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
     leftBadge: "",
     rightBadge: "",
     faqs: [
-      { question: "Is PureVPN cheaper than Surfshark?", answer: "PureVPN often has a lower introductory price, but Surfshark's unlimited devices can make it cheaper for households." },
+      { question: "Is PureVPN cheaper than Surfshark?", answer: "Check each provider's page for current pricing, device limits and features before you choose." },
     ],
   },
   {
@@ -315,7 +303,7 @@ export const comparisons: Comparison[] = [
     rightSlug: "mullvad",
     title: "NordVPN vs Mullvad 2026: Mainstream Power or Privacy Purism?",
     description:
-      "NordVPN vs Mullvad compared on speed, account anonymity, streaming, audits, pricing, and affiliate independence.",
+      "NordVPN vs Mullvad compared on speed, account anonymity, streaming, audits, and pricing.",
     intro:
       "Mullvad is the privacy purist's choice and pays us nothing. This comparison is useful because both can be the right answer for different readers.",
     datePublished: "2026-10-15",
@@ -327,15 +315,13 @@ export const comparisons: Comparison[] = [
     verdictParagraphs: [
       "Check each provider's page for current features and pricing before you choose.",
       "Choose Mullvad if signing up without an email address matters to you; see Mullvad's page.",
-      "NordVPN wins for most households. Mullvad wins for readers who care more about anonymity than convenience.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
     leftBadge: "",
     rightBadge: "",
     faqs: [
-      { question: "Is Mullvad better than NordVPN?", answer: "Mullvad says on its own page that signup needs no email address. Check NordVPN's page for its current sign-up requirements." },
-      { question: "Why recommend Mullvad if there is no affiliate commission?", answer: "Because it is a genuinely strong privacy product and editorial independence requires non-monetized recommendations." },
+      { question: "How do Mullvad and NordVPN compare on features and pricing?", answer: "Mullvad says on its own page that signup needs no email address. Check NordVPN's page for its current sign-up requirements." },
     ],
   },
   {
@@ -356,15 +342,14 @@ export const comparisons: Comparison[] = [
     ],
     verdictParagraphs: [
       "Check each provider's page for current features and pricing before you choose.",
-      "Choose PureVPN if first-term cost is the only thing that matters and you accept weaker consistency.",
-      "ExpressVPN is the better product. PureVPN is the cheaper tool. That distinction matters.",
+      "Choose PureVPN if first-term cost is the only thing that matters.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
     leftBadge: "",
     rightBadge: "",
     faqs: [
-      { question: "Is ExpressVPN worth paying more than PureVPN?", answer: "Check ExpressVPN's and PureVPN's pages for current pricing and features before you choose." },
+      { question: "How do ExpressVPN and PureVPN compare on price?", answer: "Check ExpressVPN's and PureVPN's pages for current pricing and features before you choose." },
     ],
   },
   {
@@ -391,7 +376,7 @@ export const comparisons: Comparison[] = [
       {
         spec: "Jurisdiction",
         left: "Netherlands (Surfshark B.V., Amsterdam) [V1]",
-        right: "Switzerland (Proton AG, Geneva) [P1]",
+        right: "[Proton VPN says](https://protonvpn.com/about) it is a Swiss corporation.",
       },
       {
         spec: "No-logs audits",
@@ -430,12 +415,12 @@ export const comparisons: Comparison[] = [
       },
     ],
     rows: [
-      { category: "Devices", left: { value: "Unlimited", pct: 98 }, right: { value: "10 on VPN Plus", pct: 70 }, winner: "left" },
-      { category: "Privacy & audits", left: { value: "Deloitte, customer-only report", pct: 82 }, right: { value: "Public Securitum reports", pct: 94 }, winner: "right" },
-      { category: "Jurisdiction", left: { value: "Netherlands", pct: 80 }, right: { value: "Switzerland", pct: 92 }, winner: "right" },
-      { category: "Torrenting", left: { value: "Marked P2P locations", pct: 80 }, right: { value: "P2P plus port forwarding", pct: 88 }, winner: "right" },
-      { category: "Free option", left: { value: "Trial, 3 devices", pct: 40 }, right: { value: "Free plan, 1 device", pct: 88 }, winner: "right" },
-      { category: "Price", left: { value: "Intro deal, then applicable renewal price", pct: 70 }, right: { value: "Intro price and renewal price on the plan card", pct: 70 }, winner: "draw" },
+      { category: "Devices", left: { value: "Unlimited", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/pricing) for current details.", pct: 0 }, winner: "uncompared" },
+      { category: "Privacy & audits", left: { value: "Check [Surfshark's page](https://surfshark.com/) for current details.", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/) for current details.", pct: 0 }, winner: "uncompared" },
+      { category: "Jurisdiction", left: { value: "Check [Surfshark's page](https://surfshark.com/) for current details.", pct: 0 }, right: { value: "Switzerland", pct: 0 }, winner: "uncompared" },
+      { category: "Torrenting", left: { value: "Check [Surfshark's page](https://surfshark.com/) for current details.", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/) for current details.", pct: 0 }, winner: "uncompared" },
+      { category: "Free option", left: { value: "Check [Surfshark's page](https://surfshark.com/pricing) for current details.", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/free-vpn) for current details.", pct: 0 }, winner: "uncompared" },
+      { category: "Price", left: { value: "Check [Surfshark's page](https://surfshark.com/pricing) for current details.", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/pricing) for current details.", pct: 0 }, winner: "uncompared" },
     ],
     notes: [
       {
@@ -456,9 +441,9 @@ export const comparisons: Comparison[] = [
     rightBadge: "",
     faqs: [
       {
-        question: "Is Surfshark or Proton VPN better for torrenting?",
+        question: "How do Surfshark and Proton VPN compare on torrenting?",
         answer:
-          "Both allow P2P. Proton VPN adds port forwarding on paid plans [P5]. Surfshark marks P2P locations on its server list [V6].",
+          "Check each provider's page for current features and pricing before you choose.",
       },
       {
         question: "Does either have a free plan?",

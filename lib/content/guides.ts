@@ -266,7 +266,7 @@ export const guides: Guide[] = [
     ],
     faqs: [
       { question: "Why do VPN prices go up at renewal?", answer: "Introductory discounts are acquisition offers. Renewal pricing usually reflects the standard plan rate after the promotional term ends." },
-      { question: "Which VPN has the best long-term value?", answer: "Surfshark is strongest for multi-device households. Mullvad has the cleanest flat-rate pricing (see current pricing on [mullvad.net/pricing](https://mullvad.net/en/pricing)) but no affiliate program and fewer streaming features." },
+      { question: "What should I check when comparing VPN prices over a long term?", answer: "Check each provider's page for the current price per term, what the price is after the first term, how many devices the plan allows and which features it includes. Mullvad publishes its current pricing at [mullvad.net/pricing](https://mullvad.net/en/pricing)." },
       { question: "Can I cancel before VPN renewal?", answer: "Usually yes, but policies vary. Set a reminder before the renewal date and confirm cancellation in your account dashboard." },
     ],
   },

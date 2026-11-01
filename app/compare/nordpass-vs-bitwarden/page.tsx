@@ -22,7 +22,7 @@ import { getPageOgImageUrl } from "@/lib/seo/share-images";
 
 const title = "NordPass vs Bitwarden 2026: Price, Security, Fit";
 const description =
-  "NordPass vs Bitwarden on published pricing, encryption, audits and free plans. Bitwarden wins on cost and open code; NordPass on polish.";
+  "NordPass vs Bitwarden on published pricing, encryption, audits and free plans.";
 const h1 = "NordPass vs Bitwarden: Which Password Manager Fits You?";
 const path = "/compare/nordpass-vs-bitwarden";
 
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "Is NordPass better than Bitwarden?",
+    question: "How do NordPass and Bitwarden compare on features and pricing?",
     answer:
-      "Neither is strictly better. Bitwarden wins on price predictability and open code. NordPass wins on polish and first-term price, based on published specs and pricing.",
+      "Check each provider's page for current features and pricing before you choose.",
   },
   {
     question: "Which is cheaper, NordPass or Bitwarden?",

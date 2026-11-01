@@ -422,7 +422,7 @@ export const providers: Provider[] = [
       "Flat pricing with no promotional tricks. See current pricing.",
       "Open-source clients and transparent ownership",
     ],
-    cons: ["No affiliate program (we earn nothing recommending it)", "Fewer streaming-optimized features", "Smaller server network than mega-providers"],
+    cons: ["Fewer streaming-optimized features", "Smaller server network than mega-providers"],
     speedSummary: "Solid WireGuard performance with consistent European routing.",
     privacySummary: "Industry-leading anonymity model and transparent corporate structure.",
     pricingSummary: "Flat rate with no renewal surprises — refreshingly honest.",

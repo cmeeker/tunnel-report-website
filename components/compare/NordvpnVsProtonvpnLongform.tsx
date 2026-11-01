@@ -29,7 +29,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <p>
           <strong>Affiliate disclosure.</strong> Tunnel Report earns a commission if you buy through outbound links on
-          this page. That does not change scores, category winners, or the use-case recommendation. Editorial scoring
+          this page. Editorial scoring
           is walled off from commercial relationships; the method is on our{" "}
           <Link href="/methodology" className={linkClassName}>
             methodology
@@ -43,61 +43,10 @@ export function NordvpnVsProtonvpnLongform() {
           <PricingLink href="https://protonvpn.com/pricing">Proton VPN&apos;s page</PricingLink> for current pricing.
         </p>
 
-        <p>
-          <strong>Use-case verdict, not a trophy.</strong> NordVPN is the household default if you want a mature app.
-          Proton VPN is the better pick if you want public
-          audit PDFs, open-source clients, Swiss legal posture, and a credible free tier.
-        </p>
+        <p>Check each provider's page for current features and pricing before you choose.</p>
       </section>
 
       <section className="space-y-4">
-        <div className="glass-card overflow-x-auto">
-          <table className="table-dark">
-            <thead>
-              <tr>
-                <th>Use case</th>
-                <th>Pick</th>
-                <th>Why</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Streaming geo-unblocking</td>
-                <td>
-                  <strong>NordVPN</strong>
-                </td>
-                <td>We do not publish invented Netflix win rates.</td>
-              </tr>
-              <tr>
-                <td>Verifiable no-logs + open-source apps</td>
-                <td>
-                  <strong>Proton VPN</strong>
-                </td>
-                <td>
-                  Fifth annual Securitum infrastructure audit; 2025 report is a public PDF. Apps are on GitHub.
-                </td>
-              </tr>
-              <tr>
-                <td>Swiss jurisdiction / Proton Mail–Drive stack</td>
-                <td>
-                  <strong>Proton VPN</strong>
-                </td>
-                <td>Proton AG, Geneva. Value is strongest if you already pay for the ecosystem.</td>
-              </tr>
-              <tr>
-                <td>Try before you pay</td>
-                <td>
-                  <strong>Proton VPN</strong>
-                </td>
-                <td>
-                  Audited no-logs free plan. NordVPN has no free tier; it sells a 30-day money-back window on the first
-                  term.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
         <div className="glass-card flex flex-col gap-3 p-6 md:flex-row md:items-center md:justify-between">
           <AffiliateCTA
             href={AFFILIATE_URLS.nordvpn}
@@ -136,54 +85,35 @@ export function NordvpnVsProtonvpnLongform() {
               </tr>
               <tr>
                 <td>Audit PDF access</td>
-                <td>Deloitte ISAE 3000; full report behind Nord Account login</td>
+                <td>Check NordVPN's page for current details.</td>
                 <td>Securitum annual reports; 2025 PDF is public</td>
               </tr>
               <tr>
                 <td>Jurisdiction</td>
-                <td>parent Nord Security in the Netherlands</td>
-                <td>Switzerland (Proton AG, Geneva)</td>
+                <td>Check NordVPN's page for current details.</td>
+                <td><a href="https://protonvpn.com/about" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> it is a Swiss corporation.</td>
               </tr>
               <tr>
                 <td>Free tier</td>
                 <td>None</td>
                 <td>Credible free plan (1 device, limited countries)</td>
               </tr>
-              <tr>
-                <td>Composite score (our reviews)</td>
-                <td>4.8 / 5</td>
-                <td>4.4 / 5</td>
-              </tr>
             </tbody>
           </table>
         </div>
 
         <p>
-          Those scores are from our standalone reviews, not a new head-to-head trophy. NordVPN is our pick in the{" "}
+          NordVPN is our pick in the{" "}
           <Link href="/best-vpns" className={linkClassName}>
             2026 rankings
-          </Link>
-          . Proton VPN is ranked for transparency.
+          </Link>.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Privacy and audits: two different kinds of proof</h2>
 
-        <p>
-          <a
-            href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClassName}
-          >
-            NordVPN says it has passed six independent assurance engagements; the full report is behind a Nord Account login.
-          </a>{" "}
-          Sixth: Deloitte Lithuania, ISAE 3000 (Revised), fieldwork 10 November – 12 December
-          2025, report 12 December 2025, blog 3 February 2026. RAM-only diskless servers (explainer 28 August 2024).
-          Panama operating jurisdiction; Nord Security
-          Netherlands.
-        </p>
+        <p>Check NordVPN's page for current details.</p>
 
         <h3 className="text-xl font-bold text-white">Proton VPN — public PDFs, open clients, court-tested empty logs</h3>
         <p>
@@ -197,28 +127,12 @@ export function NordvpnVsProtonvpnLongform() {
           59 of 59 in 2025).
         </p>
 
-        <p>
-          Privacy: Proton publishes open-source apps;{" "}
-          <a
-            href="https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClassName}
-          >
-            NordVPN says
-          </a>{" "}
-          it has passed six independent assurance engagements (full report behind a Nord Account login).
-        </p>
+        <p>Privacy: Proton publishes open-source apps. Check NordVPN's page for current details.</p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">
-          {"Jurisdiction: check each provider's page for where it is based and which law applies."}
-        </h2>
-        <p>
-          Neither Five Eyes. Proton AG Route de la Galaise 32, 1228 Plan-les-Ouates, Geneva, Proton Foundation. FADP
-          SR 235.1 in force 1 September 2023 is general data protection not a VPN logging mandate.
-        </p>
+        <h2 className="text-2xl font-bold text-white">Jurisdiction</h2>
+        <p><a href="https://protonvpn.com/about" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> it is a Swiss corporation. Check NordVPN's page for current details.</p>
       </section>
 
       <section className="prose-dark space-y-4">

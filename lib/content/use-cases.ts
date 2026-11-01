@@ -117,7 +117,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       },
     ],
     faqs: [
-      { question: "What is the most private VPN?", answer: "Mullvad is our top privacy pick because it minimizes account data, supports anonymous payments." },
+      { question: "What should I check when choosing a VPN for privacy?", answer: "Check each provider's page for current pricing, device limits, supported streaming services and features, and read its own privacy policy before you choose." },
       { question: "Is Proton VPN better than Mullvad?", answer: "Proton VPN has stronger ecosystem and Swiss-jurisdiction advantages. Mullvad has stronger account anonymity and simpler pricing." },
       { question: "Do privacy VPNs work for streaming?", answer: "Sometimes, but streaming is not the core design goal for Mullvad or Proton VPN. Choose NordVPN or ExpressVPN if streaming is your primary use case." },
     ],
