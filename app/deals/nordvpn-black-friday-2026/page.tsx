@@ -159,9 +159,7 @@ export default function NordvpnBlackFridayPage() {
           NordVPN has not published an end date. If NordVPN has not published a Black Friday offer
           yet, the table shows the current plan labeled &quot;Current price, not a Black Friday
           deal.&quot; A deal ends when the vendor page no longer shows it, or when a published end
-          date passes. This page will then say &quot;This Black Friday deal has ended (last seen
-          [date])&quot; or show the current price labeled &quot;Current price, not a Black Friday
-          deal.&quot;
+          date passes. Check NordVPN&apos;s page for current pricing.
         </p>
       </section>
 

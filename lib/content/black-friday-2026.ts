@@ -178,7 +178,7 @@ export const surfsharkFaqs: DealFaq[] = [
   {
     question: "When does Surfshark's Black Friday deal end?",
     answer:
-      "As of Oct 17, 2026, Surfshark has not published an end date. This page will say when the deal has ended.",
+      "Check Surfshark's page for current pricing and any end date. Offers change, and a deal can end without notice.",
   },
   {
     question: "Is Surfshark One priced differently from Starter right now?",

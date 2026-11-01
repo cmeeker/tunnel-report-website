@@ -367,10 +367,8 @@ export default function BlackFridayVpnHubPage() {
         </p>
         <p>
           As of Oct 17, 2026, no vendor has published an end date. A deal ends when the vendor page no
-          longer shows it, or when a published end date passes. Within one refresh cycle, this page
-          will either say &quot;This Black Friday deal has ended (last seen [date])&quot; or return to
-          &quot;Deal not announced yet, check back&quot; and show the current price with the
-          &quot;Current price, not a Black Friday deal&quot; label.
+          longer shows it, or when a published end date passes. Check each provider&apos;s page for
+          current pricing.
         </p>
       </section>
 
