@@ -143,9 +143,8 @@ export default function SurfsharkBlackFridayPage() {
         <h2 className="text-2xl font-bold text-white">When does the Surfshark deal end?</h2>
         <p>
           Surfshark has not published an end date. {surfsharkFaqs[2].answer} A deal ends when the
-          vendor page no longer shows it, or when a published end date passes. This page will then
-          say &quot;This Black Friday deal has ended (last seen [date])&quot; or show the current
-          price labeled &quot;Current price, not a Black Friday deal.&quot;
+          vendor page no longer shows it, or when a published end date passes. Check Surfshark&apos;s
+          page for current pricing.
         </p>
       </section>
 
