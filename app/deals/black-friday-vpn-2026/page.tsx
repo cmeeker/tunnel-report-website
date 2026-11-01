@@ -73,10 +73,9 @@ export default function BlackFridayVpnHubPage() {
 
       <section className="prose-dark space-y-4">
         <p>
-          As of Oct 17, 2026, Surfshark is the only one of these four providers showing an offer it
-          labels &quot;Black Friday deal&quot;: Surfshark One, 24 months + 3 extra months. Check
-          Surfshark&apos;s page for current pricing. Renewal: check at checkout. Check each
-          provider&apos;s page for current pricing.
+          Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra months) a
+          &quot;Black Friday deal.&quot; Check Surfshark&apos;s page for current pricing. Renewal:
+          check at checkout. Check each provider&apos;s page for current pricing.
         </p>
         <p>{PRICE_CHANGE_LINE}</p>
       </section>
@@ -161,10 +160,10 @@ export default function BlackFridayVpnHubPage() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Which providers have announced Black Friday deals?</h2>
+        <h2 className="text-2xl font-bold text-white">Where to check each provider&apos;s Black Friday offer</h2>
         <p>
-          As of Oct 17, 2026, Surfshark is the only provider in this set whose pricing page labels a
-          plan &quot;Black Friday deal.&quot; Check each provider&apos;s page for current pricing.
+          Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra months) a
+          &quot;Black Friday deal.&quot; Check each provider&apos;s page for current pricing.
           Black Friday 2026 is Friday, November 27, 2026, the date given on{" "}
           <PlainOutboundLink href={vendorSources.nordBlackFriday}>
             NordVPN&apos;s Black Friday page
@@ -218,8 +217,8 @@ export default function BlackFridayVpnHubPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Surfshark: Black Friday deal (per Surfshark)</h2>
         <p>
-          As of Oct 17, 2026, Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra
-          months) a &quot;Black Friday deal.&quot; Check Surfshark&apos;s page for current pricing.
+          Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra months) a
+          &quot;Black Friday deal.&quot; Check Surfshark&apos;s page for current pricing.
           Renewal: check at checkout.
         </p>
         <p>
@@ -356,7 +355,7 @@ export default function BlackFridayVpnHubPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">How we track these deals</h2>
         <p>
-          These rows come from each provider&apos;s own pricing page, read on Oct 17, 2026. Check each
+          These rows come from each provider&apos;s own pricing page. Check each
           provider&apos;s page for current pricing for the intro amount and the renewal amount next
           to the plan length. A row is labeled &quot;Black Friday deal (per [Vendor])&quot; only when
           that vendor&apos;s page labels the offer a Black Friday deal.

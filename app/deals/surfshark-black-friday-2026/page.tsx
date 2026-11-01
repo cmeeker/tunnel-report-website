@@ -67,8 +67,8 @@ export default function SurfsharkBlackFridayPage() {
 
       <section className="prose-dark space-y-4">
         <p>
-          As of Oct 17, 2026, Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra
-          months) a &quot;Black Friday deal.&quot; Check Surfshark&apos;s page for current pricing.
+          Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra months) a
+          &quot;Black Friday deal.&quot; Check Surfshark&apos;s page for current pricing.
           Surfshark does not list the renewal amount on that page, so check the renewal price at
           checkout. {PRICE_CHANGE_LINE}
         </p>

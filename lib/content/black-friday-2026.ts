@@ -90,9 +90,9 @@ export const hubFaqs: DealFaq[] = [
     answer: "Black Friday 2026 is Friday, November 27, 2026.",
   },
   {
-    question: "Which VPNs have announced Black Friday 2026 deals so far?",
+    question: "Where can I check each VPN's Black Friday 2026 offer?",
     answer:
-      "As of Oct 17, 2026, Surfshark labels its Surfshark One 24-month + 3-month plan a Black Friday deal. Check Surfshark's page for current pricing. Renewal is shown at checkout. Prices change often, so check the provider's site before you buy.",
+      "Surfshark's pricing page labels Surfshark One (24 months + 3 extra months) a Black Friday deal. Check Surfshark's page for current pricing. Renewal is shown at checkout. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "Does the Black Friday price apply when the plan renews?",
@@ -168,7 +168,7 @@ export const surfsharkFaqs: DealFaq[] = [
   {
     question: "What is Surfshark's Black Friday 2026 deal?",
     answer:
-      "As of Oct 17, 2026, Surfshark labels Surfshark One (24 months + 3 extra months) a Black Friday deal. See current pricing. Renewal: check at checkout. Prices change often, so check the provider's site before you buy.",
+      "Surfshark's pricing page labels Surfshark One (24 months + 3 extra months) a Black Friday deal. Check Surfshark's page for current pricing. Renewal: check at checkout. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "How much does Surfshark cost after the first term?",
