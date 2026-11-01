@@ -13,7 +13,6 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import {
-  NORD_PROTON_CHECKED_LABEL,
   NORD_PROTON_DEAL_DATE,
   PRICE_CHANGE_LINE,
   blackFridayHub,
@@ -67,7 +66,7 @@ export default function ProtonVpnBlackFridayPage() {
           {protonBlackFriday.h1}
         </h1>
         <p className="text-sm font-semibold text-[#e8ecf4]">
-          {staffAuthorName} · Checked {NORD_PROTON_CHECKED_LABEL}
+          {staffAuthorName}
         </p>
         <p className="text-sm text-[#94a3b8]">
           Last updated: <time dateTime={NORD_PROTON_DEAL_DATE}>{NORD_PROTON_DEAL_DATE}</time>
