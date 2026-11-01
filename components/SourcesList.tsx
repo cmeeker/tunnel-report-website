@@ -35,8 +35,10 @@ export function SourcesList({ sources, showRetrievedAt = false }: SourcesListPro
               {showRetrievedAt ? (
                 <>
                   {" "}
-                  <span className="break-all text-[#64748b]">{source.url}</span> (
-                  {source.retrievedVerb ?? "accessed"} {source.retrievedAt}).
+                  <span className="break-all text-[#64748b]">{source.url}</span>
+                  {source.retrievedAt ? (
+                    <> ({source.retrievedVerb ?? "accessed"} {source.retrievedAt}).</>
+                  ) : null}
                 </>
               ) : null}
             </li>

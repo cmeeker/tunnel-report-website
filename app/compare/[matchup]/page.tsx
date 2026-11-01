@@ -222,7 +222,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
               ))}
             </div>
             <p className="text-xs text-[#475569]">
-              Prices checked on each provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check the provider&apos;s site before you buy.
+              Prices change often, so check the provider&apos;s site before you buy.
             </p>
           </section>
 
