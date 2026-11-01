@@ -87,9 +87,7 @@ export default function NordvpnBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <p>
           NordVPN&apos;s Black Friday 2026 offer is listed on NordVPN&apos;s own Black Friday and
-          pricing pages; see current pricing there before you buy, because intro and renewal prices
-          differ. If NordVPN hasn&apos;t published a Black Friday offer yet, this page says so and
-          shows the current plan instead. {PRICE_CHANGE_LINE}
+          pricing pages. Check NordVPN&apos;s page for current pricing. {PRICE_CHANGE_LINE}
         </p>
       </section>
 
@@ -99,7 +97,7 @@ export default function NordvpnBlackFridayPage() {
         <PriceTable
           headers={["Status", "Plan", "Price", "Renewal"]}
           rows={plans.map((plan) => [
-            "Current price, not a Black Friday deal",
+            "Check NordVPN's page for current pricing.",
             plan,
             "See current pricing",
             "See current pricing",
@@ -116,10 +114,9 @@ export default function NordvpnBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">NordVPN&apos;s Black Friday 2026 deal at a glance</h2>
         <p>
-          Plans covered: Basic, Plus, and Complete. Status: Current price, not a Black Friday deal.
-          NordVPN publishes Black Friday information on{" "}
+          Plans covered: Basic, Plus, and Complete. NordVPN publishes Black Friday information on{" "}
           <PlainOutboundLink href={vendorSources.nordBlackFriday}>nordvpn.com/black-friday/</PlainOutboundLink>
-          . See current pricing.
+          . Check NordVPN&apos;s page for current pricing.
         </p>
       </section>
 
@@ -142,7 +139,8 @@ export default function NordvpnBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">What NordVPN renews at</h2>
         <p>
-          Renewal is different from the intro price; see current pricing on{" "}
+          Renewal is different from the intro price. Check NordVPN&apos;s page for current pricing
+          on{" "}
           <PlainOutboundLink href={vendorSources.nordvpn}>nordvpn.com/pricing/</PlainOutboundLink>.
         </p>
         <p>{nordDealFaqs[2].answer}</p>
@@ -156,10 +154,9 @@ export default function NordvpnBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">When does the NordVPN deal end?</h2>
         <p>
-          NordVPN has not published an end date. If NordVPN has not published a Black Friday offer
-          yet, the table shows the current plan labeled &quot;Current price, not a Black Friday
-          deal.&quot; A deal ends when the vendor page no longer shows it, or when a published end
-          date passes. Check NordVPN&apos;s page for current pricing.
+          A deal ends when the vendor page no longer shows it, or when a published end date passes.
+          Check NordVPN&apos;s page for current pricing and any end date. Offers change, and a deal
+          can end without notice.
         </p>
       </section>
 

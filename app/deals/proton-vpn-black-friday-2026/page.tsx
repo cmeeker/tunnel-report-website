@@ -76,9 +76,8 @@ export default function ProtonVpnBlackFridayPage() {
 
       <section className="prose-dark space-y-4">
         <p>
-          Proton VPN&apos;s Black Friday 2026 offer is shown on Proton&apos;s pricing page; see
-          current pricing there, and check the renewal line before you buy. If Proton hasn&apos;t
-          published its Black Friday offer yet, this page says so and shows the current plan.{" "}
+          Proton VPN&apos;s Black Friday 2026 offer is shown on Proton&apos;s pricing page. Check
+          Proton VPN&apos;s page for current pricing, and check the renewal line before you buy.{" "}
           {PRICE_CHANGE_LINE}
         </p>
       </section>
@@ -89,7 +88,7 @@ export default function ProtonVpnBlackFridayPage() {
         <PriceTable
           headers={["Status", "Plan", "Price", "Renewal"]}
           rows={plans.map((plan) => [
-            "Current price, not a Black Friday deal",
+            "Check Proton VPN's page for current pricing.",
             plan,
             "See current pricing",
             "See current pricing",
@@ -106,12 +105,11 @@ export default function ProtonVpnBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Proton VPN&apos;s Black Friday 2026 deal at a glance</h2>
         <p>
-          Plans covered: VPN Plus and Proton Unlimited. Status: Current price, not a Black Friday
-          deal. Proton explains the plans on{" "}
+          Plans covered: VPN Plus and Proton Unlimited. Proton explains the plans on{" "}
           <PlainOutboundLink href={vendorSources.protonPlans}>
             protonvpn.com/support/proton-vpn-plans
           </PlainOutboundLink>
-          . See current pricing.
+          . Check Proton VPN&apos;s page for current pricing.
         </p>
       </section>
 
@@ -130,7 +128,10 @@ export default function ProtonVpnBlackFridayPage() {
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">What Proton VPN renews at</h2>
-        <p>Renewal is different from the intro price; see current pricing.</p>
+        <p>
+          Renewal is different from the intro price. Check Proton VPN&apos;s page for current
+          pricing.
+        </p>
         <p>{protonDealFaqs[2].answer}</p>
         <p>
           <Link href="/guides/protonvpn-renewal-price" className={textLinkClassName}>
@@ -145,10 +146,9 @@ export default function ProtonVpnBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">When does the Proton VPN deal end?</h2>
         <p>
-          Proton has not published an end date. If Proton has not published a Black Friday offer yet,
-          the table shows the current plan labeled &quot;Current price, not a Black Friday deal.&quot;
           A deal ends when the vendor page no longer shows it, or when a published end date passes.
-          Check Proton VPN&apos;s page for current pricing.
+          Check Proton VPN&apos;s page for current pricing and any end date. Offers change, and a
+          deal can end without notice.
         </p>
       </section>
 
