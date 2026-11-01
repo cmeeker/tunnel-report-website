@@ -29,8 +29,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <p>
           <strong>Affiliate disclosure.</strong> Tunnel Report earns a commission if you buy through outbound links on
-          this page. Editorial scoring
-          is walled off from commercial relationships; the method is on our{" "}
+          this page. See our{" "}
           <Link href="/methodology" className={linkClassName}>
             methodology
           </Link>{" "}
@@ -43,7 +42,7 @@ export function NordvpnVsProtonvpnLongform() {
           <PricingLink href="https://protonvpn.com/pricing">Proton VPN&apos;s page</PricingLink> for current pricing.
         </p>
 
-        <p>Check each provider's page for current features and pricing before you choose.</p>
+        <p>{"Check each provider's page for current features and pricing before you choose."}</p>
       </section>
 
       <section className="space-y-4">
@@ -85,12 +84,12 @@ export function NordvpnVsProtonvpnLongform() {
               </tr>
               <tr>
                 <td>Audit PDF access</td>
-                <td>Check NordVPN's page for current details.</td>
+                <td>{"Check NordVPN's page for current details."}</td>
                 <td>Securitum annual reports; 2025 PDF is public</td>
               </tr>
               <tr>
                 <td>Jurisdiction</td>
-                <td>Check NordVPN's page for current details.</td>
+                <td>{"Check NordVPN's page for current details."}</td>
                 <td><a href="https://protonvpn.com/about" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> it is a Swiss corporation.</td>
               </tr>
               <tr>
@@ -113,9 +112,9 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Privacy and audits: two different kinds of proof</h2>
 
-        <p>Check NordVPN's page for current details.</p>
+        <p>{"Check NordVPN's page for current details."}</p>
 
-        <h3 className="text-xl font-bold text-white">Proton VPN — public PDFs, open clients, court-tested empty logs</h3>
+        <h3 className="text-xl font-bold text-white">Proton VPN: audit reports and open-source apps</h3>
         <p>
           2025 Securitum PDF opened: 18 August 2025 – 19 September 2025; on-site 18–20 August 2025 Zürich; Martin
           Matyja, Maciej Szymczak; bare-metal Proton AG owns. Conclusion: no user activity logging / connection
@@ -123,16 +122,15 @@ export function NordvpnVsProtonvpnLongform() {
           <PlainSourceLink href="https://protonvpn.com/" /> Apps open
           source{" "}
           <PricingLink href="https://github.com/ProtonVPN">github.com/ProtonVPN</PricingLink>
-          . Transparency report through June 2026: 458 Swiss orders, every request denied (47 of 47 through June 2026;
-          59 of 59 in 2025).
+          . Transparency report through June 2026: 458 Swiss orders, every request denied.
         </p>
 
-        <p>Privacy: Proton publishes open-source apps. Check NordVPN's page for current details.</p>
+        <p>{"Privacy: Proton publishes open-source apps. Check NordVPN's page for current details."}</p>
       </section>
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Jurisdiction</h2>
-        <p><a href="https://protonvpn.com/about" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> it is a Swiss corporation. Check NordVPN's page for current details.</p>
+        <p><a href="https://protonvpn.com/about" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> it is a Swiss corporation. Check NordVPN&apos;s page for current details.</p>
       </section>
 
       <section className="prose-dark space-y-4">

@@ -294,7 +294,7 @@ export const comparisons: Comparison[] = [
     leftBadge: "",
     rightBadge: "",
     faqs: [
-      { question: "Is PureVPN cheaper than Surfshark?", answer: "Check each provider's page for current pricing, device limits and features before you choose." },
+      { question: "How do PureVPN and Surfshark compare on price?", answer: "Check each provider's page for current pricing, device limits and features before you choose." },
     ],
   },
   {
@@ -305,7 +305,7 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs Mullvad compared on speed, account anonymity, streaming, audits, and pricing.",
     intro:
-      "Mullvad is the privacy purist's choice and pays us nothing. This comparison is useful because both can be the right answer for different readers.",
+      "Mullvad and NordVPN suit different readers.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",

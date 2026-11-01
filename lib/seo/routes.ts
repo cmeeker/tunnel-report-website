@@ -217,7 +217,7 @@ export function getSiteRoutes(): SiteRoute[] {
       path: "/compare/nordpass-vs-bitwarden",
       title: "NordPass vs Bitwarden 2026: Price, Security, Fit",
       description:
-        "NordPass vs Bitwarden on published pricing, encryption, audits and free plans. Bitwarden wins on cost and open code; NordPass on polish.",
+        "NordPass vs Bitwarden on published pricing, encryption, audits and free plans.",
       lastModified: "2026-10-17",
       priority: 0.85,
       changeFrequency: "weekly" as const,
