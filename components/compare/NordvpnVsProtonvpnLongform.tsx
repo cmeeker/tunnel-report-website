@@ -7,9 +7,11 @@ import { AFFILIATE_URLS } from "@/lib/content/providers";
 const linkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
 
+const urlLinkClassName = `${linkClassName} break-words`;
+
 function PlainSourceLink({ href }: { href: string }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={linkClassName}>
+    <a href={href} target="_blank" rel="noopener noreferrer" className={urlLinkClassName}>
       {href}
     </a>
   );
@@ -201,7 +203,7 @@ export function NordvpnVsProtonvpnLongform() {
         <h2 className="text-2xl font-bold text-white">Sources &amp; References</h2>
         <ol className="list-decimal space-y-2 pl-5 text-sm text-[#cbd5e1]">
           <li>
-            <a href="https://tunnelreport.com/compare/nordvpn-vs-protonvpn" className={linkClassName}>
+            <a href="https://tunnelreport.com/compare/nordvpn-vs-protonvpn" className={urlLinkClassName}>
               tunnelreport.com/compare/nordvpn-vs-protonvpn
             </a>{" "}
             fetched 1 Sep 2026
@@ -268,18 +270,18 @@ export function NordvpnVsProtonvpnLongform() {
             last modified 23 June 2026
           </li>
           <li>
-            <a href="https://www.fedlex.admin.ch/eli/cc/2022/491/en" className={linkClassName}>
+            <a href="https://www.fedlex.admin.ch/eli/cc/2022/491/en" className={urlLinkClassName}>
               https://www.fedlex.admin.ch/eli/cc/2022/491/en
             </a>{" "}
             FADP SR 235.1
           </li>
           <li>
-            <a href="https://www.ic3.gov/AnnualReport/Reports/2023_IC3Report.pdf" className={linkClassName}>
+            <a href="https://www.ic3.gov/AnnualReport/Reports/2023_IC3Report.pdf" className={urlLinkClassName}>
               https://www.ic3.gov/AnnualReport/Reports/2023_IC3Report.pdf
             </a>
           </li>
           <li>
-            <a href="https://freedomhouse.org/report/freedom-net/2024/struggle-trust-online" className={linkClassName}>
+            <a href="https://freedomhouse.org/report/freedom-net/2024/struggle-trust-online" className={urlLinkClassName}>
               https://freedomhouse.org/report/freedom-net/2024/struggle-trust-online
             </a>
           </li>
