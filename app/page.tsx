@@ -268,7 +268,7 @@ export default function Home() {
             {
               title: "VPN Privacy Audits: What Actually Matters in 2026",
               excerpt:
-                "Not all audits test the same controls. I walked through scope documents from four major providers and found the gap between marketing claims and actual test coverage is often wider than vendors let on.",
+                "Not all audits test the same controls.",
               href: "/reviews/nordvpn",
               image: "/images/article-privacy.svg",
               badge: "Analysis",
@@ -276,7 +276,7 @@ export default function Home() {
             {
               title: "Surfshark Review 2026: Best Budget VPN for Families?",
               excerpt:
-                "Unlimited devices and aggressive pricing — our full Surfshark review breaks down where it beats NordVPN and where it does not.",
+                "Compare the two. Check each provider's page for current pricing and features.",
               href: "/reviews/surfshark",
               image: "/images/article-speed.svg",
               badge: "Review",

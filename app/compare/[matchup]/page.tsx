@@ -240,7 +240,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
           <hr className="divider-glow" />
 
           <section className="prose-dark space-y-4">
-            <h2 className="text-2xl font-bold text-white">Which VPN Should You Actually Pick?</h2>
+            <h2 className="text-2xl font-bold text-white">How to Choose a VPN</h2>
             {comparison.verdictParagraphs.map((para) => (
               <p key={para.slice(0, 50)}>{para}</p>
             ))}

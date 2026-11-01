@@ -128,7 +128,7 @@ export const guides: Guide[] = [
     faqs: [
       { question: "Can a no-logs VPN identify me?", answer: "It may still have account, payment, or support records. Strong providers minimize this data and keep it separate from traffic activity." },
       { question: "Are no-logs audits trustworthy?", answer: "Some are. Trust depends on auditor reputation, technical scope, publication detail, and whether audits repeat over time." },
-      { question: "Which VPN has the best no-logs posture?", answer: "Mullvad requires no email to sign up. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025." },
+      { question: "What should I check when choosing a VPN for no-logs privacy?", answer: "Check each provider's page for current pricing, device limits, supported streaming services and features, and read its own privacy policy before you choose." },
     ],
   },
   {
@@ -157,16 +157,9 @@ export const guides: Guide[] = [
           "Providers outside these alliances often market jurisdiction aggressively. That can be meaningful, but only when paired with real no-logs controls.",
         ],
       },
-      {
-        heading: "How top providers compare",
-        paragraphs: [
-          "NordVPN operates from Panama, Proton VPN from Switzerland, and ExpressVPN from the British Virgin Islands. Each offers legal advantages over providers in aggressive retention regimes.",
-          "Mullvad operates from Sweden, which is less marketing-friendly than Panama or Switzerland, but its account model and transparency posture offset some jurisdiction concerns.",
-        ],
-      },
     ],
     faqs: [
-      { question: "What is the best VPN jurisdiction?", answer: "There is no single best jurisdiction. Switzerland and Panama are strong on paper; implementation and audits matter just as much." },
+      { question: "How should I think about VPN jurisdiction?", answer: "Check where each provider says it is based and what its own privacy policy says. Jurisdiction is one factor among several." },
       { question: "Should I avoid US-based VPNs?", answer: "Not automatically, but US jurisdiction increases legal exposure. We prefer providers that combine strong jurisdiction with audited no-logs infrastructure." },
       { question: "Is British Virgin Islands jurisdiction good for VPNs?", answer: "It is generally favorable for consumer VPN privacy, which is one reason ExpressVPN uses it prominently in trust messaging." },
     ],
@@ -259,7 +252,7 @@ export const guides: Guide[] = [
       {
         heading: "When switching makes sense",
         paragraphs: [
-          "Switch when renewal pricing rises and your current provider is not clearly better for your use case. Surfshark and PureVPN often win on entry price.",
+          "Switch when renewal pricing rises and your current provider is not clearly better for your use case.",
           "If your current provider is reliable and the renewal rate is fair, switching for a marginal discount may not be worth the setup friction.",
         ],
       },
