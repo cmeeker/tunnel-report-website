@@ -416,7 +416,7 @@ export const providers: Provider[] = [
     quickVerdict: "The privacy purist's choice — flat pricing, maximum anonymity.",
     pros: [
       "Anonymous account numbers — no email required",
-      "Flat pricing with no promotional tricks. See current pricing.",
+      "Mullvad says it charges one flat monthly rate.",
       "Open-source clients and transparent ownership",
     ],
     cons: ["Fewer streaming-optimized features", "Smaller server network than mega-providers"],
