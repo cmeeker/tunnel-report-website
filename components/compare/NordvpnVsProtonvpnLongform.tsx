@@ -80,12 +80,12 @@ export function NordvpnVsProtonvpnLongform() {
               <tr>
                 <td>Open source</td>
                 <td>{"Check NordVPN's page for current details."}</td>
-                <td>Open-source clients (GitHub)</td>
+                <td><a href="https://protonvpn.com/blog/open-source" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> its apps are open source.</td>
               </tr>
               <tr>
                 <td>Audit PDF access</td>
                 <td>{"Check NordVPN's page for current details."}</td>
-                <td>Securitum annual reports; 2025 PDF is public</td>
+                <td>{"Check Proton VPN's page for current details."}</td>
               </tr>
               <tr>
                 <td>Jurisdiction</td>
@@ -94,8 +94,8 @@ export function NordvpnVsProtonvpnLongform() {
               </tr>
               <tr>
                 <td>Free tier</td>
-                <td>None</td>
-                <td>Credible free plan (1 device, limited countries)</td>
+                <td>{"Check NordVPN's page for current details."}</td>
+                <td><a href="https://protonvpn.com/free-vpn" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> it has a free plan.</td>
               </tr>
             </tbody>
           </table>
@@ -116,13 +116,7 @@ export function NordvpnVsProtonvpnLongform() {
 
         <h3 className="text-xl font-bold text-white">Proton VPN: audit reports and open-source apps</h3>
         <p>
-          2025 Securitum PDF opened: 18 August 2025 – 19 September 2025; on-site 18–20 August 2025 Zürich; Martin
-          Matyja, Maciej Szymczak; bare-metal Proton AG owns. Conclusion: no user activity logging / connection
-          metadata / traffic inspection contradicting no-logs.           2026 Securitum quoted on Proton blog; Drive{" "}
-          <PlainSourceLink href="https://protonvpn.com/" /> Apps open
-          source{" "}
-          <PricingLink href="https://github.com/ProtonVPN">github.com/ProtonVPN</PricingLink>
-          . Transparency report through June 2026: 458 Swiss orders, every request denied.
+          <a href="https://protonvpn.com/blog/no-logs-audit" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> it has had a fifth consecutive annual third-party audit of its no-logs policy. Proton&apos;s apps are open source (<a href="https://github.com/ProtonVPN" target="_blank" rel="noopener noreferrer" className={linkClassName}>github.com/ProtonVPN</a>).
         </p>
 
         <p>{"Privacy: Proton publishes open-source apps. Check NordVPN's page for current details."}</p>

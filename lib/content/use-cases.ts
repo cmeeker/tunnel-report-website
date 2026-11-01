@@ -112,7 +112,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     faqs: [
       { question: "What should I check when choosing a VPN for privacy?", answer: "Check each provider's page for current pricing, device limits, supported streaming services and features, and read its own privacy policy before you choose." },
       { question: "How do Proton VPN and Mullvad compare for privacy?", answer: "Check each provider's page for current features and pricing before you choose." },
-      { question: "Do privacy VPNs work for streaming?", answer: "Sometimes, but streaming is not the core design goal for Mullvad or Proton VPN. Choose NordVPN or ExpressVPN if streaming is your primary use case." },
+      { question: "Do privacy VPNs work for streaming?", answer: "Check each provider's page for which streaming services it says it supports." },
     ],
   },
   {
