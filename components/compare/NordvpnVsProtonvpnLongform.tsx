@@ -124,7 +124,6 @@ export function NordvpnVsProtonvpnLongform() {
             <thead>
               <tr>
                 <th>Category</th>
-                <th>Advantage</th>
                 <th>NordVPN</th>
                 <th>Proton VPN</th>
               </tr>
@@ -132,37 +131,26 @@ export function NordvpnVsProtonvpnLongform() {
             <tbody>
               <tr>
                 <td>Open source</td>
-                <td>Proton VPN</td>
-                <td>Closed-source apps</td>
+                <td>{"Check NordVPN's page for current details."}</td>
                 <td>Open-source clients (GitHub)</td>
               </tr>
               <tr>
                 <td>Audit PDF access</td>
-                <td>Proton VPN</td>
                 <td>Deloitte ISAE 3000; full report behind Nord Account login</td>
                 <td>Securitum annual reports; 2025 PDF is public</td>
               </tr>
               <tr>
                 <td>Jurisdiction</td>
-                <td>Draw, different risks</td>
-                <td>Panama (Tefincom / NordVPN); parent Nord Security in the Netherlands</td>
+                <td>parent Nord Security in the Netherlands</td>
                 <td>Switzerland (Proton AG, Geneva)</td>
               </tr>
               <tr>
                 <td>Free tier</td>
-                <td>Proton VPN</td>
                 <td>None</td>
                 <td>Credible free plan (1 device, limited countries)</td>
               </tr>
               <tr>
-                <td>App reliability</td>
-                <td>NordVPN</td>
-                <td>Mature across platforms</td>
-                <td>Good, more technical</td>
-              </tr>
-              <tr>
                 <td>Composite score (our reviews)</td>
-                <td>NordVPN</td>
                 <td>4.8 / 5</td>
                 <td>4.4 / 5</td>
               </tr>
@@ -225,20 +213,17 @@ export function NordvpnVsProtonvpnLongform() {
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">
-          Jurisdiction: Panama vs Switzerland is a draw with different failure modes
+          {"Jurisdiction: check each provider's page for where it is based and which law applies."}
         </h2>
         <p>
           Neither Five Eyes. Proton AG Route de la Galaise 32, 1228 Plan-les-Ouates, Geneva, Proton Foundation. FADP
-          SR 235.1 in force 1 September 2023 is general data protection not a VPN logging mandate. Call it a draw.
+          SR 235.1 in force 1 September 2023 is general data protection not a VPN logging mandate.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Streaming: NordVPN, without fake win rates</h2>
-        <p>
-          No invented Netflix/Hulu/BBC percentages. NordVPN more consistent. Proton marketing claims streaming on Plus;
-          our qualitative result is weaker.
-        </p>
+        <h2 className="text-2xl font-bold text-white">Streaming</h2>
+        <p>{"Check each provider's page for which streaming services it says it supports."}</p>
       </section>
 
       <section className="prose-dark space-y-4">

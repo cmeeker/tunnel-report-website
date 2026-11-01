@@ -73,7 +73,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     faqs: [
       { question: "What is the best VPN for Netflix in 2026?", answer: "NordVPN is our top streaming pick." },
       { question: "Will a VPN always bypass sports blackouts?", answer: "No. Blackout enforcement changes by league, broadcaster, device, and payment profile. A VPN improves location flexibility but cannot guarantee access on every platform." },
-      { question: "Is ExpressVPN better than NordVPN for streaming?", answer: "ExpressVPN has the smoother app experience. NordVPN is faster and usually cheaper, which makes it the better default for most streaming households." },
+      { question: "Is ExpressVPN better than NordVPN for streaming?", answer: "Check each provider's page for current pricing, device limits and features before you choose." },
     ],
   },
   {
@@ -117,7 +117,7 @@ export const useCaseGuides: UseCaseGuide[] = [
       },
     ],
     faqs: [
-      { question: "What is the most private VPN?", answer: "Mullvad is our top privacy pick because it minimizes account data, supports anonymous payments, and does not participate in the affiliate incentives that shape most VPN rankings." },
+      { question: "What is the most private VPN?", answer: "Mullvad is our top privacy pick because it minimizes account data, supports anonymous payments." },
       { question: "Is Proton VPN better than Mullvad?", answer: "Proton VPN has stronger ecosystem and Swiss-jurisdiction advantages. Mullvad has stronger account anonymity and simpler pricing." },
       { question: "Do privacy VPNs work for streaming?", answer: "Sometimes, but streaming is not the core design goal for Mullvad or Proton VPN. Choose NordVPN or ExpressVPN if streaming is your primary use case." },
     ],

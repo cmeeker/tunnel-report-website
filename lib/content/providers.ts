@@ -263,7 +263,7 @@ export const providers: Provider[] = [
       {
         question: "How does ExpressVPN compare to NordVPN?",
         answer:
-          "NordVPN is cheaper at checkout. ExpressVPN wins on app polish and support quality. See our head-to-head comparison for the full breakdown.",
+          "Check each provider's page for current pricing and features. See our head-to-head comparison for more.",
       },
       {
         question: "Does ExpressVPN keep logs?",
