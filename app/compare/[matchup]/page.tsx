@@ -15,9 +15,9 @@ import { NordvpnVsProtonvpnLongform } from "@/components/compare/NordvpnVsProton
 import { comparisonMap, comparisonSlugs, type Comparison } from "@/lib/content/comparisons";
 import { citationSources, compareSources, getCitationSourcesById } from "@/lib/content/facts";
 import {
-  AFFILIATE_URLS,
   getProviderCtaHref,
   providerMap,
+  type Provider,
 } from "@/lib/content/providers";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getCompareRelatedLinks } from "@/lib/seo/related-links";
@@ -27,6 +27,43 @@ import { getPageOgImageUrl } from "@/lib/seo/share-images";
 type ComparePageProps = {
   params: Promise<{ matchup: string }>;
 };
+
+/**
+ * Official pricing pages already recorded in repo content, with no affiliate
+ * or tracking parameters. Mullvad's URL is source MV1 in lib/content/facts.ts.
+ * Providers absent from this map get no outbound button.
+ */
+const OFFICIAL_PRICING_CTA: Record<string, { href: string; label: string }> = {
+  mullvad: {
+    href: "https://mullvad.net/en/pricing",
+    label: "See Mullvad's pricing page",
+  },
+};
+
+function PickCardButton({
+  provider,
+  affiliateHref,
+}: {
+  provider: Provider;
+  affiliateHref: string | null;
+}) {
+  if (affiliateHref && provider.affiliateKey) {
+    return (
+      <AffiliateCTA
+        href={affiliateHref}
+        partner={provider.affiliateKey}
+        label={`Visit ${provider.name}`}
+      />
+    );
+  }
+
+  const plain = OFFICIAL_PRICING_CTA[provider.slug];
+  if (!plain) return null;
+
+  // Unpaid partner: AffiliateCTA renders a plain link (noopener only).
+  // Mullvad is not a paid partner, so this does not add rel=sponsored or data-partner.
+  return <AffiliateCTA href={plain.href} partner={provider.slug} label={plain.label} />;
+}
 
 export const dynamicParams = false;
 
@@ -251,23 +288,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
               <span className="badge badge-teal mb-4">{comparison.leftPickLabel}</span>
               <h3 className="text-xl font-bold text-white">{left.name}</h3>
               <div className="mt-5">
-                {leftCta ? (
-                  <AffiliateCTA
-                    href={leftCta}
-                    partner={left.affiliateKey!}
-                    label={`Visit ${left.name}`}
-                  />
-                ) : (
-                  <a
-                    href="https://mullvad.net"
-                    className="affiliate-cta inline-flex"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-partner="mullvad"
-                  >
-                    Visit Mullvad (direct)
-                  </a>
-                )}
+                <PickCardButton provider={left} affiliateHref={leftCta} />
                 {left.affiliateKey === "expressvpn" && comparison.expressPaidPick ? (
                   <PaidPick pick={comparison.expressPaidPick} />
                 ) : null}
@@ -277,19 +298,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
               <span className="badge badge-cyan mb-4">{comparison.rightPickLabel}</span>
               <h3 className="text-xl font-bold text-white">{right.name}</h3>
               <div className="mt-5">
-                {rightCta ? (
-                  <AffiliateCTA
-                    href={rightCta}
-                    partner={right.affiliateKey!}
-                    label={`Visit ${right.name}`}
-                  />
-                ) : (
-                  <AffiliateCTA
-                    href={AFFILIATE_URLS.protonvpn}
-                    partner="protonvpn"
-                    label="Visit Proton VPN"
-                  />
-                )}
+                <PickCardButton provider={right} affiliateHref={rightCta} />
                 {right.affiliateKey === "expressvpn" && comparison.expressPaidPick ? (
                   <PaidPick pick={comparison.expressPaidPick} />
                 ) : null}
