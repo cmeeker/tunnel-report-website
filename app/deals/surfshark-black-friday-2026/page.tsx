@@ -58,7 +58,7 @@ export default function SurfsharkBlackFridayPage() {
           {surfsharkBlackFriday.h1}
         </h1>
         <p className="text-sm font-semibold text-[#e8ecf4]">
-          {staffAuthorName} · Prices as of Oct 17, 2026
+          {staffAuthorName}
         </p>
         <p className="text-sm text-[#94a3b8]">
           Last updated: <time dateTime={DEAL_DATE_MODIFIED}>{DEAL_DATE_MODIFIED}</time>
@@ -94,7 +94,7 @@ export default function SurfsharkBlackFridayPage() {
             ],
           ]}
         />
-        <SourceLine href={vendorSources.surfshark} label="surfshark.com/pricing" />
+        <SourceLine href={vendorSources.surfshark} label="surfshark.com/pricing" accessed="" />
         <PaidVisitLink {...paidLinks.surfshark} />
       </section>
 
@@ -118,7 +118,7 @@ export default function SurfsharkBlackFridayPage() {
         <p>
           Surfshark&apos;s pricing page states &quot;unlimited simultaneous device connections&quot; (
           <PlainOutboundLink href={vendorSources.surfshark}>surfshark.com/pricing</PlainOutboundLink>
-          , accessed Oct 17, 2026).
+          ).
         </p>
         <p>{surfsharkFaqs[3].answer}</p>
       </section>

@@ -97,7 +97,7 @@ export default function ProtonVpnBlackFridayPage() {
         <SourceLine
           href={vendorSources.protonvpn}
           label="protonvpn.com/pricing"
-          accessed={NORD_PROTON_CHECKED_LABEL}
+          accessed=""
         />
         <PaidVisitLink {...protonPricingLink} />
       </section>

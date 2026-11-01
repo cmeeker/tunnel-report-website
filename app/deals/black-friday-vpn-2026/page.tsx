@@ -64,7 +64,7 @@ export default function BlackFridayVpnHubPage() {
           {blackFridayHub.h1}
         </h1>
         <p className="text-sm font-semibold text-[#e8ecf4]">
-          {staffAuthorName} · Prices as of Oct 17, 2026
+          {staffAuthorName}
         </p>
         <p className="text-sm text-[#94a3b8]">
           Last updated: <time dateTime={DEAL_DATE_MODIFIED}>{DEAL_DATE_MODIFIED}</time>
@@ -196,7 +196,7 @@ export default function BlackFridayVpnHubPage() {
             ],
           ]}
         />
-        <SourceLine href={vendorSources.nordvpn} label="nordvpn.com/pricing/" />
+        <SourceLine href={vendorSources.nordvpn} label="nordvpn.com/pricing/" accessed="" />
         <p>
           NordVPN&apos;s pricing page lists 10 devices secured at once and a 30-day money-back
           guarantee on all plans.
@@ -224,7 +224,7 @@ export default function BlackFridayVpnHubPage() {
         <p>
           Surfshark&apos;s pricing page states &quot;unlimited simultaneous device connections&quot; (
           <PlainOutboundLink href={vendorSources.surfshark}>surfshark.com/pricing</PlainOutboundLink>
-          , accessed Oct 17, 2026).
+          ).
         </p>
         <p>
           One vs Starter pricing, renewal, and what the plan lists are on the{" "}
@@ -258,7 +258,7 @@ export default function BlackFridayVpnHubPage() {
             ],
           ]}
         />
-        <SourceLine href={vendorSources.protonvpn} label="protonvpn.com/pricing" />
+        <SourceLine href={vendorSources.protonvpn} label="protonvpn.com/pricing" accessed="" />
         <p>
           Proton&apos;s pricing page lists &quot;Secure 10 devices at a time&quot; and a 30-day
           money-back guarantee.
@@ -309,7 +309,7 @@ export default function BlackFridayVpnHubPage() {
             ],
           ]}
         />
-        <SourceLine href={vendorSources.hideme} label="hide.me/en/pricing" />
+        <SourceLine href={vendorSources.hideme} label="hide.me/en/pricing" accessed="" />
         <p>
           hide.me&apos;s pricing page lists 10 simultaneous connections, 92 locations / 2600 servers,
           and a 30-day money-back guarantee.

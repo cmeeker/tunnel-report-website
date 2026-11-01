@@ -76,7 +76,8 @@ export function SourceLine({
 }) {
   return (
     <p className="text-sm text-[#94a3b8]">
-      Source: <PlainOutboundLink href={href}>{label}</PlainOutboundLink> (accessed {accessed})
+      Source: <PlainOutboundLink href={href}>{label}</PlainOutboundLink>
+      {accessed ? ` (accessed ${accessed})` : null}
     </p>
   );
 }

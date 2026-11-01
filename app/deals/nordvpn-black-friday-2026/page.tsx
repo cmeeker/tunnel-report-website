@@ -106,7 +106,7 @@ export default function NordvpnBlackFridayPage() {
         <SourceLine
           href={vendorSources.nordvpn}
           label="nordvpn.com/pricing/"
-          accessed={NORD_PROTON_CHECKED_LABEL}
+          accessed=""
         />
         <PaidVisitLink {...paidLinks.nordvpn} />
       </section>
