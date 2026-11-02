@@ -234,12 +234,12 @@ function ReviewContent({ provider }: { provider: Provider }) {
             />
           ) : (
             <a
-              href="https://mullvad.net"
-              className="affiliate-cta inline-flex"
+              href="https://mullvad.net/en/pricing"
+              className="affiliate-cta"
+              target="_blank"
               rel="noopener noreferrer"
-              data-partner="mullvad"
             >
-              Visit Mullvad (direct — no affiliate)
+              {"See Mullvad's pricing page"}
             </a>
           )}
           {provider.verdictPaidPick ? <PaidPick pick={provider.verdictPaidPick} /> : null}

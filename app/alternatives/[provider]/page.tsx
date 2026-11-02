@@ -214,9 +214,9 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
             answer: `Only if ${target.name}'s limitations affect your actual use case. If your current provider is fast, private enough for your threat model, and priced fairly at renewal, switching may not be worth the hassle.`,
           },
           {
-            question: "Do affiliate commissions affect these alternatives?",
+            question: "Does Tunnel Report earn a commission from links on this site?",
             answer:
-              "No. Tunnel Report includes non-affiliate recommendations like Mullvad when they serve readers. Commercial relationships do not determine rankings or editorial conclusions.",
+              "Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy through them. See our affiliate disclosure on each page.",
           },
         ]}
       />
