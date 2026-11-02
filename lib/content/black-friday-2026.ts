@@ -11,7 +11,7 @@ export const blackFridayHub = {
   path: "/deals/black-friday-vpn-2026",
   title: "Black Friday VPN Deals 2026: NordVPN, Surfshark, Proton VPN, hide.me",
   description:
-    "Black Friday 2026 VPN deal tracker for NordVPN, Surfshark, Proton VPN and hide.me. See current pricing on each provider's site.",
+    "Black Friday 2026 VPN deal tracker for NordVPN, Surfshark, Proton VPN and hide.me. Check each provider's page for current pricing.",
   h1: "Black Friday VPN Deals 2026",
 } as const;
 
@@ -19,7 +19,7 @@ export const surfsharkBlackFriday = {
   path: "/deals/surfshark-black-friday-2026",
   title: "Surfshark Black Friday 2026 Deal: Plan, Price and Renewal",
   description:
-    "Surfshark Black Friday 2026: Surfshark One, 24 months + 3 extra months. See current pricing. Renewal: check at checkout. As of Oct 17, 2026.",
+    "Surfshark Black Friday 2026: Surfshark One, 24 months + 3 extra months. Check Surfshark's page for current pricing. Renewal: check at checkout.",
   h1: "Surfshark Black Friday 2026 Deal",
 } as const;
 
@@ -27,7 +27,7 @@ export const nordBlackFriday = {
   path: "/deals/nordvpn-black-friday-2026",
   title: "NordVPN Black Friday 2026 Deal: Plans and Renewal",
   description:
-    "NordVPN Black Friday 2026: what NordVPN is offering, which plans it covers, and what to check at renewal. See current pricing on NordVPN's site.",
+    "NordVPN Black Friday 2026: what NordVPN is offering, which plans it covers, and what to check at renewal. Check NordVPN's page for current pricing.",
   h1: "NordVPN Black Friday 2026 Deal",
 } as const;
 
@@ -35,7 +35,7 @@ export const protonBlackFriday = {
   path: "/deals/proton-vpn-black-friday-2026",
   title: "Proton VPN Black Friday 2026 Deal: Plans and Renewal",
   description:
-    "Proton VPN Black Friday 2026: what Proton is offering on VPN Plus, how renewal works, and where to check. See current pricing on Proton's site.",
+    "Proton VPN Black Friday 2026: what Proton is offering on VPN Plus, how renewal works, and where to check. Check Proton VPN's page for current pricing.",
   h1: "Proton VPN Black Friday 2026 Deal",
 } as const;
 
@@ -90,19 +90,19 @@ export const hubFaqs: DealFaq[] = [
     answer: "Black Friday 2026 is Friday, November 27, 2026.",
   },
   {
-    question: "Which VPNs have announced Black Friday 2026 deals so far?",
+    question: "Where can I check each VPN's Black Friday 2026 offer?",
     answer:
-      "As of Oct 17, 2026, Surfshark labels its Surfshark One 24-month + 3-month plan a Black Friday deal. See current pricing. Renewal is shown at checkout. NordVPN, Proton VPN and hide.me have not announced Black Friday deals yet. Prices change often, so check the provider's site before you buy.",
+      "Surfshark's pricing page labels Surfshark One (24 months + 3 extra months) a Black Friday deal. Check Surfshark's page for current pricing. Renewal is shown at checkout. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "Does the Black Friday price apply when the plan renews?",
     answer:
-      "Not necessarily. See current pricing. As of Oct 17, 2026, check NordVPN Basic, Proton VPN Plus, and hide.me Premium on each provider's site. hide.me's pricing page states its plans always renew with the same price and duration. Surfshark's renewal amount is shown at checkout.",
+      "Not necessarily. Check each provider's page for current pricing. Check NordVPN Basic, Proton VPN Plus, and hide.me Premium on each provider's site. hide.me's pricing page states its plans always renew with the same price and duration. Surfshark's renewal amount is shown at checkout.",
   },
   {
     question: "When will Proton VPN's Black Friday deal be available?",
     answer:
-      "Proton VPN has not announced its 2026 Black Friday deal yet. Tunnel Report will check again on Oct 26, 2026 and update this page.",
+      "Check Proton VPN's page for current pricing and any end date. Offers change, and a deal can end without notice.",
   },
 ];
 
@@ -110,17 +110,17 @@ export const nordFaqs: DealFaq[] = [
   {
     question: "Does NordVPN have a Black Friday deal in 2026?",
     answer:
-      "Not yet. As of Oct 17, 2026, NordVPN has not announced a Black Friday 2026 deal. Check back; this page is updated as NordVPN publishes its offer.",
+      "Check NordVPN's page for current pricing and any end date. Offers change, and a deal can end without notice.",
   },
   {
     question: "How much does NordVPN cost right now?",
     answer:
-      "See current pricing. As of Oct 17, 2026, NordVPN Basic (2-year plan + 3 extra months) and the 1-year plan are current prices, not Black Friday deals. Prices change often, so check the provider's site before you buy.",
+      "Check NordVPN's page for current pricing. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "What does NordVPN renew at?",
     answer:
-      "See current pricing. NordVPN's pricing page lists the Basic 2-year renewal separately from the intro price. A renewal price for the 1-year term is not listed on the pricing page.",
+      "Check NordVPN's page for current pricing. NordVPN's pricing page lists the Basic 2-year renewal separately from the intro price. A renewal price for the 1-year term is not listed on the pricing page.",
   },
   {
     question: "Does NordVPN offer a money-back guarantee?",
@@ -132,17 +132,17 @@ export const protonFaqs: DealFaq[] = [
   {
     question: "Does Proton VPN have a Black Friday deal in 2026?",
     answer:
-      "Not yet. As of Oct 17, 2026, Proton VPN has not announced its Black Friday 2026 deal. Tunnel Report will check again on Oct 26, 2026.",
+      "Check Proton VPN's page for current pricing and any end date. Offers change, and a deal can end without notice.",
   },
   {
     question: "How much does Proton VPN Plus cost right now?",
     answer:
-      "See current pricing. As of Oct 17, 2026, Proton VPN Plus on the 2-year plan is the current price, not a Black Friday deal. Prices change often, so check the provider's site before you buy.",
+      "Check Proton VPN's page for current pricing. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "What does Proton VPN Plus renew at?",
     answer:
-      "See current pricing. Proton's pricing page lists the VPN Plus 2-year renewal separately from the intro price.",
+      "Check Proton VPN's page for current pricing. Proton's pricing page lists the VPN Plus 2-year renewal separately from the intro price.",
   },
 ];
 
@@ -150,12 +150,12 @@ export const hidemeFaqs: DealFaq[] = [
   {
     question: "Does hide.me have a Black Friday deal in 2026?",
     answer:
-      "Not yet. As of Oct 17, 2026, hide.me has not announced a Black Friday 2026 deal. Check back.",
+      "Check hide.me's page for current pricing and any end date. Offers change, and a deal can end without notice.",
   },
   {
     question: "How much does hide.me Premium cost?",
     answer:
-      "See current pricing for hide.me Premium (26 months, 13 months, and monthly). VAT may apply. As of Oct 17, 2026, these are current prices, not Black Friday deals. Prices change often, so check the provider's site before you buy.",
+      "Check hide.me's page for current pricing for hide.me Premium (26 months, 13 months, and monthly). VAT may apply. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "Does hide.me's price go up at renewal?",
@@ -168,7 +168,7 @@ export const surfsharkFaqs: DealFaq[] = [
   {
     question: "What is Surfshark's Black Friday 2026 deal?",
     answer:
-      "As of Oct 17, 2026, Surfshark labels Surfshark One (24 months + 3 extra months) a Black Friday deal. See current pricing. Renewal: check at checkout. Prices change often, so check the provider's site before you buy.",
+      "Surfshark's pricing page labels Surfshark One (24 months + 3 extra months) a Black Friday deal. Check Surfshark's page for current pricing. Renewal: check at checkout. Prices change often, so check the provider's site before you buy.",
   },
   {
     question: "How much does Surfshark cost after the first term?",
@@ -178,19 +178,19 @@ export const surfsharkFaqs: DealFaq[] = [
   {
     question: "When does Surfshark's Black Friday deal end?",
     answer:
-      "As of Oct 17, 2026, Surfshark has not published an end date. This page will say when the deal has ended.",
+      "Check Surfshark's page for current pricing and any end date. Offers change, and a deal can end without notice.",
   },
   {
     question: "Is Surfshark One priced differently from Starter right now?",
     answer:
-      "As of Oct 17, 2026, Surfshark One and Surfshark Starter show the same intro amount on the 24-month + 3-month term. See current pricing.",
+      "Surfshark One and Surfshark Starter show the same intro amount on the 24-month + 3-month term. Check Surfshark's page for current pricing.",
   },
 ];
 
 export const nordDealFaqs: DealFaq[] = [
   {
     question: "Does NordVPN have a Black Friday deal in 2026?",
-    answer: "Current price, not a Black Friday deal. See current pricing on NordVPN's site.",
+    answer: "Check NordVPN's page for current pricing.",
   },
   {
     question: "Which NordVPN plans are included?",
@@ -198,7 +198,7 @@ export const nordDealFaqs: DealFaq[] = [
   },
   {
     question: "What does NordVPN renew at?",
-    answer: "Renewal differs from intro; see current pricing at nordvpn.com/pricing/.",
+    answer: "Renewal differs from intro. Check NordVPN's page for current pricing.",
   },
   {
     question: "Does NordVPN offer a money-back guarantee?",
@@ -214,7 +214,7 @@ export const nordDealFaqs: DealFaq[] = [
 export const protonDealFaqs: DealFaq[] = [
   {
     question: "Does Proton VPN have a Black Friday deal in 2026?",
-    answer: "Current price, not a Black Friday deal. See current pricing on Proton's site.",
+    answer: "Check Proton VPN's page for current pricing.",
   },
   {
     question: "Which plans are included?",
@@ -222,7 +222,7 @@ export const protonDealFaqs: DealFaq[] = [
   },
   {
     question: "What does Proton VPN Plus renew at?",
-    answer: "See current pricing. Renewal differs from the intro price.",
+    answer: "Check Proton VPN's page for current pricing. Renewal differs from the intro price.",
   },
   {
     question: "Is Proton VPN's no-logs policy audited?",

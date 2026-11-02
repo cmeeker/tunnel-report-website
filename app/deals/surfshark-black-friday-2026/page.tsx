@@ -58,7 +58,7 @@ export default function SurfsharkBlackFridayPage() {
           {surfsharkBlackFriday.h1}
         </h1>
         <p className="text-sm font-semibold text-[#e8ecf4]">
-          {staffAuthorName} · Prices as of Oct 17, 2026
+          {staffAuthorName}
         </p>
         <p className="text-sm text-[#94a3b8]">
           Last updated: <time dateTime={DEAL_DATE_MODIFIED}>{DEAL_DATE_MODIFIED}</time>
@@ -67,10 +67,10 @@ export default function SurfsharkBlackFridayPage() {
 
       <section className="prose-dark space-y-4">
         <p>
-          As of Oct 17, 2026, Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra
-          months) a &quot;Black Friday deal.&quot; See current pricing. Surfshark does not list the
-          renewal amount on that page, so check the renewal price at checkout. Surfshark has not
-          published an end date for this deal. {PRICE_CHANGE_LINE}
+          Surfshark&apos;s pricing page labels Surfshark One (24 months + 3 extra months) a
+          &quot;Black Friday deal.&quot; Check Surfshark&apos;s page for current pricing.
+          Surfshark does not list the renewal amount on that page, so check the renewal price at
+          checkout. {PRICE_CHANGE_LINE}
         </p>
       </section>
 
@@ -87,24 +87,23 @@ export default function SurfsharkBlackFridayPage() {
               "Check at checkout",
             ],
             [
-              "Current price, not a Black Friday deal",
+              "Check Surfshark's page for current pricing.",
               "Surfshark Starter, 24 months + 3 extra months",
               "See current pricing",
               "Check at checkout",
             ],
           ]}
         />
-        <SourceLine href={vendorSources.surfshark} label="surfshark.com/pricing" />
+        <SourceLine href={vendorSources.surfshark} label="surfshark.com/pricing" accessed="" />
         <PaidVisitLink {...paidLinks.surfshark} />
       </section>
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Surfshark&apos;s Black Friday 2026 deal at a glance</h2>
         <p>
-          The labeled offer is Surfshark One for 24 months + 3 extra months. See current pricing. The
-          status label is &quot;Black Friday deal (per Surfshark).&quot; Renewal: check at checkout.
-          Surfshark Starter on the same term is listed as a current price, not a Black Friday deal.
-          See current pricing.
+          The labeled offer is Surfshark One for 24 months + 3 extra months. Check Surfshark&apos;s
+          page for current pricing. The status label is &quot;Black Friday deal (per Surfshark).&quot;
+          Renewal: check at checkout.
         </p>
       </section>
 
@@ -119,7 +118,7 @@ export default function SurfsharkBlackFridayPage() {
         <p>
           Surfshark&apos;s pricing page states &quot;unlimited simultaneous device connections&quot; (
           <PlainOutboundLink href={vendorSources.surfshark}>surfshark.com/pricing</PlainOutboundLink>
-          , accessed Oct 17, 2026).
+          ).
         </p>
         <p>{surfsharkFaqs[3].answer}</p>
       </section>
@@ -142,10 +141,8 @@ export default function SurfsharkBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">When does the Surfshark deal end?</h2>
         <p>
-          Surfshark has not published an end date. {surfsharkFaqs[2].answer} A deal ends when the
-          vendor page no longer shows it, or when a published end date passes. This page will then
-          say &quot;This Black Friday deal has ended (last seen [date])&quot; or show the current
-          price labeled &quot;Current price, not a Black Friday deal.&quot;
+          A deal ends when the vendor page no longer shows it, or when a published end date passes.{" "}
+          {surfsharkFaqs[2].answer}
         </p>
       </section>
 
