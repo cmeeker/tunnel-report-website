@@ -64,7 +64,7 @@ export const providers: Provider[] = [
     score: 4.8,
     speedMbps: 905,
     pricePerMonth: "See current pricing",
-    privacyBlurb: "Panama jurisdiction, independent no-logs audits",
+    privacyBlurb: "Check NordVPN's page for current details.",
     quickVerdict: "Privacy posture and app consistency in 2026.",
     pros: [
       "Frequent third-party security and no-logs assessments",
@@ -99,8 +99,6 @@ export const providers: Provider[] = [
         heading: "Is NordVPN's Privacy Model Strong Enough for 2026?",
         paragraphs: [
           "Privacy evaluation in VPN reviews usually stops at \"they say no logs.\" We look at three layers: policy language, what independent audits tested, and how the company has responded to real incidents.",
-          "NordVPN operates under Panamanian jurisdiction, outside Five Eyes intelligence-sharing agreements. That removes one category of compulsion, though jurisdiction alone does not guarantee privacy.",
-          "More importantly, NordVPN has completed multiple rounds of independent security audits with scope that covers actual server infrastructure. Audit summaries include RAM-only server verification, meaning data is not written to persistent storage in a way that could survive a server seizure.",
         ],
       },
       {
@@ -116,7 +114,7 @@ export const providers: Provider[] = [
       buy: "Buy NordVPN if you want a single provider that handles streaming, daily browsing, remote work VPN needs, and multi-device coverage without requiring you to become a networking expert.",
       skip: "Skip VPN entirely if your threat model does not actually require one.",
       alternatives:
-        "Consider Surfshark for cost sensitivity, Proton VPN for open-source transparency, or Mullvad if you want a privacy-first provider with no marketing funnel.",
+        "you want to compare providers before you choose. Check each provider's page for current pricing and features.",
     },
     faqs: [
       {
@@ -127,7 +125,7 @@ export const providers: Provider[] = [
       {
         question: "Does NordVPN actually keep no logs?",
         answer:
-          "NordVPN has completed multiple independent no-logs audits. Check NordVPN's page for current details.",
+          "Check NordVPN's page for current details.",
       },
     ],
     relatedCompareSlugs: ["nordvpn-vs-protonvpn", "nordvpn-vs-purevpn", "nordvpn-vs-expressvpn", "surfshark-vs-nordvpn"],
@@ -184,7 +182,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy Surfshark if you need unlimited device coverage and prioritize entry pricing.",
       skip: "Skip if you need the most advanced network configuration options.",
-      alternatives: "NordVPN for its NordLynx protocol; Proton VPN for open-source apps; Mullvad for anonymous payments.",
+      alternatives: "you want to compare providers before you choose. Check each provider's page for current pricing and features.",
     },
     faqs: [
       {
@@ -250,7 +248,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy ExpressVPN if you want the most polished consumer experience, reliable streaming access, and are willing to pay a premium for support quality.",
       skip: "Skip if you are price-sensitive.",
-      alternatives: "NordVPN for best overall balance; Surfshark for family value; Proton VPN for transparency.",
+      alternatives: "you want to compare providers before you choose. Check each provider's page for current pricing and features.",
     },
     faqs: [
       {
@@ -321,7 +319,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy Proton VPN if open-source transparency, Swiss jurisdiction, and alignment with a privacy-first corporate mission matter to you.",
       skip: "Skip if streaming geo-unblocking is your primary use case — competitors have more consistent success rates.",
-      alternatives: "Mullvad for anonymous payments without an account.",
+      alternatives: "you want to compare providers before you choose. Check each provider's page for current pricing and features.",
     },
     faqs: [
       {
@@ -384,7 +382,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy PureVPN if first-year price is your dominant buying criteria and you mostly use domestic connections for browsing and light streaming.",
       skip: "Skip if you'd rather go with our top pick, NordVPN.",
-      alternatives: "Consider Surfshark or NordVPN. Check each provider's page for current pricing and features.",
+      alternatives: "you want to compare providers before you choose. Check each provider's page for current pricing and features.",
     },
     faqs: [
       {
@@ -455,7 +453,7 @@ export const providers: Provider[] = [
     whoShouldBuy: {
       buy: "Buy Mullvad if anonymous payments, flat pricing, and open-source transparency matter more than streaming convenience.",
       skip: "Skip if streaming geo-unblocking is your primary use case or you need the largest server network.",
-      alternatives: "Consider NordVPN. Check each provider's page for current pricing and features.",
+      alternatives: "you want to compare providers before you choose. Check each provider's page for current pricing and features.",
     },
     faqs: [
       {
@@ -551,7 +549,7 @@ export const providers: Provider[] = [
       buy:
         "Buy hide.me if you want a no-signup free VPN and you accept the published free-tier tradeoffs (including the 8-location / 1-connection limitations and the 10GB vs unlimited conflict), or if you value having a named 2024 audit document to read yourself — with clear scope limits. [HM1][HM2][HM3][HM9][HM12]",
       alternatives:
-        "Consider alternatives if your priority is transparent client-side assurances (for example, open-source clients and/or independently audited apps), or if you need a provider that has a more current (2025–2026) no-logs verification program. [HM14][HM9]",
+        "you want to compare providers before you choose. Check each provider's page for current pricing and features.",
       skip:
         "Skip or look elsewhere if you need free-tier streaming support, if you’re buying for commercial/organizational use (the Terms describe consumer/personal use constraints), or if your trust requirement is a fleet-wide inspection rather than a scope-limited container review. [HM3][HM5][HM9]",
     },

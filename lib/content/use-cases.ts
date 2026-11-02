@@ -84,7 +84,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     picks: [
       { providerSlug: "mullvad", label: "", reason: "" },
       { providerSlug: "protonvpn", label: "", reason: "" },
-      { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "Frequent infrastructure audits and RAM-only server architecture." },
+      { providerSlug: "nordvpn", label: "Mainstream privacy VPN", reason: "Check NordVPN's page for current details." },
     ],
     sections: [
       {

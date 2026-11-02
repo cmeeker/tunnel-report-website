@@ -194,11 +194,6 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
           do not need to switch just because another provider ranks higher in one category. VPNs are
           tools, not collectibles.
         </p>
-        <p>
-          The strongest alternative for most readers is usually the provider that fixes the specific
-          thing {target.name} does not do well enough for your situation: lower renewal cost, stronger
-          privacy posture, better streaming reliability, or simpler apps.
-        </p>
       </section>
 
       <RelatedLinks links={getAlternativesRelatedLinks(target.slug)} />
@@ -207,7 +202,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         faqs={[
           {
             question: `What is the best ${target.name} alternative?`,
-            answer: `${alternatives[0]?.name ?? "NordVPN"} is the strongest alternative for most readers because it offers the best blend of score, feature coverage, and real-world fit against ${target.name}'s limitations.`,
+            answer: `${alternatives[0]?.name ?? "NordVPN"} is one alternative to consider. Check each provider's page for current pricing and features.`,
           },
           {
             question: `Should I switch from ${target.name}?`,

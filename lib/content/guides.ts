@@ -113,7 +113,7 @@ export const guides: Guide[] = [
       {
         heading: "Audit scope is everything",
         paragraphs: [
-          "The strongest audits test server infrastructure, logging pipelines, configuration, and retention controls. Weak audits review policy language and call it verification.",
+          "Audits differ in scope, so check what a provider's audit covers, such as server infrastructure, logging pipelines, configuration and retention controls.",
           "When we evaluate providers, we look for evidence that auditors had access to systems, not just marketing copy.",
         ],
       },

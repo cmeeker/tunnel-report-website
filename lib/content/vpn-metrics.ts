@@ -137,7 +137,7 @@ export const useCaseSections: UseCaseSection[] = [
     description:
       "P2P users need verified no-logs policies, kill switch reliability, and jurisdictions that resist copyright trolling pressure. NordVPN, Mullvad, and Proton VPN all allow P2P; avoid providers with unclear logging history.",
     pickSlug: "nordvpn",
-    pickReason: "P2P-optimized servers and RAM-only infrastructure.",
+    pickReason: "Check NordVPN's page for current details.",
   },
   {
     id: "budget",
