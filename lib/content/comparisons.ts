@@ -460,7 +460,7 @@ export const comparisons: Comparison[] = [
         answer: "Surfshark covers unlimited devices [V1]. Proton VPN Plus covers 10 [P1].",
       },
     ],
-    sourceIds: ["V1", "V2", "V3", "V5", "V6", "P1", "P2", "P3b", "P4", "P5", "P6", "T1", "T2"],
+    sourceIds: ["V1", "V2", "V3", "V5", "V6", "P1", "P2", "P4", "P5", "P6", "T1", "T2"],
     relatedLinks: [
       { href: "/reviews/surfshark", label: "Surfshark Review" },
       { href: "/reviews/protonvpn", label: "Proton VPN Review" },
