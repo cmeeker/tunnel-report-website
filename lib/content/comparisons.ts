@@ -362,11 +362,11 @@ export const comparisons: Comparison[] = [
     description:
       "Surfshark vs Proton VPN compared on devices, audits, jurisdiction, servers, streaming, torrenting and refunds, with a source for each spec.",
     intro:
-      "Surfshark covers unlimited devices on one plan. Proton VPN is the pick when you want public audit reports, open-source apps, and a free plan to start on.",
+      "Surfshark covers unlimited devices on one plan. Proton VPN is the pick when you want open-source apps and a free plan to start on.",
     dateModified: "2026-10-06",
     updatedBadgeLabel: "Updated Oct 6, 2026",
     verdictBox:
-      "Surfshark covers unlimited devices on one plan. Proton VPN is the pick if you want to read the audits yourself: Swiss jurisdiction, open-source apps, and published yearly no-logs reports.",
+      "Surfshark covers unlimited devices on one plan.",
     specRows: [
       {
         spec: "Servers / countries",
@@ -381,7 +381,7 @@ export const comparisons: Comparison[] = [
       {
         spec: "No-logs audits",
         left: "Deloitte assurance in 2023 and 2025 (ISAE 3000). The full report is available only inside a Surfshark account [V2][V3]",
-        right: "Securitum audits every year from 2022 through 2026, with public reports [P2][P3]",
+        right: "[Proton VPN says](https://protonvpn.com/blog/no-logs-audit) it has had a fifth consecutive annual third-party audit of its no-logs policy.",
       },
       {
         spec: "Simultaneous devices",
@@ -433,7 +433,7 @@ export const comparisons: Comparison[] = [
     ],
     verdictParagraphs: [
       "Pick Surfshark if you're covering a whole household — phones, laptops, and several TVs — on one plan.",
-      "Pick Proton VPN if you want public audit reports and open-source apps, need port forwarding for torrents, or want to start on a free plan.",
+      "Pick Proton VPN if you want open-source apps, need port forwarding for torrents, or want to start on a free plan.",
     ],
     leftPickLabel: "",
     rightPickLabel: "",
@@ -451,16 +451,16 @@ export const comparisons: Comparison[] = [
           "Proton VPN Free has no data cap but covers 1 device [P4]. Surfshark has no free plan; its free trial is limited to 3 devices [V1].",
       },
       {
-        question: "Can I read their no-logs audits?",
+        question: "What does Proton VPN say about its no-logs audits?",
         answer:
-          "Proton publishes every Securitum report [P2][P3]. Surfshark's Deloitte report is available only to logged-in customers [V3].",
+          "[Proton VPN says](https://protonvpn.com/blog/no-logs-audit) it has passed a fifth consecutive annual third-party audit of its infrastructure that confirms its no-logs policy. Read Proton VPN's own audit page for the details.",
       },
       {
         question: "Which covers more devices?",
         answer: "Surfshark covers unlimited devices [V1]. Proton VPN Plus covers 10 [P1].",
       },
     ],
-    sourceIds: ["V1", "V2", "V3", "V5", "V6", "P1", "P2", "P3", "P3b", "P4", "P5", "P6", "T1", "T2"],
+    sourceIds: ["V1", "V2", "V3", "V5", "V6", "P1", "P2", "P4", "P5", "P6", "T1", "T2"],
     relatedLinks: [
       { href: "/reviews/surfshark", label: "Surfshark Review" },
       { href: "/reviews/protonvpn", label: "Proton VPN Review" },

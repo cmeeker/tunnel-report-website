@@ -237,7 +237,7 @@ export default function BestVpnsPage() {
                       href={`/reviews/${pick.slug}`}
                       className="text-sm font-medium text-[#00d4aa] hover:underline"
                     >
-                      Read our {pick.name} review (no affiliate) &rarr;
+                      Read our {pick.name} review &rarr;
                     </Link>
                   </div>
                 )}
@@ -260,7 +260,7 @@ export default function BestVpnsPage() {
           <h2 className="text-xl font-bold text-white">How We Built This Ranking</h2>
           <p>
             Privacy scoring accounts for audit scope (not just whether an audit happened, but what it
-            actually tested), incident response transparency, jurisdiction risk profile, and how clearly
+            tested), incident response transparency, jurisdiction risk profile, and how clearly
             the provider communicates data retention practices to regular users.
           </p>
           <p>

@@ -32,9 +32,9 @@ const homepageFaqs = [
       "Scores are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time. Each factor is weighted the same way for every provider we cover.",
   },
   {
-    question: "Do affiliate commissions affect your rankings?",
+    question: "Does Tunnel Report earn a commission from links on this site?",
     answer:
-      "No. Editorial scoring is walled off from commercial relationships. We disclose affiliate links on every page where they appear, and commission potential has never changed a ranking position. Our methodology is published in full.",
+      "Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy through them. See our affiliate disclosure on each page.",
   },
   {
     question: "How often are reviews updated?",
@@ -268,7 +268,7 @@ export default function Home() {
             {
               title: "VPN Privacy Audits: What Actually Matters in 2026",
               excerpt:
-                "Not all audits test the same controls. I walked through scope documents from four major providers and found the gap between marketing claims and actual test coverage is often wider than vendors let on.",
+                "Not all audits test the same controls.",
               href: "/reviews/nordvpn",
               image: "/images/article-privacy.svg",
               badge: "Analysis",
@@ -276,7 +276,7 @@ export default function Home() {
             {
               title: "Surfshark Review 2026: Best Budget VPN for Families?",
               excerpt:
-                "Unlimited devices and aggressive pricing — our full Surfshark review breaks down where it beats NordVPN and where it does not.",
+                "Compare the two. Check each provider's page for current pricing and features.",
               href: "/reviews/surfshark",
               image: "/images/article-speed.svg",
               badge: "Review",
