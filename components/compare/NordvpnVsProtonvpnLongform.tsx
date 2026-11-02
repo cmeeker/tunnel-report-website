@@ -38,9 +38,9 @@ export function NordvpnVsProtonvpnLongform() {
         </p>
 
         <p>
-          <strong>Verification.</strong> NordVPN prices were re-checked on the public pricing page on Oct 15, 2026.
-          Proton VPN Plus: see current pricing on the 2-year plan.{" "}
-          <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.
+          <strong>Pricing.</strong> Check{" "}
+          <PricingLink href="https://nordvpn.com/pricing/">NordVPN&apos;s page</PricingLink> and{" "}
+          <PricingLink href="https://protonvpn.com/pricing">Proton VPN&apos;s page</PricingLink> for current pricing.
         </p>
 
         <p>
@@ -115,7 +115,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Category-by-category</h2>
         <p>
-          Prices checked on each provider&apos;s official pricing page on Oct 15, 2026. Prices change often, so check
+          Prices change often, so check
           the provider&apos;s site before you buy.
         </p>
 
@@ -253,22 +253,19 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Apps, devices, and network claims</h2>
         <p>
-          Both 10 simultaneous connections. NordVPN thousands of servers in 225+ locations{" "}
-          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>, as of Oct 2026, NordLynx.
-          Proton Plus 20,000+ servers 140+ countries{" "}
-          <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026. Price
-          Basic not Complete/Prime extras.
+          Both 10 simultaneous connections. NordVPN: check{" "}
+          <PricingLink href="https://nordvpn.com/pricing/">NordVPN&apos;s page</PricingLink> for current server counts. NordLynx.
+          Proton Plus: check{" "}
+          <PricingLink href="https://protonvpn.com/pricing">Proton VPN&apos;s page</PricingLink> for current server counts.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Pricing: what we could verify on Oct 15, 2026</h2>
+        <h2 className="text-2xl font-bold text-white">Pricing</h2>
         <p>
-          NordVPN live{" "}
-          <PricingLink href="https://nordvpn.com/pricing/">nordvpn.com/pricing</PricingLink>: 2-year+3mo Basic
-          and 1-year Basic, see current pricing, as of Oct 2026. Older blog figures are stale. Proton VPN Plus: see
-          current pricing on the 2-year plan{" "}
-          <PricingLink href="https://protonvpn.com/pricing">protonvpn.com/pricing</PricingLink>, as of Oct 2026.
+          Check{" "}
+          <PricingLink href="https://nordvpn.com/pricing/">NordVPN&apos;s page</PricingLink> and{" "}
+          <PricingLink href="https://protonvpn.com/pricing">Proton VPN&apos;s page</PricingLink> for current pricing.
           Free plan is separate; Plus standalone; Unlimited ecosystem.
         </p>
       </section>
@@ -284,7 +281,7 @@ export function NordvpnVsProtonvpnLongform() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">FAQ</h2>
         <p>
-          At renewal, see current pricing for Proton VPN Plus and NordVPN Basic, as of Oct 2026.
+          At renewal, check NordVPN&apos;s page and Proton VPN&apos;s page for current pricing.
         </p>
       </section>
 
@@ -348,7 +345,7 @@ export function NordvpnVsProtonvpnLongform() {
           </li>
           <li>
             <PlainSourceLink href="https://protonvpn.com/pricing" />{" "}
-            Proton VPN Plus 2-year price, as of Oct 2026
+            Proton VPN pricing page
           </li>
           <li>
             <PlainSourceLink href="https://protonvpn.com/support/proton-vpn-plans" />
@@ -413,7 +410,7 @@ export function NordvpnVsProtonvpnLongform() {
           </li>
         </ol>
 
-        <p>End: Prices and audit-access notes re-checked Oct 15, 2026. Confirm at checkout.</p>
+        <p>End: Prices change. Confirm at checkout on the provider&apos;s own page.</p>
       </section>
     </div>
   );
