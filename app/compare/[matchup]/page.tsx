@@ -285,7 +285,9 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
 
           <div className="grid gap-4 md:grid-cols-2">
             <div className="glass-card p-8 text-center">
-              <span className="badge badge-teal mb-4">{comparison.leftPickLabel}</span>
+              {comparison.leftPickLabel ? (
+                <span className="badge badge-teal mb-4">{comparison.leftPickLabel}</span>
+              ) : null}
               <h3 className="text-xl font-bold text-white">{left.name}</h3>
               <div className="mt-5">
                 <PickCardButton provider={left} affiliateHref={leftCta} />
@@ -295,7 +297,9 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
               </div>
             </div>
             <div className="glass-card p-8 text-center">
-              <span className="badge badge-cyan mb-4">{comparison.rightPickLabel}</span>
+              {comparison.rightPickLabel ? (
+                <span className="badge badge-cyan mb-4">{comparison.rightPickLabel}</span>
+              ) : null}
               <h3 className="text-xl font-bold text-white">{right.name}</h3>
               <div className="mt-5">
                 <PickCardButton provider={right} affiliateHref={rightCta} />
