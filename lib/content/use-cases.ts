@@ -88,7 +88,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     ],
     sections: [
       {
-        heading: "Audit scope beats audit marketing",
+        heading: "Audit scope: what to check",
         paragraphs: [
           "A no-logs audit only matters if the scope reaches real infrastructure, server configuration, and retention controls. Many providers advertise audits that are closer to policy reviews than technical verification.",
           "NordVPN is our mainstream pick.",
@@ -144,7 +144,7 @@ export const useCaseGuides: UseCaseGuide[] = [
         heading: "No-logs claims need technical backing",
         paragraphs: [
           "Torrenting creates a sharper incentive for copyright complaints and legal requests. That makes audit scope, jurisdiction, and server design more important than generic privacy copy.",
-          "RAM-only infrastructure, independently reviewed no-logs systems, and minimal account data are the strongest signals we can verify without access to internal systems.",
+          "RAM-only infrastructure, independently reviewed no-logs systems, and minimal account data are the signals we can verify without access to internal systems.",
         ],
       },
       {

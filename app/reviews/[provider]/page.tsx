@@ -135,6 +135,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
       ? getCitationSourcesById(provider.sourceIds)
       : reviewSources;
   const sourceIdSet = new Set(sources.map((source) => source.id));
+  const noAffiliateBadgeLabel = "";
 
   return (
     <article className="space-y-14 fade-in-up">
@@ -163,8 +164,8 @@ function ReviewContent({ provider }: { provider: Provider }) {
         <div className="flex flex-wrap gap-2">
           <span className="badge badge-teal">Full Review</span>
           <span className="badge badge-violet">{updatedBadgeLabel}</span>
-          {!provider.affiliateKey && (
-            <span className="badge badge-cyan text-[0.65rem]">No affiliate — editorial pick</span>
+          {!provider.affiliateKey && noAffiliateBadgeLabel !== "" && (
+            <span className="badge badge-cyan text-[0.65rem]">{noAffiliateBadgeLabel}</span>
           )}
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">

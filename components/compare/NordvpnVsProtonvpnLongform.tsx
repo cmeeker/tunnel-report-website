@@ -245,21 +245,6 @@ export function NordvpnVsProtonvpnLongform() {
             <PlainSourceLink href="https://protonvpn.com/blog/no-logs-audit" />
           </li>
           <li>
-            <a
-              href="https://www.securitum.com/public-reports/securitum-protonvpn-nologs-2025.pdf"
-              className={linkClassName}
-            >
-              https://www.securitum.com/public-reports/securitum-protonvpn-nologs-2025.pdf
-            </a>{" "}
-            also{" "}
-            <a
-              href="https://securitum.com/public-reports/securitum-protonvpn-nologs-2025.pdf"
-              className={linkClassName}
-            >
-              https://securitum.com/public-reports/securitum-protonvpn-nologs-2025.pdf
-            </a>
-          </li>
-          <li>
             <PlainSourceLink href="https://protonvpn.com/" />
           </li>
           <li>
@@ -276,8 +261,7 @@ export function NordvpnVsProtonvpnLongform() {
             <PlainSourceLink href="https://github.com/ProtonVPN" />
           </li>
           <li>
-            <PlainSourceLink href="https://protonvpn.com/blog/transparency-report" />{" "}
-            458/458 denied
+            <PlainSourceLink href="https://protonvpn.com/blog/transparency-report" />
           </li>
           <li>
             <PlainSourceLink href="https://protonvpn.com/terms-and-conditions" />{" "}

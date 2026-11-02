@@ -32,9 +32,9 @@ const homepageFaqs = [
       "Scores are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time. Each factor is weighted the same way for every provider we cover.",
   },
   {
-    question: "Do affiliate commissions affect your rankings?",
+    question: "Does Tunnel Report earn a commission from links on this site?",
     answer:
-      "No. Editorial scoring is walled off from commercial relationships. We disclose affiliate links on every page where they appear, and commission potential has never changed a ranking position. Our methodology is published in full.",
+      "Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy through them. See our affiliate disclosure on each page.",
   },
   {
     question: "How often are reviews updated?",
