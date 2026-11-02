@@ -67,7 +67,6 @@ export const providers: Provider[] = [
     privacyBlurb: "Check NordVPN's page for current details.",
     quickVerdict: "Privacy posture and app consistency in 2026.",
     pros: [
-      "Frequent third-party security and no-logs assessments",
       "Strong malware and tracker blocking controls",
     ],
     cons: ["Price increases at renewal", "UI depth can overwhelm first-time users"],
