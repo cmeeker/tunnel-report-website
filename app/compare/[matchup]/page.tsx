@@ -164,7 +164,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         </section>
       ) : null}
 
-      {comparison.slug === "surfshark-vs-protonvpn" ? null : <DisclosureBanner />}
+      {comparison.slug === "surfshark-vs-protonvpn" || isLongform ? null : <DisclosureBanner />}
 
       {comparison.specRows ? (
         <section className="space-y-4">

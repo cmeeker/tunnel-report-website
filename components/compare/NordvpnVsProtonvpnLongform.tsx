@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { AffiliateDisclosure } from "@/components/password-managers";
 import { AFFILIATE_URLS } from "@/lib/content/providers";
 
 const linkClassName =
@@ -28,15 +29,12 @@ function PricingLink({ href, children }: { href: string; children: ReactNode }) 
 export function NordvpnVsProtonvpnLongform() {
   return (
     <div className="space-y-10">
+      <AffiliateDisclosure>
+        {"This page contains affiliate links, and we may earn a commission if you buy through them."}
+      </AffiliateDisclosure>
+
       <section className="prose-dark space-y-4">
-        <p>
-          <strong>Affiliate disclosure.</strong> Tunnel Report earns a commission if you buy through outbound links on
-          this page. See our{" "}
-          <Link href="/methodology" className={linkClassName}>
-            methodology
-          </Link>{" "}
-          page. Read this page before you click a buy link.
-        </p>
+        <p>Read this page before you click a buy link.</p>
 
         <p>
           <strong>Pricing.</strong> Check{" "}
