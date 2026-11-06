@@ -211,9 +211,6 @@ export function buildReviewSchema({
     review: {
       "@type": "Review",
       "@id": `${pageUrl}#review`,
-      itemReviewed: {
-        "@id": productId,
-      },
       reviewRating: {
         "@type": "Rating",
         ratingValue,
