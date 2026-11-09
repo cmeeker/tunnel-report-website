@@ -1,6 +1,8 @@
 /**
- * Signed hub copy (tunnel-hub-intros v2, 2026-10-25).
- * Titles, meta descriptions, and intros are verbatim. Do not edit them here.
+ * Hub copy.
+ * Titles, meta descriptions, and the alternatives, reviews, and deals intros
+ * stay the signed tunnel-hub-intros v2 strings (2026-10-25).
+ * compareHub.intro is the signed compare-openings lead (CWS, 2026-11-07).
  */
 
 export const affiliateDisclosure =
@@ -12,7 +14,7 @@ export const compareHub = {
   description:
     "Side-by-side VPN comparisons based on published specs, pricing and third-party reports. Check each provider's site for current terms.",
   intro:
-    "Each comparison here puts two providers side by side, using their published specs, pricing and third-party reports. There are 12 comparisons now: NordVPN vs ExpressVPN, PureVPN, Proton VPN and Mullvad; Surfshark vs NordVPN, ExpressVPN, PureVPN and Proton VPN; ExpressVPN vs Proton VPN and PureVPN; Mullvad vs Proton VPN; and NordPass vs Bitwarden for password managers. Where a provider has published an independent audit, we link to it. Proton reports an external no-logs audit by Securitum, and Surfshark reports that Deloitte verified its no-logs policy. We link the reports but do not vouch for them. This is general information. Plans and prices change, so check the provider's own page before you decide.",
+    "Choose a comparison when you already have two providers in mind. Open the matching card below, compare the published specifications and plan terms, and follow the source links before deciding. The grid includes VPN services and a NordPass vs Bitwarden password-manager comparison.",
 } as const;
 
 export const alternativesHub = {

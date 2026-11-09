@@ -141,11 +141,9 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
           {comparison.h1 ?? comparison.title}
         </h1>
-        {!isLongform && (
-          <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-            <CitedText text={comparison.intro} />
-          </p>
-        )}
+        <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
+          <CitedText text={comparison.intro} />
+        </p>
         <AuthorByline date={updatedDateLabel} />
       </header>
 
@@ -170,7 +168,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
 
       {comparison.specRows ? (
         <section className="space-y-4">
-          <h2 className="text-xl font-bold text-white">Spec comparison</h2>
+          <h2 className="text-xl font-bold text-white">What do the published specifications show?</h2>
           <div className="glass-card overflow-x-auto p-2">
             <table className="table-dark">
               <thead>
@@ -199,7 +197,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
       ) : (
         <>
           <section className="space-y-4">
-            <h2 className="text-xl font-bold text-white">Category-by-Category Breakdown</h2>
+            <h2 className="text-xl font-bold text-white">What does the category comparison show?</h2>
             <div className="space-y-3">
               {comparison.rows.map((row, i) => (
                 <div
@@ -279,7 +277,7 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
           <hr className="divider-glow" />
 
           <section className="prose-dark space-y-4">
-            <h2 className="text-2xl font-bold text-white">How to Choose a VPN</h2>
+            <h2 className="text-2xl font-bold text-white">What should you check before choosing a VPN?</h2>
             {comparison.verdictParagraphs.map((para) => (
               <p key={para.slice(0, 50)}>{para}</p>
             ))}
@@ -319,21 +317,29 @@ function CompareContent({ comparison }: { comparison: Comparison }) {
       <hr className="divider-glow" />
 
       <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
-        <RelatedLinks links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)} />
+        <RelatedLinks
+          title="Where can you read more about these providers?"
+          links={comparison.relatedLinks ?? getCompareRelatedLinks(comparison.slug)}
+        />
         <div className="min-w-0">
-          <RelatedCards cards={getCompareRelatedCards(comparison.slug)} />
+          <RelatedCards
+            title="Which related pages can help you compare?"
+            cards={getCompareRelatedCards(comparison.slug)}
+          />
         </div>
       </div>
 
       {!isLongform && (
         <>
           <FaqSection
+            heading="What else should you know before choosing?"
             faqs={comparison.faqs}
             renderAnswer={
               comparison.sourceIds ? (answer) => <CitedText text={answer} /> : undefined
             }
           />
           <SourcesList
+            heading="Which sources support this comparison?"
             sources={
               comparison.sourceIds
                 ? getCitationSourcesById(comparison.sourceIds)

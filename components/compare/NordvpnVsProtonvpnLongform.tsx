@@ -61,7 +61,7 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Category-by-category</h2>
+        <h2 className="text-2xl font-bold text-white">How do the published features compare?</h2>
         <p>
           Prices change often, so check
           the provider&apos;s site before you buy.
@@ -110,7 +110,7 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Privacy and audits: two different kinds of proof</h2>
+        <h2 className="text-2xl font-bold text-white">What privacy and audit evidence can you inspect?</h2>
 
         <p>{"Check NordVPN's page for current details."}</p>
 
@@ -123,17 +123,17 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Jurisdiction</h2>
+        <h2 className="text-2xl font-bold text-white">Where does each provider say it is based?</h2>
         <p><a href="https://protonvpn.com/about" target="_blank" rel="noopener noreferrer" className={linkClassName}>Proton VPN says</a> it is a Swiss corporation. Check NordVPN&apos;s page for current details.</p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Streaming</h2>
+        <h2 className="text-2xl font-bold text-white">What does each provider say about streaming?</h2>
         <p>{"Check each provider's page for which streaming services it says it supports."}</p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Free tier and trying the product</h2>
+        <h2 className="text-2xl font-bold text-white">What are the trial and refund terms?</h2>
         <p>
           Proton Free: unlimited data, 1 device, 10 randomly selected countries (plans explained article; homepage may
           say 5). NordVPN no free tier; 30-day money-back on first term only. Proton terms §9 23 June 2026: 30-day
@@ -142,7 +142,7 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Apps, devices, and network claims</h2>
+        <h2 className="text-2xl font-bold text-white">What are the app and device limits?</h2>
         <p>
           Both 10 simultaneous connections. NordVPN: check{" "}
           <PricingLink href="https://nordvpn.com/pricing/">NordVPN&apos;s page</PricingLink> for current server counts. NordLynx.
@@ -152,7 +152,7 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Pricing</h2>
+        <h2 className="text-2xl font-bold text-white">What should you check about pricing?</h2>
         <p>
           Check{" "}
           <PricingLink href="https://nordvpn.com/pricing/">NordVPN&apos;s page</PricingLink> and{" "}
@@ -162,7 +162,7 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Who should actually buy which</h2>
+        <h2 className="text-2xl font-bold text-white">Which requirements matter for your use?</h2>
         <p>
           NordVPN household speed/streaming, budget renewal: see current pricing. Proton transparency/open-source/Swiss/suite, start
           Free. Do not buy a VPN for coffee-shop Wi-Fi once a year. No overall trophy.
@@ -170,14 +170,14 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">FAQ</h2>
+        <h2 className="text-2xl font-bold text-white">What else should you check before subscribing?</h2>
         <p>
           At renewal, check NordVPN&apos;s page and Proton VPN&apos;s page for current pricing.
         </p>
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Related coverage</h2>
+        <h2 className="text-2xl font-bold text-white">Where can you read more about these providers?</h2>
         <p className="flex flex-wrap gap-x-3 gap-y-2">
           <Link href="/reviews/nordvpn" className={linkClassName}>
             /reviews/nordvpn
@@ -198,7 +198,7 @@ export function NordvpnVsProtonvpnLongform() {
       </section>
 
       <section className="prose-dark space-y-4">
-        <h2 className="text-2xl font-bold text-white">Sources &amp; References</h2>
+        <h2 className="text-2xl font-bold text-white">Which sources support this comparison?</h2>
         <ol className="list-decimal space-y-2 pl-5 text-sm text-[#cbd5e1]">
           <li>
             <a href="https://tunnelreport.com/compare/nordvpn-vs-protonvpn" className={urlLinkClassName}>

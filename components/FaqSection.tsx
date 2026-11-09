@@ -10,13 +10,18 @@ export type FaqItem = {
 type FaqSectionProps = {
   faqs: FaqItem[];
   renderAnswer?: (answer: string) => ReactNode;
+  heading?: string;
 };
 
-export function FaqSection({ faqs, renderAnswer }: FaqSectionProps) {
+export function FaqSection({
+  faqs,
+  renderAnswer,
+  heading = "Frequently Asked Questions",
+}: FaqSectionProps) {
   return (
     <section className="space-y-4">
       <JsonLd data={buildFAQSchema(faqs)} />
-      <h2 className="text-2xl font-bold text-white">Frequently Asked Questions</h2>
+      <h2 className="text-2xl font-bold text-white">{heading}</h2>
       <div className="space-y-3">
         {faqs.map((faq) => (
           <details

@@ -52,7 +52,7 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs PureVPN: a straight-talking 2026 comparison of specs, privacy policies, pricing and features.",
     intro:
-      "These two providers sit at opposite ends of the value spectrum in our rankings. PureVPN undercuts on price. The question is whether the savings justify what you give up — and for some readers, the honest answer is yes.",
+      "For NordVPN vs PureVPN, compare the plan terms and privacy documentation before choosing. Check each provider’s current pricing and the scope of any audit rather than treating an introductory offer as the whole comparison.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -85,7 +85,7 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs ExpressVPN compared across speed, privacy, pricing, streaming, and app quality.",
     intro:
-      "Both NordVPN and ExpressVPN target the premium consumer segment. This comparison sets out what each provider's own pages say so you can decide which fits.",
+      "For NordVPN vs ExpressVPN, start with the privacy evidence and the cost of the plan you would actually buy. Read each provider’s audit scope and current plan terms; this page does not establish a speed or streaming winner.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -117,7 +117,7 @@ export const comparisons: Comparison[] = [
     description:
       "Surfshark vs NordVPN — unlimited devices and budget pricing compared side by side.",
     intro:
-      "Surfshark and NordVPN are two of the most compared VPNs. Surfshark's pricing page lists [unlimited](https://surfshark.com/pricing) simultaneous device connections. Here is how they compare on published specs and pricing.",
+      "For Surfshark vs NordVPN, start with your household’s device needs and the terms of the plan you are considering. Check the source links for device allowances and current pricing before treating either subscription as a fit.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -154,7 +154,7 @@ export const comparisons: Comparison[] = [
     description:
       "Mullvad vs Proton VPN — anonymous payments, open-source clients, and jurisdiction compared.",
     intro:
-      "Mullvad and Proton VPN represent the privacy-first tier of the VPN market.",
+      "For Mullvad vs Proton VPN, start with the account information you are willing to provide and the privacy evidence you want to inspect. Compare the published account, payment and app documentation rather than choosing from a privacy slogan.",
     dateModified: "2026-10-15",
     rows: [
       { category: "Payment Anonymity", left: { value: "Cash, crypto, no email ([Mullvad's page](https://mullvad.net/en/pricing))", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/support/payment-options) for current details.", pct: 0 }, winner: "uncompared" },
@@ -194,7 +194,7 @@ export const comparisons: Comparison[] = [
     description:
       "Surfshark vs ExpressVPN compared across speed, price, streaming, privacy, and device limits for 2026 buyers.",
     intro:
-      "Surfshark and ExpressVPN serve different buyers. Check each provider's page for current pricing, device limits and features before you choose.",
+      "For Surfshark vs ExpressVPN, compare your device needs, the apps you use and the full plan terms. Check the provider sources before buying; an introductory offer alone does not answer whether a plan fits your household.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -222,7 +222,7 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs Proton VPN compared across speed, privacy transparency, pricing, streaming, and open-source posture.",
     intro:
-      "Check each provider's page for current features and pricing before you choose.",
+      "For NordVPN vs Proton VPN, compare the evidence behind privacy claims separately from plan limits and pricing. Read the linked audit and app documentation, then check the terms of the specific plan you are considering.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -251,7 +251,7 @@ export const comparisons: Comparison[] = [
     description:
       "ExpressVPN vs Proton VPN compared for app polish, privacy, speed, streaming, jurisdiction, and price.",
     intro:
-      "ExpressVPN is built for people who want the VPN to disappear into the background. Proton VPN is built for people who want to understand and verify the privacy model. Both are good; they optimize for different readers.",
+      "For ExpressVPN vs Proton VPN, compare app requirements, privacy documentation and plan terms separately. Use the linked sources to check the features you need rather than treating a privacy claim as proof of streaming performance.",
     dateModified: "2026-10-15",
     rows: [
       { category: "Open Source", left: { value: "Check [ExpressVPN's page](https://www.expressvpn.com/) for current details.", pct: 0 }, right: { value: "Check [Proton VPN's page](https://protonvpn.com/blog/open-source) for current details.", pct: 0 }, winner: "uncompared" },
@@ -277,7 +277,7 @@ export const comparisons: Comparison[] = [
     description:
       "Surfshark vs PureVPN compared for budget buyers: price, speed, device limits, trust posture, and streaming reliability.",
     intro:
-      "Surfshark and PureVPN both compete on price, but they are not interchangeable. PureVPN is the aggressive entry-price option with more trust and consistency tradeoffs.",
+      "For Surfshark vs PureVPN, compare the subscription terms, device allowances and privacy documentation before choosing. Check the current provider pages for the plan you would buy; this page does not establish which service is faster.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -305,7 +305,7 @@ export const comparisons: Comparison[] = [
     description:
       "NordVPN vs Mullvad compared on speed, account anonymity, streaming, audits, and pricing.",
     intro:
-      "Mullvad and NordVPN suit different readers.",
+      "For NordVPN vs Mullvad, begin with your account and payment preferences, then read the privacy evidence and plan terms. Use those requirements to compare the services rather than assuming that one privacy label answers every use case.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -333,7 +333,7 @@ export const comparisons: Comparison[] = [
     description:
       "ExpressVPN vs PureVPN compared across price, streaming, trust posture, app reliability, and support.",
     intro:
-      "ExpressVPN and PureVPN are almost opposite buying decisions. ExpressVPN is expensive but polished. PureVPN is cheap but more variable. This is the clearest premium-versus-budget comparison in our matrix.",
+      "For ExpressVPN vs PureVPN, check the current plan terms and privacy evidence before comparing the offers. If streaming is your main use, read each provider’s published support information rather than assuming that a subscription promises access.",
     datePublished: "2026-10-15",
     dateModified: "2026-10-18",
     updatedBadgeLabel: "Updated Oct 18, 2026",
@@ -362,7 +362,7 @@ export const comparisons: Comparison[] = [
     description:
       "Surfshark vs Proton VPN compared on devices, audits, jurisdiction, servers, streaming, torrenting and refunds, with a source for each spec.",
     intro:
-      "Surfshark covers unlimited devices on one plan. Proton VPN is the pick when you want open-source apps and a free plan to start on.",
+      "For Surfshark vs Proton VPN, begin with the number of devices you need to connect and the privacy evidence you want to read. Use the existing sourced specification table to check plan limits, then confirm current terms with each provider.",
     dateModified: "2026-10-06",
     updatedBadgeLabel: "Updated Oct 6, 2026",
     verdictBox:

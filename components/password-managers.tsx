@@ -77,10 +77,16 @@ function isNordPassHost(url: string) {
   }
 }
 
-export function PasswordManagerSources({ sources }: { sources: PasswordSource[] }) {
+export function PasswordManagerSources({
+  sources,
+  heading = "Sources & References",
+}: {
+  sources: PasswordSource[];
+  heading?: string;
+}) {
   return (
     <section className="surface-card p-8">
-      <h2 className="text-lg font-bold text-white">Sources &amp; References</h2>
+      <h2 className="text-lg font-bold text-white">{heading}</h2>
       <ol className="mt-4 space-y-2 text-sm text-[#94a3b8]">
         {sources.map((source) => {
           const linkSource = !isNordPassHost(source.url);
