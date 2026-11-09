@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
   if (!c) {
     return buildPageMetadata({
       title: "VPN Comparison",
-      description: "Independent VPN comparison from Tunnel Report.",
+      description: "VPN comparison from Tunnel Report.",
       path: `/compare/${matchup}`,
     });
   }

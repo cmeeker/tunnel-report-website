@@ -36,7 +36,7 @@ const staticRoutes: SiteRoute[] = [
   {
     path: "/best-vpns",
     title: "Best VPNs of 2026",
-    description: "Independent 2026 VPN rankings from Tunnel Report.",
+    description: "2026 VPN rankings from Tunnel Report.",
     lastModified: "2026-10-18",
     priority: 0.95,
     changeFrequency: "weekly",
@@ -236,7 +236,7 @@ export function getSiteRoutes(): SiteRoute[] {
       return {
         path: `/alternatives/${slug}`,
         title: `Best ${provider.name} Alternatives in 2026`,
-        description: `Independent alternatives to ${provider.name}.`,
+        description: `Alternatives to ${provider.name}.`,
         lastModified: "2026-10-18",
         priority: 0.78,
         changeFrequency: "weekly" as const,

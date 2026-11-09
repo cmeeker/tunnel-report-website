@@ -60,7 +60,7 @@ export default function AboutPage() {
           About Tunnel Report
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          Tunnel Report is an independent VPN review and privacy publication. We exist because
+          Tunnel Report is a VPN review and privacy publication. We exist because
           the overlap between affiliate-funded content and genuinely useful security guidance is
           smaller than it should be, and readers who care about measurable protection deserve a
           publication that operates at a higher standard.

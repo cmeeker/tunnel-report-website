@@ -9,7 +9,7 @@ type PaidPickProps = {
 export function PaidPick({ pick, className = "" }: PaidPickProps) {
   return (
     <p className={`paid-pick mt-2 text-sm text-[#94a3b8] ${className}`.trim()}>
-      Or try a paid pick:{" "}
+      Also consider (affiliate link — Tunnel Report may earn a commission):{" "}
       <a
         href={AFFILIATE_URLS[pick.partner]}
         target="_blank"
