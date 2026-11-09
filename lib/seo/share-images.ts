@@ -38,6 +38,16 @@ const shareImages: Record<string, ShareImage> = {
   "/best-vpn-for/streaming": defaultShareImage,
   "/best-vpn-for/torrenting": defaultShareImage,
   "/guides/vpn-renewal-pricing-traps": defaultShareImage,
+  "/deals": defaultShareImage,
+  "/deals/black-friday-vpn-2026": defaultShareImage,
+  "/deals/nordvpn-black-friday-2026": defaultShareImage,
+  "/deals/surfshark-black-friday-2026": defaultShareImage,
+  "/vpn": defaultShareImage,
+  "/compare": defaultShareImage,
+  "/alternatives": defaultShareImage,
+  "/reviews": defaultShareImage,
+  "/privacy": defaultShareImage,
+  "/terms": defaultShareImage,
 };
 
 export type ShareImageMeta = {
