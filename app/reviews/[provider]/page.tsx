@@ -134,6 +134,12 @@ function ReviewContent({ provider }: { provider: Provider }) {
       ? getCitationSourcesById(provider.sourceIds)
       : reviewSources;
   const sourceIdSet = new Set(sources.map((source) => source.id));
+  const affiliateHrefs = new Set(Object.values(AFFILIATE_URLS));
+  const hasAffiliateLink =
+    Boolean(ctaHref) ||
+    Boolean(provider.showNordPassAddon) ||
+    Boolean(provider.verdictPaidPick) ||
+    sources.some((source) => affiliateHrefs.has(source.url));
   const noAffiliateBadgeLabel = "";
 
   return (
@@ -160,7 +166,7 @@ function ReviewContent({ provider }: { provider: Provider }) {
         <AuthorByline date={updatedDateLabel} />
       </header>
 
-      <DisclosureBanner />
+      {hasAffiliateLink ? <DisclosureBanner /> : null}
 
       {provider.sections.map((section) => (
         <section key={section.heading} className="prose-dark space-y-4">

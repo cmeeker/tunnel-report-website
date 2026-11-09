@@ -4,7 +4,7 @@ export const siteConfig = {
   url: "https://tunnelreport.com",
   tagline: "VPN Reviews and Privacy Analysis",
   description:
-    "Tunnel Report publishes VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "Tunnel Report publishes VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy through them.",
   locale: "en_US",
   defaultAuthor: "Tunnel Report Staff",
   updatedDate: "October 15, 2026",

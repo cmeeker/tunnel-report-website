@@ -20,7 +20,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "VPN Reviews & 2026 Rankings | Tunnel Report",
   description:
-    "VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "VPN reviews and guides. This page contains affiliate links, and we may earn a commission if you buy through them.",
   path: "/",
   type: "website",
 });

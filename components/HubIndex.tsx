@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedCards, type RelatedCard } from "@/components/RelatedCards";
-import { affiliateDisclosure } from "@/lib/content/hubs";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildItemListSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
@@ -68,8 +67,6 @@ export function HubIndex({
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">{hub.intro}</p>
       </header>
-
-      <p className="max-w-3xl text-sm leading-relaxed text-[#94a3b8]">{affiliateDisclosure}</p>
 
       <RelatedCards cards={cards} showHeading={false} />
     </article>
