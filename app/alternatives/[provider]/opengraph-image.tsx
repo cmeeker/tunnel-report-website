@@ -13,7 +13,7 @@ export default async function Image({ params }: Props) {
 
   return buildOgImage({
     title: target ? `Best ${target.name} Alternatives` : "Best VPN Alternatives",
-    subtitle: "Independent picks based on speed, privacy, pricing, and real-world usability",
+    subtitle: "Alternatives based on published specs, pricing and third-party reports",
     badge: "Alternatives · 2026",
   });
 }

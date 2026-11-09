@@ -55,7 +55,7 @@ const staticRoutes: SiteRoute[] = [
   {
     path: "/methodology",
     title: "Tunnel Report Methodology",
-    description: "How Tunnel Report tests and scores VPNs.",
+    description: "How Tunnel Report ranks VPNs and password managers.",
     lastModified: CONTENT_UPDATED_AT,
     priority: 0.72,
     changeFrequency: "monthly",

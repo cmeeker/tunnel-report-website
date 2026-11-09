@@ -52,7 +52,7 @@ export default function BestVpnsPage() {
   const articleSchema = buildArticleSchema({
     headline: "Best VPNs of 2026: Ranked on Published Specs, Pricing and Third-Party Reports",
     description:
-      "Independent ranking of the top VPN services based on speed, privacy controls, and value.",
+      "We compared VPN providers based on published specs, pricing and third-party reports.",
     path: "/best-vpns",
     datePublished: "2026-04-08",
     dateModified: "2026-10-18",
@@ -128,14 +128,6 @@ export default function BestVpnsPage() {
                     <p className="text-sm text-[#64748b]">{vpn.quickVerdict}</p>
                   </div>
                 </div>
-                <div className="hidden items-center gap-3 sm:flex">
-                  <div className="text-right">
-                    <p className="text-2xl font-extrabold gradient-text">{vpn.score.toFixed(1)}</p>
-                    <div className="score-bar mt-1 w-20">
-                      <div className="score-bar-fill" style={{ width: `${(vpn.score / 5) * 100}%` }} />
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <div className="space-y-6 p-8">
@@ -197,7 +189,7 @@ export default function BestVpnsPage() {
         <section className="space-y-8">
           <h2 className="text-2xl font-bold text-white">Best VPN by Use Case</h2>
           <p className="max-w-3xl text-[#94a3b8]">
-            Rankings above reflect overall composite scores. If you have a specific use case, these
+            Rankings above are based on published specs, pricing and third-party reports. If you have a specific use case, these
             targeted picks may serve you better than the general list.
           </p>
           {useCaseSections.map((section) => {
@@ -259,7 +251,7 @@ export default function BestVpnsPage() {
         <section className="prose-dark space-y-4">
           <h2 className="text-xl font-bold text-white">How We Built This Ranking</h2>
           <p>
-            Privacy scoring accounts for audit scope (not just whether an audit happened, but what it
+            Our privacy comparison accounts for audit scope (not just whether an audit happened, but what it
             tested), incident response transparency, jurisdiction risk profile, and how clearly
             the provider communicates data retention practices to regular users.
           </p>

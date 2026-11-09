@@ -9,7 +9,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RatingStars } from "@/components/RatingStars";
 import { RelatedCards } from "@/components/RelatedCards";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { alternativeExpressPaidPicks } from "@/lib/content/paid-picks";
@@ -48,14 +47,14 @@ export async function generateMetadata({ params }: AlternativesPageProps): Promi
   if (!target) {
     return buildPageMetadata({
       title: "Best VPN Alternatives",
-      description: "Independent VPN alternative recommendations from Tunnel Report.",
+      description: "VPN alternatives based on published specs, pricing and third-party reports.",
       path: `/alternatives/${provider}`,
     });
   }
 
   return buildPageMetadata({
     title: `Best ${target.name} Alternatives in 2026`,
-    description: `The best ${target.name} alternatives based on speed, privacy posture, pricing, and real-world usability. Independent recommendations from Tunnel Report.`,
+    description: `${target.name} alternatives based on published specs, pricing and third-party reports.`,
     path: `/alternatives/${target.slug}`,
   });
 }
@@ -120,8 +119,8 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         <h2 className="text-2xl font-bold text-white">Why look beyond {target.name}?</h2>
         <div className="mt-4 grid gap-5 md:grid-cols-3">
           <div>
-            <p className="text-xs font-semibold uppercase text-[#64748b]">Current score</p>
-            <RatingStars rating={target.score} />
+            <p className="text-xs font-semibold uppercase text-[#64748b]">Pricing</p>
+            <p className="mt-2 text-sm text-[#94a3b8]">See current pricing</p>
           </div>
           <div>
             <p className="text-xs font-semibold uppercase text-[#64748b]">Main limitation</p>
@@ -148,7 +147,6 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
                   </span>
                   <h3 className="text-xl font-bold text-white">{alt.name}</h3>
                 </div>
-                <RatingStars rating={alt.score} />
               </div>
               <div className="space-y-5 p-8">
                 <p className="leading-relaxed text-[#94a3b8]">{alt.quickVerdict}</p>
