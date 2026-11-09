@@ -73,7 +73,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         data={[
           buildArticleSchema({
             headline: `Best ${target.name} Alternatives in 2026`,
-            description: `Independent alternatives to ${target.name}.`,
+            description: `Alternatives to ${target.name}.`,
             path,
             datePublished: "2026-10-15",
             dateModified: "2026-10-18",

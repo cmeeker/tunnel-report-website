@@ -135,7 +135,7 @@ export const useCaseSections: UseCaseSection[] = [
     id: "torrenting",
     title: "Best VPN for Torrenting in 2026",
     description:
-      "P2P users need verified no-logs policies, kill switch reliability, and jurisdictions that resist copyright trolling pressure. NordVPN, Mullvad, and Proton VPN all allow P2P; avoid providers with unclear logging history.",
+      "P2P users need verified no-logs policies and kill switch reliability. NordVPN, Mullvad, and Proton VPN all allow P2P; avoid providers with unclear logging history.",
     pickSlug: "nordvpn",
     pickReason: "Check NordVPN's page for current details.",
   },

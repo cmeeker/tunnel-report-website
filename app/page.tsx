@@ -18,9 +18,9 @@ import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Independent VPN Reviews & 2026 Rankings | Tunnel Report",
+  title: "VPN Reviews & 2026 Rankings | Tunnel Report",
   description:
-    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   path: "/",
   type: "website",
 });
@@ -76,7 +76,7 @@ export default function Home() {
       >
         <div className="mx-auto w-full max-w-3xl text-center">
           <div className="space-y-5 fade-in-up">
-            <div className="badge badge-teal mx-auto">Independent VPN Coverage</div>
+            <div className="badge badge-teal mx-auto">VPN Coverage</div>
 
             {/* Hero graphic */}
             <div className="relative mx-auto h-36 w-full max-w-2xl sm:h-44 md:h-48">

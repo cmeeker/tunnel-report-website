@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: ReviewPageProps): Promise<Met
   if (!p) {
     return buildPageMetadata({
       title: "VPN Review",
-      description: "Independent VPN review from Tunnel Report.",
+      description: "VPN review from Tunnel Report.",
       path: `/reviews/${provider}`,
     });
   }

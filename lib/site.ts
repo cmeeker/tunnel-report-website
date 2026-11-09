@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Tunnel Report",
   shortName: "TunnelReport",
   url: "https://tunnelreport.com",
-  tagline: "Independent VPN Intelligence",
+  tagline: "VPN Reviews and Privacy Analysis",
   description:
-    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "Tunnel Report publishes VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
   locale: "en_US",
   defaultAuthor: "Tunnel Report Staff",
   updatedDate: "October 15, 2026",
@@ -180,7 +180,7 @@ export const primaryNav: PrimaryNavItem[] = [
         heading: "The Publication",
         items: [
           { label: "How We Rank", href: "/methodology", description: "Published specs, pricing and third-party reports" },
-          { label: "Editorial Standards", href: "/about#editorial", description: "Independence & disclosure policy" },
+          { label: "Editorial Standards", href: "/about#editorial", description: "Editorial standards & disclosure policy" },
           { label: "Affiliate Disclosure", href: "/about#disclosure", description: "How commissions work here" },
         ],
       },

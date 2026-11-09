@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 
+import { siteConfig } from "@/lib/site";
+
 export const ogSize = { width: 1200, height: 630 };
 
 export type OgImageOptions = {
@@ -81,7 +83,7 @@ export function buildOgImage({ title, subtitle, badge }: OgImageOptions) {
           <div style={{ fontSize: 24, fontWeight: 700, color: "#00d4aa" }}>
             Tunnel Report
           </div>
-          <div style={{ fontSize: 20, color: "#64748b" }}>Independent VPN Intelligence</div>
+          <div style={{ fontSize: 20, color: "#64748b" }}>{siteConfig.tagline}</div>
         </div>
       </div>
     ),

@@ -72,7 +72,7 @@ export default function TermsPage() {
         <p>
           Some links on the Site are affiliate links. If you click one and buy something, we may earn
           a commission at no extra cost to you. This does not change the price you pay. We aim to keep
-          our rankings independent of commissions; see our methodology and editorial standards on the
+          our rankings separate from commissions; see our methodology and editorial standards on the
           Site.
         </p>
       </section>
