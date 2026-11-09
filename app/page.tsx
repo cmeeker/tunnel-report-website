@@ -27,9 +27,9 @@ export const metadata: Metadata = buildPageMetadata({
 
 const homepageFaqs = [
   {
-    question: "How does Tunnel Report score VPN services?",
+    question: "How does Tunnel Report rank VPN services?",
     answer:
-      "Scores are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time. Each factor is weighted the same way for every provider we cover.",
+      "Rankings are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time.",
   },
   {
     question: "Does Tunnel Report earn a commission from links on this site?",
@@ -210,7 +210,6 @@ export default function Home() {
                 <th>Provider</th>
                 <th>Privacy Profile</th>
                 <th>Price (intro vs renewal)</th>
-                <th>Score</th>
                 <th></th>
               </tr>
             </thead>
@@ -228,14 +227,6 @@ export default function Home() {
                   </td>
                   <td className="max-w-[200px]">{vpn.privacy}</td>
                   <td className="font-semibold text-white">{vpn.pricePerMonth}</td>
-                  <td>
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-white">{vpn.score.toFixed(1)}</span>
-                      <div className="score-bar w-16">
-                        <div className="score-bar-fill" style={{ width: `${(vpn.score / 5) * 100}%` }} />
-                      </div>
-                    </div>
-                  </td>
                   <td>
                     {vpn.isAffiliate ? (
                       <AffiliateCTA href={vpn.href} partner={vpn.partner} label={vpn.ctaLabel ?? "Visit"} />

@@ -36,7 +36,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "VPNs for Streaming in 2026: What to Compare",
     shortTitle: "Streaming",
     description:
-      "The best VPNs for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts based on geo-unblocking consistency, and app reliability.",
+      "VPN picks for Netflix, Hulu, BBC iPlayer, YouTube TV, and sports blackouts, based on published specs, pricing and third-party reports.",
     intro:
       "Streaming is the use case where VPN marketing most often gets ahead of reality.",
     datePublished: "2026-04-08",
@@ -74,7 +74,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Privacy in 2026",
     shortTitle: "Privacy",
     description:
-      "Privacy-first VPN picks based on audit scope, open-source clients, jurisdiction, payment anonymity, and incident-response transparency.",
+      "Privacy-first VPN picks based on published specs, pricing and third-party reports, including audit scope and jurisdiction.",
     intro:
       "We weight verifiable controls: what audits tested, what the provider collects, how account signup works, and whether the company has incentives that align with users.",
     datePublished: "2026-04-08",
@@ -120,7 +120,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Torrenting in 2026",
     shortTitle: "Torrenting",
     description:
-      "Torrenting VPN recommendations based on kill switch reliability, P2P support, no-logs verification, and jurisdiction.",
+      "Torrenting VPN recommendations based on published specs, pricing and third-party reports.",
     intro:
       "Torrenting is one of the few consumer VPN use cases where a weak kill switch or sloppy logging policy can create immediate consequences. We prioritize providers that support P2P clearly and document no-logs controls.",
     datePublished: "2026-04-08",
@@ -165,7 +165,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best Cheap VPN in 2026",
     shortTitle: "Budget",
     description:
-      "The best cheap VPNs based on full lifecycle cost, renewal pricing, device limits, privacy tradeoffs, and speed-per-dollar.",
+      "Low-cost VPN picks based on published specs, pricing and third-party reports, including renewal prices and device limits.",
     intro:
       "Cheap VPN rankings are easy to manipulate because most providers advertise the first-year price and bury renewal math. We rank budget VPNs by full lifecycle cost, device limits, and whether privacy features are included at the discounted tier.",
     datePublished: "2026-10-17",
@@ -211,7 +211,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Gaming in 2026",
     shortTitle: "Gaming",
     description:
-      "Gaming VPN recommendations based on latency, packet stability, WireGuard support, DDoS protection claims, and regional routing.",
+      "Gaming VPN recommendations based on published specs, pricing and third-party reports.",
     intro:
       "Gaming VPN marketing is full of nonsense. A VPN cannot magically lower latency on every route. It can help with routing consistency, DDoS exposure, campus or hotel restrictions, and region flexibility when the provider has strong nearby servers.",
     datePublished: "2026-04-08",
@@ -249,7 +249,7 @@ export const useCaseGuides: UseCaseGuide[] = [
     title: "Best VPN for Remote Work in 2026",
     shortTitle: "Remote Work",
     description:
-      "Remote-work VPN picks based on split tunneling, kill switch reliability, network transitions, video-call stability, and malware blocking.",
+      "Remote-work VPN picks based on published specs, pricing and third-party reports.",
     intro:
       "Remote workers need a different VPN than streamers. The winning provider must survive coffee-shop Wi-Fi, hotel networks, video calls, cloud apps, and corporate tools without forcing constant troubleshooting.",
     datePublished: "2026-04-08",

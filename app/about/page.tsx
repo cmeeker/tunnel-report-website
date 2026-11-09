@@ -19,7 +19,7 @@ const aboutFaqs = [
   {
     question: "How is Tunnel Report funded?",
     answer:
-      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. Affiliate potential does not influence rankings, scores, or editorial conclusions.",
+      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. Affiliate potential does not influence rankings or editorial conclusions.",
   },
   {
     question: "Can VPN companies pay for better reviews?",
@@ -85,7 +85,7 @@ export default function AboutPage() {
           </p>
           <p>
             We assign higher weight to verifiable actions than marketing claims. A provider that
-            completed a narrow-scope audit but responded transparently to a real incident scores higher
+            completed a narrow-scope audit but responded transparently to a real incident ranks higher
             than one that trumpets a broad audit without demonstrable operational security improvement.
           </p>
         </div>
@@ -117,13 +117,13 @@ export default function AboutPage() {
           an operational structure. Review conclusions are drafted by the assigned editor and reviewed
           by at least one other team member before publication. The commercial team does not see review
           content before it goes live, does not have edit access to published pages, and does not
-          participate in scoring discussions.
+          participate in ranking discussions.
         </p>
         <p id="disclosure" className="scroll-mt-28">
           If a page includes an affiliate link, the disclosure is visible on-page. We use a consistent
           banner format so readers always know when commercial links are present. Affiliate potential
           does not guarantee positive coverage — and in several cases, providers with high commission
-          rates receive lower scores than providers with modest or no affiliate programs.
+          rates rank lower than providers with modest or no affiliate programs.
         </p>
       </section>
 
