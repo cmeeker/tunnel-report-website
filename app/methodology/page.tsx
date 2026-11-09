@@ -73,8 +73,8 @@ export default function MethodologyPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">How money fits in</h2>
         <p>
-          We may earn a commission from some links. Rankings are based on published specs, pricing
-          and third-party reports.
+          Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy
+          through them. Rankings are based on published specs, pricing and third-party reports.
         </p>
       </section>
 

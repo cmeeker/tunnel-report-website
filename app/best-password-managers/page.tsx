@@ -107,7 +107,7 @@ export default function BestPasswordManagersPage() {
       </header>
 
       <AffiliateDisclosure>
-        Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.
+        Rankings are based on published specs, pricing and third-party reports. This page contains affiliate links, and we may earn a commission if you buy through them.
       </AffiliateDisclosure>
 
       <section className="prose-dark space-y-4">

@@ -5,9 +5,6 @@
  * compareHub.intro is the signed compare-openings lead (CWS, 2026-11-07).
  */
 
-export const affiliateDisclosure =
-  "This page contains affiliate links, and we may earn a commission if you buy through them.";
-
 export const compareHub = {
   path: "/compare",
   title: "VPN Comparisons: Side-by-Side Specs | Tunnel Report",
