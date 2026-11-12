@@ -94,7 +94,7 @@ export function VpnHintBar() {
               href="/best-vpns"
               className="ml-1 font-medium text-[#00d4aa] underline-offset-2 hover:underline"
             >
-              See tested picks
+              See our picks
             </Link>
           )}
           {activeMode === "likely_vpn" && (
