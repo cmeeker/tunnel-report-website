@@ -13,7 +13,7 @@ export default async function Image({ params }: Props) {
 
   return buildOgImage({
     title: guide?.title ?? "VPN Guide",
-    subtitle: guide?.dek.slice(0, 125) ?? "Independent VPN guidance",
+    subtitle: guide?.dek.slice(0, 125) ?? "VPN guidance",
     badge: `${guide?.category ?? "Guide"} · 2026`,
   });
 }

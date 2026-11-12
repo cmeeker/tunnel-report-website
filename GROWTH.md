@@ -16,8 +16,9 @@ This file covers the external work that cannot be completed from code. The site 
 
 3. Configure GA4.
    - Create a property for Tunnel Report.
-   - Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in Vercel.
-   - Confirm `affiliate_click` events include `partner`, `link_url`, and landing page.
+   - In the GA4 admin UI, set data retention to 14 months. Do not link the property to Google Ads. Do not add custom IP dimensions or any IP logging beyond GA4's defaults.
+   - Set `NEXT_PUBLIC_GA_ID` in Vercel for Production (and Preview, if preview traffic should be measured) and redeploy. The loader reads only that variable and renders nothing when it is unset. The tag sets `allow_google_signals` and `allow_ad_personalization_signals` to false, and it does not load when Global Privacy Control is on.
+   - Confirm `affiliate_click` events include `partner`, `link_url`, and `page_path`.
 
 4. Core Web Vitals.
    - Test `/`, `/best-vpns`, `/reviews/nordvpn`, `/best-vpn-for/streaming`.

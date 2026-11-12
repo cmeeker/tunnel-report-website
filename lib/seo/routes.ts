@@ -1,4 +1,5 @@
-import { blackFridayHub, surfsharkBlackFriday } from "@/lib/content/black-friday-2026";
+import { blackFridayHub, nordBlackFriday, surfsharkBlackFriday } from "@/lib/content/black-friday-2026";
+import { alternativesHub, compareHub, dealsHub, reviewsHub } from "@/lib/content/hubs";
 import { comparisonSlugs, comparisons } from "@/lib/content/comparisons";
 import { cityGuideMap } from "@/lib/content/cities";
 import { guideSlugs, guides } from "@/lib/content/guides";
@@ -35,7 +36,7 @@ const staticRoutes: SiteRoute[] = [
   {
     path: "/best-vpns",
     title: "Best VPNs of 2026",
-    description: "Independent 2026 VPN rankings from Tunnel Report.",
+    description: "2026 VPN rankings from Tunnel Report.",
     lastModified: "2026-10-18",
     priority: 0.95,
     changeFrequency: "weekly",
@@ -54,7 +55,7 @@ const staticRoutes: SiteRoute[] = [
   {
     path: "/methodology",
     title: "Tunnel Report Methodology",
-    description: "How Tunnel Report tests and scores VPNs.",
+    description: "How Tunnel Report ranks VPNs and password managers.",
     lastModified: CONTENT_UPDATED_AT,
     priority: 0.72,
     changeFrequency: "monthly",
@@ -66,6 +67,25 @@ const staticRoutes: SiteRoute[] = [
     description: "Team, methodology, and editorial standards.",
     lastModified: "2026-10-18",
     priority: 0.7,
+    changeFrequency: "monthly",
+    group: "static",
+  },
+  {
+    path: "/privacy",
+    title: "Privacy Policy",
+    description:
+      "How Tunnel Report collects, uses, and keeps data, including Google Analytics 4 and Vercel Web Analytics.",
+    lastModified: "2026-10-21",
+    priority: 0.4,
+    changeFrequency: "monthly",
+    group: "static",
+  },
+  {
+    path: "/terms",
+    title: "Terms of Use",
+    description: "Terms of Use for tunnelreport.com, operated by Strand and Stone LLC.",
+    lastModified: "2026-10-21",
+    priority: 0.4,
     changeFrequency: "monthly",
     group: "static",
   },
@@ -127,6 +147,62 @@ const blackFridayDealRoutes: SiteRoute[] = [
     changeFrequency: "weekly",
     group: "deal",
   },
+  {
+    path: nordBlackFriday.path,
+    title: nordBlackFriday.title,
+    description: nordBlackFriday.description,
+    lastModified: "2026-10-21",
+    sitemapLastModified: "2026-10-21",
+    priority: 0.82,
+    changeFrequency: "weekly",
+    group: "deal",
+  },
+  // protonBlackFriday is intentionally absent. The page is noindex and unlinked.
+  // To publish: set its robots metadata to "index,follow", add a route object here
+  // (same shape as nordBlackFriday), then link it from the Black Friday hub
+  // (Provider Black Friday pages, the Proton section, and Related reading) and
+  // from the Nord deal page Related reading.
+  // The /deals index lists only the indexed deal pages. Leave Proton off that index
+  // until this route exists.
+];
+
+const tunnelHubRoutes: SiteRoute[] = [
+  {
+    path: compareHub.path,
+    title: compareHub.title,
+    description: compareHub.description,
+    lastModified: "2026-10-25",
+    priority: 0.8,
+    changeFrequency: "weekly",
+    group: "compare",
+  },
+  {
+    path: alternativesHub.path,
+    title: alternativesHub.title,
+    description: alternativesHub.description,
+    lastModified: "2026-10-25",
+    priority: 0.8,
+    changeFrequency: "weekly",
+    group: "alternative",
+  },
+  {
+    path: reviewsHub.path,
+    title: reviewsHub.title,
+    description: reviewsHub.description,
+    lastModified: "2026-10-25",
+    priority: 0.8,
+    changeFrequency: "weekly",
+    group: "review",
+  },
+  {
+    path: dealsHub.path,
+    title: dealsHub.title,
+    description: dealsHub.description,
+    lastModified: "2026-10-25",
+    priority: 0.84,
+    changeFrequency: "daily",
+    group: "deal",
+  },
 ];
 
 export function getSiteRoutes(): SiteRoute[] {
@@ -149,7 +225,7 @@ export function getSiteRoutes(): SiteRoute[] {
       path: "/reviews/nordpass",
       title: "NordPass Review 2026: Pricing, Security and Specs",
       description:
-        "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, plans from $1.39/month intro, and who should skip it.",
+        "NordPass review based on published specs and pricing: XChaCha20 encryption, audits, and who should skip it. See current pricing.",
       lastModified: "2026-10-17",
       priority: 0.9,
       changeFrequency: "weekly" as const,
@@ -160,7 +236,7 @@ export function getSiteRoutes(): SiteRoute[] {
       return {
         path: `/alternatives/${slug}`,
         title: `Best ${provider.name} Alternatives in 2026`,
-        description: `Independent alternatives to ${provider.name}.`,
+        description: `Alternatives to ${provider.name}.`,
         lastModified: "2026-10-18",
         priority: 0.78,
         changeFrequency: "weekly" as const,
@@ -183,7 +259,7 @@ export function getSiteRoutes(): SiteRoute[] {
       path: "/compare/nordpass-vs-bitwarden",
       title: "NordPass vs Bitwarden 2026: Price, Security, Fit",
       description:
-        "NordPass vs Bitwarden on published pricing, encryption, audits and free plans. Bitwarden wins on cost and open code; NordPass on polish.",
+        "NordPass vs Bitwarden on published pricing, encryption, audits and free plans.",
       lastModified: "2026-10-17",
       priority: 0.85,
       changeFrequency: "weekly" as const,
@@ -230,6 +306,7 @@ export function getSiteRoutes(): SiteRoute[] {
     sitemapLastModified: laterIsoDate(route.lastModified, REVISED_SITEMAP_LASTMOD),
   })),
     ...blackFridayDealRoutes,
+    ...tunnelHubRoutes,
   ];
 }
 

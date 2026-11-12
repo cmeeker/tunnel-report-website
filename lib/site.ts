@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Tunnel Report",
   shortName: "TunnelReport",
   url: "https://tunnelreport.com",
-  tagline: "Independent VPN Intelligence",
+  tagline: "VPN Reviews and Privacy Analysis",
   description:
-    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "Tunnel Report publishes VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy through them.",
   locale: "en_US",
   defaultAuthor: "Tunnel Report Staff",
   updatedDate: "October 15, 2026",
@@ -66,7 +66,7 @@ export const primaryNav: PrimaryNavItem[] = [
           { label: "Best VPN for Streaming", href: "/best-vpn-for/streaming", description: "Server locations and refund window" },
           { label: "Best VPN for Privacy", href: "/best-vpn-for/privacy", description: "Audited no-log policies" },
           { label: "Best VPN for Torrenting", href: "/best-vpn-for/torrenting", description: "P2P-optimized servers" },
-          { label: "Best Cheap VPN 2026", href: "/best-vpn-for/budget", description: "Under $3/mo, still solid" },
+          { label: "Best Cheap VPN 2026", href: "/best-vpn-for/budget", description: "See current pricing" },
           { label: "Best VPN for Gaming", href: "/best-vpn-for/gaming", description: "WireGuard-based protocol" },
           { label: "Best VPN for Work", href: "/best-vpn-for/work", description: "Split tunneling + kill switch" },
         ],
@@ -74,7 +74,7 @@ export const primaryNav: PrimaryNavItem[] = [
     ],
   },
   {
-    href: "/reviews/nordvpn",
+    href: "/reviews",
     label: "Reviews",
     featured: {
       label: "NordVPN Review",
@@ -98,7 +98,7 @@ export const primaryNav: PrimaryNavItem[] = [
     ],
   },
   {
-    href: "/compare/nordvpn-vs-protonvpn",
+    href: "/compare",
     label: "Compare",
     featured: {
       label: "NordVPN vs Proton VPN",
@@ -115,6 +115,38 @@ export const primaryNav: PrimaryNavItem[] = [
           { label: "Surfshark vs NordVPN", href: "/compare/surfshark-vs-nordvpn", description: "Value" },
           { label: "Mullvad vs Proton VPN", href: "/compare/mullvad-vs-protonvpn", description: "Privacy-first showdown" },
           { label: "NordPass vs Bitwarden", href: "/compare/nordpass-vs-bitwarden", description: "Password manager price and fit" },
+        ],
+      },
+    ],
+  },
+  {
+    href: "/alternatives",
+    label: "Alternatives",
+    columns: [
+      {
+        heading: "By Provider",
+        items: [
+          { label: "NordVPN", href: "/alternatives/nordvpn" },
+          { label: "Surfshark", href: "/alternatives/surfshark" },
+          { label: "ExpressVPN", href: "/alternatives/expressvpn" },
+          { label: "Proton VPN", href: "/alternatives/protonvpn" },
+          { label: "PureVPN", href: "/alternatives/purevpn" },
+          { label: "Mullvad", href: "/alternatives/mullvad" },
+          { label: "hide.me", href: "/alternatives/hideme" },
+        ],
+      },
+    ],
+  },
+  {
+    href: "/deals",
+    label: "Deals",
+    columns: [
+      {
+        heading: "Black Friday 2026",
+        items: [
+          { label: "Black Friday VPN Deals 2026", href: "/deals/black-friday-vpn-2026" },
+          { label: "Surfshark Black Friday 2026 Deal", href: "/deals/surfshark-black-friday-2026" },
+          { label: "NordVPN Black Friday 2026 Deal", href: "/deals/nordvpn-black-friday-2026" },
         ],
       },
     ],
@@ -148,7 +180,7 @@ export const primaryNav: PrimaryNavItem[] = [
         heading: "The Publication",
         items: [
           { label: "How We Rank", href: "/methodology", description: "Published specs, pricing and third-party reports" },
-          { label: "Editorial Standards", href: "/about#editorial", description: "Independence & disclosure policy" },
+          { label: "Editorial Standards", href: "/about#editorial", description: "Editorial standards & disclosure policy" },
           { label: "Affiliate Disclosure", href: "/about#disclosure", description: "How commissions work here" },
         ],
       },

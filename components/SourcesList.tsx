@@ -3,12 +3,17 @@ import { citationLinkRel, type CitationSource } from "@/lib/content/facts";
 type SourcesListProps = {
   sources: CitationSource[];
   showRetrievedAt?: boolean;
+  heading?: string;
 };
 
-export function SourcesList({ sources, showRetrievedAt = false }: SourcesListProps) {
+export function SourcesList({
+  sources,
+  showRetrievedAt = false,
+  heading = "Sources & References",
+}: SourcesListProps) {
   return (
     <section className="surface-card p-8">
-      <h2 className="text-lg font-bold text-white">Sources &amp; References</h2>
+      <h2 className="text-lg font-bold text-white">{heading}</h2>
       <ol className="mt-4 space-y-2 text-sm text-[#94a3b8]">
         {sources.map((source) => {
           const rel = citationLinkRel(source.url);
@@ -35,8 +40,10 @@ export function SourcesList({ sources, showRetrievedAt = false }: SourcesListPro
               {showRetrievedAt ? (
                 <>
                   {" "}
-                  <span className="break-all text-[#64748b]">{source.url}</span> (
-                  {source.retrievedVerb ?? "accessed"} {source.retrievedAt}).
+                  <span className="break-all text-[#64748b]">{source.url}</span>
+                  {source.retrievedAt ? (
+                    <> ({source.retrievedVerb ?? "accessed"} {source.retrievedAt}).</>
+                  ) : null}
                 </>
               ) : null}
             </li>

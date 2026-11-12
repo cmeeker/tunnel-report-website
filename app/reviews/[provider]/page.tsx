@@ -9,8 +9,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
-import { JsonLd } from "@/components/JsonLd";
-import { RatingStars } from "@/components/RatingStars";
+import { RelatedCards } from "@/components/RelatedCards";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
 import {
@@ -21,9 +20,9 @@ import {
   type Provider,
 } from "@/lib/content/providers";
 import { citationLinkRel, getCitationSourcesById, reviewSources } from "@/lib/content/facts";
+import { getReviewRelatedCards } from "@/lib/seo/related-cards";
 import { getReviewRelatedLinks } from "@/lib/seo/related-links";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { buildReviewSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
 type ReviewPageProps = {
@@ -42,7 +41,7 @@ export async function generateMetadata({ params }: ReviewPageProps): Promise<Met
   if (!p) {
     return buildPageMetadata({
       title: "VPN Review",
-      description: "Independent VPN review from Tunnel Report.",
+      description: "VPN review from Tunnel Report.",
       path: `/reviews/${provider}`,
     });
   }
@@ -135,26 +134,20 @@ function ReviewContent({ provider }: { provider: Provider }) {
       ? getCitationSourcesById(provider.sourceIds)
       : reviewSources;
   const sourceIdSet = new Set(sources.map((source) => source.id));
+  const affiliateHrefs = new Set(Object.values(AFFILIATE_URLS));
+  const hasAffiliateLink =
+    Boolean(ctaHref) ||
+    Boolean(provider.showNordPassAddon) ||
+    Boolean(provider.verdictPaidPick) ||
+    sources.some((source) => affiliateHrefs.has(source.url));
+  const noAffiliateBadgeLabel = "";
 
   return (
     <article className="space-y-14 fade-in-up">
-      <JsonLd
-        data={buildReviewSchema({
-          itemName: provider.name,
-          description:
-            "Consumer VPN service evaluated by Tunnel Report for speed, privacy, and pricing clarity.",
-          ratingValue: provider.score,
-          summary: provider.reviewSummary,
-          path,
-          dateModified: provider.dateModified,
-          datePublished: provider.datePublished,
-        })}
-      />
-
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "Reviews", path: "/reviews/nordvpn" },
+          { name: "Reviews", path: "/reviews" },
           { name: provider.name, path },
         ]}
       />
@@ -163,18 +156,17 @@ function ReviewContent({ provider }: { provider: Provider }) {
         <div className="flex flex-wrap gap-2">
           <span className="badge badge-teal">Full Review</span>
           <span className="badge badge-violet">{updatedBadgeLabel}</span>
-          {!provider.affiliateKey && (
-            <span className="badge badge-cyan text-[0.65rem]">No affiliate — editorial pick</span>
+          {!provider.affiliateKey && noAffiliateBadgeLabel !== "" && (
+            <span className="badge badge-cyan text-[0.65rem]">{noAffiliateBadgeLabel}</span>
           )}
         </div>
         <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
           {provider.reviewTitle}
         </h1>
         <AuthorByline date={updatedDateLabel} />
-        <RatingStars rating={provider.score} size="lg" />
       </header>
 
-      <DisclosureBanner />
+      {hasAffiliateLink ? <DisclosureBanner /> : null}
 
       {provider.sections.map((section) => (
         <section key={section.heading} className="prose-dark space-y-4">
@@ -224,7 +216,6 @@ function ReviewContent({ provider }: { provider: Provider }) {
           <p className="text-lg leading-relaxed text-[#cbd5e1]">
             {renderTextWithCitations(provider.reviewSummary, sourceIdSet)}
           </p>
-          <RatingStars rating={provider.score} size="lg" />
           {ctaHref ? (
             <AffiliateCTA
               href={ctaHref}
@@ -233,12 +224,12 @@ function ReviewContent({ provider }: { provider: Provider }) {
             />
           ) : (
             <a
-              href="https://mullvad.net"
-              className="affiliate-cta inline-flex"
+              href="https://mullvad.net/en/pricing"
+              className="affiliate-cta"
+              target="_blank"
               rel="noopener noreferrer"
-              data-partner="mullvad"
             >
-              Visit Mullvad (direct — no affiliate)
+              {"See Mullvad's pricing page"}
             </a>
           )}
           {provider.verdictPaidPick ? <PaidPick pick={provider.verdictPaidPick} /> : null}
@@ -249,7 +240,12 @@ function ReviewContent({ provider }: { provider: Provider }) {
 
       <hr className="divider-glow" />
 
-      <RelatedLinks links={getReviewRelatedLinks(provider.slug)} />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks links={getReviewRelatedLinks(provider.slug)} />
+        <div className="min-w-0">
+          <RelatedCards cards={getReviewRelatedCards(provider.slug)} />
+        </div>
+      </div>
 
       <FaqSection
         faqs={provider.faqs}

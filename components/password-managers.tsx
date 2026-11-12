@@ -7,7 +7,7 @@ export const NORDPASS_AFFILIATE_HREF =
 export const textLinkClassName =
   "font-semibold text-[#00d4aa] underline decoration-[#00d4aa]/60 underline-offset-2 transition hover:text-[#5eead4] hover:decoration-[#00d4aa]";
 
-const NORDPASS_REL = "sponsored nofollow noopener noreferrer";
+const NORDPASS_REL = "nofollow sponsored noopener noreferrer";
 
 export function NordPassPricingLink({ presentation = "inline" }: { presentation?: "inline" | "button" }) {
   return (
@@ -77,10 +77,16 @@ function isNordPassHost(url: string) {
   }
 }
 
-export function PasswordManagerSources({ sources }: { sources: PasswordSource[] }) {
+export function PasswordManagerSources({
+  sources,
+  heading = "Sources & References",
+}: {
+  sources: PasswordSource[];
+  heading?: string;
+}) {
   return (
     <section className="surface-card p-8">
-      <h2 className="text-lg font-bold text-white">Sources &amp; References</h2>
+      <h2 className="text-lg font-bold text-white">{heading}</h2>
       <ol className="mt-4 space-y-2 text-sm text-[#94a3b8]">
         {sources.map((source) => {
           const linkSource = !isNordPassHost(source.url);

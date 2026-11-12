@@ -9,12 +9,13 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RatingStars } from "@/components/RatingStars";
+import { RelatedCards } from "@/components/RelatedCards";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { alternativeExpressPaidPicks } from "@/lib/content/paid-picks";
 import { getProviderCtaHref, providerMap, providers, providerSlugs, type Provider } from "@/lib/content/providers";
 import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import { getAlternativesRelatedCards } from "@/lib/seo/related-cards";
 import { getAlternativesRelatedLinks } from "@/lib/seo/related-links";
 import { buildArticleSchema, buildItemListSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
@@ -46,14 +47,14 @@ export async function generateMetadata({ params }: AlternativesPageProps): Promi
   if (!target) {
     return buildPageMetadata({
       title: "Best VPN Alternatives",
-      description: "Independent VPN alternative recommendations from Tunnel Report.",
+      description: "VPN alternatives based on published specs, pricing and third-party reports.",
       path: `/alternatives/${provider}`,
     });
   }
 
   return buildPageMetadata({
     title: `Best ${target.name} Alternatives in 2026`,
-    description: `The best ${target.name} alternatives based on speed, privacy posture, pricing, and real-world usability. Independent recommendations from Tunnel Report.`,
+    description: `${target.name} alternatives based on published specs, pricing and third-party reports.`,
     path: `/alternatives/${target.slug}`,
   });
 }
@@ -72,7 +73,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         data={[
           buildArticleSchema({
             headline: `Best ${target.name} Alternatives in 2026`,
-            description: `Independent alternatives to ${target.name}.`,
+            description: `Alternatives to ${target.name}.`,
             path,
             datePublished: "2026-10-15",
             dateModified: "2026-10-18",
@@ -91,7 +92,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "Alternatives", path: "/alternatives/nordvpn" },
+          { name: "Alternatives", path: "/alternatives" },
           { name: target.name, path },
         ]}
       />
@@ -118,8 +119,8 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         <h2 className="text-2xl font-bold text-white">Why look beyond {target.name}?</h2>
         <div className="mt-4 grid gap-5 md:grid-cols-3">
           <div>
-            <p className="text-xs font-semibold uppercase text-[#64748b]">Current score</p>
-            <RatingStars rating={target.score} />
+            <p className="text-xs font-semibold uppercase text-[#64748b]">Pricing</p>
+            <p className="mt-2 text-sm text-[#94a3b8]">See current pricing</p>
           </div>
           <div>
             <p className="text-xs font-semibold uppercase text-[#64748b]">Main limitation</p>
@@ -141,10 +142,11 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
             <div key={alt.slug} className="glass-card overflow-hidden">
               <div className="flex items-center justify-between border-b border-[#1e293b] px-6 py-4">
                 <div>
-                  <span className="badge badge-teal mb-2 text-[0.65rem]">#{index + 1} Alternative</span>
+                  <span className="badge badge-teal mb-2 text-[0.65rem]">
+                    {index === 0 ? "Alternative" : `#${index + 1} Alternative`}
+                  </span>
                   <h3 className="text-xl font-bold text-white">{alt.name}</h3>
                 </div>
-                <RatingStars rating={alt.score} />
               </div>
               <div className="space-y-5 p-8">
                 <p className="leading-relaxed text-[#94a3b8]">{alt.quickVerdict}</p>
@@ -192,29 +194,29 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
           do not need to switch just because another provider ranks higher in one category. VPNs are
           tools, not collectibles.
         </p>
-        <p>
-          The strongest alternative for most readers is usually the provider that fixes the specific
-          thing {target.name} does not do well enough for your situation: lower renewal cost, stronger
-          privacy posture, better streaming reliability, or simpler apps.
-        </p>
       </section>
 
-      <RelatedLinks links={getAlternativesRelatedLinks(target.slug)} />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks links={getAlternativesRelatedLinks(target.slug)} />
+        <div className="min-w-0">
+          <RelatedCards cards={getAlternativesRelatedCards(target.slug)} />
+        </div>
+      </div>
 
       <FaqSection
         faqs={[
           {
             question: `What is the best ${target.name} alternative?`,
-            answer: `${alternatives[0]?.name ?? "NordVPN"} is the strongest alternative for most readers because it offers the best blend of score, feature coverage, and real-world fit against ${target.name}'s limitations.`,
+            answer: `${alternatives[0]?.name ?? "NordVPN"} is one alternative to consider. Check each provider's page for current pricing and features.`,
           },
           {
             question: `Should I switch from ${target.name}?`,
             answer: `Only if ${target.name}'s limitations affect your actual use case. If your current provider is fast, private enough for your threat model, and priced fairly at renewal, switching may not be worth the hassle.`,
           },
           {
-            question: "Do affiliate commissions affect these alternatives?",
+            question: "Does Tunnel Report earn a commission from links on this site?",
             answer:
-              "No. Tunnel Report includes non-affiliate recommendations like Mullvad when they serve readers. Commercial relationships do not determine rankings or editorial conclusions.",
+              "Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy through them. See our affiliate disclosure on each page.",
           },
         ]}
       />

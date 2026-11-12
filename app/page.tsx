@@ -18,23 +18,23 @@ import { staffAuthorName } from "@/lib/editorial-personas";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Independent VPN Reviews & 2026 Rankings | Tunnel Report",
+  title: "VPN Reviews & 2026 Rankings | Tunnel Report",
   description:
-    "Tunnel Report publishes independent VPN reviews and guides. Rankings are based on published specs, pricing and third-party reports. We may earn a commission from some links.",
+    "VPN reviews and guides. This page contains affiliate links, and we may earn a commission if you buy through them.",
   path: "/",
   type: "website",
 });
 
 const homepageFaqs = [
   {
-    question: "How does Tunnel Report score VPN services?",
+    question: "How does Tunnel Report rank VPN services?",
     answer:
-      "Scores are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time. Each factor is weighted the same way for every provider we cover.",
+      "Rankings are based on published specs, pricing and third-party reports: we compare privacy policy language against published audit disclosures, assess jurisdiction risk, and track pricing over time.",
   },
   {
-    question: "Do affiliate commissions affect your rankings?",
+    question: "Does Tunnel Report earn a commission from links on this site?",
     answer:
-      "No. Editorial scoring is walled off from commercial relationships. We disclose affiliate links on every page where they appear, and commission potential has never changed a ranking position. Our methodology is published in full.",
+      "Some links on Tunnel Report are affiliate links, and we may earn a commission if you buy through them. See our affiliate disclosure on each page.",
   },
   {
     question: "How often are reviews updated?",
@@ -76,7 +76,7 @@ export default function Home() {
       >
         <div className="mx-auto w-full max-w-3xl text-center">
           <div className="space-y-5 fade-in-up">
-            <div className="badge badge-teal mx-auto">Independent VPN Coverage</div>
+            <div className="badge badge-teal mx-auto">VPN Coverage</div>
 
             {/* Hero graphic */}
             <div className="relative mx-auto h-36 w-full max-w-2xl sm:h-44 md:h-48">
@@ -210,7 +210,6 @@ export default function Home() {
                 <th>Provider</th>
                 <th>Privacy Profile</th>
                 <th>Price (intro vs renewal)</th>
-                <th>Score</th>
                 <th></th>
               </tr>
             </thead>
@@ -228,14 +227,6 @@ export default function Home() {
                   </td>
                   <td className="max-w-[200px]">{vpn.privacy}</td>
                   <td className="font-semibold text-white">{vpn.pricePerMonth}</td>
-                  <td>
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-white">{vpn.score.toFixed(1)}</span>
-                      <div className="score-bar w-16">
-                        <div className="score-bar-fill" style={{ width: `${(vpn.score / 5) * 100}%` }} />
-                      </div>
-                    </div>
-                  </td>
                   <td>
                     {vpn.isAffiliate ? (
                       <AffiliateCTA href={vpn.href} partner={vpn.partner} label={vpn.ctaLabel ?? "Visit"} />
@@ -268,7 +259,7 @@ export default function Home() {
             {
               title: "VPN Privacy Audits: What Actually Matters in 2026",
               excerpt:
-                "Not all audits test the same controls. I walked through scope documents from four major providers and found the gap between marketing claims and actual test coverage is often wider than vendors let on.",
+                "Not all audits test the same controls.",
               href: "/reviews/nordvpn",
               image: "/images/article-privacy.svg",
               badge: "Analysis",
@@ -276,7 +267,7 @@ export default function Home() {
             {
               title: "Surfshark Review 2026: Best Budget VPN for Families?",
               excerpt:
-                "Unlimited devices and aggressive pricing — our full Surfshark review breaks down where it beats NordVPN and where it does not.",
+                "Compare the two. Check each provider's page for current pricing and features.",
               href: "/reviews/surfshark",
               image: "/images/article-speed.svg",
               badge: "Review",

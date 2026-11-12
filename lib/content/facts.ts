@@ -6,7 +6,7 @@ export type CitationSource = {
   publisher: string;
   url: string;
   year: number;
-  retrievedAt: string;
+  retrievedAt?: string;
   retrievedVerb?: "accessed" | "checked";
 };
 
@@ -66,8 +66,6 @@ export const citationSources: Record<string, CitationSource> = {
     publisher: "Nord Security",
     url: "https://nordvpn.com/pricing/",
     year: 2026,
-    retrievedAt: "Oct 15, 2026",
-    retrievedVerb: "checked",
   },
   S6: {
     id: "S6",
@@ -93,8 +91,6 @@ export const citationSources: Record<string, CitationSource> = {
     publisher: "ExpressVPN",
     url: "https://www.expressvpn.com/order",
     year: 2026,
-    retrievedAt: "Oct 15, 2026",
-    retrievedVerb: "checked",
   },
   S9: {
     id: "S9",

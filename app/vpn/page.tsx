@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { JsonLd } from "@/components/JsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/site";
@@ -129,8 +128,6 @@ export default function VpnCityGuidesPage() {
           Prices change often, so check the provider&apos;s site before you buy.
         </p>
       </header>
-
-      <DisclosureBanner />
 
       <section className="grid gap-5 md:grid-cols-2">
         {CITY_CARDS.map((city) => (

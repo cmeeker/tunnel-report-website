@@ -12,7 +12,7 @@ export default async function Image({ params }: Props) {
   const p = providerMap[provider];
   return buildOgImage({
     title: p?.reviewTitle ?? "VPN Review",
-    subtitle: p?.reviewSummary?.slice(0, 120) ?? "Independent VPN review",
+    subtitle: p?.reviewSummary?.slice(0, 120) ?? "VPN review",
     badge: "Full Review · 2026",
   });
 }

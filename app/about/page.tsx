@@ -19,7 +19,7 @@ const aboutFaqs = [
   {
     question: "How is Tunnel Report funded?",
     answer:
-      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. Affiliate potential does not influence rankings, scores, or editorial conclusions.",
+      "Tunnel Report earns revenue through affiliate commissions when readers purchase VPN services through links on our site. This commercial model is disclosed on every page where affiliate links appear. Affiliate potential does not influence rankings or editorial conclusions.",
   },
   {
     question: "Can VPN companies pay for better reviews?",
@@ -29,7 +29,7 @@ const aboutFaqs = [
   {
     question: "How do I report an error in your coverage?",
     answer:
-      "Contact our editorial team with the specific claim, the page URL, and a source link if available. We investigate corrections promptly, update the page with visible changelog timestamps, and credit the reporter when appropriate.",
+      "Email robert@strandandstonellc.com with the specific claim, the page URL, and a source link if available. When we publish inaccurate pricing, technical claims, or outdated policy details, we update the page and refresh the timestamp.",
   },
 ];
 
@@ -60,10 +60,9 @@ export default function AboutPage() {
           About Tunnel Report
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-[#94a3b8]">
-          Tunnel Report is an independent VPN review and privacy publication. We exist because
+          Tunnel Report is a VPN review and privacy publication. We exist because
           the overlap between affiliate-funded content and genuinely useful security guidance is
-          smaller than it should be, and readers who care about measurable protection deserve a
-          publication that operates at a higher standard.
+          smaller than it should be.
         </p>
         <LastUpdated date="October 18, 2026" />
       </header>
@@ -85,7 +84,7 @@ export default function AboutPage() {
           </p>
           <p>
             We assign higher weight to verifiable actions than marketing claims. A provider that
-            completed a narrow-scope audit but responded transparently to a real incident scores higher
+            completed a narrow-scope audit but responded transparently to a real incident ranks higher
             than one that trumpets a broad audit without demonstrable operational security improvement.
           </p>
         </div>
@@ -109,21 +108,17 @@ export default function AboutPage() {
 
       <hr className="divider-glow" />
 
-      {/* Editorial independence */}
+      {/* Editorial standards */}
       <section id="editorial" className="prose-dark space-y-4 scroll-mt-28">
-        <h2 className="text-2xl font-bold text-white">How Editorial Independence Works</h2>
+        <h2 className="text-2xl font-bold text-white">Editorial Standards and Disclosure</h2>
         <p>
-          Commercial relationships do not influence editorial output. This is not a platitude — it is
-          an operational structure. Review conclusions are drafted by the assigned editor and reviewed
-          by at least one other team member before publication. The commercial team does not see review
-          content before it goes live, does not have edit access to published pages, and does not
-          participate in scoring discussions.
+          Rankings are based on published specs, pricing and third-party reports. Articles are
+          published under the Tunnel Report Staff byline.
         </p>
         <p id="disclosure" className="scroll-mt-28">
           If a page includes an affiliate link, the disclosure is visible on-page. We use a consistent
           banner format so readers always know when commercial links are present. Affiliate potential
-          does not guarantee positive coverage — and in several cases, providers with high commission
-          rates receive lower scores than providers with modest or no affiliate programs.
+          does not guarantee positive coverage.
         </p>
       </section>
 
@@ -133,16 +128,8 @@ export default function AboutPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">Corrections Policy</h2>
         <p>
-          Accuracy is the foundation of editorial credibility. When we publish inaccurate pricing,
-          technical claims, or outdated policy details, we update the page and refresh the timestamp.
-          Material corrections include a visible changelog note in the relevant section so readers can
-          see what changed, when, and why.
-        </p>
-        <p>
-          We track correction frequency as an internal quality metric. A high correction rate on a
-          particular topic signals that our sourcing or verification process for that area needs
-          improvement, and we address it systematically rather than treating each correction as an
-          isolated event.
+          When we publish inaccurate pricing, technical claims, or outdated policy details, we update
+          the page and refresh the timestamp.
         </p>
       </section>
 
@@ -159,7 +146,7 @@ export default function AboutPage() {
             },
             {
               title: "Visible Timestamps",
-              description: "Every page shows its last verification date. Stale content is flagged for review in our editorial queue.",
+              description: "Every page shows its last verification date.",
             },
             {
               title: "Structured Data",

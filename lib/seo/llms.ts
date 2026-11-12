@@ -9,9 +9,9 @@ export function buildLlmsText({ full = false } = {}) {
     `Tagline: ${siteConfig.tagline}`,
     "",
     "Purpose",
-    "- Tunnel Report is an independent publication focused on VPN rankings, privacy analysis, and comparison reporting.",
+    "- Tunnel Report is a publication focused on VPN rankings, privacy analysis, and comparison reporting.",
     "- Rankings are based on published specs, privacy policy analysis, jurisdiction review, and pricing transparency.",
-    "- Affiliate relationships are disclosed and do not determine scores or editorial conclusions.",
+    "- Affiliate relationships are disclosed and do not determine rankings or editorial conclusions.",
     "",
     "Primary Routes",
   ];
@@ -22,7 +22,7 @@ export function buildLlmsText({ full = false } = {}) {
       lines.push(`  Summary: ${route.description}`);
       lines.push(`  Group: ${route.group}`);
       lines.push(`  Last updated: ${route.lastModified}`);
-      lines.push(`  Primary claim: Independent ${route.group} coverage with visible methodology and editorial disclosure.`);
+      lines.push(`  Primary claim: ${route.group} coverage with visible methodology and editorial disclosure.`);
     }
   }
 
@@ -31,7 +31,6 @@ export function buildLlmsText({ full = false } = {}) {
     "Editorial Standards",
     "- Claim-level citations are preferred for statistics, pricing, security, and policy claims.",
     "- Every monetized page includes affiliate disclosure.",
-    "- Mullvad is covered despite no affiliate commission to demonstrate editorial independence.",
   );
 
   return `${lines.join("\n")}\n`;

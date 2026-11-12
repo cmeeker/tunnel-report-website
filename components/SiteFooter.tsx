@@ -6,6 +6,10 @@ const columns = [
   {
     title: "Reviews",
     links: [
+      { href: "/reviews", label: "All Reviews" },
+      { href: "/compare", label: "All Comparisons" },
+      { href: "/alternatives", label: "All Alternatives" },
+      { href: "/deals", label: "Deals" },
       { href: "/best-vpns", label: "Best VPNs 2026" },
       { href: "/best-password-managers", label: "Best Password Managers" },
       { href: "/reviews/nordvpn", label: "NordVPN Review" },
@@ -57,6 +61,8 @@ const columns = [
       { href: "/about", label: "About" },
       { href: "/methodology", label: "Methodology" },
       { href: "/about#editorial", label: "Editorial Standards" },
+      { href: "/privacy", label: "Privacy" },
+      { href: "/terms", label: "Terms" },
     ],
   },
 ];
@@ -82,7 +88,7 @@ export function SiteFooter() {
         {columns.map((col) => (
           <section key={col.title}>
             <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-[#64748b]">
-              {col.title === "City Guides" ? <a href="/vpn">City Guides</a> : col.title}
+              {col.title === "City Guides" ? <Link href="/vpn">City Guides</Link> : col.title}
             </h3>
             <ul className="mt-4 space-y-2.5">
               {col.links.map((link) => (

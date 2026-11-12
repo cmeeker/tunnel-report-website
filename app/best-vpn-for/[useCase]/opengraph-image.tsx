@@ -13,7 +13,7 @@ export default async function Image({ params }: Props) {
 
   return buildOgImage({
     title: guide?.title ?? "Best VPN by Use Case",
-    subtitle: guide?.description.slice(0, 125) ?? "Independent VPN recommendations by use case",
+    subtitle: guide?.description.slice(0, 125) ?? "VPN recommendations by use case",
     badge: "Use Case Guide · 2026",
   });
 }

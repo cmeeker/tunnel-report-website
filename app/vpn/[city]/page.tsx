@@ -9,8 +9,10 @@ import { CitationLink } from "@/components/CitationLink";
 import { CitedText } from "@/components/CitedText";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
-import { RelatedLinks } from "@/components/RelatedLinks";
 import { SourcesList } from "@/components/SourcesList";
+import { RelatedCards } from "@/components/RelatedCards";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { getCitySiblingCards } from "@/lib/seo/related-cards";
 import { getCityRelatedLinks } from "@/lib/seo/related-links";
 import { cityGuideMap } from "@/lib/content/cities";
 import { citationSources, citySources } from "@/lib/content/facts";
@@ -57,7 +59,7 @@ export default async function CityVpnPage({ params }: CityPageProps) {
   const cityFaqs = [
     {
       question: `What is the best VPN for ${guide.city} residents?`,
-      answer: `NordVPN is our top pick for ${guide.city} based on its published specs, including its WireGuard-based NordLynx protocol and US servers. [NordVPN says](https://nordvpn.com/blog/nordvpn-no-logs-assurance-engagement-2025/) its no-logs policy has passed six independent assurance engagements, most recently by Deloitte Lithuania in late 2025. Surfshark is our budget pick, with unlimited devices on every plan [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. ${guide.recommendation}`,
+      answer: `NordVPN is our top pick for ${guide.city} based on its published specs, including its WireGuard-based NordLynx protocol and US servers. Surfshark is our budget pick, with unlimited devices on every plan [surfshark.com/pricing](https://surfshark.com/pricing), accessed Oct 17, 2026. ${guide.recommendation}`,
     },
     {
       question: `Does VPN performance vary by neighborhood in ${guide.city}?`,
@@ -207,7 +209,12 @@ export default async function CityVpnPage({ params }: CityPageProps) {
 
       <AuthorByline />
 
-      <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)]">
+        <RelatedLinks links={getCityRelatedLinks(guide.slug)} title="More City Guides & Reviews" />
+        <div className="min-w-0">
+          <RelatedCards cards={getCitySiblingCards(guide.slug)} />
+        </div>
+      </div>
 
       <FaqSection faqs={cityFaqs} renderAnswer={(answer) => <CitedText text={answer} />} />
 

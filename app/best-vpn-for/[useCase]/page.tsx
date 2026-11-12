@@ -42,11 +42,17 @@ export async function generateMetadata({ params }: UseCasePageProps): Promise<Me
     });
   }
 
-  return buildPageMetadata({
+  const metadata = buildPageMetadata({
     title: guide.title,
     description: guide.description,
     path: `/best-vpn-for/${guide.slug}`,
   });
+
+  if (guide.slug === "streaming") {
+    return { ...metadata, title: { absolute: guide.title } };
+  }
+
+  return metadata;
 }
 
 export default async function UseCasePage({ params }: UseCasePageProps) {
@@ -107,13 +113,17 @@ export default async function UseCasePage({ params }: UseCasePageProps) {
       <section className="space-y-5">
         <h2 className="text-2xl font-bold text-white">Quick Picks</h2>
         <div className="grid gap-5 md:grid-cols-3">
-          {picks.map((pick, index) => {
+          {picks.map((pick) => {
             const href = getProviderCtaHref(pick.provider);
             return (
               <div key={pick.provider.slug} className="glass-card p-7">
-                <span className="badge badge-cyan mb-4 text-[0.65rem]">#{index + 1} {pick.label}</span>
+                {pick.label ? (
+                  <span className="badge badge-cyan mb-4 text-[0.65rem]">{pick.label}</span>
+                ) : null}
                 <h3 className="text-xl font-bold text-white">{pick.provider.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#94a3b8]">{pick.reason}</p>
+                {pick.reason ? (
+                  <p className="mt-3 text-sm leading-relaxed text-[#94a3b8]">{pick.reason}</p>
+                ) : null}
                 <div className="mt-5 flex flex-wrap items-center gap-3">
                   {href && pick.provider.affiliateKey ? (
                     <AffiliateCTA href={href} partner={pick.provider.affiliateKey} label={`Visit ${pick.provider.name}`} />
