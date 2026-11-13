@@ -3,6 +3,7 @@ import { AFFILIATE_URLS } from "@/lib/content/providers";
 import { siteConfig } from "@/lib/site";
 
 export const DEAL_DATE_MODIFIED = "2026-10-18";
+export const BLACK_FRIDAY_PAGES_UPDATED = "2026-11-13";
 export const PRICES_AS_OF = "Oct 17, 2026";
 export const PRICE_CHANGE_LINE =
   "Prices change often, so check the provider's site before you buy.";
@@ -120,7 +121,7 @@ export const nordFaqs: DealFaq[] = [
   {
     question: "What does NordVPN renew at?",
     answer:
-      "Check NordVPN's page for current pricing. NordVPN's pricing page lists the Basic 2-year renewal separately from the intro price. A renewal price for the 1-year term is not listed on the pricing page.",
+      "Check NordVPN's page for current pricing. NordVPN's pricing page lists the Basic 2-year renewal separately from the intro price. NordVPN's pricing page lists the renewal price under each plan, separate from the intro price.",
   },
   {
     question: "Does NordVPN offer a money-back guarantee?",
@@ -194,7 +195,7 @@ export const nordDealFaqs: DealFaq[] = [
   },
   {
     question: "Which NordVPN plans are included?",
-    answer: "NordVPN lists Basic, Plus, and Complete.",
+    answer: "NordVPN lists Basic, Complete, and Prime.",
   },
   {
     question: "What does NordVPN renew at?",
@@ -208,6 +209,11 @@ export const nordDealFaqs: DealFaq[] = [
     question: "Is NordVPN's no-logs policy audited?",
     answer:
       "Check NordVPN's page for current details.",
+  },
+  {
+    question: "When does the NordVPN deal end?",
+    answer:
+      "NordVPN's Black Friday page says the deal runs until December 9, 2026. Offers change, so check NordVPN's page before you buy.",
   },
 ];
 

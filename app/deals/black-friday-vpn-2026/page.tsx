@@ -14,7 +14,7 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import {
-  DEAL_DATE_MODIFIED,
+  BLACK_FRIDAY_PAGES_UPDATED,
   PRICE_CHANGE_LINE,
   blackFridayHub,
   buildDealArticleSchema,
@@ -47,11 +47,14 @@ export default function BlackFridayVpnHubPage() {
   return (
     <article className="space-y-14 fade-in-up">
       <JsonLd
-        data={buildDealArticleSchema({
-          headline: blackFridayHub.h1,
-          description: blackFridayHub.description,
-          path: blackFridayHub.path,
-        })}
+        data={{
+          ...buildDealArticleSchema({
+            headline: blackFridayHub.h1,
+            description: blackFridayHub.description,
+            path: blackFridayHub.path,
+          }),
+          dateModified: BLACK_FRIDAY_PAGES_UPDATED,
+        }}
       />
 
       <Breadcrumbs
@@ -70,7 +73,7 @@ export default function BlackFridayVpnHubPage() {
           {staffAuthorName}
         </p>
         <p className="text-sm text-[#94a3b8]">
-          Last updated: <time dateTime={DEAL_DATE_MODIFIED}>{DEAL_DATE_MODIFIED}</time>
+          Last updated: <time dateTime={BLACK_FRIDAY_PAGES_UPDATED}>{BLACK_FRIDAY_PAGES_UPDATED}</time>
         </p>
       </header>
 
@@ -106,7 +109,7 @@ export default function BlackFridayVpnHubPage() {
             ],
             [
               "NordVPN",
-              "Check NordVPN's page for current pricing.",
+              "Black Friday deal (per NordVPN)",
               "Basic, 2-year + 3 mo",
               "See current pricing",
               "See current pricing",
@@ -195,7 +198,7 @@ export default function BlackFridayVpnHubPage() {
               "Check NordVPN's page for current pricing.",
               "Basic, 1-year",
               "See current pricing",
-              "Renewal not listed on the pricing page",
+              "NordVPN's pricing page lists the renewal price under each plan, separate from the intro price.",
             ],
           ]}
         />
@@ -339,8 +342,9 @@ export default function BlackFridayVpnHubPage() {
           .
         </p>
         <p>
-          Check NordVPN&apos;s page for current pricing. A renewal price for the 1-year term is not
-          listed on the pricing page. Check Proton VPN&apos;s page for current pricing.
+          Check NordVPN&apos;s page for current pricing. NordVPN&apos;s pricing page lists the renewal
+          price under each plan, separate from the intro price. Check Proton VPN&apos;s page for
+          current pricing.
           hide.me&apos;s pricing page states its plans always renew with the same price and duration.
           Surfshark does not
           list a renewal amount on the pricing page, so check the renewal price at checkout. See the{" "}
