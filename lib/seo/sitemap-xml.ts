@@ -2,7 +2,13 @@ import type { MetadataRoute } from "next";
 
 import { execSync } from "node:child_process";
 
-import { DEAL_DATE_MODIFIED, NORD_PROTON_DEAL_DATE, blackFridayHub, nordBlackFriday, surfsharkBlackFriday } from "@/lib/content/black-friday-2026";
+import {
+  BLACK_FRIDAY_PAGES_UPDATED,
+  DEAL_DATE_MODIFIED,
+  blackFridayHub,
+  nordBlackFriday,
+  surfsharkBlackFriday,
+} from "@/lib/content/black-friday-2026";
 import { comparisonMap } from "@/lib/content/comparisons";
 import { guideMap } from "@/lib/content/guides";
 import { providerMap } from "@/lib/content/providers";
@@ -34,9 +40,9 @@ function gitLastModifiedDate(filePath: string): string | null {
 }
 
 function resolveSitemapLastModified(path: string): string | undefined {
-  if (path === blackFridayHub.path) return DEAL_DATE_MODIFIED;
+  if (path === blackFridayHub.path) return BLACK_FRIDAY_PAGES_UPDATED;
   if (path === surfsharkBlackFriday.path) return DEAL_DATE_MODIFIED;
-  if (path === nordBlackFriday.path) return NORD_PROTON_DEAL_DATE;
+  if (path === nordBlackFriday.path) return BLACK_FRIDAY_PAGES_UPDATED;
 
   if (path.startsWith("/reviews/")) {
     const slug = path.split("/")[2] ?? "";

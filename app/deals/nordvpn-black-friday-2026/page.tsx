@@ -15,6 +15,7 @@ import { DisclosureBanner } from "@/components/DisclosureBanner";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import {
+  BLACK_FRIDAY_PAGES_UPDATED,
   NORD_PROTON_DEAL_DATE,
   PRICE_CHANGE_LINE,
   blackFridayHub,
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   robots: "index,follow",
 };
 
-const plans = ["Basic", "Plus", "Complete"] as const;
+const plans = ["Basic", "Complete", "Prime"] as const;
 
 function renderNordDealAnswer(answer: string): ReactNode {
   const refundUrl = vendorSources.nordRefund;
@@ -57,12 +58,15 @@ export default function NordvpnBlackFridayPage() {
   return (
     <article className="space-y-14 fade-in-up">
       <JsonLd
-        data={buildDealArticleSchema({
-          headline: nordBlackFriday.h1,
-          description: nordBlackFriday.description,
-          path: nordBlackFriday.path,
-          date: NORD_PROTON_DEAL_DATE,
-        })}
+        data={{
+          ...buildDealArticleSchema({
+            headline: nordBlackFriday.h1,
+            description: nordBlackFriday.description,
+            path: nordBlackFriday.path,
+            date: NORD_PROTON_DEAL_DATE,
+          }),
+          dateModified: BLACK_FRIDAY_PAGES_UPDATED,
+        }}
       />
 
       <Breadcrumbs
@@ -81,7 +85,7 @@ export default function NordvpnBlackFridayPage() {
           {staffAuthorName}
         </p>
         <p className="text-sm text-[#94a3b8]">
-          Last updated: <time dateTime={NORD_PROTON_DEAL_DATE}>{NORD_PROTON_DEAL_DATE}</time>
+          Last updated: <time dateTime={BLACK_FRIDAY_PAGES_UPDATED}>{BLACK_FRIDAY_PAGES_UPDATED}</time>
         </p>
       </header>
 
@@ -98,7 +102,7 @@ export default function NordvpnBlackFridayPage() {
         <PriceTable
           headers={["Status", "Plan", "Price", "Renewal"]}
           rows={plans.map((plan) => [
-            "Check NordVPN's page for current pricing.",
+            "Black Friday deal (per NordVPN)",
             plan,
             "See current pricing",
             "See current pricing",
@@ -115,7 +119,7 @@ export default function NordvpnBlackFridayPage() {
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">NordVPN&apos;s Black Friday 2026 deal at a glance</h2>
         <p>
-          Plans covered: Basic, Plus, and Complete. NordVPN publishes Black Friday information on{" "}
+          Plans covered: Basic, Complete, and Prime. NordVPN publishes Black Friday information on{" "}
           <PlainOutboundLink href={vendorSources.nordBlackFriday}>nordvpn.com/black-friday/</PlainOutboundLink>
           . Check NordVPN&apos;s page for current pricing.
         </p>
@@ -154,11 +158,7 @@ export default function NordvpnBlackFridayPage() {
 
       <section className="prose-dark space-y-4">
         <h2 className="text-2xl font-bold text-white">When does the NordVPN deal end?</h2>
-        <p>
-          A deal ends when the vendor page no longer shows it, or when a published end date passes.
-          Check NordVPN&apos;s page for current pricing and any end date. Offers change, and a deal
-          can end without notice.
-        </p>
+        <p>{nordDealFaqs[5].answer}</p>
       </section>
 
       <FaqSection faqs={nordDealFaqs} renderAnswer={renderNordDealAnswer} />
