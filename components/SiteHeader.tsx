@@ -64,7 +64,7 @@ function DesktopDropdown({ item, onClose }: { item: PrimaryNavItem; onClose: () 
                   )}
                   <ul className={`grid gap-0.5 ${!hasFeatured ? "grid-cols-2" : "grid-cols-1"}`}>
                     {col.items.map((link) => (
-                      <li key={link.href + link.label}>
+                      <li key={link.href}>
                         <Link
                           href={link.href}
                           onClick={onClose}
@@ -180,7 +180,7 @@ function MobileNav({ onClose }: { onClose: () => void }) {
                         )}
                         {col.items.map((link) => (
                           <Link
-                            key={link.href + link.label}
+                            key={link.href}
                             href={link.href}
                             onClick={onClose}
                             className="flex items-center justify-between rounded-lg px-2 py-2 text-sm text-[#94a3b8] transition hover:bg-white/[0.04] hover:text-white"
