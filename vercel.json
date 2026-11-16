@@ -98,6 +98,22 @@
       "statusCode": 301
     },
     {
+      "source": "/vpn/miamiMiami",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.tunnelreport.com"
+        }
+      ],
+      "destination": "https://tunnelreport.com/vpn/miami",
+      "statusCode": 301
+    },
+    {
+      "source": "/vpn/miamiMiami",
+      "destination": "/vpn/miami",
+      "statusCode": 301
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
